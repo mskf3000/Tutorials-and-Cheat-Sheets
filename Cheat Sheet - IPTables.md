@@ -1,4 +1,4 @@
-# Cheat Sheet - IPables
+# Cheat Sheet - IPTables
 
 By Jack Szwergold, September 11, 2015
 
@@ -165,6 +165,6 @@ This is a basic, solid and relatively simple set config (`iptables.conf`) I like
 
 ***
 
-*Cheat Sheet - IPables (c) by Jack Szwergold*
+*Cheat Sheet - IPTables (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
