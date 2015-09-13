@@ -94,7 +94,6 @@ If this is happening on a Linux/Unix system run that same command like this:
 
     chmod 4755 /usr/sbin/mtr
 
-
 ***
 
 *Cheat Sheet - Mac OS X - MTR (c) by Jack Szwergold*
