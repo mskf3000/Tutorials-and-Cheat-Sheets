@@ -16,7 +16,7 @@ Once you get the device ID, you can unmount the device like this; change `disk[d
 
     diskutil unmount /dev/disk[device id]s[partition id]
 
-Once the device is unmounted, run the following `fsck_hfs` command on the volume using the same device ID number. The `-r` flag tells `fsck_hfs` to rebuild the catalog btree and the -`-f` flag force `fsck_hfs` to check and repair journaled HFS+ file systems:
+Once the device is unmounted, run the following `fsck_hfs` command on the volume using the same device ID number. The `-r` flag tells `fsck_hfs` to rebuild the catalog btree and the `-f` flag forces `fsck_hfs` to check and repair journaled HFS+ file systems:
 
     sudo fsck_hfs -rf /dev/disk[device id]s[partition id]
 
