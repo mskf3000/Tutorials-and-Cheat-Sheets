@@ -36,6 +36,6 @@ And once it’s installed, run the command with `-v` to do a simple check to see
 
 ***
 
-*Cheat Sheet - Mac OS X - WGET (c) by Jack Szwergold*
+*Cheat Sheet - Mac OS X - LFT (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
