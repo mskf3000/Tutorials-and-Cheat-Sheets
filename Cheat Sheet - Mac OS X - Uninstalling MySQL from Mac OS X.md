@@ -1,6 +1,6 @@
 # Cheat Sheet - Mac OS X - Uninstalling MySQL from Mac OS X
 
-By Jack Szwergold, September 14, 2015
+By Jack Szwergold, September 14w, 2015
 
 #### Uninstalling MySQL from Mac OS X.
 
