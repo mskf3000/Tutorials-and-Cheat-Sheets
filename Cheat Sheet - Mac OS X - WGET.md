@@ -8,7 +8,7 @@ This tutorial explains how you can install `wget` directly from source code on M
 
 First grab a compressed archive from an official `wget` source site:
 
-	curl -O http://ftp.gnu.org/gnu/wget/wget-1.16.3.tar.gz
+	curl -O -L http://ftp.gnu.org/gnu/wget/wget-1.16.3.tar.gz
 
 Next, decompress the archive like this:
 

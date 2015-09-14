@@ -8,7 +8,7 @@ This tutorial explains how you can install `rsync` directly from source code on 
 
 First grab a compressed archive from an official `rsync` source site:
 
-	curl -O http://rsync.samba.org/ftp/rsync/rsync-3.1.1.tar.gz
+	curl -O -L http://rsync.samba.org/ftp/rsync/rsync-3.1.1.tar.gz
 
 Next, decompress the archive like this:
 

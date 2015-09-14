@@ -10,7 +10,7 @@ This tutorial explains how you can install `mtr` directly from source code on Ma
 
 First grab a compressed archive from an official `mtr` source site:
 
-	curl -O ftp://ftp.bitwizard.nl/mtr/mtr-0.86.tar.gz
+	curl -O -L ftp://ftp.bitwizard.nl/mtr/mtr-0.86.tar.gz
 
 Next, decompress the archive like this:
 
