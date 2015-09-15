@@ -22,11 +22,11 @@ Shows EXIF info stored in the XMP Dublin Core schema:
 
 Remove all EXIF data from a file:
 
-    exiftool -all=  [filename]
+    exiftool -all= [filename]
 
 Remove all data connected to the XMP Dublin Core schema:
 
-    exiftool -a -XMP-dc:all=  [filename]
+    exiftool -a -XMP-dc:all= [filename]
 
 #### Options available for `exiftool`.
 
