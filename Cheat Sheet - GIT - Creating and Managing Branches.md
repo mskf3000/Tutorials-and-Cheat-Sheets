@@ -214,6 +214,37 @@ Now run the actual command without the `--dry-run` flag so stray branches can be
 	
 	git fsck --full
 
+#### Cleaning up “dangling blobs” from a repository.
+
+If you run `fsck` like this:
+
+    git fsck --full
+
+And see some “dangling blobs” something like this:
+
+	Checking object directories: 100% (256/256), done.
+	Checking objects: 100% (3/3), done.
+	dangling blob bf04e8bffd2421d555f3399bb06edda7cb5e2c62
+	dangling blob c204d6a0fd696190f7a1d8e2e9217378046190b1
+	dangling blob c44e39a0c45916ccc9a35834470cf3ad4fb724dd
+
+You can get rid of them like this. This command gets rid of all references to unreachable commits in `reflog`:
+
+    git reflog expire --expire-unreachable=now --all
+
+And this command removes the commits themselves:
+
+    git gc --prune=now
+
+After doing that you can run `fsck` again like this:
+
+    git fsck --full
+
+And the output will be something like this; note there are no “dangling blobs” in the output:
+
+	Checking object directories: 100% (256/256), done.
+	Checking objects: 100% (139/139), done.
+
 ***
 
 *Cheat Sheet - GIT - Creating and Managing Branches (c) by Jack Szwergold*
