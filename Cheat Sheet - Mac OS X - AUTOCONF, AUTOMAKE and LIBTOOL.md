@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Install GNU autoconf, automake & libtool
+# Cheat Sheet - Mac OS X - AUTOCONF, AUTOMAKE and LIBTOOL
 
 By Jack Szwergold, September 14, 2015
 
@@ -122,6 +122,6 @@ Uninstall if you need to:
 
 ***
 
-*Cheat Sheet - Mac OS X - Install GNU autoconf, automake & libtool (c) by Jack Szwergold*
+*Cheat Sheet - Mac OS X - AUTOCONF, AUTOMAKE and LIBTOOL (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
