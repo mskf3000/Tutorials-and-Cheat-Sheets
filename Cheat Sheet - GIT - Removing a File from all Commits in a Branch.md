@@ -4,7 +4,7 @@ By Jack Szwergold, September 15, 2015
 
 #### How to remove a file from every commit in a branch.
 
-This will effectively rewrite every commit to remove the “things/index.md.”
+This will effectively rewrite every commit to remove the `markdown/things/index.md`.
 
     git filter-branch --tree-filter 'rm -f markdown/things/index.md' HEAD
 
