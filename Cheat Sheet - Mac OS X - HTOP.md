@@ -6,19 +6,45 @@ This tutorial explains how you can install `htop` directly from source code on M
 
 ***
 
-#### A basic install of `htop` (0.8.2.1) courtesy of “AndyA.”
+#### A more up to date version of `htop` (0.8.2.7) with more meter options courtesy of “max-horvath.”
 
-First clone the sourcecode from AndyA’s `htop` GitHub repository:
+First clone the sourcecode from max-horvath’s `htop-osx` GitHub repository:
 
-	git clone git://github.com/AndyA/htop-osx.git
+	git clone git@github.com:max-horvath/htop-osx.git
 	
 Now go into the repository directory:
 
 	cd htop-osx
 	
-Checkout the `osx` branch of the repository like this:
+Run `libtoolize` and `automake -f` like this:
 
-	git checkout osx
+	libtoolize && automake -f
+
+Then run `autogen.sh`:
+
+	./autogen.sh
+	
+Run this `configure` command:
+
+	./configure
+	
+Once the `configure` process completes, run `make`:
+
+	make
+	
+Finally install it by running `sudo make install`:
+
+	sudo make install
+
+#### A nicer, forked version of `htop` (0.8.2.2) with more meter options courtesy of “stormerider.”
+
+First clone the sourcecode from stormerider’s `htop-osx` GitHub repository:
+
+	git clone git://github.com/stormerider/htop-osx.git
+	
+Now go into the repository directory:
+
+	cd htop-osx
 	
 Set the `CFLAGS` like this:
 
@@ -44,15 +70,19 @@ Finally install it by running `sudo make install`:
 
 	sudo make install
 
-#### A nicer, forked version of `htop` (0.8.2.2) with more meter options courtesy of “stormerider.”
+#### A basic install of `htop` (0.8.2.1) courtesy of “AndyA.”
 
-First clone the sourcecode from stormerider’s `htop` GitHub repository:
+First clone the sourcecode from AndyA’s `htop-osx` GitHub repository:
 
-	git clone git://github.com/stormerider/htop-osx.git
+	git clone git://github.com/AndyA/htop-osx.git
 	
 Now go into the repository directory:
 
 	cd htop-osx
+	
+Checkout the `osx` branch of the repository like this:
+
+	git checkout osx
 	
 Set the `CFLAGS` like this:
 
