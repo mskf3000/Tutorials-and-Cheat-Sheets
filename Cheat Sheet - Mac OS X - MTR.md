@@ -26,7 +26,7 @@ Set the `LIBS` value:
 	
 Run these various `automake` related commands:
 
-	aclocal && autoheader  && automake --add-missing --copy --foreign && autoconf
+	aclocal && autoheader && automake --add-missing --copy --foreign && autoconf
 
 Run this `configure` command:
 
