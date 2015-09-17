@@ -20,7 +20,15 @@ The chroot directory needs to be owned by root and permissions need to be:
 
     drwxr-xr-x
 
-Edit `/etc/passwd` so that the subdirectory of the chroot directory is related to the new home; in this case it’s `/` since that is the correct root for a chroot setup:
+Edit `/etc/passwd` so that the subdirectory of the chroot directory is somehow related to the new chroot’ed home. To do this, open up `/etc/passwd` for editing like this:
+
+    sudo nano /etc/passwd
+
+And find the entry for the `[username]` that you wish to adjust for chroot’ing purposes. The stuff in the area that reads `/home/[username]` is what we will be changing:
+
+    [username]:x:1005:33::/home/[username]:/bin/bash
+
+Now adjust that `/home/[username]` to match the new chroot’ed relative path; in general it should just be `/` but it can be any child directory in that chroot’ed path:
 
     [username]:x:1005:33::/:/bin/bash
 
