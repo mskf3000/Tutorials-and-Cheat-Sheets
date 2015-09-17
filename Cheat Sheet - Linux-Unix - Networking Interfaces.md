@@ -51,4 +51,3 @@ Or more simply, just toss the file entrirely and reboot the virtual machine; the
 *Cheat Sheet - Linux-Unix - Networking Interfaces (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
-	
