@@ -2,7 +2,7 @@
 
 By Jack Szwergold, September 11, 2015
 
-#### Start, stop and control `iptables`
+#### Start, stop and control `iptables`.
 
 On Ubuntu/Debian systems you can start, stop, restart and flush `iptables` this way:
 
