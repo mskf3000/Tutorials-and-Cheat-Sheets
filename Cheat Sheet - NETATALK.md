@@ -2,6 +2,10 @@
 
 By Jack Szwergold, September 19, 2015
 
+`netatalk` is a very cool, open source implementation of Apple’s AppleTalk networking protocols. Very nice and useful for setting up Linux/Unix AFP file servers.
+
+***
+
 #### Installing `netatalk`.
 
 Install `netatalk` via `aptitude` like this:
@@ -29,9 +33,9 @@ Edit the `AppleVolumes` list:
 
     sudo nano /etc/netatalk/AppleVolumes.default
 
-Add this line to the end of the config file to define a mount point:
+Add this line to the end of the `AppleVolumes.default` config file to define a `netatalk` mount point:
 
-	#/var/www  WebRoot allow:@www-readwrite options:usedots,upriv
+	# /var/www  WebRoot allow:@www-readwrite options:usedots,upriv
 	/var/www  "WebRoot (Netatalk)" allow:@www-readwrite options:usedots,upriv,noadouble
 
 ***
