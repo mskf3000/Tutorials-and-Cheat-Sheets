@@ -12,7 +12,7 @@ Next add the WebUpd8 PPA repository to the system like this:
 
     sudo add-apt-repository ppa:git-core/ppa
 
-With that done, run `aptitude` update like this:
+With that done, run `aptitude update` like this:
 
     sudo aptitude update
 
