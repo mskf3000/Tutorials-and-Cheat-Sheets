@@ -28,36 +28,36 @@ Don’t worry. That’s just a system library Ubuntu 12.04 has sitting around fo
 
 First, run `aptitude update` like this:
 
-		sudo aptitude update
+    sudo aptitude update
 
 With that done, install the core Ruby 1.9 stuff like this:
 	
-		sudo aptitude install ruby1.9.1 ruby1.9.1-dev \
-		                      rubygems1.9.1 irb1.9.1 ri1.9.1 rdoc1.9.1 \
-		                      build-essential libopenssl-ruby1.9.1 \
-		                      libssl-dev zlib1g-dev
+	sudo aptitude install ruby1.9.1 ruby1.9.1-dev \
+	                      rubygems1.9.1 irb1.9.1 ri1.9.1 rdoc1.9.1 \
+	                      build-essential libopenssl-ruby1.9.1 \
+	                      libssl-dev zlib1g-dev
 		
 Now, run `update-alternatives` to get the new Ruby 1.9 properly recognized and linked on the system:
 
-		sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.9.1 400 \
-		         --slave   /usr/share/man/man1/ruby.1.gz ruby.1.gz \
-		                        /usr/share/man/man1/ruby1.9.1.1.gz \
-		        --slave   /usr/bin/ri ri /usr/bin/ri1.9.1 \
-		        --slave   /usr/bin/irb irb /usr/bin/irb1.9.1 \
-		        --slave   /usr/bin/rdoc rdoc /usr/bin/rdoc1.9.1
+	sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.9.1 400 \
+	         --slave   /usr/share/man/man1/ruby.1.gz ruby.1.gz \
+	                        /usr/share/man/man1/ruby1.9.1.1.gz \
+	        --slave   /usr/bin/ri ri /usr/bin/ri1.9.1 \
+	        --slave   /usr/bin/irb irb /usr/bin/irb1.9.1 \
+	        --slave   /usr/bin/rdoc rdoc /usr/bin/rdoc1.9.1
 
 
 Next, run `update-alternatives` again to choose your Ruby interpreter. This also changes symbolic links for core Ruby items:
 
-		sudo update-alternatives --config ruby
+    sudo update-alternatives --config ruby
 
 Make your selection and then move onto the `update-alternatives` for related Ruby GEMs:
 
-		sudo update-alternatives --config gem
+    sudo update-alternatives --config gem
 
 Finally, confirm the version of Ruby has been updated like this:
 		
-		ruby --version
+     ruby --version
 
 ***
 
