@@ -2,7 +2,7 @@
 
 By Jack Szwergold, September 11, 2015
 
-### Manually start a network interface.
+#### Manually start a network interface.
 
 Run this command to manually bring up a network interface via `ifconfig`; mainly useful during initial system setup to get an interface up from the console:
 
@@ -10,7 +10,7 @@ Run this command to manually bring up a network interface via `ifconfig`; mainly
 
 While this works, these settings are lost on reboot. To retain network settings on reboot, follow the instructions below.
 
-### Manually restarting all network interfaces.
+#### Manually restarting all network interfaces.
 
 Some places saying restarting the `networking` service is the best way to restart network interfaces:
 
@@ -25,7 +25,7 @@ Instead, running this combination of `ifdown` and `ifup` seems to work more reli
 
     sudo ifdown --exclude=lo -a && sudo ifup --exclude=lo -a
 
-### Automatically start a network interface on boot.
+#### Automatically start a network interface on boot.
 
 You can then add a network interface by opening up `/etc/network/interfaces`:
 
@@ -47,7 +47,7 @@ If you need to use a DHCP/NAT-based IP address, just use this:
 	auto eth0
 	iface eth0 inet dhcp
 
-### Clearing up MAC address issues:
+#### Clearing up MAC address issues:
 
 If the MAC address of an interface in the OS does not match the MAC address of the actual interface, networing will choke.
 
