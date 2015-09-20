@@ -152,6 +152,17 @@ Watch the `dmesg` output in realtime with `watch`:
 
     watch -n 0.1 "dmesg | tail -n $((LINES-6))"
 
+Check out attached hardware:
+
+    sudo lshw
+
+Count the number of connected devices:
+
+    ls -latr /dev/* | wc -l
+
+Print USB device details:
+
+    usb-devices
 
 ***
 
