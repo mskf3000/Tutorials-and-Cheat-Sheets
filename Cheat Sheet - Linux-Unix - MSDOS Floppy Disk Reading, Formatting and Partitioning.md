@@ -140,6 +140,19 @@ Check the kernel module info on the floppy disk:
 
     modinfo floppy
 
+Monitor devices being removed or added to a system via `udev`:
+
+    udevadm monitor --udev
+
+Check the `dmesg` output while a device is being removed or added to a system:
+
+    sudo dmesg
+
+Watch the `dmesg` output in realtime with `watch`: 
+
+    watch -n 0.1 "dmesg | tail -n $((LINES-6))"
+
+
 ***
 
 *Cheat Sheet - Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning (c) by Jack Szwergold*
