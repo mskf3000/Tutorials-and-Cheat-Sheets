@@ -149,6 +149,24 @@ And run this command to assign the disk a new UUID:
 
     VBoxManage internalcommands sethduuid Sandbox.vdi
 
+### Sundry VirtuaBox disk management stuff.
+
+Create a new HD with 30,000 the max size in megabytes:
+
+    VBoxManage createhd –-filename NewDisk.vdi --size 30000 --remember
+
+Resize a  HD with 81,920 the max size in megabytes: 
+
+    VBoxManage modifyhd Disk.vdi –resize 81920
+
+Clone a VirtualBox hard disk:
+
+    VBoxManage clonehd OldDisk.vdi NewDisk.vdi --existing
+
+Compact a VirtualBox hard disk:
+
+    VBoxManage modifyhd --compact Disk.vdi
+
 ***
 
 *Cheat Sheet - VirtualBox (c) by Jack Szwergold*
