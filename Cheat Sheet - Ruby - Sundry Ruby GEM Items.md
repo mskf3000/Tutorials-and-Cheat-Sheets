@@ -8,11 +8,11 @@ By Jack Szwergold, September 20, 2015
 
 #### Installing Ruby GEMs.
 
-Ruby 1.9/1.8 method of installing a specific version of a Ruby GEM.
+Ruby 1.9/1.8 method of installing a specific version of a Ruby GEM:
 
     sudo gem install [gem name here] --no-rdoc --no-ri --version=2.15.5
 
-Ruby 2.0 method of installing a specific version of a Ruby GEM.
+Ruby 2.0 method of installing a specific version of a Ruby GEM:
 
     sudo gem install [gem name here]:2.15.5 --no-rdoc --no-ri
 
