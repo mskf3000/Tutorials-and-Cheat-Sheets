@@ -76,7 +76,7 @@ And then toss that directory like this:
 
 For some reason WEBrick—the default Ruby HTTP server toolkit—can be slow in development environments. This appears to stem from slow reverse DNS lookups which are not really needed. So we can disable that by doing this. Open up the `config.rb` for WEBrick like this:
 
-    sudo nano /usr/local/lib/ruby/2.1.0/webrick/config.rb
+    sudo nano /usr/local/lib/ruby/2.1.5/webrick/config.rb
 
 Find this line:
 
