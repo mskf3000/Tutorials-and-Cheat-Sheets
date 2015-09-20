@@ -47,7 +47,7 @@ If you need to use a DHCP/NAT-based IP address, just use this:
 	auto eth0
 	iface eth0 inet dhcp
 
-#### Clearing up MAC address issues:
+#### Clearing up MAC address issues.
 
 If the MAC address of an interface in the OS does not match the MAC address of the actual interface, networing will choke.
 
