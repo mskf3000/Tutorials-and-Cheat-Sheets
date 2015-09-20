@@ -73,6 +73,24 @@ And add—or adjust—the interface details like this:
 	          collisions:0 txqueuelen:0
 	          RX bytes:80 (80.0 B)  TX bytes:80 (80.0 B)
 
+#### Install Avahi daemon for easy access to the guest OS.
+
+Install the Avahi daemon:
+
+    sudo aptitude install avahi-daemon avahi-utils
+
+Edit the Avahi daemon config:
+
+    sudo nano /etc/avahi/avahi-daemon.conf
+
+Browse all Avahi services on the LAN:
+
+    avahi-browse -at
+
+Browse for broadcast services in Mac OS X:
+
+    dns-sd -B
+
 ### Sundry configuration items.
 
 #### Set the GRUB timeout to 0 to allow for a quick, headless boot and recovery.

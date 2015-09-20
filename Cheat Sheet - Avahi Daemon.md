@@ -6,13 +6,22 @@ Avahi daemon is a zero-configuration (zeroconf)/multicast networking implementat
 
 #### Installation and configuration.
 
-Install the Avahi daemon.
+Install the Avahi daemon:
 
     sudo aptitude install avahi-daemon avahi-utils
 
-Edit the Avahi daemon config.
+Edit the Avahi daemon config:
 
     sudo nano /etc/avahi/avahi-daemon.conf
+
+Start, stop and control the Avahi daemon:
+
+    sudo service avahi-daemon status
+    sudo service avahi-daemon stop
+    sudo service avahi-daemon start
+    sudo service avahi-daemon restart
+    sudo service avahi-daemon reload
+    sudo service avahi-daemon force-reload
 
 #### Some example Avahi service configs.
 
