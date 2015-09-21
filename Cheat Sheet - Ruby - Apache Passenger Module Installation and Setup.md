@@ -34,6 +34,10 @@ Install `passenger` on Ruby 2.0 like this:
 
 Now run this binary—which was installed with the Passenger Ruby GEM to get the Passenger Apache module installed:
 
+    sudo /usr/local/bin/passenger-install-apache2-module
+
+That is really a symbolic link to the actual binary installed with the Ruby GEM. So if somehow that symbolic link doesn’t work, just run it directly like this:
+
     sudo /var/lib/gems/1.9.1/gems/passenger-4.0.59/bin/passenger-install-apache2-module
 
 Just punch through the questions and let the process compile the module. Once done, move on.
