@@ -32,6 +32,10 @@ Install `passenger` on Ruby 2.x.x like this:
 
 	sudo gem install passenger:4.0.59 --no-rdoc --no-ri
 
+Unnstall `passenger` on Ruby 2.x.x like this:
+
+	sudo gem uninstall passenger --version 4.0.59
+
 ### Install the Passenger Apache Module.
 
 Now run this binary—which was installed with the Passenger Ruby GEM to get the Passenger Apache module installed:
