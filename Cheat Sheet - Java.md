@@ -71,15 +71,13 @@ And the output should be something like this:
 
 #### Add a `JAVA_HOME` value to the system `/etc/environment` file.
 
-Add or adjust this line to `/etc/environment` to match your newly installed Java:
+Open up the main `/etc/environment` file on the system like this:
 
     sudo nano /etc/environment
 
+And add a `JAVA_HOME` assignment to the bottom of the file like this; adjust the `java-6-oracle` value to match whatever Java version you have installed:
+
 	JAVA_HOME=/usr/lib/jvm/java-6-oracle/jre
-	
-	JAVA_HOME=/usr/lib/jvm/java-7-oracle/jre
-	
-	JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
 
 #### Detect the version of Java a class was compiled under
 
@@ -102,7 +100,7 @@ You want the major version from the results. Here are some example values:
 
 #### Removing the `oab-java.sh` Java install items.
 
-If you somehow installed Java prviously via the `oab-java.sh` script, you can get rid of that stuff like this.
+If you somehow installed Java previously via the `oab-java.sh` script, you can get rid of that stuff like this.
 
 First, check what is in the `sources.list` directory:
 
