@@ -12,7 +12,7 @@ Next add the Brightbox PPA repository to the system like this:
 
     sudo add-apt-repository ppa:brightbox/ruby-ng
 
-With that done, run `aptitude update` like this:
+With that done, run `aptitude update` to get the new repository picked up like this:
 
     sudo aptitude update
 
