@@ -1,8 +1,8 @@
-# Cheat Sheet - Ruby - Installing Ruby 2.1.5 from Source on Ubuntu 12.04
+# Cheat Sheet - Ruby - Installing Ruby from Source on Ubuntu 12.04
 
-By Jack Szwergold, September 20, 2015
+By Jack Szwergold, September 21, 2015
 
-#### Installing Ruby 2.1.5 from source code.
+#### Installing Ruby 2.2.3 from source code.
 
 First, run `aptitude update` like this:
 
@@ -14,15 +14,15 @@ Install the basics for the build:
 
 Get the latest Ruby source code:
 
-    wget http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.5.tar.gz
+    wget http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz
 
 Expand the source code archive:
 
-    tar -xvzf ruby-2.1.5.tar.gz
+    tar -xvzf ruby-2.2.3.tar.gz
 
 Go into the expanded directory:
 
-    cd ruby-2.1.5/
+    cd ruby-2.2.3/
 
 Run `configure` to configure the soucre:
 
@@ -44,7 +44,7 @@ And let’s install Bundler, since that is the one Ruby GEM lots of Ruby applict
 
     sudo gem install bundler
 
-#### Uninstalling Ruby 2.1.5 from source code.
+#### Uninstalling Ruby 2.2.3 from source code.
 
 If you need to uninstall Ruby if it was installed from source, just do this.
 
@@ -54,7 +54,7 @@ First, let’s uninstall two Ruby GEMs I usually like to install on a system:
 
 With taht done, go into the source directory like this:
 
-    cd ~/ruby-2.1.5
+    cd ~/ruby-2.2.3
 
 Now run this command to get rid of the core Ruby stuff:
 
@@ -70,13 +70,13 @@ Toss the source directory by going back to the home directory:
 
 And then toss that directory like this:
 
-    rm -rf ~/ruby-2.1.5
+    rm -rf ~/ruby-2.2.3
 
 #### Fix for WEBrick (web server) slowness.
 
 For some reason WEBrick—the default Ruby HTTP server toolkit—can be slow in development environments. This appears to stem from slow reverse DNS lookups which are not really needed. So we can disable that by doing this. Open up the `config.rb` for WEBrick like this:
 
-    sudo nano /usr/local/lib/ruby/2.1.5/webrick/config.rb
+    sudo nano /usr/local/lib/ruby/2.2.3/webrick/config.rb
 
 Find this line:
 
@@ -88,6 +88,6 @@ And change it to `true` like this:
 
 ***
 
-*Cheat Sheet - Ruby - Installing Ruby 2.1.5 from Source on Ubuntu 12.04 (c) by Jack Szwergold*
+*Cheat Sheet - Ruby - Installing Ruby 2.2.3 from Source on Ubuntu 12.04 (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
