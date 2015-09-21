@@ -36,11 +36,17 @@ Now run this binary—which was installed wth the Passenger Ruby GEM to get the 
 
 Just punch through the questions and let the process compile the module. Once done, move on.
 
-### Creating a test Ruby app.
+### Create a test Ruby app.
+
+With Passenger installed, we should set up a simple Ruby test application to test the setup with. First step is to create a simple Apache virtual host directory structure if one doesn’t exist already:
 
     sudo mkdir -p /var/www/sandbox.local/site
 
+Now adjust the permissions to the directory like this:
+
     sudo chown sysop:www-readwrite /var/www/sandbox.local/site
+
+With that done, let’s create the simple Ruby application.
 
 #### Create the `config.ru` file.
 
@@ -60,7 +66,7 @@ And this code goes in there:
 	# my_app.rb
 	class MyApp
 	  def call env
-	    [200, {"Content-Type" => "text/html"}, ["<h1>Hello, world!<\/h1>Ruby Version " + RUBY_VERSION + " on " + RUBY_PLATFORM]]
+	    [200, {"Content-Type" => "text/html"}, ["<h1>Hello world!<\/h1>Ruby Version " + RUBY_VERSION + " on " + RUBY_PLATFORM]]
 	  end
 	end
 
@@ -95,11 +101,11 @@ Add the following to the Apache virtual domain config and restart Apache.
 	  # include /etc/apache2/sites-available/common_mod_security.conf
 	
 	  <IfModule !mod_passenger.c>
-	    LoadModule passenger_module /usr/local/lib/ruby/gems/2.1.0/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
+	    LoadModule passenger_module /var/lib/gems/1.9.1/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
 	  </IfModule>
 	  <IfModule mod_passenger.c>
-	    PassengerRoot /usr/local/lib/ruby/gems/2.1.0/gems/passenger-4.0.53
-	    PassengerDefaultRuby /usr/local/bin/ruby
+	    PassengerRoot /var/lib/gems/1.9.1/gems/passenger-4.0.53
+        PassengerDefaultRuby /usr/bin/ruby1.9.1
 	
 	    PassengerSpawnMethod smart-lv2
 	    PassengerBufferResponse on
