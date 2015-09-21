@@ -46,7 +46,7 @@ Now adjust the permissions to the directory like this:
 
     sudo chown sysop:www-readwrite /var/www/sandbox.local/site
 
-With that done, let’s create the simple Ruby application.
+With that done, let’s create the simple Ruby application starting with the Ruby config file.
 
 #### Create the `config.ru` file.
 
