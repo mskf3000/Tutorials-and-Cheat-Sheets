@@ -50,9 +50,11 @@ With that done, let’s create the simple Ruby application.
 
 #### Create the `config.ru` file.
 
-    nano /var/www/sandbox.local/site/config.ru
+The first thing to do is create a `config.ru` file like this:
 
-And this code goes in there:
+    sudo nano /var/www/sandbox.local/site/config.ru
+
+And this sample Ruby code goes in there:
 
 	require './my_app'
 	run MyApp.new
