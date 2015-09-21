@@ -130,37 +130,37 @@ Now with all of that done, open up the Apache virtual host configuration file yo
 
     sudo nano /etc/apache2/sites-available/sandbox.local.conf
 
-And add Passenger `mod_passenger` configuration stuff to the virtual host configuration file:
+And then add then Passenger (`mod_passenger`) configuration stuff to the virtual host configuration file:
 
-      # Check of Passenger is loaded. And if it isn’t? Load it.
-	  <IfModule !mod_passenger.c>
-	    LoadModule passenger_module /var/lib/gems/1.9.1/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
-	  </IfModule>
-
-      # Passenger configuration items.
-	  <IfModule mod_passenger.c>
-	    PassengerRoot /var/lib/gems/1.9.1/gems/passenger-4.0.53
-        PassengerDefaultRuby /usr/bin/ruby1.9.1
+	# Check if Passenger is loaded. And if it isn’t? Load it.
+	<IfModule !mod_passenger.c>
+	  LoadModule passenger_module /var/lib/gems/1.9.1/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
+	</IfModule>
 	
-	    PassengerSpawnMethod smart-lv2
-	    PassengerBufferResponse on
-	    PassengerPoolIdleTime 120
-	    PassengerMaxPoolSize 10
-	    PassengerMaxInstancesPerApp 10
-	    PassengerMaxRequests 2000
-	    # PassengerStatThrottleRate 300
-	    # PassengerStatThrottleRate 60
-	    PassengerStatThrottleRate 0
-	    PassengerEnabled off
+	# Passenger configuration items.
+	<IfModule mod_passenger.c>
+	  PassengerRoot /var/lib/gems/1.9.1/gems/passenger-4.0.53
+	  PassengerDefaultRuby /usr/bin/ruby1.9.1
 	
-	  </IfModule>
+	  PassengerSpawnMethod smart-lv2
+	  PassengerBufferResponse on
+	  PassengerPoolIdleTime 120
+	  PassengerMaxPoolSize 10
+	  PassengerMaxInstancesPerApp 10
+	  PassengerMaxRequests 2000
+	  # PassengerStatThrottleRate 300
+	  # PassengerStatThrottleRate 60
+	  PassengerStatThrottleRate 0
+	  PassengerEnabled off
 	
-      # And more specific Passenger configuration items.
-	  <IfModule mod_passenger.c>
-	    PassengerEnabled on
-	    PassengerAppRoot /var/www/sandbox.local/site
-	    RackBaseURI /
-	  </IfModule>
+	</IfModule>
+	
+	# And more specific Passenger configuration items.
+	<IfModule mod_passenger.c>
+	  PassengerEnabled on
+	  PassengerAppRoot /var/www/sandbox.local/site
+	  RackBaseURI /
+	</IfModule>
 
 
 
@@ -186,8 +186,6 @@ And add Passenger `mod_passenger` configuration stuff to the virtual host config
 	
 	  # 2014-03-12: Including common ModSecurity related items.
 	  # include /etc/apache2/sites-available/common_mod_security.conf
-	
-
 	
 	</VirtualHost>
 
