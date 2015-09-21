@@ -86,11 +86,44 @@ Save it and change the permissions like this:
 
 With that done, now let’s test the Ruby app manually to see if that works.
 
-#### Test if the Ruby app works by default, run it via 'rackup'.
+#### Test if the Ruby app itself works by running it via `rackup`.
+
+So now, we just need to confirm that the simple Ruby application we just created works. So go into the working directory for the application like this:
 
     cd /var/www/sandbox.local/site/
 
+And run the `rackup` command on that Ruby config file (`config.ru`) like this:
+
     rackup config.ru
+
+The running output should be something like this:
+
+	[2015-09-20 21:30:11] INFO  WEBrick 1.3.1
+	[2015-09-20 21:30:11] INFO  ruby 1.9.3 (2011-10-30) [x86_64-linux]
+	[2015-09-20 21:30:11] INFO  WEBrick::HTTPServer#start: pid=21724 port=9292
+
+And you can test the application via a web browser by going to this URL:
+
+    http://sandbox.local:9292
+
+The returned output from the server should be something like this:
+
+> **Hello world!**
+>
+> Ruby Version 1.9.3 on x86_64-linux
+
+If somehow your server’s firewall is restricting traffic and you can’t access services on port `9292`, then just launch another SSH session and test the URL with `curl` like this:
+
+    curl http://localhost:9292
+ 
+The returned output from the server when using `curl` should be something like this:
+
+> `<h1>Hello world!</h1>Ruby Version 1.9.3 on x86_64-linux`
+
+Yes, that’s raw HTML you are seeing with `curl`, but the results still look good; the simple applictaion is doing what it should be doing.
+
+And if that’s the case
+
 
 ### Sample Apache configuration.
 
