@@ -44,7 +44,7 @@ Now run this binary—which was installed with the Passenger Ruby GEM to get the
 
 That is really a symbolic link to the actual binary installed with the Ruby GEM. So if somehow that symbolic link doesn’t work, just run it directly like this:
 
-    sudo /var/lib/gems/1.9.1/gems/passenger-4.0.59/bin/passenger-install-apache2-module
+    sudo /var/lib/gems/2.2.0/gems/passenger-4.0.59/bin/passenger-install-apache2-module
 
 Just punch through the questions and let the process compile the module. Once done, move on.
 
@@ -146,12 +146,12 @@ And then add then Passenger (`mod_passenger`) configuration stuff to the virtual
 
 	# Check if Passenger is loaded. And if it isn’t? Load it.
 	<IfModule !mod_passenger.c>
-	  LoadModule passenger_module /var/lib/gems/1.9.1/gems/passenger-4.0.59/buildout/apache2/mod_passenger.so
+	  LoadModule passenger_module /var/lib/gems/2.2.0/gems/passenger-4.0.59/buildout/apache2/mod_passenger.so
 	</IfModule>
 	
 	# Passenger configuration items.
 	<IfModule mod_passenger.c>
-	  PassengerRoot /var/lib/gems/1.9.1/gems/passenger-4.0.59
+	  PassengerRoot /var/lib/gems/2.2.0/gems/passenger-4.0.59
 	  PassengerDefaultRuby /usr/bin/ruby1.9.1
 	
 	  PassengerSpawnMethod smart-lv2
