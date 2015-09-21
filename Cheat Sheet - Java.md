@@ -2,9 +2,9 @@
 
 By Jack Szwergold, September 21, 2015
 
-### Installing Java via the WebUpd8 repository.
+### Installing Java via the WebUpd8 PPA repository.
 
-#### Adding the WebUpd8 PPA to the system.
+#### Adding the WebUpd8 PPA repository to the system.
 
 First install `python-software-properties` like this:
 
@@ -71,7 +71,9 @@ And the output should be something like this:
 
 #### Add a `JAVA_HOME` value to the system `/etc/environment` file.
 
-Open up the main `/etc/environment` file on the system like this:
+Lots of apps look for a `JAVA_HOME` variable on a system. To make your life easier, set the `JAVA_HOME` after you install Java so you don’t have to hunt for custom settings for each application.
+
+You can do this by opening up the main `/etc/environment` file on the system like this:
 
     sudo nano /etc/environment
 
@@ -81,10 +83,20 @@ And add a `JAVA_HOME` assignment to the bottom of the file like this; adjust the
 
 #### Detect the version of Java a class was compiled under
 
-    javap -verbose MyClass | more
+If you have ever need to check what version of Java compiled a Java class, just run the following command. Be sure to change `/path/to/the/java.class` to match the full path of the actual Java class you want check:
 
-You want the major version from the results. Here are some example values:
+    javap -verbose /path/to/the/java.class | grep "public class javaversion" -A 2
 
+The output of that command should be something like this:
+
+	public class javaversion
+	minor version: 3
+	major version: 45
+
+Cross reference the “major version” value with the following list:
+
+	Java 1.0 uses major version 45
+	Java 1.1 uses major version 45
 	Java 1.2 uses major version 46
 	Java 1.3 uses major version 47
 	Java 1.4 uses major version 48
@@ -92,9 +104,15 @@ You want the major version from the results. Here are some example values:
 	Java 6 uses major version 50
 	Java 7 uses major version 51
 
+And using that table above, we can see that a Java class with a major version of 45 translates to Java 1.0/1.1.
+
 ### Removing older Java items.
 
-#### Get rid of the default “partner” repository installed version of Java.
+If you are somehow working on a system where Java was installed via the default Ubuntu “partner” repository or via the `oab-java.sh` method, here is how you can clean out these installs so they don’t muck things up with the WebUpd8 PPA repository install of Java.
+
+#### Get rid of the default Ubuntu “partner” repository installed version of Java.
+
+Just run this `sudo aptitude purge` command to get rid of any Java stuff installed via the default Ubuntu “partner” repository:
 
 	sudo aptitude purge java-common libcommons-collections3-java libcommons-dbcp-java libcommons-pool-java libecj-java libservlet2.5-java libtomcat6-java oracle-java6-installer sun-java6-bin sun-java6-jre
 
