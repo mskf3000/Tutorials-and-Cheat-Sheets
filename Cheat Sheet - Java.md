@@ -63,6 +63,9 @@ Check the version number like this:
 
 And the output should be something like this:
 
+	java version "1.8.0_60"
+	Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
+	Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
 
 ### Sundry Java items.
 
