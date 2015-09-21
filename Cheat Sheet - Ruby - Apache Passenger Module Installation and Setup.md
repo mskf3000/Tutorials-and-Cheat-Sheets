@@ -162,6 +162,22 @@ And then add then Passenger (`mod_passenger`) configuration stuff to the virtual
 	  RackBaseURI /
 	</IfModule>
 
+Restart the Apache server like this:
+
+    sudo service apache2 restart
+
+And open up a web browser and head to this URL:
+
+    http://sandbox.local
+
+The returned output from the server should be something like this:
+
+> **Hello world!**
+>
+> Ruby Version 1.9.3 on x86_64-linux
+
+And you are now good to go!
+
 ***
 
 *Cheat Sheet - Ruby - Apache Passenger Module Installation and Setup (c) by Jack Szwergold*
