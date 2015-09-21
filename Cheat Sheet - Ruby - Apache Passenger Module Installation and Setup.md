@@ -20,19 +20,21 @@ With all of that covered, make sure the Apache development packages and Curl dev
 
 Install `passenger` on Ruby 1.8 or 1.9 like this:
 
-	sudo gem install passenger -v "=4.0.53" --no-rdoc --no-ri
+	sudo gem install passenger -v "=4.0.59" --no-rdoc --no-ri
 
-	sudo gem uninstall passenger --version 4.0.53
+Uninstall `passenger` on Ruby 1.8 or 1.9 like this:
+
+	sudo gem uninstall passenger --version 4.0.59
 
 Install `passenger` on Ruby 2.0 like this:
 
-	sudo gem install passenger:4.0.53 --no-rdoc --no-ri
+	sudo gem install passenger:4.0.59 --no-rdoc --no-ri
 
 ### Install the Passenger Apache Module.
 
 Now run this binary—which was installed with the Passenger Ruby GEM to get the Passenger Apache module installed:
 
-    sudo /var/lib/gems/1.9.1/gems/passenger-4.0.53/bin/passenger-install-apache2-module
+    sudo /var/lib/gems/1.9.1/gems/passenger-4.0.59/bin/passenger-install-apache2-module
 
 Just punch through the questions and let the process compile the module. Once done, move on.
 
@@ -134,12 +136,12 @@ And then add then Passenger (`mod_passenger`) configuration stuff to the virtual
 
 	# Check if Passenger is loaded. And if it isn’t? Load it.
 	<IfModule !mod_passenger.c>
-	  LoadModule passenger_module /var/lib/gems/1.9.1/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
+	  LoadModule passenger_module /var/lib/gems/1.9.1/gems/passenger-4.0.59/buildout/apache2/mod_passenger.so
 	</IfModule>
 	
 	# Passenger configuration items.
 	<IfModule mod_passenger.c>
-	  PassengerRoot /var/lib/gems/1.9.1/gems/passenger-4.0.53
+	  PassengerRoot /var/lib/gems/1.9.1/gems/passenger-4.0.59
 	  PassengerDefaultRuby /usr/bin/ruby1.9.1
 	
 	  PassengerSpawnMethod smart-lv2
