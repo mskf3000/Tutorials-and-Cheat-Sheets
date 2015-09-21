@@ -4,7 +4,7 @@ By Jack Szwergold, September 20, 2015
 
 This tutorial outlines how to install Passenger (`mod_passenger`) to allow an Apache to manage Ruby applications.
 
-Why? Easy. Apache is far more robust and flexible when it comes to web server configuration than most Ruby servers. Passenger allows Ruby applications to leverage this flexibility easilly and without having to play around with deeper Ruby web server specifics.
+Why? Easy. Apache is far more robust and flexible when it comes to web server configuration than most Ruby servers. Passenger allows Ruby applications to leverage this flexibility easily and without having to play around with deeper Ruby web server specifics.
 
 ***
 
