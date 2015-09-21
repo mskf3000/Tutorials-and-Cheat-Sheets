@@ -18,19 +18,51 @@ With that done, run `aptitude update` to get the new repository picked up like t
 
 	sudo aptitude update
 
-#### Install various versions of Java via the WebUpd8 PPA.
+### Install various versions of Java via the WebUpd8 PPA.
 
-Install Java 6:
+#### Install Java 6.
+
+Now install Java (version 6) via `aptitude` like this:
 
     sudo aptitude install oracle-java6-installer
 
-Install Java 7:
+Check the version number like this:
+
+    java -version
+
+And the output should be something like this:
+
+	Java(TM) SE Runtime Environment (build 1.6.0_45-b06)
+	Java HotSpot(TM) 64-Bit Server VM (build 20.45-b01, mixed mode)
+
+#### Install Java 7.
+
+Now install Java (version 7) via `aptitude` like this:
 
     sudo aptitude install oracle-java7-installer
 
-Install Java 8:
+Check the version number like this:
+
+    java -version
+
+And the output should be something like this:
+
+	java version "1.7.0_80"
+	Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
+	Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
+
+#### Install Java 8.
+
+Now install Java (version 8) via `aptitude` like this:
 
     sudo aptitude install oracle-java8-installer
+
+Check the version number like this:
+
+    java -version
+
+And the output should be something like this:
+
 
 ### Sundry Java items.
 
