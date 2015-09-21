@@ -81,7 +81,7 @@ With that done, let’s create the actual Ruby application code.
 
 Now create the actual Ruby application file (`my_app.rb`) like this:
 
-    nano /var/www/sandbox.local/site/my_app.rb
+    sudo nano /var/www/sandbox.local/site/my_app.rb
 
 And this code goes in there:
 
@@ -110,9 +110,9 @@ And run the `rackup` command on that Ruby config file (`config.ru`) like this:
 
 The running output should be something like this:
 
-	[2015-09-20 21:30:11] INFO  WEBrick 1.3.1
-	[2015-09-20 21:30:11] INFO  ruby 1.9.3 (2011-10-30) [x86_64-linux]
-	[2015-09-20 21:30:11] INFO  WEBrick::HTTPServer#start: pid=21724 port=9292
+	[2015-09-20 23:25:25] INFO  WEBrick 1.3.1
+	[2015-09-20 23:25:25] INFO  ruby 2.2.3 (2015-08-18) [x86_64-linux-gnu]
+	[2015-09-20 23:25:25] INFO  WEBrick::HTTPServer#start: pid=14300 port=9292
 
 And you can test the application via a web browser by going to this URL:
 
@@ -122,7 +122,7 @@ The returned output from the server should be something like this:
 
 > **Hello world!**
 >
-> Ruby Version 1.9.3 on x86_64-linux
+> Ruby Version 2.2.3 on x86_64-linux-gnu
 
 If somehow your server’s firewall is restricting traffic and you can’t access services on port `9292`, then just launch another SSH session and test the URL with `curl` like this:
 
@@ -130,7 +130,7 @@ If somehow your server’s firewall is restricting traffic and you can’t acces
 
 The returned output from the server when using `curl` should be something like this:
 
-> `<h1>Hello world!</h1>Ruby Version 1.9.3 on x86_64-linux`
+> `<h1>Hello world!</h1>Ruby Version 2.2.3 on x86_64-linux-gnu`
 
 Yes, that’s raw HTML you are seeing with `curl`, but the results still look good; the simple application is doing what it should be doing.
 
@@ -152,7 +152,7 @@ And then add then Passenger (`mod_passenger`) configuration stuff to the virtual
 	# Passenger configuration items.
 	<IfModule mod_passenger.c>
 	  PassengerRoot /var/lib/gems/2.2.0/gems/passenger-4.0.59
-	  PassengerDefaultRuby /usr/bin/ruby1.9.1
+	  PassengerDefaultRuby /usr/bin/ruby2.2
 	
 	  PassengerSpawnMethod smart-lv2
 	  PassengerBufferResponse on
@@ -186,7 +186,7 @@ The returned output from the server should be something like this:
 
 > **Hello world!**
 >
-> Ruby Version 1.9.3 on x86_64-linux
+> Ruby Version 2.2.3 on x86_64-linux-gnu
 
 And you are now good to go!
 
