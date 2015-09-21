@@ -12,33 +12,37 @@ Install the basics for the build:
 
     sudo aptitude install build-essential zlib1g-dev libssl-dev libreadline6-dev libyaml-dev
 
-Get the latest Ruby source code:
+First grab a compressed archive from an official `ruby` source site:
 
-    wget http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz
+    curl -O -L http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz
 
-Expand the source code archive:
+Next, decompress the archive like this:
 
-    tar -xvzf ruby-2.2.3.tar.gz
+    tar -xf ruby-2.*.tar.gz
 
-Go into the expanded directory:
+Now go into the decompressed directory:
 
-    cd ruby-2.2.3/
+    cd ruby-2.*
 
-Run `configure` to configure the soucre:
+Run this `configure` command:
 
     ./configure --prefix=/usr/local
 
-Run `make` to compile the soucre:
+Once the `configure` process completes, run `make`:
 
     make
 
-Let’s test the build:
+Let’s test the `make` build:
 
     make test
 
-All good? Great! Install it all:
+Finally install it by running `sudo make install`:
 
     sudo make install
+
+And once it’s installed, run the command with `-h` to do a simple check to see it’s working:
+
+    ruby --version
 
 And let’s install Bundler, since that is the one Ruby GEM lots of Ruby applictaions like to use:
 
@@ -54,7 +58,7 @@ First, let’s uninstall two Ruby GEMs I usually like to install on a system:
 
 With taht done, go into the source directory like this:
 
-    cd ~/ruby-2.2.3
+    cd ~/ruby-2.*
 
 Now run this command to get rid of the core Ruby stuff:
 
@@ -70,7 +74,7 @@ Toss the source directory by going back to the home directory:
 
 And then toss that directory like this:
 
-    rm -rf ~/ruby-2.2.3
+    rm -rf ~/ruby-2.*
 
 #### Fix for WEBrick (web server) slowness.
 
