@@ -30,7 +30,7 @@ Install `passenger` on Ruby 2.0 like this:
 
 #### Install the Passenger Apache Module.
 
-Now run this binary—which was installed wth the Passenger Ruby GEM to get the Passenger Apache module installed:
+Now run this binary—which was installed with the Passenger Ruby GEM to get the Passenger Apache module installed:
 
     sudo /var/lib/gems/1.9.1/gems/passenger-4.0.53/bin/passenger-install-apache2-module
 
@@ -120,7 +120,7 @@ The returned output from the server when using `curl` should be something like t
 
 > `<h1>Hello world!</h1>Ruby Version 1.9.3 on x86_64-linux`
 
-Yes, that’s raw HTML you are seeing with `curl`, but the results still look good; the simple applictaion is doing what it should be doing.
+Yes, that’s raw HTML you are seeing with `curl`, but the results still look good; the simple application is doing what it should be doing.
 
 And if the application is working, just quit it and now move onto the real reason we’re doing all of this: To get Apache working with the Passenger module (`mod_passenger.so`).
 
