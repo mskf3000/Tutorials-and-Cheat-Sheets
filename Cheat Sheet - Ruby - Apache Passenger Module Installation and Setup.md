@@ -34,14 +34,6 @@ Now run this binary—which was installed wth the Passenger Ruby GEM to get the 
 
     sudo /var/lib/gems/1.9.1/gems/passenger-4.0.53/bin/passenger-install-apache2-module
 
-Lines to be added to the Apache configuration for 4.0.53:
-
-    LoadModule passenger_module /usr/local/lib/ruby/gems/2.1.0/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
-    <IfModule mod_passenger.c>
-      PassengerRoot /usr/local/lib/ruby/gems/2.1.0/gems/passenger-4.0.53
-      PassengerDefaultRuby /usr/local/bin/ruby
-    </IfModule>
-
 ### Creating a test Ruby app.
 
     sudo mkdir -p /var/www/sandbox.local/site
