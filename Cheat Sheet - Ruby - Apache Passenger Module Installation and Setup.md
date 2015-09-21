@@ -20,15 +20,15 @@ With all of that covered, make sure the Apache development packages and Curl dev
 
 ### Install the Passenger Ruby GEM.
 
-Install `passenger` on Ruby 1.8 or 1.9 like this:
+Install `passenger` on Ruby 1.8.x or 1.9.x like this:
 
 	sudo gem install passenger -v "=4.0.59" --no-rdoc --no-ri
 
-Uninstall `passenger` on Ruby 1.8 or 1.9 like this:
+Uninstall `passenger` on Ruby 1.8.x or 1.9.x like this:
 
 	sudo gem uninstall passenger --version 4.0.59
 
-Install `passenger` on Ruby 2.0 like this:
+Install `passenger` on Ruby 2.x.x like this:
 
 	sudo gem install passenger:4.0.59 --no-rdoc --no-ri
 
