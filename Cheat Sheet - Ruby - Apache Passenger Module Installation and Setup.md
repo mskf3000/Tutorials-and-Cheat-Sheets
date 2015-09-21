@@ -122,8 +122,7 @@ The returned output from the server when using `curl` should be something like t
 
 Yes, that’s raw HTML you are seeing with `curl`, but the results still look good; the simple applictaion is doing what it should be doing.
 
-And if that’s the case
-
+And if the application is working, just quit it and now move onto the real reason we’re doing all of this: To get Apache working with the Passenger module (`mod_passenger.so`).
 
 ### Sample Apache configuration.
 
