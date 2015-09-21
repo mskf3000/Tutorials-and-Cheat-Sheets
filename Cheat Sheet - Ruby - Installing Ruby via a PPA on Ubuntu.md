@@ -34,6 +34,10 @@ Install Ruby 2.1:
 
     sudo aptitude install ruby2.1 ruby2.1-dev
 
+Install Ruby 2.2:
+
+    sudo aptitude install ruby2.2 ruby2.2-dev
+
 ***
 
 *Cheat Sheet - Ruby - Installing Ruby via a PPA on Ubuntu (c) by Jack Szwergold*
