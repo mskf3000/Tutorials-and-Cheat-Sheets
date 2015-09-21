@@ -126,7 +126,46 @@ And if the application is working, just quit it and now move onto the real reaso
 
 ### Sample Apache configuration.
 
-Add the following to the Apache virtual domain config and restart Apache.
+Now with all of that done, open up the Apache virtual host configuration file you want to add Passenger support to; such as this one:
+
+    sudo nano /etc/apache2/sites-available/sandbox.local.conf
+
+And add Passenger `mod_passenger` configuration stuff to the virtual host configuration file:
+
+      # Check of Passenger is loaded. And if it isn’t? Load it.
+	  <IfModule !mod_passenger.c>
+	    LoadModule passenger_module /var/lib/gems/1.9.1/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
+	  </IfModule>
+
+      # Passenger configuration items.
+	  <IfModule mod_passenger.c>
+	    PassengerRoot /var/lib/gems/1.9.1/gems/passenger-4.0.53
+        PassengerDefaultRuby /usr/bin/ruby1.9.1
+	
+	    PassengerSpawnMethod smart-lv2
+	    PassengerBufferResponse on
+	    PassengerPoolIdleTime 120
+	    PassengerMaxPoolSize 10
+	    PassengerMaxInstancesPerApp 10
+	    PassengerMaxRequests 2000
+	    # PassengerStatThrottleRate 300
+	    # PassengerStatThrottleRate 60
+	    PassengerStatThrottleRate 0
+	    PassengerEnabled off
+	
+	  </IfModule>
+	
+      # And more specific Passenger configuration items.
+	  <IfModule mod_passenger.c>
+	    PassengerEnabled on
+	    PassengerAppRoot /var/www/sandbox.local/site
+	    RackBaseURI /
+	  </IfModule>
+
+
+
+
+
 
 	<VirtualHost *:80>
 	  DocumentRoot /var/www
@@ -148,32 +187,7 @@ Add the following to the Apache virtual domain config and restart Apache.
 	  # 2014-03-12: Including common ModSecurity related items.
 	  # include /etc/apache2/sites-available/common_mod_security.conf
 	
-	  <IfModule !mod_passenger.c>
-	    LoadModule passenger_module /var/lib/gems/1.9.1/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
-	  </IfModule>
-	  <IfModule mod_passenger.c>
-	    PassengerRoot /var/lib/gems/1.9.1/gems/passenger-4.0.53
-        PassengerDefaultRuby /usr/bin/ruby1.9.1
-	
-	    PassengerSpawnMethod smart-lv2
-	    PassengerBufferResponse on
-	    PassengerPoolIdleTime 120
-	    PassengerMaxPoolSize 10
-	    PassengerMaxInstancesPerApp 10
-	    PassengerMaxRequests 2000
-	    # PassengerStatThrottleRate 300
-	    # PassengerStatThrottleRate 60
-	    PassengerStatThrottleRate 0
-	
-	    PassengerEnabled off
-	
-	  </IfModule>
-	
-	  <IfModule mod_passenger.c>
-	    PassengerEnabled on
-	    PassengerAppRoot /var/www/sandbox.local/site
-	    RackBaseURI /
-	  </IfModule>
+
 	
 	</VirtualHost>
 
