@@ -61,7 +61,7 @@ You want the major version from the results. Here are some example values:
 
 ### Removing older Java items.
 
-#### Removing outdated Ubuntu “partner” repository Java items.
+#### Get rid of the default “partner” repository installed version of Java.
 
 	sudo aptitude purge java-common libcommons-collections3-java libcommons-dbcp-java libcommons-pool-java libecj-java libservlet2.5-java libtomcat6-java oracle-java6-installer sun-java6-bin sun-java6-jre
 
