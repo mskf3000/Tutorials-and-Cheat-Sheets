@@ -6,25 +6,35 @@ Installing Passenger (mod_rack) to allow Apache2 to manage Ruby apps.
 
 ***
 
-Make sure the Apache2 DEV & Curl SSL DEV packages are installed.
+#### System prerequisites.
+
+First, make sure you have a working LAMP (Linux, Apache, MySQL and PHP) stack running on the server. Also, make sure you have some version of Ruby installed.
+
+These instructions cover installation of Passenger on systems where Ruby is *not* installed via RVM. Ruby versions 1.8, 1.9 and 2.0 and above are covered here.
+
+With all of that covered, make sure the Apache development packages and Curl development packages are installed:
 
     sudo aptitude install apache2-dev libcurl4-openssl-dev
 
-Install `passenger` (Ruby 1.9/1.8):
+#### Install the Passenger Ruby GEM.
 
-	gem install passenger -v "=4.0.53" --no-rdoc --no-ri
+Install `passenger` on Ruby 1.8 or 1.9 like this:
 
-	gem uninstall passenger --version 4.0.53
+	sudo gem install passenger -v "=4.0.53" --no-rdoc --no-ri
 
-Install `passenger` (Ruby 2.0):
+	sudo gem uninstall passenger --version 4.0.53
 
-	gem install passenger:4.0.53 --no-rdoc --no-ri
+Install `passenger` on Ruby 2.0 like this:
 
-Install the Apache module for "Passenger"
+	sudo gem install passenger:4.0.53 --no-rdoc --no-ri
 
-    sudo /usr/local/lib/ruby/gems/2.1.0/gems/passenger-4.0.53/bin/passenger-install-apache2-module
+#### Install the Passenger Apache Module.
 
-Lines to be added to the Apache2 configuration for 4.0.53
+Now run this binary—which was installed wth the Passenger Ruby GEM to get the Passenger Apache module installed:
+
+    sudo /var/lib/gems/1.9.1/gems/passenger-4.0.53/bin/passenger-install-apache2-module
+
+Lines to be added to the Apache configuration for 4.0.53:
 
     LoadModule passenger_module /usr/local/lib/ruby/gems/2.1.0/gems/passenger-4.0.53/buildout/apache2/mod_passenger.so
     <IfModule mod_passenger.c>

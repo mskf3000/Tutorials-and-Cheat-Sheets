@@ -16,6 +16,12 @@ Install the basics for the RVM build:
 	
 	sudo aptitude install libreadline6-dev libyaml-dev sqlite3 libgdbm-dev libncurses5-dev bison pkg-config libffi-dev
 
+Uninstall RVM completely:
+
+    rvm implode
+
+After doing that also check for RVM references in `.bashrc`, `.bash_profile` and  `.profile` and remove or comment them out as needed.
+
 #### Sundry RVM items.
 
 Install Ruby via RVM:
