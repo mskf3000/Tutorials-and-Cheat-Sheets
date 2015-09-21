@@ -34,6 +34,8 @@ Now run this binary—which was installed wth the Passenger Ruby GEM to get the 
 
     sudo /var/lib/gems/1.9.1/gems/passenger-4.0.53/bin/passenger-install-apache2-module
 
+Just punch through the questions and let the process compile the module. Once done, move on.
+
 ### Creating a test Ruby app.
 
     sudo mkdir -p /var/www/sandbox.local/site
