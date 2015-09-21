@@ -54,14 +54,20 @@ The first thing to do is create a Ruby config file (`config.ru`) like this:
 
     sudo nano /var/www/sandbox.local/site/config.ru
 
-And this  Ruby configuration goes in there:
+And this Ruby configuration goes in there:
 
 	require './my_app'
 	run MyApp.new
 
-With that done, we now have to 
+Save it and change the permissions like this:
+
+    sudo chown sysop:www-readwrite /var/www/sandbox.local/site/config.ru
+
+With that done, let’s create the actual Ruby application code.
 
 #### Create the `my_app.rb` file.
+
+Now create the actual Ruby application file (`my_app.rb`) like this:
 
     nano /var/www/sandbox.local/site/my_app.rb
 
@@ -73,6 +79,12 @@ And this code goes in there:
 	    [200, {"Content-Type" => "text/html"}, ["<h1>Hello world!<\/h1>Ruby Version " + RUBY_VERSION + " on " + RUBY_PLATFORM]]
 	  end
 	end
+
+Save it and change the permissions like this:
+
+    sudo chown sysop:www-readwrite /var/www/sandbox.local/site/my_app.rb
+
+With that done, now let’s test the Ruby app manually to see if that works.
 
 #### Test if the Ruby app works by default, run it via 'rackup'.
 
