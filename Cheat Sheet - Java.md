@@ -34,7 +34,7 @@ Install Java 8:
 
 ### Sundry Java items.
 
-#### Add JAVA_HOME to the system `/etc/environment` file.
+#### Add a `JAVA_HOME` value to the system `/etc/environment` file.
 
 Add or adjust this line to `/etc/environment` to match your newly installed Java:
 
