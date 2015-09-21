@@ -1,4 +1,4 @@
-# Cheat Sheet - ElasticSearch
+# Cheat Sheet - Elasticsearch
 
 By Jack Szwergold, September 21, 2015
 
@@ -72,7 +72,7 @@ The response should be something like:
 
 #### Bind to `localhost` to disable networking.
 
-By default, ElasticSearch will be networked to allow connections from anywhere, everywhere. That’s not really desired. So to disable that, open up the main config file here:
+By default, Elasticsearch will be networked to allow connections from anywhere, everywhere. That’s not really desired. So to disable that, open up the main config file here:
 
     sudo nano /etc/elasticsearch/elasticsearch.yml
 
@@ -89,7 +89,7 @@ And adjust it like so:
 	#network.host: 192.168.0.1
 	network.host: localhost
 
-Then restart ElasticSearch:
+Then restart Elasticsearch:
 
     sudo service elasticsearch restart
 
@@ -297,6 +297,6 @@ The slow logs:
 
 ***
 
-*Cheat Sheet - ElasticSearch (c) by Jack Szwergold*
+*Cheat Sheet - Elasticsearch (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
