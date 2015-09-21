@@ -1,8 +1,10 @@
-# Cheat Sheet - Ruby - Installing Ruby from Source on Ubuntu 12.04
+# Cheat Sheet - Ruby - Installing Ruby from Source on Ubuntu
 
 By Jack Szwergold, September 21, 2015
 
-#### Installing Ruby 2.2.3 from source code.
+This tutorial explains how to compile Ruby version 2.2.3 from source on Ubuntu, but the same basic recipe can be used for most any other version of Ruby on Ubuntu.
+
+#### Installing Ruby from source code.
 
 First, run `aptitude update` like this:
 
@@ -32,7 +34,7 @@ Once the `configure` process completes, run `make`:
 
     make
 
-Let’s test the `make` build:
+After that’s done, let’s test the `make` build:
 
     make test
 
@@ -44,11 +46,15 @@ And once it’s installed, run the command with `-h` to do a simple check to see
 
     ruby --version
 
-And let’s install Bundler, since that is the one Ruby GEM lots of Ruby applictaions like to use:
+The output should be something like this:
+
+> ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]
+
+When all is said and done, let’s install Bundler, since that is the one Ruby GEM lots of Ruby applictaions like to use:
 
     sudo gem install bundler
 
-#### Uninstalling Ruby 2.2.3 from source code.
+#### Uninstalling Ruby from source code.
 
 If you need to uninstall Ruby if it was installed from source, just do this.
 
@@ -92,6 +98,6 @@ And change it to `true` like this:
 
 ***
 
-*Cheat Sheet - Ruby - Installing Ruby 2.2.3 from Source on Ubuntu 12.04 (c) by Jack Szwergold*
+*Cheat Sheet - Ruby - Installing Ruby from Source on Ubuntu (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
