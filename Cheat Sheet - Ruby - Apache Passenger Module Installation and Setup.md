@@ -115,7 +115,7 @@ The returned output from the server should be something like this:
 If somehow your server’s firewall is restricting traffic and you can’t access services on port `9292`, then just launch another SSH session and test the URL with `curl` like this:
 
     curl http://localhost:9292
- 
+
 The returned output from the server when using `curl` should be something like this:
 
 > `<h1>Hello world!</h1>Ruby Version 1.9.3 on x86_64-linux`
@@ -126,9 +126,9 @@ And if the application is working, just quit it and now move onto the real reaso
 
 ### Sample Apache Passenger module configuration.
 
-Now with all of that done, open up the Apache virtual host configuration file you want to add Passenger support to; such as this one:
+Now with all of that done, open up the Apache configuration file you want to add Passenger support to; such as this `default` one:
 
-    sudo nano /etc/apache2/sites-available/sandbox.local.conf
+    sudo nano /etc/apache2/sites-available/default
 
 And then add then Passenger (`mod_passenger`) configuration stuff to the virtual host configuration file:
 
@@ -161,33 +161,6 @@ And then add then Passenger (`mod_passenger`) configuration stuff to the virtual
 	  PassengerAppRoot /var/www/sandbox.local/site
 	  RackBaseURI /
 	</IfModule>
-
-
-
-
-
-
-	<VirtualHost *:80>
-	  DocumentRoot /var/www
-	
-	  CustomLog ${APACHE_LOG_DIR}/access.log combined
-	  ErrorLog ${APACHE_LOG_DIR}/error.log
-	
-	  # Possible values include: debug, info, notice, warn, error, crit, alert, emerg.
-	  LogLevel warn
-	
-	  Alias /phpmyadmin /usr/share/phpmyadmin/
-	  Alias /munin /var/cache/munin/www
-	
-	  RedirectMatch 404 /(builds|configs|content)(/|$)
-	
-	  # 2013-11-04: Including common items in a common file for ssl & non-ssl.
-	  include /etc/apache2/sites-available/common.conf
-	
-	  # 2014-03-12: Including common ModSecurity related items.
-	  # include /etc/apache2/sites-available/common_mod_security.conf
-	
-	</VirtualHost>
 
 ***
 
