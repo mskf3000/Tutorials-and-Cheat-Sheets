@@ -54,7 +54,7 @@ The first thing to do is create a Ruby config file (`config.ru`) like this:
 
     sudo nano /var/www/sandbox.local/site/config.ru
 
-And this sample Ruby code goes in there:
+And this  Ruby configuration goes in there:
 
 	require './my_app'
 	run MyApp.new
