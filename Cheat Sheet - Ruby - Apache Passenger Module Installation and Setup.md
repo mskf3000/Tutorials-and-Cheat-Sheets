@@ -124,7 +124,7 @@ Yes, that’s raw HTML you are seeing with `curl`, but the results still look go
 
 And if the application is working, just quit it and now move onto the real reason we’re doing all of this: To get Apache working with the Passenger module (`mod_passenger.so`).
 
-### Sample Apache configuration.
+### Sample Apache Passenger module configuration.
 
 Now with all of that done, open up the Apache virtual host configuration file you want to add Passenger support to; such as this one:
 
