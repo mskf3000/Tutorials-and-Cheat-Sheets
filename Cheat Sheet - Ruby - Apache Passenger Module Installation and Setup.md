@@ -6,7 +6,7 @@ Installing Passenger (mod_rack) to allow Apache2 to manage Ruby apps.
 
 ***
 
-#### System prerequisites.
+### System prerequisites.
 
 First, make sure you have a working LAMP (Linux, Apache, MySQL and PHP) stack running on the server. Also, make sure you have some version of Ruby installed.
 
@@ -16,7 +16,7 @@ With all of that covered, make sure the Apache development packages and Curl dev
 
     sudo aptitude install apache2-dev libcurl4-openssl-dev
 
-#### Install the Passenger Ruby GEM.
+### Install the Passenger Ruby GEM.
 
 Install `passenger` on Ruby 1.8 or 1.9 like this:
 
@@ -28,7 +28,7 @@ Install `passenger` on Ruby 2.0 like this:
 
 	sudo gem install passenger:4.0.53 --no-rdoc --no-ri
 
-#### Install the Passenger Apache Module.
+### Install the Passenger Apache Module.
 
 Now run this binary—which was installed with the Passenger Ruby GEM to get the Passenger Apache module installed:
 
@@ -36,7 +36,7 @@ Now run this binary—which was installed with the Passenger Ruby GEM to get the
 
 Just punch through the questions and let the process compile the module. Once done, move on.
 
-### Create a test Ruby app.
+### Create a simple Ruby test application.
 
 With Passenger installed, we should set up a simple Ruby test application to test the setup with. First step is to create a simple Apache virtual host directory structure if one doesn’t exist already:
 
