@@ -4,29 +4,29 @@ By Jack Szwergold, September 21, 2015
 
 ## Install Elasticsearch
 
-#### Import the public key used by the package management system.
+#### Install Elasticsearch.
+
+First, import the public key used by the package management system:
 
     wget -qO - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
 
-#### Create a sources list file for Elasticsearch.
+Next, create a sources list file for Elasticsearch:
 
     echo 'deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main' | sudo tee /etc/apt/sources.list.d/elasticsearch.list
 
-#### Install.
-
-First update aptitude like this:
+Now, run `aptitude update` like this:
 
     sudo aptitude update
 
-And then run the magic command:
+Then install Elasticsearch via `aptitude` like this:
 
     sudo aptitude install elasticsearch
 
-Now it will be installed, but won’t be set to startup on boot. So run this command to get that set:
+Finally Elasticsearch will be installed, but it won’t be set to startup on boot. So run this `update-rc.d` command to get that set:
 
     sudo update-rc.d elasticsearch defaults 95 10
 
-#### Testing it.
+#### Testing Elasticsearch.
 
 So with it installed and with system service control script installed, we need to start it by running this command:
 
