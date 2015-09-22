@@ -242,29 +242,36 @@ And the returned data should be:
 	  }
 	}
 
-#### List all indexes.
+#### List all indexes in the Elasticsearch server.
 
 This lists all indexes:
 
     curl 'http://sandbox.local:9200/_cat/indices?v'
 
-#### Flush data.
+Results should be something like this:
 
-Flush all data to rebuild:
+	health status index  pri rep docs.count docs.deleted store.size pri.store.size 
+	yellow open   pranks   5   1          1            0      2.9kb          2.9kb 
+	yellow open   jokes    5   1          1            0      3.3kb          3.3kb
 
-    curl -XPOST 'http://sandbox.local:9200/_flush?pretty=true'
 
-Flush a specific named index:
+#### Flush an Elasticsearch index to rebuild it.
+
+Flush the “pranks” index to rebuild it like this:
 
     curl -XPOST 'http://sandbox.local:9200/pranks/_flush?pretty=true'
 
-Flush specific named indexes:
+Flush the “jokes” index to rebuild it like this:
+
+    curl -XPOST 'http://sandbox.local:9200/_flush?pretty=true'
+
+Or you can flush multiple indexes—like “pranks” and “pranks”—to rebuild them like this:
 
     curl -XPOST 'http://sandbox.local:9200/pranks,jokes/_flush?pretty=true'
 
-#### Delete indexes.
+#### Delete Elasticsearch indexes.
 
-This will delete a named index:
+This will delete the “pranks” index:
 
     curl -XDELETE 'http://sandbox.local:9200/pranks/?pretty=true'
 
@@ -272,7 +279,7 @@ This will delete all indexes:
 
     curl -XDELETE 'http://sandbox.local:9200/_all?pretty=true'
 
-This will also delete all indexes:
+And this will also delete all indexes:
 
     curl -XDELETE 'http://sandbox.local:9200/*?pretty=true'
 
