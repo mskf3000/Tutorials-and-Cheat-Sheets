@@ -158,17 +158,17 @@ This creates the “pranks” index:
 
     curl -XPUT 'http://localhost:9200/pranks?pretty=true'
 
+This creates the “jokes” index:
+
     curl -XPUT 'http://localhost:9200/jokes?pretty=true'
 
 #### Enter test data.
 
-With the index created, let’s add some test data:
+With the index created, let’s add some test data to the “pranks” index:
 
     curl -XPUT 'http://localhost:9200/pranks/tubebar/1?pretty=true' -d '{ "name" : "Al Coholic" }'
 
-    curl -XPUT 'http://localhost:9200/jokes/bagels/1?pretty=true' -d '{ "question" : "How do you keep a bagel safe?", "answer" : "Put lox on it!" }'
-
-Sound return a “true” message like this:
+Which should respond with something like this:
 
 	{
 	  "_index" : "pranks",
@@ -178,6 +178,12 @@ Sound return a “true” message like this:
 	  "created" : true
 	}
 
+And now some more test data to the “jokes” index:
+
+    curl -XPUT 'http://localhost:9200/jokes/bagels/1?pretty=true' -d '{ "question" : "How do you keep a bagel safe?", "answer" : "Put lox on it!" }'
+
+Which should respond with something like this:
+
 	{
 	  "_index" : "jokes",
 	  "_type" : "bagels",
@@ -186,7 +192,7 @@ Sound return a “true” message like this:
 	  "created" : true
 	}
 
-Verify the data was entered anyway:
+Verify the data was entered:
 
     curl -XGET 'http://localhost:9200/pranks/tubebar/1?pretty=true'
 
