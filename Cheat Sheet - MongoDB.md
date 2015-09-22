@@ -43,6 +43,62 @@ Although you can specify any available version of MongoDB, `aptitude` will upgra
 	echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 	echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
+#### Sundry MongoDB items on an Ubuntu/Debian system.
+
+Start, stop and control MongoDB on an Ubuntu/Debian system:
+
+	sudo service mongod status
+	sudo service mongod start
+	sudo service mongod stop
+	sudo service mongod restart
+	sudo service mongod reload
+	sudo service mongod force-reload
+
+Edit the MongoDB configuration file:
+
+    sudo nano /etc/mongod.conf
+
+MongoDB configuration storage location:
+
+    ls -lah /var/lib/mongodb
+
+Follow the MongoDB logs:
+
+    tail -f -n 200 /var/log/mongodb/mongod.log
+    tail -f -n 200 /var/log/mongodb/mongodb.log
+
+#### Bind to `127.0.0.1` to enable networking.
+
+To enable networking—so someone other that `localhost` can connect to the setup—open up the MongoDB config on the server.
+
+    sudo nano /etc/mongod.conf
+
+Find this line:
+
+	# Listen to local interface only. Comment out to listen on all interfaces.
+	bind_ip = 127.0.0.1
+
+And comment out the `bind_ip` like this:
+
+	# Listen to local interface only. Comment out to listen on all interfaces.
+	#bind_ip = 127.0.0.1
+
+Now restart MongDB and networking should be enabled:
+
+    sudo service mongod restart
+
+You can confirm this by checking if port `27017` is open on the local host via `nmap` like this:
+
+    nmap sandbox.local -p27017
+
+The positive response should be something like this:
+
+	Starting Nmap 6.47 ( http://nmap.org ) at 2015-09-22 00:53 EDT
+	Nmap scan report for sandbox.local (192.168.56.10)
+	Host is up (0.00043s latency).
+	PORT      STATE SERVICE
+	27017/tcp open  unknown
+
 ## Practical MongoDB  usage examples.
 
 #### Connect to a MongoDB instance.
@@ -239,62 +295,6 @@ Now when you run `show dbs` the database will be there:
 	admin             0.078GB
 	sandbox_dev       0.078GB
 	local             0.078GB
-
-#### Sundry MongoDB items on an Ubuntu/Debian system.
-
-Start, stop and control MongoDB on an Ubuntu/Debian system:
-
-	sudo service mongod status
-	sudo service mongod start
-	sudo service mongod stop
-	sudo service mongod restart
-	sudo service mongod reload
-	sudo service mongod force-reload
-
-Edit the MongoDB configuration file:
-
-    sudo nano /etc/mongod.conf
-
-MongoDB configuration storage location:
-
-    ls -lah /var/lib/mongodb
-
-Follow the MongoDB logs:
-
-    tail -f -n 200 /var/log/mongodb/mongod.log
-    tail -f -n 200 /var/log/mongodb/mongodb.log
-
-#### Enable networking.
-
-To enable networking—so someone other that `localhost` can connect to the setup—open up the MongoDB config on the server.
-
-    sudo nano /etc/mongod.conf
-
-Find this line:
-
-	# Listen to local interface only. Comment out to listen on all interfaces.
-	bind_ip = 127.0.0.1
-
-And comment out the `bind_ip` like this:
-
-	# Listen to local interface only. Comment out to listen on all interfaces.
-	#bind_ip = 127.0.0.1
-
-Now restart MongDB and networking should be enabled:
-
-    sudo service mongod restart
-
-You can confirm this by checking if port `27017` is open on the local host via `nmap` like this:
-
-    nmap sandbox.local -p27017
-
-The positive response should be something like this:
-
-	Starting Nmap 6.25 ( http://nmap.org ) at 2014-11-19 00:18 EST
-	Nmap scan report for sandbox.local (192.168.56.10)
-	Host is up (0.00040s latency).
-	PORT      STATE SERVICE
-	27017/tcp open  unknown
 
 #### Compacting collections in a database to save space.
 
