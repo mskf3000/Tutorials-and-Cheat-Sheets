@@ -99,7 +99,7 @@ The positive response should be something like this:
 	PORT      STATE SERVICE
 	27017/tcp open  unknown
 
-## Practical MongoDB  usage examples.
+## Practical MongoDB usage examples.
 
 #### Connect to a MongoDB instance.
 
@@ -296,33 +296,34 @@ Now when you run `show dbs` the database will be there:
 	sandbox_dev       0.078GB
 	local             0.078GB
 
-#### Compacting collections in a database to save space.
+## Some MongoDB debugging and maintenance items.
+
+#### Compacting a MongoDB database.
+
+Compacting a specific collection in a database to reclaim used space:
+
+    db.runCommand({ compact: 'sessions', force: true });
+
+Compacting all collections in a database to save space:
 
 	db.getCollectionNames().forEach(function (collectionName) {
 	    print('Compacting: ' + collectionName);
 	    db.runCommand({ compact: collectionName });
 	});
 
-#### Compacting a specific collection in a database to save space.
+#### Exporting, droppping and restoring a database.
 
-    db.runCommand({ compact: 'sessions', force: true });
-
-#### How to export a database, drop it and restore it.
+Export a database:
 
     mongodump -d databasename
+
+Dump a database:
+
     echo 'db.dropDatabase()' | mongo databasename
+
+Restore a database:
+
     mongorestore dump/databasename
-
-#### MongoDB service options.
-
-	sudo service mongod start
-	sudo service mongod stop
-	sudo service mongod status
-	sudo service mongod restart
-	sudo service mongod condrestart
-	sudo service mongod try-restart
-	sudo service mongod reload
-	sudo service mongod force-reload
 
 #### Disable journaling for cases when memory limit errors pop up.
 
