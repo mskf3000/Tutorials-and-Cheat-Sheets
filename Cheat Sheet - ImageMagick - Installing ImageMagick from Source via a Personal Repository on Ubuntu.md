@@ -2,49 +2,88 @@
 
 By Jack Szwergold, September 21, 2015
 
-#### Get rid of the default repository installed version of ImageMagick.
+#### Get rid of the default Ubuntu repository installed version of ImageMagick.
+
+Just run this `sudo aptitude purge` command to get rid of any ImageMagick stuff installed via the default Ubuntu repository:
 
     sudo aptitude purge imagemagick
 
-#### Install the prerequisites and dependencies.
+#### Install the ImageMagick source code prerequisites and dependencies.
+
+First, run `aptitude update` like this:
 
     sudo aptitude update
 
+Install the basics for the build:
+
     sudo aptitude install build-essential checkinstall libx11-dev libxext-dev zlib1g-dev libpng12-dev libjpeg-dev libfreetype6-dev libxml2-dev
+
+Build the dependencies for the build:
 
     sudo aptitude build-dep imagemagick
 
-#### Install ImageMagick from source.
+#### Install ImageMagick from source using `checkinstall`.
 
-	wget http://www.imagemagick.org/download/ImageMagick.tar.gz
+First grab a compressed archive from an official ImageMagick source site:
+
+	curl -O -L http://www.imagemagick.org/download/ImageMagick.tar.gz
 	
-	tar -xzvf ImageMagick.tar.gz
+Next, decompress the archive like this:
+
+	tar -xf ImageMagick.tar.gz
 	
+Now go into the decompressed directory:
+
 	cd ImageMagick-*
 	
+Run this `configure` command:
+
 	./configure
 	
+Finally install it by running `checkinstall`:
+
 	sudo checkinstall
-	
+
+You may need to configure the dynamic linker run-time bindings:
+
 	sudo ldconfig /usr/local/lib
 
-When all done you will get a message like this on the screen:
+When all done you will get a message like this on the screen which means ImageMagick is installed:
 
 	**********************************************************************
 	
 	 Done. The new package has been installed and saved to
 	
-	 /home/sysop/ImageMagick-6.9.0-0/imagemagick-6.9.0_0-1_amd64.deb
+	 /home/sysop/ImageMagick-6.9.2-3/imagemagick-6.9.2_3-1_amd64.deb
 	
 	 You can remove it from your system anytime using:
 	
-	      dpkg -r imagemagick-6.9.0
+	      dpkg -r imagemagick-6.9.2
 	
 	**********************************************************************
 
-Uninstall the package:
+Check the version number like this:
 
-    sudo dpkg -r imagemagick-6.9.0
+    convert -version
+
+And the output should look something like this:
+
+	Version: ImageMagick 6.9.2-3 Q16 x86_64 2015-09-21 http://www.imagemagick.org
+	Copyright: Copyright (C) 1999-2015 ImageMagick Studio LLC
+	License: http://www.imagemagick.org/script/license.php
+	Features: Cipher DPC OpenMP
+	Delegates (built-in): bzlib djvu fontconfig freetype gvc jng jpeg lqr openexr pangocairo png wmf x xml zlib
+	Aborted (core dumped)
+
+#### Uninstall ImageMagick from source using `dpkg -r`.
+
+Go into the decompressed directory where the initial ImageMagick install happened:
+
+	cd ImageMagick-*
+
+And run this `dpkg -r` command to uninstall it:
+
+    sudo dpkg -r imagemagick-6.9.2
 
 ***
 
