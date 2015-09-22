@@ -250,10 +250,9 @@ This lists all indexes:
 
 Results should be something like this:
 
-	health status index  pri rep docs.count docs.deleted store.size pri.store.size 
-	yellow open   pranks   5   1          1            0      2.9kb          2.9kb 
+	health status index  pri rep docs.count docs.deleted store.size pri.store.size
+	yellow open   pranks   5   1          1            0      2.9kb          2.9kb
 	yellow open   jokes    5   1          1            0      3.3kb          3.3kb
-
 
 #### Flush an Elasticsearch index to rebuild it.
 
