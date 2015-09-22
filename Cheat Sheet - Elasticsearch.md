@@ -195,7 +195,7 @@ Let’s do a test search for the name “al” in the “tubebar” index like t
 And the returned results should be something like this:
 
 	{
-	  "took" : 86,
+	  "took" : 3,
 	  "timed_out" : false,
 	  "_shards" : {
 	    "total" : 5,
@@ -215,14 +215,14 @@ And the returned results should be something like this:
 	  }
 	}
 
-And let’s do a search like this:
+And now let’s do a test search for the word “lox” in the “jokes” index like this:
 
     curl 'http://sandbox.local:9200/jokes/bagels/_search?q=answer:lox&pretty=true'
 
 And the returned data should be:
 
 	{
-	  "took" : 6,
+	  "took" : 3,
 	  "timed_out" : false,
 	  "_shards" : {
 	    "total" : 5,
