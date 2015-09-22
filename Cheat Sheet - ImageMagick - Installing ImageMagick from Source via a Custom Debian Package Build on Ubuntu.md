@@ -40,7 +40,7 @@ Run this `configure` command:
 
 	./configure
 	
-Finally install it by running `checkinstall`:
+Finally compile and install it by running `checkinstall`:
 
 	sudo checkinstall
 
