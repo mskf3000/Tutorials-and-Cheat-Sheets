@@ -44,9 +44,7 @@ Finally install it by running `checkinstall`:
 
 	sudo checkinstall
 
-You may need to configure the dynamic linker run-time bindings:
-
-	sudo ldconfig /usr/local/lib
+Just punch through the default options presented and any questions that might pop up during the Debian package build.
 
 When all done you will get a message like this on the screen which means ImageMagick is installed:
 
@@ -62,7 +60,11 @@ When all done you will get a message like this on the screen which means ImageMa
 	
 	**********************************************************************
 
-Check the version number like this:
+After that is done, you may need to configure the dynamic linker run-time bindings:
+
+	sudo ldconfig /usr/local/lib
+
+Finally, heck the version number like this:
 
     convert -version
 
