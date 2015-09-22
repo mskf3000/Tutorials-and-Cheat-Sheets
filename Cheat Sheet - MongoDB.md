@@ -2,29 +2,31 @@
 
 By Jack Szwergold, September 22, 2015
 
-#### Import the public key used by the package management system.
+## Install MongoDB.
+
+First, import the public key used by the package management system:
 
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 
-#### Create a sources list file for MongoDB.
+Next, create a sources list file for MongoDB:
 
     echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 
-#### Reload local package database.
+Now, run `aptitude update` like this:
 
     sudo aptitude update
 
-#### Install the latest stable version of MongoDB.
+Then install MongoDB via `aptitude` like this:
 
     sudo aptitude install mongodb-org
 
-#### Install a specific release of MongoDB.
+Or install a specific release of MongoDB via `aptitude` like this:
 
     sudo aptitude install mongodb-org=2.6.5 mongodb-org-server=2.6.5 mongodb-org-shell=2.6.5 mongodb-org-mongos=2.6.5 mongodb-org-tools=2.6.5
 
-#### Pin a specific version of MongoDB.
+Pin a specific version of MongoDB.
 
-Although you can specify any available version of MongoDB, apt-get will upgrade the packages when a newer version becomes available. To prevent unintended upgrades, pin the package. To pin the version of MongoDB at the currently installed version, issue the following command sequence:
+Although you can specify any available version of MongoDB, `aptitude` will upgrade the packages when a newer version becomes available. To prevent unintended upgrades, pin the package. To pin the version of MongoDB at the currently installed version, issue the following command sequence:
 
 	echo "mongodb-org hold" | sudo dpkg --set-selections
 	echo "mongodb-org-server hold" | sudo dpkg --set-selections
@@ -32,9 +34,13 @@ Although you can specify any available version of MongoDB, apt-get will upgrade 
 	echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 	echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
-#### Check the installed version of MongoDB.
+Check the version number like this:
 
     mongod --version
+
+And the output should be something like this:
+
+
 
 ## Basic usage.
 
