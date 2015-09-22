@@ -90,7 +90,7 @@ Now, commit it with a message like this:
 
 Let’s say you made a mistake in the commit message you just made. You can ammend it—basically redo it—like this:
 
-	git commit -ammend -m "Adding '.gitignore' to the repo."
+	git commit --amend -m "Adding '.gitignore' to the repo."
 
 And if you have already pushed the previous commit to a repository, you need to forch push it like this:
 
