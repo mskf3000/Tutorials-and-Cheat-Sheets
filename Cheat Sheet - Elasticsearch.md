@@ -2,9 +2,7 @@
 
 By Jack Szwergold, September 21, 2015
 
-## Install Elasticsearch
-
-#### Install Elasticsearch.
+## Install Elasticsearch.
 
 First, import the public key used by the package management system:
 
@@ -26,9 +24,62 @@ Finally Elasticsearch will be installed, but it won’t be set to startup on boo
 
     sudo update-rc.d elasticsearch defaults 95 10
 
+If somehow you need to remove the `update-rc.d` stuff, remove these items:
+
+    sudo rm /etc/rc0.d/K10elasticsearch
+    sudo rm /etc/rc1.d/K10elasticsearch
+    sudo rm /etc/rc6.d/K10elasticsearch
+    sudo rm /etc/rc2.d/S95elasticsearch
+    sudo rm /etc/rc3.d/S95elasticsearch
+    sudo rm /etc/rc4.d/S95elasticsearch
+    sudo rm /etc/rc5.d/S95elasticsearch
+
+#### Sundry Elasticsearch items on an Ubuntu/Debian system.
+
+Start, stop and control Elasticsearch on an Ubuntu/Debian system:
+
+	sudo service elasticsearch start
+	sudo service elasticsearch stop
+	sudo service elasticsearch restart
+	sudo service elasticsearch force-reload
+	sudo service elasticsearch status
+
+Edit the Elasticsearch configuration file:
+
+    sudo nano /etc/default/elasticsearch
+
+Elasticsearch configuration storage location.
+
+    ls -la /etc/elasticsearch
+
+Elasticsearch log storage location:
+
+    ls -la /var/log/elasticsearch
+
+Another Elasticsearch configuration file:
+
+    sudo nano /etc/elasticsearch/elasticsearch.yml
+
+Follow the main Elasticsearch log:
+
+    tail -f -n 200 /var/log/elasticsearch/elasticsearch.log
+
+Follow the main Elasticsearch “slow” log:
+
+    tail -f -n 200 /var/log/elasticsearch/elasticsearch_index_indexing_slowlog.log
+    tail -f -n 200 /var/log/elasticsearch/elasticsearch_index_search_slowlog.log
+
+Elasticsearch data storage location:
+
+    ls -la /var/lib/elasticsearch
+
+Elasticsearch work file storage location:
+
+    ls -la /tmp/elasticsearch
+
 #### Testing Elasticsearch.
 
-So with it installed and with system service control script installed, we need to start it by running this command:
+With Elasticsearch installed—and with the service script installed—we can start it by running this command:
 
     sudo service elasticsearch start
 
@@ -95,7 +146,7 @@ Then restart Elasticsearch:
 
 And it will now only be available to `localhost` connections moving forward.
 
-## Data entry usage.
+## Practical Elasticsearch data usage examples.
 
 #### Create an index.
 
@@ -225,11 +276,11 @@ Flush all data to rebuild:
 
     curl -XPOST 'http://localhost:9200/_flush?pretty=true'
 
-Flush a specififc named index:
+Flush a specific named index:
 
     curl -XPOST 'http://localhost:9200/pranks/_flush?pretty=true'
 
-Flush specififc named indexes:
+Flush specific named indexes:
 
     curl -XPOST 'http://localhost:9200/pranks,jokes/_flush?pretty=true'
 
@@ -246,54 +297,6 @@ This will delete all indexes:
 This will also delete all indexes:
 
     curl -XDELETE 'http://localhost:9200/*?pretty=true'
-
-
-## Sundry stuff.
-
-#### Start, stop & restart the MongoDB daemon.
-
-    Usage: /etc/init.d/elasticsearch {start|stop|restart|force-reload|status}
-
-	sudo service elasticsearch start
-	sudo service elasticsearch stop
-	sudo service elasticsearch restart
-	sudo service elasticsearch force-reload
-	sudo service elasticsearch status
-
-#### Configuration file.
-
-    sudo nano /etc/default/elasticsearch
-
-#### Log storage location.
-
-    ls -la /var/log/elasticsearch
-
-#### Follow the logs.
-
-The main log:
-
-    tail -f -n 200 /var/log/elasticsearch/elasticsearch.log
-
-The slow logs:
-
-    tail -f -n 200 /var/log/elasticsearch/elasticsearch_index_indexing_slowlog.log
-    tail -f -n 200 /var/log/elasticsearch/elasticsearch_index_search_slowlog.log
-
-#### Data storage location.
-
-    ls -la /var/lib/elasticsearch
-
-#### Work storage location.
-
-    ls -la /tmp/elasticsearch
-
-#### Configuration storage location.
-
-    ls -la /etc/elasticsearch
-
-#### Another configuration file.
-
-    sudo nano /etc/elasticsearch/elasticsearch.yml
 
 ***
 
