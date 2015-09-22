@@ -2,6 +2,10 @@
 
 By Jack Szwergold, September 21, 2015
 
+## Elasticsearch prerequisites.
+
+Elasticsearch requires Java 7—or better—to be installed for it to work. So make sure the system you plan on running Elasticsearch on has Java 7 installed and `JAVA_HOME` is properly set on the system.
+
 ## Install Elasticsearch.
 
 First, import the public key used by the package management system:
