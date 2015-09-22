@@ -1,4 +1,4 @@
-# Cheat Sheet - GIT - Initing a Repo & Pushing to Origin
+# Cheat Sheet - GIT - Initing a Repo and Pushing to Origin
 
 By Jack Szwergold, September 15, 2015
 
@@ -78,13 +78,23 @@ For example, on Mac OS X we have no need to commit `.DS_Store` files so add `.DS
 
 	.DS_Store
 
-Now add `.gitignore` to the repo with `git add` like this:
+Next, add a `.gitignore` file to the repo with `git add` like this:
 
 	git add .gitignore
 
-And now commit it with a message like this
+Now, commit it with a message like this:
 
 	git commit -a -m "Adding '.gitignore' to the repo."
+
+#### Ammedning a commit message.
+
+Let’s say you made a mistake in the commit message you just made. You can ammend it—basically redo it—like this:
+
+	git commit -ammend -m "Adding '.gitignore' to the repo."
+
+And if you have already pushed the previous commit to a repository, you need to forch push it like this:
+
+    git push -f
 
 #### Add all files to the repository.
 
@@ -128,6 +138,6 @@ That will clone the `Preworn-Main` directory into a new directory named `Preworn
 
 ***
 
-*Cheat Sheet - GIT - Initing a Repo & Pushing to Origin (c) by Firstname Lastname*
+*Cheat Sheet - GIT - Initing a Repo and Pushing to Origin (c) by Firstname Lastname*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
