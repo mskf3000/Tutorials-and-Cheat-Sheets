@@ -93,11 +93,11 @@ It should start up immediately and return the following:
 
 And can then be accessed via port `9200` like this:
 
-    http://localhost:9200
+    http://sandbox.local:9200
 
 You can check returned headers like this:
 
-    curl -I http://localhost:9200
+    curl -I http://sandbox.local:9200
 
 If running, it will cleanly return a `200` status like this:
 
@@ -107,27 +107,29 @@ If running, it will cleanly return a `200` status like this:
 
 And will send back data via the command line using `curl` as well:
 
-    curl http://localhost:9200
+    curl http://sandbox.local:9200
 
 The response should be something like:
 
 	{
 	  "status" : 200,
-	  "name" : "Lorelei",
+	  "name" : "Watcher",
 	  "cluster_name" : "elasticsearch",
 	  "version" : {
-	    "number" : "1.4.0",
-	    "build_hash" : "bc94bd81298f81c656893ab1ddddd30a99356066",
-	    "build_timestamp" : "2014-11-05T14:26:12Z",
+	    "number" : "1.4.5",
+	    "build_hash" : "2aaf797f2a571dcb779a3b61180afe8390ab61f9",
+	    "build_timestamp" : "2015-04-27T08:06:06Z",
 	    "build_snapshot" : false,
-	    "lucene_version" : "4.10.2"
+	    "lucene_version" : "4.10.4"
 	  },
 	  "tagline" : "You Know, for Search"
 	}
 
 #### Bind to `localhost` to disable networking.
 
-By default, Elasticsearch will be networked to allow connections from anywhere, everywhere. That’s not really desired. So to disable that, open up the main config file here:
+By default, Elasticsearch will be networked to allow connections from anywhere, everywhere. If that’s not really desired you can disable networking like this.
+
+First, open up the main config file here:
 
     sudo nano /etc/elasticsearch/elasticsearch.yml
 
@@ -148,7 +150,9 @@ Then restart Elasticsearch:
 
     sudo service elasticsearch restart
 
-And it will now only be available to `localhost` connections moving forward.
+And it will now only be available to `localhost` connections on port `9200` moving forward so it would have to be accessed on the server directly like this:
+
+    curl http://localhost:9200
 
 ## Practical Elasticsearch data usage examples.
 
@@ -156,17 +160,17 @@ And it will now only be available to `localhost` connections moving forward.
 
 This creates the “pranks” index:
 
-    curl -XPUT 'http://localhost:9200/pranks?pretty=true'
+    curl -XPUT 'http://sandbox.local:9200/pranks?pretty=true'
 
 This creates the “jokes” index:
 
-    curl -XPUT 'http://localhost:9200/jokes?pretty=true'
+    curl -XPUT 'http://sandbox.local:9200/jokes?pretty=true'
 
 #### Enter test data.
 
 With the index created, let’s add some test data to the “pranks” index:
 
-    curl -XPUT 'http://localhost:9200/pranks/tubebar/1?pretty=true' -d '{ "name" : "Al Coholic" }'
+    curl -XPUT 'http://sandbox.local:9200/pranks/tubebar/1?pretty=true' -d '{ "name" : "Al Coholic" }'
 
 Which should respond with something like this:
 
@@ -180,7 +184,7 @@ Which should respond with something like this:
 
 And now some more test data to the “jokes” index:
 
-    curl -XPUT 'http://localhost:9200/jokes/bagels/1?pretty=true' -d '{ "question" : "How do you keep a bagel safe?", "answer" : "Put lox on it!" }'
+    curl -XPUT 'http://sandbox.local:9200/jokes/bagels/1?pretty=true' -d '{ "question" : "How do you keep a bagel safe?", "answer" : "Put lox on it!" }'
 
 Which should respond with something like this:
 
@@ -194,9 +198,9 @@ Which should respond with something like this:
 
 Verify the data was entered:
 
-    curl -XGET 'http://localhost:9200/pranks/tubebar/1?pretty=true'
+    curl -XGET 'http://sandbox.local:9200/pranks/tubebar/1?pretty=true'
 
-    curl -XGET 'http://localhost:9200/jokes/bagels/1?pretty=true'
+    curl -XGET 'http://sandbox.local:9200/jokes/bagels/1?pretty=true'
 
 The verification should be returned like this:
 
@@ -222,7 +226,7 @@ The verification should be returned like this:
 
 Let’s do a search like this:
 
-    curl 'http://localhost:9200/pranks/tubebar/_search?q=name:al&pretty=true'
+    curl 'http://sandbox.local:9200/pranks/tubebar/_search?q=name:al&pretty=true'
 
 And the returned data should be:
 
@@ -249,7 +253,7 @@ And the returned data should be:
 
 And let’s do a search like this:
 
-    curl 'http://localhost:9200/jokes/bagels/_search?q=answer:lox&pretty=true'
+    curl 'http://sandbox.local:9200/jokes/bagels/_search?q=answer:lox&pretty=true'
 
 And the returned data should be:
 
@@ -278,35 +282,35 @@ And the returned data should be:
 
 This lists all indexes:
 
-    curl 'http://localhost:9200/_cat/indices?v'
+    curl 'http://sandbox.local:9200/_cat/indices?v'
 
 #### Flush data.
 
 Flush all data to rebuild:
 
-    curl -XPOST 'http://localhost:9200/_flush?pretty=true'
+    curl -XPOST 'http://sandbox.local:9200/_flush?pretty=true'
 
 Flush a specific named index:
 
-    curl -XPOST 'http://localhost:9200/pranks/_flush?pretty=true'
+    curl -XPOST 'http://sandbox.local:9200/pranks/_flush?pretty=true'
 
 Flush specific named indexes:
 
-    curl -XPOST 'http://localhost:9200/pranks,jokes/_flush?pretty=true'
+    curl -XPOST 'http://sandbox.local:9200/pranks,jokes/_flush?pretty=true'
 
 #### Delete indexes.
 
 This will delete a named index:
 
-    curl -XDELETE 'http://localhost:9200/pranks/?pretty=true'
+    curl -XDELETE 'http://sandbox.local:9200/pranks/?pretty=true'
 
 This will delete all indexes:
 
-    curl -XDELETE 'http://localhost:9200/_all?pretty=true'
+    curl -XDELETE 'http://sandbox.local:9200/_all?pretty=true'
 
 This will also delete all indexes:
 
-    curl -XDELETE 'http://localhost:9200/*?pretty=true'
+    curl -XDELETE 'http://sandbox.local:9200/*?pretty=true'
 
 ***
 
