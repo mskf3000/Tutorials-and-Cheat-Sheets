@@ -1,4 +1,4 @@
-# Cheat Sheet - ImageMagick - Installing ImageMagick from Source via a Personal Repository on Ubuntu
+# Cheat Sheet - ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu
 
 By Jack Szwergold, September 21, 2015
 
@@ -87,6 +87,6 @@ And run this `dpkg -r` command to uninstall it:
 
 ***
 
-*Cheat Sheet - ImageMagick - Installing ImageMagick from Source via a Personal Repository on Ubuntu (c) by Jack Szwergold*
+*Cheat Sheet - ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*    
