@@ -52,7 +52,7 @@ Edit the Elasticsearch configuration file:
 
     sudo nano /etc/default/elasticsearch
 
-Elasticsearch configuration storage location.
+Elasticsearch configuration storage location:
 
     ls -la /etc/elasticsearch
 

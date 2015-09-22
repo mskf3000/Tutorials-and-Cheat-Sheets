@@ -240,26 +240,28 @@ Now when you run `show dbs` the database will be there:
 	sandbox_dev       0.078GB
 	local             0.078GB
 
-## Sundry stuff.
+#### Sundry MongoDB items on an Ubuntu/Debian system.
 
-#### Start, stop & restart the MongoDB daemon.
+Start, stop and control MongoDB on an Ubuntu/Debian system:
 
+	sudo service mongod status
 	sudo service mongod start
 	sudo service mongod stop
 	sudo service mongod restart
+	sudo service mongod reload
+	sudo service mongod force-reload
 
-#### Configuration file.
+Edit the MongoDB configuration file:
 
     sudo nano /etc/mongod.conf
 
-#### Database storage location.
+MongoDB configuration storage location:
 
     ls -lah /var/lib/mongodb
 
-#### Follow the MongoDB log.
+Follow the MongoDB logs:
 
     tail -f -n 200 /var/log/mongodb/mongod.log
-
     tail -f -n 200 /var/log/mongodb/mongodb.log
 
 #### Enable networking.
