@@ -64,7 +64,7 @@ After that is done, you may need to configure the dynamic linker run-time bindin
 
 	sudo ldconfig /usr/local/lib
 
-Finally, heck the version number like this:
+Finally, check the version number like this:
 
     convert -version
 
