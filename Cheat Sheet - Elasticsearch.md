@@ -172,63 +172,27 @@ With the index created, let’s add some test data to the “pranks” index:
 
     curl -XPUT 'http://sandbox.local:9200/pranks/tubebar/1?pretty=true' -d '{ "name" : "Al Coholic" }'
 
-Which should respond with something like this:
-
-	{
-	  "_index" : "pranks",
-	  "_type" : "tubebar",
-	  "_id" : "1",
-	  "_version" : 1,
-	  "created" : true
-	}
-
-And now some more test data to the “jokes” index:
+And now add some test data to the “jokes” index:
 
     curl -XPUT 'http://sandbox.local:9200/jokes/bagels/1?pretty=true' -d '{ "question" : "How do you keep a bagel safe?", "answer" : "Put lox on it!" }'
 
-Which should respond with something like this:
+#### Verify the test data.
 
-	{
-	  "_index" : "jokes",
-	  "_type" : "bagels",
-	  "_id" : "1",
-	  "_version" : 1,
-	  "created" : true
-	}
-
-Verify the data was entered:
+Now, let’s verify the data entered in the “pranks” index:
 
     curl -XGET 'http://sandbox.local:9200/pranks/tubebar/1?pretty=true'
 
+And now verify the data entered in the “jokes” index:
+
     curl -XGET 'http://sandbox.local:9200/jokes/bagels/1?pretty=true'
 
-The verification should be returned like this:
+#### Do some test searches of the data.
 
-	{
-	  "_index" : "pranks",
-	  "_type" : "tubebar",
-	  "_id" : "1",
-	  "_version" : 1,
-	  "found" : true,
-	  "_source":{ "name" : "Al Coholic" }
-	}
-
-	{
-	  "_index" : "jokes",
-	  "_type" : "bagels",
-	  "_id" : "1",
-	  "_version" : 1,
-	  "found" : true,
-	  "_source":{ "question" : "How do you keep a bagel safe?", "answer" : "Put lox on it!" }
-	}
-
-#### Search the data.
-
-Let’s do a search like this:
+Let’s do a test search for the name “al” in the “tubebar” index like this:
 
     curl 'http://sandbox.local:9200/pranks/tubebar/_search?q=name:al&pretty=true'
 
-And the returned data should be:
+And the returned results should be something like this:
 
 	{
 	  "took" : 86,
