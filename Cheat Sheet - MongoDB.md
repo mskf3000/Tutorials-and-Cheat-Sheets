@@ -22,9 +22,18 @@ Then install MongoDB via `aptitude` like this:
 
 Or install a specific release of MongoDB via `aptitude` like this:
 
-    sudo aptitude install mongodb-org=2.6.5 mongodb-org-server=2.6.5 mongodb-org-shell=2.6.5 mongodb-org-mongos=2.6.5 mongodb-org-tools=2.6.5
+    sudo aptitude install mongodb-org=2.6.11 mongodb-org-server=2.6.11 mongodb-org-shell=2.6.11 mongodb-org-mongos=2.6.11 mongodb-org-tools=2.6.11
 
-Pin a specific version of MongoDB.
+Check the version number like this:
+
+    mongod --version
+
+And the output should be something like this:
+
+	db version v2.6.11
+	2015-09-22T00:41:09.458-0400 git version: d00c1735675c457f75a12d530bee85421f0c5548
+
+#### Pin a specific version of MongoDB.
 
 Although you can specify any available version of MongoDB, `aptitude` will upgrade the packages when a newer version becomes available. To prevent unintended upgrades, pin the package. To pin the version of MongoDB at the currently installed version, issue the following command sequence:
 
@@ -34,15 +43,7 @@ Although you can specify any available version of MongoDB, `aptitude` will upgra
 	echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 	echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
-Check the version number like this:
-
-    mongod --version
-
-And the output should be something like this:
-
-
-
-## Basic usage.
+## Practical MongoDB  usage examples.
 
 #### Connect to a MongoDB instance.
 
@@ -53,7 +54,6 @@ Just type `mongo` into the command line to get into the interface:
 By default, `mongo` looks for a database server listening on port `27017` on the `localhost` interface. To connect to a server on a different port or interface, use the `--port` and `--host` options. Like this example that allows you to connect to a remote MongoDB server:
 
     mongo [hosname or IP address]:[port number]/[dbname] -u [username] -p [password]
-
 
 Report the name of the current database:
 
@@ -71,7 +71,7 @@ Get stats on a specific database you are using:
 
     db.stats()
 
-## User management.
+#### MongoDB user management.
 
 Type in `mongo` to login to the database:
 
@@ -130,7 +130,7 @@ Check to see if you have any user in the database with admin rights like this:
 
 Output should be something like this:
 
-> { "_id" : "admin.siteUserAdmin", "user" : "siteUserAdmin", "db" : "admin", "credentials" : { "MONGODB-CR" : "5a526e5d4d622d01a7feae8b7e5f470d" }, "roles" : [ { "role" : "userAdminAnyDatabase", "db" : "admin" } ] }
+	{ "_id" : "admin.siteUserAdmin", "user" : "siteUserAdmin", "db" : "admin", "credentials" : { "MONGODB-CR" : "5a526e5d4d622d01a7feae8b7e5f470d" }, "roles" : [ { "role" : "userAdminAnyDatabase", "db" : "admin" } ] }
 
 Check the mongo command line options by running this command:
 
@@ -165,7 +165,7 @@ Now login to MongoDB like this:
 
     mongo --port 27017 -u root -p root --authenticationDatabase admin
 
-## Revoke a user role.
+#### Revoke a user role in MongoDB.
 
 First connect to `admin` like this:
 
@@ -192,7 +192,7 @@ Now check the `root` user again:
 	  }
 	)
 
-## Assign a user role.
+#### Assign a user role in MongoDB.
 
 First connect to `admin` like this:
 
@@ -219,7 +219,7 @@ Now check the `root` user again:
 	  }
 	)
 
-## Create a database and use it.
+#### Create a MongoDB database and use it.
 
 Creating a database is as simple as this:
 
