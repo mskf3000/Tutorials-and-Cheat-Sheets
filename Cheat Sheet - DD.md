@@ -6,11 +6,11 @@ By Jack Szwergold, September 15, 2015
 
 Test write speed:
 
-    time dd if=/dev/zero of=/Volumes/Untitled/testfile bs=1024k count=2048
+    time dd if=/dev/zero of=/Volumes/Untitled/testfile bs=1024 count=2048
 
 Test read speed:
 
-    time dd of=/dev/null if=/Volumes/Untitled/testfile bs=1024k
+    time dd of=/dev/null if=/Volumes/Untitled/testfile bs=1024
 
 #### Create dummy/test files filled with zeros.
 
@@ -30,15 +30,15 @@ Create a 7GB test file filled with zeros.
 
 Create a 10MB test file filled with random data:
 
-    dd if=/dev/random of=TESTFILE_10MB bs=1024 count=0 seek=$[1024*10]
+    dd if=/dev/urandom of=TESTFILE_10MB bs=1024 count=0 seek=$[1024*10]
 
 Create a 1GB test file filled with random data:
 
-    dd if=/dev/random of=TESTFILE_1GB bs=1024 count=0 seek=$[1024*10*10*10]
+    dd if=/dev/urandom of=TESTFILE_1GB bs=1024 count=0 seek=$[1024*10*10*10]
 
 Create a 7GB test file filled with random data:
 
-    dd if=/dev/random of=TESTFILE_7GB bs=1024 count=0 seek=$[1024*10*10*10*7]
+    dd if=/dev/urandom of=TESTFILE_7GB bs=1024 count=0 seek=$[1024*10*10*10*7]
 
 #### Recover a supposedly “dead” volume using `dd`.
 
