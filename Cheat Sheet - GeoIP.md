@@ -14,7 +14,7 @@ First grab a compressed archive from an official GeoIP source site:
 
 Next, decompress the archive like this:
 
-	tar -xvzf GeoIP-latest.tar.gz
+	tar -xf GeoIP-latest.tar.gz
 
 Now go into the decompressed directory:
 
