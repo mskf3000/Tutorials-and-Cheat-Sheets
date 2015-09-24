@@ -11,10 +11,46 @@ Once that is installed open up the `tomcat6` config file:
 
     sudo nano /etc/default/tomcat6
 
-Find the line for `JAVA_OPTS` and change as follows:
+Find the line for `JAVA_HOME` and change as follows:
+
+	#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk
+	JAVA_HOME=/usr/lib/jvm/java-6-oracle/jre
+
+And then find the line for `JAVA_OPTS` and change as follows:
 
 	# JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC"
 	JAVA_OPTS="-Xms128m -Xmx256m -XX:MaxPermSize=512m -Djava.awt.headless=true -XX:-UseGCOverheadLimit -XX:+UseCompressedOops"
+
+#### Sundry Tomcat6 items on an Ubuntu/Debian system.
+
+Get Tomcat6 version:
+
+	/usr/share/tomcat6/bin/catalina.sh version
+
+Output should be something like this:
+
+	Using CATALINA_BASE:   /usr/share/tomcat6
+	Using CATALINA_HOME:   /usr/share/tomcat6
+	Using CATALINA_TMPDIR: /usr/share/tomcat6/temp
+	Using JRE_HOME:        /usr/lib/jvm/java-6-oracle/jre
+	Using CLASSPATH:       /usr/share/tomcat6/bin/bootstrap.jar
+	Server version: Apache Tomcat/6.0.35
+	Server built:   Jun 22 2015 01:28:45
+	Server number:  6.0.35.0
+	OS Name:        Linux
+	OS Version:     3.13.0-63-generic
+	Architecture:   amd64
+	JVM Version:    1.6.0_45-b06
+	JVM Vendor:     Sun Microsystems Inc.
+
+Start, stop and control Tomcat6 on an Ubuntu/Debian system:
+
+	sudo service tomcat6 start
+	sudo service tomcat6 stop
+	sudo service tomcat6 restart
+	sudo service tomcat6 try-restart
+	sudo service tomcat6 force-reload
+	sudo service tomcat6 status
 
 #### Change group ownership and permissions for the main Tomcat6 content directory.
 

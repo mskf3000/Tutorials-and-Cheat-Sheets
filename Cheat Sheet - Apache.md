@@ -32,7 +32,7 @@ Getting `httpd` status with `fullstatus` on a CentOS/RedHat system:
 
 #### Sundry Apache items on an Ubuntu/Debian system.
 
-Get Apache version on an Ubuntu/Debian system.
+Get Apache version number:
 
 	apache2 -v
 
