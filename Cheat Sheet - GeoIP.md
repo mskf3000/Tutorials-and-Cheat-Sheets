@@ -54,9 +54,9 @@ Then run `autoreconf` like this:
 
 #### Get the GeoIP databases.
 
-    curl -O http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
-    curl -O http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
-    curl -O http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
+    curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
+    curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+    curl -O -L http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
 
 #### Move the GeoIP databases to the proper directory on Linux systems.
 
