@@ -6,41 +6,68 @@ Then install `smartmontools` via `aptitude` like this:
 
     sudo aptitude install smartmontools
 
+#### A simple check of SMART status from the command line.
+
 Check the SMART status of `/dev/sda`:
 
     sudo smartctl -i /dev/sda
 
-Enable the `smartmontools` daemon (`smartd`) on startup:
+Output would be something like this; note this device doesn’t have SMART capability but the report format is similar for SMART capable devices:
 
-    sudo nano /etc/default/smartmontools'
+	smartctl 5.41 2011-06-09 r3365 [x86_64-linux-3.13.0-63-generic] (local build)
+	Copyright (C) 2002-11 by Bruce Allen, http://smartmontools.sourceforge.net
+	
+	=== START OF INFORMATION SECTION ===
+	Device Model:     VBOX HARDDISK
+	Serial Number:    VBbe53cb18-051acb9e
+	Firmware Version: 1.0
+	User Capacity:    34,359,738,368 bytes [34.3 GB]
+	Sector Size:      512 bytes logical/physical
+	Device is:        Not in smartctl database [for details use: -P showall]
+	ATA Version is:   6
+	ATA Standard is:  ATA/ATAPI-6 published, ANSI INCITS 361-2002
+	Local Time is:    Thu Sep 24 00:21:13 2015 EDT
+	SMART support is: Unavailable - device lacks SMART capability.
+
+#### Enable the `smartmontools` daemon (`smartd`) on startup.
+
+First open up the `smartmontools` daemon config file:
+
+    sudo nano /etc/default/smartmontools
+
+And uncomment the line that reads `start_smartd=yes`:
 
 	# uncomment to start smartd on system startup
 	start_smartd=yes
 
-### Adding to the 'smartd.conf' file.
+### Adding a device to the `smartd.conf` file for monitoring.
+
+First open up the `smartmontools` config file:
 
 	sudo nano /etc/smartd.conf
 	
+And add some monitoring configs like this to the bottom; note only one is active and the other is commented out as an example:
+
 	# 2013-09-27: Adding for RAID array.
 	#/dev/sda -a -d sat -I 194 -m email_address@example.com -M test -s (S/../.././02|L/../../6/03)
 	/dev/sda -a -I 194 -m email_address@example.com -M test -s (S/../.././02|L/../../6/03)
 	
-### Adding to the 'smartd.conf' file.
+### Adding to the `smartd.conf` file to Munin.
 
-Create a symbolic link for the plugin to be active.
+Create a symbolic link for the plugin to be active:
 
     sudo ln -s /usr/share/munin/plugins/smart_ /etc/munin/plugins/smart_hda
 
-Check the config.
+Check the config:
 
     sudo nano /etc/munin/plugin-conf.d/munin-node
 
-There should be lines that read like this.
+Check to see if `[smart_*]` entry exists. If it doesn’t just add this simple config to bottom of the file:
 
 	[smart_*]
 	user root
 
-***
+### Sample contents from the `smartd.conf` for reference.
 
 	# Sample configuration file for smartd.  See man smartd.conf.
 	
