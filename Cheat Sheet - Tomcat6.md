@@ -2,6 +2,7 @@
 
 By Jack Szwergold, September 24, 2015
 
+## Install Tomcat6.
 
 Then install Tomcat6 via `aptitude` like this:
 
@@ -52,15 +53,17 @@ Start, stop and control Tomcat6 on an Ubuntu/Debian system:
 	sudo service tomcat6 force-reload
 	sudo service tomcat6 status
 
-#### Change group ownership and permissions for the main Tomcat6 content directory.
+#### Fix a myriad of Tomcat6 directory ownership and permissions stuff.
+
+First, set the group ownership of `/var/lib/tomcat6/` to `www-readwrite`:
 
 	sudo chown tomcat6:www-readwrite -R /var/lib/tomcat6/
-	
+
+And now grant group write privileges to `/var/lib/tomcat6/`:
+
 	sudo chmod g+w -R /var/lib/tomcat6/
 
-#### Fix errors where Tomcat6 cannot write to it’s own files.
-
-Note how group write permissions are not set in `/etc/tomcat6`:
+Now, note how group write permissions are not set in `/etc/tomcat6`:
 
     ls -la /etc/tomcat6
 
@@ -68,7 +71,7 @@ Fix that like this:
 
     sudo chmod g+w -R /etc/tomcat6
 
-Now check in the `/usr/share/tomcat6/`:
+Then check in the `/usr/share/tomcat6/`:
 
     ls -la /usr/share/tomcat6
 
@@ -80,19 +83,27 @@ Then change ownership of the directory like this:
 
     sudo chown -R tomcat6:www-readwrite -R /usr/share/tomcat6
 
-***
+#### Adjust Tomcat6 `logrotate.d` directory permissions.
 
-Change that to the following so owner is `root` and the group is `www-readwrite`:
+Change the Tomcat6 logs directory (`/var/log/tomcat6`) so the owner is `root` and the group is `tomcat6`:
 
-	sudo chmod 775 /var/log/tomcat6
-	
-	sudo chmod 664 /var/log/tomcat6/*
-	
 	sudo chown root:tomcat6 /var/log/tomcat6
+
+Now change the files in that `/var/log/tomcat6` directory to have `tomcat6` as the owner and `root` as the group:
 	
 	sudo chown tomcat6:root /var/log/tomcat6/*
 
-The default `logrotate` stuff needs to be tweaked as well. So open up the `tomcat6` `logrotate.d` config file:
+Adjust the permissions to the `/var/log/tomcat6` directory so group members can execute, read and write and others can read:
+
+	sudo chmod 775 /var/log/tomcat6
+	
+Adjust the permissions to the files in the `/var/log/tomcat6` directory so group members can read and write and others can read:
+
+	sudo chmod 664 /var/log/tomcat6/*
+
+#### Adjust Tomcat6 the `logrotate` config file.
+
+The default Tomcat6 `logrotate` config needs to be tweaked as well. So open up the `tomcat6` `logrotate.d` config file:
 
     sudo nano /etc/logrotate.d/tomcat6
 
@@ -107,7 +118,7 @@ It should look something like this:
 	  create 640 tomcat6 adm
 	}
 
-Change that so the `delaycompress` is added to the options, the new owner is `root`, the group is `www-readwrite` and file permissions are `664`:
+Change that so the `delaycompress` is added to the options, the new owner is `tomcat6`, the group is `root` and file permissions are `664`:
 
 	/var/log/tomcat6/catalina.out {
 	  copytruncate
