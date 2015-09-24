@@ -8,7 +8,7 @@ Then install Tomcat6 via `aptitude` like this:
     sudo aptitude install tomcat6
 
 Once that is installed open up the `tomcat6` config file:
- 
+
     sudo nano /etc/default/tomcat6
 
 Find the line for `JAVA_OPTS` and change as follows:
@@ -56,9 +56,11 @@ Change that to the following so owner is `root` and the group is `www-readwrite`
 	
 	sudo chown tomcat6:root /var/log/tomcat6/*
 
-The default logrotate stuff needs to be tweaked.
+The default `logrotate` stuff needs to be tweaked as well. So open up the `tomcat6` `logrotate.d` config file:
 
     sudo nano /etc/logrotate.d/tomcat6
+
+It should look something like this:
 
 	/var/log/tomcat6/catalina.out {
 	  copytruncate
@@ -69,10 +71,8 @@ The default logrotate stuff needs to be tweaked.
 	  create 640 tomcat6 adm
 	}
 
-Change that to the following so owner is `root` and the group is `www-readwrite`:
+Change that so the `delaycompress` is added to the options, the new owner is `root`, the group is `www-readwrite` and file permissions are `664`:
 
-	sudo nano /etc/logrotate.d/tomcat6
-	
 	/var/log/tomcat6/catalina.out {
 	  copytruncate
 	  weekly
@@ -82,7 +82,6 @@ Change that to the following so owner is `root` and the group is `www-readwrite`
 	  missingok
 	  create 664 tomcat6 root
 	}
-
 
 #### Adjusting Tomcat6 group ownership permissions.
 
