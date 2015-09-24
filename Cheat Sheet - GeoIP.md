@@ -98,7 +98,7 @@ And decompress the database files like this:
 
 Check to see if the GeoIP databases are set in Mac OS X:
 
-    ls -la /usr/local/share/
+    ls -la /usr/local/share/GeoIP/
 
 ***
 
