@@ -48,9 +48,10 @@ First open up the `smartmontools` config file:
 	
 And add some monitoring configs like this to the bottom; note only one is active and the other is commented out as an example:
 
-	# 2013-09-27: Adding for RAID array.
+	# 2015-09-24: Example config.
 	#/dev/sda -a -d sat -I 194 -m email_address@example.com -M test -s (S/../.././02|L/../../6/03)
-	/dev/sda -a -I 194 -m email_address@example.com -M test -s (S/../.././02|L/../../6/03)
+	# /dev/sda -a -d ata -I 194 -m email_address@example.com -M test -s (S/../.././02|L/../../6/03)
+	/dev/sda1 -a -d ata -I 194 -m email_address@example.com -M test -s (S/../.././02|L/../../6/03)
 	
 ### Adding to the `smartd.conf` file to Munin.
 
@@ -217,11 +218,6 @@ Check to see if `[smart_*]` entry exists. If it doesn’t just add this simple c
 	# If the test string DEVICESCAN is the first uncommented text
 	# then smartd will scan for devices /dev/hd[a-l] and /dev/sd[a-z]
 	# DEVICESCAN may be followed by any desired Directives.
-	
-	# 2013-09-27: Adding for RAID array.
-	# /dev/sda -a -d scsi -I 194 -m email_address@example.com -M test -s (S/../.././02|L/../../6/03)
-	/dev/sda -a -d scsi -I 194 -m email_address@example.com -s (S/../.././02|L/../../6
-
 
 ***
 
