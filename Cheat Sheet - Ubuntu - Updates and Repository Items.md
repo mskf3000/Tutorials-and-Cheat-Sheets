@@ -54,7 +54,6 @@ If for some reason there are still issues with your `aptitude` repository lists 
 
 And then just wait for it to do it’s thing and run the standard `sudo aptitude update`/`sudo aptitude upgrade` combo and all should be fine again.
 
-
 ### Dealing with installation package issues.
 
 #### Clearing up a screwed up package install/upgrade.
@@ -76,6 +75,30 @@ Sometimes stray/unused packages get left behind on a system. To clean them out j
     sudo apt-get autoremove
 
 See if anything needs to be removed and if all looks okay, just go ahead and respond yes (`Y`) and all should be good.
+
+### Dealing with PPAs (Personal Package Archives).
+
+Check what PPAs (Personal Package Archives) are set on the system:
+
+    ls -la /etc/apt/sources.list.d/
+
+Check what repositories—including PPAs—the system checks:
+
+    apt-cache policy
+
+#### Installing and removing a PPA.
+
+First install `python-software-properties` like this:
+
+    sudo aptitude install python-software-properties
+
+Next add the PPA repository to the system like this:
+
+    sudo add-apt-repository ppa:whatever/ppa
+
+Remove a specific repository using `add-apt-repository` with the `--remove` flag:
+
+    sudo add-apt-repository --remove ppa:whatever/ppa
 
 ***
 
