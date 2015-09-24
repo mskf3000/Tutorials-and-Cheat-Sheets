@@ -2,12 +2,17 @@
 
 By Jack Szwergold, September 24, 2015
 
+
+Then install Tomcat6 via `aptitude` like this:
+
     sudo aptitude install tomcat6
 
-
+Once that is installed open up the `tomcat6` config file:
+ 
     sudo nano /etc/default/tomcat6
 
-	*** Find the line for 'JAVA_OPTS' and change as follows
+Find the line for `JAVA_OPTS` and change as follows:
+
 	# JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC"
 	JAVA_OPTS="-Xms128m -Xmx256m -XX:MaxPermSize=512m -Djava.awt.headless=true -XX:-UseGCOverheadLimit -XX:+UseCompressedOops"
 
