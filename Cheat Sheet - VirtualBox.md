@@ -159,7 +159,7 @@ If you get a UUID related error like this:
 > Cannot register the hard disk <FilePath><GUID> becuase a hard disk
 > <DifferentFilePath> with UUID <GUID> already exists.
 
-Go into the directory of your virtual machine:
+Go into the directory of your virtual machine; of course change the actual path to match the actual path you are going into:
 
     cd /full/path/to/virtualbox/virtualmachine/Sandbox
 
