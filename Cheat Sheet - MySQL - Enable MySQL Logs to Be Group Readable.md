@@ -66,7 +66,7 @@ To this:
 
     create 640 mysql www-readwrite
 
-#### An example of what directory permissions look like before the adjustment.
+#### An example of what log ownership and permissions look like before the adjustment.
 
 	ls -la /var/log/mysql/
 	
@@ -82,7 +82,7 @@ To this:
 	-rw-r-----  1 mysql adm    333 2013-01-01 03:00 mysql-slow.log.6.gz
 	-rw-r-----  1 mysql adm    334 2012-12-31 03:00 mysql-slow.log.7.gz
 
-#### An example of what directory permissions look like after the adjustment.
+#### An example of what log ownership and permissions look like after the adjustment.
 
 	ls -la /var/log/mysql/
 	
