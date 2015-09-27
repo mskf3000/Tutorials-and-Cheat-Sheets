@@ -4,7 +4,7 @@ By Jack Szwergold, September 27, 2015
 
 Install `screen`:
 
-    sudo aptitude install avahi-daemon avahi-utils
+    sudo aptitude install screen
 
 Create a screen named `test_screen`.
 
