@@ -2,23 +2,15 @@
 
 By Jack Szwergold, September 24, 2015
 
-Get the version of MySQL:
+***
+
+#### Sundry MySQL items.
+
+Get MySQL version number:
 
     mysqladmin -V
 
-Simple status:
-
-    mysqladmin status
-
-Simple extended status:
-
-	mysqladmin extended
-
-Get the MySQL configuration:
-
-	mysql_config
-
-Control it in Ubuntu/Debian:
+Start, stop and control MySQL on an Ubuntu/Debian system:
 
 	sudo service mysql status
 	sudo service mysql start
@@ -27,9 +19,25 @@ Control it in Ubuntu/Debian:
 	sudo service mysql reload
 	sudo service mysql force-reload
 
+Simple MySQL status:
+
+    mysqladmin status
+
+Extended MySQL status:
+
+	mysqladmin extended
+
+Get the MySQL configuration:
+
+	mysql_config
+
 Login as root:
 
     mysql -u root -p
+
+Determine which `my.cnf` is being used:
+
+	mysql --help | grep -A 1 "Default options"
 
 Edit the config file:
 
@@ -46,11 +54,6 @@ Follow the MySQL error log:
 Follow the MySQL slow queries log:
 
 	sudo tail -f -n 200 /var/log/mysql/mysql-slow.log
-	sudo tail -f -n 200 /var/lib/mysqllogs/slow-log
-
-Determine which `my.cnf` is being used:
-
-	mysql --help | grep -A 1 "Default options"
 
 Determine what startup flags MySQL starts with:
 
