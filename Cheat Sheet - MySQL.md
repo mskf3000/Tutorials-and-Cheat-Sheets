@@ -31,6 +31,10 @@ Get the MySQL configuration:
 
 	mysql_config
 
+Get the IDs of MySQL processes on a running system:
+
+	ps ax | grep mysql
+
 Determine which `my.cnf` is being used:
 
 	mysql --help | grep -A 1 "Default options"
@@ -54,10 +58,6 @@ Follow the MySQL error log:
 Follow the MySQL slow queries log:
 
 	sudo tail -f -n 200 /var/log/mysql/mysql-slow.log
-
-Get the IDs of MySQL processes on a running system:
-
-	ps ax | grep mysql
 
 Login as root:
 
