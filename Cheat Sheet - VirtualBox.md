@@ -4,7 +4,7 @@ By Jack Szwergold, September 19, 2015
 
 #### Start the VirtualBox virtual machine as a headless machine.
 
-    VBoxHeadless --startvm "Sandbox" &
+    nohup VBoxHeadless --startvm "Sandbox" &
 
 #### Control the VirtualBox virtual machine state from the command line.
 
