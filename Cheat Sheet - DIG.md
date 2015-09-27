@@ -30,6 +30,18 @@ DNS lookup of a hostname on a specific nameserver using Google’s DNS servers:
 	dig @8.8.8.8 NS [hostname]
 	dig @8.8.4.4 NS [hostname]
 
+Get a list of all DNS data connected to a domain. But this doesn’t work nowadays since most all DNS servers out there deny zone transfers:
+
+    dig [hostname] -t AXFR
+
+Get all records connected to a domain:
+
+    dig [hostname] ANY
+
+Get pretty much all available info on a domain:
+
+    dig +nocmd [hostname] any +multiline +noall +answer
+
 ***
 
 *Cheat Sheet - DIG (c) by Jack Szwergold*
