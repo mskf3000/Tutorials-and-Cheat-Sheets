@@ -31,13 +31,13 @@ Get the MySQL configuration:
 
 	mysql_config
 
-Login as root:
-
-    mysql -u root -p
-
 Determine which `my.cnf` is being used:
 
 	mysql --help | grep -A 1 "Default options"
+
+Determine what startup flags MySQL starts with:
+
+	mysql --print-defaults
 
 Edit the config file:
 
@@ -55,13 +55,15 @@ Follow the MySQL slow queries log:
 
 	sudo tail -f -n 200 /var/log/mysql/mysql-slow.log
 
-Determine what startup flags MySQL starts with:
-
-	mysql --print-defaults
-
 Get the IDs of MySQL processes on a running system:
 
 	ps ax | grep mysql
+
+Login as root:
+
+    mysql -u root -p
+
+#### Securing an initial MySQL installation by removing test items.
 
 If your version of MySQL supports it, just run `mysql_secure_installation` to secure the installation and get rid of test databases and users:
 
