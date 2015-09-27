@@ -1,7 +1,4 @@
 # Cheat Sheet - Nikto
-
-By Jack Szwergold, September 24, 2015
-
 Nikto is a simple, web server scanner that scans a web server for known vulnerabilities. This document explains some of the basic ways Nitkto can be used.
 
 #### Basic Nikto usage.
@@ -104,8 +101,6 @@ Nikto is a simple, web server scanner that scans a web server for known vulnerab
 	       -vhost+            Virtual host (for Host header)
 	   		+ requires a value
 	
-
-
 ***
 
 *Cheat Sheet - Nikto (c) by Jack Szwergold*
