@@ -56,7 +56,7 @@ Make your selection and then move onto the `update-alternatives` for related Rub
 
 Finally, confirm the version of Ruby has been updated like this:
 		
-     ruby --version
+    ruby --version
 
 ***
 
