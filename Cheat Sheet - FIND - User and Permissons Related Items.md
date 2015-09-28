@@ -1,6 +1,6 @@
 # Cheat Sheet - FIND - User and Permissons Related Items
 
-By Jack Szwergold, September 27, 2015
+By Jack Szwergold, September 28, 2015
 
 #### Change user ownership on a directory.
 
