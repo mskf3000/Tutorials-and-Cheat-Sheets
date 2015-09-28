@@ -40,12 +40,11 @@ With that done, install the core Ruby 1.9 stuff like this:
 Now, run `update-alternatives` to get the new Ruby 1.9 properly recognized and linked on the system:
 
 	sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.9.1 400 \
-	         --slave   /usr/share/man/man1/ruby.1.gz ruby.1.gz \
-	                        /usr/share/man/man1/ruby1.9.1.1.gz \
-	        --slave   /usr/bin/ri ri /usr/bin/ri1.9.1 \
-	        --slave   /usr/bin/irb irb /usr/bin/irb1.9.1 \
-	        --slave   /usr/bin/rdoc rdoc /usr/bin/rdoc1.9.1
-
+	                         --slave   /usr/share/man/man1/ruby.1.gz ruby.1.gz \
+	                                   /usr/share/man/man1/ruby1.9.1.1.gz \
+	                         --slave   /usr/bin/ri ri /usr/bin/ri1.9.1 \
+	                         --slave   /usr/bin/irb irb /usr/bin/irb1.9.1 \
+	                         --slave   /usr/bin/rdoc rdoc /usr/bin/rdoc1.9.1
 
 Next, run `update-alternatives` again to choose your Ruby interpreter. This also changes symbolic links for core Ruby items:
 
