@@ -8,7 +8,7 @@ Show all the volume groups on the system:
 
 	sudo vgdisplay
 
-Rname the volume group:
+Rename the volume group:
 
 	sudo vgrename [old name] [new name]
 
@@ -28,9 +28,9 @@ The update the existing `initramfs` stuff like this:
 
 	sudo update-initramfs -u
 
-### Creating a new LVM logical volume group.
+### Creating a new LVM physical and logical volume group.
 
-#### Creating the LVM physical volume.
+#### Creating the physical volume.
 
 Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdb`:
 
@@ -68,7 +68,7 @@ And if you run `pvscan` again the output should be something like this:
     PV /dev/sda5   VG sandbox-vg   lvm2 [31.76 GiB / 0    free]
     Total: 2 [39.75 GiB] / in use: 2 [39.75 GiB] / in no VG: 0 [0   ]
 
-#### Creating the LVM logical volume.
+#### Creating the logical volume.
 
 Now let’s create the logical volume like so:
 
@@ -96,13 +96,13 @@ You can remove a logical volume like so:
 
     sudo lvremove /dev/test_group/test_volume
 
-#### Creating file system and mounting.
+#### Creating file system and on the logical volume and mounting.
 
 Knowing the device is located at `/dev/test_group/test_volume` let’s format it as `ext3` like this:
 
     sudo mkfs -t ext3 /dev/test_group/test_volume
 
-After that is done, the device should be formatted and ready to mount. Let’s create a test mount poin called `mount_test`:
+After that is done, the device should be formatted and ready to mount. Let’s create a test mount point called `mount_test`:
 
     sudo mkdir -p ~/mount_test/
 
