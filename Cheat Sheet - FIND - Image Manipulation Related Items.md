@@ -16,7 +16,7 @@ Dry run to find any JPEG images and just echo their full path:
 
 Convert any JPEG images found into JPEG thumbnail images at 90% quality:
 
-	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+	find 'Desktop/Pics' -type f -name '*.jpg' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    DIRECTORY=$(dirname "$FULL_IMAGE_PATH")
@@ -70,7 +70,7 @@ Find any stray images with the `*.jpg_original` extension that ExifTool created 
 	    rm "${FULL_IMAGE_PATH}"
 	  done
 
-***
+### Change the DPI of images.
 
 Change the DPI of JPEG images 200 dpi:
 
