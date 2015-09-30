@@ -20,7 +20,7 @@ Convert any JPEG images found into JPEG thumbnail images at 90% quality:
 	  while read FULL_IMAGE_PATH
 	  do
 	    FILENAME="${FULL_IMAGE_PATH%.*}"
-	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${FILENAME}"_t.jpg
+	    echo convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${FILENAME}"_t.jpg
 	  done
 
 #### The process for any JPEG, PNG or TIFF images.
