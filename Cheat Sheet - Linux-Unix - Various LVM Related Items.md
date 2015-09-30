@@ -28,6 +28,9 @@ The update the existing `initramfs` stuff like this:
 
 	sudo update-initramfs -u
 
+#### Creating a new LVM logical volume.
+
+
 #### Adding a disk to an LVM logical volume.
 
 Use `lsblk` to see a list of all connected block level devices:
