@@ -49,17 +49,25 @@ With that done type `w` to write the partition info to the disk and the process 
 
 Don’t worry about the warning. You’re all done as far as partitioning goes.
 	
-#### Prepping and partitioning the device for use.
+#### Copy the ISO data to the new device.
+
+Copying it is as simple as using this `dd` command:
 
 	sudo dd if=~/ubuntu-12.04.5-server-amd64.iso of=/dev/sdb bs=1024
-	
-***
 
-After the process:
+When it’s done, output should be something like this:
+
+	705536+0 records in
+	705536+0 records out
+	722468864 bytes (722 MB) copied, 32.6091 s, 22.2 MB/s
+
+And if you check the info on `/dev/sdb` now using this command:
 
     sudo file -s /dev/sdb
 
-    /dev/sdb: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
+The output would be something like this:
+
+	/dev/sdb: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
 
 ### Sundry UDF and similar items.
 
@@ -73,15 +81,7 @@ Get info on the ISO itself with a plain `file` check like this:
 
 Output would be something like this:
 
-    ubuntu-12.04.5-server-amd64.iso: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
-
-Check the info on a “special file”—such as a block level device—by using `file` with the `-s` option:
-
-    sudo file -s /dev/sda
-
-The output of that would be something like this:
-
-	/dev/sda: x86 boot sector; partition 1: ID=0x83, active, starthead 32, startsector 2048, 497664 sectors; partition 2: ID=0x5, starthead 59, startsector 501758, 66605058 sectors, code offset 0x63
+	ubuntu-12.04.5-server-amd64.iso: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
 
 ***
 
