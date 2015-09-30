@@ -2,7 +2,35 @@
 
 By Jack Szwergold, September 30, 2015
 
-#### Prepping and partitioning the device for use.
+### Copy the ISO data to the new device.
+
+9 times out of 10 a straight `dd` copy will work like this. If not, you need to repartition and prep the device.
+
+***
+
+Copying it is as simple as using this `dd` command:
+
+	sudo dd if=~/ubuntu-12.04.5-server-amd64.iso of=/dev/sdb bs=1024
+
+When it’s done, output should be something like this:
+
+	705536+0 records in
+	705536+0 records out
+	722468864 bytes (722 MB) copied, 32.6091 s, 22.2 MB/s
+
+And if you check the info on `/dev/sdb` now using this command:
+
+    sudo file -s /dev/sdb
+
+The output would be something like this:
+
+	/dev/sdb: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
+
+### Prepping and partitioning the device for use.
+
+The 1 time out of 10 a straight `dd` copy won’t work work, you need to repartition and prep the device as outlined below.
+
+***
 
 First, use `lsblk` to see a list of all connected block level devices:
 
@@ -32,7 +60,7 @@ When that is done hit `t` for the partition type. The new prompt would be:
 
     Hex code (type L to list codes):
 
-If it asks you to select a partition to act on, rememeber the partition number from above and enter that; it should be `1`. Then select `6` for the `FAT16` partition type. The output should then be:
+If it asks you to select a partition to act on, remember the partition number from above and enter that; it should be `1`. Then select `6` for the `FAT16` partition type. The output should then be:
 
     Changed system type of partition 1 to 6 (FAT16)
 
@@ -49,25 +77,19 @@ With that done type `w` to write the partition info to the disk and the process 
 
 Don’t worry about the warning. You’re all done as far as partitioning goes.
 	
-#### Copy the ISO data to the new device.
+### Manually mount an ISO to a mount point.
 
-Copying it is as simple as using this `dd` command:
+Create a mount point:
 
-	sudo dd if=~/ubuntu-12.04.5-server-amd64.iso of=/dev/sdb bs=1024
+	mkdir -p ~/ubuntu-12.04.5
 
-When it’s done, output should be something like this:
+Mount the ISO to the mount point:
 
-	705536+0 records in
-	705536+0 records out
-	722468864 bytes (722 MB) copied, 32.6091 s, 22.2 MB/s
+	sudo mount -o ro,loop ubuntu-12.04.5-server-amd64.iso ~/ubuntu-12.04.5
 
-And if you check the info on `/dev/sdb` now using this command:
+Unmount the ISO from the mount point like this:
 
-    sudo file -s /dev/sdb
-
-The output would be something like this:
-
-	/dev/sdb: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
+	sudo umount ~/ubuntu-12.04.5
 
 ### Sundry UDF and similar items.
 
@@ -83,17 +105,9 @@ Output would be something like this:
 
 	ubuntu-12.04.5-server-amd64.iso: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
 
-***
+Create a UDF file system on a partition:
 
 	sudo mkudffs --media-type=hd --blocksize=512 /dev/sdb1
-
-***
-
-	mkdir -p ~/ubuntu-12.04.5
-	
-	sudo mount -o ro,loop ubuntu-12.04.5-server-amd64.iso ~/ubuntu-12.04.5
-	
-	sudo umount ~/ubuntu-12.04.5
 
 ***
 
