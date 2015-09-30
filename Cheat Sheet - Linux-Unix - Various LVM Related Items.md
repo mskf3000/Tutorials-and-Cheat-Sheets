@@ -155,7 +155,7 @@ The response should be something like this:
 
 and now we can finally extend my logical volume using :
 
-	lvextend -L+20G /dev/zabbix/root 
+	lvextend -L+20G /dev/zabbix/root
 
 And if now check fdisk -l there is /zabbix-root with +20GB But dont forget to use `resize2fs` to let filesystem know there is some change. If you will not do this you are not able to use new space.
 
