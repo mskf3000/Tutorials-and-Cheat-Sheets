@@ -19,8 +19,8 @@ Convert any JPEG images found into JPEG thumbnail images at 90% quality:
 	find 'Desktop/Pics' -type f -name '*.jpg' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    FILENAME="${FULL_IMAGE_PATH%.*}"
-	    echo convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${FILENAME}"_t.jpg
+	    PATH_WITHOUT_EXTENSION="${FULL_IMAGE_PATH%.*}"
+	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${PATH_WITHOUT_EXTENSION}"_t.jpg
 	  done
 
 #### The process for any JPEG, PNG or TIFF images.
@@ -38,8 +38,8 @@ Convert any JPEG, PNG or TIFF images found into JPEG thumbnail images at 90% qua
 	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    FILENAME="${FULL_IMAGE_PATH%.*}"
-	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${FILENAME}"_t.jpg
+	    PATH_WITHOUT_EXTENSION="${FULL_IMAGE_PATH%.*}"
+	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${PATH_WITHOUT_EXTENSION}"_t.jpg
 	  done
 
 ### Strip out EXIF data with ExifTool.
@@ -57,7 +57,7 @@ Strip out all image EXIF data from TIFF images with ExifTool to:
 	find 'Desktop/Pics' -type f -name '*.tif' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    exiftool -icc_profile:all= -overwrite_original_in_place "${FILENAME}"
+	    exiftool -icc_profile:all= -overwrite_original_in_place "${PATH_WITHOUT_EXTENSION}"
 	  done
 
 Strip out all image EXIF data from JPEG, PNG or TIFF images with ExifTool to:
