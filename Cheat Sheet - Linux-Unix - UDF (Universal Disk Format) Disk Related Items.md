@@ -2,31 +2,60 @@
 
 By Jack Szwergold, September 30, 2015
 
-Use `lsblk` to see a list of all connected block level devices:
+#### Prepping and partitioning the device for use.
+
+First, use `lsblk` to see a list of all connected block level devices:
 
     lsblk
 
-Knowing we will be using `/dev/sdb`, partition the USB drive; mainly to wipe away all partitions:
+In this case we’ll be acting on the device `/dev/sdb` so this will help you check exactly what `/dev/sdb` is:
+
+    sudo file -s /dev/sdb
+
+That output would be something like this:
+
+    /dev/sdb: data
+
+Knowing that the device is accessible and ready, we will partition the device like this:
 
 	sudo fdisk /dev/sdb
 
-	d
-	1
-	n
-	p
-	1
-	first sector
-	last sector
-	t
-	1
-	6: Changed system type of partition 1 to 6 (FAT16)
-    w
+Once in the `fdisk` interface, press `n` for a new partition. The output will be something like this:
+
+	Partition type:
+	   p   primary (0 primary, 0 extended, 4 free)
+	   e   extended
+
+Select `p` for a `primary` partition. Select all of the defaults for the items like partition number, first sector and last sector.
+
+When that is done hit `t` for the partition type. The new prompt would be:
+
+    Hex code (type L to list codes):
+
+If it asks you to select a partition to act on, rememeber the partition number from above and enter that; it should be `1`. Then select `6` for the `FAT16` partition type. The output should then be:
+
+    Changed system type of partition 1 to 6 (FAT16)
+
+With that done type `w` to write the partition info to the disk and the process of partitioning should be finished and you will see the following output:
+
+	The partition table has been altered!
 	
-***
+	Calling ioctl() to re-read partition table.
+	
+	WARNING: If you have created or modified any DOS 6.x
+	partitions, please see the fdisk manual page for additional
+	information.
+	Syncing disks.
+
+Don’t worry about the warning. You’re all done as far as partitioning goes.
+	
+#### Prepping and partitioning the device for use.
 
 	sudo dd if=~/ubuntu-12.04.5-server-amd64.iso of=/dev/sdb bs=1024
 	
 ***
+
+After the process:
 
     sudo file -s /dev/sdb
 
