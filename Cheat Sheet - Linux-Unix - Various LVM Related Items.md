@@ -152,7 +152,7 @@ The response should be something like this:
 
 	Volume group "test_group" successfully extended
 
-Next, extend the `test_volume` with the full contents of `/dev/sdc`: 
+Next, extend the `test_volume` with the full contents of `/dev/sdc`:
 
     sudo lvextend /dev/test_group/test_volume /dev/sdc
 
@@ -166,13 +166,19 @@ And finally resize the filesystem like this:
 
 Now, if that `/dev/test_group/test_volume` is remounted, the new added space will be reflected in it’s expanded size.
 
+#### Sundry LVM debugging stuff.
+
 If somehow you need to reduce the size of a volume group—by getting rid of all unused disks—run this command:
 
     sudo vgreduce test_group /dev/test_group/test_volume
 
-    sudo vgreduce test_group /dev/sdc
+Or if you want to remove a disk from a logical volume, first run this command to remove the logical volume:
 
-#### Sundry LVM debugging stuff.
+    sudo lvremove /dev/test_group/test_volume
+
+And then run this `vgreduce` command:
+
+    sudo vgreduce test_group /dev/sdc
 
 Check the current UUID:
 
