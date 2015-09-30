@@ -42,6 +42,30 @@ Convert any JPEG, PNG or TIFF images found into JPEG thumbnail images at 90% qua
 	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${PATH_WITHOUT_EXTENSION}"_t.jpg
 	  done
 
+#### The process to convert any JPEG, PNG or TIFF images into a thumbnail that matches the original format extension.
+
+Dry run to find any JPEG, PNG or TIFF images and just echo their full path:
+
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+	  while read FULL_IMAGE_PATH
+	  do
+	    echo "${FULL_IMAGE_PATH}"
+	  done
+
+Convert any JPEG, PNG or TIFF images found into a same format thumbnail image at 90% quality:
+
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+	  while read FULL_IMAGE_PATH
+	  do
+	    # PATH_WITHOUT_EXTENSION="${FULL_IMAGE_PATH%.*}"
+	    # Parse the directory name, extension & filename.
+        DIRNAME=$(dirname "${FULL_IMAGE_PATH}")
+        BASENAME=$(basename "${FULL_IMAGE_PATH}")
+        FILENAME="${BASENAME%.*}"
+        EXTENSION="${BASENAME##*.}"
+	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${DIRNAME}"/"${FILENAME}"_t."${EXTENSION}"
+	  done
+
 ### Strip out EXIF data with ExifTool.
 
 Strip out all image EXIF data from JPEG images with ExifTool to:
