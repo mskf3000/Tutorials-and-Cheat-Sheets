@@ -107,7 +107,7 @@ Output would be something like this:
 
 #### Creating UDF file systems from scratch.
 
-Install `udftools` on your system if you need them:
+Install `udftools` and `udisks` on your system if you need them:
 
 	sudo aptitude install udftools udisks
 
