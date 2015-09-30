@@ -33,7 +33,7 @@ Dry run to find any JPEG, PNG or TIFF images and just echo their full path:
 	    echo "${FULL_IMAGE_PATH}"
 	  done
 
-Convert any JPEG, PNG or TIFF images found into JPEG thumbnail images at 90% quality:
+Convert any JPEG, PNG or TIFF images found into 300 pixels wide or high JPEG thumbnail images at 90% quality:
 
 	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
@@ -52,7 +52,7 @@ Dry run to find any JPEG, PNG or TIFF images and just echo their full path:
 	    echo "${FULL_IMAGE_PATH}"
 	  done
 
-Convert any JPEG, PNG or TIFF images found into a same format thumbnail image at 90% quality:
+Convert any JPEG, PNG or TIFF images found into a same format 300 pixels wide or high thumbnail image at 90% quality:
 
 	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
@@ -63,7 +63,7 @@ Convert any JPEG, PNG or TIFF images found into a same format thumbnail image at
         BASENAME=$(basename "${FULL_IMAGE_PATH}")
         FILENAME="${BASENAME%.*}"
         EXTENSION="${BASENAME##*.}"
-	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${DIRNAME}"/"${FILENAME}"_t."${EXTENSION}"
+	    convert -density 72 -units PixelsPerInch -quality 90 -resize "300x300>" "${FULL_IMAGE_PATH}" "${DIRNAME}"/"${FILENAME}"_t."${EXTENSION}"
 	  done
 
 ### Strip out EXIF data with ExifTool.
