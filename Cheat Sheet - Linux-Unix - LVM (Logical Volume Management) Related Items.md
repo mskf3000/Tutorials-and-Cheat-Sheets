@@ -36,7 +36,7 @@ Use `lsblk` to see a list of all connected block level devices; in this example 
 
     lsblk
 
-Create the physical volume for the new LVM like this:
+Create the physical volume on `/dev/sdb` for the new LVM like this:
 
     sudo pvcreate /dev/sdb
 
@@ -62,7 +62,11 @@ The response from that should be something like this:
 
     Volume group "test_group" successfully created
 
-And if you run `pvscan` again the output should be something like this:
+And if you run `pvscan` again:
+
+    sudo pvscan
+
+The output should be something like this:
 
     PV /dev/sdb    VG test_group   lvm2 [8.00 GiB / 8.00 GiB free]
     PV /dev/sda5   VG sandbox-vg   lvm2 [31.76 GiB / 0    free]
