@@ -85,8 +85,7 @@ Change the DPI of JPEG images to 200 dpi:
 	find 'Desktop/Pics' -type f -name '*.jpg' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    FILENAME="${FULL_IMAGE_PATH%.*}"
-	    convert -density 200 -units PixelsPerInch -quality 90% "${FULL_IMAGE_PATH}" "${FILENAME}".jpg
+	    convert -density 200 -units PixelsPerInch -quality 100 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
 ### Resize images.
@@ -96,8 +95,7 @@ Resize JPEGs to dimensions of 1000 pixels wide or high if they are larger than 1
 	find 'Desktop/Pics' -type f -name '*.jpg' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    FILENAME="${FULL_IMAGE_PATH%.*}"
-	    convert -density 72 -units PixelsPerInch -resize "1000x1000>" -quality 90 "${FULL_IMAGE_PATH}" "${FILENAME}".jpg
+	    convert -density 72 -units PixelsPerInch -resize "1000x1000>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
 Resize JPEGs to dimensions of 1500 pixels wide or high if they are larger than 1500 pixels:
@@ -105,21 +103,7 @@ Resize JPEGs to dimensions of 1500 pixels wide or high if they are larger than 1
 	find 'Desktop/Pics' -type f -name '*.jpg' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    FILENAME="${FULL_IMAGE_PATH%.*}"
-	    convert -density 72 -units PixelsPerInch -resize "1500x1500>" -quality 90 "${FULL_IMAGE_PATH}" "${FILENAME}".jpg
-	  done
-***
-
-#### TIFF image processing
-
-Change image density to 1200 DPI without reprocessing the image:
-
-	find 'Desktop/JPEGs' -maxdepth 1 -type f -name '*.jpg' |\
-	  while read FULL_IMAGE_PATH
-	  do
-	    DIRNAME=$(dirname "${FULL_IMAGE_PATH}")
-	    BASENAME=$(basename "${FULL_IMAGE_PATH}")
-	    convert -units PixelsPerInch "${DIRNAME}/${FILENAME}" -density 1200 -quality 100 "${DIRNAME}1200/${BASENAME}"
+	    convert -density 72 -units PixelsPerInch -resize "1500x1500>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
 ***
