@@ -114,7 +114,16 @@ Now let’s manually mount the device to the mount point like this:
 
     sudo mount /dev/test_group/test_volume ~/mount_test/
 
-If the device mounted, you should be returned cleanly to the command prompt. To see if it is mounted, just check the output of `mount -l` or `df -h` to see it there.
+If the device mounted, you should be returned cleanly to the command prompt. To see if it is mounted, just check the output of `mount -l` or `df -h` to see it there. Here is an example of some `df -h` output:
+
+	Filesystem                          Size  Used Avail Use% Mounted on
+	/dev/mapper/sandbox--vg-root         28G  2.8G   24G  11% /
+	udev                                2.0G  4.0K  2.0G   1% /dev
+	tmpfs                               396M  356K  395M   1% /run
+	none                                5.0M     0  5.0M   0% /run/lock
+	none                                2.0G     0  2.0G   0% /run/shm
+	/dev/sda1                           236M   36M  188M  16% /boot
+	/dev/mapper/test_group-test_volume  7.8G   19M  7.4G   1% /home/sysop/mount_test
 
 And finally to make that volume mount automatically on system start, we need to edit the `fstab` like this:
 
@@ -132,7 +141,11 @@ To unmount the volume, run this command:
 
 ### Adding a disk to an LVM logical volume group.
 
-Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdc`:
+Before anything, make sure the LVM volume is unmounted by running a command like this:
+
+    sudo umount /home/sysop/mount_test
+
+Once that is unmounted, use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdc`:
 
     lsblk
 
@@ -148,7 +161,7 @@ Now get your volume group name with `vgdisplay` like this:
 
     sudo pvscan
 
-In this case let’s assume the volume group name is `test_group`. So now let’s add it to the existing volume group using `vgextend` like this:
+In this case let’s assume the volume group name is `test_group`. So now let’s add the disk to the existing volume group using `vgextend` like this:
 
 	sudo vgextend test_group /dev/sdc
 
@@ -156,11 +169,11 @@ The response should be something like this:
 
 	Volume group "test_group" successfully extended
 
-Next, extend the `test_volume` with the full contents of `/dev/sdc`:
+Next, let’s actually extend the `test_volume` with the full contents of `/dev/sdc`:
 
     sudo lvextend /dev/test_group/test_volume /dev/sdc
 
-Then run this `e2fsck` command like this:
+Then run this `e2fsck` command like this to scan the filesystem:
 
     sudo e2fsck -f /dev/test_group/test_volume
 
@@ -168,13 +181,26 @@ And finally resize the filesystem like this:
 
     sudo resize2fs /dev/test_group/test_volume
 
-Now, if that `/dev/test_group/test_volume` is remounted, the new added space will be reflected in it’s expanded size.
+Now, remount `/dev/test_group/test_volume` to ` ~/mount_test/` like this:
+
+    sudo mount /dev/test_group/test_volume ~/mount_test/
+
+And once remounted, the new added space will be reflected in it’s expanded size; here is an example of some `df -h` output:
+
+	Filesystem                          Size  Used Avail Use% Mounted on
+	/dev/mapper/sandbox--vg-root         28G  2.8G   24G  11% /
+	udev                                2.0G  4.0K  2.0G   1% /dev
+	tmpfs                               396M  356K  395M   1% /run
+	none                                5.0M     0  5.0M   0% /run/lock
+	none                                2.0G     0  2.0G   0% /run/shm
+	/dev/sda1                           236M   36M  188M  16% /boot
+	/dev/mapper/test_group-test_volume   16G   23M   15G   1% /home/sysop/mount_test
 
 ### Sundry LVM debugging stuff.
 
 If somehow you need to reduce the size of a volume group—by getting rid of all unused disks—run this command:
 
-    sudo vgreduce test_group /dev/test_group/test_volume
+    sudo vgreduce test_group -a
 
 Or if you want to remove a disk from a logical volume, first run this command to remove the logical volume:
 
