@@ -44,14 +44,22 @@ Convert any JPEG, PNG or TIFF images found into JPEG thumbnail images at 90% qua
 	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${FILENAME}"_t.jpg
 	  done
 
-### Strip out all EXIF data with ExifTool.
+### Strip out EXIF data with ExifTool.
 
-Strip out all image EXIF data from JPEGs with ExifTool to:
+Strip out all image EXIF data from JPEG images with ExifTool to:
 
 	find 'Desktop/Pics' -type f -name '*.jpg' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    exiftool -all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
+	  done
+
+Strip out all image EXIF data from TIFF images with ExifTool to:
+
+	find 'Desktop/Pics' -type f -name '*.tif' |\
+	  while read FULL_IMAGE_PATH
+	  do
+	    exiftool -icc_profile:all= -overwrite_original_in_place "${FILENAME}"
 	  done
 
 Strip out all image EXIF data from JPEG, PNG or TIFF images with ExifTool to:
@@ -72,7 +80,7 @@ Find any stray images with the `*.jpg_original` extension that ExifTool created 
 
 ### Change the DPI of images.
 
-Change the DPI of JPEG images 200 dpi:
+Change the DPI of JPEG images to 200 dpi:
 
 	find 'Desktop/Pics' -type f -name '*.jpg' |\
 	  while read FULL_IMAGE_PATH
@@ -80,6 +88,8 @@ Change the DPI of JPEG images 200 dpi:
 	    FILENAME="${FULL_IMAGE_PATH%.*}"
 	    convert -density 200 -units PixelsPerInch -quality 90% "${FULL_IMAGE_PATH}" "${FILENAME}".jpg
 	  done
+
+### Resize images.
 
 Resize JPEGs to dimensions of 1000 pixels wide or high if they are larger than 1000 pixels:
 
@@ -102,21 +112,7 @@ Resize JPEGs to dimensions of 1500 pixels wide or high if they are larger than 1
 
 #### TIFF image processing
 
-Strip out the EXIF ICC profile from all TIFF images:
-
-	find 'Desktop/TIFFs' -type f -name '*.tif' |\
-	  while read FULL_IMAGE_PATH
-	  do
-	    exiftool -icc_profile:all= -overwrite_original_in_place "${FILENAME}"
-	  done
-
 Change image density to 1200 DPI without reprocessing the image:
-
-	find 'Desktop/JPEGs' -type f -name '*.jpg' |\
-	  while read FILENAME
-	  do
-	    exiftool -all= -overwrite_original_in_place "${FILENAME}"
-	  done
 
 	find 'Desktop/JPEGs' -maxdepth 1 -type f -name '*.jpg' |\
 	  while read FULL_IMAGE_PATH
