@@ -20,7 +20,7 @@ Convert any JPEG images found into JPEG thumbnail images at 90% quality:
 	  while read FULL_IMAGE_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
-	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}"_t.jpg
+	    convert -density 72 -units PixelsPerInch -quality 90 -resize "300x300>" "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}"_t.jpg
 	  done
 
 #### The process for any JPEG, PNG or TIFF images.
@@ -39,7 +39,7 @@ Convert any JPEG, PNG or TIFF images found into JPEG thumbnail images at 90% qua
 	  while read FULL_IMAGE_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
-	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}"_t.jpg
+	    convert -density 72 -units PixelsPerInch -quality 90 -resize "300x300>" "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}"_t.jpg
 	  done
 
 #### The process to convert any JPEG, PNG or TIFF images into a thumbnail that matches the original format extension.
