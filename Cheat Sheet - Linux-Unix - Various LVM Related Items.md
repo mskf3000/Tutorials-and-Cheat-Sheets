@@ -152,16 +152,7 @@ The response should be something like this:
 
 	Volume group "sandbox-vg" successfully extended
 
-
-and now we can finally extend my logical volume using :
-
-	lvextend -L+20G /dev/zabbix/root
-
-And if now check fdisk -l there is /zabbix-root with +20GB But dont forget to use `resize2fs` to let filesystem know there is some change. If you will not do this you are not able to use new space.
-
-	resize2fs /dev/zabbix/root
-
-Next steps shgould be something like this, but it doesn’t seem to be working:
+Next steps should be something like this, but it doesn’t seem to be working:
 
     sudo lvextend -L+8G /dev/mapper/sandbox--vg-root
 
