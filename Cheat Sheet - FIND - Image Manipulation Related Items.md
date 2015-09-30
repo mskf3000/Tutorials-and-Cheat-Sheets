@@ -19,7 +19,6 @@ Convert any JPEG images found into JPEG thumbnail images at 90% quality:
 	find 'Desktop/Pics' -type f -name '*.jpg' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    DIRECTORY=$(dirname "$FULL_IMAGE_PATH")
 	    FILENAME="${FULL_IMAGE_PATH%.*}"
 	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${FILENAME}"_t.jpg
 	  done
@@ -39,7 +38,6 @@ Convert any JPEG, PNG or TIFF images found into JPEG thumbnail images at 90% qua
 	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    DIRECTORY=$(dirname "$FULL_IMAGE_PATH")
 	    FILENAME="${FULL_IMAGE_PATH%.*}"
 	    convert -density 72 -units PixelsPerInch -quality 90 "${FULL_IMAGE_PATH}" "${FILENAME}"_t.jpg
 	  done
@@ -78,7 +76,7 @@ Find any stray images with the `*.jpg_original` extension that ExifTool created 
 	    rm "${FULL_IMAGE_PATH}"
 	  done
 
-### Change the DPI of images.
+### Change the DPI (density) of images.
 
 Change the DPI of JPEG images to 200 dpi:
 
