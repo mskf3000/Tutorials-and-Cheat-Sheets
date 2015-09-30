@@ -28,7 +28,9 @@ The update the existing `initramfs` stuff like this:
 
 	sudo update-initramfs -u
 
-#### Creating a new LVM logical volume group.
+### Creating a new LVM logical volume group.
+
+#### Creating the physical volume.
 
 Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdb`:
 
@@ -66,7 +68,7 @@ And if you run `pvscan` again the output should be something like this:
     PV /dev/sda5   VG sandbox-vg   lvm2 [31.76 GiB / 0    free]
     Total: 2 [39.75 GiB] / in use: 2 [39.75 GiB] / in no VG: 0 [0   ]
 
-***
+#### Creating the logical volume.
 
 Now let’s create the logical volume like so:
 
@@ -93,6 +95,32 @@ The list should look something like this:
 You can remove a logical volume like so:
 
     sudo lvremove /dev/test_group/test_volume
+
+#### Creating file system and mounting.
+
+Knowing the device is located at `/dev/test_group/test_volume` let’s format it as `ext3` like this:
+
+    sudo mkfs -t ext3 /dev/test_group/test_volume
+
+After that is done, the device should be formatted and ready to mount. Let’s create a test mount poin called `mount_test`:
+
+    sudo mkdir -p ~/mount_test/
+
+Now let’s manually mount the device to the mount point like this:
+
+    sudo mount /dev/test_group/test_volume ~/mount_test/
+
+If the device mounted, you should be returned cleanly to the command prompt. To see if it is mounted, just check the output of `mount -l` or `df -h` to see it there.
+
+And finally to make that volume mount automatically on system start, we need to edit the `fstab` like this:
+
+    sudo nano /etc/fstab
+
+And add this; note the device name of `/dev/test_group/test_volume` as well as the mount point of `/home/sysop/mount_test` in addition to the format type indicated as `ext3`:
+
+    /dev/test_group/test_volume    /home/sysop/mount_test    ext3    defaults,nodev,nosuid,nobootwait    0    0
+
+Now if the machine is stopped and restarted or simply rebooted, the volume will automatically be mounted without any additional work.
 
 #### Adding a disk to an LVM logical volume group.
 
