@@ -2,7 +2,9 @@
 
 By Jack Szwergold, September 30, 2015
 
-### Copy the ISO data to the new device.
+### Creating a volume based on an ISO.
+
+#### Copy the ISO data to the new device.
 
 9 times out of 10 a straight `dd` copy will work like this. If not, you need to repartition and prep the device.
 
@@ -26,7 +28,7 @@ The output would be something like this:
 
 	/dev/sdb: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
 
-### Prepping and partitioning the device for use.
+#### Prepping and partitioning the device for use.
 
 The 1 time out of 10 a straight `dd` copy won’t work work, you need to repartition and prep the device as outlined below.
 
@@ -77,7 +79,7 @@ With that done type `w` to write the partition info to the disk and the process 
 
 Don’t worry about the warning. You’re all done as far as partitioning goes.
 	
-### Manually mount an ISO to a mount point.
+### Manually mount an ISO image to a mount point.
 
 Create a mount point:
 
@@ -93,9 +95,7 @@ Unmount the ISO from the mount point like this:
 
 ### Sundry UDF and similar items.
 
-First make sure the `udftools` are installed on your system.
-
-	sudo aptitude install udftools udisks
+#### Getting the info on an ISO.
 
 Get info on the ISO itself with a plain `file` check like this:
 
@@ -105,9 +105,15 @@ Output would be something like this:
 
 	ubuntu-12.04.5-server-amd64.iso: # ISO 9660 CD-ROM filesystem data 'Ubuntu-Server 12.04.5 LTS amd64 ' (bootable)
 
+#### Creating UDF file systems from scratch.
+
+Install `udftools` on your system if you need them:
+
+	sudo aptitude install udftools udisks
+
 Create a UDF file system on a partition:
 
-	sudo mkudffs --media-type=hd --blocksize=512 /dev/sdb1
+    sudo mkudffs --media-type=hd --blocksize=512 /dev/sdb1
 
 ***
 
