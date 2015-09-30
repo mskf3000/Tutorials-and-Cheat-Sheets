@@ -2,7 +2,7 @@
 
 By Jack Szwergold, September 30, 2015
 
-#### Renaming an LVM logical volume.
+#### Renaming an LVM logical volume group.
 
 Show all the volume groups on the system:
 
@@ -28,12 +28,47 @@ The update the existing `initramfs` stuff like this:
 
 	sudo update-initramfs -u
 
-#### Creating a new LVM logical volume.
+#### Creating a new LVM logical volume group.
 
+Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdb`:
 
-#### Adding a disk to an LVM logical volume.
+    lsblk
 
-Use `lsblk` to see a list of all connected block level devices:
+Create the physical volume for the new LVM like this:
+
+    sudo pvcreate /dev/sdb
+
+Next run `pvscan` to get a short list of physical volumes connected to the the machine:
+
+    sudo pvscan
+
+The output should be something like this:
+
+	PV /dev/sda5   VG sandbox-vg      lvm2 [31.76 GiB / 0    free]
+	PV /dev/sdb                       lvm2 [8.00 GiB]
+	Total: 2 [39.76 GiB] / in use: 1 [31.76 GiB] / in no VG: 1 [8.00 GiB]
+
+Or run `pvdisplay` to get deeper information on the physical volumes:
+
+    sudo pvdisplay
+
+Now let’s create a new logical volume group called `test_group` like this:
+
+    sudo vgcreate test_group /dev/sdb
+
+The response from that should be something like this:
+
+    Volume group "test_group" successfully created
+
+And if you run `pvscan` again the output should be something like this:
+
+    PV /dev/sdb    VG test_group   lvm2 [8.00 GiB / 8.00 GiB free]
+    PV /dev/sda5   VG sandbox-vg   lvm2 [31.76 GiB / 0    free]
+    Total: 2 [39.75 GiB] / in use: 2 [39.75 GiB] / in no VG: 0 [0   ]
+
+#### Adding a disk to an LVM logical volume group.
+
+Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdb`:
 
     lsblk
 
