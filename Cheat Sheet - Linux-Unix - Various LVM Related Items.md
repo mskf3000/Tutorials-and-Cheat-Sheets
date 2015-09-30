@@ -2,7 +2,7 @@
 
 By Jack Szwergold, September 30, 2015
 
-#### Renaming an LVM logical volume group.
+### Renaming an LVM logical volume group.
 
 Show all the volume groups on the system:
 
@@ -126,7 +126,7 @@ To unmount the volume, run this command:
 
     sudo umount /home/sysop/mount_test
 
-#### Adding a disk to an LVM logical volume group.
+### Adding a disk to an LVM logical volume group.
 
 Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdc`:
 
@@ -166,7 +166,7 @@ And finally resize the filesystem like this:
 
 Now, if that `/dev/test_group/test_volume` is remounted, the new added space will be reflected in it’s expanded size.
 
-#### Sundry LVM debugging stuff.
+### Sundry LVM debugging stuff.
 
 If somehow you need to reduce the size of a volume group—by getting rid of all unused disks—run this command:
 
