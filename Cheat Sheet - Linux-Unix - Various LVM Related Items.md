@@ -30,6 +30,8 @@ The update the existing `initramfs` stuff like this:
 
 #### Adding a disk to an LVM logical volume.
 
+Use `lsblk` to see a list of all connected block level devices:
+
     lsblk
 
 Run `cfdisk` to partition the disk:
