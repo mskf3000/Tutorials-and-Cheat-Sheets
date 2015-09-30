@@ -30,7 +30,7 @@ The update the existing `initramfs` stuff like this:
 
 ### Creating a new LVM logical volume group.
 
-#### Creating the physical volume.
+#### Creating the LVM physical volume.
 
 Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdb`:
 
@@ -68,7 +68,7 @@ And if you run `pvscan` again the output should be something like this:
     PV /dev/sda5   VG sandbox-vg   lvm2 [31.76 GiB / 0    free]
     Total: 2 [39.75 GiB] / in use: 2 [39.75 GiB] / in no VG: 0 [0   ]
 
-#### Creating the logical volume.
+#### Creating the LVM logical volume.
 
 Now let’s create the logical volume like so:
 
@@ -122,41 +122,55 @@ And add this; note the device name of `/dev/test_group/test_volume` as well as t
 
 Now if the machine is stopped and restarted or simply rebooted, the volume will automatically be mounted without any additional work.
 
+To unmount the volume, run this command:
+
+    sudo umount /home/sysop/mount_test
+
 #### Adding a disk to an LVM logical volume group.
 
-Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdb`:
+Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdc`:
 
     lsblk
 
-Run `cfdisk` to partition the disk:
+Create the physical volume for the new LVM like this:
 
-	sudo cfdisk /dev/sdb
-
-Then use `pvcreate` initialize the partition for use by LVM:
-
-	sudo pvcreate /dev/sdb1
+	sudo pvcreate /dev/sdc
 
 Response should be something like this:
 
-    Physical volume "/dev/sdb1" successfully created
+    Physical volume "/dev/sdc" successfully created
 
 Now get your volume group name with `vgdisplay` like this:
 
-    sudo vgdisplay
+    sudo pvscan
 
-In this case let’s assume the volume group name is `sandbox-vg`. So now let’s add it to the existing volume group using `vgextend` like this:
+In this case let’s assume the volume group name is `test_group`. So now let’s add it to the existing volume group using `vgextend` like this:
 
-	sudo vgextend sandbox-vg /dev/sdb1
+	sudo vgextend test_group /dev/sdc
 
 The response should be something like this:
 
-	Volume group "sandbox-vg" successfully extended
+	Volume group "test_group" successfully extended
 
-Next steps should be something like this, but it doesn’t seem to be working:
+Next, extend the `test_volume` with the full contents of `/dev/sdc`: 
 
-    sudo lvextend -L+8G /dev/mapper/sandbox--vg-root
+    sudo lvextend /dev/test_group/test_volume /dev/sdc
 
-    sudo resize2fs /dev/mapper/sandbox--vg-root
+Then run this `e2fsck` command like this:
+
+    sudo e2fsck -f /dev/test_group/test_volume
+
+And finally resize the filesystem like this:
+
+    sudo resize2fs /dev/test_group/test_volume
+
+Now, if that `/dev/test_group/test_volume` is remounted, the new added space will be reflected in it’s expanded size.
+
+If somehow you need to reduce the size of a volume group—by getting rid of all unused disks—run this command:
+
+    sudo vgreduce test_group /dev/test_group/test_volume
+
+    sudo vgreduce test_group /dev/sdc
 
 #### Sundry LVM debugging stuff.
 
