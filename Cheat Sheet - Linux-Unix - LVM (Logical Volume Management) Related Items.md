@@ -1,4 +1,4 @@
-# Cheat Sheet - Linux-Unix - Various LVM Related Items
+# Cheat Sheet - Linux-Unix - LVM (Logical Volume Management) Related Items
 
 By Jack Szwergold, September 30, 2015
 
@@ -186,7 +186,7 @@ Check the current UUID:
 
 ***
 
-*Cheat Sheet - Linux-Unix - Various LVM Related Items (c) by Jack Szwergold*
+*Cheat Sheet - Linux-Unix - LVM (Logical Volume Management) Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 
