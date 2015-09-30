@@ -66,6 +66,34 @@ And if you run `pvscan` again the output should be something like this:
     PV /dev/sda5   VG sandbox-vg   lvm2 [31.76 GiB / 0    free]
     Total: 2 [39.75 GiB] / in use: 2 [39.75 GiB] / in no VG: 0 [0   ]
 
+***
+
+Now let’s create the logical volume like so:
+
+    sudo lvcreate -L 8G -n test_volume test_group
+
+If that command fails with an error like this:
+
+    Insufficient free extents (2047) in volume group test_group: 2048 required
+
+Try running this command:
+
+    sudo lvcreate -l2047 -n test_volume test_group
+
+Check the list of logical volumes like so:
+
+    sudo lvscan
+
+The list should look something like this:
+
+    ACTIVE            '/dev/test_group/test_volume' [8.00 GiB] inherit
+    ACTIVE            '/dev/sandbox-vg/root' [27.76 GiB] inherit
+    ACTIVE            '/dev/sandbox-vg/swap_1' [4.00 GiB] inherit
+
+You can remove a logical volume like so:
+
+    sudo lvremove /dev/test_group/test_volume
+
 #### Adding a disk to an LVM logical volume group.
 
 Use `lsblk` to see a list of all connected block level devices; in this example we are acting on `/dev/sdb`:
