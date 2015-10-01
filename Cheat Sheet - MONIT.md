@@ -16,7 +16,12 @@ Main config for `monit`; broad adjustments happen here:
 
     sudo nano /etc/monit/monitrc
 
-Find the `mailserver` area of `monitrc` and add the following line. Postfix or an SMTP needs to be active for this to work:
+Adjust the default daemon values to check services every 60 seconds with a start delay of 120:
+
+	set daemon 60
+	with start delay 120
+
+Then find the `mailserver` area of `monitrc` and add the following line. Postfix or an SMTP needs to be active for this to work:
 
     set mailserver localhost
 
