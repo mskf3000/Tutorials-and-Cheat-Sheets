@@ -170,6 +170,30 @@ Replace `YOURNEWPASSWORD` with your new password:
 
 	UPDATE user SET Password=PASSWORD('YOURNEWPASSWORD') WHERE user='root'; FLUSH PRIVILEGES; exit;
 
+### Fix MySQL `mysqld.pid` and `mysqld.sock` items not being set.
+
+Even though the locations for `mysqld.pid` and `mysqld.sock` are set, the directory doesn’t exist so those files are never created. This will fix that:
+
+First create the `mysqld/` directory in `/var/run/` like this:
+
+	sudo mkdir -p /var/run/mysqld/
+
+Create a `mysqld.pid` file with `touch`:
+	
+	sudo touch /var/run/mysqld/mysqld.pid
+
+Then create a `mysqld.sock` file with `touch`:
+	
+	sudo touch /var/run/mysqld/mysqld.sock
+
+Now change the ownerships of the directory and files to `mysql:mysql` like this:
+
+	sudo chown mysql:mysql -R /var/run/mysqld
+
+And restart MySQL like this to get those files set and created:
+
+    sudo service mysql restart
+
 ### MySQL Tuning Primer
 
 	curl -O https://launchpadlibrarian.net/78745738/tuning-primer.sh
