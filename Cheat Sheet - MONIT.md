@@ -80,7 +80,7 @@ Restart `monit` and all should be good:
 
 #### Create a custom `monit` MySQL status monitoring rule.
 
-First, check to see if the `apache2.pid` file exists:
+First, check to see if the `mysqld.pid` file exists:
 
     ls -la /var/run/mysqld/mysqld.pid
 
@@ -94,6 +94,30 @@ One type of MySQL monitoring rule:
 	  start program = "/usr/sbin/service mysql start"
 	  stop program = "/usr/sbin/service mysql stop"
 	  if failed host 127.0.0.1 port 3306 protocol mysql
+	    with timeout 15 seconds
+	  then restart
+	  alert email_address@example.com only on { timeout, nonexist }
+
+Restart `monit` and all should be good:
+
+    sudo service monit restart
+
+#### Create a custom `monit` MongoDB status monitoring rule.
+
+First, check to see if the `mongod.lock` file exists:
+
+    ls -la /var/lib/mongodb/mongod.lock
+
+Now create the actual MongoDB monitoring rule for `monit`:
+
+    sudo nano /etc/monit/conf.d/mongod.conf
+
+One type of MongoDB monitoring rule:
+
+	check process mongod matching "/usr/bin/mongod"
+	  start program = "/usr/sbin/service mongod start"
+	  stop program = "/usr/sbin/service mongod stop"
+	  if failed host 127.0.0.1 port 27017 protocol http
 	    with timeout 15 seconds
 	  then restart
 	  alert email_address@example.com only on { timeout, nonexist }
