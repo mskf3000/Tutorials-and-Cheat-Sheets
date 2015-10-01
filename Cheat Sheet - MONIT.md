@@ -33,6 +33,14 @@ Follow the `monit` log to see it in action:
 
     sudo tail -f -n 200 /var/log/monit.log
 
+If a service becomes “unmonitored” then just remove the `monit` state file like this:
+
+    sudo rm /var/lib/monit/state
+
+Restart `monit` and all should be good:
+
+    sudo service monit restart
+
 #### Create a custom `monit` Apache status monitoring rule.
 
 First, check to see if the `apache2.pid` file exists:
@@ -89,8 +97,6 @@ One type of MySQL monitoring rule:
 	  if failed host 127.0.0.1 port 3306
 	    with timeout 15 seconds
 	  then restart
-	  if 5 restarts within 5 cycles
-	  then timeout
 	  alert email_address@example.com only on { timeout, nonexist }
 
 Restart `monit` and all should be good:
