@@ -39,11 +39,15 @@ The output should be something like this:
 	
 	/dev/sdb: 1022 cylinders, 247 heads, 62 sectors/track
 
-Knowing that, let’s multiply the cylinders, heads and sectors using `bc` (basic calculator) to get a “seek” value that points to an area near the end of the device with an offset 1024 blocks:
+Now let’s get a blocksize of the device like this:
 
-    echo 1022*247*62-1024 | bc
+    sudo blockdev --getsz /dev/sdb
 
-The returned value would be `15649884`. Make note of that for the step after the this one. For this step let’s wipe the partition info from the beginning of the device to about 1024 blocks in:
+The value on this example is `15663104`. Knowing that, let’s to get a “seek” value that points to an area near the end of the device with an offset 1024 blocks:
+
+    echo 15663104-1024 | bc
+
+The returned value would be `15662080`. Make note of that for the step after the this one. For this step let’s wipe the partition info from the beginning of the device to about 1024 blocks in:
 
     sudo dd if=/dev/zero of=/dev/sdb bs=1024 count=1
 
@@ -51,24 +55,24 @@ Output should be something like this:
 
 	1+0 records in
 	1+0 records out
-	1024 bytes (1.0 kB) copied, 0.0139469 s, 73.4 kB/s
+	1024 bytes (1.0 kB) copied, 0.0134693 s, 76.0 kB/s
 
-Now run this next command to wipe the partition info near the end of the device using the “seek” value of `15649884`:
+Now run this next command to wipe the partition info near the end of the device using the “seek” value of `15662080`:
 
-    sudo dd if=/dev/zero of=/dev/sdb bs=512 seek=15649884
+    sudo dd if=/dev/zero of=/dev/sdb bs=512 seek=15662080
 
 And the output for that should be something like this:
 
 	dd: writing `/dev/sdb': No space left on device
-	13221+0 records in
-	13220+0 records out
-	6768640 bytes (6.8 MB) copied, 16.051 s, 422 kB/s
+	1025+0 records in
+	1024+0 records out
+	524288 bytes (524 kB) copied, 1.15156 s, 455 kB/s
 
-Now tell the system to reload the partition table for the device using `partprobe` like this:
+Now tell the system to re-read the partition table for the device using `partprobe` like this:
 
     sudo partprobe /dev/sdb
 
-And if that `partprobe` command doesn’t work as expected, try using `hdparm` instead:
+And if that `partprobe` command doesn’t work as expected, try using `hdparm` instead to re-read the partition table:
 
     sudo hdparm -z /dev/sdb
 
