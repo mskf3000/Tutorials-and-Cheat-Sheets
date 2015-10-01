@@ -45,9 +45,9 @@ Now let’s get a blocksize of the device like this:
 
 The value on this example is `15663104`. Knowing that, let’s to get a “seek” value that points to an area near the end of the device with an offset 1024 blocks:
 
-    echo 15663104-1024 | bc
+    echo 15663104/2-1024 | bc
 
-The returned value would be `15662080`. Make note of that for the step after the this one. For this step let’s wipe the partition info from the beginning of the device to about 1024 blocks in:
+The returned value would be `7830528`. Make note of that for the step after the this one. For this step let’s wipe the partition info from the beginning of the device to about 1024 blocks in:
 
     sudo dd if=/dev/zero of=/dev/sdb bs=1024 count=1
 
@@ -55,18 +55,18 @@ Output should be something like this:
 
 	1+0 records in
 	1+0 records out
-	1024 bytes (1.0 kB) copied, 0.0134693 s, 76.0 kB/s
+	1024 bytes (1.0 kB) copied, 0.0134649 s, 76.0 kB/s
 
-Now run this next command to wipe the partition info near the end of the device using the “seek” value of `15662080`:
+Now run this next command to wipe the partition info near the end of the device using the “seek” value of `7830528`:
 
-    sudo dd if=/dev/zero of=/dev/sdb bs=512 seek=15662080
+    sudo dd if=/dev/zero of=/dev/sdb bs=1024 seek=7830528
 
 And the output for that should be something like this:
 
 	dd: writing `/dev/sdb': No space left on device
 	1025+0 records in
 	1024+0 records out
-	524288 bytes (524 kB) copied, 1.15156 s, 455 kB/s
+	1048576 bytes (1.0 MB) copied, 3.11636 s, 336 kB/s
 
 Now tell the system to re-read the partition table for the device using `partprobe` like this:
 
