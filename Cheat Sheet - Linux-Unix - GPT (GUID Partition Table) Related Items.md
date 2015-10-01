@@ -39,7 +39,7 @@ The output should be something like this:
 	
 	/dev/sdb: 1022 cylinders, 247 heads, 62 sectors/track
 
-Now let’s get a blocksize of the device like this:
+Now let’s get the blocksize of the device like this:
 
     sudo blockdev --getsz /dev/sdb
 
