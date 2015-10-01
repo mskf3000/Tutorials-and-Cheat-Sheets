@@ -48,6 +48,28 @@ If a volume is accessible—and shown as a connected device on the system—but 
 
 The `bs=512` translates to a block size (`bs`) of `512` which should be adjusted depending on actual device block size. And the `sync`—in `conv=sync,noerror`—tells the `dd` command to pad every input block with NULs which combined with `noerror` allows `dd` to continue after any error it hits. This basically means that even if there are bad sectors/blocks on the file system, `dd` will punch through and try to recover as much data as possible.
 
+#### Monitor `dd` processes that have already started.
+
+To monitor a `dd` process, open up another Terminal session and run this command:
+
+    sudo kill -USR1 $(pgrep ^dd)
+
+While it uses `kill` it does not stop the process. It will display the process in the Terminal window where `dd` is running.
+
+To have that info update every 10 seconds, run this variant of that same command using `watch`:
+
+    watch -n10 'sudo kill -USR1 $(pgrep ^dd)'
+
+#### Using `pv` (pipe viewer) to monitor `dd` processes.
+
+Install the `pv` (pipe viewer) daemon:
+
+    sudo aptitude install pv
+
+Then reformat your `dd` commands to insert `pv` inbetween the input files (`if`) and output files (`of`) like this:
+
+    dd if=/dev/zero | pv | dd of=/dev/null
+
 ***
 
 *Cheat Sheet - DD (c) by Jack Szwergold*
