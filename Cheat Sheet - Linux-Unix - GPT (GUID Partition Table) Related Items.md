@@ -51,7 +51,7 @@ Output should be something like this:
 
 	18+0 records in
 	18+0 records out
-	9216 bytes (9.2 kB) copied, 0.031012 s, 297 kB/s
+	9216 bytes (9.2 kB) copied, 0.030941 s, 298 kB/s
 
 Now run this next command to wipe the partition info near the end of the device using the “seek” value of `15650890`:
 
@@ -62,7 +62,7 @@ And the output for that should be something like this:
 	dd: writing `/dev/sdb': No space left on device
 	12215+0 records in
 	12214+0 records out
-	6253568 bytes (6.3 MB) copied, 14.7417 s, 424 kB/s
+	6253568 bytes (6.3 MB) copied, 14.6603 s, 427 kB/s
 
 When that is all done, run `sfdisk` to check the basic info on the device again:
 
