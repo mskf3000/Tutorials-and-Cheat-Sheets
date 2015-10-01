@@ -55,7 +55,7 @@ Output should be something like this:
 
 	1+0 records in
 	1+0 records out
-	1024 bytes (1.0 kB) copied, 0.0134649 s, 76.0 kB/s
+	1024 bytes (1.0 kB) copied, 0.0136733 s, 74.9 kB/s
 
 Now run this next command to wipe the partition info near the end of the device using the “seek” value of `7830528`:
 
@@ -66,7 +66,7 @@ And the output for that should be something like this:
 	dd: writing `/dev/sdb': No space left on device
 	1025+0 records in
 	1024+0 records out
-	1048576 bytes (1.0 MB) copied, 3.11636 s, 336 kB/s
+	1048576 bytes (1.0 MB) copied, 2.77809 s, 377 kB/s
 
 Now tell the system to re-read the partition table for the device using `partprobe` like this:
 
