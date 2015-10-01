@@ -45,7 +45,7 @@ Knowing that, let’s multiply the cylinders, heads and sectors using `bc` (basi
 
 The returned value would be `15650890`. Make note of that for the step after the this one. For this step let’s wipe the partition info from the beginning of the device to about 18 blocks in:
 
-    sudo dd if=/dev/zero of=/dev/sdb bs=512 count=18
+    sudo dd if=/dev/zero of=/dev/sdb bs=512 count=18        
 
 Output should be something like this:
 
