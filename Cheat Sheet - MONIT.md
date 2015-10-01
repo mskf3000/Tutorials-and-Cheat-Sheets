@@ -91,10 +91,9 @@ Now create the actual MySQL monitoring rule for `monit`:
 One type of MySQL monitoring rule:
 
 	check process mysqld with pidfile /var/run/mysqld/mysqld.pid
-	  group mysql
 	  start program = "/etc/init.d/mysql start"
 	  stop program = "/etc/init.d/mysql stop"
-	  if failed host 127.0.0.1 port 3306
+	  if failed host 127.0.0.1 port 3306 protocol mysql
 	    with timeout 15 seconds
 	  then restart
 	  alert email_address@example.com only on { timeout, nonexist }
