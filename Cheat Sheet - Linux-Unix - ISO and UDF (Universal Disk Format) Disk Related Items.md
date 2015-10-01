@@ -14,6 +14,10 @@ Copying it is as simple as using this `dd` command:
 
 	sudo dd if=~/ubuntu-12.04.5-server-amd64.iso of=/dev/sdb bs=1024
 
+Or use the `pv` command with `dd` to monitor copy progress:
+
+	sudo dd if=~/ubuntu-12.04.5-server-amd64.iso | pv | sudo dd of=/dev/sdb bs=1024
+
 When it’s done, output should be something like this:
 
 	705536+0 records in
