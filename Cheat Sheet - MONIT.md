@@ -54,8 +54,8 @@ Now create the actual Apache monitoring rule for `monit`:
 One type of Apache monitoring rule:
 
 	check process apache with pidfile /var/run/apache2.pid
-      start "/etc/init.d/apache2 start"
-      stop  "/etc/init.d/apache2 stop"
+      start "/usr/sbin/service apache2 start"
+      stop  "/usr/sbin/service apache2 stop"
       if failed host 127.0.0.1 port 80
         with timeout 15 seconds
       then restart
@@ -64,8 +64,8 @@ One type of Apache monitoring rule:
 Another type of Apache monitoring rule:
 
 	check process apache with pidfile /var/run/apache2.pid
-      start "/etc/init.d/apache2 start"
-      stop  "/etc/init.d/apache2 stop"
+      start "/usr/sbin/service apache2 start"
+      stop  "/usr/sbin/service apache2 stop"
       if failed host 127.0.0.1 port 80
         with timeout 15 seconds
       then restart
@@ -91,8 +91,8 @@ Now create the actual MySQL monitoring rule for `monit`:
 One type of MySQL monitoring rule:
 
 	check process mysqld with pidfile /var/run/mysqld/mysqld.pid
-	  start program = "/etc/init.d/mysql start"
-	  stop program = "/etc/init.d/mysql stop"
+	  start program = "/usr/sbin/service mysql start"
+	  stop program = "/usr/sbin/service mysql stop"
 	  if failed host 127.0.0.1 port 3306 protocol mysql
 	    with timeout 15 seconds
 	  then restart
