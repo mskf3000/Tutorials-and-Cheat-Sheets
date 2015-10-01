@@ -41,26 +41,53 @@ Now create the actual Apache monitoring rule for `monit`:
 One type of Apache monitoring rule:
 
 	check process apache with pidfile /var/run/apache2.pid
-	        start "/etc/init.d/apache2 start"
-	        stop  "/etc/init.d/apache2 stop"
-	        if failed host 127.0.0.1 port 80
-	                with timeout 15 seconds
-	        then restart
-	        alert email_address@example.com only on { timeout, nonexist }
+      start "/etc/init.d/apache2 start"
+      stop  "/etc/init.d/apache2 stop"
+      if failed host 127.0.0.1 port 80
+        with timeout 15 seconds
+      then restart
+      alert email_address@example.com only on { timeout, nonexist }
 
 Another type of Apache monitoring rule:
 
 	check process apache with pidfile /var/run/apache2.pid
-	        start "/etc/init.d/apache2 start"
-	        stop  "/etc/init.d/apache2 stop"
-	        if failed host 127.0.0.1 port 80
-	                with timeout 15 seconds
-	        then restart
-	        if loadavg (1min) greater than 7
-	                for 5 cycles
-	        then restart
-	        alert email_address@example.com only on { timeout, nonexist, resource }
+      start "/etc/init.d/apache2 start"
+      stop  "/etc/init.d/apache2 stop"
+      if failed host 127.0.0.1 port 80
+        with timeout 15 seconds
+      then restart
+      if loadavg (1min) greater than 7
+        for 5 cycles
+      then restart
+      alert email_address@example.com only on { timeout, nonexist, resource }
 	
+Restart `monit` and all should be good:
+
+    sudo service monit restart
+
+#### Create a custom `monit` MySQL status monitoring rule.
+
+First, check to see if the `apache2.pid` file exists:
+
+    ls -la /var/run/mysqld/mysqld.pid
+
+Now create the actual MySQL monitoring rule for `monit`:
+
+    sudo nano /etc/monit/conf.d/mysql.conf
+
+One type of MySQL monitoring rule:
+
+	check process mysqld with pidfile /var/run/mysqld/mysqld.pid
+	  group mysql
+	  start program = "/etc/init.d/mysql start"
+	  stop program = "/etc/init.d/mysql stop"
+	  if failed host 127.0.0.1 port 3306
+	    with timeout 15 seconds
+	  then restart
+	  if 5 restarts within 5 cycles
+	  then timeout
+	  alert email_address@example.com only on { timeout, nonexist }
+
 Restart `monit` and all should be good:
 
     sudo service monit restart
