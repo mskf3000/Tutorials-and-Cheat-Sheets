@@ -39,34 +39,30 @@ The output should be something like this:
 	
 	/dev/sdb: 1022 cylinders, 247 heads, 62 sectors/track
 
-Knowing that, let’s multiply the cylinders, heads and sectors using `bc` (basic calculator) to get a “seek” value that points to an area near the end of the device with an offset 512 blocks:
+Knowing that, let’s multiply the cylinders, heads and sectors using `bc` (basic calculator) to get a “seek” value that points to an area near the end of the device with an offset 1024 blocks:
 
-    echo 1022*247*62-512 | bc
+    echo 1022*247*62-1024 | bc
 
-The returned value would be `15650396`. Make note of that for the step after the this one. For this step let’s wipe the partition info from the beginning of the device to about 512 blocks in:
+The returned value would be `15649884`. Make note of that for the step after the this one. For this step let’s wipe the partition info from the beginning of the device to about 1024 blocks in:
 
-    sudo dd if=/dev/zero of=/dev/sdb bs=512 count=1
+    sudo dd if=/dev/zero of=/dev/sdb bs=1024 count=1
 
 Output should be something like this:
 
 	1+0 records in
 	1+0 records out
-	512 bytes (512 B) copied, 0.0140094 s, 36.5 kB/s
+	1024 bytes (1.0 kB) copied, 0.0139469 s, 73.4 kB/s
 
-Now run this next command to wipe the partition info near the end of the device using the “seek” value of `15650396`:
+Now run this next command to wipe the partition info near the end of the device using the “seek” value of `15649884`:
 
-    sudo dd if=/dev/zero of=/dev/sdb bs=512 seek=15650396
+    sudo dd if=/dev/zero of=/dev/sdb bs=512 seek=15649884
 
 And the output for that should be something like this:
 
 	dd: writing `/dev/sdb': No space left on device
-	12709+0 records in
-	12708+0 records out
-	6506496 bytes (6.5 MB) copied, 15.288 s, 426 kB/s
-
-When that is all done, run `sfdisk` to check the basic info on the device again:
-
-    sudo sfdisk -g /dev/sdb
+	13221+0 records in
+	13220+0 records out
+	6768640 bytes (6.8 MB) copied, 16.051 s, 422 kB/s
 
 Now tell the system to reload the partition table for the device using `partprobe` like this:
 
@@ -79,6 +75,10 @@ And if that `partprobe` command doesn’t work as expected, try using `hdparm` i
 You can now run `lsblk` and see the partions are gone on that device:
 
     lsblk
+
+When that is all done, run `sfdisk` to check the basic info on the device again:
+
+    sudo sfdisk -g /dev/sdb
 
 And the output should be a clean report of device details without GPT/GUI a warning:
 
