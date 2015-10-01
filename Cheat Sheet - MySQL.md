@@ -178,11 +178,11 @@ First create the `mysqld/` directory in `/var/run/` like this:
 
 	sudo mkdir -p /var/run/mysqld/
 
-Create a `mysqld.pid` file with `touch`:
+Then create a `mysqld.pid` file with `touch`:
 	
 	sudo touch /var/run/mysqld/mysqld.pid
 
-Then create a `mysqld.sock` file with `touch`:
+Next create a `mysqld.sock` file with `touch`:
 	
 	sudo touch /var/run/mysqld/mysqld.sock
 
