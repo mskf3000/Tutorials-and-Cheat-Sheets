@@ -39,30 +39,30 @@ The output should be something like this:
 	
 	/dev/sdb: 1022 cylinders, 247 heads, 62 sectors/track
 
-Knowing that, let’s multiply the cylinders, heads and sectors using `bc` (basic calculator) to get a “seek” value that points to an area near the end of the device with an offset 18 blocks:
+Knowing that, let’s multiply the cylinders, heads and sectors using `bc` (basic calculator) to get a “seek” value that points to an area near the end of the device with an offset 512 blocks:
 
-    echo 1022*247*62-18 | bc
+    echo 1022*247*62-512 | bc
 
-The returned value would be `15650890`. Make note of that for the step after the this one. For this step let’s wipe the partition info from the beginning of the device to about 18 blocks in:
+The returned value would be `15650396`. Make note of that for the step after the this one. For this step let’s wipe the partition info from the beginning of the device to about 512 blocks in:
 
-    sudo dd if=/dev/zero of=/dev/sdb bs=512 count=18
+    sudo dd if=/dev/zero of=/dev/sdb bs=512 count=512
 
 Output should be something like this:
 
-	18+0 records in
-	18+0 records out
-	9216 bytes (9.2 kB) copied, 0.030941 s, 298 kB/s
+	512+0 records in
+	512+0 records out
+	262144 bytes (262 kB) copied, 0.548457 s, 478 kB/s
 
-Now run this next command to wipe the partition info near the end of the device using the “seek” value of `15650890`:
+Now run this next command to wipe the partition info near the end of the device using the “seek” value of `15650396`:
 
-    sudo dd if=/dev/zero of=/dev/sdb bs=512 seek=15650890
+    sudo dd if=/dev/zero of=/dev/sdb bs=512 seek=15650396
 
 And the output for that should be something like this:
 
 	dd: writing `/dev/sdb': No space left on device
-	12215+0 records in
-	12214+0 records out
-	6253568 bytes (6.3 MB) copied, 14.6603 s, 427 kB/s
+	12709+0 records in
+	12708+0 records out
+	6506496 bytes (6.5 MB) copied, 15.2014 s, 428 kB/s
 
 When that is all done, run `sfdisk` to check the basic info on the device again:
 
