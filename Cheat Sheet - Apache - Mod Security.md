@@ -33,13 +33,13 @@ Do some simple configuration checks to make sure it’s installed:
 	sudo nano /etc/apache2/mods-available/mod-security.conf
 	sudo nano /etc/apache2/mods-available/mod-security.load
 
-#### Setting up the Apache Mod Security configs.
+#### Setting up the main Apache Mod Security config.
 
 Now create an active config (`000-modsecurity.conf`)file based on the recommended config (`modsecurity.conf-recommended`):
 
     sudo cp /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/000-modsecurity.conf
 
-This is the specific, custom config file (`999-tweaks_to_modsecurity.conf`) we can make adjustments to:
+This is the custom config file (`999-tweaks_to_modsecurity.conf`) we can make adjustments to for overall server-wide Mod Security settings:
 
 	sudo nano /etc/modsecurity/999-tweaks_to_modsecurity.conf
 
@@ -74,15 +74,42 @@ And here are the contents of `999-tweaks_to_modsecurity.conf`:
 	
 	</ifmodule>
 
-Add this to Apache virtual host configs to granularly control ModSecurity on that specific virtual host. Note that `SecAuditEngine On` needs to be set to `SecAuditEngine Off` once testing is done:
+#### Setting up the Apache virtual host specific Mod Security config.
 
-    # 2012-10-15: Added to granularly control ModSecurity on this specific virtual host.
+This is a more virtual-host sepcific Mod Security config file. Note that `SecAuditEngine On` needs to be set to `SecAuditEngine Off` once testing is done:
+
+    sudo nano /etc/apache2/sites-available/common_mod_security.conf
+
+And here are the contents of `common_mod_security.conf`:
+
+    # 2012-10-15: Added to granularly control Mod Security on this specific virtual host.
     <ifmodule mod_security2.c>
+
+      # Exclude the URL locations AWStats, Munin & phpMyAdmin from mod_security checks
+      <LocationMatch /(awstats|munin|phpmyadmin)>
+        SecRuleEngine Off
+      </LocationMatch>
+    
       SecRuleInheritance On
       SecRuleEngine On
       SecAuditEngine On
+
       SecRuleRemoveById 960015
+      SecRuleRemoveById 950901
+      SecRuleRemoveById 958030
+
     </ifmodule>
+
+#### Setting up the Apache virtual host config for Mod Security.
+
+Then make sure your Apache virtual host config points to it like this. First open up the Apache virtual host config:
+
+    sudo nano /etc/apache2/sites-available/default 
+
+And make sure a line like this is set to have it load the `common_mod_security.conf` we have setup above:
+
+    # 2014-03-12: Including common ModSecurity related items.
+    include /etc/apache2/sites-available/common_mod_security.conf
 
 ### Activating Mod Security rules.
 
