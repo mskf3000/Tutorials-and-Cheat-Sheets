@@ -101,7 +101,6 @@ If you need to remove the `activated_rules` just dump the whole directory like t
 	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_40_generic_attacks.data .
 	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_41_sql_injection_attacks.data .
 	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_20_protocol_violations.conf .
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_21_protocol_anomalies.conf .
 	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_23_request_limits.conf .
 	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_30_http_policy.conf .
 	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_40_generic_attacks.conf .
@@ -142,30 +141,30 @@ I’ve removed these in the past for being overeager or too destructive in their
 
 #### De-activated the Mod Security `base_rules`.
 
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_35_bad_robots.data
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_35_scanners.data
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_50_outbound.data
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_50_outbound_malware.data
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_21_protocol_anomalies.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_35_bad_robots.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_42_tight_security.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_45_trojans.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_48_local_exceptions.conf.example
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_50_outbound.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_59_outbound_blocking.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_35_bad_robots.data
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_35_scanners.data
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_50_outbound.data
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_50_outbound_malware.data
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_21_protocol_anomalies.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_35_bad_robots.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_42_tight_security.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_45_trojans.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_48_local_exceptions.conf.example
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_50_outbound.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_59_outbound_blocking.conf
 
 #### De-activated the Mod Security `optional_rules`.
 
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_11_avs_traffic.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_16_authentication_tracking.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_16_session_hijacking.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_16_username_tracking.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_25_cc_known.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_40_experimental.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_43_csrf_protection.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_46_av_scanning.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_49_header_tagging.conf
-	sudo rm /etc/modsecurity/activated_rules/modsecurity_crs_55_marketing.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_11_avs_traffic.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_16_authentication_tracking.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_16_session_hijacking.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_16_username_tracking.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_25_cc_known.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_40_experimental.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_43_csrf_protection.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_46_av_scanning.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_49_header_tagging.conf
+	sudo rm -f /etc/modsecurity/activated_rules/modsecurity_crs_55_marketing.conf
 
 ### Sundry Mod Security stuff.
 
