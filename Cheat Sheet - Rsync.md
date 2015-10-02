@@ -1,4 +1,4 @@
-# Cheat Sheet - RSYNC
+# Cheat Sheet - Rsync
 
 By Jack Szwergold, September 17, 2015
 
@@ -13,9 +13,9 @@ While this works, sometimes the partially transferred files are not cleanly resu
 - **-t**: Preserve times.
 - **-P**: Keep partially transferred files and show transfer progress.
 
-#### Compare two directories with `rsync`.
+#### Compare two directories with Rsync.
 
-A nice way to effectively “diff” two directories using `rsync`:
+A nice way to effectively “diff” two directories using Rsync:
 
     rsync -rvnc --delete /first_directory_to_check/ /first_directory_to_check/
 
@@ -26,6 +26,6 @@ A nice way to effectively “diff” two directories using `rsync`:
 
 ***
 
-*Cheat Sheet - RSYNC (c) by Jack Szwergold*
+*Cheat Sheet - Rsync (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
