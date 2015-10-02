@@ -104,11 +104,7 @@ Restart `monit` and all should be good:
 
 #### Create a custom `monit` MongoDB status monitoring rule.
 
-First, check to see if the `mongod.lock` file exists:
-
-    ls -la /var/lib/mongodb/mongod.lock
-
-Now create the actual MongoDB monitoring rule for `monit`:
+Create the actual MongoDB monitoring rule for `monit`:
 
     sudo nano /etc/monit/conf.d/mongod.conf
 
