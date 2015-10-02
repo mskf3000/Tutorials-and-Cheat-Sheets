@@ -1,4 +1,4 @@
-# Cheat Sheet - EXIFTOOL
+# Cheat Sheet - ExifTool
 
 By Jack Szwergold, September 14, 2015
 
@@ -98,6 +98,6 @@ Remove all data connected to the XMP Dublin Core schema:
 
 ***
 
-*Cheat Sheet - EXIFTOOL (c) by Jack Szwergold*
+*Cheat Sheet - ExifTool (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
