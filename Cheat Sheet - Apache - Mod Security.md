@@ -122,6 +122,8 @@ If you need to remove the `activated_rules` just dump the whole directory like t
 	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_47_skip_outbound_checks.conf .
 	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_55_application_defects.conf .
 
+#### Getting a count of various Mod Security rules.
+
 Check how many `base_rules` are available:
 
 	ls -la /usr/share/modsecurity-crs/base_rules/ | wc -l
