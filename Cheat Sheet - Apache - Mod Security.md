@@ -205,9 +205,11 @@ Various ways to follow the logs:
 	
 	sudo tail -f -n 10000 /var/log/apache2/modsec_audit.log | grep "GET /"
 
-Items connected to audit logs:
+Check if Mod Security is creating audit logs:
 
     ls -lah /var/log/apache2/modsec_audit*
+
+Remove Mod Security audit logs:
 
     sudo rm /var/log/apache2/modsec_audit*
 
