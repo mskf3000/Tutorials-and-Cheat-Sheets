@@ -1,4 +1,4 @@
-# Cheat Sheet - GIT - Install GIT via PPA on Ubuntu
+# Cheat Sheet - Git - Install GIT via PPA on Ubuntu
 
 By Jack Szwergold, September 15, 2015
 
@@ -16,7 +16,7 @@ With that done, run `aptitude update` like this:
 
     sudo aptitude update
 
-#### Installing GIT.
+#### Installing Git.
 
 If you already have `git` installed, running `aptitude upgrade` will upgrade your core install:
 
@@ -28,6 +28,6 @@ Or if you have not instaleld it yet, just install it via a standard `aptitude in
 
 ***
 
-*Cheat Sheet - GIT - Install GIT via PPA on Ubuntu (c) by Jack Szwergold*
+*Cheat Sheet - Git - Install GIT via PPA on Ubuntu (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

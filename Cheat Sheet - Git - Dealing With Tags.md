@@ -1,4 +1,4 @@
-# Cheat Sheet - GIT - Dealing With Tags
+# Cheat Sheet - Git - Dealing With Tags
 
 By Jack Szwergold, September 15, 2015
 
@@ -30,6 +30,6 @@ Checkout a specific tag:
 
 ***
 
-*Cheat Sheet - GIT - Dealing With Tags (c) by Jack Szwergold*
+*Cheat Sheet - Git - Dealing With Tags (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
