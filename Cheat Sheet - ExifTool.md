@@ -2,7 +2,7 @@
 
 By Jack Szwergold, September 14, 2015
 
-#### Some `exiftool` example commands.
+#### Some ExifTool example commands.
 
 Shows all EXIF info embedded in the file:
 
@@ -28,7 +28,7 @@ Remove all data connected to the XMP Dublin Core schema:
 
     exiftool -a -XMP-dc:all= [filename]
 
-#### Options available for `exiftool`.
+#### Options available for ExifTool.
 
 	-TAG or --TAG                    Extract or exclude specified tag 
 	-TAG[+-]=[VALUE]                 Write new value for tag 
