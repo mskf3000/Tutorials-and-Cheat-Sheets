@@ -90,7 +90,7 @@ Create the `activated_rules` directory if it doesn’t already exist:
 
     sudo mkdir -p /etc/modsecurity/activated_rules
 
-Remove the `activated_rules` to remove all activated rules:
+If you need to remove the `activated_rules` just dump the whole directory like this:
 
     sudo rm -rf /etc/modsecurity/activated_rules
 
