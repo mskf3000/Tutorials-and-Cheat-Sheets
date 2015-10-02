@@ -76,7 +76,7 @@ And here are the contents of `999-tweaks_to_modsecurity.conf`:
 
 #### Setting up the Apache virtual host specific Mod Security config.
 
-This is a more virtual-host sepcific Mod Security config file. Note that `SecAuditEngine On` needs to be set to `SecAuditEngine Off` once testing is done:
+This is a more virtual-host specific Mod Security config file. Note that `SecAuditEngine On` needs to be set to `SecAuditEngine Off` once testing is done:
 
     sudo nano /etc/apache2/sites-available/common_mod_security.conf
 
