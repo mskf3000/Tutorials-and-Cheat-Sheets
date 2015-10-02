@@ -1,25 +1,25 @@
-# Cheat Sheet - RNG-TOOLS
+# Cheat Sheet - RNG-Tools
 
 By Jack Szwergold, September 24, 2015
 
-#### Install `rng-tools`.
+#### Install RNG-Tools.
 
 Check system entropy levels with this `watch` command:
 
 	watch -n 1 cat /proc/sys/kernel/random/entropy_avail
 
-Then install `rng-tools` via `aptitude` like this:
+Then install RNG-Tools via `aptitude` like this:
 
 	sudo aptitude install rng-tools
 	
-Start, stop and control `rng-tools` on an Ubuntu/Debian system:
+Start, stop and control RNG-Tools on an Ubuntu/Debian system:
 
 	sudo service rng-tools start
 	sudo service rng-tools stop
 	sudo service rng-tools restart
 	sudo service rng-tools force-reload
 
-#### Add `rng-tools` as a startup service.
+#### Add RNG-Tools as a startup service.
 
 Add `rng-tools` as an Ubuntu service from starting on boot:
 
@@ -29,9 +29,9 @@ Remove `rng-tools` as an Ubuntu service from starting on boot:
 
 	sudo update-rc.d rng-tools remove
 
-#### Configure `rng-tools`.
+#### Configure RNG-Tools.
 
-Once installed open up the `rng-tools` config file:
+Once installed open up the RNG-Tools config file:
 
 	sudo nano /etc/default/rng-tools
 
@@ -65,6 +65,6 @@ Add those values to the bottom of each respective commented out area for easier 
 
 ***
 
-*Cheat Sheet - RNG-TOOLS (c) by Jack Szwergold*
+*Cheat Sheet - RNG-Tools (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
