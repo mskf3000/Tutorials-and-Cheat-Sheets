@@ -1,8 +1,8 @@
-# Cheat Sheet - SMARTMONTOOLS
+# Cheat Sheet - SMARTMonTools
 
 By Jack Szwergold, September 23, 2015
 
-Then install `smartmontools` via `aptitude` like this:
+Then install SMARTMonTools via `aptitude` like this:
 
     sudo aptitude install smartmontools
 
@@ -29,7 +29,7 @@ Output would be something like this; note this device doesn’t have SMART capab
 	Local Time is:    Thu Sep 24 00:21:13 2015 EDT
 	SMART support is: Unavailable - device lacks SMART capability.
 
-#### Enable the `smartmontools` daemon (`smartd`) on startup.
+#### Enable the SMARTMonTools daemon (`smartd`) on startup.
 
 First open up the `smartmontools` daemon config file:
 
@@ -221,6 +221,6 @@ Check to see if `[smart_*]` entry exists. If it doesn’t just add this simple c
 
 ***
 
-*Cheat Sheet - SMARTMONTOOLS (c) by Jack Szwergold*
+*Cheat Sheet - SMARTMonTools (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
