@@ -1,10 +1,10 @@
-# Cheat Sheet - IFTOP
+# Cheat Sheet - IFTop
 
 By Jack Szwergold, September 14, 2015
 
-#### Basic `iftop` usage.
+#### Basic IFTop usage.
 
-You can just launch `iftop` with no options and it will show network traffic on the main network interface such as `en0` (Mac OS X) or `eth0` (Linux):
+You can just launch IFTop with no options and it will show network traffic on the main network interface such as `en0` (Mac OS X) or `eth0` (Linux):
 
     sudo iftop
 
@@ -30,6 +30,6 @@ Check for port 445 (HTTP) traffic on `en0`:
 
 ***
 
-*Cheat Sheet - IFTOP (c) by Jack Szwergold*
+*Cheat Sheet - IFTop (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
