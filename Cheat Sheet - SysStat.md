@@ -1,10 +1,10 @@
-## Cheat Sheet - SYSSTAT
+## Cheat Sheet - SysStat
 
 By Jack Szwergold, September 16, 2015
 
-#### Install `sysstat`.
+#### Install SysStat.
 
-Install the `sysstat` utilities to monitor system statistics via `aptitude`:
+Install the SysStat utilities to monitor system statistics via `aptitude`:
 
     sudo aptitude install sysstat
 
@@ -46,6 +46,6 @@ Then just purge and re-install `sysstat` to get it back up and running:
 
 ***
 
-*Cheat Sheet - SYSSTAT (c) by Jack Szwergold*
+*Cheat Sheet - SysStat (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
