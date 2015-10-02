@@ -1,4 +1,4 @@
-# Cheat Sheet - DIFF
+# Cheat Sheet - Diff
 
 By Jack Szwergold, September 15, 2015
 
@@ -16,6 +16,6 @@ Quickly compare two different directories and show only the filenames of items t
 
 ***
 
-*Cheat Sheet - DIG (c) by Jack Szwergold*
+*Cheat Sheet - Diff (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
