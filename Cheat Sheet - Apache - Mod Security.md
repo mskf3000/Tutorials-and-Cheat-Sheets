@@ -96,30 +96,31 @@ If you need to remove the `activated_rules` just dump the whole directory like t
 
 #### Activate the Mod Security `base_rules`.
 
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_40_generic_attacks.data /etc/modsecurity/activated_rules/modsecurity_40_generic_attacks.data
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_41_sql_injection_attacks.data /etc/modsecurity/activated_rules/modsecurity_41_sql_injection_attacks.data
+	cd /etc/modsecurity/activated_rules/
 	
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_20_protocol_violations.conf /etc/modsecurity/activated_rules/modsecurity_crs_20_protocol_violations.conf
-	
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_21_protocol_anomalies.conf /etc/modsecurity/activated_rules/modsecurity_crs_21_protocol_anomalies.conf
-	
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_23_request_limits.conf /etc/modsecurity/activated_rules/modsecurity_crs_23_request_limits.conf
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_30_http_policy.conf /etc/modsecurity/activated_rules/modsecurity_crs_30_http_policy.conf
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_40_generic_attacks.conf /etc/modsecurity/activated_rules/modsecurity_crs_40_generic_attacks.conf
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_41_sql_injection_attacks.conf /etc/modsecurity/activated_rules/modsecurity_crs_41_sql_injection_attacks.conf
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_41_xss_attacks.conf /etc/modsecurity/activated_rules/modsecurity_crs_41_xss_attacks.conf
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_47_common_exceptions.conf /etc/modsecurity/activated_rules/modsecurity_crs_47_common_exceptions.conf
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_49_inbound_blocking.conf /etc/modsecurity/activated_rules/modsecurity_crs_49_inbound_blocking.conf
-	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_60_correlation.conf /etc/modsecurity/activated_rules/modsecurity_crs_60_correlation.conf
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_40_generic_attacks.data .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_41_sql_injection_attacks.data .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_20_protocol_violations.conf .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_21_protocol_anomalies.conf .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_23_request_limits.conf .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_30_http_policy.conf .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_40_generic_attacks.conf .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_41_sql_injection_attacks.conf .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_41_xss_attacks.conf .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_47_common_exceptions.conf .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_49_inbound_blocking.conf .
+	sudo ln -s /usr/share/modsecurity-crs/base_rules/modsecurity_crs_60_correlation.conf .
 
 #### Activate the Mod Security `optional_rules`.
 
-	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_42_comment_spam.data /etc/modsecurity/activated_rules/modsecurity_42_comment_spam.data
-	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_10_ignore_static.conf /etc/modsecurity/activated_rules/modsecurity_crs_10_ignore_static.conf
-	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_13_xml_enabler.conf /etc/modsecurity/activated_rules/modsecurity_crs_13_xml_enabler.conf
-	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_42_comment_spam.conf /etc/modsecurity/activated_rules/modsecurity_crs_42_comment_spam.conf
-	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_47_skip_outbound_checks.conf /etc/modsecurity/activated_rules/modsecurity_crs_47_skip_outbound_checks.conf
-	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_55_application_defects.conf /etc/modsecurity/activated_rules/modsecurity_crs_55_application_defects.conf
+	cd /etc/modsecurity/activated_rules/
+	
+	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_42_comment_spam.data .
+	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_10_ignore_static.conf .
+	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_13_xml_enabler.conf .
+	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_42_comment_spam.conf .
+	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_47_skip_outbound_checks.conf .
+	sudo ln -s /usr/share/modsecurity-crs/optional_rules/modsecurity_crs_55_application_defects.conf .
 
 Check how many `base_rules` are available:
 
