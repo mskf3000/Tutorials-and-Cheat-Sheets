@@ -84,15 +84,6 @@ Add this to Apache virtual host configs to granularly control ModSecurity on tha
       SecRuleRemoveById 960015
     </ifmodule>
 
-#### Increasing the default Mod Security `SecRequestBodyLimit` value.
-
-Increase the default `SecRequestBodyLimit` to allow large uploads.
-
-	# Maximum request body size we will accept for buffering
-	# Set request body limit to 64MB in bytes (67108864); 32MB (33554432)
-	# SecRequestBodyLimit 131072
-	SecRequestBodyLimit 67108864
-
 ### Activating Mod Security rules.
 
 Create the `activated_rules` directory if it doesn’t already exist:
