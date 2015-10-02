@@ -2,17 +2,17 @@
 
 By Jack Szwergold, September 15, 2015
 
-#### Getting `monit` installed and other basics.
+#### Getting Monit installed and other basics.
 
-First, install `monit` via `aptitude` like this:
+First, install Monit via `aptitude` like this:
 
     sudo aptitude install monit
 
-Controls `monit` startup; don’t need to adjust for now:
+Controls Monit startup; don’t need to adjust for now:
 
     sudo nano /etc/default/monit
 
-Main config for `monit`; broad adjustments happen here:
+Main config for Monit; broad adjustments happen here:
 
     sudo nano /etc/monit/monitrc
 
@@ -29,25 +29,25 @@ Create the `conf.d` monit directory if it doesn’t exist:
 
 	sudo mkdir -p /etc/monit/conf.d
 
-Follow the `monit` log to see it in action:
+Follow the Monit log to see it in action:
 
     sudo tail -f -n 200 /var/log/monit.log
 
-If a service becomes “unmonitored” then just remove the `monit` state file like this:
+If a service becomes “unmonitored” then just remove the Monit state file like this:
 
     sudo rm /var/lib/monit/state
 
-Restart `monit` and all should be good:
+Restart Monit and all should be good:
 
     sudo service monit restart
 
-#### Create a custom `monit` Apache status monitoring rule.
+#### Create a custom Monit Apache status monitoring rule.
 
 First, check to see if the `apache2.pid` file exists:
 
     ls -la /var/run/apache2.pid
 
-Now create the actual Apache monitoring rule for `monit`:
+Now create the actual Apache monitoring rule for Monit:
 
     sudo nano /etc/monit/conf.d/apache2.conf
 
@@ -74,17 +74,17 @@ Another type of Apache monitoring rule:
       then restart
       alert email_address@example.com only on { timeout, nonexist, resource }
 	
-Restart `monit` and all should be good:
+Restart Monit and all should be good:
 
     sudo service monit restart
 
-#### Create a custom `monit` MySQL status monitoring rule.
+#### Create a custom Monit MySQL status monitoring rule.
 
 First, check to see if the `mysqld.pid` file exists:
 
     ls -la /var/run/mysqld/mysqld.pid
 
-Now create the actual MySQL monitoring rule for `monit`:
+Now create the actual MySQL monitoring rule for Monit:
 
     sudo nano /etc/monit/conf.d/mysql.conf
 
@@ -98,13 +98,13 @@ One type of MySQL monitoring rule:
 	  then restart
 	  alert email_address@example.com only on { timeout, nonexist }
 
-Restart `monit` and all should be good:
+Restart Monit and all should be good:
 
     sudo service monit restart
 
-#### Create a custom `monit` MongoDB status monitoring rule.
+#### Create a custom Monit MongoDB status monitoring rule.
 
-Create the actual MongoDB monitoring rule for `monit`:
+Create the actual MongoDB monitoring rule for Monit:
 
     sudo nano /etc/monit/conf.d/mongod.conf
 
@@ -118,7 +118,7 @@ One type of MongoDB monitoring rule:
 	  then restart
 	  alert email_address@example.com only on { timeout, nonexist }
 
-Restart `monit` and all should be good:
+Restart Monit and all should be good:
 
     sudo service monit restart
 
