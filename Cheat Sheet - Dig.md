@@ -1,8 +1,8 @@
-# Cheat Sheet - DIG
+# Cheat Sheet - Dig
 
 By Jack Szwergold, September 15, 2015
 
-#### Basic `dig` commands.
+#### Basic Dig commands.
 
 Detailed DNS info for a hostname:
 
@@ -44,6 +44,6 @@ Get pretty much all available info on a domain:
 
 ***
 
-*Cheat Sheet - DIG (c) by Jack Szwergold*
+*Cheat Sheet - Dig (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
