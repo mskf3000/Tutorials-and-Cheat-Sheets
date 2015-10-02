@@ -1,4 +1,4 @@
-# Cheatsheet ZIP
+# Cheat Sheet - Zip
 
 By Jack Szwergold, September 11, 2015
 
@@ -50,6 +50,6 @@ And to uncompress a Zip archive to a specific directory, just do this. The `-d` 
 
 ***
 
-*Cheat Sheet - ZIP (c) by Jack Szwergold*
+*Cheat Sheet - Zip (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
