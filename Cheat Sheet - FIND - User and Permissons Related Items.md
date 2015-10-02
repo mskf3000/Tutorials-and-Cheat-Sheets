@@ -1,4 +1,4 @@
-# Cheat Sheet - FIND - User and Permissons Related Items
+# Cheat Sheet - Find - User and Permissons Related Items
 
 By Jack Szwergold, September 28, 2015
 
@@ -40,6 +40,6 @@ Actual, functional script:
 
 ***
 
-*Cheat Sheet - FIND - User and Permissons Related Items (c) by Jack Szwergold*
+*Cheat Sheet - Find - User and Permissons Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
