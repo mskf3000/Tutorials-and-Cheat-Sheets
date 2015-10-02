@@ -1,23 +1,23 @@
-# Cheat Sheet - LSYNCD
+# Cheat Sheet - Lsyncd
 
 By Jack Szwergold, September 18, 2015
 
-#### Installing `lsyncd`.
+#### Installing Lsyncd.
 
-Install `lsyncd` via `aptitude` like this:
+Install Lsyncd via `aptitude` like this:
 
     sudo aptitude install lsyncd
 
-#### Start, stop and control `lsyncd`.
+#### Start, stop and control Lsyncd.
 
 	sudo service lsyncd start
 	sudo service lsyncd stop
 	sudo service lsyncd restart
 	sudo service lsyncd force-reload
 
-#### Sundry `lsyncd` items.
+#### Sundry Lsyncd items.
 
-Create the `lsyncd` log directory:
+Create the Lsyncd log directory:
 
 	sudo mkdir -p /var/log/lsyncd
 
@@ -25,23 +25,23 @@ And now create placeholder `lsyncd.log` and `lsyncd.status` files like this:
 
 	sudo touch /var/log/lsyncd/lsyncd.{log,status}
 
-Follow the `lsyncd` log:
+Follow the Lsyncd log:
 
 	tail -f -n 100 /var/log/lsyncd/lsyncd.log
 	
-Follow the `lsyncd` status file:
+Follow the Lsyncd status file:
 
 	tail -f -n 100 /var/log/lsyncd/lsyncd.status
 
-The basic, core `rsync` logic contained in `lsyncd` can be translated as this `rsync` command:
+The basic, core `rsync` logic contained in Lsyncd can be translated as this `rsync` command:
 
 	rsync -ltsd --delete --include-from=- --exclude=* SOURCE TARGET
 
-Check out the sample `lsyncd` config files for ideas:
+Check out the sample Lsyncd config files for ideas:
 
 	ls -la /usr/share/doc/lsyncd/examples
 	
-The contents of that sample `lsyncd` config directory should look something like this:
+The contents of that sample Lsyncd config directory should look something like this:
 
 	-rw-r--r-- 1 root root 1064 Nov 29  2010 lbash.lua
 	-rw-r--r-- 1 root root  577 Nov 18  2010 lecho.lua
@@ -65,9 +65,9 @@ Now create some test files in the source directory using `touch` like this:
 
 	touch /home/sysop/zzz_source/file{1..10}
 
-#### Example 1: Setting up `lsyncd` to use `bash` and `cp` for one-way syncing.
+#### Example 1: Setting up Lsyncd to use `bash` and `cp` for one-way syncing.
 
-This is an example of a one way sync from source to destination using `bash` and the `cp` command for the core logic. A tad nicer than the internal `rsync` logic `lsyncd` uses since it allows you to control all aspects of copying process.
+This is an example of a one way sync from source to destination using `bash` and the `cp` command for the core logic. A tad nicer than the internal `rsync` logic Lsyncd uses since it allows you to control all aspects of copying process.
 
 First step is to create the `/etc/lsyncd` directory to store the active configs if it doesn’t already exist:
 
@@ -102,9 +102,9 @@ And here is where the magic happens; copy this simple Lua-based script into that
 		target = "/home/sysop/zzz_destination"
 	}
 
-#### Example 2: Setting up `lsyncd` to use `rsync` for one-way syncing.
+#### Example 2: Setting up Lsyncd to use `rsync` for one-way syncing.
 
-This is an example of a one way sync from source to destination using the core `rsync` logic `lsyncd` is designed to use. This works, but can be a bit limiting if you want a bit more control over the syncing process.
+This is an example of a one way sync from source to destination using the core `rsync` logic Lsyncd is designed to use. This works, but can be a bit limiting if you want a bit more control over the syncing process.
 
 First step is to create the `/etc/lsyncd` directory to store the active configs if it doesn’t already exist:
 
@@ -133,15 +133,15 @@ And here is where the magic happens; copy this simple Lua-based script into that
 
 #### Testing the one-way sync process.
 
-Once you have the `lsyncd` script in place, check the destination directory; it should be empty:
+Once you have the Lsyncd script in place, check the destination directory; it should be empty:
 
 	ls -la /home/sysop/zzz_destination
 
-Now start the `lsyncd` service:
+Now start the Lsyncd service:
 
 	sudo service lsyncd start
 
-After the `lsyncd` service has started, check the destination directory again and the contents of the source directory should now successfully be copied there:
+After the Lsyncd service has started, check the destination directory again and the contents of the source directory should now successfully be copied there:
 
 	ls -la /home/sysop/zzz_destination
 
@@ -164,7 +164,7 @@ Returned output should be something like this:
 
 While `lsycnd` creates logs, it doesn’t come with a built in log rotation script. So here’s a basic set of log rotation scripts; one handles `*.log` files and the other handles `*.status` files.
 
-Next, create the `lsyncd` log rotation script that would go into that `/etc/logrotate.d/` directory:
+Next, create the Lsyncd log rotation script that would go into that `/etc/logrotate.d/` directory:
 
 	sudo nano /etc/logrotate.d/lsyncd
 	
@@ -204,6 +204,6 @@ And copy these simple log rotation scripts into that file:
 
 ***
 
-*Cheat Sheet - LSYNCD (c) by Jack Szwergold*
+*Cheat Sheet - Lsyncd (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
