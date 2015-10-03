@@ -26,6 +26,6 @@ Now push that commit back to GitHub.
 
 ***
 
-*Cheat Sheet - Git - Rewinding to a Specific Commit (c) by Firstname Lastname*
+*Cheat Sheet - Git - Rewinding to a Specific Commit (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
