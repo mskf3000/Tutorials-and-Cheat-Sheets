@@ -2,7 +2,7 @@
 
 By Jack Szwergold, September 15, 2015
 
-#### Benchmark disk speed with `dd`.
+#### Benchmark disk speed with DD.
 
 Test write speed:
 
@@ -40,7 +40,7 @@ Create a 7GB test file filled with random data:
 
     dd if=/dev/urandom of=TESTFILE_7GB bs=1024 count=0 seek=$[1024*10*10*10*7]
 
-#### Recover a supposedly “dead” volume using `dd`.
+#### Recover a supposedly “dead” volume using DD.
 
 If a volume is accessible—and shown as a connected device on the system—but the file system can’t be mounted, there is still some data recovery hope by using `dd`. By using a `dd` command like this, you can force `dd` to copy whatever data can be read off of the system into a new disk image:
 
@@ -48,7 +48,7 @@ If a volume is accessible—and shown as a connected device on the system—but 
 
 The `bs=512` translates to a block size (`bs`) of `512` which should be adjusted depending on actual device block size. And the `sync`—in `conv=sync,noerror`—tells the `dd` command to pad every input block with NULs which combined with `noerror` allows `dd` to continue after any error it hits. This basically means that even if there are bad sectors/blocks on the file system, `dd` will punch through and try to recover as much data as possible.
 
-#### Monitor `dd` processes that have already started.
+#### Monitor DD processes that have already started.
 
 To monitor a `dd` process, open up another Terminal session and run this command:
 
@@ -60,7 +60,7 @@ To have that info update every 10 seconds, run this variant of that same command
 
     watch -n10 'sudo kill -USR1 $(pgrep ^dd)'
 
-#### Using `pv` (pipe viewer) to monitor `dd` processes.
+#### Using PV (pipe viewer) to monitor DD processes.
 
 Install the `pv` (pipe viewer) daemon:
 
