@@ -18,7 +18,7 @@ Next, type the command below to view/list all installed Linux kernels on your sy
 
     dpkg --list | grep linux-image
 
-Look at that list and note all of the Linux kernels whose verison number is *lower* than your currently active Linux kernel version. Those are the Linux kernels you are going to remove.
+Look at that list and note all of the Linux kernels whose version number is *lower* than your currently active Linux kernel version. Those are the Linux kernels you are going to remove.
 
 #### Purge the old/unwanted Linux kernel versions.
 
@@ -26,7 +26,7 @@ Finally, run the commands below to remove the kernel you selected:
 
     sudo aptitude purge linux-image-x.x.x.x-generic
 
-As a part of the process, `grub2` should be automatically run to update the GRUB bootloader avaiable systems list. But if it somehow doesn’t run automatically, you and run it manually like this:
+As a part of the process, `grub2` should be automatically run to update the GRUB bootloader available systems list. But if it somehow doesn’t run automatically, you and run it manually like this:
 
 	sudo update-grub2
 
@@ -99,6 +99,16 @@ Next add the PPA repository to the system like this:
 Remove a specific repository using `add-apt-repository` with the `--remove` flag:
 
     sudo add-apt-repository --remove ppa:whatever/ppa
+
+### Pointing Ubuntu to old repositories.
+
+You generally want to do this if you are dealing with an out of date Ubuntu install and you simply want to get the most recent packages as possible. Remember, if the system is this out of date this should be considered only a temporary fix; any setup in this state should be upgraded via a full release upgrade if/when possible:
+
+    sudo nano /etc/apt/sources.list
+
+Replace all instances of `archive.ubuntu.com` with `old-releases.ubuntu.com` then do this:
+
+    sudo apt-get update
 
 ***
 
