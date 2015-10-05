@@ -1,14 +1,14 @@
-# Cheat Sheet - Mac OS X - AUTOCONF, AUTOMAKE and LIBTOOL
+# Cheat Sheet - Mac OS X - Autoconf, Automake and Libtool
 
 By Jack Szwergold, September 14, 2015
 
 Mac OS X is a flavor of Unix (Darwin) based on BSD and as such does not contain many commonly available GNU Linux tools in it’s default install.
 
-So if you are planning on compiling any modern GNU projects you’re going to have to install a few core GNU related tools: `autoconf`, `automake` and `libtool`. This tutorial explains how to do that.
+So if you are planning on compiling any modern GNU projects you’re going to have to install a few core GNU related tools: Autoconf, Automake and Libtool. This tutorial explains how to do that.
 
-#### Installing `autoconf` via official source code archive.
+#### Installing Autoconf via official source code archive.
 
-First grab a compressed archive from an official `autoconf` source site:
+First grab a compressed archive from an official Autoconf source site:
 
 	curl -O -L http://ftpmirror.gnu.org/autoconf/autoconf-2.69.tar.gz
 
@@ -44,9 +44,9 @@ Uninstall if you need to:
 
 	sudo make uninstall
 
-#### Installing `automake` via official source code archive.
+#### Installing Automake via official source code archive.
 
-First grab a compressed archive from an official `automake` source site:
+First grab a compressed archive from an official Automake source site:
 
 	curl -O -L http://ftpmirror.gnu.org/automake/automake-1.15.tar.gz
 
@@ -82,9 +82,9 @@ Uninstall if you need to:
 
 	sudo make uninstall
 
-#### Installing `libtool` via official source code archive.
+#### Installing Libtool via official source code archive.
 
-First grab a compressed archive from an official `libtool` source site:
+First grab a compressed archive from an official Libtool source site:
 
 	curl -O -L http://ftpmirror.gnu.org/libtool/libtool-2.4.6.tar.gz
 
@@ -122,6 +122,6 @@ Uninstall if you need to:
 
 ***
 
-*Cheat Sheet - Mac OS X - AUTOCONF, AUTOMAKE and LIBTOOL (c) by Jack Szwergold*
+*Cheat Sheet - Mac OS X - Autoconf, Automake and Libtool (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

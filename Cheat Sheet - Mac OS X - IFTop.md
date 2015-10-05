@@ -1,14 +1,14 @@
-# Cheat Sheet - Mac OS X - IFTOP
+# Cheat Sheet - Mac OS X - IFTop
 
 By Jack Szwergold, September 14, 2015
 
-This tutorial explains how you can install `iftop` directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
+This tutorial explains how you can install IFTop directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
 
 ***
 
-#### Installing `iftop` via official source code archive.
+#### Installing IFTop via official source code archive.
 
-First grab a compressed archive from an official `iftop` source site:
+First grab a compressed archive from an official IFTop source site:
 
 	curl -O -L http://www.ex-parrot.com/~pdw/iftop/download/iftop-0.17.tar.gz
 
@@ -38,6 +38,6 @@ And once it’s installed, run the command with `-h` to do a simple check to see
 
 ***
 
-*Cheat Sheet - Mac OS X - RSYNC (c) by Jack Szwergold*
+*Cheat Sheet - Mac OS X - IFTop (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

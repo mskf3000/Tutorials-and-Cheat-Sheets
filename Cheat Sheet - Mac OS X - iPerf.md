@@ -1,12 +1,12 @@
-# Cheat Sheet - Mac OS X - IPERF
+# Cheat Sheet - Mac OS X - iPerf
 
 By Jack Szwergold, September 15, 2015
 
-This tutorial explains how you can install `iperf` directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
+This tutorial explains how you can install iPerf directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
 
 ***
 
-First grab a compressed archive from an official `iperf` source site:
+First grab a compressed archive from an official iPerf source site:
 
 	curl -O -L https://iperf.fr/download/iperf_2.0.5/iperf-2.0.5-source.tar.gz
 
@@ -36,6 +36,6 @@ And once it’s installed, run the command with `-v` to do a simple check to see
 
 ***
 
-*Cheat Sheet - Mac OS X - IPERF (c) by Jack Szwergold*
+*Cheat Sheet - Mac OS X - iPerf (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
