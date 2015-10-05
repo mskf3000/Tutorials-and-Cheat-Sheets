@@ -81,7 +81,7 @@ Strip out all image EXIF data from TIFF images with ExifTool to:
 	find 'Desktop/Pics' -type f -name '*.tif' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    exiftool -icc_profile:all= -overwrite_original_in_place "${PATH_SANS_EXTENSION}"
+	    exiftool -icc_profile:all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
 	  done
 
 Strip out all image EXIF data from JPEG, PNG or TIFF images with ExifTool to:
