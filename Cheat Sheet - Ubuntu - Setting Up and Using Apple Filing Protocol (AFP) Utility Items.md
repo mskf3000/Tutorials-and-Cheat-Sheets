@@ -14,7 +14,7 @@ Mounting an AFP volume:
 
     mount_afp afp://user:password@192.168.1.101/sharename /media/AFP
 
-The overall structing of how to mount an AFP volume:
+The overall structure of how to mount an AFP volume:
 
     afp_client mount -u [user_name] -p [password] [server]:[volume] [mountpoint]
 
