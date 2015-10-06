@@ -4,7 +4,7 @@ By Jack Szwergold, September 24, 2015
 
 ## Install Tomcat6.
 
-Then install Tomcat6 via `aptitude` like this:
+Install Tomcat6 via `aptitude` like this:
 
     sudo aptitude install tomcat6
 
