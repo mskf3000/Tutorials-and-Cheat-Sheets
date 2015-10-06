@@ -8,7 +8,7 @@ This tutorial explains how you can install HTop directly from source code on Mac
 
 #### A more up to date version of HTop (0.8.2.7) with more meter options courtesy of “max-horvath.”
 
-First clone the sourcecode from max-horvath’s `htop-osx` GitHub repository:
+First clone the source code from max-horvath’s `htop-osx` GitHub repository:
 
 	git clone git@github.com:max-horvath/htop-osx.git
 	
@@ -38,7 +38,7 @@ Finally install it by running `sudo make install`:
 
 #### A nicer, forked version of HTop (0.8.2.2) with more meter options courtesy of “stormerider.”
 
-First clone the sourcecode from stormerider’s `htop-osx` GitHub repository:
+First clone the source code from stormerider’s `htop-osx` GitHub repository:
 
 	git clone git://github.com/stormerider/htop-osx.git
 	
@@ -72,7 +72,7 @@ Finally install it by running `sudo make install`:
 
 #### A basic install of HTop (0.8.2.1) courtesy of “AndyA.”
 
-First clone the sourcecode from AndyA’s `htop-osx` GitHub repository:
+First clone the source code from AndyA’s `htop-osx` GitHub repository:
 
 	git clone git://github.com/AndyA/htop-osx.git
 	
