@@ -152,7 +152,7 @@ Then you can stop reload that XML config by running this `launchctl unload` comm
 
 	sudo launchctl unload /System/Library/LaunchDaemons/org.postfix.master.plist
 
-Followed by tihs `launchctl load` command:
+Followed by this `launchctl load` command:
 
 	sudo launchctl load /System/Library/LaunchDaemons/org.postfix.master.plist
 
