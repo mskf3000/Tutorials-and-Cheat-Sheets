@@ -68,9 +68,13 @@ And now copy the actual `Packages` directory from `OS X Install ESD` to `OS X Ba
 
 Now wait for that to copy to complete. It too will seem to take forever to copy, but when it is done the copy will simply stop. And you would thing we’d be done,  but one last thing.
 
-You notice how the USB flash drive is generically named “OS X Base System?” Let’s change that to match the actual Mac OS installer being used on that USB flash drive like this:
+You notice how the USB flash drive is generically named “OS X Base System?” Let’s rename that to match the actual Mac OS installer being used on that USB flash drive like this:
 
     diskutil rename "OS X Base System" "Install OS X Yosemite"
+
+And now let’s “bless” the USB flash drive with the new name as well:
+
+    sudo bless --folder "/Volumes/Install OS X Yosemite" -label "Install OS X Yosemite"
 
 Now, the bootable Mac OS X USB flash drive should be renamed ready for use.
 
