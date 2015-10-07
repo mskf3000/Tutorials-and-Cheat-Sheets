@@ -90,17 +90,71 @@ If the mails get stuck in that queue and you ned to clear them out, run this com
 
 	sudo postsuper -d ALL
 
-#### Getting Postfix to start on system startup/reboot.
+#### Getting Postfix to start on system startup/reboot in Mac OS X.
 
 If you want Postfix to automatically startup when the system starts up or reboots, open up the `org.postfix.master.plist` file in `LaunchDaemons`:
 
     sudo nano /System/Library/LaunchDaemons/org.postfix.master.plist
 
-And edit the XML to add `RunAtLoad` to the mix. For example, find the closing `</dict>` tag and just add the `<key>RunAtLoad</key>` and `<true/>` beneath it:
+And edit the XML that looks like this:
 
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/Prop$
+	<plist version="1.0">
 	<dict>
-	        <key>RunAtLoad</key>
+	        <key>Label</key>
+	        <string>org.postfix.master</string>
+	        <key>Program</key>
+	        <string>/usr/libexec/postfix/master</string>
+	        <key>ProgramArguments</key>
+	        <array>
+	                <string>master</string>
+	                <string>-e</string>
+	                <string>60</string>
+	        </array>
+	        <key>QueueDirectories</key>
+	        <array>
+	                <string>/var/spool/postfix/maildrop</string>
+	        </array>
+	        <key>AbandonProcessGroup</key>
 	        <true/>
+	</dict>
+	</plist>
+
+To be this; note the `<string>-e</string>` and `<string>60</string>` are disabled and `<key>KeepAlive</key><true/>` is added to the bottom:
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/Prop$
+	<plist version="1.0">
+	<dict>
+	        <key>Label</key>
+	        <string>org.postfix.master</string>
+	        <key>Program</key>
+	        <string>/usr/libexec/postfix/master</string>
+	        <key>ProgramArguments</key>
+	        <array>
+	                <string>master</string>
+	                <!-- <string>-e</string> -->
+	                <!-- <string>60</string> -->
+	        </array>
+	        <key>QueueDirectories</key>
+	        <array>
+	                <string>/var/spool/postfix/maildrop</string>
+	        </array>
+	        <key>AbandonProcessGroup</key>
+	        <true/>
+	        <key>KeepAlive</key>
+	        <true/>
+	</dict>
+	</plist>
+
+Then you can stop reload that XML config by running this `launchctl unload` command:
+
+	sudo launchctl unload /System/Library/LaunchDaemons/org.postfix.master.plist
+
+Followed by tihs `launchctl load` command:
+
+	sudo launchctl load /System/Library/LaunchDaemons/org.postfix.master.plist
 
 ***
 
