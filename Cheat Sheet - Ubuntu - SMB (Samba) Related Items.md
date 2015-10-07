@@ -10,7 +10,7 @@ Then install SMB/CIFS stuff via `aptitude` like this:
 
 The command to mount an SMB volume:
 	
-	sudo mount -t cifs //123.456.789.0/someuser /home/sysop/sysop_mount -o user="someuser",password="[password]",nounix,sec=ntlmssp,noperm,rw
+	sudo mount -t cifs //123.456.789.0/someuser /home/someotheruser/someotheruser_mount -o user="someuser",password="[password]",nounix,sec=ntlmssp,noperm,rw
 	
 The command to unmount an SMB volume:
 	
