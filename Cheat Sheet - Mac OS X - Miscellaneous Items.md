@@ -16,6 +16,14 @@ List all Arp entries on the system and show extended link-layer reachability inf
 
     arp -alx
 
+### What are `.SM.gul.` files.
+
+If you are on a system and see files that a prefaced by `.SM.gul.` clone files like this:
+
+	/Library/ColorSync/Profiles/.SM.gul.WebSafeColors.icc
+	/Library/ColorSync/Profiles/WebSafeColors.icc
+
+Those are files created by Apple’s Migration Assistant. Either the process forgot to clean up the `.SM.gul.` files or it crashed and left them behind. But those `.SM.gul.` files can be safely ignored or deleted if need bee.
 
 ***
 
