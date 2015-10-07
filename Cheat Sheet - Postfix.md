@@ -8,6 +8,14 @@ In Mac OS X this checks to see what services are launched at startup; look for `
 
     sudo launchctl list
 
+Or just run that command with `grep` to see if Postfix is running:
+
+    sudo launchctl list | grep postfix
+
+The output if it’s running should be something like this:
+
+    -	0	org.postfix.master
+
 #### Sundry `postfix` status and maintenance items.
 
 Check the running processes:
