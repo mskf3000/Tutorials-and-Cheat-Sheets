@@ -60,11 +60,11 @@ And that new volume would be mounted. But we’re not done yet! The issue is tha
 
 First, let’s delete the `Packages` alias from the USB flash drive:
 
-    rm /Volumes/OS\ X\ Base\ System/System/Installation/Packages
+    rm -f /Volumes/OS\ X\ Base\ System/System/Installation/Packages
 
 And now copy the actual `Packages` directory from `OS X Install ESD` to `OS X Base System/Installation/Packages`
 
-    cp -rpv /Volumes/OS\ X\ Install\ ESD/Packages/ /Volumes/OS\ X\ Base\ System/System/Installation/Packages/
+    cp -rpfv /Volumes/OS\ X\ Install\ ESD/Packages/ /Volumes/OS\ X\ Base\ System/System/Installation/Packages/
 
 Now wait for that to copy to complete. It too will seem to take forever to copy, but when it is done the copy will simply stop. And you would thing we’d be done,  but one last thing.
 
