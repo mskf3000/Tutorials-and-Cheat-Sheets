@@ -25,6 +25,35 @@ If you are on a system and see files that a prefaced by `.SM.gul.` clone files l
 
 Those are files created by Apple’s Migration Assistant. Either the process forgot to clean up the `.SM.gul.` files or it crashed and left them behind. But those `.SM.gul.` files can be safely ignored or deleted if need bee.
 
+### Locations of where Mac OS X stores user & group information.
+
+Running this `ls -la` command:
+
+	sudo ls -la /private/var/db/dslocal/nodes/Default
+
+Will show you and overview of the `/private/var/db/dslocal/nodes/Default`:
+
+	drw-------   12 root  wheel     408 Jan 25  2015 .
+	drwxr-xr-x    3 root  wheel     102 Aug 24  2013 ..
+	drwx------   10 root  wheel     340 Jan 25  2015 aliases
+	drwx------    3 root  wheel     102 Jan 25  2015 computers
+	drwx------    4 root  wheel     136 Jan 25  2015 config
+	drwx------  102 root  wheel    3468 Jan 25  2015 groups
+	drwx------    3 root  wheel     102 Jan 25  2015 networks
+	drwx------    3 root  wheel     102 Jan 25  2015 sharepoints
+	-rw-------    1 root  wheel  352256 Oct  1 00:20 sqlindex
+	-rw-------    1 root  wheel   32768 Oct  6 23:42 sqlindex-shm
+	-rw-------    1 root  wheel  350232 Oct  6 20:49 sqlindex-wal
+	drwx------   79 root  wheel    2686 Oct  6 20:49 users
+
+This `ls -la` command will show you the `.plist` files for users on the system:
+
+	sudo ls -la /private/var/db/dslocal/nodes/Default/users
+	
+This `ls -la` command will show you the `.plist` files for groups on the system:
+
+	sudo ls -la /private/var/db/dslocal/nodes/Default/groups
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
