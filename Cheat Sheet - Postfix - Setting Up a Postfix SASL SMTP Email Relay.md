@@ -18,7 +18,7 @@ In that file we’ll setup a set of SMTP server credentials like this. Here is t
 
     [hostname]:[port] [email username]:[password]
 
-Here is another example with some GMail specifics to make it a bit clearer; same concept can be used for any SMTP service with the right settings:
+Here is another example with some GMail specifics to make it a bit clearer but the same concept can be used for any SMTP service with the correct settings:
 
     smtp.gmail.com:587 username@gmail.com:password
 
@@ -32,7 +32,7 @@ Open up the main Postfix configuration file like this:
 
 	sudo nano /etc/postfix/main.cf
 
-Many of these settings might already be set or actually commented out in that config file, so just append this all to the end of the Postfix configuration file:
+Many of these settings might already be set or actually commented out in that config file, so just append this all to the end of the Postfix configuration file; theer are some GMail specifics—for `relayhost`—to make it a bit clearer but the same concept can be used for any SMTP service with the correct settings:
 
 	# Minimum Postfix-specific configurations.
 	mydomain_fallback = localhost
