@@ -21,7 +21,7 @@ Save the `.bash_profile` and reload it like this:
 
 	source ~/.bash_profile
 
-#### Set the MAMP 5.3.6 version of Pear as part of your user PATH.
+#### Set the MAMP PHP 5.3.6 version of Pear as part of your user PATH.
 
 Add it to the beginning of your `PATH` like this. First open up your user’s `.bash_profile` like this:
 
@@ -59,7 +59,7 @@ Save the `.bash_profile` and reload it like this:
 
 It’s worth noting for now that apparently the Pear configuration file `pear.conf` in the PHP 5.4.10 setup can just be deleted to fix the problem. But haven’t tested it for the other versions of PHP in MAMP.
 
-#### Fixing the Pear configuration for PHP 5.2.17
+#### Fixing the Pear configuration for PHP 5.2.17.
 
 The default Pear configuration file installed by MAMP has a small typo. So it needs to be fixed before anything happens. First open the file like this:
 
@@ -73,7 +73,7 @@ The good setup; note the trailing slash:
 
     "php_dir";s:45:"/Applications/MAMP/bin/php/php5.2.17/lib/php/";
 
-#### Fixing the Pear configuration for PHP 5.3.6
+#### Fixing the Pear configuration for PHP 5.3.6.
 
 The default Pear configuration file installed by MAMP has a small typo. So it needs to be fixed before anything happens. First open the file like this:
 
@@ -87,7 +87,7 @@ The good setup; note the trailing slash:
 
     "php_dir";s:44:"/Applications/MAMP/bin/php/php5.3.6/lib/php/";
 
-#### Fixing the Pear configuration for PHP 5.4.10
+#### Fixing the Pear configuration for PHP 5.4.10.
 
 The default Pear configuration file installed by MAMP has a small typo. So it needs to be fixed before anything happens. First open the file like this:
 
