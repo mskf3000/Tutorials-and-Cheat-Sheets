@@ -71,7 +71,6 @@ Here are some other Postfix start, stop, control and status options:
 	sudo postfix start
 	sudo postfix stop
 	sudo postfix reload
-	sudo postfix condrestart
 	sudo postfix status
 	sudo postfix check
 	sudo postfix set-permissions
