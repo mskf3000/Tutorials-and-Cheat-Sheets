@@ -49,17 +49,41 @@ If you need to use a DHCP/NAT-based IP address, just use this:
 
 #### Clearing up MAC address issues.
 
-If the MAC address of an interface in the OS does not match the MAC address of the actual interface, networing will choke.
+If the MAC address of an interface in the OS does not match the MAC address of the actual interface, networking will choke.
 
-This would mainly come up in VirtualBox when a hard drive for one virtual machine is used within another, new virtual machine. Or maybe even transfering a hard drive with the Linux OS from one machine to another. Basically, MAC addresses chnage and things might get weird.
+This would mainly come up in VirtualBox when a hard drive for one virtual machine is used within another, new virtual machine. Or maybe even transfering a hard drive with the Linux OS from one machine to another. Basically, MAC addresses change and things might get weird.
 
 To fix it, just edit this file to get change the MAC address to match the new setup:
 
 	sudo nano /etc/udev/rules.d/70-persistent-net.rules
 
-Or more simply, just toss the file entrirely and reboot the virtual machine; the `70-persistent-net.rules` will be regenerated after reboot:
+Or more simply, just toss the file entirely and reboot the virtual machine; the `70-persistent-net.rules` will be regenerated after reboot:
 
 	sudo rm /etc/udev/rules.d/70-persistent-net.rules
+
+#### Flushing the routing table.
+
+Sometimes you need to flush the routing table to clear up some networking issues. 
+
+Do this to view the current routing table entries:
+
+    netstat -nr
+
+Now, take down the main network interface on the machine like this:
+
+	sudo ifconfig eth0 down
+
+The run, this `route flush` command to flush the routing tables:
+
+	sudo route flush
+
+Check the routing tables again if you wish:
+
+    netstat -nr
+
+They should be set to some default state. All good? Now startup the main network interface again like this:
+
+	sudo ifconfig eth0 up
 
 ***
 
