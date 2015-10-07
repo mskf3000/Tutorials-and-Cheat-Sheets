@@ -90,16 +90,17 @@ If the mails get stuck in that queue and you ned to clear them out, run this com
 
 	sudo postsuper -d ALL
 
-#### Getting Postfix to start on startup/restart.
+#### Getting Postfix to start on system startup/reboot.
 
-Open up the `org.postfix.master.plist` file in `LaunchDaemons`:
+If you want Postfix to automatically startup when the system starts up or reboots, open up the `org.postfix.master.plist` file in `LaunchDaemons`:
 
-    sudo nano /System/Library/LaunchDaemons/org.postfix.master.plist
+    sudo nano /System/Library/LaunchDaemons/org.postfix.master.plist
 
 And edit the XML to add `RunAtLoad` to the mix. For example, find the closing `</dict>` tag and just add the `<key>RunAtLoad</key>` and `<true/>` beneath it:
 
-	</dict>
-	<key>RunAtLoad</key> 	<true/>
+	<dict>
+	        <key>RunAtLoad</key>
+	        <true/>
 
 ***
 
