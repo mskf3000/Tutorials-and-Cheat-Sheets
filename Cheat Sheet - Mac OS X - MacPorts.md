@@ -51,6 +51,11 @@ Remove the the MacPorts stuff on the system:
 	        /Library/Tcl/macports1.0 \
 	        ~/.macports
 
+Remove the `.plist` user and group files for the `macports` user (and related group) that was created when MacPorts was intially installed:
+
+    sudo rm -f /private/var/db/dslocal/nodes/Default/users/macports.plist
+    sudo rm -f /private/var/db/dslocal/nodes/Default/groups/macports.plist
+
 ***
 
 *Cheat Sheet - Mac OS X - MacPorts (c) by Jack Szwergold*

@@ -54,6 +54,12 @@ This `ls -la` command will show you the `.plist` files for groups on the system:
 
 	sudo ls -la /private/var/db/dslocal/nodes/Default/groups
 
+### Kill `VNCDragHelper` if it spirals out of control.
+
+Sometimes the VNC server on a remote server can spiral out of control and make VNC access impossible. The solution is to SSH into that server and run this command:
+
+    sudo killall -9 VNCDragHelper
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
