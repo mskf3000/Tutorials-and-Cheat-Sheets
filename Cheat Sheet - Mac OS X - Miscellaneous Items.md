@@ -60,6 +60,20 @@ Sometimes the VNC server on a remote server can spiral out of control and make V
 
     sudo killall -9 VNCDragHelper
 
+### Checking library framework type and architecture.
+
+To check what the framework type and architecture of a file is, just run this `lipo` command:
+
+    lipo -info /path/to/file/you/wish/to/check
+
+For example, check the architecture type of the `AppleIntermediateCodec` like this:
+
+    lipo -info /Library/QuickTime/AppleIntermediateCodec.component/Contents/MacOS/AppleIntermediateCodec
+
+The output would be something like this:
+
+    Non-fat file: /Library/QuickTime/AppleIntermediateCodec.component/Contents/MacOS/AppleIntermediateCodec is architecture: i386
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
