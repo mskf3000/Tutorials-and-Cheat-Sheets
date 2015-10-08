@@ -56,6 +56,8 @@ Find and concatenate CSV files while skipping the first header line of a file:
 
 ### Mac OS X specific stuff.
 
+#### Finding locked files and unlocking them.
+
 Find locked files in Mac OS X:
 
     find . -maxdepth 1 -type f -flags uchg
@@ -63,6 +65,16 @@ Find locked files in Mac OS X:
 Use this command find locked files in Mac OS X and remove the lock on those found files:
 
     find . -maxdepth 1 -type f -flags uchg -exec chflags nouchg {} \;
+
+#### Get rid of `.DS_Store` and related cruft files.
+
+Run this command to get rid of `.DS_Store` files:
+
+    find . -name '*.DS_Store' -type f -delete
+
+Run this command to get rid of `.DS_Store`, `.Trashes`, `._*` and  `.TemporaryItems` files:
+
+    find \( -name ".DS_Store" -or -name ".Trashes" -or -name "._*" -or -name ".TemporaryItems" \) -delete
 
 ***
 
