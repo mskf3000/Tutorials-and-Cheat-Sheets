@@ -30,6 +30,10 @@ Getting `httpd` status with `fullstatus` on a CentOS/RedHat system:
 
 	sudo httpd fullstatus
 
+A nice one-liner to count unique IP addresses in an Apache log file:
+
+    cat /var/log/apache2/access.log | awk '{print $1}' | sort | uniq -c | sort -n
+
 #### Sundry Apache items on an Ubuntu/Debian system.
 
 Get Apache version number:

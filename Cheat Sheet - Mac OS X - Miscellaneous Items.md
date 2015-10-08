@@ -228,6 +228,16 @@ And you can set those values using `scutil --set` like this:
     sudo scutil --set HostName 'yourHostName'
     sudo scutil --set LocalHostName  'yourHostName'
 
+### Tell OS X not to write `.DS_Store` files to network shares.
+
+Check the value of `DSDontWriteNetworkStores` like this:
+
+    defaults read com.apple.desktopservices DSDontWriteNetworkStores
+
+Set the value of `DSDontWriteNetworkStores` like this:
+
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
