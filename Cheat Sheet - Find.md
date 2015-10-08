@@ -50,6 +50,10 @@ Find and concatenate CSV files while skipping the first header line of a file:
 
 	find . -name "*.csv" | xargs -n 1 tail -n +2 > ~/Desktop/output.csv
 
+#### Create a nicely formatted directory tree.
+
+    find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+
 ### Mac OS X specific stuff.
 
 Find locked files in Mac OS X:
