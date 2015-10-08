@@ -149,6 +149,24 @@ Re-enable Bonjour with `launchctl` like this:
     sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
     sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponderHelper.plist
 
+### Clear out the DNS cache in different versions of Mac OS X.
+
+Mac OS X 10.10 (Yosemite):
+
+    sudo discoveryutil mdnsflushcache
+
+Mac OS X 10.7, 10.8 and 10.9 (Lion, Mountain Lion, Mavericks):
+
+    sudo killall -HUP mDNSResponder
+
+Mac OS X 10.6.8 (Snow Leopard):
+
+    dscacheutil -flushcache
+
+Pre Mac OS X 10.5 (Leopard):
+
+    lookupd --flushcache
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
