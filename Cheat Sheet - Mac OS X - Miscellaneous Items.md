@@ -74,6 +74,54 @@ The output would be something like this:
 
     Non-fat file: /Library/QuickTime/AppleIntermediateCodec.component/Contents/MacOS/AppleIntermediateCodec is architecture: i386
 
+### Check recordable media type from the command line
+
+#### The `system_profiler` method.
+
+Get all info on the recordable media drive and inserted media:
+
+    system_profiler SPDiscBurningDataType
+
+Parse out just the media info with `sed`:
+
+    system_profiler SPDiscBurningDataType | sed -n "/Type:/,/*/ p"
+
+#### The `diskutil info` method.
+
+Assuming `diskutil list` gives us `/dev/disk3` for the recorable media, this gives you info on the drive and the inserted media:
+
+    diskutil info /dev/disk3
+
+And this would eject the media from `/dev/disk3`:
+
+    diskutil info /dev/disk3
+
+### How go rebuid the Spotlight index.
+
+Force Spotlight to reindex a specific volume:
+
+	sudo rm -R /.Spotlight-V100
+	sudo mdutil -i on /
+	sudo mduitl -E / 
+
+Force Spotlight to reindex Apple Mail:
+
+    mdimport ~/Library/Mail
+
+#### Update the Systems `locate` database.
+
+Use this command to force Spotlight to reindex the whole system:
+
+    sudo /usr/libexec/locate.updatedb
+
+Or just go into `/usr/libexec`:
+
+	cd /usr/libexec
+
+And then run `./locate.updatedb` from there:
+
+	sudo ./locate.updatedb
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*

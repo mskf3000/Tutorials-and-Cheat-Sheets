@@ -14,6 +14,10 @@ Quickly compare two different directories and show only the filenames of items t
 
     diff -qr /path/of/stuff/to/compare/1 /path/of/stuff/to/compare/2
 
+Use this to compare two different directories and send the output to a sorted text file named `diffs.txt`: 
+
+    diff -qr /path/of/stuff/to/compare/1 /path/of/stuff/to/compare/2 | grep -v -e 'DS_Store' -e 'Thumbs' | > sort > stuff_compared.txt
+
 ***
 
 *Cheat Sheet - Diff (c) by Jack Szwergold*

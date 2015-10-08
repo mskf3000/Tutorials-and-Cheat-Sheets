@@ -52,6 +52,20 @@ If server is unresponsive to standard commands then manually kill off processes 
 
 	sudo pkill -9 apache2
 
+Display all modules compiled into Apache:
+
+    apache2 -l
+
+The output would be something like this:
+
+	Compiled in modules:
+	  core.c
+	  mod_log_config.c
+	  mod_logio.c
+	  prefork.c
+	  http_core.c
+	  mod_so.c
+
 #### Sundry Apache items on a CentOS/RedHat system.
 
 Get Apache version on a CentOS/RedHat system:
