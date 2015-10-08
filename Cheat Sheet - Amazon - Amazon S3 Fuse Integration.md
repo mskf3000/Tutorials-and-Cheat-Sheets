@@ -57,7 +57,9 @@ And a per user `s3fs` setup, the credentials file (`~/.passwd-s3fs`) would be se
 
     chmod 600 ~/.passwd-s3fs
 
-#### Create a parent directory `/opt/cloud_mounts/` if it doesn’t exist.
+#### Setup the mount point directories.
+
+Create a parent directory `/opt/cloud_mounts/` if it doesn’t exist.
 
     sudo mkdir /opt/cloud_mounts
 
