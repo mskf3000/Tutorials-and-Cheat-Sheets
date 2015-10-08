@@ -133,6 +133,84 @@ Extracting items from a CentOS/RedHat `.rpm` archive:
 
     sudo nano /etc/yum/pluginconf.d/protectbase.conf
 
+### Simple command line process management with `nohup` and `&`.
+
+Send a command to the background and allow logout.
+
+    nohup [command] &
+
+### Using `wc` to get word counts and line counts.
+
+Get the line count of all files with a `*.txt` extension:
+
+    wc -l *.txt
+
+Get the word count of all files with a `*.txt` extension:
+
+    wc -w *.txt
+
+### Check system memory usage.
+
+Get the amount of free memory in kilobytes:
+
+    free -k
+
+Get the amount of free memory in megabytes:
+
+    free -m
+
+### Check and manage processes.
+
+Find active processes
+
+    ps -ax
+
+Find active processes with grep
+
+    ps -ax | grep pts
+
+Kill all processes that match the name of the process:
+
+    pkill -9 [name of process]
+
+### Using `df` to disk free space and inode usage.
+
+Display hard disk partition size in kilobytes:
+
+    df -k
+
+Display hard disk partition size in human readable megabytes:
+
+    df -h
+
+Display inode size in kilobytes:
+
+    df -i
+
+Display inode size in human readable megabytes:
+
+    df -ih
+
+### Using `du` to display disk usage.
+
+Display disk usage in human readable megabytes with a maximum depth of 1:
+
+    sudo du -h -d=1
+
+Display disk usage for all items in the immediate directory (`s` = `d=1`) with block counts in human readable megabytes:
+
+    du -skh *
+
+### Using `lsof`.
+
+Display the list of open files with `lsof`:
+
+    lsof
+
+Use `losf` to see what ports are connected to a process:
+
+    lsof -i -n -P | grep sendmail
+
 ***
 
 *Cheat Sheet - Linux-Unix - Miscellaneous Items (c) by Jack Szwergold*
