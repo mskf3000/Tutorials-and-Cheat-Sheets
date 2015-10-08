@@ -59,19 +59,19 @@ And a per user `s3fs` setup, the credentials file (`~/.passwd-s3fs`) would be se
 
 #### Setup the mount point directories.
 
-Create a parent directory `/opt/cloud_mounts/` if it doesn’t exist.
+Create a parent directory `/opt/cloud_mounts/` if it doesn’t exist:
 
     sudo mkdir /opt/cloud_mounts
 
-Create a subdirectory Amazon cloud_mounts.
+Create a subdirectory for Amazon specific stuff in `cloud_mounts`:
 
     sudo mkdir /opt/cloud_mounts/amazon
 
-Create directories for each bucket.
+Create directories for each bucket:
 
     sudo mkdir /opt/cloud_mounts/amazon/s3_bucket_name
 
-Change permissions to allow your user—in this case `sysop`—to access it.
+Change permissions to allow your user—in this case `sysop`—to access it:
 
     sudo chown sysop:sysop -R /opt/cloud_mounts/amazon
 
