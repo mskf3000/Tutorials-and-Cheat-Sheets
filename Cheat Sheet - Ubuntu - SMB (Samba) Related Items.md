@@ -42,6 +42,21 @@ Finally, test the mount with:
 
 And you should be good to go!
 
+#### Samba and veto files.
+
+Setting `veto files` tells Samba to veto the creation or copying of any files that matches the `veto files`. Basic example here:
+
+	; Veto any files containing the word Security,
+	; any ending in .tmp, and any directory containing the
+	; word root.
+	veto files = /*Security*/*.tmp/*root*/
+
+An example appropriate for Netatalk servers is here:
+
+	; Veto the Apple specific files that a Netatalk server
+	; creates.
+	veto files = /.AppleDouble/.bin/.AppleDesktop/Network Trash Folder/
+
 ***
 
 *Cheat Sheet - Ubuntu - SMB (Samba) Related Items (c) by Jack Szwergold*
