@@ -134,7 +134,7 @@ Get the network interface parameters:
 
 Detect listening network ports:
 
-    netstat -tul
+    netstat -tuln
 
 Detect listening network ports on Mac OS X
 
