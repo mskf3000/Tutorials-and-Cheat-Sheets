@@ -169,13 +169,26 @@ Pre Mac OS X 10.5 (Leopard):
 
 ### Clean up the Mac OS X Mail index.
 
-Use this command in Mac OS X 10.7, 10.8 and 10.9 (Lion, Mountain Lion, Mavericks):
+Use this SQLite command in Mac OS X 10.7, 10.8 and 10.9 (Lion, Mountain Lion, Mavericks):
 
     sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum
 
-Use this command in Mac OS X 10.6 (Snow Leopard):
+Use this SQLite command in Mac OS X 10.6 (Snow Leopard):
 
     /usr/bin/sqlite3 ~/Library/Mail/Envelope\ Index vacuum
+
+
+## Clean up the iPhoto database.
+
+Go into the `iPhoto Library` directory:
+
+    cd ~/Pictures/iPhoto\ Library
+
+And run this Bash script to get SQLite to do it’s thing:
+
+    for dbase in *.db; do sqlite3 $dbase "vacuum;"; done
+
+
 
 ***
 
