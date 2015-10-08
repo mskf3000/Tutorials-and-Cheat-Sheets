@@ -238,6 +238,22 @@ Set the value of `DSDontWriteNetworkStores` like this:
 
     defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
+### Fix font smoothing in Mac OS X for non-Apple monitors.
+
+Mac OS X won’t do a good job of dealing with LC font smoothing if you use non-Apple monitors. So run this command to force a new font smoothing value:
+
+    defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+
+### Accessing System Profiler data from the command line.
+
+Get all of the Mac OS X system profile info from the command line like this:
+
+    system_profiler
+
+Use this command to specifically get the Mac OS X system version information from the command line:
+
+    system_profiler SPSoftwareDataType
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
