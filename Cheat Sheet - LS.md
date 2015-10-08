@@ -20,6 +20,18 @@ Do a directory search in reverse and find the last file with the `.sh` in the fi
 
     ls -lrt | awk '/.sh/ { filename=$NF }; END { print filename }'
 
+List only directories:
+
+    ls -l | egrep '^d'
+
+List only files:
+
+    ls -l | egrep -v '^d'
+
+Get a count of files (not hidden) in a folder:
+
+    ls -1 | wc -l
+
 ***
 
 *Cheat Sheet - LS (c) by Jack Szwergold*
