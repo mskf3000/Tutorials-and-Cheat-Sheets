@@ -167,6 +167,16 @@ Pre Mac OS X 10.5 (Leopard):
 
     lookupd --flushcache
 
+### Clean up the Mac OS X Mail index.
+
+Use this command in Mac OS X 10.7, 10.8 and 10.9 (Lion, Mountain Lion, Mavericks):
+
+    sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum
+
+Use this command in Mac OS X 10.6 (Snow Leopard):
+
+    /usr/bin/sqlite3 ~/Library/Mail/Envelope\ Index vacuum
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
