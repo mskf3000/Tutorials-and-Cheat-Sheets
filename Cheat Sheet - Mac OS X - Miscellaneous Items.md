@@ -96,7 +96,7 @@ And this would eject the media from `/dev/disk3`:
 
     diskutil info /dev/disk3
 
-### How go rebuid the Spotlight index.
+### How go rebuild Spotlight indexes.
 
 Force Spotlight to reindex a specific volume:
 
@@ -121,6 +121,33 @@ Or just go into `/usr/libexec`:
 And then run `./locate.updatedb` from there:
 
 	sudo ./locate.updatedb
+
+### Some basic networking items.
+
+Display Bonjour/Multicast services from the command line.
+
+    dns-sd -B
+
+Get the network interface parameters:
+
+    ifconfig
+
+Detect listening network ports:
+
+    netstat -tul
+
+
+### Enable and disable Bonjour in Mac OS X 10.9
+
+Disable Bonjour with `launchctl` like this:
+
+    sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+    sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponderHelper.plist
+
+Re-enable Bonjour with `launchctl` like this:
+
+    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponderHelper.plist
 
 ***
 
