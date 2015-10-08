@@ -90,6 +90,16 @@ Add a user to a set of groups
 
 ***
 
+Get username id and connected group id info:
+
+    id [username]
+
+Get username id and connected group id info, more readable format:
+
+    id [username] | tr -s ', ' '\n'
+
+***
+
 *Cheat Sheet - Linux-Unix - User Account Setup (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
