@@ -1,10 +1,10 @@
-## Cheat Sheet - SysStat
+## Cheat Sheet - Sysstat
 
 By Jack Szwergold, September 16, 2015
 
-#### Install SysStat.
+#### Install Sysstat.
 
-Install the SysStat utilities to monitor system statistics via `aptitude`:
+Install the Sysstat utilities to monitor system statistics via `aptitude`:
 
     sudo aptitude install sysstat
 
@@ -21,7 +21,7 @@ Control `sysstat`:
 
 If you get this message:
 
-> sadc not enabled in /etc/default/sysstat, not starting.
+> sadc not enabled in `/etc/default/sysstat`, not starting.
 
 Then edit this file:
 
@@ -38,7 +38,7 @@ Then look for this and change the value of `ENABLED` from `false` to `true`:
 
 If you get a message like the following:
 
-> Invalid system activity file: /var/log/sysstat/sa14
+> Invalid system activity file:` /var/log/sysstat/sa14`
 
 Then just purge and re-install `sysstat` to get it back up and running:
 
@@ -46,6 +46,6 @@ Then just purge and re-install `sysstat` to get it back up and running:
 
 ***
 
-*Cheat Sheet - SysStat (c) by Jack Szwergold*
+*Cheat Sheet - Sysstat (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
