@@ -6,9 +6,9 @@ Here are instructions on how to setup an account on a Linux server.
 
 #### Create a user account.
 
-Login to the server you want to create an account on and add the user—in this case `username`—like this:
+Login to the server you want to create an account on and add the user—in this case `[username]`—like this:
 
-    sudo adduser username
+    sudo adduser [username]
 
 Use the password as follows for initial setup or change it to something else:
 
@@ -20,25 +20,25 @@ This is a temporary account so the user will have to change it on their first lo
 
 Add the user to the `www-readwrite` group:
 
-    sudo adduser username www-readwrite
+    sudo adduser [username] www-readwrite
 
 Set user’s default group to the `www-readwrite` group:
 
-    sudo usermod -g www-readwrite username
+    sudo usermod -g www-readwrite [username]
 
 #### Expire the password immediately to force the user to choose their own password.
 
 First, let’s check the password status like this:
 
-    sudo passwd -S username
+    sudo passwd -S [username]
 
 Next, expire the password immediately:
 
-    sudo chage -d 0 username
+    sudo chage -d 0 [username]
 
 After that’s done, check the password status again to make sure it has been expired:
 
-    sudo passwd -S username
+    sudo passwd -S [username]
 
 #### Miscellaneous user account management items.
 
@@ -48,19 +48,41 @@ Here are some related commands that might need to be used depending on the situa
 
 Run this command to unexpire a user’s password:
 
-    sudo chage -d 99999 username
+    sudo chage -d 99999 [username]
 
 Check the account aging information for a user with this command:
 
-    sudo chage -l username
+    sudo chage -l [username]
 
 Lock a user’s password:
 
-    sudo passwd -l username
+    sudo passwd -l [username]
 
 Delete user from system and remove their home directory:
 
-    sudo deluser --remove-home username
+    sudo deluser --remove-home [username]
+
+Set an account to expire on a specific date.
+
+    sudo chage -E 2015-11-30 [username]
+
+Changing a username and their home directory:
+
+    sudo usermod -l [new_username] -m -d /home/[new_username] [old_username]
+
+***
+
+To add a new group, do this:
+
+    sudo addgroup [groupname]
+
+To delete an existing group, do this:
+
+    sudo delgroup [groupname]
+
+To add a user to a group, use the following syntax:
+
+    sudo adduser username [groupname]
 
 ***
 
