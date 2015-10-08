@@ -200,12 +200,19 @@ The command running as `sudo` with the full preference file path:
 
     sudo defaults write /Library/Preferences/com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool YES
 
-
 ### Restart the ARD (Apple Remote Desktop) client from the command line.
 
 Useful for cases when you can SSH into a server but somehow remote login services via ARD or VNC have crashed or aren’t started:
 
     sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -restart -agent
+
+### Disable `ApplePersistence`.
+
+The `ApplePersistence` setting controls the behavior when apps open up on automatically on reboot. You can disable it like this:
+
+    defaults write -g ApplePersistence -bool no
+
+Note this might disable versioning for documents saved from some applications, but if that is not an issue just feel free to disable it.
 
 ***
 
