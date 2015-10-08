@@ -267,6 +267,12 @@ The output of that command would be something like this:
 	  Secure Virtual Memory: Enabled
 	  Time since boot: 6:54
 
+### How to disable disk journaling on HFS+ volumes from the command line.
+
+The way to handle this from Disk Utility is to select the volume in question, hold down the “Option” key and select “File" menu. The “Disable Journaling” will appear. Or from the command line, just do this:
+
+    diskutil disableJournal /Volumes/NameOfTheVolumeHere
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
