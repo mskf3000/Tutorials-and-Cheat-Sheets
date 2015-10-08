@@ -191,6 +191,17 @@ And run this Bash script to get SQLite to do it’s thing:
 
     for dbase in *.db; do sqlite3 $dbase "vacuum;"; done
 
+
+### Disable Time Machine asking about new disks.
+
+The basic command:
+
+    defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -boolean YES
+
+The command running as `sudo` with the full preference file path:
+
+    sudo defaults write /Library/Preferences/com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool YES
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
