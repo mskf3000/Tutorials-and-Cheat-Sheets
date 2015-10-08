@@ -102,7 +102,7 @@ Force Spotlight to reindex a specific volume:
 
 	sudo rm -R /.Spotlight-V100
 	sudo mdutil -i on /
-	sudo mduitl -E / 
+	sudo mduitl -E /
 
 Force Spotlight to reindex Apple Mail:
 
@@ -253,6 +253,19 @@ Get all of the Mac OS X system profile info from the command line like this:
 Use this command to specifically get the Mac OS X system version information from the command line:
 
     system_profiler SPSoftwareDataType
+
+The output of that command would be something like this:
+
+	System Software Overview:
+	
+	  System Version: OS X 10.9.5 (13F1112)
+	  Kernel Version: Darwin 13.4.0
+	  Boot Volume: Hard Disk
+	  Boot Mode: Normal
+	  Computer Name: Macintosh
+	  User Name: Some User (some_user)
+	  Secure Virtual Memory: Enabled
+	  Time since boot: 6:54
 
 ***
 
