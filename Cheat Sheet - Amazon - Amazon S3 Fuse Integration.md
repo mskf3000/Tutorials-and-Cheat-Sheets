@@ -36,7 +36,7 @@ A `root`-only `s3fs` setup would go in here:
 
 	sudo nano /etc/passwd-s3fs
 
-And a  per user `s3fs` setup would go in here:
+And a per user `s3fs` setup would go in here:
 
 	nano ~/.passwd-s3fs
 
