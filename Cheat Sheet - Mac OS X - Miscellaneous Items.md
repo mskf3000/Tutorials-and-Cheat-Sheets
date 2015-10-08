@@ -136,6 +136,9 @@ Detect listening network ports:
 
     netstat -tul
 
+Detect listening network ports on Mac OS X
+
+    sudo lsof -i -P | grep -i "listen"
 
 ### Enable and disable Bonjour in Mac OS X 10.9
 
