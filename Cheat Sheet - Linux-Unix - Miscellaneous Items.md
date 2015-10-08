@@ -107,6 +107,14 @@ Note that on some setups, this file exists but shouldn’t be edited because it�
 
     nano /etc/resolv.conf
 
+If somehow the `resolv.conf` file gets mucked up, try regenerating it like this:
+
+    sudo resolvconf -u
+
+And if somehow that command doesn’t work, run this `dpkg-reconfigure` command:
+
+    sudo dpkg-reconfigure resolvconf
+
 ### How to deal with Linux software package archives.
 
 First extract the items from an Ubuntu/Debian `.deb` archive:
