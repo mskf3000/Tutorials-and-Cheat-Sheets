@@ -82,7 +82,11 @@ To delete an existing group, do this:
 
 To add a user to a group, use the following syntax:
 
-    sudo adduser username [groupname]
+    sudo adduser [username] [groupname]
+
+Add a user to a set of groups
+
+    sudo useradd -G [groupname1],[groupname2],[groupname3] [username]
 
 ***
 
