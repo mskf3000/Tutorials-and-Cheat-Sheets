@@ -214,6 +214,20 @@ The `ApplePersistence` setting controls the behavior when apps open up on automa
 
 Note this might disable versioning for documents saved from some applications, but if that is not an issue just feel free to disable it.
 
+### Setting a ComputerName, HostName and LocalHostName in Mac OS X.
+
+You can check the values of ComputerName, HostName and LocalHostName using `scutil --get` like this:
+
+    scutil --get ComputerName
+    scutil --get HostName
+    scutil --get LocalHostName
+
+And you can set those values using `scutil --set` like this:
+
+    sudo scutil --set ComputerName 'yourHostName'
+    sudo scutil --set HostName 'yourHostName'
+    sudo scutil --set LocalHostName  'yourHostName'
+
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
