@@ -180,7 +180,6 @@ Use this SQLite command in Mac OS X 10.6 (Snow Leopard):
 
     /usr/bin/sqlite3 ~/Library/Mail/Envelope\ Index vacuum
 
-
 ### Clean up the iPhoto database.
 
 Go into the `iPhoto Library` directory:
@@ -191,7 +190,6 @@ And run this Bash script to get SQLite to do it’s thing:
 
     for dbase in *.db; do sqlite3 $dbase "vacuum;"; done
 
-
 ### Disable Time Machine asking about new disks.
 
 The basic command:
@@ -201,6 +199,13 @@ The basic command:
 The command running as `sudo` with the full preference file path:
 
     sudo defaults write /Library/Preferences/com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool YES
+
+
+### Restart the ARD (Apple Remote Desktop) client from the command line.
+
+Useful for cases when you can SSH into a server but somehow remote login services via ARD or VNC have crashed or aren’t started:
+
+    sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -restart -agent
 
 ***
 
