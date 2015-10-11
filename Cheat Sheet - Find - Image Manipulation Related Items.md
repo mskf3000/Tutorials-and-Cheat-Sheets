@@ -112,17 +112,17 @@ Change the DPI of JPEG images to 200 dpi:
 
 ### Resize images.
 
-Resize JPEGs to dimensions of 1000 pixels wide or high if they are larger than 1000 pixels:
+Resize JPEG, PNG or TIFF images to dimensions of 1000 pixels wide or high if they are larger than 1000 pixels:
 
-	find 'Desktop/Pics' -type f -name '*.jpg' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    convert -density 72 -units PixelsPerInch -resize "1000x1000>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
-Resize JPEGs to dimensions of 1500 pixels wide or high if they are larger than 1500 pixels:
+Resize JPEG, PNG or TIFF images to dimensions of 1500 pixels wide or high if they are larger than 1500 pixels:
 
-	find 'Desktop/Pics' -type f -name '*.jpg' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    convert -density 72 -units PixelsPerInch -resize "1500x1500>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
