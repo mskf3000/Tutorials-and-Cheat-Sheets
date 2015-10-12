@@ -105,6 +105,36 @@ Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
 
+#### Setting up password-less login with SSH keys.
+
+Generate the RSA key pair. If it asks you for a passphrase just skip that; unless of course you need a passphrase so adjust as you see fit:
+
+	ssh-keygen -t rsa
+
+Output the SSH key from local machine; copy output to clipboard:
+
+	cat ~/.ssh/id_rsa.pub
+
+Or if you are in Mac OS X, then use `pbcopy` like this to copy the `id_rsa.pub` key directly into the clipboard/pasteboard:
+
+    cat ~/.ssh/id_rsa.pub | pbcopy
+
+And then paste that `id_rsa.pub` key into the `authorized_keys` file on the other machine:
+
+	nano ~/.ssh/authorized_keys
+
+Now sure to chmod the `authorized_keys` file to `600` (aka: `-rw-------`):
+
+    ￼sudo chmod 600 ~/.ssh/authorized_keys
+
+Then sure `authorized_keys` is owned by your user:
+
+    sudo chown $USER:$USER ~/.ssh/authorized_keys
+
+And finally make sure the parent `.ssh/` directory has it’s permissions set to `700` (aka: `drwx------`):
+
+    ￼sudo chmod 700 ~/.ssh/
+
 ***
 
 *Cheat Sheet - SSH (c) by Jack Szwergold*
