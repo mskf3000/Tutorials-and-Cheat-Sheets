@@ -71,11 +71,11 @@ Then grab the PHP Suhosin patch:
 
 Now, decompress the PHP source code:
 
-	tar -xf php-5.1.6.tar.gz
+	tar -xf ~/php-5.1.6.tar.gz
 
 Then, decempress the PHP Suhosin patch:
 
-	gzip -d suhosin-patch-5.1.6-0.9.6.patch.gz
+	gzip -d ~/suhosin-patch-5.1.6-0.9.6.patch.gz
 
 Go into the PHP 5.1.6 source directory:
 
