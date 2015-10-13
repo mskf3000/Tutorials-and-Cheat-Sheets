@@ -39,7 +39,7 @@ Now install all of the required development libraries and other stuff:
 	                      flex libfl-dev \
                           libmysqld-dev
 
-#### Thenn, set some symbollic links.
+#### Then, set some symbollic links.
 
 Set the PCRE lib symbolic link for Ubuntu:
 
