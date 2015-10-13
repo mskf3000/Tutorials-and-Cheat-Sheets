@@ -21,7 +21,7 @@ First, run `aptitude update` like this:
 Install the basics for the build:
 
     sudo aptitude install build-essential debhelper fakeroot \
-                          apache2 php5-gd php-pear bzip2
+                          apache2 php5-gd php-pear libpcre3-dev bzip2
 
 Next, install APC via Pecl like this:
 
@@ -29,7 +29,7 @@ Next, install APC via Pecl like this:
 
 Now install all of the required development libraries and other stuff:
 
-	sudo aptitude install apache2-threaded-dev libpcre3-dev \
+	sudo aptitude install apache2-threaded-dev \
 	                      libjpeg8 libjpeg8-dev libxml2-dev \
 	                      libz-dev libfreetype6-dev libpng12-0-dev \
 	                      libbz2-dev libgmp3-dev libpspell-dev \
