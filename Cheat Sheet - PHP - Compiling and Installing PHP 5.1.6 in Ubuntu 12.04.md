@@ -2,8 +2,9 @@
 
 By Jack Szwergold, October 13, 2015
 
+### Preparation and prerequisite setup.
 
-### Backup the already installed Apache PHP module. 
+#### First, backup the already installed Apache PHP module. 
 
 Before you do anything else, create a backup of the already installed `libphp5.so` module by copying it like this:
 
@@ -11,7 +12,7 @@ Before you do anything else, create a backup of the already installed `libphp5.s
 
 The name `libphp5310.so` is derived from the PHP 5.3.10 version of `libphp5.so` that is currently available on Ubuntu 12.04. Adjust name as needed but be sure to rename `libphp5.so` before compiling and installing so you are not left flying in the wind of this setup goes bad.
 
-### Install the PHP source code prerequisites and dependencies.
+#### Next, install the PHP source code prerequisites and dependencies.
 
 First, run `aptitude update` like this:
 
@@ -22,14 +23,11 @@ Install the basics for the build:
     sudo aptitude install build-essential debhelper fakeroot \
                           apache2 php5-gd php-pear libpcre3-dev bzip2
 
-Now install APC via Pecl like this:
+Next, install APC via Pecl like this:
 
     sudo pecl install -f apc
 
-
-
-
-Now install all of the development libraries and other stuff:
+Now install all of the required development libraries and other stuff:
 
 	sudo aptitude install apache2-threaded-dev \
 	                      libjpeg8 libjpeg8-dev libxml2-dev \
@@ -41,7 +39,7 @@ Now install all of the development libraries and other stuff:
 	                      flex libfl-dev \
                           libmysqld-dev
 
-#### Set symbolic links for libraries.
+#### Thenn, set some symbollic links.
 
 Set the PCRE lib symbolic link for Ubuntu:
 
@@ -58,6 +56,8 @@ Set the PNG lib symbolic link for Ubuntu:
 Set the `libmysqlclient` symbolic link for Ubuntu 12.04:
 
 	sudo ln -s /usr/lib/x86_64-linux-gnu/libmysqlclient.so /usr/lib/libmysqlclient.so
+
+***
 
 #### Get the PHP source code.
 
