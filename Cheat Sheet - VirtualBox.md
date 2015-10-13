@@ -6,6 +6,10 @@ By Jack Szwergold, September 19, 2015
 
     nohup VBoxHeadless --startvm "Sandbox" &
 
+Slight variant of the command without a `nohup.out` file being created:
+
+    nohup VBoxHeadless --startvm "Sandbox" >/dev/null 2>&1 &
+
 #### Control the VirtualBox virtual machine state from the command line.
 
     VBoxManage controlvm "Sandbox" pause
