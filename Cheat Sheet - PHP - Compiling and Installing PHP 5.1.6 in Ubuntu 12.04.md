@@ -10,7 +10,7 @@ Before you do anything else, create a backup of the already installed `libphp5.s
 
 	sudo cp /usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp5310.so
 
-The name `libphp5310.so` is derived from the PHP 5.3.10 version of `libphp5.so` that is currently available on Ubuntu 12.04. Adjust name as needed but be sure to rename `libphp5.so` before compiling and installing so you are not left flying in the wind of this setup goes bad.
+The name `libphp5310.so` is derived from the PHP 5.3.10 version of `libphp5.so` that is currently available for installation on Ubuntu 12.04. Adjust name as needed but be sure to rename `libphp5.so` before compiling and installing so you are not left flying in the wind of this setup goes bad.
 
 #### Next, install the PHP source code prerequisites and dependencies.
 
