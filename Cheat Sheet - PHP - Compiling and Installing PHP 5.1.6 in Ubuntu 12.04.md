@@ -37,7 +37,8 @@ Now install all of the required development libraries and other stuff:
 	                      mcrypt libmcrypt-dev \
 	                      pkg-config libcurl4-openssl-dev \
 	                      flex libfl-dev \
-                          libmysqld-dev
+                          libmysqld-dev \
+                          libghc-curl-dev
 
 #### Then, set some library related symbollic links.
 
@@ -95,13 +96,16 @@ Run this `configure` command:
 
 	./configure --prefix=/opt/php516-gd --with-iconv --with-jpeg-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr \
 	    --with-freetype-dir=/usr --enable-gd-native-ttf --with-gd --with-apxs2=/usr/bin/apxs2 \
-		--with-pic --with-bz2  --with-curl --with-gettext --with-gmp --with-openssl --with-pspell \
+		--with-pic --with-bz2  --with-curl --with-gettext --with-gmp --with-pspell \
 		--with-expat-dir=/usr --with-zlib --enable-exif --enable-ftp --enable-mbstring --with-gettext \
 		--enable-magic-quotes --enable-sockets -enable-sysvsem --enable-sysvshm --enable-sysvmsg \
 		--enable-track-vars --enable-trans-sid --enable-wddx --with-kerberos --enable-memory-limit \
 		--enable-shmop --enable-calendar --enable-dbx --enable-dio --with-xml --enable-apc --enable-apc-mmap \
 		--with-pcre-regex=/usr --enable-utf8 \
-		--with-mysql=/usr --with-pdo-mysql=/usr --with-mcrypt=/usr
+		--with-mysql=/usr --with-pdo-mysql=/usr --with-mcrypt=/usr \
+		--with-openssl
+
+***NOTE:** If there are some OpenSSL issues when running `make`, you can ditch the `--with-openssl` item at the end for now. Would be nice to know why OpenSSL chokes nowadays. Maybe related to Heartbleed patch changes?*
 
 Once the `configure` process completes, run `make`:
 
