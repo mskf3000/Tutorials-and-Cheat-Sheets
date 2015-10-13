@@ -105,7 +105,7 @@ Run this `configure` command:
 		--with-mysql=/usr --with-pdo-mysql=/usr --with-mcrypt=/usr \
 		--with-gmp --with-curl --with-openssl
 
-***NOTE:** If there are Curl and OpenSSL issues when running `make`, you can ditch the line with the ` --with-gmp --with-curl --with-openssl` item at the end for now. Would be nice to know why Curl and OpenSSL chokes things. But not worth reseaching now*
+***NOTE:** If there are GMP, Curl and OpenSSL issues when running `make`, you can ditch the line with the ` --with-gmp --with-curl --with-openssl` item at the end for now. Would be nice to know why GMP, Curl and OpenSSL chokes things. But not worth reseaching now*
 
 Once the `configure` process completes, run `make`:
 
