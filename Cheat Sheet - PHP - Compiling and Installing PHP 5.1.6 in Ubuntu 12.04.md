@@ -11,7 +11,7 @@ Before you do anything else, create a backup of the already installed `libphp5.s
 
 The name `libphp5310.so` is derived from the PHP 5.3.10 version of `libphp5.so` that is currently available on Ubuntu 12.04. Adjust name as needed but be sure to rename `libphp5.so` before compiling and installing so you are not left flying in the wind of this setup goes bad.
 
-#### Install the PHP source code prerequisites and dependencies.
+### Install the PHP source code prerequisites and dependencies.
 
 First, run `aptitude update` like this:
 
