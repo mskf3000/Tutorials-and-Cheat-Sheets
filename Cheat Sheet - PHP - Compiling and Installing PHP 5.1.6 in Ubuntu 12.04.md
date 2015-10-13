@@ -11,23 +11,23 @@ Before you do anything else, create a backup of the already installed `libphp5.s
 
 The name `libphp5310.so` is derived from the PHP 5.3.10 version of `libphp5.so` that is currently available on Ubuntu 12.04. Adjust name as needed but be sure to rename `libphp5.so` before compiling and installing so you are not left flying in the wind of this setup goes bad.
 
-***
+#### Install the PHP source code prerequisites and dependencies.
 
-First update the Aptitude sources list:
+First, run `aptitude update` like this:
 
     sudo aptitude update
 
-Install compiling tools:
+Install the basics for the build:
 
-    sudo aptitude install build-essential debhelper fakeroot
+    sudo aptitude install build-essential debhelper fakeroot \
+                          apache2 php5-gd php-pear libpcre3-dev bzip2
 
-Then install basic dependencies:
+Now install APC via Pecl like this:
 
-	sudo aptitude install apache2 php5-gd php-pear libpcre3-dev bzip2
+    sudo pecl install -f apc
 
-Install APC via PECL:
 
-	sudo pecl install apc
+
 
 Now install all of the development libraries and other stuff:
 

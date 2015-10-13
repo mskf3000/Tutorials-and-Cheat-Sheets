@@ -16,7 +16,7 @@ Then, run Pear upgrade to get everything up to date:
 
 	sudo pear upgrade pear
 
-The install via Pecl like this:
+Now install APC via Pecl like this:
 
     sudo pecl install -f apc
 
