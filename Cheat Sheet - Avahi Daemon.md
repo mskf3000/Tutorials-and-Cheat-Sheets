@@ -110,6 +110,20 @@ An example SSH (Secure Shell) service (`ssh.service`):
 	  </service>
 	</service-group>
 
+#### Changing the Avahi icons for Mac OS X.
+
+You can change the icon associated with a service by adding this XML chunklet to the `<service-group>`:
+
+	<service>
+	  <type>_device-info._tcp</type>
+	  <port>0</port>
+	  <txt-record>model=RackMac</txt-record>
+	</service>
+
+Just change the `model=RackMac` to match whatever Mac OS X icon you want. To get ideas on what icons are available, look through this `.plist` file in Mac OS X:
+
+    /System/Library/CoreServices/CoreTypes.bundle/Contents/Info.plist
+
 ***
 
 *Cheat Sheet - Avahi Daemon (c) by Jack Szwergold*
