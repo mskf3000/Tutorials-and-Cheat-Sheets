@@ -89,9 +89,9 @@ Finally, create the PHP 5.1.6 install destination directory:
 
 	sudo mkdir -p /opt/php516-gd
 
-#### Configure, make and install PHP 5.1.6.
+#### Configuring, making and installing PHP 5.1.6.
 
-Configure, make and install:
+Run this `configure` command:
 
 	./configure --prefix=/opt/php516-gd --with-iconv --with-jpeg-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr \
 	    --with-freetype-dir=/usr --enable-gd-native-ttf --with-gd --with-apxs2=/usr/bin/apxs2 \
@@ -103,24 +103,21 @@ Configure, make and install:
 		--with-pcre-regex=/usr --enable-utf8 \
 		--with-mysql=/usr --with-pdo-mysql=/usr --with-mcrypt=/usr
 
-Run `make` and `make install`:
+Once the `configure` process completes, run `make`:
 
 	make
+
+Finally install it by running `sudo make install`:
+
 	sudo make install
 
-Run `nohup make` and `make test`:
-
-	nohup make > ~/make_php-5.1.6.txt &
-	
-Follow the output of the `nohup make` and `make test`:
-
-	tail -f ~/make_php-5.1.6.txt
-
-After the module is installed, rename it to match the version/patch:
+After the module is installed, rename it to match its PHP version number; in this case PHP 5.1.6:
 
 	sudo mv /usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp516-gd.so
 
-The edit the Apache2 PHP config to allow for easy switching between different versions.
+#### Adjust Apache for the new PHP 5.1.6 module.
+
+The edit the Apache PHP config to allow for easy switching between different versions.
 
 	sudo nano /etc/apache2/mods-available/php5.load
 
@@ -133,24 +130,28 @@ Set the `php.ini` file for PHP 5.1.6:
 
 	sudo cp ~/php-5.1.6/php.ini-dist /opt/php516-gd/lib/php.ini
 
-Edit the `php.ini` file for PHP 5.1.6:
+Edit the `php.ini` file for PHP 5.1.6 if you need to:
 
 	sudo nano /opt/php516-gd/lib/php.ini
 
+And with that done, you can restart Apache like this to get the new module loaded in as expected:
+
+    sudo service apache2 restart
+
+If that all went well, checking with `phpinfo()` command should show you now have PHP 5.1.6 running on your Apache web server.
+
 ### How to turn off FreeType hinting in PHP GD 2.0 and lower.
 
-If you’re interested in turning off FreeType hinting, search for the following line in the GD source (gdft.c):
+If you’re interested in turning off FreeType hinting in the source code, search for the following line in the GD source code file named `gdft.c`:
 
     err = FT_Load_Glyph (face, glyph_index, FT_LOAD_DEFAULT);
 
-and replace it with
+And replace that line with this one:
 
     err = FT_Load_Glyph (face, glyph_index, FT_LOAD_NO_HINTING);
 
 How to turn off FreeType hinting in PHP GD 2.0.13:
 
-	sudo nano [path to php source files] ext/gd/libgd/gdft.c
-	
 	sudo nano ~/php-5.1.6/ext/gd/libgd/gdft.c
 
 Search for `render_mode`; should look like this: 
