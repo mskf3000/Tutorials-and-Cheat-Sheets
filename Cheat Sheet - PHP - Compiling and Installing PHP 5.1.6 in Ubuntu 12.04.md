@@ -2,6 +2,17 @@
 
 By Jack Szwergold, October 13, 2015
 
+
+### Backup the already installed Apache PHP module. 
+
+Before you do anything else, create a backup of the already installed `libphp5.so` module by copying it like this:
+
+	sudo cp /usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp5310.so
+
+The name `libphp5310.so` is derived from the PHP 5.3.10 version of `libphp5.so` that is currently available on Ubuntu 12.04. Adjust name as needed but be sure to rename `libphp5.so` before compiling and installing so you are not left flying in the wind of this setup goes bad.
+
+***
+
 First update the Aptitude sources list:
 
     sudo aptitude update
@@ -108,7 +119,6 @@ Follow the output of the `nohup make` and `make test`:
 After the module is installed, rename it to match the version/patch:
 
 	sudo mv /usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp516-gd.so
-	sudo mv /usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp5310.so
 
 The edit the Apache2 PHP config to allow for easy switching between different versions.
 
