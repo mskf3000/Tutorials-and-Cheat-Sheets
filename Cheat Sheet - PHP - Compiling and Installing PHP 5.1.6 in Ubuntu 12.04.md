@@ -4,7 +4,7 @@ By Jack Szwergold, October 13, 2015
 
 ### Preparation and prerequisite setup.
 
-#### First, backup the already installed Apache PHP module. 
+#### First, backup the already installed Apache PHP module.
 
 Before you do anything else, create a backup of the already installed `libphp5.so` module by copying it like this:
 
@@ -154,7 +154,7 @@ How to turn off FreeType hinting in PHP GD 2.0.13:
 
 	sudo nano ~/php-5.1.6/ext/gd/libgd/gdft.c
 
-Search for `render_mode`; should look like this: 
+Search for `render_mode`; should look like this:
 
 	int render_mode = FT_LOAD_DEFAULT;
 	int render_mode = FT_LOAD_RENDER;
