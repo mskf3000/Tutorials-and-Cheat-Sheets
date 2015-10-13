@@ -57,39 +57,39 @@ Set the `libmysqlclient` symbolic link for Ubuntu 12.04:
 
 	sudo ln -s /usr/lib/x86_64-linux-gnu/libmysqlclient.so /usr/lib/libmysqlclient.so
 
-***
+### Building PHP 5.1.6 from source.
 
-#### Get the PHP source code.
+#### Get the PHP source code and patch it.
 
-Download the source code:
+First grab a compressed archive from an official ImageMagick source site:
 
 	curl -O -L http://museum.php.net/php5/php-5.1.6.tar.gz
 
-Decompress the PHP source code:
-
-	tar -xf php-5.1.6.tar.gz
-
-#### Get the PHP Suhosin patch.
-
-Get the PHP Suhosin patch:
+Then grab the PHP Suhosin patch:
 
 	curl -O -L http://download.suhosin.org/suhosin-patch-5.1.6-0.9.6.patch.gz
 
-Decompress the Suhosin patch:
+Now, decompress the PHP source code:
+
+	tar -xf php-5.1.6.tar.gz
+
+Then, decempress the Suhosin patch:
 
 	gzip -d suhosin-patch-5.1.6-0.9.6.patch.gz
 
-Go into the source directory:
+Go into the PHP 5.1.6 source directory:
 
 	cd ~/php-5.1.6
 
-Apply the Suhosin patch:
+With that done, apply the Suhosin patch:
 
 	patch -p 1 -i ~/suhosin-patch-5.1.6-0.9.6.patch
 
-Create the install destination directory:
+Finally, create the PHP 5.1.6 install destination directory:
 
 	sudo mkdir -p /opt/php516-gd
+
+#### Configure, make and install PHP 5.1.6.
 
 Configure, make and install:
 
