@@ -39,21 +39,21 @@ Now install all of the required development libraries and other stuff:
 	                      flex libfl-dev \
                           libmysqld-dev
 
-#### Then, set some symbollic links.
+#### Then, set some library related symbollic links.
 
-Set the PCRE lib symbolic link for Ubuntu:
+Set the PCRE library symbolic link for Ubuntu:
 
     sudo ln -s /usr/lib/x86_64-linux-gnu/libpcre.so /usr/lib/libpcre.so
 
-Set the JPEG lib symbolic link for Ubuntu:
+Set the JPEG library symbolic link for Ubuntu:
 
     sudo ln -s /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib/libjpeg.so
 
-Set the PNG lib symbolic link for Ubuntu:
+Set the PNG library symbolic link for Ubuntu:
 
     sudo ln -s /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/libpng.so
 
-Set the `libmysqlclient` symbolic link for Ubuntu 12.04:
+Set the MySQL library symbolic link for Ubuntu:
 
 	sudo ln -s /usr/lib/x86_64-linux-gnu/libmysqlclient.so /usr/lib/libmysqlclient.so
 
