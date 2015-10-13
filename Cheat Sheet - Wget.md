@@ -38,6 +38,10 @@ Grab all JPG, JPEG, PNG and GIF assets off of a site:
 
 	wget -N -r -l 3 -p -np -A jpg,jpeg,png,gif http://[some url]
 
+Grab all JPG, JPEG, PNG and GIF assets off of a site and span hosts if needed:
+
+	wget -N -r -l 3 -p -np -H -A jpg,jpeg,png,gif http://[some url]
+
 ***
 
 *Cheat Sheet - Wget (c) by Jack Szwergold*
