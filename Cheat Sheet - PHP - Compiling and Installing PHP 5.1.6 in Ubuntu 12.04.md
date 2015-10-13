@@ -96,16 +96,16 @@ Run this `configure` command:
 
 	./configure --prefix=/opt/php516-gd --with-iconv --with-jpeg-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr \
 	    --with-freetype-dir=/usr --enable-gd-native-ttf --with-gd --with-apxs2=/usr/bin/apxs2 \
-		--with-pic --with-bz2  --with-curl --with-gettext --with-gmp --with-pspell \
+		--with-pic --with-bz2 --with-gettext --with-pspell \
 		--with-expat-dir=/usr --with-zlib --enable-exif --enable-ftp --enable-mbstring --with-gettext \
 		--enable-magic-quotes --enable-sockets -enable-sysvsem --enable-sysvshm --enable-sysvmsg \
 		--enable-track-vars --enable-trans-sid --enable-wddx --with-kerberos --enable-memory-limit \
 		--enable-shmop --enable-calendar --enable-dbx --enable-dio --with-xml --enable-apc --enable-apc-mmap \
 		--with-pcre-regex=/usr --enable-utf8 \
 		--with-mysql=/usr --with-pdo-mysql=/usr --with-mcrypt=/usr \
-		--with-openssl
+		--with-gmp --with-curl --with-openssl
 
-***NOTE:** If there are some OpenSSL issues when running `make`, you can ditch the `--with-openssl` item at the end for now. Would be nice to know why OpenSSL chokes nowadays. Maybe related to Heartbleed patch changes?*
+***NOTE:** If there are Curl and OpenSSL issues when running `make`, you can ditch the line with the ` --with-gmp --with-curl --with-openssl` item at the end for now. Would be nice to know why Curl and OpenSSL chokes things. But not worth reseaching now*
 
 Once the `configure` process completes, run `make`:
 
