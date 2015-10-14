@@ -187,26 +187,40 @@ Next, decompress the archive like this:
 Now go into the main Hadoop `lib/native` directory like this:
 
 	cd ~/hadoop-1.0.2/lib/native
-	
+
+Create a Tar archives of the `Linux-amd64-64` and `Linux-i386-32` directories like this:
+
 	sudo tar -cf /usr/share/apache-nutch-1.4/lib/native/Linux-amd64-64.tar Linux-amd64-64
 	sudo tar -cf /usr/share/apache-nutch-1.4/lib/native/Linux-i386-32.tar Linux-i386-32
-	
-Copy the Solr specific libraries to Nutch for a clean and compatible compile.
+
+Then go into the Nutch `lib/native` directory like this:
+
+	cd /usr/share/apache-nutch-1.4/lib/native
+
+And expand the `Linux-amd64-64` and `Linux-i386-32` Tar archives like this:
+
+	sudo tar -xf Linux-amd64-64.tar
+	sudo tar -xf Linux-i386-32.tar
+
+Then copy the Solr specific libraries to the Nutch `lib/native` directory like this:
 
 	sudo cp /usr/share/apache-solr-3.6.0/dist/apache-solr-solrj-3.6.0.jar /usr/share/apache-nutch-1.4/lib/apache-solr-solrj-3.6.0.jar
 	sudo cp /usr/share/apache-solr-3.6.0/dist/apache-solr-core-3.6.0.jar /usr/share/apache-nutch-1.4/lib/apache-solr-core-3.6.0.jar
 
-	
-	cd /usr/share/apache-nutch-1.4/lib/native
-	
-	sudo tar -xf Linux-amd64-64.tar
-	sudo tar -xf Linux-i386-32.tar
+Then go into the main Nutch directory like this:
 
-Compile via `ant`.
+	cd /usr/share/apache-nutch-1.4
+
+And compile via `ant`:
 
     ant
 
-### Adjust Nutch Settings
+Wait and wait and after a while the compile should complete with a message something like this:
+
+	BUILD SUCCESSFUL
+	Total time: 2 minutes 32 seconds
+
+#### Configuring Nutch.
 
 	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-site.xml
 
