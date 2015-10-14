@@ -66,6 +66,8 @@ Run this `configure` command:
 
 	sudo ./configure
 	
+Once the `configure` process completes, run `make`:
+
 	sudo make
 	
 	sudo make test
