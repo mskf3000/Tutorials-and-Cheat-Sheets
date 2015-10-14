@@ -20,6 +20,15 @@ In others it will be installed in a directory like this:
 
     /build/php5-yIoy8f/php5-5.3.10/pear-build-download/
 
+Note the `php5-yIoy8f/` directory name is a hash so it might change on each install. So it’s sometimes best to just run a `find` command like this to find the full path of the file:
+
+    find /build -type f -name "json-1.2.1.tgz"
+
+If you forget `find` syntax like I do sometimes, this combo command with output piped to `grep` works just as well:
+
+    find /build | grep json-1.2.1.tgz
+
+
 	sudo tar -xvf ./json-1.2.1.tgz
 	
 	cd ./json-1.2.1
