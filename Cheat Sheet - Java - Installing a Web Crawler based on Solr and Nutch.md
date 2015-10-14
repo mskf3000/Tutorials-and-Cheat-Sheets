@@ -32,9 +32,9 @@ Next, fine the area for `JAVA_HOME` and set it to the installed Java version lik
 	#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk
 	JAVA_HOME=/usr/lib/jvm/java-6-oracle/jre
 
-### Setting up Solr binary.
+### Setting up Solr.
 
-#### Setting up Solr in Tomcat.
+#### Installing the Solr binary.
 
 Go into the `/usr/share` directory:
 
