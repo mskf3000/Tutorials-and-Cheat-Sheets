@@ -50,13 +50,20 @@ So just go into that directory like this and follow the rest of the steps:
 
 ### More steps.
 
+Next, decompress the archive like this:
+
 	sudo tar -xvf ./json-1.2.1.tgz
-	
-	cd ./json-1.2.1
-	
-	sudo phpize json
+
+Now go into the decompressed directory:
+
+	cd json-1.2.1
+
+Run the `phpize` command on the code like this:
+
 	sudo /opt/php516-gd/bin/phpize json
-	
+
+Run this `configure` command:
+
 	sudo ./configure
 	
 	sudo make
