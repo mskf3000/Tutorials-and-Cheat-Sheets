@@ -172,23 +172,30 @@ Now go into the main Nutch directory in `/usr/share/`:
 
 #### Compiling Solr and Hadoop support for Nutch.
 
-Copy the Solr specific libraries to Nutch for a clean and compatible compile.
+First, go back into your home directory like this:
 
-	sudo cp /usr/share/apache-solr-3.6.0/dist/apache-solr-solrj-3.6.0.jar /usr/share/apache-nutch-1.4/lib/apache-solr-solrj-3.6.0.jar
-	sudo cp /usr/share/apache-solr-3.6.0/dist/apache-solr-core-3.6.0.jar /usr/share/apache-nutch-1.4/lib/apache-solr-core-3.6.0.jar
+    cd ~/
 
-Now get the Hadoop libraries and copy/compile for native Hadoop support in Nutch.
+Grab a compressed archive of `hadoop-1.0.2.tar.gz` from an official Apache Hadoop source site:
 
-	sudo wget http://mirror.uoregon.edu/apache/hadoop/common/hadoop-1.0.2/hadoop-1.0.2.tar.gz
+	curl -O -L http://archive.apache.org/dist/hadoop/common/hadoop-1.0.2/hadoop-1.0.2.tar.gz
 	
-	sudo tar -xf hadoop-1.0.2.tar.gz
+Next, decompress the archive like this:
+
+	tar -xf hadoop-1.0.2.tar.gz
+
+Now go into the main Hadoop `lib/native` directory like this:
+
 	cd ~/hadoop-1.0.2/lib/native
 	
 	sudo tar -cf /usr/share/apache-nutch-1.4/lib/native/Linux-amd64-64.tar Linux-amd64-64
 	sudo tar -cf /usr/share/apache-nutch-1.4/lib/native/Linux-i386-32.tar Linux-i386-32
 	
+Copy the Solr specific libraries to Nutch for a clean and compatible compile.
+
 	sudo cp /usr/share/apache-solr-3.6.0/dist/apache-solr-solrj-3.6.0.jar /usr/share/apache-nutch-1.4/lib/apache-solr-solrj-3.6.0.jar
 	sudo cp /usr/share/apache-solr-3.6.0/dist/apache-solr-core-3.6.0.jar /usr/share/apache-nutch-1.4/lib/apache-solr-core-3.6.0.jar
+
 	
 	cd /usr/share/apache-nutch-1.4/lib/native
 	
