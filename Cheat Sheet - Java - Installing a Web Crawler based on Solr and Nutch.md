@@ -18,14 +18,19 @@ Activate proxy related modules in Apache:
 
 	sudo a2enmod proxy proxy_http
 
-Adjust memory usage in Tomcat:
+Now adjust some basics in the Tomcat6 config:
 
 	sudo nano /etc/default/tomcat6
 
-Find the line for `JAVA_OPTS` and change as follows:
+First, find the line for `JAVA_OPTS` and change as follows:
 
 	# JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC"
 	JAVA_OPTS="-Xms128m -Xmx256m -XX:MaxPermSize=512m -Djava.awt.headless=true -XX:-UseGCOverheadLimit -XX:+UseCompressedOops"
+
+Next, fine the area for `JAVA_HOME` and set it to the installed Java version like this:
+
+	#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk
+	JAVA_HOME=/usr/lib/jvm/java-6-oracle/jre
 
 ### Setting up Solr binary.
 
@@ -93,24 +98,24 @@ And change it like this to add in the `/opt/solr/example/solr/data` path:
 
     <dataDir>${solr.data.dir:/opt/solr/example/solr/data}</dataDir>
 
-Now restart Tomcat like this:
+Create the context file for Solr in Tomcat
+
+	sudo nano /var/lib/tomcat6/conf/Catalina/localhost/solr.xml
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<Context docBase="/opt/solr/example/solr/solr.war" debug="0" crossContext="true">
+	  <Environment name="solr/home" type="java.lang.String" value="/opt/solr/example/solr" override="true"/>
+	</Context>
+
+With that done, restart Tomcat like this:
 
     sudo service tomcat6 restart
 
-If it fails to restart with a message like this:
+And if all goes well, you can access the Solr web via the `solr/` URL path on your webserver like this:
 
-	* no JDK found - please set JAVA_HOME
+    http://sandbox.local:8080/solr/
 
-Then let’s edit the Tomcat config file:
-
-    sudo nano /etc/default/tomcat6
-
-Find the area for `JAVA_HOME` and set it to the installed Java version like this:
-
-	#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk
-	JAVA_HOME=/usr/lib/jvm/java-6-oracle/jre
-
-***
+#### Debugging note.
 
 To deal with an “undefined field text” message open `solrconfig.xml` and defaults in the Solr search handler.
 
@@ -126,23 +131,12 @@ To deal with an “undefined field text” message open `solrconfig.xml` and def
 	     <str name="df">content</str>
 	     <!-- <str name="df">text</str> -->
 
-***
-
-Create the context file for Solr in Tomcat
-
-	sudo nano /var/lib/tomcat6/conf/Catalina/localhost/solr.xml
-	
-	<?xml version="1.0" encoding="utf-8"?>
-	<Context docBase="/opt/solr/example/solr/solr.war" debug="0" crossContext="true">
-	  <Environment name="solr/home" type="java.lang.String" value="/opt/solr/example/solr" override="true"/>
-	</Context>
-
 ### Compile Nutch 1.4 from source.
 
 	cd /usr/share
 	sudo wget http://archive.apache.org/dist/nutch/apache-nutch-1.4-src.tar.gz
 	sudo tar -xf apache-nutch-1.4-src.tar.gz
-	sudo chown searchbot:searchbot -R /usr/share/apache-nutch-1.4
+	sudo chown sysop:sysop -R /usr/share/apache-nutch-1.4
 	cd /usr/share/apache-nutch-1.4
 
 Copy the Solr specific libraries to Nutch for a clean and compatible compile.
