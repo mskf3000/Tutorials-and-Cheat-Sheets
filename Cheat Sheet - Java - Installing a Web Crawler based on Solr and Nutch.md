@@ -27,12 +27,27 @@ Find the line for `JAVA_OPTS` and change as follows:
 	# JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC"
 	JAVA_OPTS="-Xms128m -Xmx256m -XX:MaxPermSize=512m -Djava.awt.headless=true -XX:-UseGCOverheadLimit -XX:+UseCompressedOops"
 
-### Installing the Solr binary.
+### Setting up Solr binary.
+
+#### Setting up Solr in Tomcat.
+
+Go into the `/usr/share` directory:
 
 	cd /usr/share
+
+And grab a compressed archive of `apache-solr-3.6.0.tgz` from an official Apache Solr source site:
+
 	sudo wget http://archive.apache.org/dist/lucene/solr/3.6.0/apache-solr-3.6.0.tgz
+
+Next, decompress the archive like this:
+
 	sudo tar -xf apache-solr-3.6.0.tgz
+
+Now adjust the ownership to the directory like this:
+
 	sudo chown root:root -R /usr/share/apache-solr-3.6.0
+
+#### Setting up Solr in Tomcat.
 
 Setting up Solr in Tomcat.
 
