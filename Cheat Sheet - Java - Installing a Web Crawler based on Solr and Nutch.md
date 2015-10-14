@@ -152,7 +152,7 @@ Go into the `/usr/share` directory:
 
 	cd /usr/share
 
-Grab a compressed archive of `pache-nutch-1.4-src.tar.gz` from an official Apache Nutch source site:
+Grab a compressed archive of `Apache-nutch-1.4-src.tar.gz` from an official Apache Nutch source site:
 
 	sudo curl -O -L http://archive.apache.org/dist/nutch/apache-nutch-1.4-src.tar.gz
 
