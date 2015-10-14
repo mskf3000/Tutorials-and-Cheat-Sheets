@@ -42,7 +42,7 @@ Or you can just update the `locate` database like this:
 
 And the just run this command:
 
-    locate 
+    locate
 
 Which would return something like this:
 
