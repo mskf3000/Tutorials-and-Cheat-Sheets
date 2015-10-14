@@ -40,7 +40,7 @@ Go into the `/usr/share` directory:
 
 	cd /usr/share
 
-And grab a compressed archive of `apache-solr-3.6.0.tgz` from an official Apache Solr source site:
+Grab a compressed archive of `apache-solr-3.6.0.tgz` from an official Apache Solr source site:
 
 	sudo curl -O -L http://archive.apache.org/dist/lucene/solr/3.6.0/apache-solr-3.6.0.tgz
 
@@ -48,7 +48,7 @@ Next, decompress the archive like this:
 
 	sudo tar -xf apache-solr-3.6.0.tgz
 
-Now adjust the ownership to the directory like this:
+Now adjust the ownership and group of the directory to `root` like this:
 
 	sudo chown root:root -R /usr/share/apache-solr-3.6.0
 
@@ -148,11 +148,27 @@ And change the `<str name="df">` to be `content` like this:
 
 ### Compile Nutch 1.4 from source.
 
+Go into the `/usr/share` directory:
+
 	cd /usr/share
+
+Grab a compressed archive of `pache-nutch-1.4-src.tar.gz` from an official Apache Nutch source site:
+
 	sudo wget http://archive.apache.org/dist/nutch/apache-nutch-1.4-src.tar.gz
+
+Next, decompress the archive like this:
+
 	sudo tar -xf apache-nutch-1.4-src.tar.gz
+
+Then adjust the ownership and group of the directory to `sysop` like this:
+
 	sudo chown sysop:sysop -R /usr/share/apache-nutch-1.4
+
+Now go into the main NUtch directory in `/usr/share/`:
+
 	cd /usr/share/apache-nutch-1.4
+
+***
 
 Copy the Solr specific libraries to Nutch for a clean and compatible compile.
 
