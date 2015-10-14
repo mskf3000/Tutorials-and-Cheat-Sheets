@@ -222,6 +222,8 @@ Wait and wait and after a while the compile should complete with a message somet
 
 #### Configuring Nutch.
 
+Open the main Nutch XML config file:
+
 	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-site.xml
 
 Adjust for performance:
