@@ -146,7 +146,9 @@ And change the `<str name="df">` to be `content` like this:
 	     <!-- <str name="df">text</str> -->
 	   </lst>
 
-### Compile Nutch 1.4 from source.
+### Setting up Nutch.
+
+#### Installing the Nutch binary.
 
 Go into the `/usr/share` directory:
 
@@ -168,7 +170,7 @@ Now go into the main Nutch directory in `/usr/share/`:
 
 	cd /usr/share/apache-nutch-1.4
 
-***
+#### Compiling Solr and Hadoop support for Nutch.
 
 Copy the Solr specific libraries to Nutch for a clean and compatible compile.
 
