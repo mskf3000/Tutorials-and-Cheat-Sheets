@@ -115,11 +115,25 @@ And if all goes well, you can access the Solr web via the `solr/` URL path on yo
 
     http://sandbox.local:8080/solr/
 
-#### Debugging note.
+#### Solr ebugging note.
 
 To deal with an “undefined field text” message open `solrconfig.xml` and defaults in the Solr search handler.
 
     sudo nano /opt/solr/example/solr/conf/solrconfig.xml
+
+Find the `requestHandler` config for `/select`:
+
+	<requestHandler name="/select" class="solr.SearchHandler">
+	  <!-- default values for query parameters can be specified, these
+	       will be overridden by parameters in the request
+	    -->
+	   <lst name="defaults">
+	     <str name="echoParams">explicit</str>
+	     <int name="rows">10</int>
+	     <str name="df">text</str>
+	   </lst>
+
+And change the `<str name="df">` to be `content` like this:
 
 	<requestHandler name="/select" class="solr.SearchHandler">
 	  <!-- default values for query parameters can be specified, these
@@ -130,6 +144,7 @@ To deal with an “undefined field text” message open `solrconfig.xml` and def
 	     <int name="rows">10</int>
 	     <str name="df">content</str>
 	     <!-- <str name="df">text</str> -->
+	   </lst>
 
 ### Compile Nutch 1.4 from source.
 
