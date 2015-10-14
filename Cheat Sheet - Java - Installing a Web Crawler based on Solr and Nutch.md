@@ -37,7 +37,7 @@ Go into the `/usr/share` directory:
 
 And grab a compressed archive of `apache-solr-3.6.0.tgz` from an official Apache Solr source site:
 
-	curl -O -L http://archive.apache.org/dist/lucene/solr/3.6.0/apache-solr-3.6.0.tgz
+	sudo curl -O -L http://archive.apache.org/dist/lucene/solr/3.6.0/apache-solr-3.6.0.tgz
 
 Next, decompress the archive like this:
 
