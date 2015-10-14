@@ -2,6 +2,12 @@
 
 By Jack Szwergold, October 14, 2015
 
+## Solr and Nutch web crawler prerequisites.
+
+Solr and Nutch web crawler requires Java 6—or better—to be installed for it to work. So make sure the system you plan on running the Solr and Nutch web crawler on has Java 6 installed and `JAVA_HOME` is properly set on the system.
+
+***
+
 The Nutch user will be `searchbot` running timed cron jobs.
 
     searchbot
@@ -20,16 +26,6 @@ Make sure the following packages are installed on the Ubuntu setup:
 Activate proxy related modules in Apache:
 
 	sudo a2enmod proxy proxy_http
-
-Add `JAVA_HOME` to the system `environment` file:
-
-	sudo nano /etc/environment
-
-Add this line to `environment` if it doesn’t exist already:
-
-	# JAVA_HOME="/usr/lib/jvm/java-6-sun-1.6.0.26"
-	# JAVA_HOME="/usr/lib/jvm/java-6-sun-1.6.0.39"
-	JAVA_HOME="/usr/lib/jvm/java-6-sun"
 
 Adjust memory usage in Tomcat:
 
