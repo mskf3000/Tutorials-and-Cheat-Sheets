@@ -154,7 +154,7 @@ Go into the `/usr/share` directory:
 
 Grab a compressed archive of `pache-nutch-1.4-src.tar.gz` from an official Apache Nutch source site:
 
-	sudo wget http://archive.apache.org/dist/nutch/apache-nutch-1.4-src.tar.gz
+	sudo curl -O -L http://archive.apache.org/dist/nutch/apache-nutch-1.4-src.tar.gz
 
 Next, decompress the archive like this:
 
