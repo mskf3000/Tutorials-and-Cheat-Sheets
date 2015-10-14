@@ -39,10 +39,10 @@ Now install all of the required development libraries and other stuff:
 	                      libbz2-dev libgmp3-dev libpspell-dev \
 	                      php-gettext gettext \
 	                      mcrypt libmcrypt-dev \
-	                      pkg-config libcurl4-openssl-dev \
+	                      pkg-config \
 	                      flex libfl-dev \
                           libmysqld-dev \
-                          libghc-curl-dev
+                          libcurl4-openssl-dev libcurl-dev
 
 #### Then, set some library related symbollic links.
 
