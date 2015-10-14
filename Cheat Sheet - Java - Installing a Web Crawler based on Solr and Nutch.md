@@ -81,17 +81,38 @@ Make sure `tomcat6` is the owner and group for all files/folders in '/opt/solr'
 
     sudo chown tomcat6:tomcat6 -R /opt/solr
 
-Edit the Solr config file as follows.
+Edit the Solr config file as follows:
 
     sudo nano /opt/solr/example/solr/conf/solrconfig.xml
 
-Search for `solr.data.dir` and change it to this.
+Search for `solr.data.dir`. It should like this:
+
+    <dataDir>${solr.data.dir:}</dataDir>
+
+And change it like this to add in the `/opt/solr/example/solr/data` path:
 
     <dataDir>${solr.data.dir:/opt/solr/example/solr/data}</dataDir>
 
+Now restart Tomcat like this:
+
+    sudo service tomcat6 restart
+
+If it fails to restart with a message like this:
+
+	* no JDK found - please set JAVA_HOME
+
+Then let’s edit the Tomcat config file:
+
+    sudo nano /etc/default/tomcat6
+
+Find the area for `JAVA_HOME` and set it to the installed Java version like this:
+
+	#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk
+	JAVA_HOME=/usr/lib/jvm/java-6-oracle/jre
+
 ***
 
-For "undefined field text" open `solrconfig.xml` and defaults in the Solr search handler.
+To deal with an “undefined field text” message open `solrconfig.xml` and defaults in the Solr search handler.
 
     sudo nano /opt/solr/example/solr/conf/solrconfig.xml
 
