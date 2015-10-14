@@ -222,16 +222,13 @@ Wait and wait and after a while the compile should complete with a message somet
 
 #### Configuring Nutch.
 
-Open the main Nutch XML config file:
+First, copy the main Nutch default config file into a site specific file like this:
+
+    sudo cp /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-default.xml /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-site.xml
+
+And now use that Nutch XML config file for adjustments:
 
 	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-site.xml
-
-Adjust for performance:
-
-	<name>fetcher.threads.fetch</name>
-	<name>fetcher.threads.per.host</name>
-	<name>generate.max.count</name>
-	<name>generate.count.mode</name>
 
 Find the `parser.character.encoding.default` XML chunk:
 
@@ -259,6 +256,13 @@ And adjust these user agent related settings which identifies the crawler to the
 	
 	<name>http.agent.email</name>
 	<value>me@preworn.com</value>
+
+Adjust these XML properties for performance:
+
+	<name>fetcher.threads.fetch</name>
+	<name>fetcher.threads.per.host</name>
+	<name>generate.max.count</name>
+	<name>generate.count.mode</name>
 
 ### Adjust Nutch Regex
 
