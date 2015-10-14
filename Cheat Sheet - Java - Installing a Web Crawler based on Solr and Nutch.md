@@ -224,24 +224,24 @@ Wait and wait and after a while the compile should complete with a message somet
 
 	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-site.xml
 
-Adjust for performance.
+Adjust for performance:
 
 	<name>fetcher.threads.fetch</name>
 	<name>fetcher.threads.per.host</name>
 	<name>generate.max.count</name>
 	<name>generate.count.mode</name>
 
-Change from this…
+Find the `parser.character.encoding.default` XML chunk:
 
 	<name>parser.character.encoding.default</name>
 	<value>windows-1252</value>
 
-To this…
+And change it to this:
 
 	<name>parser.character.encoding.default</name>
 	<value>utf-8</value>
 
-Change the settings that identify the crawler to the world.
+And adjust these user agent related settings which identifies the crawler to the world:
 
 	<name>http.agent.name</name>
 	<value>PrewornBot</value>
