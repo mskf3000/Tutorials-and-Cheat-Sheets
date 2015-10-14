@@ -115,7 +115,7 @@ And if all goes well, you can access the Solr web via the `solr/` URL path on yo
 
     http://sandbox.local:8080/solr/
 
-#### Solr ebugging note.
+#### Solr debugging note.
 
 To deal with an “undefined field text” message open `solrconfig.xml` and defaults in the Solr search handler.
 
