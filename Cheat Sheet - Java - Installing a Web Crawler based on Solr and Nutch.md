@@ -8,15 +8,6 @@ Solr and Nutch web crawler requires Java 6—or better—to be installed for it 
 
 ***
 
-The Nutch user will be `searchbot` running timed cron jobs.
-
-    searchbot
-
-Apache Solr and Nutch archives. Download the Solr binary and Nutch source files:
-
-	http://archive.apache.org/dist/lucene/solr/
-	http://archive.apache.org/dist/nutch/
-
 Make sure the following packages are installed on the Ubuntu setup:
 
 	sudo aptitude install tomcat6 \
