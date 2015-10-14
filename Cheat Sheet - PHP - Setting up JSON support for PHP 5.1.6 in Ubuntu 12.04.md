@@ -2,6 +2,10 @@
 
 By Jack Szwergold, October 13, 2015
 
+These were notes from an attempt to get JSON support included for a custom compiled version of PHP 5.1.6. Doesn’t seem to work as expected. Notes are here for reference just in case I need to revisit this process at some point.
+
+***
+
 ### Get the Pear `json-1.2.1.tgz` archive.
 
 First, install JSON via Pecl like this:
