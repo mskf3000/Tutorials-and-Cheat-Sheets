@@ -1,4 +1,4 @@
-# Cheat Sheet - PHP - Setting up JSON suport for PHP 5.1.6 in Ubuntu 12.04
+# Cheat Sheet - PHP - Setting up JSON support for PHP 5.1.6 in Ubuntu 12.04
 
 By Jack Szwergold, October 13, 2015
 
@@ -48,7 +48,7 @@ So just go into that directory like this and follow the rest of the steps:
 
     cd /build/php5-yIoy8f/php5-5.3.10/pear-build-download/
 
-### More steps.
+### Compiling and installing the extension.
 
 Next, decompress the archive like this:
 
@@ -69,11 +69,13 @@ Run this `configure` command:
 Once the `configure` process completes, run `make`:
 
 	sudo make
-	
-	sudo make test
+
+Finally install it by running `sudo make install`:
+
+	sudo make install
 
 ***
 
-*Cheat Sheet - PHP - Setting up JSON suport for PHP 5.1.6 in Ubuntu 12.04 (c) by Jack Szwergold*
+*Cheat Sheet - PHP - Setting up JSON support for PHP 5.1.6 in Ubuntu 12.04 (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
