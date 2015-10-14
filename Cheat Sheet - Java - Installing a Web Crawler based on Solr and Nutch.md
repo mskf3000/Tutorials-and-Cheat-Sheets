@@ -164,7 +164,7 @@ Then adjust the ownership and group of the directory to `sysop` like this:
 
 	sudo chown sysop:sysop -R /usr/share/apache-nutch-1.4
 
-Now go into the main NUtch directory in `/usr/share/`:
+Now go into the main Nutch directory in `/usr/share/`:
 
 	cd /usr/share/apache-nutch-1.4
 
