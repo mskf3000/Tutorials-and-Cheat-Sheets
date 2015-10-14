@@ -52,7 +52,7 @@ Now adjust the ownership to the directory like this:
 
 	sudo chown root:root -R /usr/share/apache-solr-3.6.0
 
-#### Setting up Solr in Tomcat.
+#### Configuring Solr in Tomcat.
 
 Create the Solr working directory:
 
