@@ -49,18 +49,33 @@ Now adjust the ownership to the directory like this:
 
 #### Setting up Solr in Tomcat.
 
-Setting up Solr in Tomcat.
+Create the Solr working directory:
 
-	sudo mkdir /opt/solr
+	sudo mkdir -p /opt/solr
+
+Now go into the main Solr directory in `/usr/share/`:
+
 	cd /usr/share/apache-solr-3.6.0
+
+Create a Tar archive of the `example/` directory:
+
 	sudo tar -cf /opt/solr/example.tar example
+
+Then go into the Solr working directory:
+
 	cd /opt/solr
+
+Decompress the `example.tar` archive:
+
 	sudo tar -xf example.tar
+
+And now copy the Solr `.war` file into the working directory:
+
 	sudo cp /usr/share/apache-solr-3.6.0/dist/apache-solr-3.6.0.war /opt/solr/example/solr/solr.war
 
-Create the 'data' directory in Solr.
+Create the `data/` directory in the Solr working directory:
 
-    sudo mkdir /opt/solr/example/solr/data
+    sudo mkdir -p /opt/solr/example/solr/data
 
 Make sure `tomcat6` is the owner and group for all files/folders in '/opt/solr'
 
