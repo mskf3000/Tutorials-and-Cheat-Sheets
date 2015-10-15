@@ -230,7 +230,7 @@ And now use that Nutch XML config file for adjustments:
 
 	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-site.xml
 
-Find the `parser.character.encoding.default` XML chunk:
+Find the `parser.character.encoding.default` XML property:
 
 	<name>parser.character.encoding.default</name>
 	<value>windows-1252</value>
@@ -238,9 +238,10 @@ Find the `parser.character.encoding.default` XML chunk:
 And change it to this:
 
 	<name>parser.character.encoding.default</name>
+	<!-- <value>windows-1252</value> -->
 	<value>utf-8</value>
 
-And adjust these user agent related settings which identifies the crawler to the world:
+And adjust these user agent related property settings which identifies the crawler to the world:
 
 	<name>http.agent.name</name>
 	<value>PrewornBot</value>
@@ -257,7 +258,7 @@ And adjust these user agent related settings which identifies the crawler to the
 	<name>http.agent.email</name>
 	<value>me@preworn.com</value>
 
-Adjust these XML properties for performance:
+If you feel like tweakig the fetcher for performance, adjust these XML properties for performance:
 
 	<name>fetcher.threads.fetch</name>
 	<name>fetcher.threads.per.host</name>
