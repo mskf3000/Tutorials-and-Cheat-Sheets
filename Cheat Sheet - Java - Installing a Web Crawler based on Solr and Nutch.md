@@ -264,7 +264,10 @@ And adjust these user agent related property settings which identifies the crawl
 
 If you feel like tweaking the fetcher for performance, adjust these XML properties for performance:
 
+	<name>fetcher.server.delay</name>
 	<name>fetcher.threads.fetch</name>
+	<name>fetcher.threads.per.queue</name>
+	<name>fetcher.server.min.delay</name> 
 	<name>fetcher.threads.per.host</name>
 	<name>generate.max.count</name>
 	<name>generate.count.mode</name>
