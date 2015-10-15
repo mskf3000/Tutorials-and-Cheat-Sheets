@@ -271,24 +271,26 @@ If you feel like tweakig the fetcher for performance, adjust these XML propertie
 
 #### Adjusting the Nutch regex stuff.
 
+Open up the Nutch `regex-urlfilter.txt` file like this:
+
 	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/regex-urlfilter.txt
 
-Add the regex patterns that match the domains and hosts you’d like indexed.
+Make sure that we do not accept anything else by commenting out this stuff:
 
-	# allow urls in preworn.com domain
-	+^http://([a-z0-9\-A-Z]*\.)*preworn.com/([a-z0-9\-A-Z]*\/)*
-
-This should be added just before the following regex that denies anything else.
+	# accept anything else
+	#+.
+	
+Add this to the bottom of the file to deny anything else:
 
 	# deny anything else
 	-.
 
-Also, make sure that we do not accept anything else by commenting out this line.
+Then finally add the regex patterns that match the domains and hosts you’d like indexed.
 
-	# accept anything else
-	#+.
+	# allow urls in preworn.com domain
+	+^http://([a-z0-9\-A-Z]*\.)*preworn.com/([a-z0-9\-A-Z]*\/)*
 
-### Adding Seed URLs to Nutch
+#### Adding Seed URLs to Nutch.
 
 	mkdir /usr/share/apache-nutch-1.4/runtime/local/urls
 	
