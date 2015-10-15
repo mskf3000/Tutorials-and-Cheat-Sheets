@@ -18,9 +18,7 @@ Start by injecting the seed url(s) to the Nutch crawl database (`crawldb`):
 
     bin/nutch inject crawl/crawldb urls
 
-***
-
-Generate a fetch list:
+Now generate a fetch list based on the seed URLs:
 
     bin/nutch generate crawl/crawldb crawl/segments
 
