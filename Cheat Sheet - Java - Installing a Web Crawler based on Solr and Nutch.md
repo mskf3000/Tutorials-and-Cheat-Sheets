@@ -273,7 +273,7 @@ If you feel like tweakig the fetcher for performance, adjust these XML propertie
 
 Open up the Nutch `regex-urlfilter.txt` file like this:
 
-	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/regex-urlfilter.txt
+	nano /usr/share/apache-nutch-1.4/runtime/local/conf/regex-urlfilter.txt
 
 Make sure that we do not accept anything else by commenting out this stuff:
 
@@ -292,10 +292,15 @@ Then finally add the regex patterns that match the domains and hosts you’d lik
 
 #### Adding Seed URLs to Nutch.
 
-	mkdir /usr/share/apache-nutch-1.4/runtime/local/urls
-	
+Creat the `urls/` directory like this:
+
+	mkdir -p /usr/share/apache-nutch-1.4/runtime/local/urls
+
+And now create the `seed.txt` file like this:
+
 	nano /usr/share/apache-nutch-1.4/runtime/local/urls/seed.txt
-	[add URLs]
+
+And just ad whatever URLs you wish have crawled to that file. Remember, these are seed URLs so in many cases you can just add the main domain for the site like `http://www.preworn.com` and the system will automatically harvest the child URLs from that see URL.
 
 ### Configuring Solr based on the Nutch schema.
 
