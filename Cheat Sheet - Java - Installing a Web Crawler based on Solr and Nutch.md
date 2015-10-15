@@ -370,10 +370,14 @@ With all that done, restart Tomcat:
 
 ### Install the `index-metatags` plug-in for Nutch and Solr.
 
-	wget https://issues.apache.org/jira/secure/attachment/12510323/metatags-plugin%2Btutorial.zip
+	curl -O -L https://issues.apache.org/jira/secure/attachment/12510323/metatags-plugin%2Btutorial.zip
+
 	unzip metatags-plugin+tutorial
+
 	unzip index-metatags
+
 	mv ~/index-metatags /usr/share/apache-nutch-1.4/runtime/local/plugins/index-metatags
+
 	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-site.xml
 
 Adjust this property so the metatags plugin is loaded.
