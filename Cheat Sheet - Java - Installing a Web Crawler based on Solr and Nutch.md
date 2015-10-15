@@ -308,7 +308,7 @@ Back up the original file:
 
 	sudo mv /opt/solr/example/solr/conf/schema.xml /opt/solr/example/solr/conf/schema.xml.orig
 
-And replace the Solr schema with the one provided by Nutch:
+And replace the default Solr `schema.xml` with the Solr `schema.xml` provided by Nutch:
 
 	sudo cp /usr/share/apache-nutch-1.4/runtime/local/conf/schema.xml /opt/solr/example/solr/conf/schema.xml
 
@@ -316,23 +316,23 @@ Now edit the Solr `schema.xml`:
 
 	sudo nano /opt/solr/example/solr/conf/schema.xml
 
-And change the following line regarding the `content` field from `false`…
+And change the following line regarding the `content` field from `false`:
 
 	<field name="content" type="text" stored="false" indexed="true"/>
 
-To `true`…
+To be `true` like this:
 
 	<field name="content" type="text" stored="true" indexed="true"/>
 
-Make a copy of the `solrconfig.xml` for backup.
+With that done, make a copy of the `solrconfig.xml` for backup:
 
 	sudo cp /opt/solr/example/solr/conf/solrconfig.xml /opt/solr/example/solr/conf/solrconfig.xml.orig
 
-Now edit the `solrconfig.xml` to add a `/nutch` search handler.
+Now edit the `solrconfig.xml` :
 
     sudo nano /opt/solr/example/solr/conf/solrconfig.xml
 
-Add the request handler for `/nutch`.
+And add a request handler for `/nutch`; place it before the closing `</config>` tag:
 
 	<!-- Request handler for nutch -->
 	<requestHandler name="/nutch" class="solr.SearchHandler" >
@@ -364,7 +364,7 @@ Add the request handler for `/nutch`.
 	  </lst>
 	</requestHandler>
 
-Restart Tomcat.
+With all that done, restart Tomcat:
 
     sudo service tomcat6 restart
 
@@ -384,7 +384,7 @@ Adjust this property so the metatags plugin is loaded.
 	  <value>protocol-http|urlfilter-regex|parse-(html|tika)|index-(basic|anchor|metatags|more)|query-(basic|site|url)|response-(json|xml)|summary-basic|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
 	</property>
 
-Configuration for the metatags plugin.
+Configuration for the metatags plugin:
 
 	<!-- Used only if plugin parse-metatags is enabled. -->
 	<property>
@@ -397,7 +397,7 @@ Configuration for the metatags plugin.
 	  </description>
 	</property>
 
-Add fields to be indexed to the Solr schema.
+Add fields to be indexed to the Solr schema:
 
     sudo nano /opt/solr/example/solr/conf/schema.xml
 
@@ -405,7 +405,11 @@ Add fields to be indexed to the Solr schema.
 	<field name="description" type="string" stored="true" indexed="true"/>
 	<field name="keywords" type="string" stored="true" indexed="true"/>
 
-### Test the above stuff out and if it works, restrict Tomcat6 to localhost (127.0.0.1) only.
+### Setting up an Apache reverse proxy for Tomcat.
+
+#### Restrict Tomcat6 to `localhost` (`127.0.0.1`) only.
+
+If you have tested your setup and it works, you might want to restrict the Solr setup to only be accessible via the `localhost`
 
 Open the main Tomcat6 server config file:
 
@@ -426,7 +430,7 @@ And change it to this; note the `address="127.0.0.1"` line:
 	           URIEncoding="UTF-8"
 	           redirectPort="8443" />
 
-### Adjust the Apache2 config to allow the Solr server to be accessed via a reverse proxy.
+#### Adjust the Apache2 config to allow the Solr server to be accessed via a reverse proxy.
 
 	# Settings for adding a trailing slash to the URL
 	RewriteEngine On
@@ -463,31 +467,29 @@ And change it to this; note the `address="127.0.0.1"` line:
 	
 	</IfModule>
 
-### Adjust the `robots.txt` file so the crawler can get better access and speed.
+### Sundry Nutch related items.
+
+#### Adjust the `robots.txt` file so the crawler can get better access and speed.
 
 	User-agent: PrewornBot
 	Crawl-delay: 1
 
-***
-
-### How to purge the Nutch crawl data.
+#### How to purge the Nutch crawl data.
 
 	sudo rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/crawldb/current/*
 	sudo rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/segments/*
 
-### Delete the Solr index.
+#### Delete the Solr index.
 
 	curl http://localhost:8080/solr/update?commit=true -H "Content-Type: text/xml" --data-binary '<delete><query>*:*</query></delete>'
 
-### Optimize the Solr database.
+#### Optimize the Solr database.
 
 If you check “Solr Statistics” and `maxDoc` is higher than `numDocs`, that means an optimization needs to take place.
 
 	curl http://localhost:8080/solr/update?optimize=true
 
-***
-
-### How to follow log files.
+#### How to follow log files.
 
 	sudo tail -f -n 200 /var/log/tomcat6/solr.2012-05-08.log
 	
