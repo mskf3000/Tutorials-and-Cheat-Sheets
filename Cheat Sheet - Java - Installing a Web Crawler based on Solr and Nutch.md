@@ -146,7 +146,9 @@ And change the `<str name="df">` to be `content` like this:
 	     <!-- <str name="df">text</str> -->
 	   </lst>
 
-### Setting up Nutch.
+## Nutch related items.
+
+### Installing Nutch.
 
 #### Installing the Nutch binary.
 
@@ -220,7 +222,9 @@ Wait and wait and after a while the compile should complete with a message somet
 	BUILD SUCCESSFUL
 	Total time: 2 minutes 32 seconds
 
-#### Configuring Nutch.
+### Configuring Nutch.
+
+#### Setting up the core Nutch configuration.
 
 First, copy the main Nutch default config file into a site specific file like this:
 
@@ -265,7 +269,7 @@ If you feel like tweakig the fetcher for performance, adjust these XML propertie
 	<name>generate.max.count</name>
 	<name>generate.count.mode</name>
 
-### Adjust Nutch Regex
+#### Adjusting the Nutch regex stuff.
 
 	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/regex-urlfilter.txt
 
