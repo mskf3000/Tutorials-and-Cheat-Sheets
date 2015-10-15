@@ -1,4 +1,4 @@
-# Cheat Sheet - Java - Using a Web Crawler based on Solr and Nutch
+ Cheat Sheet - Java - Using a Web Crawler based on Solr and Nutch
 
 By Jack Szwergold, October 14, 2015
 
@@ -64,13 +64,18 @@ Or directly with url like:
 
 	http://localhost:8080/solr/select/?q=usc&amp;version=2.2&amp;start=0&amp;rows=10&amp;indent=on&amp;wt=json
 
-#### Search based on date ranges.
+#### Search examplesbased on date ranges.
 
 	timestamp:[* TO NOW]
+
 	createdate:[1976-03-06T23:59:59.999Z TO *]
+
 	createdate:[1995-12-31T23:59:59.999Z TO 2007-03-06T00:00:00Z]
+
 	pubdate:[NOW-1YEAR/DAY TO NOW/DAY+1DAY]
+
 	createdate:[1976-03-06T23:59:59.999Z TO 1976-03-06T23:59:59.999Z+1YEAR]
+
 	createdate:[1976-03-06T23:59:59.999Z/YEAR TO 1976-03-06T23:59:59.999Z]
 
 #### Delete contents based on search criteria.
