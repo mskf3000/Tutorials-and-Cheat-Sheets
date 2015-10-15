@@ -111,7 +111,7 @@ With that done, restart Tomcat like this:
 
     sudo service tomcat6 restart
 
-And if all goes well, you can access the Solr web via the `solr/` URL path on your webserver like this:
+And if all goes well, you can access the Solr web via the `solr/` URL path on your web server like this:
 
     http://sandbox.local:8080/solr/
 
@@ -262,7 +262,7 @@ And adjust these user agent related property settings which identifies the crawl
 	<name>http.agent.email</name>
 	<value>me@preworn.com</value>
 
-If you feel like tweakig the fetcher for performance, adjust these XML properties for performance:
+If you feel like tweaking the fetcher for performance, adjust these XML properties for performance:
 
 	<name>fetcher.threads.fetch</name>
 	<name>fetcher.threads.per.host</name>
@@ -285,7 +285,7 @@ Add the regex patterns that match the domains and hosts you’d like indexed:
 	# allow urls in preworn.com domain
 	+^http://([a-z0-9\-A-Z]*\.)*preworn.com/([a-z0-9\-A-Z]*\/)*
 
-Then finally add this to the bottom of the file to prevent indexing anything else other than conent from that one domain:
+Then finally add this to the bottom of the file to prevent indexing anything else other than content from that one domain:
 
 	# deny anything else
 	-.
@@ -370,7 +370,7 @@ With all that done, restart Tomcat:
 
 ### Install the `index-metatags` plug-in for Nutch and Solr.
 
-By default Nucth won’t pay attention to metatags in HTML documents. Adding this plugin allows meta tags to be filtered.
+By default Nutch won’t pay attention to metatags in HTML documents. Adding this plugin allows meta tags to be filtered.
 
 Grab a compressed archive of `hadoop-1.0.2.tar.gz` from an official Apache Hadoop source site:
 
