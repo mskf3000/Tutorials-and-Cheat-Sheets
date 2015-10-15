@@ -117,7 +117,7 @@ And if all goes well, you can access the Solr web via the `solr/` URL path on yo
 
 #### Solr debugging note.
 
-To deal with an “undefined field text” message open `solrconfig.xml` and defaults in the Solr search handler.
+To deal with an “undefined field text” error message when using the Solr web interface, just open `solrconfig.xml` and defaults in the Solr search handler.
 
     sudo nano /opt/solr/example/solr/conf/solrconfig.xml
 
@@ -372,7 +372,7 @@ With all that done, restart Tomcat:
 
 ### Install the `index-metatags` plug-in for Nutch and Solr.
 
-By default Nutch won’t pay attention to metatags in HTML documents. Adding this plugin allows meta tags to be filtered.
+By default Nutch won’t pay attention to metatags in HTML documents. Adding this plugin allows meta tags to be indexed.
 
 Grab a compressed archive of `hadoop-1.0.2.tar.gz` from an official Apache Hadoop source site:
 
