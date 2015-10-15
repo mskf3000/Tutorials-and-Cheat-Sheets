@@ -275,17 +275,17 @@ Open up the Nutch `regex-urlfilter.txt` file like this:
 
 	nano /usr/share/apache-nutch-1.4/runtime/local/conf/regex-urlfilter.txt
 
-Make sure that we do not accept anything else by commenting out this stuff:
+Make sure that we do not accept anything else by commenting out “accept anything else”:
 
 	# accept anything else
 	#+.
 	
-Add the regex patterns that match the domains and hosts you’d like indexed.
+Add the regex patterns that match the domains and hosts you’d like indexed:
 
 	# allow urls in preworn.com domain
 	+^http://([a-z0-9\-A-Z]*\.)*preworn.com/([a-z0-9\-A-Z]*\/)*
 
-Then finally add this to the bottom of the file to deny anything else:
+Then finally add this to the bottom of the file to prevent indexing anything else other than conent from that one domain:
 
 	# deny anything else
 	-.
