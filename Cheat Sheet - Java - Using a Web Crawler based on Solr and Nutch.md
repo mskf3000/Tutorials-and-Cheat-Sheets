@@ -1,4 +1,4 @@
- Cheat Sheet - Java - Using a Web Crawler based on Solr and Nutch
+# Cheat Sheet - Java - Using a Web Crawler based on Solr and Nutch
 
 By Jack Szwergold, October 14, 2015
 
