@@ -370,15 +370,27 @@ With all that done, restart Tomcat:
 
 ### Install the `index-metatags` plug-in for Nutch and Solr.
 
+By default Nucth won’t pay attention to metatags in HTML documents. Adding this plugin allows meta tags to be filtered.
+
+Grab a compressed archive of `hadoop-1.0.2.tar.gz` from an official Apache Hadoop source site:
+
 	curl -O -L https://issues.apache.org/jira/secure/attachment/12510323/metatags-plugin%2Btutorial.zip
+
+Next, decompress the archive like this:
 
 	unzip metatags-plugin+tutorial
 
+And then decompress this other archive like this:
+
 	unzip index-metatags
+
+Now move the metatags plugin into the Nutch install:
 
 	mv ~/index-metatags /usr/share/apache-nutch-1.4/runtime/local/plugins/index-metatags
 
-	sudo nano /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-site.xml
+And adjust the `nutch-site.xml` to get that plugin loaded:
+
+	nano /usr/share/apache-nutch-1.4/runtime/local/conf/nutch-site.xml
 
 Adjust this property so the metatags plugin is loaded.
 
@@ -388,7 +400,7 @@ Adjust this property so the metatags plugin is loaded.
 	  <value>protocol-http|urlfilter-regex|parse-(html|tika)|index-(basic|anchor|metatags|more)|query-(basic|site|url)|response-(json|xml)|summary-basic|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
 	</property>
 
-Configuration for the metatags plugin:
+And here is the configuration property for the metatags plugin itself; this will index description and keywords from pages:
 
 	<!-- Used only if plugin parse-metatags is enabled. -->
 	<property>
