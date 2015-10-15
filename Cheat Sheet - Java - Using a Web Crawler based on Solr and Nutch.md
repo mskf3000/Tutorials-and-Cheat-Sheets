@@ -2,34 +2,6 @@
 
 By Jack Szwergold, October 14, 2015
 
-### Sundry Nutch related items.
-
-Be sure to adjust your website’s the `robots.txt` file so the crawler can get better access and speed:
-
-	User-agent: PrewornBot
-	Crawl-delay: 1
-
-#### Purge the Nutch and Solr data.
-
-How to purge the Nutch crawl data:
-
-	rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/crawldb/current/*
-	rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/segments/*
-
-Now delete the Solr index like this:
-
-	curl http://localhost:8080/solr/update?commit=true -H "Content-Type: text/xml" --data-binary '<delete><query>*:*</query></delete>'
-
-	Optimize the Solr index like this. If you check “Solr Statistics” and `maxDoc` is higher than `numDocs`, that means an optimization needs to take place.
-
-	curl http://localhost:8080/solr/update?optimize=true
-
-How to follow log files.
-
-	sudo tail -f -n 200 /usr/share/apache-nutch-1.4/runtime/local/logs/hadoop.log
-	sudo tail -f -n 200 /var/log/tomcat6/catalina.2015-10-14.log
-	sudo tail -f -n 200 /var/log/tomcat6/catalina.out
-
 ### Crawling via Bash script.
 
 Just run `crawl_and_index.sh` to get the crawler to run automatically:
@@ -93,6 +65,34 @@ Now the indexed content is available through Solr. You can try to execute search
 Or directly with url like:
 
 	http://127.0.0.1:8080/solr/select/?q=usc&amp;version=2.2&amp;start=0&amp;rows=10&amp;indent=on&amp;wt=json
+
+### Sundry Nutch related items.
+
+Be sure to adjust your website’s the `robots.txt` file so the crawler can get better access and speed:
+
+	User-agent: PrewornBot
+	Crawl-delay: 1
+
+#### Purge the Nutch and Solr data.
+
+How to purge the Nutch crawl data:
+
+	rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/crawldb/current/*
+	rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/segments/*
+
+Now delete the Solr index like this:
+
+	curl http://localhost:8080/solr/update?commit=true -H "Content-Type: text/xml" --data-binary '<delete><query>*:*</query></delete>'
+
+	Optimize the Solr index like this. If you check “Solr Statistics” and `maxDoc` is higher than `numDocs`, that means an optimization needs to take place.
+
+	curl http://localhost:8080/solr/update?optimize=true
+
+How to follow log files.
+
+	sudo tail -f -n 200 /usr/share/apache-nutch-1.4/runtime/local/logs/hadoop.log
+	sudo tail -f -n 200 /var/log/tomcat6/catalina.2015-10-14.log
+	sudo tail -f -n 200 /var/log/tomcat6/catalina.out
 
 ***
 
