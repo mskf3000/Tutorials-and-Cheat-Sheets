@@ -50,21 +50,21 @@ Important: The more number of times you repeat above crawling steps you will get
 
 For Nutch 1.3 and lower.
 
-    bin/nutch solrindex http://127.0.0.1:8080/solr/ crawl/crawldb crawl/linkdb crawl/segments/*
+    bin/nutch solrindex http://localhost:8080/solr/ crawl/crawldb crawl/linkdb crawl/segments/*
 
 For Nutch 1.4 `-linkdb` needs to be specified.
 
-    bin/nutch solrindex http://127.0.0.1:8080/solr/ crawl/crawldb -linkdb crawl/linkdb crawl/segments/*
+    bin/nutch solrindex http://localhost:8080/solr/ crawl/crawldb -linkdb crawl/linkdb crawl/segments/*
 
 ### Search the crawled content in Solr
 
 Now the indexed content is available through Solr. You can try to execute searches from the Solr admin UI from:
 
-	http://127.0.0.1:8080/solr/admin
+	http://localhost:8080/solr/admin
 
 Or directly with url like:
 
-	http://127.0.0.1:8080/solr/select/?q=usc&amp;version=2.2&amp;start=0&amp;rows=10&amp;indent=on&amp;wt=json
+	http://localhost:8080/solr/select/?q=usc&amp;version=2.2&amp;start=0&amp;rows=10&amp;indent=on&amp;wt=json
 
 ### Sundry Nutch related items.
 
