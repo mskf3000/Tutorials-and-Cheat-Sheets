@@ -4,34 +4,30 @@ By Jack Szwergold, October 14, 2015
 
 ### Sundry Nutch related items.
 
-Adjust the `robots.txt` file so the crawler can get better access and speed.
+Be sure to adjust your website’s the `robots.txt` file so the crawler can get better access and speed:
 
 	User-agent: PrewornBot
 	Crawl-delay: 1
 
-How to purge the Nutch crawl data.
+#### Purge the Nutch and Solr data.
+
+How to purge the Nutch crawl data:
 
 	rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/crawldb/current/*
 	rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/segments/*
 
-Delete the Solr index.
+Now delete the Solr index like this:
 
 	curl http://localhost:8080/solr/update?commit=true -H "Content-Type: text/xml" --data-binary '<delete><query>*:*</query></delete>'
 
-Optimize the Solr database.
-
-If you check “Solr Statistics” and `maxDoc` is higher than `numDocs`, that means an optimization needs to take place.
+	Optimize the Solr index like this. If you check “Solr Statistics” and `maxDoc` is higher than `numDocs`, that means an optimization needs to take place.
 
 	curl http://localhost:8080/solr/update?optimize=true
 
 How to follow log files.
 
-	sudo tail -f -n 200 /var/log/tomcat6/solr.2012-05-08.log
-	
 	sudo tail -f -n 200 /usr/share/apache-nutch-1.4/runtime/local/logs/hadoop.log
-	
-	sudo tail -f -n 200 /var/log/tomcat6/catalina.2012-08-15.log
-	
+	sudo tail -f -n 200 /var/log/tomcat6/catalina.2015-10-14.log
 	sudo tail -f -n 200 /var/log/tomcat6/catalina.out
 
 ### Crawling via Bash script.
