@@ -273,7 +273,7 @@ If you feel like tweakig the fetcher for performance, adjust these XML propertie
 
 Open up the Nutch `regex-urlfilter.txt` file like this:
 
-	
+	nano /usr/share/apache-nutch-1.4/runtime/local/conf/regex-urlfilter.txt
 
 Make sure that we do not accept anything else by commenting out this stuff:
 
