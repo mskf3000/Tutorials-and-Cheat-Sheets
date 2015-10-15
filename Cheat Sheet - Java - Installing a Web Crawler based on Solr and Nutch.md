@@ -415,9 +415,11 @@ And here is the configuration property for the metatags plugin itself; this will
 	  </description>
 	</property>
 
-Add fields to be indexed to the Solr schema:
+Add fields to be indexed to the Solr schema by opening up the `schema.xml` file:
 
     sudo nano /opt/solr/example/solr/conf/schema.xml
+
+And adding this fieldset to the mix:
 
 	<!-- fields for metatags plugin -->
 	<field name="description" type="string" stored="true" indexed="true"/>
