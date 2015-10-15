@@ -283,8 +283,7 @@ Make sure that we do not accept anything else by commenting out this stuff:
 Add the regex patterns that match the domains and hosts you’d like indexed.
 
 	# allow urls in preworn.com domain
-	#+^http://([a-z0-9\-A-Z]*\.)*preworn.com/([a-z0-9\-A-Z]*\/)*
-	+^http://([a-z0-9\-A-Z]*\.)*preworn.com/
+	+^http://([a-z0-9\-A-Z]*\.)*preworn.com/([a-z0-9\-A-Z]*\/)*
 
 Then finally add this to the bottom of the file to deny anything else:
 
