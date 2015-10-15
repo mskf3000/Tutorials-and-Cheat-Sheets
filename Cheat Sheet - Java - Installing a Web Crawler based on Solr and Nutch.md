@@ -280,15 +280,16 @@ Make sure that we do not accept anything else by commenting out this stuff:
 	# accept anything else
 	#+.
 	
-Add this to the bottom of the file to deny anything else:
+Add the regex patterns that match the domains and hosts you’d like indexed.
+
+	# allow urls in preworn.com domain
+	#+^http://([a-z0-9\-A-Z]*\.)*preworn.com/([a-z0-9\-A-Z]*\/)*
+	+^http://([a-z0-9\-A-Z]*\.)*preworn.com/
+
+Then finally add this to the bottom of the file to deny anything else:
 
 	# deny anything else
 	-.
-
-Then finally add the regex patterns that match the domains and hosts you’d like indexed.
-
-	# allow urls in preworn.com domain
-	+^http://([a-z0-9\-A-Z]*\.)*preworn.com/([a-z0-9\-A-Z]*\/)*
 
 #### Adding Seed URLs to Nutch.
 
@@ -476,8 +477,8 @@ And change it to this; note the `address="127.0.0.1"` line:
 
 #### How to purge the Nutch crawl data.
 
-	sudo rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/crawldb/current/*
-	sudo rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/segments/*
+	rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/crawldb/current/*
+	rm -rf /usr/share/apache-nutch-1.4/runtime/local/crawl/segments/*
 
 #### Delete the Solr index.
 
