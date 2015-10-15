@@ -268,6 +268,8 @@ If you feel like tweaking the fetcher for performance, adjust these XML properti
 	<name>fetcher.threads.per.host</name>
 	<name>generate.max.count</name>
 	<name>generate.count.mode</name>
+	<name>file.content.limit</name>
+	<name>http.content.limit</name>
 
 #### Adjusting the Nutch regex stuff.
 
