@@ -27,7 +27,7 @@ First, find the line for `JAVA_OPTS` and change as follows:
 	# JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC"
 	JAVA_OPTS="-Xms128m -Xmx256m -XX:MaxPermSize=512m -Djava.awt.headless=true -XX:-UseGCOverheadLimit -XX:+UseCompressedOops"
 
-Next, fine the area for `JAVA_HOME` and set it to the installed Java version like this:
+Next, find the area for `JAVA_HOME` and set it to the installed Java version like this:
 
 	#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk
 	JAVA_HOME=/usr/lib/jvm/java-6-oracle/jre
