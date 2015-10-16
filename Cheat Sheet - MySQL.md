@@ -356,6 +356,10 @@ To make a permanent change to the MySQL install on the machine giving you an iss
 	init-connect='SET NAMES utf8'
 	character-set-server = utf8
 
+In some cases you might need to use this for `init-connect` instead of the simple `SET NAMES utf8` value shown above:
+
+    init-connect='SET collation_connection = utf8_general_ci; SET NAMES utf8;'
+
 ***
 
 *Cheat Sheet - MySQL (c) by Jack Szwergold*
