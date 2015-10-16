@@ -145,7 +145,52 @@ Wait for AWStats to do it’s thing and when it’s done, check the data out in 
 If all looks good, you can add that command as a cron job to get AWStats to do regular updates. This crontab entry would run that command every 30 minutes:
 
 	*/30 * * * * /usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.pl -config=www.example.com -update >/dev/null 2>&1
+
+### Adding GeoIP lookup support to AWStats.
+
+Before anything, you should have core GeoIP lookup items installed on your system already such as the `geoiplookup` binary and related database. Once that is done, you can follow the rest of these instructions.
+
+#### Installing Perl support for GeoIP stuff.
+
+To add GeoIP lookup support to AWStats, you first need to install some Perl modules via CPAN like this. First go into your user’s home directory like this:
+
+	cd ~/
+
+Now enter the CPAN interface like this:
+
+	sudo cpan
+
+First install YAML like this:
+
+	install YAML
+
+Then install the rest of the GeoIP related modules like this:
+
+	install Geo::IP Geo::IPfree Geo::IP::PurePerl URI::Escape Net::IP Net::DNS Net::XWhois Time::HiRes Time::Local
+
+Once that’s done, quit CPAN like this:
+
+	quit
+
+#### Tweaks to be set in AWStats configuration files.
+
+	ls -la /usr/share/awstats-7.*/wwwroot/cgi-bin/aw*.conf
 	
+	#ExtraTrackedRowsLimit=500
+	ExtraTrackedRowsLimit=5000
+	
+	#DNSLookup=1
+	DNSLookup=0
+	
+	SkipHosts=""
+	#SkipHosts="127.0.0.1"
+	
+	#LoadPlugin="geoip GEOIP_STANDARD"
+	LoadPlugin="geoip GEOIP_STANDARD /usr/share/GeoIP/GeoIP.dat"
+	LoadPlugin="geoip_city_maxmind GEOIP_STANDARD /usr/share/GeoIP/GeoIPCity.dat"
+	LoadPlugin="geoip_org_maxmind GEOIP_STANDARD /usr/share/GeoIP/GeoIPASNum.dat"
+
+
 ### Sundry AWStats stuff.
 
 #### Directory ownership and permissions.
