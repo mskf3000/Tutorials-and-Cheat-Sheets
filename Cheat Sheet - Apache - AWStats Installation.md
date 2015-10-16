@@ -172,24 +172,35 @@ Once that’s done, quit CPAN like this:
 
 	quit
 
-#### Tweaks to be set in AWStats configuration files.
+#### Tweaks the AWStats configuration files.
+
+Now find all of your AWStats config files using this simple `ls` command:
 
 	ls -la /usr/share/awstats-7.*/wwwroot/cgi-bin/aw*.conf
-	
+
+And adjust `ExtraTrackedRowsLimit`, `DNSLookup`, `SkipHosts` and `LoadPlugin` values like this.
+
+Adjust `ExtraTrackedRowsLimit` from `500` to `5000`:
+
 	#ExtraTrackedRowsLimit=500
 	ExtraTrackedRowsLimit=5000
+
+Disable `DNSLookup` by setting it to `0`:
 	
 	#DNSLookup=1
 	DNSLookup=0
-	
+
+Disable `SkipHosts` by setting it to an empty value:
+
 	SkipHosts=""
 	#SkipHosts="127.0.0.1"
-	
+
+Finally set the `LoadPlugin` values for various GeoIP related items like this. Note that the data directory paths should be set to match your local setup:
+
 	#LoadPlugin="geoip GEOIP_STANDARD"
 	LoadPlugin="geoip GEOIP_STANDARD /usr/share/GeoIP/GeoIP.dat"
 	LoadPlugin="geoip_city_maxmind GEOIP_STANDARD /usr/share/GeoIP/GeoIPCity.dat"
 	LoadPlugin="geoip_org_maxmind GEOIP_STANDARD /usr/share/GeoIP/GeoIPASNum.dat"
-
 
 ### Sundry AWStats stuff.
 
