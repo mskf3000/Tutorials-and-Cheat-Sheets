@@ -220,12 +220,12 @@ Find `skip-external-locking` and add this setting right after it:
 
 #### Here’s a MySQL script to list out the entire databases size
 
-One script to do some calcuations on MySQL database sizes:
+One script to do some calculations on MySQL database sizes:
 
 	SELECT table_schema "Data Base Name", SUM( data_length + index_length) / 1024 / 1024
 	"Data Base Size in MB" FROM information_schema.TABLES GROUP BY table_schema ;
 
-Another script to do some calcuations on MySQL database sizes:
+Another script to do some calculations on MySQL database sizes:
 
 	SELECT TABLE_NAME, table_rows, data_length, index_length,
 	round(((data_length + index_length) / 1024 / 1024),2) "Size in MB"
@@ -248,11 +248,11 @@ Another script to do some calcuations on MySQL database sizes:
 	ENCLOSED BY '"'
 	LINES TERMINATED BY '\n'
 
-## MAMP MySQL specific stuff.
+### MAMP MySQL specific stuff.
 
 #### Location of `my.cnf` in MAMP 1.9.
 
-Regular MAMP doesn’t have one by default (although apparantly MAMP Pro does) but you can either create one yourself at, or copy one of the `my-*.cnf` files from `/Applications/MAMP/Library/support-files/` as:
+Regular MAMP doesn’t have one by default (although apparently MAMP Pro does) but you can either create one yourself at, or copy one of the `my-*.cnf` files from `/Applications/MAMP/Library/support-files/` as:
 
 	/Applications/MAMP/Library/my.cnf
 
@@ -269,6 +269,57 @@ And for version MAMP 2.0 (and above) the location of the MySQL config file would
 And just copy it to the new location like this:
 
 	cp /Applications/MAMP/Library/support-files/my-medium.cnf /Applications/MAMP/conf/my.cnf
+
+### Setting up a user and related grants in MySQL.
+
+#### Creating a user and setting the grants.
+
+Drop a user:
+
+    DROP USER 'username'@'localhost';
+
+Create a user:
+
+    CREATE USER 'username'@'localhost' IDENTIFIED BY 'aPassW0rd';
+
+Set grants for a user:
+
+	GRANT USAGE ON `some_database`.* TO 'username'@'localhost' IDENTIFIED BY 'username';
+	GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER ON `some_database`.* TO 'username'@'localhost';
+
+Set a user password:
+
+    SET PASSWORD FOR 'username'@'localhost' = PASSWORD('aPassW0rd');
+
+Flushing privileges reloads the grants tables so they can take effect:
+
+    FLUSH PRIVILEGES;
+
+#### Various commands for user and database setup.
+
+Drop a database:
+
+    DROP DATABASE `some_database`;
+
+Create a user:
+
+    CREATE DATABASE `some_database`;
+
+This grants a user all privileges. Only do this for debugging and if you have no choice:
+
+    GRANT ALL PRIVILEGES ON `some_database`.* TO 'username'@'localhost';
+
+Show grants connected to a user:
+
+    SHOW GRANTS FOR 'username'@'localhost';
+
+Revokes grants for a user:
+
+    REVOKE SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, FILE, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER ON `some_database`.* FROM 'username'@'localhost';
+
+Flushing privileges reloads the grants tables so they can take effect:
+
+    FLUSH PRIVILEGES;
 
 ***
 
