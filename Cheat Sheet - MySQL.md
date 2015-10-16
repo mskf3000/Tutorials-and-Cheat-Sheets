@@ -196,12 +196,16 @@ And restart MySQL like this to get those files set and created:
 
 ### MySQL Tuning Primer
 
-	curl -O https://launchpadlibrarian.net/78745738/tuning-primer.sh
-	
-	wget https://launchpadlibrarian.net/78745738/tuning-primer.sh
-	
+Grab a copy of the `tuning-primer.sh` script:
+
+	curl -O -L https://launchpadlibrarian.net/78745738/tuning-primer.sh
+
+Set user executable permissions like this:
+
 	chmod u+x tuning-primer.sh
-	
+
+And run the script like this:
+
 	./tuning-primer.sh
 
 #### Changing a user password from the command line.
