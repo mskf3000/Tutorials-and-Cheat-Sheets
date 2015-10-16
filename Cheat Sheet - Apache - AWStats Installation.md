@@ -146,34 +146,49 @@ If all looks good, you can add that command as a cron job to get AWStats to do r
 
 	*/30 * * * * /usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.pl -config=www.example.com -update >/dev/null 2>&1
 	
+### Sundry AWStats stuff.
 
-#### File and directory ownership and perimssions for AWStats.
+#### Directory ownership and permissions.
+
+***NOTE:** I have a feeling these ownership and permssions notes have to do with the default Ubuntu install of AWStats 6.95, but unsure. Leaving here for reference.*
+
+Here are the core parent AWStats directories:
 
 	sudo ls -la /etc/awstats
 	sudo ls -la /usr/share/awstats
-	sudo ls -la /usr/share/doc/awstats-6.95
+	sudo ls -la /usr/share/doc/awstats-7.03
 	sudo ls -la /var/lib/awstats
-	
+
+If ownership needs to be adjusted, just run these commands:
+
 	sudo chown awstats:awstats -R /etc/awstats
 	sudo chown awstats:awstats -R /usr/share/awstats
-	sudo chown awstats:awstats -R /usr/share/doc/awstats-6.95
+	sudo chown awstats:awstats -R /usr/share/doc/awstats-7.03
 	sudo chown awstats:awstats -R /var/lib/awstats
-	
+
+If permissions need to be adjusted, just run these commands:
+
 	sudo chmod 754 -R /etc/awstats
 	sudo chmod 754 -R /etc/awstats/data
 	sudo chmod 754 -R /usr/share/awstats
-	sudo chmod 754 -R /usr/share/doc/awstats-6.95
+	sudo chmod 754 -R /usr/share/doc/awstats-7.03
 	sudo chmod 754 -R /var/lib/awstats
 	
+As well as these commands:
+
 	sudo chmod 755 /etc/awstats
 	sudo chmod 755 /etc/awstats/data
 	sudo chmod 755 /usr/share/awstats
-	sudo chmod 755 /usr/share/doc/awstats-6.95
+	sudo chmod 755 /usr/share/doc/awstats-7.03
 	sudo chmod 755 /var/lib/awstats
+
+And this command:
 	
 	sudo chmod 775 /usr/share/awstats/wwwroot/cgi-bin/
 
 #### Known icons missing from AWStats.
+
+Some default icons in AWStats are missing. And these are them:
 
 	conf.png
 	csv.png
@@ -188,6 +203,8 @@ If all looks good, you can add that command as a cron job to get AWStats to do r
 	xsl.png
 
 #### URL with query stuff.
+
+If you want AWStats to process data on URLs with query strings, just set `URLWithQuery` to `1`:
 
 	# Keep or remove the query string to the URL in the statistics for individual
 	# pages. This is primarily used to differentiate between the URLs of dynamic
@@ -208,6 +225,8 @@ If all looks good, you can add that command as a cron job to get AWStats to do r
 	URLWithQuery=1
 
 #### Config to report data on media files.
+
+Append this custom report configuration to your website’s core configuration if you want to get AWStats to process data on various image, movie, audio and related media files:
 
 	# 2013-12-30: Adding extra section to track media.
 	ExtraSectionName1="Hits on Images/Movies/Media"
