@@ -110,14 +110,16 @@ If you need to double-check anything in the core AWStats install, just check the
 
 ### Create a config for your web server.
 
-
+Now, create a config file for your web server by copying the `awstats.model.conf` to whatever the name of your server is. Like `awstats.www.example.com.conf` for `www.example.com`:
 
     sudo cp /usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.model.conf /usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.www.example.com.conf
 
-These 3 variables need to be set to whatever the logs are:
+Once that is done, open up the config like this:
 
 	sudo nano /usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.www.example.com.conf
-	
+
+And adjust `LogFile`, `SiteDomain` and `DirData` to match your server setup and AWStats setup:
+
 	LogFile="/var/log/apache2/www.example.com.access.log"
 	SiteDomain="www.example.com"
 	DirData="/usr/share/awstats-7.3/wwwroot/data"
