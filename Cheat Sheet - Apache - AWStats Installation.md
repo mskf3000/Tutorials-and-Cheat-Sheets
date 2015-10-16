@@ -124,17 +124,28 @@ And adjust `LogFile`, `SiteDomain` and `DirData` to match your server setup and 
 	SiteDomain="www.example.com"
 	DirData="/usr/share/awstats-7.3/wwwroot/data"
 
-***
+### Adjust ownership and permissions of the install.
+
+If somehow AWStats chokes due to ownership issues, just run this `chown` command:
 
 	sudo chown root:root -R /usr/share/awstats-7.3
-	
+
+And if you have issues with the AWStats data directory, be sure to run a `chmod` command to make all data in it writable by the group:
+
 	sudo chmod g+w /usr/share/awstats-7.3/wwwroot/data
 
-***
+### Updating AWStats data.
+
+With everything configured and set
+
+	/usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.pl -config=www.example.com -update
+
+Wait for AWStats to do it’s thing and when it’s done, check the data out in the web interface.
+
+If all looks good, you can add that command as a cron job to get AWStats to do regular updates. This crontab entry would run that command every 30 minutes:
 
 	*/30 * * * * /usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.pl -config=www.example.com -update >/dev/null 2>&1
 	
-	/usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.pl -config=www.example.com -update
 
 #### File and directory ownership and perimssions for AWStats.
 
