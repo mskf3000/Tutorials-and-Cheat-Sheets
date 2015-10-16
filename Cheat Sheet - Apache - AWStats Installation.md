@@ -16,7 +16,7 @@ Next, decompress the archive like this:
 
 	sudo tar -xf awstats-7.3.tar.gz
 
-And delete the renmant `awstats-7.3.tar.gz` archive:
+And delete the remnant `awstats-7.3.tar.gz` archive:
 	
 	sudo rm /usr/share/awstats-7.3.tar.gz
 
@@ -97,9 +97,9 @@ Then change the permissions of the file so it’s world readable:
 
 	sudo chmod a+r /usr/share/awstats-7.3/wwwroot/cgi-bin/index.php
 
-### Create the `data/` direcory.
+### Create the `data/` directory.
 
-Just create the `data/` direcory like this:
+Just create the `data/` directory like this:
 
 	sudo mkdir /usr/share/awstats-7.3/wwwroot/data
 
@@ -150,7 +150,7 @@ If all looks good, you can add that command as a cron job to get AWStats to do r
 
 #### Directory ownership and permissions.
 
-***NOTE:** I have a feeling these ownership and permssions notes have to do with the default Ubuntu install of AWStats 6.95, but unsure. Leaving here for reference.*
+***NOTE:** I have a feeling these ownership and permissions notes have to do with the default Ubuntu install of AWStats 6.95, but unsure. Leaving here for reference.*
 
 Here are the core parent AWStats directories:
 
@@ -240,10 +240,12 @@ Append this custom report configuration to your website’s core configuration i
 	MaxNbOfExtra1=25
 	MinHitExtra1=1
 
-#### Config to report data on media file hotlinking.
+#### Config to report data on media file hot-linking.
 
-	# 2013-12-30: Adding extra section to track hotlinking.
-	ExtraSectionName2="Hotlinking pages"
+Append this custom report configuration to your website’s core configuration if you want to get AWStats to process data on sites that might be hot-linking to your site’s assets:
+
+	# 2013-12-30: Adding extra section to track hot-linking.
+	ExtraSectionName2="Hot-linking pages"
 	ExtraSectionCodeFilter2="200 304"
 	ExtraSectionCondition2="URL,\.mpeg$||URL,\.mpg$||URL,\.avi$||URL,\.jpg$||URL,\.gif$||URL,\.png$||URL,\.bmp$||URL,\.jpeg||URL,\.mov||URL,\.flv||URL,\.f4v||URL,\.swf||URL,\.tif||URL,\.tiff||URL,\.xml$"
 	ExtraSectionFirstColumnTitle2="Referrer"
