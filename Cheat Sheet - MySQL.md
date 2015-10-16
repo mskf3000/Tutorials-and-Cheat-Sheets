@@ -325,6 +325,37 @@ Flushing privileges reloads the grants tables so they can take effect:
 
     FLUSH PRIVILEGES;
 
+### Setting MySQL as UTF8 on all connections.
+
+Change the collation a specific database:
+
+	ALTER DATABASE [name of your database] CHARACTER SET utf8;
+
+Change the collation a specific table in a database:
+
+	ALTER TABLE [name of your table] CONVERT TO CHARACTER SET utf8;
+
+Change the collation a specific column in a table in a database:
+
+	ALTER TABLE [name of your table] MODIFY [name of your column] [other settings] CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+Export the current database, create a new database with this command and then reimport the data:
+
+	CREATE DATABASE [name of your database] CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+To make a permanent change to the MySQL install on the machine giving you an issue, go and edit `my.cnf`. The following would set the whole chain to UTF-8:
+
+	[client]
+	default-character-set=utf8
+	
+	[mysql]
+	default-character-set=utf8
+	
+	[mysqld]
+	collation-server = utf8_unicode_ci
+	init-connect='SET NAMES utf8'
+	character-set-server = utf8
+
 ***
 
 *Cheat Sheet - MySQL (c) by Jack Szwergold*
