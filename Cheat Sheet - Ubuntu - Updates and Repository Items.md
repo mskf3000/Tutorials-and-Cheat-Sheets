@@ -110,6 +110,25 @@ Replace all instances of `archive.ubuntu.com` with `old-releases.ubuntu.com` the
 
     sudo apt-get update
 
+### Dealing with loss of Hardware Enablement Stack (HWE) support.
+
+If you are using an older version of Ubuntu such as an LTS (Long Term Support) version and you get a message like this one day on login:
+
+> Your current Hardware Enablement Stack (HWE) is going out of support
+on 08/07/14.  After this date security updates for critical parts (kernel
+and graphics stack) of your system will no longer be available.
+
+The two choices you will be presented with is:
+
+1. Upgrading the whole OS to another major version release.
+2. Upgrading just the HWE to a newer version.
+
+Option two is *always* the best option since a full OS release upgrade risks breaking a lot more than simply upgrading the HWE. So to upgrade the HWE run a command similar to this:
+
+    sudo aptitude install linux-generic-lts-trusty linux-image-generic-lts-trusty
+
+That command is specific to upgrading the HWE in Ubuntu 12.04 so if you see that message come up in another version of Ubuntu be sure to use the command recommended for your particular Ubuntu install.
+
 ***
 
 *Cheat Sheet - Ubuntu - Updates and Repository Items (c) by Jack Szwergold*
