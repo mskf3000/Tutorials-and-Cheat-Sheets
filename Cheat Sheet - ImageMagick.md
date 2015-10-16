@@ -48,6 +48,48 @@ Convert an images DPI (`-density 300`) and make sure the units are pixels per in
 
     convert "Source/test.jpg" -density 300 -units PixelsPerInch "Destination/test.jpg"
 
+#### Getting the color of an image.
+
+This get the RGB color value based on using `-resize`:
+
+    convert test.png -resize 1x1\! -depth 8 txt:- | tail -1
+
+The returned value would be something like this:
+
+    0,0: (185,200,201)  #B9C8C9  srgb(185,200,201)
+
+This get the RGB color value based on using `-scale`:
+
+    convert test.png -scale 1x1\! -depth 8 txt:- | tail -1
+
+The returned value would be something like this:
+
+    0,0: (185,200,200)  #B9C8C8  srgb(185,200,200)
+
+This get the RGB color value based on using `-colors`:
+
+    convert test.png -colors 1 -depth 8 txt:- | tail -1
+
+The returned value would be something like this:
+
+    80,105: (185,200,200)  #B9C8C8  srgb(185,200,200)
+
+This get the grayscale value based on using `-colorspace GRAY`:
+
+    convert test.png -colorspace GRAY -colors 1 -depth 8 txt:- | tail -1
+
+The returned value would be something like this:
+
+    80,105: (197,197,197)  #C5C5C5  gray(197)
+
+This get the CMYK color value based on using `-colorspace GRAY`:
+
+    convert test.png -colorspace CMYK -colors 1 -depth 8 txt:- | tail -1
+
+The returned value would be something like this:
+
+    80,105: (185,200,200)  #B9C8C8  srgb(185,200,200)
+
 ***
 
 *Cheat Sheet - ImageMagick (c) by Jack Szwergold*
