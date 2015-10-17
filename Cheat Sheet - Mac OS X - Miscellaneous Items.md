@@ -273,6 +273,14 @@ The way to handle this from Disk Utility is to select the volume in question, ho
 
     diskutil disableJournal /Volumes/NameOfTheVolumeHere
 
+### How to install basic Mac OS X developer command line tools instead of the full Xcode package.
+
+If you are simply going to compile items from the command line, you don’t need to install the full Xcode package to get things up and running anymore. Instead open up a Terminal window and just type in this command:
+
+    xcode-select --install
+
+A window will pop up with a few different choices. Just choose “Install” (don’t click “Get Xcode”; see picture below) and let the process complete. When done you will have all of the necessary command line tools you need to compile source code in the Terminal in Mac OS X.
+ 
 ***
 
 *Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
