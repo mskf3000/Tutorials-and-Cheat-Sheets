@@ -190,6 +190,63 @@ The returned output from the server should be something like this:
 
 And you are now good to go!
 
+### Various Passenger configuration options.
+
+	PassengerRoot <directory>
+	PassengerRuby <filename>
+	PassengerAppRoot <path/to/root>
+	PassengerSpawnMethod <string>
+	PassengerUseGlobalQueue <on|off>
+	PassengerEnabled <on|off>
+	PassengerTempDir <directory>
+	PassengerUploadBufferDir <directory>
+	PassengerRestartDir <directory>
+	PassengerBufferResponse <on|off>
+
+#### Security Options
+
+	PassengerUserSwitching <on|off>
+	PassengerUser <username>
+	PassengerGroup <group name>
+	PassengerDefaultUser <username>
+	PassengerDefaultGroup <group name>
+	PassengerFriendlyErrorPages <on|off>
+
+#### Resource Control & Optimization Options
+
+	PassengerMaxPoolSize <integer>
+	PassengerMinInstances <integer>
+	PassengerMaxInstancesPerApp <integer>
+	PassengerPoolIdleTime <integer>
+	PassengerMaxRequests <integer>
+	PassengerStatThrottleRate <integer>
+	PassengerPreStart <url>
+	PassengerHighPerformance <on|off>
+
+#### Compatibility Options
+
+	PassengerResolveSymlinksInDocumentRoot <on|off>
+	PassengerAllowEncodedSlashes <on|off>
+
+#### Logging and Debugging Options
+
+	PassengerLogLevel <integer>
+	PassengerDebugLogFile <filename>
+
+#### Ruby on Rails-Specific Options
+
+	RailsAutoDetect <on|off>
+	RailsBaseURI <uri>
+	RailsEnv <string>
+	RailsFrameworkSpawnerIdleTime <integer>
+	RailsAppSpawnerIdleTime <integer>
+
+#### Rack-Specific Options
+
+	RackAutoDetect <on|off>
+	RackBaseURI <uri>
+	RackEnv <string>
+
 ***
 
 *Cheat Sheet - Ruby - Apache Passenger Module Installation and Setup (c) by Jack Szwergold*
