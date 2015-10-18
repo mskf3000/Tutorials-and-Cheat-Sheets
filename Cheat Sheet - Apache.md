@@ -34,6 +34,22 @@ A nice one-liner to count unique IP addresses in an Apache log file:
 
     cat /var/log/apache2/access.log | awk '{print $1}' | sort | uniq -c | sort -n
 
+Activate a virtual host config using `a2ensite`:
+
+    sudo a2ensite sandbox.local.conf
+
+Deactivate a virtual host config using `a2dissite`:
+
+    sudo a2dissite sandbox.local.conf
+
+Activate proxy related modules in Apache:
+
+	sudo a2enmod proxy proxy_http
+
+Deactivate proxy related modules in Apache:
+
+	sudo a2dismod proxy proxy_http
+
 #### Sundry Apache items on an Ubuntu/Debian system.
 
 Get Apache version number:
