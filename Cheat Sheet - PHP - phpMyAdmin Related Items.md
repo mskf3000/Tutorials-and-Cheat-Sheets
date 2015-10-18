@@ -76,10 +76,10 @@ To be disabled like this:
 
 #### Get rid of the PDF export functionality.
 
-Get rid of the PDF export since it uses up lots of RAM and can crash the server:
+If you have no use for the PDF export functionality of phpMyAdmin—and who really needs to export MySQL data as a PDF anyway?—ge rid of the PDF export since it uses up lots of RAM and can crash the server; learned that the hard way:
 
-	sudo rm /usr/share/phpmyadmin/libraries/plugins/export/PMA_ExportPdf.class.php
-	sudo rm /usr/share/phpmyadmin/libraries/plugins/export/ExportPdf.class.php
+	sudo rm -f /usr/share/phpmyadmin/libraries/plugins/export/PMA_ExportPdf.class.php
+	sudo rm -f /usr/share/phpmyadmin/libraries/plugins/export/ExportPdf.class.php
 
 ### Apache username and password setup.
 
