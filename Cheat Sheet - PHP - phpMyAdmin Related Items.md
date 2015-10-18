@@ -20,15 +20,15 @@ Grab a compressed archive of `phpMyAdmin-4.0.10.11-all-languages.tar.gz` from an
 
 Next, decompress the archive like this:
 
-	sudo tar -xf phpMyAdmin-4.0.4.11-all-languages.tar.gz
+	sudo tar -xf phpMyAdmin-4.0.10.11-all-languages.tar.gz
 
-And delete the remnant `phpMyAdmin-4.0.4.11-all-languages.tar.gz` archive:
+And delete the remnant `phpMyAdmin-4.0.10.11-all-languages.tar.gz` archive:
 
-	sudo rm phpMyAdmin-4.0.4.11-all-languages.tar.gz
+	sudo rm phpMyAdmin-4.0.10.11-all-languages.tar.gz
 
-Move and rename the `phpMyAdmin-4.0.4.11-all-languages phpmyadmin` directory to `phpmyadmin`
+Move and rename the `phpMyAdmin-4.0.10.11-all-languages phpmyadmin` directory to `phpmyadmin`
 
-	sudo mv phpMyAdmin-4.0.4.11-all-languages phpmyadmin
+	sudo mv phpMyAdmin-4.0.4.10.11-all-languages phpmyadmin
 
 And copy the sample `config.sample.inc.php` into a working config named `config.inc.php` like this:
 
@@ -102,15 +102,15 @@ Get rid of the PDF export since it uses up lots of RAM and can crash the server:
 
 	sudo curl -O -L https://files.phpmyadmin.net/phpMyAdmin/4.0.10.11/phpMyAdmin-4.0.10.11-all-languages.tar.gz
 
-	sudo tar -xf phpMyAdmin-4.0.4.11-all-languages.tar.gz
+	sudo tar -xf phpMyAdmin-4.0.10.11-all-languages.tar.gz
 
-	sudo rm phpMyAdmin-4.0.4.11-all-languages.tar.gz
+	sudo rm phpMyAdmin-4.0.10.11-all-languages.tar.gz
 
-	sudo cp /usr/share/phpmyadmin/config.inc.php /usr/share/phpMyAdmin-4.0.4.11-all-languages/config.inc.php
+	sudo cp /usr/share/phpmyadmin/config.inc.php /usr/share/phpMyAdmin-4.0.10.11-all-languages/config.inc.php
 
 	sudo rm -rf /usr/share/phpmyadmin/
 
-	sudo mv phpMyAdmin-4.0.4.11-all-languages phpmyadmin
+	sudo mv phpMyAdmin-4.0.10.11-all-languages phpmyadmin
 
 ***
 
