@@ -4,7 +4,7 @@ By Jack Szwergold, October 18, 2015
 
 The purpose of this cheat sheet is to explain the basic concepts behind using an Apache-based load balancer. 
 
-In this setup we are using the same physical server with balancer members running on ports `8001` and `8002` just for an example’s sake. This setup is strictly for proof-of-concept and testing purposes. In a real world implementation, the balancer—and each of the  members of the load balancer—would be it’s own separate server thus balancing the load across different servers.
+In this setup we are using the same physical server with balancer members running on ports `8001` and `8002` just for an example’s sake. This setup is strictly for proof-of-concept and testing purposes. In a real world implementation, the balancer—and each of the members of the load balancer—would be it’s own separate server thus balancing the load across different servers.
 
 ***
 
