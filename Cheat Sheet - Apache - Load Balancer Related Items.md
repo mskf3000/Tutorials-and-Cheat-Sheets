@@ -129,11 +129,11 @@ If you need to disable that virtual host configuration, run this `a2dissite` com
 
 Create the document root directory like this:
 
-    sudo mkdir -p /var/www/sandbox_port8001.local/site
+    sudo mkdir -p /var/www/sandbox.local:8001/site
 
 And add a simple `index.php` page to it like this:
 
-    sudo nano /var/www/sandbox_port8001.local/site/index.php
+    sudo nano /var/www/sandbox.local:8001/site/index.php
 
 Then paste this content to the `index.php` file:
 
@@ -145,24 +145,24 @@ Then paste this content to the `index.php` file:
 
 Create the virtual host configuration for the second node of `sandbox.local` that will run on port `8001`:
 
-    sudo nano /etc/apache2/sites-available/sandbox_port8001.local.conf
+    sudo nano /etc/apache2/sites-available/sandbox.local:8001.conf
 
 And add these contents to that file:
 
     NameVirtualHost *:8001
     Listen 8001
 	<VirtualHost *:8001>
-	  DocumentRoot /var/www/sandbox_port8001.local/site
+	  DocumentRoot /var/www/sandbox.local:8001/site
 	  ServerName sandbox.local
 	  ServerAlias sandbox.local
 	
-	  ErrorLog /var/log/apache2/sandbox_port8001.local.error.log
-	  CustomLog /var/log/apache2/sandbox_port8001.local.access.log combined
+	  ErrorLog /var/log/apache2/sandbox.local:8001.error.log
+	  CustomLog /var/log/apache2/sandbox.local:8001.access.log combined
 
 	  # RewriteEngine On
 	  # RewriteRule .* - [CO=BALANCEID:balancer.www2:.sandbox.local]
 	
-	  <Directory "/var/www/sandbox_port8001.local/site">
+	  <Directory "/var/www/sandbox.local:8001/site">
 	    Options FollowSymLinks
 	
 	    Order Allow,Deny
@@ -182,7 +182,7 @@ And add these contents to that file:
 
 Then enable this virtual host configuration by running this `a2ensite` command:
 
-    sudo a2ensite sandbox_port8001.local.conf
+    sudo a2ensite sandbox.local:8001.conf
 
 And reload Apache for the config to take effect:
 
@@ -190,7 +190,7 @@ And reload Apache for the config to take effect:
 
 If you need to disable that virtual host configuration, run this `a2dissite` command:
 
-    sudo a2dissite sandbox_port8001.local.conf
+    sudo a2dissite sandbox.local:8001.conf
 
 ## Creating the second (port 8002) node web server.
 
@@ -198,11 +198,11 @@ If you need to disable that virtual host configuration, run this `a2dissite` com
 
 Create the document root directory like this:
 
-    sudo mkdir -p /var/www/sandbox_port8002.local/site
+    sudo mkdir -p /var/www/sandbox.local:8002/site
 
 And add a simple `index.php` page to it like this:
 
-    sudo nano /var/www/sandbox_port8002.local/site/index.php
+    sudo nano /var/www/sandbox.local:8002/site/index.php
 
 Then paste this content to the `index.php` file:
 
@@ -214,24 +214,24 @@ Then paste this content to the `index.php` file:
 
 Create the virtual host configuration for the second node of `sandbox.local` that will run on port `8002`:
 
-    sudo nano /etc/apache2/sites-available/sandbox_port8002.local.conf
+    sudo nano /etc/apache2/sites-available/sandbox.local:8002.conf
 
 And add these contents to that file:
 
     NameVirtualHost *:8002
     Listen 8002
 	<VirtualHost *:8002>
-	  DocumentRoot /var/www/sandbox_port8002.local/site
+	  DocumentRoot /var/www/sandbox.local:8002/site
 	  ServerName sandbox.local
 	  ServerAlias sandbox.local
 	
-	  ErrorLog /var/log/apache2/sandbox_port8002.local.error.log
-	  CustomLog /var/log/apache2/sandbox_port8002.local.access.log combined
+	  ErrorLog /var/log/apache2/sandbox.local:8002.error.log
+	  CustomLog /var/log/apache2/sandbox.local:8002.access.log combined
 
 	  # RewriteEngine On
 	  # RewriteRule .* - [CO=BALANCEID:balancer.www2:.sandbox.local]
 
-	  <Directory "/var/www/sandbox_port8002.local/site">
+	  <Directory "/var/www/sandbox.local:8002/site">
 	    Options FollowSymLinks
 	
 	    Order Allow,Deny
@@ -251,7 +251,7 @@ And add these contents to that file:
 
 Then enable this virtual host configuration by running this `a2ensite` command:
 
-    sudo a2ensite sandbox_port8002.local.conf
+    sudo a2ensite sandbox.local:8002.conf
 
 And reload Apache for the config to take effect:
 
@@ -259,7 +259,7 @@ And reload Apache for the config to take effect:
 
 If you need to disable that virtual host configuration, run this `a2dissite` command:
 
-    sudo a2dissite sandbox_port8002.local.conf
+    sudo a2dissite sandbox.local:8002.conf
 
 ***
 
