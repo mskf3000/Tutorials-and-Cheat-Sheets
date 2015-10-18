@@ -48,9 +48,11 @@ And set `$cfg['blowfish_secret']` to whatever that `openssl rand` value is.
 
 ### Tweaking the phpMyAdmin install.
 
-Disable “The phpMyAdmin configuration storage is not completely configured…” message and version check:
+Disable “The phpMyAdmin configuration storage is not completely configured…” (`PmaNoRelation_DisableWarning`) message and the default version check `VersionCheck` by opening up the phpMyAdmin config file:
 
 	sudo nano /usr/share/phpmyadmin/config.inc.php
+
+And add these configuration items to the bottom of the file:
 
 	// Added 2012-04-17 to disable PMA warning & version check.
 	$cfg['PmaNoRelation_DisableWarning'] = true;
