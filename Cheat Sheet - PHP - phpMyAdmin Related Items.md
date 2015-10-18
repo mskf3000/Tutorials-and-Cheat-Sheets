@@ -28,7 +28,7 @@ And delete the remnant `phpMyAdmin-4.0.10.11-all-languages.tar.gz` archive:
 
 Move and rename the `phpMyAdmin-4.0.10.11-all-languages phpmyadmin` directory to `phpmyadmin`
 
-	sudo mv phpMyAdmin-4.0.4.10.11-all-languages phpmyadmin
+	sudo mv phpMyAdmin-4.0.10.11-all-languages phpmyadmin
 
 And copy the sample `config.sample.inc.php` into a working config named `config.inc.php` like this:
 
