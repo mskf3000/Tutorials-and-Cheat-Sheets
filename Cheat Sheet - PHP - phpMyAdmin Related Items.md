@@ -81,11 +81,14 @@ If you have no use for the PDF export functionality of phpMyAdmin—and who real
 	sudo rm -f /usr/share/phpmyadmin/libraries/plugins/export/PMA_ExportPdf.class.php
 	sudo rm -f /usr/share/phpmyadmin/libraries/plugins/export/ExportPdf.class.php
 
-### Apache username and password setup.
+### Setting an Apache config for phpMyAdmin.
 
-	sudo htpasswd -c /etc/apache2/htpasswd_phpmyadmin phpmyadmin
+Now let’s create our own Apache `phpmyadmin.conf` like this:
 
 	sudo nano /etc/apache2/conf.d/phpmyadmin.conf
+
+Here is an example of a basic, secure Apache config for `phpmyadmin`. Note the `Allow from` exceptions; feel free to add any IP address you wish to bypass that secure setup to that list:
+
 
 	<Directory "/usr/share/phpmyadmin">
 
@@ -103,6 +106,12 @@ If you have no use for the PDF export functionality of phpMyAdmin—and who real
 	  Satisfy Any
 
 	</Directory>
+
+And if you are using the secure setup, be sure to setup the `/etc/apache2/htpasswd_phpmyadmin` that config refers to like this:
+
+	sudo htpasswd -c /etc/apache2/htpasswd_phpmyadmin phpmyadmin
+
+That command will initiate the process to create an `htpasswd` for a user named `phpmyadmin` in the file named `htpasswd_phpmyadmin`. When prompted, enter whatever password you would like to use.
 
 ### Upgrading an existing phpMyAdmin install.
 
