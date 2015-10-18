@@ -10,9 +10,17 @@ In this setup we are using the same physical server with balancer members runnin
 
 ## Apache load balancer prerequisites and related items.
 
+#### Activating Apahce proxy modules.
+
 Activate proxy related modules in Apache:
 
 	sudo a2enmod proxy proxy_http proxy_balancer
+
+And reload Apache for the config to take effect:
+
+    sudo service apache2 reload
+
+#### Other items.
 
 Get a summary of the `VirtualHost` configurations for Apache:
  
@@ -107,9 +115,9 @@ Then enable this virtual host configuration by running this `a2ensite` command:
 
 	sudo a2ensite sandbox.local.conf
 	
-And restart Apache for the config to take effect:
+And reload Apache for the config to take effect:
 
-    sudo service apache2 restart
+    sudo service apache2 reload
 
 If you need to disable that virtual host configuration, run this `a2dissite` command:
 
@@ -176,9 +184,9 @@ Then enable this virtual host configuration by running this `a2ensite` command:
 
     sudo a2ensite sandbox_port8001.local.conf
 
-And restart Apache for the config to take effect:
+And reload Apache for the config to take effect:
 
-    sudo service apache2 restart
+    sudo service apache2 reload
 
 If you need to disable that virtual host configuration, run this `a2dissite` command:
 
@@ -245,9 +253,9 @@ Then enable this virtual host configuration by running this `a2ensite` command:
 
     sudo a2ensite sandbox_port8002.local.conf
 
-And restart Apache for the config to take effect:
+And reload Apache for the config to take effect:
 
-    sudo service apache2 restart
+    sudo service apache2 reload
 
 If you need to disable that virtual host configuration, run this `a2dissite` command:
 
