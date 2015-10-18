@@ -87,8 +87,8 @@ And add these contents to that file:
 	  <Proxy balancer://simple_cluster>
 	    # BalancerMember http://sandbox.local:8001 route=www1 loadfactor=10 connectiontimeout=180ms retry=60
 	    # BalancerMember http://sandbox.local:8002 route=www2 loadfactor=10 connectiontimeout=180ms retry=60
-	    BalancerMember http://sandbox.local:8001
-	    BalancerMember http://sandbox.local:8002
+	    BalancerMember http://sandbox.local:8001 loadfactor=10 connectiontimeout=180ms retry=60
+	    BalancerMember http://sandbox.local:8002 loadfactor=10 connectiontimeout=180ms retry=60
 	    ProxySet lbmethod=byrequests
 	    # ProxySet lbmethod=bytraffic
 	    # ProxySet lbmethod=bybusyness
