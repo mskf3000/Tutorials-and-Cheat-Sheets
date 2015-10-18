@@ -12,6 +12,10 @@ Now create the web server with Netcat like this; it will be available on `localh
 
     while true; do { echo -e "HTTP/1.1 200 OK\r\n"; cat index.html; } | nc -l 8000; done
 
+Or you could just have all of that tossed into one large one liner like this:
+
+    while true; do { echo -e "HTTP/1.1 200 OK\r\n"; echo -e Hello world\!; echo -e "\r\n"; } | nc -l 8000; done
+
 Then just check the URL in a web browser like this:
 
     localhost:8000
