@@ -34,6 +34,10 @@ And copy the sample `config.sample.inc.php` into a working config named `config.
 
 	sudo cp /usr/share/phpmyadmin/config.sample.inc.php /usr/share/phpmyadmin/config.inc.php
 
+Now adjust the ownership and group of the directory to `root` like this:
+
+	sudo chown root:root -R /usr/share/phpmyadmin
+
 ### Adding the `blowfish_secret` stuff to the config.
 
 The `blowfish_secret` value is needed for cookie based authentication in phpMyAdmin. To set the value first run this command to generate the `blowfish_secret` value:
@@ -142,6 +146,10 @@ And delete the existing `phpmyadmin` directory:
 Move and rename the `phpMyAdmin-4.0.10.11-all-languages phpmyadmin` directory to `phpmyadmin`:
 
 	sudo mv phpMyAdmin-4.0.10.11-all-languages phpmyadmin
+
+Now adjust the ownership and group of the directory to `root` like this:
+
+	sudo chown root:root -R /usr/share/phpmyadmin
 
 ***
 
