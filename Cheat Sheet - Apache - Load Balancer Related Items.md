@@ -159,6 +159,7 @@ And add these contents to that file:
 	  ErrorLog /var/log/apache2/sandbox.local.8001.error.log
 	  CustomLog /var/log/apache2/sandbox.local.8001.access.log combined
 
+	  # Set a cookie to identify the balancer member and set it to the server domain.
 	  # RewriteEngine On
 	  # RewriteRule .* - [CO=BALANCEID:balancer.www1:.sandbox.local]
 	
@@ -228,6 +229,7 @@ And add these contents to that file:
 	  ErrorLog /var/log/apache2/sandbox.local.8002.error.log
 	  CustomLog /var/log/apache2/sandbox.local.8002.access.log combined
 
+	  # Set a cookie to identify the balancer member and set it to the server domain.
 	  # RewriteEngine On
 	  # RewriteRule .* - [CO=BALANCEID:balancer.www2:.sandbox.local]
 
