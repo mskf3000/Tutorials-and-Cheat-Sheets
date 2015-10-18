@@ -26,7 +26,7 @@ And delete the remnant `phpMyAdmin-4.0.10.11-all-languages.tar.gz` archive:
 
 	sudo rm phpMyAdmin-4.0.10.11-all-languages.tar.gz
 
-Move and rename the `phpMyAdmin-4.0.10.11-all-languages phpmyadmin` directory to `phpmyadmin`
+Move and rename the `phpMyAdmin-4.0.10.11-all-languages phpmyadmin` directory to `phpmyadmin`:
 
 	sudo mv phpMyAdmin-4.0.10.11-all-languages phpmyadmin
 
@@ -76,7 +76,7 @@ To be disabled like this:
 
 #### Get rid of the PDF export functionality.
 
-If you have no use for the PDF export functionality of phpMyAdmin—and who really needs to export MySQL data as a PDF anyway?—ge rid of the PDF export since it uses up lots of RAM and can crash the server; learned that the hard way:
+If you have no use for the PDF export functionality of phpMyAdmin—and who really needs to export MySQL data as a PDF anyway?—get rid of the PDF export since it uses up lots of RAM and can crash the server; learned that the hard way:
 
 	sudo rm -f /usr/share/phpmyadmin/libraries/plugins/export/PMA_ExportPdf.class.php
 	sudo rm -f /usr/share/phpmyadmin/libraries/plugins/export/ExportPdf.class.php
@@ -115,17 +115,31 @@ That command will initiate the process to create an `htpasswd` for a user named 
 
 ### Upgrading an existing phpMyAdmin install.
 
+Go into the `/usr/share` directory:
+
 	cd /usr/share
+
+Grab a compressed archive of `phpMyAdmin-4.0.10.11-all-languages.tar.gz` from an official phpMyAdmin source site:
 
 	sudo curl -O -L https://files.phpmyadmin.net/phpMyAdmin/4.0.10.11/phpMyAdmin-4.0.10.11-all-languages.tar.gz
 
+Next, decompress the archive like this:
+
 	sudo tar -xf phpMyAdmin-4.0.10.11-all-languages.tar.gz
+
+And delete the remnant `phpMyAdmin-4.0.10.11-all-languages.tar.gz` archive:
 
 	sudo rm phpMyAdmin-4.0.10.11-all-languages.tar.gz
 
+Copy the current `config.inc.php` from `phpmyadmin` to sample `phpMyAdmin-4.0.10.11-all-languages` like this:
+
 	sudo cp /usr/share/phpmyadmin/config.inc.php /usr/share/phpMyAdmin-4.0.10.11-all-languages/config.inc.php
 
+And delete the existing `phpmyadmin` directory:
+
 	sudo rm -rf /usr/share/phpmyadmin/
+
+Move and rename the `phpMyAdmin-4.0.10.11-all-languages phpmyadmin` directory to `phpmyadmin`:
 
 	sudo mv phpMyAdmin-4.0.10.11-all-languages phpmyadmin
 
