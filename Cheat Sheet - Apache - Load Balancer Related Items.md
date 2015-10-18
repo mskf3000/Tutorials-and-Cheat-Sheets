@@ -77,6 +77,8 @@ And add these contents to that file:
 	  # ProxyPassReverse / http://sandbox.local:8002/
 
 	  <Proxy balancer://simple_cluster>
+	    # BalancerMember http://sandbox.local:8001/ loadfactor=10 route=1 connectiontimeout=180ms retry=60
+	    # BalancerMember http://sandbox.local:8002/ loadfactor=10 route=2 connectiontimeout=180ms retry=60
 	    BalancerMember http://sandbox.local:8001/
 	    BalancerMember http://sandbox.local:8002/
 	    ProxySet lbmethod=byrequests
@@ -148,6 +150,9 @@ And add these contents to that file:
 	
 	  ErrorLog /var/log/apache2/sandbox_port8001.local.error.log
 	  CustomLog /var/log/apache2/sandbox_port8001.local.access.log combined
+
+	  # RewriteEngine On
+	  # RewriteRule .* - [CO=BALANCEID:balancer.www2:.sandbox.local]
 	
 	  <Directory "/var/www/sandbox_port8001.local/site">
 	    Options FollowSymLinks
@@ -214,7 +219,10 @@ And add these contents to that file:
 	
 	  ErrorLog /var/log/apache2/sandbox_port8002.local.error.log
 	  CustomLog /var/log/apache2/sandbox_port8002.local.access.log combined
-	
+
+	  # RewriteEngine On
+	  # RewriteRule .* - [CO=BALANCEID:balancer.www2:.sandbox.local]
+
 	  <Directory "/var/www/sandbox_port8002.local/site">
 	    Options FollowSymLinks
 	
