@@ -48,6 +48,8 @@ And set `$cfg['blowfish_secret']` to whatever that `openssl rand` value is.
 
 ### Tweaking the phpMyAdmin install.
 
+#### Disable storage and version check warnings.
+
 Disable “The phpMyAdmin configuration storage is not completely configured…” (`PmaNoRelation_DisableWarning`) message and the default version check `VersionCheck` by opening up the phpMyAdmin config file:
 
 	sudo nano /usr/share/phpmyadmin/config.inc.php
@@ -58,17 +60,21 @@ And add these configuration items to the bottom of the file:
 	$cfg['PmaNoRelation_DisableWarning'] = true;
 	$cfg['VersionCheck'] = false;
 
-Disable “Content-Security-Policy” headers so Safari 5.1.9 can properly load images:
+#### Disable “Content-Security-Policy” headers.
+
+And disable “Content-Security-Policy” headers so Safari in Mac OS X can properly load images by opening up `Header.class.php`:
 
 	sudo nano /usr/share/phpmyadmin/libraries/Header.class.php
 
-Go to the function `public function sendHttpHeaders()` and change this line:
+Search for `if (! defined('TESTSUITE')) {` in `public function sendHttpHeaders()` and change that line:
 
 	if (! defined('TESTSUITE')) {
 
-To read like this:
+To be disabled like this:
 
 	if (FALSE && ! defined('TESTSUITE')) {
+
+#### Get rid of the PDF export functionality.
 
 Get rid of the PDF export since it uses up lots of RAM and can crash the server:
 
