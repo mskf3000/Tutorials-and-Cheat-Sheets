@@ -160,8 +160,9 @@ And add these contents to that file:
 	  CustomLog /var/log/apache2/sandbox.local.8001.access.log combined
 
 	  # Set a cookie to identify the balancer member and set it to the server domain.
-	  # RewriteEngine On
-	  # RewriteRule .* - [CO=BALANCEID:balancer.www1:.sandbox.local]
+      # RewriteEngine On
+      # ewriteCond %{HTTP_X_FORWARDED_HOST} ^(www\.)?sandbox\.local/ [NC]
+      # RewriteRule .* - [CO=BALANCEID:balancer.www1:.sandbox.local] [L]
 	
 	  <Directory "/var/www/sandbox.local.8001/site">
 	    Options FollowSymLinks
@@ -230,8 +231,9 @@ And add these contents to that file:
 	  CustomLog /var/log/apache2/sandbox.local.8002.access.log combined
 
 	  # Set a cookie to identify the balancer member and set it to the server domain.
-	  # RewriteEngine On
-	  # RewriteRule .* - [CO=BALANCEID:balancer.www2:.sandbox.local]
+      # RewriteEngine On
+      # ewriteCond %{HTTP_X_FORWARDED_HOST} ^(www\.)?sandbox\.local/ [NC]
+      # RewriteRule .* - [CO=BALANCEID:balancer.www2:.sandbox.local] [L]
 
 	  <Directory "/var/www/sandbox.local.8002/site">
 	    Options FollowSymLinks
