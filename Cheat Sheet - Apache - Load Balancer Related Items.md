@@ -78,12 +78,15 @@ And add these contents to that file:
 	    Allow from all
 	  </Proxy>
 
+	  # Set the 'ProxyPass' stuff.
 	  ProxyPass /balancer-manager !
 	  ProxyPass / balancer://simple_cluster/ stickysession=BALANCEID nofailover=On
 
-	  # ProxyPassReverse / http://sandbox.local:8001/
-	  # ProxyPassReverse / http://sandbox.local:8002/
+	  # Set the 'ProxyPassReverse' stuff.
+	  ProxyPassReverse / http://sandbox.local:8001/
+	  ProxyPassReverse / http://sandbox.local:8002/
 
+	  # Define the load balancer itself.
 	  <Proxy balancer://simple_cluster>
 	    # BalancerMember http://sandbox.local:8001 route=www1 loadfactor=10 connectiontimeout=180ms retry=60
 	    # BalancerMember http://sandbox.local:8002 route=www2 loadfactor=10 connectiontimeout=180ms retry=60
