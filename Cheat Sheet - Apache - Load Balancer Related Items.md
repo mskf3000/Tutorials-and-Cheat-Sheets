@@ -16,9 +16,9 @@ Activate proxy related modules in Apache:
 
 	sudo a2enmod proxy proxy_http proxy_balancer
 
-And reload Apache for the config to take effect:
+And restart Apache for the modules to be loaded:
 
-    sudo service apache2 reload
+    sudo service apache2 restart
 
 #### Other items.
 
