@@ -161,7 +161,7 @@ And add these contents to that file:
 
 	  # Set a cookie to identify the balancer member and set it to the server domain.
       # RewriteEngine On
-      # ewriteCond %{HTTP_X_FORWARDED_HOST} ^(www\.)?sandbox\.local/ [NC]
+      # RewriteCond %{HTTP_X_FORWARDED_HOST} ^(www\.)?sandbox\.local/ [NC]
       # RewriteRule .* - [CO=BALANCEID:balancer.www1:.sandbox.local] [L]
 	
 	  <Directory "/var/www/sandbox.local.8001/site">
@@ -232,7 +232,7 @@ And add these contents to that file:
 
 	  # Set a cookie to identify the balancer member and set it to the server domain.
       # RewriteEngine On
-      # ewriteCond %{HTTP_X_FORWARDED_HOST} ^(www\.)?sandbox\.local/ [NC]
+      # RewriteCond %{HTTP_X_FORWARDED_HOST} ^(www\.)?sandbox\.local/ [NC]
       # RewriteRule .* - [CO=BALANCEID:balancer.www2:.sandbox.local] [L]
 
 	  <Directory "/var/www/sandbox.local.8002/site">
