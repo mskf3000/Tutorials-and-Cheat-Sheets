@@ -1,4 +1,4 @@
-## Cheat Sheet - Sysstat
+# Cheat Sheet - Sysstat
 
 By Jack Szwergold, September 16, 2015
 
