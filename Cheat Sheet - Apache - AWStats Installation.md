@@ -198,9 +198,9 @@ Disable `SkipHosts` by setting it to an empty value:
 Finally set the `LoadPlugin` values for various GeoIP related items like this. Note that the data directory paths should be set to match your local setup:
 
 	#LoadPlugin="geoip GEOIP_STANDARD"
-	LoadPlugin="geoip GEOIP_STANDARD /usr/share/GeoIP/GeoIP.dat"
-	LoadPlugin="geoip_city_maxmind GEOIP_STANDARD /usr/share/GeoIP/GeoIPCity.dat"
-	LoadPlugin="geoip_org_maxmind GEOIP_STANDARD /usr/share/GeoIP/GeoIPASNum.dat"
+	LoadPlugin="geoip GEOIP_STANDARD /usr/local/share/GeoIP/GeoIP.dat"
+	LoadPlugin="geoip_city_maxmind GEOIP_STANDARD /usr/local/share/GeoIP/GeoIPCity.dat"
+	LoadPlugin="geoip_org_maxmind GEOIP_STANDARD /usr/local/share/GeoIP/GeoIPASNum.dat"
 
 ### Sundry AWStats stuff.
 
