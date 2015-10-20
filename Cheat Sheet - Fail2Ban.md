@@ -64,7 +64,7 @@ And since Fail2Ban basically uses IPTables to set rules, you can check the rules
 
     sudo iptables -L -n
 
-The output would be something like this; just pay attention to the `fail2ban` lines the rest are based on how deep and complex your IPTables rules are:
+The output would be something like this; just pay attention to the `fail2ban` lines the rest of the rules are based on how deep and complex your IPTables rules are:
 
 	Chain INPUT (policy ACCEPT)
 	target     prot opt source               destination
