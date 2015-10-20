@@ -58,29 +58,7 @@ Then run `autoreconf` like this:
     curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
     curl -O -L http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
 
-#### Move the GeoIP databases to the proper directory on Linux systems.
-
-On Linux systems move the databases to `/usr/share/`:
-
-    sudo mv ~/GeoIP.dat.gz /usr/share/GeoIP/
-    sudo mv ~/GeoLiteCity.dat.gz /usr/share/GeoIP/
-    sudo mv ~/GeoIPASNum.dat.gz /usr/share/GeoIP/
-
-Decompress the database files like this:
-
-    sudo gzip -d -f /usr/share/GeoIP/GeoIP.dat.gz
-    sudo gzip -d -f /usr/share/GeoIP/GeoLiteCity.dat.gz
-    sudo gzip -d -f /usr/share/GeoIP/GeoIPASNum.dat.gz
-
-    sudo mv /usr/share/GeoIP/GeoLiteCity.dat /usr/share/GeoIP/GeoIPCity.dat
-
-    sudo chown root:root -R /usr/share/GeoIP/
-
-Check to see if the GeoIP databases are set:
-
-    ls -la /usr/share/GeoIP/
-
-#### Move the GeoIP databases to the proper directory on Mac OS X.
+#### Move the GeoIP databases to their proper directory.
 
 On Mac OS X move the databases to `/usr/local/share/`:
 
