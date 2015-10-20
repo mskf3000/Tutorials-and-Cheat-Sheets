@@ -49,7 +49,7 @@ If you need to enable the HTTP/HTTPS config for Apache, just set this config to 
 
 You can follow the logs here:
 
-    tail -f -n 200 /var/log/fail2ban.log
+    sudo tail -f -n 200 /var/log/fail2ban.log
 
 Log output would look something like this:
 
