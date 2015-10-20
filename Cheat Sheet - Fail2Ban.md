@@ -22,6 +22,7 @@ Add the IP addresses to be ignored like this; the default is simply `localhost` 
 
 Let’s fatten that list up a bit by adding these other known local address ranges into play:
 
+    # ignoreip = 127.0.0.1/8
     ignoreip = 127.0.0.0/8 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16
 
 The SSH config for Fail2Ban is enabled by default and it’s config looks like this:
