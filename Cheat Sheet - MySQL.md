@@ -63,6 +63,18 @@ Login as root:
 
     mysql -u root -p
 
+#### Managing the MySQL `init.d` scripts.
+
+By default, MySQL should get an `init.d` installed. But if somehow it didn’t, run this `update-rc.d` command:
+
+	sudo update-rc.d mysql defaults
+
+And if for some reason you are running a server where MySQL is not needed, you can simply disable it from coming up on boot like this:
+
+	sudo update-rc.d -f mysql remove
+
+The nice thing about this is it disables the MySQL server but the MySQL client is still installed on the system if you need to remotely connect into something somewhere. And you can even start up the MySQL server manually if needed.
+
 #### Securing an initial MySQL installation by removing test items.
 
 If your version of MySQL supports it, just run `mysql_secure_installation` to secure the installation and get rid of test databases and users:
