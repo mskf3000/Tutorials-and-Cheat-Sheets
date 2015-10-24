@@ -2,13 +2,48 @@
 
 By Jack Szwergold, October 19, 2015
 
-#### Install and configure Fail2Ban.
+### Install Fail2Ban.
 
 First, install Fail2Ban via `aptitude` like this; this will install verison 0.8.6 of Fail2Ban on Ubuntu 12.04:
 
     sudo aptitude install fail2ban
 
-Then copy the default `jail.conf` file to a `jail.local`
+But like I said, it installs Fail2Ban version 0.8.6. The problem with that? Beginning with version 0.8.7 a `recidive` filter was introduced that allows you to extend a banning period for persistent abusers. Very useful tool. So the best way to get that functionality is to install the 0.8.11 `.deb` package manually like this.
+
+First purge the older 0.8.6 version of Fail2Ban that was installed like this:
+
+    sudo aptitude purge fail2ban
+
+With that done, let’s manually install the dependencies manually like this:
+
+    sudo aptitude install gamin libgamin0 python-central python-gamin python-support
+
+Then grab the raw `.deb` for Fail2Ban 0.8.11 like this:
+
+    curl -O -L http://mirrors.kernel.org/ubuntu/pool/universe/f/fail2ban/fail2ban_0.8.11-1_all.deb
+
+And then install it like this:
+
+    sudo dpkg -i fail2ban_0.8.11-1_all.deb
+
+Once that is done, check the version of Fail2Ban like this:
+
+    fail2ban-client --version
+    
+Returned output should be something like this and you should be good to go:
+
+	Fail2Ban v0.8.11
+	
+	Copyright (c) 2004-2008 Cyril Jaquier, 2008- Fail2Ban Contributors
+	Copyright of modifications held by their respective authors.
+	Licensed under the GNU General Public License v2 (GPL).
+	
+	Written by Cyril Jaquier <cyril.jaquier@fail2ban.org>.
+	Many contributions by Yaroslav O. Halchenko <debian@onerussian.com>.
+
+### Configure Fail2Ban.
+
+Once it’s installed, copy the default `jail.conf` file to a `jail.local`
 
     sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
