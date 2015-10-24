@@ -74,16 +74,6 @@ The SSH config for Fail2Ban is enabled by default and it’s config looks like t
 	logpath  = /var/log/auth.log
 	maxretry = 6
 
-If you need to enable the HTTP/HTTPS config for Apache, just set this config to `enabled  = true`:
-
-	[apache]
-	
-	enabled  = true
-	port     = http,https
-	filter   = apache-auth
-	logpath  = /var/log/apache*/*error.log
-	maxretry = 6
-
 And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` so repeat offenders are banned for a nice long time:
 
 	# Jail for more extended banning of persistent abusers
