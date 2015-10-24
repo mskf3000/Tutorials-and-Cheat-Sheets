@@ -60,9 +60,10 @@ Let’s fatten that list up a bit by adding these other known local address rang
     # ignoreip = 127.0.0.1/8
     ignoreip = 127.0.0.0/8 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16
 
-Also, the default `bantime` value is set to 10 minutes (aka: 600 seconds). But feel free to adjust if need be:
+Also, the default `bantime` value is set to 10 minutes (aka: 600 seconds). I like to set it to 300 if I have `recidive` set. But feel free to adjust if need be:
 
-	bantime  = 600
+	# bantime  = 600
+	bantime  = 300
 
 The SSH config for Fail2Ban is enabled by default and it’s config looks like this:
 
@@ -105,6 +106,14 @@ And add this line to the bottom to define a `ignoreregex`:
     ignoreregex =
 
 #### Monitor Fail2Ban.
+
+The socket file can be found here:
+
+    /var/run/fail2ban/fail2ban.sock
+
+The process ID file can be found here:
+
+    /var/run/fail2ban/fail2ban.pid
 
 You can follow the logs here:
 
