@@ -102,6 +102,18 @@ And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `
 	findtime = 86400   ; 1 day
 	maxretry = 5
 
+Also you might see an error message like this when you strat Fail2Ban:
+
+    WARNING 'ignoreregex' not defined in 'Definition'. Using default one: ''
+
+It’s a simple warning, but to squealch it just open up the `postfix-sasl.conf` config like this:
+
+    sudo nano /etc/fail2ban/filter.d/postfix-sasl.conf
+
+And add this line to the bottom to define a `ignoreregex`:
+
+    ignoreregex =
+
 #### Monitor Fail2Ban.
 
 You can follow the logs here:
