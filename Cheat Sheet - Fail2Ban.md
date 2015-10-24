@@ -75,6 +75,18 @@ The SSH config for Fail2Ban is enabled by default and it’s config looks like t
 	logpath  = /var/log/auth.log
 	maxretry = 6
 
+I prefer to set it to this so the `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 1 day (86400 seconds):
+
+	[ssh]
+	
+	enabled  = true
+	port     = ssh
+	filter   = sshd
+	logpath  = /var/log/auth.log
+	bantime  = 300
+	findtime = 86400
+	maxretry = 6
+
 And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` so repeat offenders are banned for a nice long time:
 
 	# Jail for more extended banning of persistent abusers
