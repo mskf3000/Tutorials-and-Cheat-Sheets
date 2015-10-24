@@ -29,7 +29,7 @@ And then install it like this:
 Once that is done, check the version of Fail2Ban like this:
 
     fail2ban-client --version
-    
+
 Returned output should be something like this and you should be good to go:
 
 	Fail2Ban v0.8.11
