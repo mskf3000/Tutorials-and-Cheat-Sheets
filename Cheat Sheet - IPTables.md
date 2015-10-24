@@ -18,6 +18,14 @@ On CentOS/RedHat systems you can start, stop, restart and flush `iptables` this 
     sudo /etc/rc.d/init.d/iptables restart
     sudo /etc/rc.d/init.d/iptables flush
 
+Check what verison of IPTables you have installed by running this command:
+
+    iptables -V
+
+The output should be something like this:
+
+    iptables v1.4.12
+
 #### Different ways to showing `iptables` rules.
 
 List all rules (`-L`) in the selected table—default is `-t filter`—with hostname lookups.
