@@ -85,6 +85,24 @@ If you need to enable the HTTP/HTTPS config for Apache, just set this config to 
 	logpath  = /var/log/apache*/*error.log
 	maxretry = 6
 
+And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` so repeat offenders are banned for a nice long time:
+
+	# Jail for more extended banning of persistent abusers
+	# !!! WARNING !!!
+	#   Make sure that your loglevel specified in fail2ban.conf/.local
+	#   is not at DEBUG level -- which might then cause fail2ban to fall into
+	#   an infinite loop constantly feeding itself with non-informative lines
+	[recidive]
+	
+	enabled  = true
+	filter   = recidive
+	logpath  = /var/log/fail2ban.log
+	action   = iptables-allports[name=recidive]
+	           sendmail-whois-lines[name=recidive, logpath=/var/log/fail2ban.log]
+	bantime  = 604800  ; 1 week
+	findtime = 86400   ; 1 day
+	maxretry = 5
+
 #### Monitor Fail2Ban.
 
 You can follow the logs here:
