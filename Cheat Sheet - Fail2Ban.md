@@ -69,6 +69,10 @@ Start, stop and control Fail2Ban on an Ubuntu/Debian system:
 	sudo service fail2ban start
 	sudo service fail2ban stop
 
+Get the list of jails Fail2Ban is using:
+
+    sudo fail2ban-client status
+
 ### Configure Fail2Ban.
 
 Once it’s installed, copy the default `jail.conf` file to a `jail.local`
