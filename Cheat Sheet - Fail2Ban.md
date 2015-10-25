@@ -103,7 +103,7 @@ I prefer to set it to this so the `bantime` is 5 minutes (300 seconds) and the `
 	findtime = 900
 	maxretry = 6
 
-And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` so repeat offenders are banned for a nice long time:
+And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` filter so repeat offenders are banned for a nice long time:
 
 	# Jail for more extended banning of persistent abusers
 	# !!! WARNING !!!
@@ -120,6 +120,10 @@ And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `
 	bantime  = 604800  ; 1 week
 	findtime = 86400   ; 1 day
 	maxretry = 5
+
+You might want to adjust `recidive` filter so `maxretry` is 3 instead of 5 like this:
+
+	maxretry = 3
 
 Then stop Fail2Ban service like this:
 
