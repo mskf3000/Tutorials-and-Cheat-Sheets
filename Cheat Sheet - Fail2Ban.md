@@ -123,6 +123,42 @@ I prefer to set it to this so the `bantime` is 5 minutes (300 seconds) and the `
 	findtime = 900
 	maxretry = 6
 
+Similarly we can enable and adjust the SSH DDoS detection check like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
+
+	[ssh-ddos]
+	
+	enabled  = true 
+	port     = ssh
+	filter   = sshd-ddos
+	logpath  = /var/log/auth.log
+	bantime  = 300
+	findtime = 900
+	maxretry = 6
+
+Similarly we can enable and adjust the Apache basic authentication failure check like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
+
+	[apache]
+	
+	enabled  = true
+	port     = http,https
+	filter   = apache-auth
+	logpath  = /var/log/apache*/*error.log
+	bantime  = 300
+	findtime = 900
+	maxretry = 6
+
+Similarly we can enable and adjust the Apache overflows failure check like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
+
+	[apache-overflows]
+	
+	enabled  = false
+	port     = http,https
+	filter   = apache-overflows
+	logpath  = /var/log/apache*/*error.log
+	bantime  = 300
+	findtime = 900
+	maxretry = 2
+
 And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` filter so repeat offenders are banned for a nice long time:
 
 	# Jail for more extended banning of persistent abusers
