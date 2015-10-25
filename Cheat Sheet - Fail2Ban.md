@@ -57,6 +57,18 @@ Knowing that just uninstall it like this:
 
     sudo dpkg -r fail2ban
 
+### Sundry Apache items on an Ubuntu/Debian system.
+
+Get the Fail2Ban version number:
+
+	fail2ban-client --version
+
+Start, stop and control Fail2Ban on an Ubuntu/Debian system:
+
+	sudo service fail2ban restart
+	sudo service fail2ban start
+	sudo service fail2ban stop
+
 ### Configure Fail2Ban.
 
 Once it’s installed, copy the default `jail.conf` file to a `jail.local`
