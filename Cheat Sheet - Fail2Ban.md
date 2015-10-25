@@ -105,6 +105,8 @@ And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `
 	findtime = 86400   ; 1 day
 	maxretry = 5
 
+#### Dealing with `ignoreregex` warnings.
+
 Also you might see an error message like this when you strat Fail2Ban:
 
     WARNING 'ignoreregex' not defined in 'Definition'. Using default one: ''
@@ -117,7 +119,22 @@ And add this line to the bottom to define a `ignoreregex`:
 
     ignoreregex =
 
-#### Monitor Fail2Ban.
+#### Logging GeoIP data.
+
+If you want to add GeoIP lookup data to Fail2Ban logs just do the following. First, make sure you have `geoiplookup` and related databases installed. If you do, then open up, `actions.py` like this:
+
+    sudo nano /usr/share/fail2ban/server/actions.py
+
+And find this line of code:
+
+    logSys.warn("[%s] Ban %s" % (self.jail.getName(), aInfo["ip"]))
+
+And tweak it to be this:
+
+	# logSys.warn("[%s] Ban %s" % (self.jail.getName(), aInfo["ip"]))
+	logSys.warn("[%s] Ban %s %s" % (self.jail.getName(), aInfo["ip"], commands.getstatusoutput('geoiplookup ' + aInfo["ip"])[1][23:]))
+
+### Monitor Fail2Ban.
 
 The socket file can be found here:
 
