@@ -21,10 +21,18 @@ With that done, let’s manually install the dependencies manually like this:
 Then grab the raw `.deb` for Fail2Ban 0.8.11 like this:
 
     curl -O -L http://mirrors.kernel.org/ubuntu/pool/universe/f/fail2ban/fail2ban_0.8.11-1_all.deb
+    
+Or even grab the raw `.deb` for Fail2Ban 0.8.13 like this:
+
+    curl -O -L http://old-releases.ubuntu.com/ubuntu/pool/universe/f/fail2ban/fail2ban_0.8.13-1_all.deb
 
 And then install it like this:
 
     sudo dpkg -i fail2ban_0.8.11-1_all.deb
+
+Or like this for Fail2Ban 0.8.13:
+
+    sudo dpkg -i fail2ban_0.8.13-1_all.deb
 
 Once that is done, check the version of Fail2Ban like this:
 
@@ -40,6 +48,14 @@ Returned output should be something like this and you should be good to go:
 	
 	Written by Cyril Jaquier <cyril.jaquier@fail2ban.org>.
 	Many contributions by Yaroslav O. Halchenko <debian@onerussian.com>.
+
+If you somehow need to uninstall this version `dpkg` install of Fail2Ban, just do the following. First find out the package name like this:
+
+    dpkg -l | grep fail2ban
+
+Knowing that just uninstall it like this:
+
+    sudo dpkg -r fail2ban
 
 ### Configure Fail2Ban.
 
@@ -75,7 +91,7 @@ The SSH config for Fail2Ban is enabled by default and it’s config looks like t
 	logpath  = /var/log/auth.log
 	maxretry = 6
 
-I prefer to set it to this so the `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 1 day (86400 seconds):
+I prefer to set it to this so the `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
 
 	[ssh]
 	
@@ -84,7 +100,7 @@ I prefer to set it to this so the `bantime` is 5 minutes (300 seconds) and the `
 	filter   = sshd
 	logpath  = /var/log/auth.log
 	bantime  = 300
-	findtime = 86400
+	findtime = 900
 	maxretry = 6
 
 And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` so repeat offenders are banned for a nice long time:
