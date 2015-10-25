@@ -21,7 +21,7 @@ With that done, let’s manually install the dependencies manually like this:
 Then grab the raw `.deb` for Fail2Ban 0.8.11 like this:
 
     curl -O -L http://mirrors.kernel.org/ubuntu/pool/universe/f/fail2ban/fail2ban_0.8.11-1_all.deb
-    
+
 Or even grab the raw `.deb` for Fail2Ban 0.8.13 like this:
 
     curl -O -L http://old-releases.ubuntu.com/ubuntu/pool/universe/f/fail2ban/fail2ban_0.8.13-1_all.deb
@@ -72,6 +72,10 @@ Start, stop and control Fail2Ban on an Ubuntu/Debian system:
 Get the list of jails Fail2Ban is using:
 
     sudo fail2ban-client status
+
+Get the status of a specific jail like this:
+
+    sudo fail2ban-client status ssh
 
 ### Configure Fail2Ban.
 
