@@ -173,7 +173,6 @@ And find this line of code:
 
 And tweak it to be this:
 
-	# logSys.warn("[%s] Ban %s" % (self.jail.getName(), aInfo["ip"]))
 	logSys.warn("[%s] Ban %s %s" % (self.jail.getName(), aInfo["ip"], commands.getstatusoutput('geoiplookup ' + aInfo["ip"])[1][23:]))
 
 ### Monitor Fail2Ban.
