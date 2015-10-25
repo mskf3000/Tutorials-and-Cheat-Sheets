@@ -121,6 +121,16 @@ And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `
 	findtime = 86400   ; 1 day
 	maxretry = 5
 
+Then stop Fail2Ban service like this:
+
+    sudo service fail2ban stop
+
+And start the Fail2Ban service like this:
+
+    sudo service fail2ban start
+
+You would assume that using `restart` would work, but apparently it’s a bit flaky so it’s always best to manually stop and start the service.
+
 #### Dealing with `ignoreregex` warnings.
 
 Also you might see an error message like this when you strat Fail2Ban:
