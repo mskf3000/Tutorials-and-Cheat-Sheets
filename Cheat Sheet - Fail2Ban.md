@@ -101,7 +101,14 @@ Also, the default `bantime` value is set to 10 minutes (aka: 600 seconds). I lik
 	# bantime  = 600
 	bantime  = 300
 
-The SSH config for Fail2Ban is enabled by default and it’s config looks like this:
+To get Fail2Ban to send out emails, adjust the `action` settion to be ban only (`action_`), ban and send an email with WHOIS info (`action_mw`) or ban, send an email with WHOIS info as well as log lines (`action_mwl`):
+
+	# action = %(action_)s
+	action = %(action_mwl)s
+
+#### Configuring Fail2Ban jails.
+
+The SSH jail config for Fail2Ban is enabled by default and it’s config looks like this:
 
 	[ssh]
 	
@@ -123,11 +130,11 @@ I prefer to set it to this so the `bantime` is 5 minutes (300 seconds) and the `
 	findtime = 900
 	maxretry = 6
 
-Similarly we can enable and adjust the SSH DDoS detection check like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
+Similarly we can enable and adjust the SSH DDoS detection check jail like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
 
 	[ssh-ddos]
 	
-	enabled  = true 
+	enabled  = true
 	port     = ssh
 	filter   = sshd-ddos
 	logpath  = /var/log/auth.log
@@ -135,7 +142,7 @@ Similarly we can enable and adjust the SSH DDoS detection check like this; `bant
 	findtime = 900
 	maxretry = 6
 
-Similarly we can enable and adjust the Apache basic authentication failure check like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
+Similarly we can enable and adjust the Apache basic authentication failure check jail like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
 
 	[apache]
 	
@@ -147,7 +154,7 @@ Similarly we can enable and adjust the Apache basic authentication failure check
 	findtime = 900
 	maxretry = 6
 
-Similarly we can enable and adjust the Apache overflows failure check like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
+Similarly we can enable and adjust the Apache overflows failure check jail like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
 
 	[apache-overflows]
 	
@@ -159,7 +166,7 @@ Similarly we can enable and adjust the Apache overflows failure check like this;
 	findtime = 900
 	maxretry = 2
 
-And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` filter so repeat offenders are banned for a nice long time. This is adjusted so `maxretry` is 3 instead of 5 like this
+And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` filter so repeat offenders are banned for a nice long time. This is adjusted so `maxretry` is 3 instead of 5 and there is a destination (`dest=`) email set to notify me of `recidive` blocking someone:
 
 	# Jail for more extended banning of persistent abusers
 	# !!! WARNING !!!
@@ -172,7 +179,7 @@ And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `
 	filter   = recidive
 	logpath  = /var/log/fail2ban.log
 	action   = iptables-allports[name=recidive]
-	           sendmail-whois-lines[name=recidive, logpath=/var/log/fail2ban.log]
+	           sendmail-whois-lines[name=recidive, dest=email_address@example.com, logpath=/var/log/fail2ban.log]
 	bantime  = 604800  ; 1 week
 	findtime = 86400   ; 1 day
 	maxretry = 3
