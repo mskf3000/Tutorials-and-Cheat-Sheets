@@ -159,7 +159,7 @@ Similarly we can enable and adjust the Apache overflows failure check like this;
 	findtime = 900
 	maxretry = 2
 
-And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` filter so repeat offenders are banned for a nice long time:
+And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` filter so repeat offenders are banned for a nice long time. This is adjusted so `maxretry` is 3 instead of 5 like this
 
 	# Jail for more extended banning of persistent abusers
 	# !!! WARNING !!!
@@ -175,21 +175,11 @@ And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `
 	           sendmail-whois-lines[name=recidive, logpath=/var/log/fail2ban.log]
 	bantime  = 604800  ; 1 week
 	findtime = 86400   ; 1 day
-	maxretry = 5
-
-You might want to adjust `recidive` filter so `maxretry` is 3 instead of 5 like this:
-
 	maxretry = 3
 
-Then stop Fail2Ban service like this:
+Then restart the Fail2Ban service like this:
 
-    sudo service fail2ban stop
-
-And start the Fail2Ban service like this:
-
-    sudo service fail2ban start
-
-You would assume that using `restart` would work, but apparently it’s a bit flaky so it’s always best to manually stop and start the service.
+    sudo service fail2ban restart
 
 #### Dealing with `ignoreregex` warnings.
 
