@@ -86,6 +86,15 @@ Activate the Fail2Ban related Munin plug-ins.
 
     sudo ln -s /usr/share/munin/plugins/fail2ban /etc/munin/plugins/fail2ban
 
+If you are using the Fail2Ban plug-in, open up the `munin-node` config file:
+
+	sudo nano /etc/munin/plugin-conf.d/munin-node
+
+And add this simple config item at the bottom of the file:
+
+    [fail2ban]
+    user root
+
 #### Setting up Munin email alerts.
 
 Munin can send out email alerts to let you know if anything it’s monitoring is not working as expected. Follow these steps to get the emailing functionality up and running.
