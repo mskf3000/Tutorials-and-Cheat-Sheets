@@ -82,6 +82,10 @@ Activate the Postfix related Munin plug-ins.
 	sudo ln -s /usr/share/munin/plugins/postfix_mailqueue /etc/munin/plugins/postfix_mailqueue
 	sudo ln -s /usr/share/munin/plugins/postfix_mailvolume /etc/munin/plugins/postfix_mailvolume
 
+Activate the Fail2Ban related Munin plug-ins.
+
+    sudo ln -s /usr/share/munin/plugins/fail2ban /etc/munin/plugins/fail2ban
+
 #### Setting up Munin email alerts.
 
 Munin can send out email alerts to let you know if anything it’s monitoring is not working as expected. Follow these steps to get the emailing functionality up and running.
