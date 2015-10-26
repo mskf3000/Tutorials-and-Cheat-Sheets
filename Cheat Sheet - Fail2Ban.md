@@ -158,7 +158,7 @@ Similarly we can enable and adjust the Apache overflows failure check jail like 
 
 	[apache-overflows]
 	
-	enabled  = false
+	enabled  = true
 	port     = http,https
 	filter   = apache-overflows
 	logpath  = /var/log/apache*/*error.log
@@ -187,6 +187,36 @@ And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `
 Then restart the Fail2Ban service like this:
 
     sudo service fail2ban restart
+
+#### Adding a custom Apache “Bad Bots” jail.
+
+Open up `jail.local` like this:
+
+    sudo nano /etc/fail2ban/jail.local
+
+And add this new `apache-badbots` jail to the bottom of the file:
+
+	# Adding a custom 'apache-badbots' jail.
+	[apache-badbots]
+	
+	enabled  = true
+	port     = http,https
+	filter   = apache-badbots
+	logpath  = /var/log/apache*/*access.log
+	bantime  = 300
+	findtime = 900
+	maxretry = 2
+
+If you need to customize the bots or the regex that scans the logs for bots, just open up the `apache-badbots` config file:
+
+    sudo nano /etc/fail2ban/filter.d/apache-badbots.conf
+
+And edit items as you see fit. In my case, I want to add `Baiduspider` to the list like this:
+
+	# badbotscustom = EmailCollector|WebEMailExtrac|TrackBack/1\.02|sogou music spider
+	badbotscustom = EmailCollector|WebEMailExtrac|TrackBack/1\.02|sogou music spider|Baiduspider
+
+Then just restart Fail2Ban and that jail should be all set.
 
 #### Dealing with `ignoreregex` warnings.
 
