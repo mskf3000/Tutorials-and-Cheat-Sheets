@@ -256,6 +256,8 @@ The process ID file can be found here:
 
     /var/run/fail2ban/fail2ban.pid
 
+#### Follow the logs.
+
 You can follow the logs here:
 
     sudo tail -f -n 200 /var/log/fail2ban.log
@@ -294,6 +296,44 @@ The output would be something like this; just pay attention to the `fail2ban` li
 	Chain fail2ban-ssh (1 references)
 	target     prot opt source               destination
 	RETURN     all  --  0.0.0.0/0            0.0.0.0/0
+
+#### Filter out a list of IP addresses.
+
+To get a nice list of IPs that have been baned and for what reason just run this Grep command:
+
+    sudo grep "Ban " /var/log/fail2ban.log | awk -F[\ \:] '{print $10,$8}'
+
+That would spit out a list of IPs and the jail they were snagged in like this:
+
+	43.229.53.86 [ssh]
+	115.85.192.40 [ssh]
+	43.229.53.86 [ssh]
+	43.229.53.86 [ssh]
+	43.229.53.86 [recidive]
+	43.229.53.86 [recidive]
+	43.229.53.86 [ssh]
+	43.229.53.86 [recidive]
+	43.229.53.86 [ssh]
+	43.229.53.86 [recidive]
+	43.229.53.86 [ssh]
+
+But if you just need a list of IP addresses, run this command:
+
+    sudo grep "Ban " /var/log/fail2ban.log | awk -F[\ \:] '{print $10}'
+
+And the output would be something like this:
+
+	43.229.53.86
+	115.85.192.40
+	43.229.53.86
+	43.229.53.86
+	43.229.53.86
+	43.229.53.86
+	43.229.53.86
+	43.229.53.86
+	43.229.53.86
+	43.229.53.86
+	43.229.53.86
 
 ***
 
