@@ -138,7 +138,7 @@ And if you have issues with the AWStats data directory, be sure to run a `chmod`
 
 With everything configured and set
 
-	/usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.pl -config=www.example.com -update
+	sudo /usr/share/awstats-7.3/wwwroot/cgi-bin/awstats.pl -config=www.example.com -update
 
 Wait for AWStats to do it’s thing and when it’s done, check the data out in the web interface.
 
