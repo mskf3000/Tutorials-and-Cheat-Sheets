@@ -8,7 +8,7 @@ First, install Fail2Ban via `aptitude` like this; this will install verison 0.8.
 
     sudo aptitude install fail2ban
 
-But like I said, it installs Fail2Ban version 0.8.6. The problem with that? Beginning with version 0.8.7 a `recidive` filter was introduced that allows you to extend a banning period for persistent abusers. Very useful tool. So the best way to get that functionality is to install the 0.8.11 `.deb` package manually like this.
+But like I said, it installs Fail2Ban version 0.8.6. The problem with that? Beginning with version 0.8.7 a `recidive` filter was introduced that allows you to extend a banning period for persistent abusers. Very useful tool. So the best way to get that functionality is to install the 0.8.13 `.deb` package manually like this.
 
 First purge the older 0.8.6 version of Fail2Ban that was installed like this:
 
@@ -18,19 +18,11 @@ With that done, let’s manually install the dependencies manually like this:
 
     sudo aptitude install gamin libgamin0 python-central python-gamin python-support
 
-Then grab the raw `.deb` for Fail2Ban 0.8.11 like this:
-
-    curl -O -L http://mirrors.kernel.org/ubuntu/pool/universe/f/fail2ban/fail2ban_0.8.11-1_all.deb
-
-Or even grab the raw `.deb` for Fail2Ban 0.8.13 like this:
+Then grab the raw `.deb` for Fail2Ban 0.8.13 like this:
 
     curl -O -L http://old-releases.ubuntu.com/ubuntu/pool/universe/f/fail2ban/fail2ban_0.8.13-1_all.deb
 
 And then install it like this:
-
-    sudo dpkg -i fail2ban_0.8.11-1_all.deb
-
-Or like this for Fail2Ban 0.8.13:
 
     sudo dpkg -i fail2ban_0.8.13-1_all.deb
 
@@ -40,7 +32,7 @@ Once that is done, check the version of Fail2Ban like this:
 
 Returned output should be something like this and you should be good to go:
 
-	Fail2Ban v0.8.11
+	Fail2Ban v0.8.13
 	
 	Copyright (c) 2004-2008 Cyril Jaquier, 2008- Fail2Ban Contributors
 	Copyright of modifications held by their respective authors.
