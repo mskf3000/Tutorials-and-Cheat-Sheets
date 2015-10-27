@@ -110,7 +110,7 @@ The SSH jail config for Fail2Ban is enabled by default and it’s config looks l
 	logpath  = /var/log/auth.log
 	maxretry = 6
 
-I prefer to set it to this so the `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
+I prefer to set it to this so the `bantime` is 5 minutes (300 seconds), the `findtime` to catch attempts is 15 minutes (900 seconds) and the `maxretry` is 3:
 
 	[ssh]
 	
@@ -120,9 +120,9 @@ I prefer to set it to this so the `bantime` is 5 minutes (300 seconds) and the `
 	logpath  = /var/log/auth.log
 	bantime  = 300
 	findtime = 900
-	maxretry = 6
+	maxretry = 3
 
-Similarly we can enable and adjust the SSH DDoS detection check jail like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
+Similarly we can enable and adjust the SSH DDoS detection check jail like this; `bantime` is 5 minutes (300 seconds), the `findtime` to catch attempts is 15 minutes (900 seconds) and the `maxretry` is 3:
 
 	[ssh-ddos]
 	
@@ -132,9 +132,9 @@ Similarly we can enable and adjust the SSH DDoS detection check jail like this; 
 	logpath  = /var/log/auth.log
 	bantime  = 300
 	findtime = 900
-	maxretry = 6
+	maxretry = 3
 
-Similarly we can enable and adjust the Apache basic authentication failure check jail like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
+Similarly we can enable and adjust the Apache basic authentication failure check jail like this; `bantime` is 5 minutes (300 seconds), the `findtime` to catch attempts is 15 minutes (900 seconds) and the `maxretry` is 3:
 
 	[apache]
 	
@@ -144,7 +144,7 @@ Similarly we can enable and adjust the Apache basic authentication failure check
 	logpath  = /var/log/apache*/*error.log
 	bantime  = 300
 	findtime = 900
-	maxretry = 6
+	maxretry = 3
 
 Similarly we can enable and adjust the Apache overflows failure check jail like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
 
