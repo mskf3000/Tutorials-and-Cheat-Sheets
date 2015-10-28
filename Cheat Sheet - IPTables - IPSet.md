@@ -49,11 +49,18 @@ The additions will be reflected in the new output:
 	192.168.0.0/16
 	10.0.0.0/8
 
-You can then save the IP set like this
+And can then save the IP set like this
 
     sudo ipset save FooBar > ipset.FooBar.conf
 
-At this point if you wanted to destroy it, you can do so by doing this:
+The contents of `ipset.FooBar.conf` it will look something like this:
+
+	create FooBar hash:net family inet hashsize 1024 maxelem 65536 
+	add FooBar 127.0.0.0/8
+	add FooBar 10.0.0.0/8
+	add FooBar 192.168.0.0/16
+
+At this point if you wanted to destroy the `FooBar` IP set, you can do so by doing this:
 
     sudo ipset destroy FooBar
 
