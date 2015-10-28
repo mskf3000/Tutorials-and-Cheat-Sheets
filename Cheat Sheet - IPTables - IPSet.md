@@ -30,6 +30,7 @@ The output at this point would be something like this:
 Now let’s add a few IPs to that set like this:
 
     sudo ipset add FooBar 10.0.0.0/8
+    sudo ipset add FooBar 127.0.0.0/8
     sudo ipset add FooBar 192.168.0.0/16
 
 And if you run IP set again:
@@ -40,12 +41,13 @@ The additions will be reflected in the new output:
 
 	Name: FooBar
 	Type: hash:net
-	Header: family inet hashsize 1024 maxelem 65536
-	Size in memory: 16824
+	Header: family inet hashsize 1024 maxelem 65536 
+	Size in memory: 16856
 	References: 0
 	Members:
-	10.0.0.0/8
+	127.0.0.0/8
 	192.168.0.0/16
+	10.0.0.0/8
 
 You can then save the IP set like this
 
