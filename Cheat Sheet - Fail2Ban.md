@@ -327,6 +327,34 @@ And the output would be something like this:
 	43.229.53.86
 	43.229.53.86
 
+And you can even cleanup the Fail2Ban log output so it’s a bit cleaner to parse with an Awk command like this:
+
+    sudo cat /var/log/fail2ban.log | awk '/WARNING/ && /Ban/ { split($2,split_2,","); printf "%s %s %s %s %s\n", $1, split_2[1], substr($5, 2, length($5) - 2), $6, $7 }'
+
+And the output would be something like this:
+
+	2015-10-26 00:34:08 ssh Ban 43.229.53.86
+	2015-10-26 00:36:01 ssh Ban 43.229.53.86
+	2015-10-26 01:08:18 ssh Ban 43.229.53.86
+	2015-10-26 01:08:20 recidive Ban 43.229.53.86
+	2015-10-26 02:23:31 ssh Ban 119.252.171.158
+	2015-10-26 03:21:43 ssh Ban 119.252.171.158
+	2015-10-26 03:40:22 ssh Ban 119.252.171.158
+	2015-10-26 03:40:24 recidive Ban 119.252.171.158
+	2015-10-26 03:55:30 apache Ban 222.186.21.181
+	2015-10-26 08:33:41 ssh Ban 193.107.16.206
+	2015-10-26 11:44:14 ssh Ban 66.87.117.94
+	2015-10-26 14:17:30 ssh Ban 113.98.255.48
+	2015-10-27 01:22:37 recidive Ban 119.252.171.158
+	2015-10-27 01:46:52 ssh Ban 43.229.53.86
+	2015-10-27 02:21:20 ssh Ban 43.229.53.86
+	2015-10-27 02:22:30 ssh Ban 169.55.111.212
+	2015-10-27 03:04:30 ssh Ban 43.229.53.86
+	2015-10-27 03:04:32 recidive Ban 43.229.53.86
+	2015-10-27 05:09:02 ssh Ban 119.167.153.189
+	2015-10-27 13:04:40 ssh-ddos Ban 190.220.129.66
+	2015-10-27 17:01:12 ssh Ban 197.157.244.243
+
 ***
 
 *Cheat Sheet - Fail2Ban (c) by Jack Szwergold*
