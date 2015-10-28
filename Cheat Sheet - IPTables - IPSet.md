@@ -121,11 +121,11 @@ That said this is a clean/messy solution. If anything better comes along, gotta 
 
 ### How to block a whole country’s IP range with IPSet.
 
-Preface to all of this is: I *truly and utterly hate* the idea of blocking a whole countries range of IP addresses, but the case of Chinese network traffic to a few of the servers I manage, it makes sense. These are web servers that cater to a western audience and have no appeal outside of the U.S. let alone China.
+Preface to all of this is: I *truly and utterly hate* the idea of blocking a whole countries range of IP addresses, but in the case of  network traffic to a few of the servers I manage, it makes sense since they are being slammed by traffic from China. These are web servers that cater to a western audience and have no appeal outside of the U.S. let alone China.
 
 And to the meat of the matter, the amount of malicious robot/hacking attempt traffic coming from China nowadays is pretty insane. Past any of that, most people who are not robots/hackers in China who pursue Western content use VPNs that make their access endpoint another nation entirely. Meaning that legitimate web users in China will not be blocked by this technique.
 
-That said, still I hate it. But until the robot/hacking attempt traffic from China gets better managed or throttled by Chinese ISPs this is the lesser of all current evils to protect a web server from unwanted robot/hacking attempts.
+That said, still I hate it. But until the robot/hacking attempt traffic from China gets better managed or throttled by ISPs in China this is the lesser of all current evils to protect a web server from unwanted robot/hacking attempts.
 
 ***
 
