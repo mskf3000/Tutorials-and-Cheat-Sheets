@@ -25,6 +25,10 @@ This is just here for refernece for now. Might not be worth the headache to get 
 
 ***
 
+    sudo aptitude purge ubuntu-standard ufw
+
+***
+
 Don’t run this command! But for reference, it would install `xtables-addons-common` version 1.41:
 
     sudo aptitude install xtables-addons-common
