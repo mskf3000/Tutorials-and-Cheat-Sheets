@@ -82,35 +82,33 @@ That said, still I hate it. But until the robot/hacking attempt traffic from Chi
 
 ***
 
-First, let’s create a China specific (`CN`) IP set like this:
+First, let’s create a generic `BANNED_RANGES` IP set like this:
 
-    sudo ipset create CN_range hash:net
+    sudo ipset create BANNED_RANGES hash:net
 
-That will just create the `ipset.CN_range.conf` file itself with the first line being `create FooBar hash:net`. We will populate it with entries in the next steps.
-
-Now let’s download the raw `cn.zone` file from the IP Deny website like this:
+Now let’s download a raw zone file—such as `cn.zone`— from the IP Deny website like this:
 
 	curl -O -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone
 
-With that downloaded, lets now populate the `CN_range` IP set config file with the values from the `cn.zone` file like this:
+With that downloaded, lets now populate the `BANNED_RANGES` IP set config file with the values from the `cn.zone` file like this:
 
-	awk '{print "add CN_range " $0}' cn.zone > ipset.CN_range.conf
+	awk '{print "add BANNED_RANGES " $0}' cn.zone > ipset.CN_range.conf
 
-With that done, let’s import the `CN_range` IP set like this:
+With that done, let’s import the `BANNED_RANGES` IP set like this:
 
-    sudo ipset restore < ipset.CN_range.conf
+    sudo ipset restore < ipset.BANNED_RANGES.conf
 
 Now check the entries in the IP set by running this command:
 
-    sudo ipset -l CN_range | more
+    sudo ipset -l BANNED_RANGES | more
 
-If that all looks good, let’s tell IPTables to pay attention to that `CN_range` set like this:
+If that all looks good, let’s tell IPTables to pay attention to that `BANNED_RANGES` set like this:
 
-	sudo iptables -A INPUT -p tcp -m set --match-set CN_range src -j REJECT
+	sudo iptables -A INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
 
 And if somehow you needed to remove that IPTables rule, run this command:
 
-    sudo iptables -D INPUT -p tcp -m set --match-set CN_range src -j REJECT
+    sudo iptables -D INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
 
 ***
 
