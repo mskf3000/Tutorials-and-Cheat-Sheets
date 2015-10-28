@@ -70,28 +70,17 @@ And you can restore the IP set like this:
 
 #### How to block a whole country’s IP range with IPSet.
 
-Create a China specific (`CN`) IP set like this:
+First, lets a China specific (`CN`) IP set config file like this:
 
-	sudo ipset -N CN_range hash:net
+	echo "create FooBar hash:net" > ipset.CN_range.conf
 
-Check that the IP set exists by listing the all sets like this:
-
-	sudo ipset -l
-
-The output at this point would be something like this:
-
-	Name: CN_range
-	Type: hash:net
-	Header: family inet hashsize 1024 maxelem 65536
-	Size in memory: 16760
-	References: 0
-	Members:
+That will just create the `ipset.CN_range.conf` file itself with the first line being `create FooBar hash:net`. We will populate it with entries in the next steps.
 
 Now let’s download the raw `cn.zone` file from the IP Deny website like this:
 
 	curl -O -L http://www.ipdeny.com/ipblocks/data/countries/cn.zone
 
-And now let’s populate the `CN_range` IP set with the values from the `cn.zone` file:
+With that downloaded, lets now populate the `CN_range` IP set config file with the values from the `cn.zone` file like this:
 
 	awk '{print "add CN_range " $0}' cn.zone >> ipset.CN_range.conf
 
