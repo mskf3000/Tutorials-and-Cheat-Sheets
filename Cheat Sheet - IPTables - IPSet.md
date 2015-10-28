@@ -15,7 +15,7 @@ The output at this point would be something like this:
 
 	Name: FooBar
 	Type: hash:net
-	Header: family inet hashsize 1024 maxelem 65536 
+	Header: family inet hashsize 1024 maxelem 65536
 	Size in memory: 16760
 	References: 0
 	Members:
@@ -33,7 +33,7 @@ The additions will be reflected in the new output:
 
 	Name: FooBar
 	Type: hash:net
-	Header: family inet hashsize 1024 maxelem 65536 
+	Header: family inet hashsize 1024 maxelem 65536
 	Size in memory: 16824
 	References: 0
 	Members:
@@ -68,7 +68,7 @@ The output at this point would be something like this:
 
 	Name: CN_range
 	Type: hash:net
-	Header: family inet hashsize 1024 maxelem 65536 
+	Header: family inet hashsize 1024 maxelem 65536
 	Size in memory: 16760
 	References: 0
 	Members:
