@@ -2,6 +2,13 @@
 
 By Jack Szwergold, October 27, 2015
 
+#### Installing IPSet.
+
+Install `ipset`:
+
+    sudo aptitude install ipset
+
+#### Some of the basics.
 
 Create an IP set like this:
 
