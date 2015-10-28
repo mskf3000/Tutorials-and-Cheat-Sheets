@@ -12,7 +12,7 @@ Make a bare clone of the source repository.
 
 Go into that directory.
 
-    cd Preworn-Main.git
+    cd Memories.git
 
 Now push (via mirror) into the new repo.
 
