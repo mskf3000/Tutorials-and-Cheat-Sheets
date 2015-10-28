@@ -72,6 +72,53 @@ And you can restore the IP set like this:
 
     sudo ipset restore < ipset.FooBar.conf
 
+### Get IPSet to retain values on reboot.
+
+If you are using IPSet you are using IPTables as well. And if you are using IPTables, you are using `iptables-persistent` to ensure the IPTables rules are restored on reboot, right? But what about something for IPSet like `ipset-persistent`? Does that exist?
+
+Sadly, there is no equivalent of `iptables-persistent` out there. But you can tweak the core `iptables-persistent` script to get it to load IP set rules before the IPTables stuff gets loaded.
+
+First, copy the IP set rules into a text file like this:
+
+    sudo ipset save > ~/ipset.conf
+
+Then copy those rules into a file named `rules.ipsets` in the `/etc/iptables/` directory like this:
+
+	sudo cp ~/ipset.conf /etc/iptables/rules.ipsets
+
+Now let’s tweak the `iptables-persistent` startup script like this:
+
+    sudo nano /etc/init.d/iptables-persistent
+
+Add this to `load_rules()` right after `log_action_begin_msg "Loading iptables rules"`:
+
+    #load IPsets
+    if [ ! -f /etc/iptables/rules.ipsets ]; then
+      log_action_cont_msg " skipping IPsets (no rules to load)"
+    else
+      log_action_cont_msg " IPset"
+      ipset restore -! < /etc/iptables/rules.ipsets 2> /dev/null
+      if [ $? -ne 0 ]; then
+        rc=1
+      fi
+    fi
+
+Add this to `save_rules()` right after `log_action_begin_msg "Saving rules"`:
+
+	#save IPsets
+	#need at least iptable_filter loaded:
+	if ! ipset list | grep -i "name">/dev/null 2>&1; then
+	  log_action_cont_msg " skipping IPset - no sets defined or not loaded"
+	elif [ -x /usr/sbin/ipset ] || [ -x /sbin/ipset ]; then
+	  log_action_cont_msg " IPset"
+	  ipset save | grep -iv "f2b"> /etc/iptables/rules.ipsets
+	  if [ $? -ne 0 ]; then
+	    rc=1
+	  fi
+	fi
+
+That said this is a clean/messy solution. If anything better comes along, gotta ditch this.
+
 ### How to block a whole country’s IP range with IPSet.
 
 Preface to all of this is: I *truly and utterly hate* the idea of blocking a whole countries range of IP addresses, but the case of Chinese network traffic to a few of the servers I manage, it makes sense. These are web servers that cater to a western audience and have no appeal outside of the U.S. let alone China.
