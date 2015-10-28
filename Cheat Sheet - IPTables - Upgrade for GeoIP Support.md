@@ -10,8 +10,6 @@ This is just here for refernece for now. Might not be worth the headache to get 
 
     sudo aptitude purge iptables iptables-persistent ubuntu-standard ufw
 
-    sudo aptitude install iptables-dev
-
 ***
 
     curl -O -L http://mirrors.kernel.org/ubuntu/pool/main/i/iptables/libxtables10_1.4.21-1ubuntu1_amd64.deb
