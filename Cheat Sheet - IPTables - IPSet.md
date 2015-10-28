@@ -2,13 +2,13 @@
 
 By Jack Szwergold, October 27, 2015
 
-#### Installing IPSet.
+### Installing IPSet.
 
 Install `ipset`:
 
     sudo aptitude install ipset
 
-#### Some of the basics.
+### Some of the basics.
 
 Create an IP set like this:
 
@@ -72,7 +72,7 @@ And you can restore the IP set like this:
 
     sudo ipset restore < ipset.FooBar.conf
 
-#### How to block a whole country’s IP range with IPSet.
+### How to block a whole country’s IP range with IPSet.
 
 Preface to all of this is: I *truly and utterly hate* the idea of blocking a whole countries range of IP addresses, but the case of Chinese network traffic to a few of the servers I manage, it makes sense. These are web servers that cater to a western audience and have no appeal outside of the U.S. let alone China.
 
@@ -102,9 +102,15 @@ Now check the entries in the IP set by running this command:
 
     sudo ipset -l BANNED_RANGES | more
 
+#### Making IPTables aware of the `BANNED_RANGES` IP Set.
+
 If that all looks good, let’s tell IPTables to pay attention to that `BANNED_RANGES` set like this:
 
 	sudo iptables -A INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
+
+To remove all entries from the `BANNED_RANGES` IP set, just “flush” it like this:
+
+    sudo ipset flush BANNED_RANGES
 
 And if somehow you need to remove that IPTables rule, run this command:
 
