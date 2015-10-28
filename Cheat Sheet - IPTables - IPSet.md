@@ -70,8 +70,6 @@ And you can restore the IP set like this:
 
 #### How to block a whole country’s IP range with IPSet.
 
-	sudo aptitude install ipset
-
 Create a China specific (`CN`) IP set like this:
 
 	sudo ipset -N CN_range hash:net
@@ -95,7 +93,7 @@ Now let’s download the raw `cn.zone` file from the IP Deny website like this:
 
 And now let’s populate the `CN_range` IP set with the values from the `cn.zone` file:
 
-	for ip_range in $(cat cn.zone); do sudo ipset -A CN_range $ip_range; done
+	awk '{print "add CN_range " $0}' cn.zone >> ipset.CN_range.conf
 
 And finally let’s tell IPTables to pay attention to that `CN_range` set like this:
 
