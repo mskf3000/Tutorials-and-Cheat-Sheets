@@ -61,7 +61,7 @@ And you can restore the IP set like this:
 
     sudo ipset restore < ipset.FooBar.conf
 
-#### How to block a whole conutry’s IP range with IPSet.
+#### How to block a whole country’s IP range with IPSet.
 
 	sudo aptitude install ipset
 
