@@ -72,7 +72,7 @@ And you can restore the IP set like this:
 
 First, lets a China specific (`CN`) IP set config file like this:
 
-	echo "create FooBar hash:net" > ipset.CN_range.conf
+	echo "create CN_range hash:net" > ipset.CN_range.conf
 
 That will just create the `ipset.CN_range.conf` file itself with the first line being `create FooBar hash:net`. We will populate it with entries in the next steps.
 
@@ -84,7 +84,15 @@ With that downloaded, lets now populate the `CN_range` IP set config file with t
 
 	awk '{print "add CN_range " $0}' cn.zone >> ipset.CN_range.conf
 
-And finally let’s tell IPTables to pay attention to that `CN_range` set like this:
+With that done, let’s import the `CN_range` IP set like this:
+
+    sudo ipset restore < ipset.CN_range.conf
+
+Now check the entries in the IP set by running this command:
+
+    sudo ipset -l CN_range | more
+
+If that all looks good, let’s tell IPTables to pay attention to that `CN_range` set like this:
 
 	sudo iptables -A INPUT -p tcp -m set --match-set CN_range src -j DROP
 
