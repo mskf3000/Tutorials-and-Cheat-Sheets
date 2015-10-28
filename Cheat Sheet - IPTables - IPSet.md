@@ -106,7 +106,7 @@ Now check the entries in the IP set by running this command:
 
 If that all looks good, let’s tell IPTables to pay attention to that `BANNED_RANGES` set like this:
 
-	sudo iptables -A INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
+	sudo iptables -I INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
 
 To remove all entries from the `BANNED_RANGES` IP set, just “flush” it like this:
 
