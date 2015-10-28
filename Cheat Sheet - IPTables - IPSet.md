@@ -64,13 +64,17 @@ At this point if you wanted to destroy the `FooBar` IP set, you can do so by doi
 
     sudo ipset destroy FooBar
 
+To remove all entries from the `FooBar` IP set, just “flush” it like this:
+
+    sudo ipset flush FooBar
+
 And you can restore the IP set like this:
 
     sudo ipset restore < ipset.FooBar.conf
 
 #### How to block a whole country’s IP range—in this case China—with IPSet.
 
-Preface to all of this is: I truly and utterly hate the idea of blocking a whole countries range of IP addresses, but the case of Chinese traffic to a few of the servers I manage, it makes sense. These are web servers that cater to a western audience and have no appeal outside of the U.S. let alone China.
+Preface to all of this is: I *truly and utterly hate* the idea of blocking a whole countries range of IP addresses, but the case of Chinese traffic to a few of the servers I manage, it makes sense. These are web servers that cater to a western audience and have no appeal outside of the U.S. let alone China.
 
 And to the meat of the matter, the amount of malicious robot/hacking attempt traffic coming from China nowadays is pretty insane. Past any of that, most people who are not robots/hackers in China who pursue Western content use VPNs that make their access endpoint another nation entirely. Meaning that legitimate web users in China will not be blocked by this technique.
 
@@ -102,7 +106,11 @@ Now check the entries in the IP set by running this command:
 
 If that all looks good, let’s tell IPTables to pay attention to that `CN_range` set like this:
 
-	sudo iptables -A INPUT -p tcp -m set --match-set CN_range src -j DROP
+	sudo iptables -A INPUT -p tcp -m set --match-set CN_range src -j REJECT
+
+And if somehow you needed to remove that IPTables rule, run this command:
+
+    sudo iptables -D INPUT -p tcp -m set --match-set CN_range src -j REJECT
 
 ***
 
