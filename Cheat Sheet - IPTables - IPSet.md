@@ -92,7 +92,7 @@ Now let’s download a raw zone file—such as `cn.zone`— from the IP Deny web
 
 With that downloaded, lets now populate the `BANNED_RANGES` IP set config file with the values from the `cn.zone` file like this:
 
-	awk '{print "add BANNED_RANGES " $0}' cn.zone > ipset.CN_range.conf
+	awk '{print "add BANNED_RANGES " $0}' cn.zone > ipset.BANNED_RANGES.conf
 
 With that done, let’s import the `BANNED_RANGES` IP set like this:
 
@@ -106,7 +106,7 @@ If that all looks good, let’s tell IPTables to pay attention to that `BANNED_R
 
 	sudo iptables -A INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
 
-And if somehow you needed to remove that IPTables rule, run this command:
+And if somehow you need to remove that IPTables rule, run this command:
 
     sudo iptables -D INPUT -p tcp -m set --match-set BANNED_RANGES src -j REJECT
 
