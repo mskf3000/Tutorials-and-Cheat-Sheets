@@ -82,9 +82,9 @@ That said, still I hate it. But until the robot/hacking attempt traffic from Chi
 
 ***
 
-First, lets a China specific (`CN`) IP set config file like this:
+First, let’s create a China specific (`CN`) IP set like this:
 
-	echo "create CN_range hash:net" > ipset.CN_range.conf
+    sudo ipset create CN_range hash:net
 
 That will just create the `ipset.CN_range.conf` file itself with the first line being `create FooBar hash:net`. We will populate it with entries in the next steps.
 
@@ -94,7 +94,7 @@ Now let’s download the raw `cn.zone` file from the IP Deny website like this:
 
 With that downloaded, lets now populate the `CN_range` IP set config file with the values from the `cn.zone` file like this:
 
-	awk '{print "add CN_range " $0}' cn.zone >> ipset.CN_range.conf
+	awk '{print "add CN_range " $0}' cn.zone > ipset.CN_range.conf
 
 With that done, let’s import the `CN_range` IP set like this:
 
