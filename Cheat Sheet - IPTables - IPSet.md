@@ -41,7 +41,7 @@ The additions will be reflected in the new output:
 
 	Name: FooBar
 	Type: hash:net
-	Header: family inet hashsize 1024 maxelem 65536 
+	Header: family inet hashsize 1024 maxelem 65536
 	Size in memory: 16856
 	References: 0
 	Members:
@@ -55,7 +55,7 @@ And can then save the IP set like this
 
 The contents of `ipset.FooBar.conf` it will look something like this:
 
-	create FooBar hash:net family inet hashsize 1024 maxelem 65536 
+	create FooBar hash:net family inet hashsize 1024 maxelem 65536
 	add FooBar 127.0.0.0/8
 	add FooBar 10.0.0.0/8
 	add FooBar 192.168.0.0/16
