@@ -129,6 +129,8 @@ That said, still I hate it. But until the robot/hacking attempt traffic from Chi
 
 ***
 
+#### Using a slash notated zone file from a website.
+
 First, let’s create a generic `BANNED_RANGES` IP set like this:
 
     sudo ipset create BANNED_RANGES hash:net
@@ -141,6 +143,40 @@ With that downloaded, lets now populate the `BANNED_RANGES` IP set config file w
 
 	awk '{print "add BANNED_RANGES " $0}' cn.zone > ipset.BANNED_RANGES.conf
 
+With that done, let’s import the `BANNED_RANGES` IP set like this:
+
+    sudo ipset restore < ipset.BANNED_RANGES.conf
+
+Now check the entries in the IP set by running this command:
+
+    sudo ipset -l BANNED_RANGES | more
+
+#### Using the GeoIP country CSV databse.
+
+This method is the preferred method since `GeoIPCountryCSV.zip` contains all countries and not just the data from one URL file. Also, since the `GeoIPCountryCSV.zip` can be stored locally, it assures us that even if a remote server serving zone files goes offline we still have some data source to work with.
+
+***
+
+First, let’s create a generic `BANNED_RANGES` IP set like this:
+
+    sudo ipset create BANNED_RANGES hash:net
+
+Now let’s download the `GeoIPCountryCSV.zip` from the official MaxMind GeoIP website:
+
+	curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip
+
+Let’s decompress it like this:
+
+	unzip -o -q -d . GeoIPCountryCSV.zip
+
+And with the archive decompressed, let’s ditch the remaning `GeoIPCountryCSV.zip`:
+
+	rm GeoIPCountryCSV.zip
+	
+With that done, lets now populate the `BANNED_RANGES` IP set config file with the values from the `GeoIPCountryWhois.csv` file like this; note we are focusing only on China (`CN`) IP addresses:
+
+	awk -F","  '/China/ && /CN/ { gsub(/"/, "", $1); gsub(/"/, "", $2); printf "add BANNED_RANGES %s-%s \n", $1, $2 }'  GeoIPCountryWhois.csv > 'ipset.BANNED_RANGES.conf'
+	
 With that done, let’s import the `BANNED_RANGES` IP set like this:
 
     sudo ipset restore < ipset.BANNED_RANGES.conf
