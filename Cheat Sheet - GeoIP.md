@@ -57,6 +57,7 @@ Then run `autoreconf` like this:
     curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
     curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
     curl -O -L http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
+    curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip
 
 #### Move the GeoIP databases to their proper directory.
 
@@ -65,14 +66,18 @@ On Mac OS X move the databases to `/usr/local/share/`:
     sudo mv ~/GeoIP.dat.gz /usr/local/share/GeoIP/
     sudo mv ~/GeoLiteCity.dat.gz /usr/local/share/GeoIP/
     sudo mv ~/GeoIPASNum.dat.gz /usr/local/share/GeoIP/
+    sudo mv ~/GeoIPCountryCSV.zip /usr/local/share/GeoIP/
 
 And decompress the database files like this:
 
     sudo gzip -d -f /usr/local/share/GeoIP/GeoIP.dat.gz
     sudo gzip -d -f /usr/local/share/GeoIP/GeoLiteCity.dat.gz
     sudo gzip -d -f /usr/local/share/GeoIP/GeoIPASNum.dat.gz
+    sudo unzip -o -q -d /usr/local/share/GeoIP/ /usr/local/share/GeoIP/GeoIPCountryCSV.zip
 
     sudo mv /usr/local/share/GeoIP/GeoLiteCity.dat /usr/local/share/GeoIP/GeoIPCity.dat
+
+    sudo rm /usr/local/share/GeoIP/GeoIPCountryCSV.zip
 
 Check to see if the GeoIP databases are set in Mac OS X:
 
