@@ -127,12 +127,10 @@ This is a basic, solid and relatively simple set config (`iptables.conf`) I like
 	:FORWARD ACCEPT [0:0]
 	:OUTPUT ACCEPT [21:3342]
 	:SSH_CHECK - [0:0]
-	:TOR - [0:0]
 	
 	# Accept specific IP addresses.
 	-A INPUT -s 123.456.789.0/32 -p tcp -m tcp --dport 22 -j ACCEPT
 	-A INPUT -p tcp -m tcp --dport 22 -m state --state NEW -j SSH_CHECK
-	-A INPUT -j TOR
 	-A INPUT -i lo -j ACCEPT
 	
 	# Drop invalid SYN packets.
@@ -165,7 +163,6 @@ This is a basic, solid and relatively simple set config (`iptables.conf`) I like
 	-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 	-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
 	-A INPUT -j REJECT --reject-with icmp-host-prohibited
-	-A FORWARD -j TOR
 	-A SSH_CHECK -m recent --set --name SSH --rsource
 	-A SSH_CHECK -m recent --update --seconds 60 --hitcount 20 --name SSH --rsource -j DROP
 	COMMIT
