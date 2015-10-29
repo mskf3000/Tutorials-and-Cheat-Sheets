@@ -22,6 +22,20 @@ Scans all ports on `192.168.1.1` in verbose mode using the `-v` flag and attempt
 
     sudo nmap -v -O 192.168.1.1
 
+#### Port scanning a specific host.
+
+A standard TCP port scan:
+
+    sudo nmap -sS -Pn -p- -T4 -vv --reason -oN ~/nmap.TCP.results example.com
+
+A standard UDP port scan:
+
+    sudo nmap -sU -Pn -p- -T4 -vv --reason -oN ~/nmap.UDP.results example.com
+
+A scan designed to attempt to discover versions of services on the server:
+
+    sudo nmap -sV -Pn -p 22,80 -vv --reason -oN ~/nmap.SERVICE.results example.com
+
 ***
 
 *Cheat Sheet - Nmap (c) by Jack Szwergold*
