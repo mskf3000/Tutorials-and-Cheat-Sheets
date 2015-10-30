@@ -169,25 +169,25 @@ These are IPTables entries to log entries in the Kernel log (`kern.log`). They w
 
 Setting a generic log entry:
 
-    -A INPUT -m limit --limit 5/min -j LOG --log-prefix "Iptables Denied: " --log-level 7
+    -A INPUT -m limit --limit 5/min -j LOG --log-prefix "IPTABLES_DENIED: " --log-level 7
 
 Setting log entries based on TCP, UDP or ICMP requests:
 
-	-A INPUT -p tcp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "Iptables Denied TCP: " --log-level 7
-	-A INPUT -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "Iptables Denied UDP: " --log-level 7
-	-A INPUT -p icmp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "Iptables Denied ICMP: " --log-level 7
+	-A INPUT -p tcp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: " --log-level 7
+	-A INPUT -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: " --log-level 7
+	-A INPUT -p icmp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: " --log-level 7
 
 Finding the IPTables specific log entries in the Kernel log (`kern.log`):
 
-    sudo tail -f -n 500 /var/log/kern.log | grep "Iptables Denied"
+    sudo tail -f -n 500 /var/log/kern.log | grep "IPTABLES_DENIED"
 
-This Awk command parses out the source (`SRC`) IP address from “Iptables Denied” entries:
+This Awk command parses out the source (`SRC`) IP address from “IPTABLES_DENIED” entries:
 
-    sudo awk '/Iptables Denied/ {  split($13,split_13,"="); printf "%s\n", split_13[2] }' /var/log/kern.log
+    sudo awk '/IPTABLES_DENIED/ {  split($11,split_11,"="); printf "%s\n", split_11[2] }' /var/log/kern.log
 
 This variant will let you know date, time and whether the dropped packet was TCP, UDP or ICMP:
 
-    sudo awk '/Iptables Denied/ {  split($13,split_13,"="); printf "(%s %s %s) %s %s\n", $1, $2, $3, $9, split_13[2] }' /var/log/kern.log
+    sudo awk '/IPTABLES_DENIED/ {  split($11,split_11,"="); printf "(%s %s %s) %s %s\n", $1, $2, $3, $7, split_11[2] }' /var/log/kern.log
 
 ### Some ideas. Nothing ready for prime time.
 
@@ -212,7 +212,7 @@ This variant will let you know date, time and whether the dropped packet was TCP
 
     sudo iptables -N UDP_OUT_FLOOD
     sudo iptables -A OUTPUT -p udp -j UDP_OUT_FLOOD
-    sudo iptables -A UDP_OUT_FLOOD -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "Iptables Denied UDP Out: " --log-level 7
+    sudo iptables -A UDP_OUT_FLOOD -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP_OUT: " --log-level 7
     sudo iptables -A UDP_OUT_FLOOD -j REJECT --reject-with icmp-host-prohibited
 
 ***
