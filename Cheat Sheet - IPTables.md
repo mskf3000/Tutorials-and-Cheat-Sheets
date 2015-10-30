@@ -189,6 +189,32 @@ This variant will let you know date, time and whether the dropped packet was TCP
 
     sudo awk '/Iptables Denied/ {  split($13,split_13,"="); printf "(%s %s %s) %s %s\n", $1, $2, $3, $9, split_13[2] }' /var/log/kern.log
 
+### Some ideas. Nothing ready for prime time.
+
+#### Block all UDP traffic except on port 53.
+
+    sudo iptables -A INPUT -p udp --sport 53 -j ACCEPT
+    sudo iptables -A INPUT -p udp --dport 53 -j ACCEPT
+
+    sudo iptables -A OUTPUT -p udp --sport 53 -j ACCEPT
+    sudo iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+
+    sudo iptables -A INPUT -p udp -j REJECT
+    sudo iptables -A OUTPUT -p udp -j REJECT
+
+#### Block outbound UDP on port 53 but allow port 53 with Google’s DNS servers.
+
+    sudo iptables -A OUTPUT -p udp -j REJECT --reject-with icmp-host-prohibited
+    sudo iptables -A OUTPUT -p udp --dport 53 -d 8.8.8.8 -j ACCEPT
+    sudo iptables -A OUTPUT -p udp --dport 53 -d 8.8.4.4 -j ACCEPT
+
+#### UDP throttling rules.
+
+    sudo iptables -N UDP_OUT_FLOOD
+    sudo iptables -A OUTPUT -p udp -j UDP_OUT_FLOOD
+    sudo iptables -A UDP_OUT_FLOOD -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "Iptables Denied UDP Out: " --log-level 7
+    sudo iptables -A UDP_OUT_FLOOD -j REJECT --reject-with icmp-host-prohibited
+
 ***
 
 *Cheat Sheet - IPTables (c) by Jack Szwergold*
