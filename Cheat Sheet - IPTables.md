@@ -169,13 +169,13 @@ These are IPTables entries to log entries in the Kernel log (`kern.log`). They w
 
 Setting a generic log entry:
 
-    -A INPUT -m limit --limit 5/min -j LOG --log-prefix "IPTABLES_DENIED: " --log-level 7
+    -A INPUT -m limit --limit 5/min -j LOG --log-prefix "IPTABLES_DENIED: " --log-level 4
 
 Setting log entries based on TCP, UDP or ICMP requests:
 
-	-A INPUT -p tcp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: " --log-level 7
-	-A INPUT -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: " --log-level 7
-	-A INPUT -p icmp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: " --log-level 7
+	-A INPUT -p tcp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: " --log-level 4
+	-A INPUT -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: " --log-level 4
+	-A INPUT -p icmp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: " --log-level 4
 
 Finding the IPTables specific log entries in the Kernel log (`kern.log`):
 
@@ -212,7 +212,7 @@ This variant will let you know date, time and whether the dropped packet was TCP
 
     sudo iptables -N UDP_OUT_FLOOD
     sudo iptables -A OUTPUT -p udp -j UDP_OUT_FLOOD
-    sudo iptables -A UDP_OUT_FLOOD -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP_OUT: " --log-level 7
+    sudo iptables -A UDP_OUT_FLOOD -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP_OUT: " --log-level 4
     sudo iptables -A UDP_OUT_FLOOD -j REJECT --reject-with icmp-host-prohibited
 
 ***

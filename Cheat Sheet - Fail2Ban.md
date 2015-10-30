@@ -210,6 +210,54 @@ And edit items as you see fit. In my case, I want to add `Baiduspider` to the li
 
 Then just restart Fail2Ban and that jail should be all set.
 
+#### Adding a custom DDoS jail.
+
+This setup hinges on your core IPTables rules being set to not only catch DDoS attempts on a packet level but also logging the output to the Kernel log (`kern.log`) with a prefix of `IPTABLES_DENIED`. If you have that setup, read on. And if you log DDoS attempts with a prefix other than `IPTABLES_DENIED` feel free to adjust it.
+
+***
+
+First, create the `ddos.conf`:
+
+    sudo nano /etc/fail2ban/filter.d/ddos.conf
+
+And add this custom DDoS definition to the bottom of the config; the core of this definition is the `failregex`:
+
+    [Definition]
+
+    # Option:  failregex
+    # Notes.:  Auto block short UDP.
+    # Values:  TEXT
+    #
+    # failregex = .*(?:IPTABLES_DENIED_TCP).*SRC=<HOST>.*
+    # failregex = .*(?:IPTABLES_DENIED_UDP).*SRC=<HOST>.*
+    # failregex = .*(?:IPTABLES_DENIED_ICMP).*SRC=<HOST>.*
+    failregex = .*(?:IPTABLES_DENIED).*SRC=<HOST>.*
+
+    ignoreregex =
+
+You can test that DDoS definition by running this command:
+
+    sudo fail2ban-regex -v /var/log/kern.log /etc/fail2ban/filter.d/ddos.conf
+
+If all looks good, then add a DDoS jail to your setup, by editing the `jail.local`:
+
+    sudo nano /etc/fail2ban/jail.local
+
+And add this custom jail to the bottom of the config:
+
+    # Adding a custom 'ddos' jail.
+    [ddos]
+
+    enabled   = true
+    port      = all
+    banaction = iptables-allports
+    port      = anyport
+    filter    = ddos
+    logpath   = /var/log/kern.log
+    bantime   = 300
+    findtime  = 900
+    maxretry  = 3
+
 #### Dealing with `ignoreregex` warnings.
 
 Also you might see an error message like this when you strat Fail2Ban:
