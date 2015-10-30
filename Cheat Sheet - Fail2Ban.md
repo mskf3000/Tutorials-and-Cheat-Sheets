@@ -289,6 +289,10 @@ The output would be something like this; just pay attention to the `fail2ban` li
 	target     prot opt source               destination
 	RETURN     all  --  0.0.0.0/0            0.0.0.0/0
 
+If you feel like checkinb the main `auth.log` for failed login attempts, just run this command:
+
+    sudo tail -f -n 500 /var/log/auth.log | grep "Failed password"
+
 #### Filter out a list of IP addresses.
 
 To get a nice list of IPs that have been baned and for what reason just run this Grep command:

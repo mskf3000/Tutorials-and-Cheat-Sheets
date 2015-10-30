@@ -179,7 +179,7 @@ Setting log entries based on TCP, UDP or ICMP requests:
 
 Finding the IPTables specific log entries in the Kernel log (`kern.log`):
 
-    sudo tail -f -n 2000 /var/log/kern.log | grep "Iptables Denied"
+    sudo tail -f -n 500 /var/log/kern.log | grep "Iptables Denied"
 
 This Awk command parses out the source (`SRC`) IP address from “Iptables Denied” entries:
 
