@@ -183,11 +183,11 @@ Finding the IPTables specific log entries in the Kernel log (`kern.log`):
 
 This Awk command parses out the source (`SRC`) IP address from “Iptables Denied” entries:
 
-    sudo awk '/Iptables Denied/ {  split($13,split_13,"="); print split_13[2] }' /var/log/kern.log
+    sudo awk '/Iptables Denied/ {  split($13,split_13,"="); printf "%s\n", split_13[2] }' /var/log/kern.log
 
-This variant will let you know whether the dropped packet was TCP, UDP or ICMP:
+This variant will let you know date, time and whether the dropped packet was TCP, UDP or ICMP:
 
-    sudo awk '/Iptables Denied/ {  split($13,split_13,"="); print $9 split_13[2] }' /var/log/kern.log
+    sudo awk '/Iptables Denied/ {  split($13,split_13,"="); printf "(%s %s %s) %s %s\n", $1, $2, $3, $9, split_13[2] }' /var/log/kern.log
 
 ***
 
