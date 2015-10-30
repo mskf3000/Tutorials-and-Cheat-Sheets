@@ -185,6 +185,10 @@ This Awk command parses out the source (`SRC`) IP address from “Iptables Denie
 
     sudo awk '/Iptables Denied/ {  split($13,split_13,"="); print split_13[2] }' /var/log/kern.log
 
+This variant will let you know whether the dropped packet was TCP, UDP or ICMP:
+
+    sudo awk '/Iptables Denied/ {  split($13,split_13,"="); print $9 split_13[2] }' /var/log/kern.log
+
 ***
 
 *Cheat Sheet - IPTables (c) by Jack Szwergold*
