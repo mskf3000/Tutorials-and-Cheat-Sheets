@@ -189,7 +189,33 @@ This variant will let you know date, time and whether the dropped packet was TCP
 
     sudo awk '/IPTABLES_DENIED/ {  split($11,split_11,"="); printf "(%s %s %s) %s %s\n", $1, $2, $3, $7, split_11[2] }' /var/log/kern.log
 
-### Some ideas. Nothing ready for prime time.
+### Some ideas that seem to work.
+
+	# Reject packets from RFC1918 class networks (i.e., spoofed)
+	
+	sudo iptables -N SPOOFING
+	sudo iptables -N SPOOF_ACTIONS
+	
+	sudo iptables -A INPUT -j SPOOFING
+	
+	sudo iptables -A SPOOFING -s 10.0.0.0/8 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -s 169.254.0.0/16 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -s 172.16.0.0/12 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -s 127.0.0.0/8 -j SPOOF_ACTIONS
+	
+	sudo iptables -A SPOOFING -s 224.0.0.0/4 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -d 224.0.0.0/4 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -s 240.0.0.0/5 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -d 240.0.0.0/5 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -s 0.0.0.0/8 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -d 0.0.0.0/8 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -d 239.255.255.0/24 -j SPOOF_ACTIONS
+	sudo iptables -A SPOOFING -d 255.255.255.255 -j SPOOF_ACTIONS
+	
+	sudo iptables -A SPOOF_ACTIONS -p tcp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: " --log-level 4
+	sudo iptables -A SPOOF_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+
+### Some ideas that are not ready for prime time.
 
 #### Block all UDP traffic except on port 53.
 
