@@ -342,16 +342,24 @@ If you feel like checking the main `auth.log` for failed login attempts, just ru
 
 And you can even get a nice tally of failed password attempts by running this command:
 
-    sudo cat /var/log/auth.log | grep 'Failed password' | grep sshd | awk '{print $1,$2}' | sort -k 1,1M -k 2n | uniq -c
+    sudo cat /var/log/auth.{log,log.1} | grep 'Failed password' | grep sshd | awk '{print $1,$2}' | sort -k 1,1M -k 2n | uniq -c
 
 The output would be something like this:
 
-	8275 Oct 25
-	  76 Oct 26
-	  54 Oct 27
-	 310 Oct 28
-	1024 Oct 29
-	  65 Oct 30
+	 5909 Oct 18
+	13444 Oct 19
+	  351 Oct 20
+	  162 Oct 21
+	  499 Oct 22
+	  377 Oct 23
+	  145 Oct 24
+	10897 Oct 25
+	   76 Oct 26
+	   54 Oct 27
+	  310 Oct 28
+	 1024 Oct 29
+	  208 Oct 30
+	   30 Oct 31
 
 This variant of the above command would work for GZipped files:
 
