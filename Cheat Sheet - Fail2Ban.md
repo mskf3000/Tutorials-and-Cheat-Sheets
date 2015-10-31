@@ -249,7 +249,6 @@ And add this custom jail to the bottom of the config:
     [ddos]
 
     enabled   = true
-    port      = all
     banaction = iptables-allports
     port      = anyport
     filter    = ddos
