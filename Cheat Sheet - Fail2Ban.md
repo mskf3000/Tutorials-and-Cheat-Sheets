@@ -118,8 +118,8 @@ I prefer to set it to this so the `bantime` is 5 minutes (300 seconds), the `fin
 	port     = ssh
 	filter   = sshd
 	logpath  = /var/log/auth.log
-	bantime  = 300
-	findtime = 900
+	bantime  = 180
+	findtime = 1800
 	maxretry = 3
 
 Similarly we can enable and adjust the SSH DDoS detection check jail like this; `bantime` is 5 minutes (300 seconds), the `findtime` to catch attempts is 15 minutes (900 seconds) and the `maxretry` is 3:
@@ -130,8 +130,8 @@ Similarly we can enable and adjust the SSH DDoS detection check jail like this; 
 	port     = ssh
 	filter   = sshd-ddos
 	logpath  = /var/log/auth.log
-	bantime  = 300
-	findtime = 900
+	bantime  = 180
+	findtime = 1800
 	maxretry = 3
 
 Similarly we can enable and adjust the Apache basic authentication failure check jail like this; `bantime` is 5 minutes (300 seconds), the `findtime` to catch attempts is 15 minutes (900 seconds) and the `maxretry` is 3:
@@ -142,8 +142,8 @@ Similarly we can enable and adjust the Apache basic authentication failure check
 	port     = http,https
 	filter   = apache-auth
 	logpath  = /var/log/apache*/*error.log
-	bantime  = 300
-	findtime = 900
+	bantime  = 180
+	findtime = 1800
 	maxretry = 3
 
 Similarly we can enable and adjust the Apache overflows failure check jail like this; `bantime` is 5 minutes (300 seconds) and the `findtime` to catch attempts is 15 minutes (900 seconds):
@@ -154,8 +154,8 @@ Similarly we can enable and adjust the Apache overflows failure check jail like 
 	port     = http,https
 	filter   = apache-overflows
 	logpath  = /var/log/apache*/*error.log
-	bantime  = 300
-	findtime = 900
+	bantime  = 180
+	findtime = 1800
 	maxretry = 2
 
 And if you are using Fail2Ban verison 0.8.7 or higher, be sure to activate the `recidive` filter so repeat offenders are banned for a nice long time. This is adjusted so `maxretry` is 3 instead of 5 and there is a destination (`dest=`) email set to notify me of `recidive` blocking someone:
@@ -195,8 +195,8 @@ And add this new `apache-badbots` jail to the bottom of the file:
 	port     = http,https
 	filter   = apache-badbots
 	logpath  = /var/log/apache*/*access.log
-	bantime  = 300
-	findtime = 900
+	bantime  = 180
+	findtime = 1800
 	maxretry = 2
 
 If you need to customize the bots or the regex that scans the logs for bots, just open up the `apache-badbots` config file:
@@ -253,7 +253,7 @@ And add this custom jail to the bottom of the config:
     port      = anyport
     filter    = ddos
     logpath   = /var/log/kern.log
-    bantime   = 300
+    bantime   = 180
     findtime  = 900
     maxretry  = 3
 
