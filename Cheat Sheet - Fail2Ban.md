@@ -340,55 +340,44 @@ If you feel like checking the main `auth.log` for failed login attempts, just ru
 
     sudo tail -f -n 500 /var/log/auth.log | grep "Failed password"
 
-And you can even get a nice tally of failed password attempts by running this command:
+And you can even get a nice tally of failed password attempts by running this command that parses through compressed and uncompressed archives:
 
-    sudo cat /var/log/auth.{log,log.1} | grep 'Failed password' | grep sshd | awk '{print $1,$2}' | sort -k 1,1M -k 2n | uniq -c
-
-The output would be something like this:
-
-	 5909 Oct 18
-	13444 Oct 19
-	  351 Oct 20
-	  162 Oct 21
-	  499 Oct 22
-	  377 Oct 23
-	  145 Oct 24
-	10897 Oct 25
-	   76 Oct 26
-	   54 Oct 27
-	  310 Oct 28
-	 1024 Oct 29
-	  208 Oct 30
-	   30 Oct 31
-
-This variant of the above command would work for GZipped files:
-
-    sudo zcat -q /var/log/auth.log* | grep 'Failed password' | grep sshd | awk '{print $1,$2}' | sort -k 1,1M -k 2n | uniq -c
+    sudo zgrep -h 'Failed password' /var/log/auth.* | grep sshd | awk '{print $1,$2}' | sort -k 1,1M -k 2n | uniq -c
 
 The output would be something like this:
 
-	10413 Sep 27
-	15977 Sep 28
-	12297 Sep 29
-	14438 Sep 30
-	23394 Oct 1
-	12912 Oct 2
-	15844 Oct 3
-	19697 Oct 4
-	15350 Oct 5
-	12358 Oct 6
-	12692 Oct 7
-	 8377 Oct 8
-	10875 Oct 9
-	  565 Oct 10
-	16027 Oct 11
-	10422 Oct 12
-	 6808 Oct 13
-	26891 Oct 14
-	 9493 Oct 15
-	 5138 Oct 16
-	 9415 Oct 17
-	 2226 Oct 18
+	   10 /var/log/auth.log.1:Nov 1
+	 9762 /var/log/auth.log.4.gz:Oct 4
+	15350 /var/log/auth.log.4.gz:Oct 5
+	12358 /var/log/auth.log.4.gz:Oct 6
+	12692 /var/log/auth.log.4.gz:Oct 7
+	 8377 /var/log/auth.log.4.gz:Oct 8
+	10875 /var/log/auth.log.4.gz:Oct 9
+	  565 /var/log/auth.log.4.gz:Oct 10
+	12518 /var/log/auth.log.3.gz:Oct 11
+	 3509 /var/log/auth.log.4.gz:Oct 11
+	10422 /var/log/auth.log.3.gz:Oct 12
+	 6808 /var/log/auth.log.3.gz:Oct 13
+	26891 /var/log/auth.log.3.gz:Oct 14
+	 9493 /var/log/auth.log.3.gz:Oct 15
+	 5138 /var/log/auth.log.3.gz:Oct 16
+	 9415 /var/log/auth.log.3.gz:Oct 17
+	 5909 /var/log/auth.log.2.gz:Oct 18
+	 2226 /var/log/auth.log.3.gz:Oct 18
+	13444 /var/log/auth.log.2.gz:Oct 19
+	  351 /var/log/auth.log.2.gz:Oct 20
+	  162 /var/log/auth.log.2.gz:Oct 21
+	  499 /var/log/auth.log.2.gz:Oct 22
+	  377 /var/log/auth.log.2.gz:Oct 23
+	  145 /var/log/auth.log.2.gz:Oct 24
+	 8275 /var/log/auth.log.1:Oct 25
+	 2622 /var/log/auth.log.2.gz:Oct 25
+	   76 /var/log/auth.log.1:Oct 26
+	   54 /var/log/auth.log.1:Oct 27
+	  310 /var/log/auth.log.1:Oct 28
+	 1024 /var/log/auth.log.1:Oct 29
+	  208 /var/log/auth.log.1:Oct 30
+	   39 /var/log/auth.log.1:Oct 31
 
 #### Filter out a list of IP addresses.
 
