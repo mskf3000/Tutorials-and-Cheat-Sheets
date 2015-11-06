@@ -1,4 +1,4 @@
-# Linux-Unix - LVM (Logical Volume Management) Related Items
+# Linux-Unix - LVM Related Items
 
 By Jack Szwergold, September 30, 2015
 
@@ -216,7 +216,7 @@ Check the current UUID:
 
 ***
 
-*Linux-Unix - LVM (Logical Volume Management) Related Items (c) by Jack Szwergold*
+*Linux-Unix - LVM Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 

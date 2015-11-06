@@ -1,4 +1,4 @@
-# Mac OS X - SMB (Samba) Tweaking
+# Mac OS X - SMB Tweaking
 
 By Jack Szwergold, October 6, 2015
 
@@ -36,6 +36,6 @@ Honestly, some of this is just “magic” and I don’t trust any of these conf
 
 ***
 
-*Mac OS X - SMB (Samba) Tweaking (c) by Jack Szwergold*
+*Mac OS X - SMB Tweaking (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
