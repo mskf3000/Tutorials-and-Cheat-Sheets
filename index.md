@@ -57,7 +57,7 @@ If you find any of this useful, you’re welcome!
 * [Java - Installing a Web Crawler based on Solr and Nutch](Java - Installing a Web Crawler based on Solr and Nutch)
 * [Java - Using a Web Crawler based on Solr and Nutch](Java - Using a Web Crawler based on Solr and Nutch)
 * [Java](Java)
-* [Joomla - Getting Joomla 1](Joomla - Getting Joomla 1)
+* [Joomla - Getting Joomla 1 to Work on Modern PHP](Joomla - Getting Joomla 1 to Work on Modern PHP)
 * [Joomla](Joomla)
 * [Kernel Networking Tweaks](Kernel Networking Tweaks)
 * [LAME MP3 Related Items](LAME MP3 Related Items)
