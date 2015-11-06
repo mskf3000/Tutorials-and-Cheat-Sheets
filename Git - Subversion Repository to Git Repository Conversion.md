@@ -1,4 +1,4 @@
-# Cheat Sheet - Git - Subversion Repository to Git Repository Conversion
+# Git - Subversion Repository to Git Repository Conversion
 
 By Jack Szwergold, October 8, 2015
 
@@ -72,6 +72,6 @@ Commit that and move on with your life happily living Subversion behind.
 
 ***
 
-*Cheat Sheet - Ubuntu - Updates and Repository Items (c) by Jack Szwergold*
+*Ubuntu - Updates and Repository Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

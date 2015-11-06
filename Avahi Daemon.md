@@ -1,4 +1,4 @@
-# Cheat Sheet - Avahi Daemon
+# Avahi Daemon
 
 By Jack Szwergold, September 15, 2015
 
@@ -126,6 +126,6 @@ Just change the `model=RackMac` to match whatever Mac OS X icon you want. To get
 
 ***
 
-*Cheat Sheet - Avahi Daemon (c) by Jack Szwergold*
+*Avahi Daemon (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,4 +1,4 @@
-# Cheat Sheet - Java - Installing a Web Crawler based on Solr and Nutch
+# Java - Installing a Web Crawler based on Solr and Nutch
 
 By Jack Szwergold, October 14, 2015
 
@@ -492,6 +492,6 @@ And change it to this; note the `address="127.0.0.1"` line:
 
 ***
 
-*Cheat Sheet - Java - Installing a Web Crawler based on Solr and Nutch (c) by Jack Szwergold*
+*Java - Installing a Web Crawler based on Solr and Nutch (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

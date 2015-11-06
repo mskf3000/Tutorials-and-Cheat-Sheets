@@ -1,4 +1,4 @@
-# Cheat Sheet - Fail2Ban
+# Fail2Ban
 
 By Jack Szwergold, October 19, 2015
 
@@ -447,6 +447,6 @@ And the output would be something like this:
 
 ***
 
-*Cheat Sheet - Fail2Ban (c) by Jack Szwergold*
+*Fail2Ban (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

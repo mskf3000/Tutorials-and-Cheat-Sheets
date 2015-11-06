@@ -1,4 +1,4 @@
-# Cheat Sheet - Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning
+# Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning
 
 By Jack Szwergold, September 18, 2015
 
@@ -166,6 +166,6 @@ Print USB device details:
 
 ***
 
-*Cheat Sheet - Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning (c) by Jack Szwergold*
+*Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

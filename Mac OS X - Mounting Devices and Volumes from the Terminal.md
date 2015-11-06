@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Mounting Devices and Volumes from the Terminal
+# Mac OS X - Mounting Devices and Volumes from the Terminal
 
 By Jack Szwergold, September 12, 2015
 
@@ -38,6 +38,6 @@ The USB drive should now be remounted and accessible again.
 
 ***
 
-*Cheat Sheet - Mac OS X - Mounting Devices and Volumes from the Terminal (c) by Jack Szwergold*
+*Mac OS X - Mounting Devices and Volumes from the Terminal (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

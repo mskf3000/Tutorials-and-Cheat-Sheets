@@ -1,4 +1,4 @@
-# Cheat Sheet - MailCatcher
+# MailCatcher
 
 By Jack Szwergold, September 14, 2015
 
@@ -28,6 +28,6 @@ Setting your code to send SMTP mail to port `1025` on `localhost` will send it t
 
 ***
 
-*Cheat Sheet - MailCatcher (c) by Jack Szwergold*
+*MailCatcher (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

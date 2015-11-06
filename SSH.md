@@ -1,4 +1,4 @@
-# Cheat Sheet - SSH
+# SSH
 
 By Jack Szwergold, September 15, 2015
 
@@ -137,6 +137,6 @@ And finally make sure the parent `.ssh/` directory has it’s permissions set to
 
 ***
 
-*Cheat Sheet - SSH (c) by Jack Szwergold*
+*SSH (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

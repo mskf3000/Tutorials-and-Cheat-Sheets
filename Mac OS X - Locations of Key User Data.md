@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Locations of Key User Data
+# Mac OS X - Locations of Key User Data
 
 By Jack Szwergold, October 18, 2015
 
@@ -50,6 +50,6 @@ Or you can copy the full iTunes music  directory from here:
 
 ***
 
-*Cheat Sheet - Mac OS X - Locations of Key User Data (c) by Jack Szwergold*
+*Mac OS X - Locations of Key User Data (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

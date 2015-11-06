@@ -1,4 +1,4 @@
-# Cheat Sheet - Route
+# Route
 
 By Jack Szwergold, October 22, 2015
 
@@ -34,6 +34,6 @@ To view the routing table in Mac OS X you would run this Netstat command:
 
 ***
 
-*Cheat Sheet - Route (c) by Jack Szwergold*
+*Route (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

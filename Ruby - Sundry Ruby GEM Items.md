@@ -1,4 +1,4 @@
-# Cheat Sheet - Ruby - Sundry Ruby GEM Items
+# Ruby - Sundry Ruby GEM Items
 
 By Jack Szwergold, September 20, 2015
 
@@ -36,6 +36,6 @@ Will remove all old versions of the GEM.
 
 ***
 
-*Cheat Sheet - Ruby - Sundry Ruby GEM Items (c) by Jack Szwergold*
+*Ruby - Sundry Ruby GEM Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

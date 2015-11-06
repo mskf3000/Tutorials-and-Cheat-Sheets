@@ -1,4 +1,4 @@
-# Cheat Sheet - Iconv
+# Iconv
 
 By Jack Szwergold, October 7, 2015
 
@@ -12,6 +12,6 @@ An exmaple of converting a file from `UTF-8` to `iso-8859-1`:
 
 ***
 
-*Cheat Sheet - Iconv (c) by Jack Szwergold*
+*Iconv (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

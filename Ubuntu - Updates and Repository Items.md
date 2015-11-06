@@ -1,4 +1,4 @@
-# Cheat Sheet - Ubuntu - Updates and Repository Items
+# Ubuntu - Updates and Repository Items
 
 By Jack Szwergold, September 11, 2015
 
@@ -131,6 +131,6 @@ That command is specific to upgrading the HWE in Ubuntu 12.04 so if you see that
 
 ***
 
-*Cheat Sheet - Ubuntu - Updates and Repository Items (c) by Jack Szwergold*
+*Ubuntu - Updates and Repository Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

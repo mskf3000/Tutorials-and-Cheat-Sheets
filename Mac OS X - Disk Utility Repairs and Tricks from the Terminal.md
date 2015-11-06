@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Disk Utility Repairs and Tricks from the Terminal
+# Mac OS X - Disk Utility Repairs and Tricks from the Terminal
 
 By Jack Szwergold, September 13, 2015
 
@@ -119,6 +119,6 @@ Erase a volume from the command line using `diskutil` like this. Note that `HFS+
 
 ***
 
-*Cheat Sheet - Mac OS X - Disk Utility Repairs and Tricks from the Terminal (c) by Jack Szwergold*
+*Mac OS X - Disk Utility Repairs and Tricks from the Terminal (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

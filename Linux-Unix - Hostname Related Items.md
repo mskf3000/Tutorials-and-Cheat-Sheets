@@ -1,4 +1,4 @@
-# Cheat Sheet - Linux-Unix - Hostname Related Items
+# Linux-Unix - Hostname Related Items
 
 By Jack Szwergold, September 27, 2015
 
@@ -48,7 +48,7 @@ And if you feel like changing it, set it by using `sudo` and assigning a value l
 
 ***
 
-*Cheat Sheet - Linux-Unix - Hostname Related Items (c) by Jack Szwergold*
+*Linux-Unix - Hostname Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 

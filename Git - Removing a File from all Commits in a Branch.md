@@ -1,4 +1,4 @@
-# Cheat Sheet - Git - Removing a File from all Commits in a Branch
+# Git - Removing a File from all Commits in a Branch
 
 By Jack Szwergold, September 15, 2015
 
@@ -14,6 +14,6 @@ Now push that commit back to GitHub.
 
 ***
 
-*Cheat Sheet - Git - Removing a File from all Commits in a Branch (c) by Jack Szwergold*
+*Git - Removing a File from all Commits in a Branch (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

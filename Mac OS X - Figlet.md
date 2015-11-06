@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Figlet
+# Mac OS X - Figlet
 
 By Jack Szwergold, November 1, 2015
 
@@ -60,6 +60,6 @@ This example uses `slant` font and the output would be something like this:
 
 ***
 
-*Cheat Sheet - Mac OS X - Figlet (c) by Jack Szwergold*
+*Mac OS X - Figlet (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

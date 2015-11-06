@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - MAMP Related Items
+# Mac OS X - MAMP Related Items
 
 By Jack Szwergold, October 7, 2015
 
@@ -46,6 +46,6 @@ Finally restart the MAMP servers and all should be good as far as `exec()` and p
 
 ***
 
-*Cheat Sheet - Mac OS X - MAMP Related Items (c) by Jack Szwergold*
+*Mac OS X - MAMP Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

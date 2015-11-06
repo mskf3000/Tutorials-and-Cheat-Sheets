@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Uninstalling MySQL from Mac OS X
+# Mac OS X - Uninstalling MySQL from Mac OS X
 
 By Jack Szwergold, September 14, 2015
 
@@ -61,6 +61,6 @@ And remove the line MySQL related line that should look like this:
 
 ***
 
-*Cheat Sheet - Mac OS X - Uninstalling MySQL from Mac OS X (c) by Jack Szwergold*
+*Mac OS X - Uninstalling MySQL from Mac OS X (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

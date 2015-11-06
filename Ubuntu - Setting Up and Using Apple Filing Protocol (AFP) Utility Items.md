@@ -1,4 +1,4 @@
-# Cheat Sheet - Ubuntu - Setting Up and Using Apple Filing Protocol (AFP) Utility Items
+# Ubuntu - Setting Up and Using Apple Filing Protocol (AFP) Utility Items
 
 By Jack Szwergold, October 4, 2015
 
@@ -24,6 +24,6 @@ Unmount an AFP volume:
 
 ***
 
-*Cheat Sheet - Ubuntu - Setting Up and Using Apple Filing Protocol (AFP) Utility Items (c) by Jack Szwergold*
+*Ubuntu - Setting Up and Using Apple Filing Protocol (AFP) Utility Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

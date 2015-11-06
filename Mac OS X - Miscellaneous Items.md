@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Miscellaneous Items
+# Mac OS X - Miscellaneous Items
 
 By Jack Szwergold, October 6, 2015
 
@@ -283,6 +283,6 @@ A window will pop up with a few different choices. Just choose “Install” (do
  
 ***
 
-*Cheat Sheet - Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
+*Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

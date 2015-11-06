@@ -1,4 +1,4 @@
-# Cheat Sheet - IPTables
+# IPTables
 
 By Jack Szwergold, September 11, 2015
 
@@ -243,6 +243,6 @@ This variant will let you know date, time and whether the dropped packet was TCP
 
 ***
 
-*Cheat Sheet - IPTables (c) by Jack Szwergold*
+*IPTables (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

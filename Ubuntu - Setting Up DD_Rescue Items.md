@@ -1,4 +1,4 @@
-# Cheat Sheet - Ubuntu - Setting Up DD_Rescue Items
+# Ubuntu - Setting Up DD_Rescue Items
 
 By Jack Szwergold, October 5, 2015
 
@@ -24,6 +24,6 @@ Compress a disk image in real-time:
 
 ***
 
-*Cheat Sheet - Ubuntu - Setting Up DD_Rescue Items (c) by Jack Szwergold*
+*Ubuntu - Setting Up DD_Rescue Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

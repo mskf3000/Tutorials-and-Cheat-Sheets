@@ -1,4 +1,4 @@
-# Cheat Sheet - Linux-Unix - Adjusting UMASK Related Items
+# Linux-Unix - Adjusting UMASK Related Items
 
 By Jack Szwergold, September 16, 2015
 
@@ -54,6 +54,6 @@ Change it to this by adding `umask=0002` to the end of the line:
 
 ***
 
-*Cheat Sheet - Linux-Unix - Adjusting UMASK Related Items (c) by Jack Szwergold*
+*Linux-Unix - Adjusting UMASK Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

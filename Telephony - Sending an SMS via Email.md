@@ -1,4 +1,4 @@
-# Cheat Sheet - Telephony - Sending an SMS via Email
+# Telephony - Sending an SMS via Email
 
 By Jack Szwergold, September 18, 2015
 
@@ -34,6 +34,6 @@ Verizon email to SMS address format:
 
 ***
 
-*Cheat Sheet - Telephony - Sending an SMS via Email (c) by Jack Szwergold*
+*Telephony - Sending an SMS via Email (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

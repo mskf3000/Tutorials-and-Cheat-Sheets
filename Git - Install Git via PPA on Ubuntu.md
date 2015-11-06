@@ -1,4 +1,4 @@
-# Cheat Sheet - Git - Install GIT via PPA on Ubuntu
+# Git - Install GIT via PPA on Ubuntu
 
 By Jack Szwergold, September 15, 2015
 
@@ -28,6 +28,6 @@ Or if you have not instaleld it yet, just install it via a standard `aptitude in
 
 ***
 
-*Cheat Sheet - Git - Install GIT via PPA on Ubuntu (c) by Jack Szwergold*
+*Git - Install GIT via PPA on Ubuntu (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

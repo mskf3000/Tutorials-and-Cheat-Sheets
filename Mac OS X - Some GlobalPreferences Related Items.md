@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Some GlobalPreferences Related Items
+# Mac OS X - Some GlobalPreferences Related Items
 
 #### Check a list of all user connected preference files.
 
@@ -42,6 +42,6 @@ And then, just restart the Finder with this command:
 
 ***
 
-*Cheat Sheet - Mac OS X - Some GlobalPreferences Related Items (c) by Jack Szwergold*
+*Mac OS X - Some GlobalPreferences Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

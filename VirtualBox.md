@@ -1,4 +1,4 @@
-# Cheat Sheet - VirtualBox
+# VirtualBox
 
 By Jack Szwergold, September 19, 2015
 
@@ -191,6 +191,6 @@ Compact a VirtualBox hard disk:
 
 ***
 
-*Cheat Sheet - VirtualBox (c) by Jack Szwergold*
+*VirtualBox (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

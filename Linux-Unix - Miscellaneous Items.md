@@ -1,4 +1,4 @@
-# Cheat Sheet - Linux-Unix - Miscellaneous Items
+# Linux-Unix - Miscellaneous Items
 
 By Jack Szwergold, October 4, 2015
 
@@ -213,6 +213,6 @@ Use `losf` to see what ports are connected to a process:
 
 ***
 
-*Cheat Sheet - Linux-Unix - Miscellaneous Items (c) by Jack Szwergold*
+*Linux-Unix - Miscellaneous Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

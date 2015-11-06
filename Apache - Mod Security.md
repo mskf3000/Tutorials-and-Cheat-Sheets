@@ -1,4 +1,4 @@
-# Cheat Sheet - Apache - Mod Security
+# Apache - Mod Security
 
 By Jack Szwergold, October 1, 2015
 

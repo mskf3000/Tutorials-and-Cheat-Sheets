@@ -1,4 +1,4 @@
-# Cheat Sheet - Ruby - Installing Ruby via RVM
+# Ruby - Installing Ruby via RVM
 
 By Jack Szwergold, September 20, 2015
 
@@ -66,6 +66,6 @@ Install the latest version of Bundler:
 
 ***
 
-*Cheat Sheet - Ruby - Installing Ruby via RVM (c) by Jack Szwergold*
+*Ruby - Installing Ruby via RVM (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

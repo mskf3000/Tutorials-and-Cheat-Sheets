@@ -1,4 +1,4 @@
-# Cheat Sheet - PHP - Setting up JSON support for PHP 5.1.6 in Ubuntu 12.04
+# PHP - Setting up JSON support for PHP 5.1.6 in Ubuntu 12.04
 
 By Jack Szwergold, October 13, 2015
 
@@ -80,6 +80,6 @@ Finally install it by running `sudo make install`:
 
 ***
 
-*Cheat Sheet - PHP - Setting up JSON support for PHP 5.1.6 in Ubuntu 12.04 (c) by Jack Szwergold*
+*PHP - Setting up JSON support for PHP 5.1.6 in Ubuntu 12.04 (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

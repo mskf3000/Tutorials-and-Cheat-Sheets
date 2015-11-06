@@ -1,4 +1,4 @@
-# Cheat Sheet - Elasticsearch
+# Elasticsearch
 
 By Jack Szwergold, September 21, 2015
 
@@ -284,6 +284,6 @@ And this will also delete all indexes:
 
 ***
 
-*Cheat Sheet - Elasticsearch (c) by Jack Szwergold*
+*Elasticsearch (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

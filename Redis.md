@@ -1,4 +1,4 @@
-# Cheat Sheet - Redis
+# Redis
 
 By Jack Szwergold, September 22, 2015
 
@@ -260,6 +260,6 @@ Get a value connected to a key like this; the response should be “somevalue”
 
 ***
 
-*Cheat Sheet - Redis (c) by Jack Szwergold*
+*Redis (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

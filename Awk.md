@@ -1,4 +1,4 @@
-# Cheat Sheet - Awk
+# Awk
 
 By Jack Szwergold, October 8, 2015
 
@@ -10,6 +10,6 @@ Just change `*.txt` to match the text file pattern you are attempting to match a
 
 ***
 
-*Cheat Sheet - Awk (c) by Jack Szwergold*
+*Awk (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

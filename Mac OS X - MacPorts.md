@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - MacPorts
+# Mac OS X - MacPorts
 
 By Jack Szwergold, September 22, 2015
 
@@ -58,6 +58,6 @@ Remove the `.plist` user and group files for the `macports` user (and related gr
 
 ***
 
-*Cheat Sheet - Mac OS X - MacPorts (c) by Jack Szwergold*
+*Mac OS X - MacPorts (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

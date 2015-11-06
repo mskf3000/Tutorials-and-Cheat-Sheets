@@ -1,4 +1,4 @@
-# Cheat Sheet - Linux-Unix - Networking Netmasks and Slash Notation
+# Linux-Unix - Networking Netmasks and Slash Notation
 
 By Jack Szwergold, October 9, 2015
 
@@ -74,6 +74,6 @@ I won’t even attempt to do the math that would correlate where that `.240` oct
 
 ***
 
-*Cheat Sheet - Linux-Unix - Networking Netmasks and Slash Notation (c) by Jack Szwergold*
+*Linux-Unix - Networking Netmasks and Slash Notation (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

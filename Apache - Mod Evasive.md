@@ -1,4 +1,4 @@
-# Cheat Sheet - Apache - Mod Evasive
+# Apache - Mod Evasive
 
 By Jack Szwergold, September 27, 2015
 
@@ -115,6 +115,6 @@ The output will be a pile of headers for each HTTP request that is made; see bel
 
 ***
 
-*Cheat Sheet - Apache - Mod Evasive (c) by Jack Szwergold*
+*Apache - Mod Evasive (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

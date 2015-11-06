@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - MTR
+# Mac OS X - MTR
 
 By Jack Szwergold, September 11, 2015
 
@@ -96,6 +96,6 @@ If this is happening on a Linux/Unix system run that same command like this:
 
 ***
 
-*Cheat Sheet - Mac OS X - MTR (c) by Jack Szwergold*
+*Mac OS X - MTR (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

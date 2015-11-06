@@ -1,4 +1,4 @@
-# Cheat Sheet - Git - Initing a Repo and Pushing to Origin
+# Git - Initing a Repo and Pushing to Origin
 
 By Jack Szwergold, September 15, 2015
 
@@ -138,6 +138,6 @@ That will clone the `Preworn-Main` directory into a new directory named `Preworn
 
 ***
 
-*Cheat Sheet - Git - Initing a Repo and Pushing to Origin (c) by Jack Szwergold*
+*Git - Initing a Repo and Pushing to Origin (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

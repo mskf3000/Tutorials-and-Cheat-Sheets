@@ -1,4 +1,4 @@
-# Cheat Sheet - Amazon - Amazon S3 Bucket and User Policy Examples
+# Amazon - Amazon S3 Bucket and User Policy Examples
 
 By Jack Szwergold, October 6, 2015
 
@@ -131,6 +131,6 @@ This is for a bucket named `s3_bucket_name`. It works, but gives note that it gi
 
 ***
 
-*Cheat Sheet - Amazon - Amazon S3 Bucket and User Policy Examples (c) by Jack Szwergold*
+*Amazon - Amazon S3 Bucket and User Policy Examples (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

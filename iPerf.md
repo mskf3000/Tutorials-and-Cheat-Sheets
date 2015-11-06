@@ -1,4 +1,4 @@
-# Cheat Sheet - iPerf
+# iPerf
 
 By Jack Szwergold, September 15, 2015
 
@@ -201,6 +201,6 @@ Set the interval to be 2 seconds between tests, run it as a dual test to/from se
 
 ***
 
-*Cheat Sheet - iPerf (c) by Jack Szwergold*
+*iPerf (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

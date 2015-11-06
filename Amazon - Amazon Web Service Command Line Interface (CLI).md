@@ -1,4 +1,4 @@
-# Cheat Sheet - Amazon - Amazon Web Service Command Line Interface (CLI)
+# Amazon - Amazon Web Service Command Line Interface (CLI)
 
 By Jack Szwergold, October 7, 2015
 
@@ -91,6 +91,6 @@ Output returned would be something like this:
 
 ***
 
-*Cheat Sheet - Amazon - Amazon S3 Fuse Integration (c) by Jack Szwergold*
+*Amazon - Amazon S3 Fuse Integration (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

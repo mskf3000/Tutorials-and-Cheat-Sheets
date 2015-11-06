@@ -1,4 +1,4 @@
-# Cheat Sheet - Linux-Unix - HFS Volume Related Items
+# Linux-Unix - HFS Volume Related Items
 
 By Jack Szwergold, September 22, 2015
 
@@ -34,6 +34,6 @@ Finally, if the drive was improperly unmounted or has otherwise become partially
 
 ***
 
-*Cheat Sheet - Linux-Unix - HFS Volume Related Items (c) by Jack Szwergold*
+*Linux-Unix - HFS Volume Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

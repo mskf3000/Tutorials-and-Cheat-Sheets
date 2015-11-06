@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Various CUPS Server Items
+# Mac OS X - Various CUPS Server Items
 
 By Jack Szwergold, October 6, 2015
 
@@ -83,6 +83,6 @@ Start CUPS again:
 
 ***
 
-*Cheat Sheet - Mac OS X - Various CUPS Server Items (c) by Jack Szwergold*
+*Mac OS X - Various CUPS Server Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

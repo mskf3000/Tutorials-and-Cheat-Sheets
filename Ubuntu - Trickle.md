@@ -1,4 +1,4 @@
-# Cheat Sheet - Ubuntu - Trickle
+# Ubuntu - Trickle
 
 By Jack Szwergold, October 9, 2015
 
@@ -71,6 +71,6 @@ And similarly, the value of `Length-Smoothing` is defined as follows in the docu
 
 ***
 
-*Cheat Sheet - Ubuntu - Trickle (c) by Jack Szwergold*
+*Ubuntu - Trickle (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,4 +1,4 @@
-# Cheat Sheet - Setting Up a Postfix SASL SMTP Email Relay
+# Setting Up a Postfix SASL SMTP Email Relay
 
 By Jack Szwergold, October 7, 2015
 
@@ -158,6 +158,6 @@ Followed by this `launchctl load` command:
 
 ***
 
-*Cheat Sheet - Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold*
+*Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

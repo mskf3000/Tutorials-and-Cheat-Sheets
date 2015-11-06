@@ -1,4 +1,4 @@
-# Cheat Sheet - IPTables - IPSet
+# IPTables - IPSet
 
 By Jack Szwergold, October 27, 2015
 
@@ -201,6 +201,6 @@ And if somehow you need to remove that IPTables rule, run this command:
 
 ***
 
-*Cheat Sheet - IPTables - IPSet (c) by Jack Szwergold*
+*IPTables - IPSet (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

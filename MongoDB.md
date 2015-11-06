@@ -1,4 +1,4 @@
-# Cheat Sheet - MongoDB
+# MongoDB
 
 By Jack Szwergold, September 22, 2015
 
@@ -355,7 +355,7 @@ Then do this to get rid of the old lock file:
 
 ***
 
-*Cheat Sheet - MongoDB (c) by Jack Szwergold*
+*MongoDB (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 

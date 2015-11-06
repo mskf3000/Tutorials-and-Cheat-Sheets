@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - MAME Related Items
+# Mac OS X - MAME Related Items
 
 By Jack Szwergold, October 7, 2015
 
@@ -516,6 +516,6 @@ And this is the output:
 
 ***
 
-*Cheat Sheet - Mac OS X - MAME Related Items (c) by Jack Szwergold*
+*Mac OS X - MAME Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

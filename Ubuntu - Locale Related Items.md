@@ -1,4 +1,4 @@
-# Cheat Sheet - Ubuntu - Locale Related Items
+# Ubuntu - Locale Related Items
 
 By Jack Szwergold, October 5, 2015
 
@@ -52,6 +52,6 @@ Check the output of `locale` which should now be something like this:
 
 ***
 
-*Cheat Sheet - Ubuntu - Locale Related Items (c) by Jack Szwergold*
+*Ubuntu - Locale Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

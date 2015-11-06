@@ -1,4 +1,4 @@
-# Cheat Sheet - IFTop
+# IFTop
 
 By Jack Szwergold, September 14, 2015
 
@@ -30,6 +30,6 @@ Check for port 445 (HTTP) traffic on `en0`:
 
 ***
 
-*Cheat Sheet - IFTop (c) by Jack Szwergold*
+*IFTop (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

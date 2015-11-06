@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - IFTop
+# Mac OS X - IFTop
 
 By Jack Szwergold, September 14, 2015
 
@@ -38,6 +38,6 @@ And once it’s installed, run the command with `-h` to do a simple check to see
 
 ***
 
-*Cheat Sheet - Mac OS X - IFTop (c) by Jack Szwergold*
+*Mac OS X - IFTop (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,4 +1,4 @@
-# Cheat Sheet - Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
+# Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
 
 By Jack Szwergold, October 3, 2015
 
@@ -83,6 +83,6 @@ With that done, pat yourself on the back. You just recovered some hard work and 
 
 ***
 
-*Cheat Sheet - Git - Restoring Lost Commits from Dangling Blobs and Reference Logs (c) by Jack Szwergold*
+*Git - Restoring Lost Commits from Dangling Blobs and Reference Logs (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

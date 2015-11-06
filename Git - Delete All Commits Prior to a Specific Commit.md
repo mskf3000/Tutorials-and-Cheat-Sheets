@@ -1,4 +1,4 @@
-# Cheat Sheet - Git - Delete All Commits Prior to a Specific Commit
+# Git - Delete All Commits Prior to a Specific Commit
 
 By Jack Szwergold, September 15, 2015
 
@@ -34,6 +34,6 @@ Finally, push the newly rebased repo back to `origin` like this:
 
 ***
 
-*Cheat Sheet - Git - Delete All Commits Prior to a Specific Commit (c) by Jack Szwergold*
+*Git - Delete All Commits Prior to a Specific Commit (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

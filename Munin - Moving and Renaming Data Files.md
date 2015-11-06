@@ -1,4 +1,4 @@
-# Cheat Sheet - Munin - Moving and Renaming Data Files
+# Munin - Moving and Renaming Data Files
 
 By Jack Szwergold, September 16, 2015
 
@@ -78,6 +78,6 @@ And the final step is to restart the Munin node again:
 
 ***
 
-*Cheat Sheet - Munin - Moving and Renaming Data Files (c) by Jack Szwergold*
+*Munin - Moving and Renaming Data Files (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

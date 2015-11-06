@@ -1,4 +1,4 @@
-# Cheat Sheet - Postfix - Delete Specific Messages from the Mail Queue
+# Postfix - Delete Specific Messages from the Mail Queue
 
 By Jack Szwergold, September 17, 2015
 
@@ -53,6 +53,6 @@ And to delete all queued messages that contain the characters `xyz` in the email
 
 ***
 
-*Cheat Sheet - Postfix - Delete Specific Messages from the Mail Queue (c) by Jack Szwergold*
+*Postfix - Delete Specific Messages from the Mail Queue (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

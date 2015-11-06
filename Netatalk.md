@@ -1,4 +1,4 @@
-# Cheat Sheet - Netatalk
+# Netatalk
 
 By Jack Szwergold, September 19, 2015
 
@@ -40,6 +40,6 @@ Add this line to the end of the `AppleVolumes.default` config file to define a N
 
 ***
 
-*Cheat Sheet - Netatalk (c) by Jack Szwergold*
+*Netatalk (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

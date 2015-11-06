@@ -1,4 +1,4 @@
-# Cheat Sheet - Ruby - Installing Ruby from Source on Ubuntu
+# Ruby - Installing Ruby from Source on Ubuntu
 
 By Jack Szwergold, September 21, 2015
 
@@ -98,6 +98,6 @@ And change it to `true` like this:
 
 ***
 
-*Cheat Sheet - Ruby - Installing Ruby from Source on Ubuntu (c) by Jack Szwergold*
+*Ruby - Installing Ruby from Source on Ubuntu (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

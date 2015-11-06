@@ -1,4 +1,4 @@
-# Cheat Sheet - Screen
+# Screen
 
 By Jack Szwergold, September 27, 2015
 
@@ -28,6 +28,6 @@ The `-D` detaches the screen session and then the `-r` reattaches the session.
 
 ***
 
-*Cheat Sheet - Screen (c) by Jack Szwergold*
+*Screen (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,4 +1,4 @@
-# Cheat Sheet - Linux-Unix - Startup Service Init Script Related Items
+# Linux-Unix - Startup Service Init Script Related Items
 
 By Jack Szwergold, October 3, 2015
 
@@ -65,6 +65,6 @@ But I will deconstruct the link structure for `S20apache2`. Here is how it break
 
 ***
 
-*Cheat Sheet - Linux-Unix - Startup Service Init Script Related Items (c) by Jack Szwergold*
+*Linux-Unix - Startup Service Init Script Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

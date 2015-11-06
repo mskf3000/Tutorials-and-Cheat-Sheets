@@ -1,4 +1,4 @@
-# Cheat Sheet - Ruby - Installing Ruby 1.9 on Ubuntu 12.04
+# Ruby - Installing Ruby 1.9 on Ubuntu 12.04
 
 By Jack Szwergold, September 20, 2015
 
@@ -60,6 +60,6 @@ Finally, confirm the version of Ruby has been updated like this:
 
 ***
 
-*Cheat Sheet - Ruby - Installing Ruby 1.9 on Ubuntu 12.04 (c) by Jack Szwergold*
+*Ruby - Installing Ruby 1.9 on Ubuntu 12.04 (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

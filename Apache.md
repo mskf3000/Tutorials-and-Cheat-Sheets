@@ -1,4 +1,4 @@
-# Cheat Sheet - Apache
+# Apache
 
 By Jack Szwergold, September 19, 2015
 
@@ -189,6 +189,6 @@ Rewrite rule to redirect requests based on referrer:
 
 ***
 
-*Cheat Sheet - Apache (c) by Jack Szwergold*
+*Apache (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

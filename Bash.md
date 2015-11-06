@@ -1,4 +1,4 @@
-# Cheat Sheet - Bash
+# Bash
 
 By Jack Szwergold, September 27, 2015
 
@@ -84,6 +84,6 @@ And here are some example `LSCOLORS` settings:
 
 ***
 
-*Cheat Sheet - Bash (c) by Jack Szwergold*
+*Bash (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

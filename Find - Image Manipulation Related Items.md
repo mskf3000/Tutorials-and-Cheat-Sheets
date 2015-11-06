@@ -1,4 +1,4 @@
-# Cheat Sheet - Find - Image Manipulation Related Items
+# Find - Image Manipulation Related Items
 
 By Jack Szwergold, September 29, 2015
 
@@ -130,6 +130,6 @@ Resize JPEG, PNG or TIFF images to dimensions of 1500 pixels wide or high if the
 
 ***
 
-*Cheat Sheet - Find - Image Manipulation Related Items (c) by Jack Szwergold*
+*Find - Image Manipulation Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,4 +1,4 @@
-# Cheat Sheet - GeoIP
+# GeoIP
 
 By Jack Szwergold, September 23, 2015
 
@@ -85,6 +85,6 @@ Check to see if the GeoIP databases are set in Mac OS X:
 
 ***
 
-*Cheat Sheet - GeoIP (c) by Jack Szwergold*
+*GeoIP (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

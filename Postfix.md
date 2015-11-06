@@ -1,4 +1,4 @@
-# Cheat Sheet - Postfix
+# Postfix
 
 By Jack Szwergold, September 17, 2015
 
@@ -196,6 +196,6 @@ A more intricate test using `sendmail` from the command line:
 
 ***
 
-*Cheat Sheet - Postfix (c) by Jack Szwergold*
+*Postfix (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

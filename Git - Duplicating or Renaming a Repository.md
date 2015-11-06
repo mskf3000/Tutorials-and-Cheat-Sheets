@@ -1,4 +1,4 @@
-# Cheat Sheet - Git - Duplicating or Renaming a Repository
+# Git - Duplicating or Renaming a Repository
 
 By Jack Szwergold, September 15, 2015
 
@@ -24,6 +24,6 @@ If any `git clone` copies s of the repo exist somewhere, change the origin URL t
 
 ***
 
-*Cheat Sheet - Git - Duplicating or Renaming a Repository (c) by Jack Szwergold*
+*Git - Duplicating or Renaming a Repository (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

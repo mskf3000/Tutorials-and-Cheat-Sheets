@@ -1,4 +1,4 @@
-# Cheat Sheet - PHP - Compiling and Installing PHP 5.1.6 in Ubuntu 12.04
+# PHP - Compiling and Installing PHP 5.1.6 in Ubuntu 12.04
 
 By Jack Szwergold, October 13, 2015
 
@@ -173,6 +173,6 @@ Change to:
 
 ***
 
-*Cheat Sheet - PHP - Compiling and Installing PHP 5.1.6 in Ubuntu 12.04 (c) by Jack Szwergold*
+*PHP - Compiling and Installing PHP 5.1.6 in Ubuntu 12.04 (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

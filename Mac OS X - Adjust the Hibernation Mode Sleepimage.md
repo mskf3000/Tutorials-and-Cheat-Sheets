@@ -1,4 +1,4 @@
-# Cheat Sheet - Mac OS X - Adjust the Hibernation Mode Sleepimage
+# Mac OS X - Adjust the Hibernation Mode Sleepimage
 
 By Jack Szwergold, September 12, 2015
 
@@ -44,7 +44,7 @@ Once that’s done, the `sleepimage` cannot be recreated by the system unless th
 
 ***
 
-*Cheat Sheet - Mac OS X - Adjust the Hibernation Mode Sleepimage (c) by Jack Szwergold*
+*Mac OS X - Adjust the Hibernation Mode Sleepimage (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 

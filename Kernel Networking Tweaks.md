@@ -1,4 +1,4 @@
-# Cheat Sheet - Kernel Networking Tweaks
+# Kernel Networking Tweaks
 
 By Jack Szwergold, October 7, 2015
 
@@ -71,6 +71,6 @@ And set entries like this in there:
 
 ***
 
-*Cheat Sheet - Kernel Networking Tweaks (c) by Jack Szwergold*
+*Kernel Networking Tweaks (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

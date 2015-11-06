@@ -1,4 +1,4 @@
-# Cheat Sheet - Zip
+# Zip
 
 By Jack Szwergold, September 11, 2015
 
@@ -56,6 +56,6 @@ Use this command to decompress multiple Zip files with a password from the comma
 
 ***
 
-*Cheat Sheet - Zip (c) by Jack Szwergold*
+*Zip (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

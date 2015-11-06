@@ -1,4 +1,4 @@
-# Cheat Sheet - Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu
+# Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu
 
 By Jack Szwergold, September 22, 2015
 
@@ -79,6 +79,6 @@ And if you ever want to reinstall that Debian package, just run this command:
 
 ***
 
-*Cheat Sheet - Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold*
+*Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,4 +1,4 @@
-# Cheat Sheet - Tar
+# Tar
 
 By Jack Szwergold, October 8, 2015
 
@@ -27,6 +27,6 @@ Would show the following content info:
 
 ***
 
-*Cheat Sheet - Tar (c) by Jack Szwergold*
+*Tar (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,4 +1,4 @@
-# Cheat Sheet - Linux-Unix - Partitioning
+# Linux-Unix - Partitioning
 
 By Jack Szwergold, September 15, 2015
 
@@ -433,6 +433,6 @@ When you remount the volume—either manually or via the reboot—the size of th
 
 ***
 
-*Cheat Sheet - Linux-Unix - Partitioning (c) by Jack Szwergold*
+*Linux-Unix - Partitioning (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

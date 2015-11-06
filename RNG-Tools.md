@@ -1,4 +1,4 @@
-# Cheat Sheet - RNG-Tools
+# RNG-Tools
 
 By Jack Szwergold, September 24, 2015
 
@@ -65,6 +65,6 @@ Add those values to the bottom of each respective commented out area for easier 
 
 ***
 
-*Cheat Sheet - RNG-Tools (c) by Jack Szwergold*
+*RNG-Tools (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

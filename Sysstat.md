@@ -1,4 +1,4 @@
-# Cheat Sheet - Sysstat
+# Sysstat
 
 By Jack Szwergold, September 16, 2015
 
@@ -46,6 +46,6 @@ Then just purge and re-install `sysstat` to get it back up and running:
 
 ***
 
-*Cheat Sheet - Sysstat (c) by Jack Szwergold*
+*Sysstat (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
