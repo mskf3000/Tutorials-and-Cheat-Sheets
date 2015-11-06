@@ -4,8 +4,6 @@ By Jack Szwergold, September 22, 2015
 
 ***
 
-***
-
 #### Sundry Redis items.
 
 Redis should now be installed and you can check the version by running:

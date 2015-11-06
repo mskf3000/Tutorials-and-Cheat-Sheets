@@ -4,8 +4,6 @@ By Jack Szwergold, September 17, 2015
 
 ***
 
-***
-
 Basic `/var/spool/clientmqueue` details if you need them for reference:
 
 - **directory path:** `/var/spool/clientmqueue`

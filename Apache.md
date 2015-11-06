@@ -4,8 +4,6 @@ By Jack Szwergold, September 19, 2015
 
 ***
 
-***
-
 #### Sundry Apache items.
 
 Get a summary of the `VirtualHost` configurations for Apache:

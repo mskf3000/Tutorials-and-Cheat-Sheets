@@ -4,8 +4,6 @@ By Jack Szwergold, October 1, 2015
 
 ***
 
-***
-
 ### Installing Mod Security.
 
 Install the Apache `mod_security` module and related items:

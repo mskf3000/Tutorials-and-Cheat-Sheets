@@ -4,8 +4,6 @@ By Jack Szwergold, September 17, 2015
 
 ***
 
-***
-
 List one item per line:
 
     ls -1

@@ -4,8 +4,6 @@ By Jack Szwergold, October 5, 2015
 
 ***
 
-***
-
 APC (Alternative PHP Cache) is an opcode (operation code) cache that can improve PHP performance and decrease RAM usage dramatically. While it works great when it works, some PHP applications might have slight flaws in them that will cause APC to crash sporadically. So if you intend to use APC, be sure to test your code on an APC-enabled developer’s environment before deploying APC—and the updated code—to production.
 
 ### Installing APC (Alternative PHP Cache) from Pear/Pecl source.

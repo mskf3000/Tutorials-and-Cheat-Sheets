@@ -4,8 +4,6 @@ By Jack Szwergold, September 24, 2015
 
 ***
 
-***
-
 #### Sundry MySQL items.
 
 Get MySQL version number:
