@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 27, 2015
 
+***
+
 #### Checking the value of—and temporarily changing—hostname values.
 
 This `hostname` command will give you the hostname connected to the system on the system:

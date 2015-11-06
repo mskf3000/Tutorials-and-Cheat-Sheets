@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 22, 2015
 
+***
+
 Load the database:
 
     sqlite3 storage.db

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 16, 2015
 
+***
+
 #### Resetting a user password directly in the WordPress MySQL database.
 
 If you need to reset a user’s password, but cannot do so via WordPress’s web interface, you can change it directly in the MySQL database using a query like this:

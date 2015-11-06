@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 11, 2015
 
+***
+
 ### Basic Compression
 
 #### Create a basic Zip archive.

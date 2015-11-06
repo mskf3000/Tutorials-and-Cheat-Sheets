@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 4, 2015
 
+***
+
 ### Get some basic system information like this.
 
 Get the current Linux distribution name and related version information:

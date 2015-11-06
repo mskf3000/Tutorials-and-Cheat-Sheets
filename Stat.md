@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Using Stat in Mac OS X.
 
 **ACCESS:** Get the last access time of a file.

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 14, 2015
 
+***
+
 Get the MD5 of a file via this command; change `.bash_profile` to match the actual path and file name of the file you want to check:
 
     md5 .bash_profile

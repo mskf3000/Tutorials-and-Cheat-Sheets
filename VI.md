@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 7, 2015
 
+***
+
 I honestly get confused when I’m using VI since I prefer to use Nano or Pico. So these notes are to help me when I’m somehow “trapped” using VI.
 
 First, if you are in VI itself, you need to use “insert mode” to edit something:

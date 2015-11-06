@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 17, 2015
 
+***
+
 #### Command to retain partially transfered files if the connection is lost.
 
 While this works, sometimes the partially transferred files are not cleanly resumed. Should check why that happens and if anything can be done:

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 6, 2015
 
+***
+
 ### Creating a bootable Mac OS X USB flash drive in Mac OS X 10.7 and higher.
 
 If you are using Mac OS X 1.7 (Lion) and higher, you can create bootable USB media using a command like this:

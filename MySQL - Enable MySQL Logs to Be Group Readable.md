@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 24, 2015
 
+***
+
 This procedure allows you to set MySQL logs to be group readable which can be useful for debugging scenarios. Still a slight security risk but if this is a needed for your usage, this is how you do it:
 
 ***

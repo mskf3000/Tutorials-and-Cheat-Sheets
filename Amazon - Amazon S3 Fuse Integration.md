@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 6, 2015
 
+***
+
 #### Install Tony Wang’s fork of `s3fs` version 1.59.
 
 The reason you should install Tony Wang]s fork of `s3fs` version 1.59 is that—unlike the main master code—his fork supports folders created by the Amazon S3 control panel.

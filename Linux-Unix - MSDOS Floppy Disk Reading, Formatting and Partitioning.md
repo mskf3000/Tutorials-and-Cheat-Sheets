@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 18, 2015
 
+***
+
 #### An adjustment to the GRUB bootloader that needs to be made to allow the floppy to be recognized.
 
 Edit the default GRUB config file:

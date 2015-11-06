@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 24, 2015
 
+***
+
 ### Adding a custom MOTD message.
 
 For example, let’s say we wanted to use `figlet` to make a nice server banner like this:

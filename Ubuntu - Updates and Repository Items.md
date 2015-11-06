@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 11, 2015
 
+***
+
 ### Clean out old Linux Kernels.
 
 #### Get the currently active Linux kernel version.

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 18, 2015
 
+***
+
 #### Installing Lsyncd.
 
 Install Lsyncd via `aptitude` like this:

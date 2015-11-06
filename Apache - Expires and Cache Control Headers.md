@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 19, 2015
 
+***
+
 #### How to disable cache control and expires headers.
 
 An example of disabling cache control headers:

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 19, 2015
 
+***
+
 #### 2015-09-19: Still active after all these years.
 
 - **1-206-343-0011**: This call requires a coin deposit. Please hang up momentarily…

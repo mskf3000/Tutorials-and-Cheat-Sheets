@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 14, 2015
 
+***
+
 #### Uninstalling MySQL from Mac OS X.
 
 If you installed MySQL from an official package installer and you want to now uninstall it, just run the following commands. These commands assume the version of MySQL that was installed was `mysql-5.5.12-osx10.6-x86_64` so adjust accordingly to match your setup:

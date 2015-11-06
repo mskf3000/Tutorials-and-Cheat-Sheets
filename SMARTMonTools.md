@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 23, 2015
 
+***
+
 Then install SMARTMonTools via `aptitude` like this:
 
     sudo aptitude install smartmontools

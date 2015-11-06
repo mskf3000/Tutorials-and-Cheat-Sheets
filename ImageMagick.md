@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 5, 2015
 
+***
+
 #### Basics of image conversion.
 
 Recompress a JPEG image at 95 percent quality:

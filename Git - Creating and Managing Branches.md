@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Create a development branch & push that to the origin.
 
 While most git repositories are set to the `master` branch to begin with, that’s not generally where you want to do your work. It’s best to create a separate/new branch to do work in and merge that to `master` when the work is done/tested.

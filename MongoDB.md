@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 22, 2015
 
+***
+
 ## Install MongoDB.
 
 First, import the public key used by the package management system:

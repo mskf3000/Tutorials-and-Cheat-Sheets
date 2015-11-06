@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 22, 2015
 
+***
+
 Install `lm-sensors`:
 
     sudo aptitude install lm-sensors

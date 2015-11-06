@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 11, 2015
 
+***
+
 `xxd` is a nice little hexdump (hexadecimal dump) utility available on most Linux/Unix systems. It allows you to get a hexdump of a file or even standard input.
 
 #### Hexdump the contents of the file.

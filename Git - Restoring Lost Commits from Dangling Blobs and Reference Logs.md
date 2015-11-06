@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 3, 2015
 
+***
+
 The basic concept here is you dug yourself into a hole by reverting commits. And there is no easy way to “pull” from origin or recover by any other means.
 
 Don’t panic! Hope is not lost! As long as you have not done any “garbage collection” (via: `git gc`), a “dangling blob” might still be there just waiting for you to recover it.

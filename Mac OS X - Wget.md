@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 11, 2015
 
+***
+
 This tutorial explains how you can install `wget` directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
 
 ***

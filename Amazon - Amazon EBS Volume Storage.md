@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 23, 2015
 
+***
+
 #### Login and make note of your EC2 instances.
 
 Everything here happens in the Amazon Web Services control panel. Login to your Amazon Web Services console and go to the “EC2 Management Console”.

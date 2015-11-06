@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 21, 2015
 
+***
+
 ### Installing Java via the WebUpd8 PPA repository.
 
 #### Adding the WebUpd8 PPA repository to the system.

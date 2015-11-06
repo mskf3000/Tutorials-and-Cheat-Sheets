@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Adding the `git-core` PPA to the system.
 
 First install `python-software-properties` like this:

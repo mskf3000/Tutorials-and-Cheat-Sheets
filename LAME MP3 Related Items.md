@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 8, 2015
 
+***
+
 #### Some nice LAME MP3 settings.
 
 Good settings for music:

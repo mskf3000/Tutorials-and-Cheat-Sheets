@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 5, 2015
 
+***
+
 If you somehow have the misfortune to deal with keeping an ancient Joomla 1.0 install up and running on a modern server running Apache with PHP 5.3 or higher, this is what you need to do.
 
 ***

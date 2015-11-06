@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 9, 2015
 
+***
+
 #### Installing Trickle.
 
 Install `trickle`:

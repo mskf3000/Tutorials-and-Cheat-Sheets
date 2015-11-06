@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 2, 2015
 
+***
+
 So let’s say you accidentally deleted a file in a Git repository and somehow you never noticed until a pile of commits in. Don’t panic! As long as you know the exact path of the file removed, you can recover it. Here is how.
 
 First find the commit hash for the commit where the file was removed with the following command; be sure to change `[path of deleted file]` to the actual path of the deleted file:

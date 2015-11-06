@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Diff’ing directory content.
 
 This is useful if a website has been hacked and you want to compare a clean archive of the content to the website data in it’s current state to track down what files have been affected and infected.

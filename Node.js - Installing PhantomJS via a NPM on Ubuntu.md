@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 22, 2015
 
+***
+
 ### Install PhantomJS via NPM.
 
 Install PhantomJS via NPM like this:

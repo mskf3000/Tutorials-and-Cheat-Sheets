@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 8, 2015
 
+***
+
 #### Some Wget command parameters.
 
 - `-A [list/pattern]`: Accept list. Basically a comma separated list of filename suffixes to accept. For example, `-A jpg,jpeg,png,gif` would grab all image files and `-A mp3` would grab all MP3 files.

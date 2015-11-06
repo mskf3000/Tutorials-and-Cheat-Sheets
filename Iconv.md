@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 7, 2015
 
+***
+
 The overall format of using Incov from the command line:
 
 	iconv -f old-encoding -t new-encoding file.txt > file_converted.txt

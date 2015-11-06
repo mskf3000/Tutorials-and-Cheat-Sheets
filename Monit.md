@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Getting Monit installed and other basics.
 
 First, install Monit via `aptitude` like this:

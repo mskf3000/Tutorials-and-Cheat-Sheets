@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 9, 2015
 
+***
+
 ### What’s a netmask?
 
 On a most basic level, a netmask is a 32-bit “mask” that is used to divide IP addresses into subnets for management, isolation and security reasons.

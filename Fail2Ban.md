@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 19, 2015
 
+***
+
 ### Install Fail2Ban.
 
 First, install Fail2Ban via `aptitude` like this; this will install verison 0.8.6 of Fail2Ban on Ubuntu 12.04:

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 5, 2015
 
+***
+
 Install `ldap-utils` via `aptitude` like this:
 
 	sudo aptitude install ldap-utils

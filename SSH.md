@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### A fix for slow SSH client logins by disabling DNS lookups.
 
 Sometimes slow SSH logins are a result of slow reverse DNS setups on a server. In the great scheme of things, DNS lookups for SSH logins is a fairly useless feature. So disabling DNS lookups is a potential fix to clear up slow SSH connections.

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 29, 2015
 
+***
+
 ### Convert images into a JPEG tumbnail.
 
 #### The process for just JPEG images.

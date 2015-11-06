@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 11, 2015
 
+***
+
 #### Manually start a network interface.
 
 Run this command to manually bring up a network interface via `ifconfig`; mainly useful during initial system setup to get an interface up from the console:

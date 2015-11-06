@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 8, 2015
 
+***
+
 Run this command to show a list of a Tar/Gzipped files contents:
 
     tar -ztvf [tar archive]

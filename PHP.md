@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 5, 2015
 
+***
+
 ### Disable `expose_php` in PHP.
 
 Check if `expose_php` is on like this:

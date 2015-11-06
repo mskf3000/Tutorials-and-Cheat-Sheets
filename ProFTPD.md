@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 7, 2015
 
+***
+
 First things first: Unless you are in 1993, there is no reason to use straight FTP anymore. Pretty much every “FTP” connection anyone uses nowadays is SFTP anyway. But on the off chance you have to work on a setup that requires FTP, you could do worse than use ProFTP to manage the service.
 
 And if you restrict FTP access to a specific IP address, it will make the whole idea you are using flawed technology in a modern era easier to swallow; see the section on allowing FTP ports access for more details.

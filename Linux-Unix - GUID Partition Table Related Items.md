@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 30, 2015
 
+***
+
 ### Getting rid of a GPT/GUID disk label.
 
 #### What’s this all about?

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 17, 2015
 
+***
+
 #### Setting up SFTP chroot access for a specific user.
 
 Open up the main `sshd_config` on the server:

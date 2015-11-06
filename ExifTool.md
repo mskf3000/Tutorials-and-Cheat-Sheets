@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 14, 2015
 
+***
+
 #### Some ExifTool example commands.
 
 Shows all EXIF info embedded in the file:

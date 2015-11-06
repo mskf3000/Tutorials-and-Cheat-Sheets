@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 16, 2015
 
+***
+
 This tutorial explains how to move or change a Munin node name without losing past data files and related history.
 
 For this example we are moving data saved under the hostname `localdomain`—default Munin install hostname—to the new hostname of `sandbox.local`.

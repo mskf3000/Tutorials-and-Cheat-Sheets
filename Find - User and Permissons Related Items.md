@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 28, 2015
 
+***
+
 #### Change user ownership on a directory.
 
 Dry run of the command using `echo`:

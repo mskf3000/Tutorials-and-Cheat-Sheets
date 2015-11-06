@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 12, 2015
 
+***
+
 #### Mounting disk images that throw a “no mountable filesystems” error.
 
 Some disk images—such as those created of system disks by “Disk Utility”—might throw up a “no mountable filesystems” error if there is an attempt to mount the disk image directly in the Finder. The instructions below allow you to mount the disk via the command line in the terminal.

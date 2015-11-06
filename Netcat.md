@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 17, 2015
 
+***
+
 #### Create a simple one-line web server with Netcat.
 
 First, create a simple `index.html` file like this:

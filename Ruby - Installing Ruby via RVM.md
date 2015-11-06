@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 20, 2015
 
+***
+
 #### Installing RVM (Ruby Version Manager).
 	
 	gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3

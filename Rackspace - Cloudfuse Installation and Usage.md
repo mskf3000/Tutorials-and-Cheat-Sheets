@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 7, 2015
 
+***
+
 CloudFuse allows you to mount Rackspace Cloud Files as a mountable fuse filesystem.
 
 #### Install Cloudfuse.

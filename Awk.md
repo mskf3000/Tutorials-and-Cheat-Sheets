@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 8, 2015
 
+***
+
 If you need to concatenate a whole bunch of files and a newline between each file’s content—so the concatenation is clean—run an Awk command like this:
 
     awk 'FNR==1{print ""}1' *.txt > output_files.txt

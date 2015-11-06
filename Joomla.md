@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 5, 2015
 
+***
+
 Be sure the web server user can write to these ditectories in Joomla:
 
 	docs/module

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 22, 2015
 
+***
+
 #### Get rid of the default Ubuntu repository installed version of Redis.
 
 Just run this `sudo aptitude purge` command to get rid of any Redis stuff installed via the default Ubuntu repository:

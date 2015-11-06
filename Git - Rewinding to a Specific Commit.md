@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Rewinding to a specific commit hash in the repository.
 
 Check the log for the commit hash.

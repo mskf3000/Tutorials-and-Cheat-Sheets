@@ -2,6 +2,10 @@
 
 By Jack Szwergold, October 8, 2015
 
+***
+
+***
+
 Zero out free space on a volume like this:
 
     cat /dev/zero >> /Volumes/Untitled/junk &

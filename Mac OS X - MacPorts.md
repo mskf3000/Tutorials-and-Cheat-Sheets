@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 22, 2015
 
+***
+
 This tutorial explains how you can uninstall MacPorts on Mac OS X.
 
 ***

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 7, 2015
 
+***
+
 This is how you can setup named virtual hosts on MAMP. First open up the `httpd.conf` file like this:
 
     nano /Applications/MAMP/conf/apache/httpd.conf

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 14, 2015
 
+***
+
 For email testing, you can use MailCatcher which is a great tool which runs a  simple SMTP server which catches any message sent to it to display in a web interface. Excellent for email process debugging. To install the Ruby GEM for it run this command:
 
     sudo gem install mailcatcher

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 7, 2015
 
+***
+
 By default, Mac OS X has Postfix installed. But it’s not enabled by default. Not to mention sending emails via a `localhost` MTA will most likely result in the message being tagged as SPAM pretty quickly.
 
 So this cheat sheet explains how you can use an external SMTP account to send emails via Postfix on a local machine. Tested and works well in Mac OS X.

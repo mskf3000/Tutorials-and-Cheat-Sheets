@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 14, 2015
 
+***
+
 ## Solr and Nutch web crawler prerequisites.
 
 Solr and Nutch web crawler requires Java 6—or better—to be installed for it to work. So make sure the system you plan on running the Solr and Nutch web crawler on has Java 6 installed and `JAVA_HOME` is properly set on the system.

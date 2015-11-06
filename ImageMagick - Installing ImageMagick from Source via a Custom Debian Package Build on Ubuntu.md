@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 21, 2015
 
+***
+
 #### Get rid of the default Ubuntu repository installed version of ImageMagick.
 
 Just run this `sudo aptitude purge` command to get rid of any ImageMagick stuff installed via the default Ubuntu repository:

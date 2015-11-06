@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 17, 2015
 
+***
+
 #### Setting time items on an Ubuntu/Debian system.
 
 Force a manual system clock update with `ntpdate` usng the hostname `ntp.ubuntu.com`:

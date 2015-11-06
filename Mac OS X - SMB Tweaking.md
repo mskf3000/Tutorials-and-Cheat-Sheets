@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 6, 2015
 
+***
+
 Honestly, some of this is just “magic” and I don’t trust any of these configs. But noting them here just in case I ever have to enter the nightmare of Mac/Windows cross platform nonsense.
 
 #### A bad idea.

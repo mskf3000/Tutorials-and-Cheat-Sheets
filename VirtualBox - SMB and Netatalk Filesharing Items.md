@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 20, 2015
 
+***
+
 ### SMB (Samba) installation setup on a VirtualBox guest OS.
 
  Install the SMB (Samba) and related items:

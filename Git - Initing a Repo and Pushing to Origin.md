@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Install GIT and get your local config setup.
 
 For GitHub to work correctly with your email address and username, you should make sure to set your local email address and name on your system after your intial install.

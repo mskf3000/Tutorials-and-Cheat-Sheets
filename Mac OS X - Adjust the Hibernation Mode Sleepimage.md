@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 12, 2015
 
+***
+
 When portables like MacBooks “hibernate” the contents of RAM are saved to disk in a `sleepimage` file for retrieval when the system comes back up again. By saving the contents of RAM to the `sleepimage` file, battery power is saved and if the system experiences power failure, the contents of the RAM saved to disk can quickly be restored.
 
 While this functionality is useful for portables like MacBooks, it’s not really that useful for desktop machines. If you have 16GB of RAM, that `sleepimage` file will take up approximately 16GB of disk space. And that’s a waste of 16GB of space if you don’t need hibernation mode.

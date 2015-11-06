@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### How to duplicate and rename a repository.
 
 First step is to create a new repo on GitHub.

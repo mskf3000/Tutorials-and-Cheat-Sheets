@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### The basics.
 
 Then install SMB/CIFS stuff via `aptitude` like this:

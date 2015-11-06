@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 15, 2015
 
+***
+
 #### Deploy flow.
 
 	deploy:starting    - start a deployment, make sure everything is ready

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 19, 2015
 
+***
+
 #### Generate a CSR (certificate signing request).
 
     openssl req -nodes -newkey rsa:2048 -keyout www.example.com.key -out www.example.com.csr

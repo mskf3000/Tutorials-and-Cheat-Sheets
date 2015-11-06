@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 14, 2015
 
+***
+
 Mac OS X is a flavor of Unix (Darwin) based on BSD and as such does not contain many commonly available GNU Linux tools in it’s default install.
 
 So if you are planning on compiling any modern GNU projects you’re going to have to install a few core GNU related tools: Autoconf, Automake and Libtool. This tutorial explains how to do that.

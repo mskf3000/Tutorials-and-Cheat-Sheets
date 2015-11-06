@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 13, 2015
 
+***
+
 #### Using `fsck_hfs` to repair a volume that “Disk Utility” chokes on.
 
 Apple’s GUI application “Disk Utility” works fine for sundry hard disk issues, but sometimes it just chokes on drives claiming it can’t repair the disk. Before you give up hope, you can see if using `fsck_hfs` will

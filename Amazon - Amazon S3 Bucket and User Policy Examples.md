@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 6, 2015
 
+***
+
 #### All Amazon S3 actions for reference.
 
 	s3:AbortMultipartUpload

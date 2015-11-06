@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 3, 2015
 
+***
+
 Scan a range via a wildcard and returns hostname as well as IP:
 
 	nmap -sP 192.168.1.*

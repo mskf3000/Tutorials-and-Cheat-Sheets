@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 18, 2015
 
+***
+
 This process will allow you to merge two disparate repositories into one parent repository. In this example, the contents of each “child” repository will be stored in directories named `Directory_A` and `Directory_B`. Feel free to adjust specifics to match your projects needs.
 
 #### Create a parent project directory.

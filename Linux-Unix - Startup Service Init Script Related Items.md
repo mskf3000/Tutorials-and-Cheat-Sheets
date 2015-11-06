@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 3, 2015
 
+***
+
 #### Setting up a startup service on Ubuntu/Debian systems.
 
 Use `update-rc.d` to install and remove System-V style init script links on Ubuntu/Debian. For example, to install the startup scripts for Apache just run this command:

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 14, 2015
 
+***
+
 ### Crawling via Bash script.
 
 Just run `crawl_and_index.sh` to get the crawler to run automatically:

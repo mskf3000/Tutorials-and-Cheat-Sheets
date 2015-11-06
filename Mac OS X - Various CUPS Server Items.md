@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 6, 2015
 
+***
+
 #### Log file locations.
 
 The main CUPS log file directory is here:

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 20, 2015
 
+***
+
 #### Install required Ruby GEMs for the test web application install.
 
     sudo gem install rack sinatra bundler --no-rdoc --no-ri

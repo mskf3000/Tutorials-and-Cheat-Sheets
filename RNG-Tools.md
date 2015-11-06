@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 24, 2015
 
+***
+
 #### Install RNG-Tools.
 
 Check system entropy levels with this `watch` command:

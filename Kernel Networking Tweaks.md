@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 7, 2015
 
+***
+
 The main reason for this document existing is attempting to deal with oddball network connectivity issues in a mixed Windows/Mac environment. Here is what I know and have done.
 
 ***

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 9, 2015
 
+***
+
 Mac OS X 10.9.5 and higher won’t allow Sheepsaver to access optical drives unless the user who is running Sheepsaver is added as a member of the group `operator` which apparently is the group that deals optical disk volumes.
 
 To check if your user is already a member of the group `operator` use this command:

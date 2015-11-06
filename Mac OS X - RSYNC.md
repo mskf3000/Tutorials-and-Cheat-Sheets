@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 13, 2015
 
+***
+
 This tutorial explains how you can install `rsync` directly from source code on Mac OS X. Tested on Mac OS X 10.9.5. Note that Mac OS X 10.9.5 already has a version of `rsync` installed, but it’s a bit out of date; Mac OS X `rsync` version is “2.6.9  protocol version 29.” This tutorial is intended to allow one to install a newer version of `rsync` but only be able to call it explicitly if/when it’s needed.
 
 ***

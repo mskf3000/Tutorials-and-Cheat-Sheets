@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 20, 2015
 
+***
+
 #### Adding the Brightbox PPA to the system.
 
 First install `python-software-properties` like this:

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 11, 2015
 
+***
+
 This document explains the basics of partitioning, formatting, mounting and labelling a block level device from the command line in Linux/Unix.
 
 ### Check for block level devices.

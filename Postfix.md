@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 17, 2015
 
+***
+
 #### Check if `postfix` is running in Mac OS X.
 
 In Mac OS X this checks to see what services are launched at startup; look for `org.postfix.master`:

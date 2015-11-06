@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 8, 2015
 
+***
+
 ### Install the `svn2git` Ruby GEM like this:
 
 Install the `svn2git` Ruby GEM:

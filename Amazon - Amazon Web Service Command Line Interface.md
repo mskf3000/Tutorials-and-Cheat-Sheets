@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 7, 2015
 
+***
+
 #### First, install the PIP package manager for the Python package index.
 
 Download the `get-pip.py` script:

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 17, 2015
 
+***
+
 #### A nice Perl script  to flush the mail queue. 
 
 A nice Perl script that deletes messages from the mail queue that matches a regular expression passed to the script as the first argument.

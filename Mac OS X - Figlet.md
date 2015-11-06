@@ -2,6 +2,8 @@
 
 By Jack Szwergold, November 1, 2015
 
+***
+
 This tutorial explains how you can install Figlet directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
 
 ***

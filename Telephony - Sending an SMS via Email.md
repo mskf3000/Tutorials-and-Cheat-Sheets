@@ -4,6 +4,8 @@ By Jack Szwergold, September 18, 2015
 
 ***
 
+***
+
 Haven’t tested these in a while but sending an email to a cell number on any of the following email addresses should send a message to that cell number.
 
 For example, if 212-555-1212 is on Sprint, then to send 212-555-1212 a text message just send an email to the following email address:

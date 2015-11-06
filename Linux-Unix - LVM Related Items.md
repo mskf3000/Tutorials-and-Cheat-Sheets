@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 30, 2015
 
+***
+
 ### Renaming an LVM logical volume group.
 
 Show all the volume groups on the system:

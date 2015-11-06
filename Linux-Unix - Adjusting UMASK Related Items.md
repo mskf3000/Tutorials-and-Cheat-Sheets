@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 16, 2015
 
+***
+
 #### Adjusting UMASK items on a CentOS/RedHat system.
 
 Open up `/etc/bashrc`:

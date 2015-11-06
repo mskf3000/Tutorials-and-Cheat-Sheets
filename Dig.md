@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Basic Dig commands.
 
 Detailed DNS info for a hostname:

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 13, 2015
 
+***
+
 #### Start ARD from the command line.
 
 Sometimes ARD (Apple Remote Desktop) is deactivated, crashed or somehow doesn’t respond on a remote system. If you can get into the machine via SSH remote login, you can run this command from the Terminal to start ARD:

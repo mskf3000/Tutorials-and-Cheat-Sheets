@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 7, 2015
 
+***
+
 ### Setting your MAMP binary path in your shell.
 
 #### Set the MAMP PHP 5.2.17 version of Pear as part of your user PATH.

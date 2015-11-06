@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 17, 2015
 
+***
+
 ### Note regarding PHP 5.1.6 and phpMyAdmin.
 
 Use this version of phpMyAdmin for PHP 5.1.6 installs. But lord help you if you ever have to deal with PHP 5.1.6 nowadays.

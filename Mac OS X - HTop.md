@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 This tutorial explains how you can install HTop directly from source code on Mac OS X. Tested on Mac OS X 10.9.5. Note that these versions of HTop are somewhat out of date compared to the official Linux HTop release. But honestly, the version used here—0.8.2.1 (AndyA) and 0.8.2.2 (stormerider)—still works fine for basic needs on Mac OS X.
 
 ***

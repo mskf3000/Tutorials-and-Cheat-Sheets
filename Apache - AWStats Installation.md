@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 16, 2015
 
+***
+
 ### Installing AWStats.
 
 Go into the `/usr/share` directory:

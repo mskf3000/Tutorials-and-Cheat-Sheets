@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 27, 2015
 
+***
+
 ### Dumping Bash history
 
 First remove the `.bash_history` file that holds past session history:

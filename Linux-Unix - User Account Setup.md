@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 16, 2015
 
+***
+
 Here are instructions on how to setup an account on a Linux server.
 
 #### Create a user account.

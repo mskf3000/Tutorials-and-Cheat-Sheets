@@ -2,6 +2,8 @@
 
 By Jack Szwergold, October 22, 2015
 
+***
+
 #### Setting a static route.
 
 In this example we want a device to understand how to route all traffic on the `10.1.2.x` subnet

@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Removing a submodule from a git repository.
 
 In this example, let’s remove the submodule `wordpress`. First, check the submodule status from the repository:

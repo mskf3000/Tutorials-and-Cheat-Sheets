@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 24, 2015
 
+***
+
 ## Install Tomcat6.
 
 Install Tomcat6 via `aptitude` like this:

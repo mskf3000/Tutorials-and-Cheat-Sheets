@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 #### Changing text across multiple commit messages in a branch.
 
 Do a search of commit messages to find the pattern you want to change.

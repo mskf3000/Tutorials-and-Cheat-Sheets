@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 19, 2015
 
+***
+
 Netatalk is a very cool, open source implementation of Apple’s AppleTalk networking protocols. Very nice and useful for setting up Linux/Unix AFP file servers.
 
 ***

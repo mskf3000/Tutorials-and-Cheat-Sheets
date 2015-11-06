@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 15, 2015
 
+***
+
 Avahi daemon is a zero-configuration (zeroconf)/multicast networking implementation that is similar to the “Bonjour” service in Mac OS X. Very useful in getting a Linux box to broadcast it’s services across a network.
 
 #### Installation and configuration.

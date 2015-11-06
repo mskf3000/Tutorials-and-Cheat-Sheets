@@ -2,6 +2,8 @@
 
 By Jack Szwergold, September 20, 2015
 
+***
+
 #### List all locally installed Ruby GEMs.
 
     gem query --local
