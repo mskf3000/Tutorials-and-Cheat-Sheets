@@ -20,7 +20,7 @@ Enable the Apache `headers` module:
 
 If you have to disable the the Apache `mod_security` module, this is how you do it:
 
-     sudo a2dismod mod-security
+    sudo a2dismod mod-security
 
 Do some simple directory checks to make sure it’s installed:
 
