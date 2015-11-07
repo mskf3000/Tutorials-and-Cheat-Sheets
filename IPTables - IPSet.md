@@ -177,7 +177,7 @@ And with the archive decompressed, let’s ditch the remaning `GeoIPCountryCSV.z
 	
 With that done, lets now populate the `BANNED_RANGES` IP set config file with the values from the `GeoIPCountryWhois.csv` file like this; note we are focusing only on China (`CN`) IP addresses:
 
-	awk -F","  '/China/ && /CN/ { gsub(/"/, "", $1); gsub(/"/, "", $2); printf "add BANNED_RANGES %s-%s \n", $1, $2 }'  GeoIPCountryWhois.csv > 'ipset.BANNED_RANGES.conf'
+	awk -F "," -v COUNTRY_CODE=CN -v IPSET_TABLE=BANNED_RANGES} '$5 ~ COUNTRY_CODE { gsub(/"/, "", $1); gsub(/"/, "", $2); print "add "IPSET_TABLE" "$1"-"$2; }' /usr/local/share/GeoIP/GeoIPCountryWhois.csv >> ipset.BANNED_RANGES.conf
 	
 With that done, let’s import the `BANNED_RANGES` IP set like this:
 
