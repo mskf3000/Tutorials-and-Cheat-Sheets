@@ -7,8 +7,7 @@ By Jack Szwergold, October 8, 2015
 #### Some Wget command parameters.
 
 - `-A [list/pattern]`: Accept list. Basically a comma separated list of filename suffixes to accept. For example, `-A jpg,jpeg,png,gif` would grab all image files and `-A mp3` would grab all MP3 files.
-- `-R [list/pattern]`: Reject list. The opposite of the accept list. Allows a command to reject
-
+- `-R [list/pattern]`: Reject list. The opposite of the accept list. Allows a command to reject a list of items.
 - `-r`: Turn on recursive retrieving.
 - `-l [number]`: Tells the command to go down `[number]` levels; so `-l 2` would be two levels. Set it to `-l inf` for infinite recursion.
 - `-nd`: Do not create a hierarchy of directories when retrieving recursively.
