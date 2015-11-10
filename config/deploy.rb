@@ -1,9 +1,9 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'cheat_sheets'
-set :short_name, 'cheat_sheets'
-set :repo_url, 'git@github.com:JackSzwergold/Cheat-Sheets.git'
+set :application, 'tutorials_and_cheat_sheets'
+set :short_name, 'tutorials_and_cheat_sheets'
+set :repo_url, 'git@github.com:JackSzwergold/Tutorials-and-Cheat-Sheets.git'
 
 # Set the 'deploy_to' directory.
 set :deploy_to, '/var/www'
