@@ -214,12 +214,12 @@ Here are the cheat sheets. These are mainly intended for quick reference without
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 
-[1]: Developing%20With%20MAMP%201/ "Setting Up a Basic, Useful MAMP Environment"
-[2]: Developing%20With%20MAMP%202/ "Configuring Name-Based Virtual Hosts"
-[3]: Developing%20With%20MAMP%203/ "Upgrading the PHP Pear Library in MAMP"
-[4]: Connecting%20to%20MAMP%20from%20Windows%20on%20a%20Mac%20OS%20X%20Install%20of%20VirtualBox%201/ "Overall Virtualization Concepts"
-[5]: Connecting%20to%20MAMP%20from%20Windows%20on%20a%20Mac%20OS%20X%20Install%20of%20VirtualBox%202/ "Basic — Using a Single Network Interface Setup"
-[6]: Connecting%20to%20MAMP%20from%20Windows%20on%20a%20Mac%20OS%20X%20Install%20of%20VirtualBox%203/ "Advanced — Using a Dual Network Interface Setup with a Host-Only Interface"
-[7]: Using%20an%20Ubuntu%20Linux%20Server%201/ "Configuring a Base Level Ubuntu Server"
-[8]: Using%20an%20Ubuntu%20Linux%20Server%202/ "Setting Up a LAMP Stack"
-[9]: Using%20an%20Ubuntu%20Linux%20Server%203/ "Monitoring & Securing Your Ubuntu Server"
+[1]: Developing%20With%20MAMP%201 "Setting Up a Basic, Useful MAMP Environment"
+[2]: Developing%20With%20MAMP%202 "Configuring Name-Based Virtual Hosts"
+[3]: Developing%20With%20MAMP%203 "Upgrading the PHP Pear Library in MAMP"
+[4]: Connecting%20to%20MAMP%20from%20Windows%20on%20a%20Mac%20OS%20X%20Install%20of%20VirtualBox%201 "Overall Virtualization Concepts"
+[5]: Connecting%20to%20MAMP%20from%20Windows%20on%20a%20Mac%20OS%20X%20Install%20of%20VirtualBox%202 "Basic — Using a Single Network Interface Setup"
+[6]: Connecting%20to%20MAMP%20from%20Windows%20on%20a%20Mac%20OS%20X%20Install%20of%20VirtualBox%203 "Advanced — Using a Dual Network Interface Setup with a Host-Only Interface"
+[7]: Using%20an%20Ubuntu%20Linux%20Server%201 "Configuring a Base Level Ubuntu Server"
+[8]: Using%20an%20Ubuntu%20Linux%20Server%202 "Setting Up a LAMP Stack"
+[9]: Using%20an%20Ubuntu%20Linux%20Server%203 "Monitoring & Securing Your Ubuntu Server"
