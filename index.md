@@ -165,7 +165,6 @@ Here are the cheat sheets. These are mainly intended for quick reference without
 - [Postfix - Setting Up a Postfix SASL SMTP Email Relay](Postfix%20-%20Setting%20Up%20a%20Postfix%20SASL%20SMTP%20Email%20Relay)
 - [Postfix](Postfix)
 - [ProFTPD](ProFTPD)
-- [README](README)
 - [RNG-Tools](RNG-Tools)
 - [Rackspace - Cloudfuse Installation and Usage](Rackspace%20-%20Cloudfuse%20Installation%20and%20Usage)
 - [Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu](Redis%20-%20Installing%20Redis%20from%20Source%20via%20a%20Custom%20Debian%20Package%20Build%20on%20Ubuntu)
