@@ -59,6 +59,16 @@ To add an input text field that will allow you to customize the welcome name jus
 	
 	{{outlet}}
 
+#### Getting an EmberJS app ready for production.
+
+So far, all of that fiddling is for a development version of an EmberJS app. But if you really want it to run on a production server—such as Apache—you need to run this command:
+
+    ember build --environment=production
+
+Which would then create a new subfolder in the directory called `dist/`. That—for all intents and purposes—would be the web root for the application.
+
+Copy or deploy that directory where it is needed, set `dist/` as the web root and just go to the regular URL of that web server and your EmberJS app should be good to go.
+
 ***
 
 *NodeJS - EmberJS Related Items (c) by Jack Szwergold*
