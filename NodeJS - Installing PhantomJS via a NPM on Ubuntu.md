@@ -10,7 +10,7 @@ Install PhantomJS via NPM like this:
 
     sudo npm install -g phantomjs
 
-Check the version number of Node.js like this:
+Check the version number of NodeJS like this:
 
     phantomjs --version
 

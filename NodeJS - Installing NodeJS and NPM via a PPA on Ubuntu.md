@@ -4,7 +4,7 @@ By Jack Szwergold, September 22, 2015
 
 ***
 
-#### Adding the Node.js PPA to the system.
+#### Adding the NodeJS PPA to the system.
 
 First install `python-software-properties` like this:
 

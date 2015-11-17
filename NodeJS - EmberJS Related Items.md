@@ -4,11 +4,11 @@ By Jack Szwergold, November 16, 2015
 
 ***
 
-Before anything, you need to be sure Node.js is installed. The process is different and dependent on what OS you are using. For Mac OS X you can just download a package installer. But once installed you can then complete the following steps.
+Before anything, you need to be sure NodeJS is installed. The process is different and dependent on what OS you are using. For Mac OS X you can just download a package installer. But once installed you can then complete the following steps.
 
 ***
 
-#### Installing and using Ember.js via Node.js.
+#### Installing and using EmberJS via NodeJS.
 
 Install the Ember CLI like this:
 
