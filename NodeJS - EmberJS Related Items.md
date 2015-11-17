@@ -1,4 +1,4 @@
-# Node.js - Ember.js Related Items
+# NodeJS - EmberJS Related Items
 
 By Jack Szwergold, November 16, 2015
 
@@ -61,6 +61,6 @@ To add an input text field that will allow you to customize the welcome name jus
 
 ***
 
-*Node.js - Ember.js Related Items (c) by Jack Szwergold*
+*NodeJS - EmberJS Related Items (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

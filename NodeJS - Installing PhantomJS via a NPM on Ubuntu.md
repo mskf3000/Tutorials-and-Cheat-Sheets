@@ -1,4 +1,4 @@
-# Node.js - Installing PhantomJS via a NPM on Ubuntu
+# NodeJS - Installing PhantomJS via a NPM on Ubuntu
 
 By Jack Szwergold, September 22, 2015
 
@@ -68,6 +68,6 @@ Just say `y` to that and wait. And wait. And wait.
 
 ***
 
-*Node.js - Installing PhantomJS via a NPM on Ubuntu (c) by Jack Szwergold*
+*NodeJS - Installing PhantomJS via a NPM on Ubuntu (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

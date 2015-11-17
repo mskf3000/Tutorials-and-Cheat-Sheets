@@ -1,4 +1,4 @@
-# Node.js - Installing Node.js and NPM via a PPA on Ubuntu
+# NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu
 
 By Jack Szwergold, September 22, 2015
 
@@ -40,6 +40,6 @@ And the output should be something like this:
 
 ***
 
-*Node.js - Installing Node.js and NPM via a PPA on Ubuntu (c) by Jack Szwergold*
+*NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
