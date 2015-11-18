@@ -69,7 +69,7 @@ Which would then create a new subfolder in the directory called `dist/`. That—
 
 Copy or deploy that directory where it is needed, set `dist/` as the web root and just go to the regular URL of that web server and your EmberJS app should be good to go.
 
-#### Getting an EmberJS app ready for production.
+#### Cleaning out caches and temp files.
 
 Sometimes an upgrade or clean install of EmberJS will mean you need to clean out and reinstall old cruft and dependencies. This is how you go about that.
 
@@ -84,6 +84,23 @@ Next, install the NPM dependencies:
 Finally, install the Bower dependencies:
 
     bower install
+
+#### Generating a component structure in Ember CLI.
+
+Let’s say we want to create a component structure for an Ember project. And in this case the component would be called `gravatar-image`. Just run this command:
+
+    ember g component gravatar-image
+
+The output of that command would be as follows:
+
+	version: 1.13.12
+	installing component
+	  create app/components/gravatar-image.js
+	  create app/templates/components/gravatar-image.hbs
+	installing component-test
+	  create tests/integration/components/gravatar-image-test.js
+
+The JavaScript component logic would go into `app/components/gravatar-image.js` and the HTML tempting logic would go into `app/templates/components/gravatar-image.hbs`. Tests are test and would be set in `tests/integration/components/gravatar-image-test.js` but nothing to really worry about in there just now.
 
 ***
 
