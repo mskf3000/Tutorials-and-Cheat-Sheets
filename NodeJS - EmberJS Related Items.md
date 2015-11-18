@@ -102,6 +102,25 @@ The output of that command would be as follows:
 
 The JavaScript component logic would go into `app/components/gravatar-image.js` and the HTML tempting logic would go into `app/templates/components/gravatar-image.hbs`. Tests are test and would be set in `tests/integration/components/gravatar-image-test.js` but nothing to really worry about in there just now.
 
+#### Generating a routing structure in Ember CLI.
+
+Let’s say we want to create a routing structure for an Ember project. And in this case the route would be called `routing-example`. Just run this command:
+
+    ember generate route routing-example
+
+The output of that command would be as follows:
+
+	version: 1.13.12
+	installing route
+	  create app/routes/routing-example.js
+	  create app/templates/routing-example.hbs
+	updating router
+	  add route routing-example
+	installing route-test
+	  create tests/unit/routes/routing-example-test.js
+
+The JavaScript component logic would go into `app/routes/routing-example.js` and the HTML tempting logic would go into `app/templates/routing-example.hbs`. Tests are test and would be set in `tests/unit/routes/routing-example-test.js` but nothing to really worry about in there just now.
+
 #### Installing MD5 support.
 
 To enable MD5 support in EmberJS, first run this Bower command:
