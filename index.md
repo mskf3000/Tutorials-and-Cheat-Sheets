@@ -138,6 +138,7 @@ Here are the cheat sheets. These are mainly intended for quick reference without
 - [Mac OS X - Uninstalling MySQL from Mac OS X](Mac%20OS%20X%20-%20Uninstalling%20MySQL%20from%20Mac%20OS%20X)
 - [Mac OS X - Upgrading the PHP Pear Library in MAMP](Mac%20OS%20X%20-%20Upgrading%20the%20PHP%20Pear%20Library%20in%20MAMP)
 - [Mac OS X - Various CUPS Server Items](Mac%20OS%20X%20-%20Various%20CUPS%20Server%20Items)
+- [Mac OS X - Watchman](Mac%20OS%20X%20-%20Watchman)
 - [Mac OS X - Wget](Mac%20OS%20X%20-%20Wget)
 - [Mac OS X - iPerf](Mac%20OS%20X%20-%20iPerf)
 - [MailCatcher](MailCatcher)
