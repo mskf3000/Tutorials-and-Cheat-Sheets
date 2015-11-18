@@ -69,6 +69,22 @@ Which would then create a new subfolder in the directory called `dist/`. That—
 
 Copy or deploy that directory where it is needed, set `dist/` as the web root and just go to the regular URL of that web server and your EmberJS app should be good to go.
 
+#### Getting an EmberJS app ready for production.
+
+Sometimes an upgrade or clean install of EmberJS will mean you need to clean out and reinstall old cruft and dependencies. This is how you go about that.
+
+First, clear out the temp files, Node modules and Bower components:
+
+    rm -rf node_modules tmp dist bower_components
+
+Next, install the NPM dependencies:
+
+    npm install
+
+Finally, install the Bower dependencies:
+
+    bower install
+
 ***
 
 *NodeJS - EmberJS Related Items (c) by Jack Szwergold*
