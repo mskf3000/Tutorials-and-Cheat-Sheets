@@ -102,6 +102,20 @@ The output of that command would be as follows:
 
 The JavaScript component logic would go into `app/components/gravatar-image.js` and the HTML tempting logic would go into `app/templates/components/gravatar-image.hbs`. Tests are test and would be set in `tests/integration/components/gravatar-image-test.js` but nothing to really worry about in there just now.
 
+#### Installing MD5 support.
+
+To enable MD5 support in EmberJS, first run this Bower command:
+
+    bower install --save JavaScript-MD5
+
+Then install Ember CLI MD5 support like this:
+
+    npm install --save-dev ember-cli-md5
+
+Now just run this Ember `generate` command and you should be good to go:
+
+    ember generate md-5
+
 ***
 
 *NodeJS - EmberJS Related Items (c) by Jack Szwergold*
