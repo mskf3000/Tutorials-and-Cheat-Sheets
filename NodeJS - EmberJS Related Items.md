@@ -89,7 +89,7 @@ Finally, install the Bower dependencies:
 
 Let’s say we want to create a component structure for an Ember project. And in this case the component would be called `gravatar-image`. Just run this command:
 
-    ember g component gravatar-image
+    ember generate component gravatar-image
 
 The output of that command would be as follows:
 
