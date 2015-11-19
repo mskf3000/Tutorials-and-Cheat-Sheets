@@ -85,7 +85,42 @@ Finally, install the Bower dependencies:
 
     bower install
 
-#### Generating a component structure in Ember CLI.
+#### Installing MD5 support.
+
+To enable MD5 support in EmberJS, first run this Bower command:
+
+    bower install --save JavaScript-MD5
+
+Then install Ember CLI MD5 support like this:
+
+    npm install --save-dev ember-cli-md5
+
+Now just run this Ember `generate` command and you should be good to go:
+
+    ember generate md-5
+
+#### Adjusting URL type in Ember CLI
+
+By default, EmberCLI will use the `location:` type of `auto`. But if for some reason you need to adjust that just go into `config/environment.js` and adjust `locationType` in this config area:
+
+	module.exports = function(environment) {
+	  var ENV = {
+	    modulePrefix: 'ember-sandbox',
+	    environment: environment,
+	    baseURL: '/',
+	    locationType: 'auto',
+	    EmberENV: {
+	      FEATURES: {
+	        // Here you can enable experimental features on an ember canary build
+	        // e.g. 'with-controller': true
+	      }
+	    },
+
+Just change that `locationType:` to `history` or `none` if your app requires it.
+
+### Using Ember CLI to create structural components.
+
+#### Generating a “component” structure in Ember CLI.
 
 Let’s say we want to create a component structure for an Ember project. And in this case the component would be called `gravatar-image`. Just run this command:
 
@@ -102,7 +137,7 @@ The output of that command would be as follows:
 
 The JavaScript component logic would go into `app/components/gravatar-image.js` and the HTML tempting logic would go into `app/templates/components/gravatar-image.hbs`. Tests are test and would be set in `tests/integration/components/gravatar-image-test.js` but nothing to really worry about in there just now.
 
-#### Generating a routing structure in Ember CLI.
+#### Generating a “routing” structure in Ember CLI.
 
 Let’s say we want to create a routing structure for an Ember project. And in this case the route would be called `routing-example`. Just run this command:
 
@@ -121,19 +156,20 @@ The output of that command would be as follows:
 
 The JavaScript component logic would go into `app/routes/routing-example.js` and the HTML tempting logic would go into `app/templates/routing-example.hbs`. Tests are test and would be set in `tests/unit/routes/routing-example-test.js` but nothing to really worry about in there just now.
 
-#### Installing MD5 support.
+#### Generating a “model” structure in Ember CLI.
 
-To enable MD5 support in EmberJS, first run this Bower command:
+Let’s say we want to create a model structure for an Ember project. And in this case the route would be called `pull-requests`. Just run this command:
 
-    bower install --save JavaScript-MD5
+    ember generate model pull-requests
 
-Then install Ember CLI MD5 support like this:
+The output of that command would be as follows:
 
-    npm install --save-dev ember-cli-md5
+	version: 1.13.12
+	installing model
+	  create app/models/pull-requests.js
+	installing model-test
 
-Now just run this Ember `generate` command and you should be good to go:
-
-    ember generate md-5
+The JavaScript component logic would go into `app/models/pull-requests.js`.
 
 ***
 
