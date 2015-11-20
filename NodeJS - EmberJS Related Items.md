@@ -116,9 +116,9 @@ Just change that `locationType:` to `history` or `none` if your app requires it.
 
 #### Adding meta tag support.
 
-Just install `ember-cli-meta-tag` support like this:
+Just install `ember-meta-meta` support like this:
 
-    ember install ember-cli-meta-tags
+    ember install ember-meta-meta
 
 ### Using Ember CLI to create structural components.
 
