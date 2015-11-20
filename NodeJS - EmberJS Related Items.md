@@ -75,15 +75,11 @@ Sometimes an upgrade or clean install of EmberJS will mean you need to clean out
 
 First, clear out the temp files, Node modules and Bower components:
 
-    rm -rf node_modules tmp dist bower_components
+    rm -rf tmp dist node_modules bower_components
 
-Next, install the NPM dependencies:
+Next, reinstall the NPM and Bower dependencies:
 
-    npm install
-
-Finally, install the Bower dependencies:
-
-    bower install
+    npm install && bower install
 
 #### Installing MD5 support.
 
@@ -117,6 +113,12 @@ By default, EmberCLI will use the `location:` type of `auto`. But if for some re
 	    },
 
 Just change that `locationType:` to `history` or `none` if your app requires it.
+
+#### Adding meta tag support.
+
+Just install `ember-cli-meta-tag` support like this:
+
+    ember install ember-cli-meta-tags
 
 ### Using Ember CLI to create structural components.
 
