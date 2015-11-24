@@ -131,6 +131,7 @@ Here are the cheat sheets. These are mainly intended for quick reference without
 - [Mac OS X - Mounting Devices and Volumes from the Terminal](Mac%20OS%20X%20-%20Mounting%20Devices%20and%20Volumes%20from%20the%20Terminal)
 - [Mac OS X - NLOAD](Mac%20OS%20X%20-%20NLOAD)
 - [Mac OS X - RSYNC](Mac%20OS%20X%20-%20RSYNC)
+- [Mac OS X - Recode](Mac%20OS%20X%20-%20Recode)
 - [Mac OS X - SMB Tweaking](Mac%20OS%20X%20-%20SMB%20Tweaking)
 - [Mac OS X - SNMP Basics](Mac%20OS%20X%20-%20SNMP%20Basics)
 - [Mac OS X - SheepShaver Emulator Related Items](Mac%20OS%20X%20-%20SheepShaver%20Emulator%20Related%20Items)
