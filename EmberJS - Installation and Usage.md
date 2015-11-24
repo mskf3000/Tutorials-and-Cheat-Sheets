@@ -1,4 +1,4 @@
-# NodeJS - EmberJS Related Items
+# EmberJS - Installation and Usage
 
 By Jack Szwergold, November 16, 2015
 
@@ -13,6 +13,14 @@ Before anything, you need to be sure NodeJS is installed. The process is differe
 Install the Ember CLI like this:
 
     sudo npm install -g ember-cli
+
+And you can upgrade it like this:
+
+    sudo npm upgrade -g ember-cli
+
+Or even uninstall it like this:
+
+    sudo npm uninstall -g ember-cli
 
 Once that’s installed you can create your first app by just running this command:
 
@@ -175,6 +183,6 @@ The JavaScript component logic would go into `app/models/pull-requests.js`.
 
 ***
 
-*NodeJS - EmberJS Related Items (c) by Jack Szwergold*
+*EmberJS - Installation and Usage (c) by Jack Szwergold*
 
 *This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
