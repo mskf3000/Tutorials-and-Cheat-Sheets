@@ -122,6 +122,26 @@ By default, EmberCLI will use the `location:` type of `auto`. But if for some re
 
 Just change that `locationType:` to `history` or `none` if your app requires it.
 
+#### Adjusting Ember CLI build options.
+
+All Ember CLI build options are configurable via the `ember-cli-build.js` in this chunk of code:
+
+	var app = new EmberApp(defaults, {
+	  // Add options here
+	});
+
+For example, this config would adjust the `prepend` and `customHash` values:
+
+	var app = new EmberApp(defaults, {
+	  // Add options here
+	  fingerprint: {
+	    prepend: '',
+	    customHash: null
+	  }
+	});
+
+The `prepend` value would prepend a URL to all of the Ember app requests which are usually relative URLs. And the `customHash` setting can either be a custom hash value or could even be `null` to simply disable the `customHash` being added to filenames.
+
 #### Adding meta tag support.
 
 Just install `ember-meta-meta` support like this:
