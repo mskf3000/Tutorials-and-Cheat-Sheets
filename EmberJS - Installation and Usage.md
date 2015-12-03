@@ -148,6 +148,26 @@ Just install `ember-meta-meta` support like this:
 
     ember install ember-meta-meta
 
+#### Fixing Bower install issues.
+
+If you clone an Ember repo and need to run `npm install` and `bower install` and an error like this pops up during `bower install`:
+
+    Error: Cannot find module 'js-yaml'
+
+The solution can be one of two things. First, try to force a manual install of `js-yaml` like this:
+
+    sudo npm install -g js-yaml
+
+If that works, that works. But if it doesn’t uninstall and reinstall Bower like this. First, uninstall Bower like this:
+
+    npm uninstall bower
+
+Then reinstall it like this:
+
+    sudo npm install -g bower
+
+Then try running `bower install` again and all should be good to go.
+
 ### Using Ember CLI to create structural components.
 
 #### Generating a “component” structure in Ember CLI.
