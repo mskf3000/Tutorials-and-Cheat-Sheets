@@ -282,7 +282,16 @@ If you are simply going to compile items from the command line, you don’t need
     xcode-select --install
 
 A window will pop up with a few different choices. Just choose “Install” (don’t click “Get Xcode”; see picture below) and let the process complete. When done you will have all of the necessary command line tools you need to compile source code in the Terminal in Mac OS X.
- 
+
+
+### How to force Mac OS X to use a specific hostname instead of a DHCP provided hostname.
+
+Sometimes a DHCP server on a network will force it’s own oddball hostname onto a Mac OS X machine that has connected to it. This would override the local machine name and might cause problems/confussion. If you don’t need the DHCP provided hostname and would like to force your own hostname, just use this command:
+
+    sudo scutil --set HostName [hostname]
+
+Exit the Terminal and open it up again and all should be good and the hostname in the command prompt should be permanently set to the `[hostname]` you set with the above `scutil` command.
+
 ***
 
 *Mac OS X - Miscellaneous Items (c) by Jack Szwergold*
