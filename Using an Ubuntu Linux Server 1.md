@@ -247,7 +247,7 @@ At this point you should have a somewhat functional Ubuntu server in place with 
 
 There are lots of other useful software tools that can be installed to make your life easier. And you can install them via this `aptitude install` command:
 
-    sudo aptitude install dnsutils traceroute nmap bc htop finger curl whois rsync lsof iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass dkms mc elinks ntp dos2unix p7zip-full nfs-common imagemagick slurm sharutils uuid-runtime chkconfig quota pv trickle
+    sudo aptitude install dnsutils traceroute nmap bc htop finger curl whois rsync lsof iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass dkms mc elinks ntp dos2unix p7zip-full nfs-common imagemagick slurm sharutils uuid-runtime chkconfig quota pv trickle apachetop
 
 While there are literally tons of varied software tools available from the Ubuntu community, the items listed above are the rock-solid core of the command line system administration tools I rely on on a daily basis. 
 
