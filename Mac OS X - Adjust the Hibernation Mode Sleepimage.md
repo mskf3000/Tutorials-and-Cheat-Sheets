@@ -44,6 +44,10 @@ Finally, change the `sleepimage` flag to immutable (aka: unchaging) to prevent t
 
 Once that’s done, the `sleepimage` cannot be recreated by the system unless those steps are reversed and undone.
 
+With that done, if for some reason you need to delete that immutable `sleepimage` file, run this command to delete it:
+
+    sudo chflags noschg /private/var/vm/sleepimage
+
 ***
 
 *Mac OS X - Adjust the Hibernation Mode Sleepimage (c) by Jack Szwergold*
