@@ -63,7 +63,11 @@ Then run `autoreconf` like this:
 
 #### Move the GeoIP databases to their proper directory.
 
-On Mac OS X move the databases to `/usr/local/share/`:
+Create the `GeoIP` directory—if it doesn’t exist—like this:
+
+    sudo mkdir -p /usr/local/share/GeoIP/
+
+Move the databases to `/usr/local/share/GeoIP/`:
 
     sudo mv ~/GeoIP.dat.gz /usr/local/share/GeoIP/
     sudo mv ~/GeoLiteCity.dat.gz /usr/local/share/GeoIP/
@@ -81,7 +85,11 @@ And decompress the database files like this:
 
     sudo rm /usr/local/share/GeoIP/GeoIPCountryCSV.zip
 
-Check to see if the GeoIP databases are set in Mac OS X:
+Adjust the permissions of all of the GeoIP databases to be `root`:
+
+    sudo chown root:root /usr/local/share/GeoIP/*
+
+Check to see if the GeoIP databases are set:
 
     ls -la /usr/local/share/GeoIP/
 

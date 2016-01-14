@@ -24,9 +24,15 @@ And delete the remnant `awstats-7.3.tar.gz` archive:
 
 ### Configuring Apache for AWStats.
 	
-Now let’s create our own `awstats.conf` like this:
+Ubuntu 12.04: Now let’s create our own `awstats.conf` like this:
 
 	sudo nano /etc/apache2/conf.d/awstats.conf
+
+Ubuntu 14.04: Now let’s create our own `awstats.conf` like this:
+
+    sudo nano /etc/apache2/conf-available/awstats.conf
+
+    sudo a2enconf awstats
 
 Here is an example of a basic, non-secure Apache config for AWStats:
 

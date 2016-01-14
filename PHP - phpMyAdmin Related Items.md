@@ -153,6 +153,42 @@ Now adjust the ownership and group of the directory to `root` like this:
 
 	sudo chown root:root -R /usr/share/phpmyadmin
 
+### Dealing with `mysqli` extension errors.
+
+If you attempt to load phpMyAdmin and get the following `mysqli` extension error:
+
+> phpMyAdmin - Error
+> 
+> The mysqli extension is missing. Please check your PHP configuration. See our documentation for more information.
+
+Just install the PHP MySQL extension like this:
+
+    sudo aptitude install php5-mysql
+
+And restart Apache like this:
+
+    sudo service apache2 restart
+
+Now phpMyAdmin should load without issue.
+
+### Dealing with `mcrypt` extension errors.
+
+If you are able to login to phpMyAdmin but get the following `mcrypt` extension error:
+
+> The mcrypt extension is missing. Please check your PHP configuration.
+
+Just install the PHP MCrypt extension like this:
+
+    sudo aptitude install php5-mcrypt
+    
+Then enable the module like this:
+
+    sudo php5enmod mcrypt 
+
+And restart Apache like this:
+
+    sudo service apache2 restart
+
 ***
 
 *PHP - phpMyAdmin Related Items (c) by Jack Szwergold*

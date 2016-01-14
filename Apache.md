@@ -187,6 +187,19 @@ Rewrite rule to redirect requests based on referrer:
 	RewriteCond %{HTTP_REFERER} .*yet_another_example.com.*$
 	RewriteRule ^(.*)$ http://www.preworn.com/
 
+#### Adjusting “prefork MPM” values in Apache 2.4
+
+    sudo nano /etc/apache2/mods-available/mpm_prefork.conf
+
+	<IfModule mpm_prefork_module>
+	  StartServers            8
+	  MinSpareServers        16
+	  MaxSpareServers        32
+	  ServerLimit            40
+	  MaxRequestWorkers      40
+	  MaxConnectionsPerChild 2000
+	</IfModule>
+
 ***
 
 *Apache (c) by Jack Szwergold*
