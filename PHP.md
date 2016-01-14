@@ -116,6 +116,26 @@ There should be a line in there like this.
 
 	[23-Jul-2014 16:04:56 UTC] This is an error test that we hope works.
 
+### Disable the PHP OPCache in PHP 5.5.
+
+Caching is nice, but it can drive you nuts in many circumstances; development or even production environments. You can disable it like this. First open up your main PHP config file:
+
+    sudo nano /etc/php5/apache2/php.ini
+
+Find this chunk of config code:
+
+	[opcache]
+	; Determines if Zend OPCache is enabled
+	; opcache.enable=0
+
+And uncomment that `; opcache.enable=0` line so it looks like this:
+
+	[opcache]
+	; Determines if Zend OPCache is enabled
+	opcache.enable=0
+
+Now restart Apache to have those new PHP settings take effect and you should be good to go.
+
 ***
 
 *PHP (c) by Jack Szwergold*
