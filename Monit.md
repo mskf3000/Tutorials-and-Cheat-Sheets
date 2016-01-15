@@ -53,7 +53,7 @@ Now create the actual Apache monitoring rule for Monit:
 
     sudo nano /etc/monit/conf.d/apache2.conf
 
-One type of Apache monitoring rule for Ubuntu 12.04:
+One type of Apache monitoring rule:
 
 	check process apache with pidfile /var/run/apache2.pid
       start "/usr/sbin/service apache2 start"
@@ -63,7 +63,7 @@ One type of Apache monitoring rule for Ubuntu 12.04:
       then restart
       alert email_address@example.com only on { timeout, nonexist }
 
-Another type of Apache monitoring rule for Ubuntu 12.04:
+Another type of Apache monitoring rule:
 
 	check process apache with pidfile /var/run/apache2.pid
       start "/usr/sbin/service apache2 start"
