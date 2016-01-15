@@ -43,9 +43,9 @@ Restart Monit and all should be good:
 
     sudo service monit restart
 
-#### Create a custom Monit Apache status monitoring rule.
+#### Ubuntu 12.04: Create a custom Monit Apache status monitoring rule.
 
-First, check to see if the `apache2.pid` file exists:
+Check to see if the `apache2.pid` file exists like this:
 
     ls -la /var/run/apache2.pid
 
@@ -53,7 +53,7 @@ Now create the actual Apache monitoring rule for Monit:
 
     sudo nano /etc/monit/conf.d/apache2.conf
 
-One type of Apache monitoring rule:
+One type of Apache monitoring rule for Ubuntu 12.04:
 
 	check process apache with pidfile /var/run/apache2.pid
       start "/usr/sbin/service apache2 start"
@@ -63,9 +63,42 @@ One type of Apache monitoring rule:
       then restart
       alert email_address@example.com only on { timeout, nonexist }
 
-Another type of Apache monitoring rule:
+Another type of Apache monitoring rule for Ubuntu 12.04:
 
 	check process apache with pidfile /var/run/apache2.pid
+      start "/usr/sbin/service apache2 start"
+      stop  "/usr/sbin/service apache2 stop"
+      if failed host 127.0.0.1 port 80
+        with timeout 15 seconds
+      then restart
+      if loadavg (1min) greater than 7
+        for 5 cycles
+      then restart
+      alert email_address@example.com only on { timeout, nonexist, resource }
+
+#### Ubuntu 14.04: Create a custom Monit Apache status monitoring rule.
+	
+Check to see if the `apache2.pid` file exists like this:
+
+    ls -la /var/run/apache2/apache2.pid
+
+Now create the actual Apache monitoring rule for Monit:
+
+    sudo nano /etc/monit/conf.d/apache2.conf
+
+One type of Apache monitoring rule:
+
+	check process apache with pidfile /var/run/apache2/apache2.pid
+      start "/usr/sbin/service apache2 start"
+      stop  "/usr/sbin/service apache2 stop"
+      if failed host 127.0.0.1 port 80
+        with timeout 15 seconds
+      then restart
+      alert email_address@example.com only on { timeout, nonexist }
+
+Another type of Apache monitoring rule:
+
+	check process apache with pidfile /var/run/apache2/apache2.pid
       start "/usr/sbin/service apache2 start"
       stop  "/usr/sbin/service apache2 stop"
       if failed host 127.0.0.1 port 80

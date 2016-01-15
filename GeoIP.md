@@ -8,7 +8,7 @@ By Jack Szwergold, September 23, 2015
 
 Install the basics for the build:
 
-    sudo aptitude install build-essential zlib1g-dev
+    sudo aptitude install build-essential zlib1g-dev libtool
 
 First grab a compressed archive from an official GeoIP source site:
 
