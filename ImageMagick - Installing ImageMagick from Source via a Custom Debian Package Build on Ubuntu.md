@@ -54,11 +54,11 @@ When all done you will get a message like this on the screen which means ImageMa
 	
 	 Done. The new package has been installed and saved to
 	
-	 /home/sysop/ImageMagick-6.9.2-3/imagemagick-6.9.2_3-1_amd64.deb
+	 /home/sysop/ImageMagick-6.9.3-0/imagemagick-6.9.3_0-1_amd64.deb
 	
-	 You can remove it from your system anytime using:
+	 You can remove it from your system anytime using: 
 	
-	      dpkg -r imagemagick-6.9.2
+	      dpkg -r imagemagick-6.9.3
 	
 	**********************************************************************
 
@@ -72,12 +72,11 @@ Finally, check the version number like this:
 
 And the output should look something like this:
 
-	Version: ImageMagick 6.9.2-3 Q16 x86_64 2015-09-21 http://www.imagemagick.org
-	Copyright: Copyright (C) 1999-2015 ImageMagick Studio LLC
+	Version: ImageMagick 6.9.3-0 Q16 x86_64 2016-01-17 http://www.imagemagick.org
+	Copyright: Copyright (C) 1999-2016 ImageMagick Studio LLC
 	License: http://www.imagemagick.org/script/license.php
-	Features: Cipher DPC OpenMP
-	Delegates (built-in): bzlib djvu fontconfig freetype gvc jng jpeg lqr openexr pangocairo png wmf x xml zlib
-	Aborted (core dumped)
+	Features: Cipher DPC OpenMP 
+	Delegates (built-in): bzlib djvu fontconfig freetype jbig jng jpeg lcms lqr lzma openexr pangocairo png tiff wmf x xml zlib
 
 #### Uninstall ImageMagick from source using `dpkg -r`.
 
@@ -87,7 +86,7 @@ Go into the decompressed directory where the initial ImageMagick install happene
 
 And run this `dpkg -r` command to uninstall it:
 
-    sudo dpkg -r imagemagick-6.9.2
+    sudo dpkg -r imagemagick-6.9.3
 
 ***
 
