@@ -6,9 +6,13 @@ By Jack Szwergold, September 16, 2015
 
 #### Install `munin`.
 
-Install Munin to monitor system activity via `aptitude`:
+Install Munin on Ubuntu 12.04:
 
 	sudo aptitude install munin munin-node
+	
+Install Munin on Ubuntu 14.04:
+
+	sudo aptitude install munin munin-node munin-plugins-extra libwww-perl
 	
 #### Basic `munin` usage items.
 
@@ -26,7 +30,7 @@ Follow the Munin logs:
 	sudo tail -f -n 200 /var/log/munin/munin-node.log
 	sudo tail -f -n 200 /var/log/munin/munin-update.log
 
-#### Do some initial tweaks to get things running smoothly.
+#### For Ubuntu 12.04, do some initial tweaks to get things running smoothly.
 
 First open up the `munin-node` config file:
 
@@ -163,7 +167,7 @@ Now just restart the Munin node to get the settings loaded and you should be goo
 
 	sudo service munin-node restart
 
-#### Setting an Apache config for `munin`.
+#### Setting an Apache config for `munin` in Ubuntu 12.04.
 
 Munin will set a symbolic link to it’s own Apache config, but it’s not that hot so let’s get rid of it:
 
@@ -211,6 +215,60 @@ Here is an example of a basic, secure Apache config for `munin`. Note the `Allow
 	  </IfModule>
 	
 	</Directory>
+
+#### Setting an Apache config for `munin` in Ubuntu 14.04.
+
+Munin will set a symbolic link to it’s own Apache config, but it’s not that hot so let’s get rid of it:
+
+	sudo rm /etc/apache2/conf-available/munin.conf
+	sudo rm /etc/apache2/conf-enabled/munin.conf
+
+Now let’s create our own `munin.conf` like this:
+
+	sudo nano /etc/apache2/conf-available/munin.conf
+
+Here is an example of a basic, non-secure Apache config for `munin`:
+
+	<Directory "/var/cache/munin/www">
+	  Require all granted
+	  Options FollowSymLinks SymLinksIfOwnerMatch
+	
+	  <IfModule mod_expires.c>
+	    ExpiresActive On
+	    ExpiresDefault M310
+	  </IfModule>
+
+	</Directory>
+
+Here is an example of a basic, secure Apache config for `munin`. Note the `Allow from` exceptions; feel free to add any IP address you wish to bypass that secure setup to that list:
+
+	<Directory "/var/cache/munin/www">
+	  Options Indexes MultiViews FollowSymLinks
+	  AllowOverride None
+	
+	  AuthName "Munin Access"
+	  AuthType Basic
+	  require valid-user
+	  AuthUserFile /etc/apache2/htpasswd_munin
+	
+	  Require all denied
+	  Require ip 127.0.0.1 ::1
+	  Require host localhost
+	  Require ip 192.168
+	  Require ip 10
+	
+	  <IfModule mod_expires.c>
+	    ExpiresActive On
+	    ExpiresDefault M310
+	  </IfModule>
+	
+	</Directory>
+
+With that done, be sure to enable the AWStats Apache module like this:
+
+   sudo a2enconf munin
+
+***
 
 And if you are using the secure setup, be sure to setup the `/etc/apache2/htpasswd_munin` that config refers to like this:
 

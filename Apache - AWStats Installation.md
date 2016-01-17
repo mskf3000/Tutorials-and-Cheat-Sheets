@@ -24,15 +24,11 @@ And delete the remnant `awstats-7.3.tar.gz` archive:
 
 ### Configuring Apache for AWStats.
 	
-Ubuntu 12.04: Now let’s create our own `awstats.conf` like this:
+#### How to set it up in Ubuntu 12.04: 
+
+Now let’s create our own `awstats.conf` like this:
 
 	sudo nano /etc/apache2/conf.d/awstats.conf
-
-Ubuntu 14.04: Now let’s create our own `awstats.conf` like this:
-
-    sudo nano /etc/apache2/conf-available/awstats.conf
-
-    sudo a2enconf awstats
 
 Here is an example of a basic, non-secure Apache config for AWStats:
 
@@ -86,6 +82,69 @@ Here is an example of a basic, secure Apache config for AWStats. Note the `Allow
 	  Satisfy Any
 	
 	</Directory>
+
+#### How to set it up in Ubuntu 14.04: 
+
+Now let’s create our own `awstats.conf` like this:
+
+    sudo nano /etc/apache2/conf-available/awstats.conf
+
+Here is an example of a basic, non-secure Apache config for AWStats:
+
+	Alias /awstatsclasses "/usr/share/awstats-7.3/wwwroot/classes/"
+	Alias /awstatscss "/usr/share/awstats-7.3/wwwroot/css/"
+	Alias /awstatsicons "/usr/share/awstats-7.3/wwwroot/icon/"
+	Alias /icon "/usr/share/awstats-7.3/wwwroot/icon/"
+	
+	# The default method which doesn't allow directory indexing
+	# ScriptAlias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
+	
+	# Modified method that allows indexing
+	Alias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
+	<Directory /usr/share/awstats-7.3/wwwroot/cgi-bin>
+	  AddHandler cgi-script cgi pl
+	  Options ExecCGI
+	</Directory>
+
+Here is an example of a basic, secure Apache config for AWStats. Note the `Allow from` exceptions; feel free to add any IP address you wish to bypass that secure setup to that list:
+
+	Alias /awstatsclasses "/usr/share/awstats-7.3/wwwroot/classes/"
+	Alias /awstatscss "/usr/share/awstats-7.3/wwwroot/css/"
+	Alias /awstatsicons "/usr/share/awstats-7.3/wwwroot/icon/"
+	Alias /icon "/usr/share/awstats-7.3/wwwroot/icon/"
+	
+	# The default method which doesn't allow directory indexing
+	# ScriptAlias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
+	
+	# Modified method that allows indexing
+	Alias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
+	<Directory /usr/share/awstats-7.3/wwwroot/cgi-bin>
+	  AddHandler cgi-script cgi pl
+	  Options ExecCGI
+	</Directory>
+	
+	<Directory "/usr/share/awstats-7.3/wwwroot">
+	  Options FollowSymLinks
+	  AllowOverride All
+	
+	  AuthName "AWStats Access"
+	  AuthType Basic
+	  require valid-user
+	  AuthUserFile /etc/apache2/htpasswd_awstats
+	
+	  Require all denied
+	  Require ip 127.0.0.1 ::1
+	  Require host localhost
+	  Require ip 192.168
+	  Require ip 10
+	
+	</Directory>
+
+With that done, be sure to enable the AWStats Apache module like this:
+
+	sudo a2enconf awstats
+
+***
 
 And if you are using the secure setup, be sure to setup the `/etc/apache2/htpasswd_awstats` that config refers to like this:
 

@@ -87,14 +87,13 @@ If you have no use for the PDF export functionality of phpMyAdmin—and who real
 	sudo rm -f /usr/share/phpmyadmin/libraries/plugins/export/PMA_ExportPdf.class.php
 	sudo rm -f /usr/share/phpmyadmin/libraries/plugins/export/ExportPdf.class.php
 
-### Setting an Apache config for phpMyAdmin.
+### Setting an Apache config for phpMyAdmin in Ubuntu 12.04.
 
 Now let’s create our own Apache `phpmyadmin.conf` like this:
 
 	sudo nano /etc/apache2/conf.d/phpmyadmin.conf
 
 Here is an example of a basic, secure Apache config for `phpmyadmin`. Note the `Allow from` exceptions; feel free to add any IP address you wish to bypass that secure setup to that list:
-
 
 	<Directory "/usr/share/phpmyadmin">
 
@@ -112,6 +111,35 @@ Here is an example of a basic, secure Apache config for `phpmyadmin`. Note the `
 	  Satisfy Any
 
 	</Directory>
+
+### Setting an Apache config for phpMyAdmin in Ubuntu 14.04.
+
+Now let’s create our own Apache `phpmyadmin.conf` like this:
+
+	sudo nano /etc/apache2/conf-available/phpmyadmin.conf
+
+Here is an example of a basic, secure Apache config for `phpmyadmin`. Note the `Allow from` exceptions; feel free to add any IP address you wish to bypass that secure setup to that list:
+
+	<Directory "/usr/share/phpmyadmin">
+	
+	  AuthName "phpMyAdmin Access"
+	  AuthType Basic
+	  require valid-user
+	  AuthUserFile /etc/apache2/htpasswd_phpmyadmin
+	
+	  Require all denied
+	  Require ip 127.0.0.1 ::1
+	  Require host localhost
+	  Require ip 192.168
+	  Require ip 10
+	
+	</Directory>
+
+With that done, be sure to enable the AWStats Apache module like this:
+
+	sudo a2enconf phpmyadmin
+
+***
 
 And if you are using the secure setup, be sure to setup the `/etc/apache2/htpasswd_phpmyadmin` that config refers to like this:
 

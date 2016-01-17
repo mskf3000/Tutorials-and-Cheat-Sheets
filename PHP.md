@@ -22,6 +22,12 @@ Save the file and reload Apache to refresh the PHP settings:
 
 	sudo service apache2 reload
 
+### Dealing with PHP session ownership issues.
+
+If the group has been changed, permissions on the PHP session directory need to be changed too:
+
+    sudo chgrp www-readwrite -R /var/lib/php/session
+
 ### Resolving PHP session creation issues.
 
 Sometimes, the ownership of the parent sessions directory are mucked up. Check it like this:
