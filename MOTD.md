@@ -18,9 +18,13 @@ The output of that would look something like this:
 	 ___) |  __/ |   \ V /  __/ |    | |
 	|____/ \___|_|    \_/ \___|_|    |_|
 
-Now open up the `/etc/motd.tail` tail file and just add that text to the file:
+For Ubuntu 12.04, open up the `/etc/motd.tail` tail file and just add that text to the file:
 
     sudo nano /etc/motd.tail
+
+For Ubuntu 14.04, open up the `/etc/motd.tail` tail file and just add that text to the file:
+
+    sudo nano /etc/motd
 
 Save it and that message will show up during your next login to the server.
 
