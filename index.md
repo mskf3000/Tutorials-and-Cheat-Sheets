@@ -195,6 +195,7 @@ Here are the cheat sheets. These are mainly intended for quick reference without
 - [Telephony - Sending an SMS via Email](Telephony%20-%20Sending%20an%20SMS%20via%20Email)
 - [Telephony - Telephone System Test Numbers](Telephony%20-%20Telephone%20System%20Test%20Numbers)
 - [Tomcat6](Tomcat6)
+- [Ubuntu - Basic System Setup](Ubuntu%20-%20Basic%20System%20Setup)
 - [Ubuntu - LDAP Related Items](Ubuntu%20-%20LDAP%20Related%20Items)
 - [Ubuntu - Locale Related Items](Ubuntu%20-%20Locale%20Related%20Items)
 - [Ubuntu - SMB Related Items](Ubuntu%20-%20SMB%20Related%20Items)
