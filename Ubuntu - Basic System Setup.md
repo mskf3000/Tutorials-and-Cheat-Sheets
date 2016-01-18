@@ -255,6 +255,10 @@ Now install the PHP5 modules:
 	  php-getid3 php5-imap php5-ldap php5-mcrypt \
 	  php5-pspell php5-gmp php5-gd
 
+And for some reason, the MCrypt module needs to be enabled like this:
+
+    sudo php5enmod mcrypt
+
 #### Harden PHP.
 
 Open up the main PHP config file like this:

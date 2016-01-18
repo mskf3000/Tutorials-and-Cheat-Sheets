@@ -211,7 +211,7 @@ Just install the PHP MCrypt extension like this:
     
 Then enable the module like this:
 
-    sudo php5enmod mcrypt 
+    sudo php5enmod mcrypt
 
 And restart Apache like this:
 
