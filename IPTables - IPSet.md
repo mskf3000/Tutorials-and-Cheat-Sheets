@@ -74,6 +74,10 @@ And you can restore the IP set like this:
 
     sudo ipset restore < ipset.FooBar.conf
 
+This variant uses the `-!` option to ignore errors if the IP address already exists:
+
+    sudo ipset restore -! < ipset.FooBar.conf
+
 ### Get IPSet to retain values on reboot.
 
 If you are using IPSet you are using IPTables as well. And if you are using IPTables, you are using `iptables-persistent` to ensure the IPTables rules are restored on reboot, right? But what about something for IPSet like `ipset-persistent`? Does that exist?
