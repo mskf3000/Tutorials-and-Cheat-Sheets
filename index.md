@@ -39,6 +39,8 @@ These tutorials delve into the basics of how I like to use and configure Ubuntu 
 Here are the cheat sheets. These are mainly intended for quick reference without too much deep explanation behind what is happening.
 
 - [Amazon - Amazon EBS Volume Storage](Amazon%20-%20Amazon%20EBS%20Volume%20Storage)
+- [Amazon - Amazon EC2 SSH Adjustments to Allow Password Authentication](Amazon%20-%20Amazon%20EC2%20SSH%20Adjustments%20to%20Allow%20Password%20Authentication)
+- [Amazon - Amazon EC2 Tool Installation Under Ubuntu](Amazon%20-%20Amazon%20EC2%20Tool%20Installation%20Under%20Ubuntu)
 - [Amazon - Amazon S3 Bucket and User Policy Examples](Amazon%20-%20Amazon%20S3%20Bucket%20and%20User%20Policy%20Examples)
 - [Amazon - Amazon S3 Fuse Integration](Amazon%20-%20Amazon%20S3%20Fuse%20Integration)
 - [Amazon - Amazon Web Service Command Line Interface](Amazon%20-%20Amazon%20Web%20Service%20Command%20Line%20Interface)
