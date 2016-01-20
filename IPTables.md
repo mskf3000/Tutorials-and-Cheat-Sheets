@@ -184,6 +184,10 @@ Finding the IPTables specific log entries in the Kernel log (`kern.log`):
 
     sudo tail -f -n 500 /var/log/kern.log | grep "IPTABLES_DENIED"
 
+This Grep command parses out the source (`SRC`) IP address from `IPTABLES_DENIED` entries:
+
+    grep IPTABLES_DENIED kern.log | cut -d = -f5 | cut -d " " -f1
+
 This Awk command parses out the source (`SRC`) IP address from “IPTABLES_DENIED” entries:
 
     sudo awk '/IPTABLES_DENIED/ {  split($11,split_11,"="); printf "%s\n", split_11[2] }' /var/log/kern.log
