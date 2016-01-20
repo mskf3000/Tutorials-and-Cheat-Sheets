@@ -137,7 +137,8 @@ This is a basic, solid and relatively simple rule set I like to use with IPTable
 	-A INPUT -p tcp --tcp-flags SYN,FIN SYN,FIN -j REJECT
 	-A INPUT -p tcp --tcp-flags SYN,RST SYN,RST -j REJECT
 	
-	# The combination of these TCP flags is not defined.	-A INPUT -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j REJECT
+	# The combination of these TCP flags is not defined.
+	-A INPUT -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j REJECT
 	-A INPUT -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,SYN,RST,PSH,ACK,URG -j REJECT
 	-A INPUT -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,PSH,URG -j REJECT
 	-A INPUT -p tcp --tcp-flags FIN,RST FIN,RST -j REJECT
