@@ -146,7 +146,7 @@ This is a basic, solid and relatively simple rule set I like to use with IPTable
 	-A INPUT -p tcp --tcp-flags PSH,ACK PSH -j REJECT
 	-A INPUT -p tcp --tcp-flags ACK,URG URG -j REJECT
 	
-	# Make sure new incoming tcp connections are SYN packets; otherwise we need to drop them.
+	# Drop new incoming TCP connections are not SYN packets.
 	-A INPUT -p tcp ! --syn -m state --state NEW -j REJECT
 	
 	# Drop packets with incoming fragments.
