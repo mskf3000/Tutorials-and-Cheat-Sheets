@@ -23,9 +23,13 @@ Once that Vagrant box has been downloaded, run this command to start the instanc
 
     vagrant up
 
-Or run the command this way to get debugging info:
+This variant of the command will give you debugging info:
 
     vagrant up --debug
+
+And this variant of the command will rerun the provisioning scripts on an already established Vagrant box:
+
+    vagrant up --provision
 
 SSH into the Vagrant box with this command:
 
