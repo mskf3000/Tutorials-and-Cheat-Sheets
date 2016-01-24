@@ -145,7 +145,7 @@ Install the `build-essential` tools to allow compiling source code.
 
 Install Git and Subversion related stuff:
 
-	sudo aptitude install subversion git git-core git-svn
+	sudo aptitude install git git-core subversion git-svn
 
 #### Install Postfix and other mail utilities.
 
