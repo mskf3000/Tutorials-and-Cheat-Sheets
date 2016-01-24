@@ -35,6 +35,25 @@ If you want to stop the Vagrant box and get rid of the installed disk/config fro
 
     vagrant destroy
 
+## Debugging Vagrant.
+
+Check the SSH options for the Vagrant box:
+
+    vagrant ssh-config
+
+Output should be something like this:
+
+	Host default
+	  HostName 127.0.0.1
+	  User vagrant
+	  Port 2222
+	  UserKnownHostsFile /dev/null
+	  StrictHostKeyChecking no
+	  PasswordAuthentication no
+	  IdentityFile "/Users/jack/Vagrant_Ubuntu_1404/.vagrant/machines/default/virtualbox/private_key"
+	  IdentitiesOnly yes
+	  LogLevel FATAL
+
 ## Configuring Vagrant.
 
 Okay, so with the basics done, you can edit the Vagrant config file (aka: `Vagrantfile`) to have a config like this:
@@ -49,7 +68,7 @@ I removed all of the comments and just have a few of the core config options suc
 
 ***
 
-## Create your own Vagrant box.
+## Creating your own Vagrant box.
 
 Building a Vagrant box:
 
