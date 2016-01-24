@@ -23,6 +23,10 @@ Once that Vagrant box has been downloaded, run this command to start the instanc
 
     vagrant up
 
+Or run the command this way to get debugging info:
+
+    vagrant up --debug
+
 SSH into the Vagrant box with this command:
 
     vagrant ssh
