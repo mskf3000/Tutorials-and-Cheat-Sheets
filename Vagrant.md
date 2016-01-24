@@ -2,6 +2,39 @@
 
 By Jack Szwergold, January 23, 2016
 
+## Basic usage.
+
+This will init a basic Ubuntu 14.04 LTS (64-bit) setup:
+
+    vagrant init ubuntu/trusty64
+
+The response to this command will be:
+
+	A `Vagrantfile` has been placed in this directory. You are now
+	ready to `vagrant up` your first virtual environment! Please read
+	the comments in the Vagrantfile as well as documentation on
+	`vagrantup.com` for more information on using Vagrant.
+
+A full list of available boxes can be found here:
+
+    https://atlas.hashicorp.com/boxes/search
+
+Once that Vagrant box has been downloaded, run this command to start the instance:
+
+    vagrant up
+
+SSH into the Vagrant box with this command:
+
+    vagrant ssh
+
+Stop the Vagrant box like this:
+
+    vagrant halt
+
+If you want to stop the Vagrant box and get rid of the installed disk/config from VirtualBox, run this command:
+
+    vagrant destroy
+
 ***
 
 ## Create your own Vagrant box.
