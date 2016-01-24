@@ -35,6 +35,18 @@ If you want to stop the Vagrant box and get rid of the installed disk/config fro
 
     vagrant destroy
 
+## Configuring Vagrant.
+
+Okay, so with the basics done, you can edit the Vagrant config file (aka: `Vagrantfile`) to have a config like this:
+
+	Vagrant.configure(2) do |config|
+	  config.vm.box = "ubuntu/trusty64"
+	  config.vm.box_check_update = false
+	  config.vm.network "private_network", ip: "192.168.56.20"
+	end
+
+I removed all of the comments and just have a few of the core config options such as disabling the update checking and setting a private “host only” network to `192.168.56.20`.
+
 ***
 
 ## Create your own Vagrant box.
@@ -43,7 +55,7 @@ Building a Vagrant box:
 
 #### Build a basic OS box.
 
-Set it up like any VirtualBox setup with the default user set as `sysop`. Just make sure the second Ethernet adapter is a “Host Only” adapter and gets the IP address of `192.168.56.20`. Temporarilly bring up the interface like this:
+Set it up like any VirtualBox setup with the default user set as `sysop`. Just make sure the second Ethernet adapter is a “Host Only” adapter and gets the IP address of `192.168.56.20`. Temporarily bring up the interface like this:
 
     sudo ifconfig eth1 192.168.56.20 netmask 255.255.255.0 up
     
@@ -96,7 +108,7 @@ And now set the proper permissions for the `.ssh/` directory and the `authorized
 
 #### Creating the actual Vagrant box.
 
-With that done, let’s createa Vagrant package. Check your existing boxes like this:
+With that done, let’s create a Vagrant package. Check your existing boxes like this:
 
 	vagrant box list
 
