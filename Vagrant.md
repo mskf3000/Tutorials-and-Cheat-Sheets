@@ -70,6 +70,7 @@ Okay, so with the basics done, you can edit the Vagrant config file (aka: `Vagra
 	  config.vm.box = "ubuntu/trusty64"
 	  config.vm.box_check_update = false
 	  config.vm.network "private_network", ip: "192.168.56.20"
+	  config.vm.hostname = "vagrant"
 	end
 
 I removed all of the comments and just have a few of the core config options such as disabling the update checking and setting a private “host only” network to `192.168.56.20`.
