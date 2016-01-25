@@ -132,7 +132,7 @@ Find this chunk of config code:
 
 	[opcache]
 	; Determines if Zend OPCache is enabled
-	; opcache.enable=0
+	;opcache.enable=0
 
 And uncomment that `; opcache.enable=0` line so it looks like this:
 

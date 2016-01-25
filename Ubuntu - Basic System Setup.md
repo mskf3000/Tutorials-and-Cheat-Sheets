@@ -259,6 +259,12 @@ And for some reason, the MCrypt module needs to be enabled like this:
 
     sudo php5enmod mcrypt
 
+#### Enable a few core Apache modules.
+
+Enable these basic Apache modules:
+
+	sudo a2enmod rewrite headers expires include proxy proxy_http cgi
+
 #### Harden PHP.
 
 Open up the main PHP config file like this:
@@ -290,12 +296,6 @@ Locate `ServerSignature` and disable:
 Locate `TraceEnable` and disable:
 
 	TraceEnable Off
-
-#### Enable a few core Apache modules.
-
-Enable these basic Apache modules:
-
-	sudo a2enmod rewrite headers expires include proxy proxy_http cgi
 
 #### Set a simpler default Apache configuration.
 

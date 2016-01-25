@@ -83,14 +83,12 @@ If your version of MySQL supports it, just run `mysql_secure_installation` to se
 
 But if your MySQL version doesn’t support `mysql_secure_installation`, then just run these commands within MySQL as an admin:
 
-	DROP DATABASE test;
-	
-	SELECT db from mysql.db;
-	
-	DELETE FROM mysql.db WHERE db = 'test';
-	DELETE FROM mysql.db WHERE db = 'test\_%';
-	
-	DELETE FROM user WHERE user = '';
+	UPDATE mysql.user SET Password=PASSWORD('root') WHERE User='root';
+	DELETE FROM mysql.user WHERE User='';
+	DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
+	DROP DATABASE IF EXISTS 'test';
+	DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%';
+	FLUSH PRIVILEGES;
 
 ### Importing and exporting MySQL database dumps.
 
