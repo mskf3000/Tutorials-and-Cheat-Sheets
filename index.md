@@ -191,6 +191,7 @@ Here are the cheat sheets. These are mainly intended for quick reference without
 - [SSH](SSH)
 - [SVN - Subversion Related Items](SVN%20-%20Subversion%20Related%20Items)
 - [Screen](Screen)
+- [Sed](Sed)
 - [Stat](Stat)
 - [Sysstat](Sysstat)
 - [Tar](Tar)

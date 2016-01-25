@@ -46,10 +46,10 @@ Check the contents of the MOTD directory:
 	-rwxr-xr-x   1 root root   144 May 15  2012 98-reboot-required
 	-rwxr-xr-x   1 root root  1158 Oct 21  2010 99-footer
 
-Get rid of the symbolic link to the `landscape sysinfo`:
+Get rid of the symbolic link to `50-landscape-sysinfo` and similar for cloud installs:
 
-	sudo rm /etc/update-motd.d/50-landscape-sysinfo
-	sudo rm /etc/update-motd.d/51-cloudguest
+	sudo rm -f /etc/update-motd.d/50-landscape-sysinfo
+	sudo rm -f /etc/update-motd.d/51-cloudguest
 
 Comment out the content of these MOTD scripts:
 
