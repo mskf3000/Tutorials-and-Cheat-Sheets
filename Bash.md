@@ -69,11 +69,11 @@ And here are some example `LSCOLORS` settings:
 	export CLICOLOR=1
 	
 	# MAMP stuff.
-	export MAMP_BIN=/Applications/MAMP/Library/bin
-	export MAMP_PHP=/Applications/MAMP/bin/php/php5.4.10/bin
+	export MAMP_BIN="/Applications/MAMP/Library/bin"
+	export MAMP_PHP="/Applications/MAMP/bin/php/php5.4.10/bin"
 	
 	# Git stuff.
-	export GIT_BIN=/usr/local/git/bin
+	export GIT_BIN="/usr/local/git/bin"
 	
 	# ImageMagick stuff.
 	# export MAGICK_HOME="/opt/ImageMagick-6.9.1"
@@ -83,6 +83,9 @@ And here are some example `LSCOLORS` settings:
 	# Final $PATH setting.
 	# export PATH="$MAGICK_HOME/bin:/usr/local/bin:/usr/local/sbin:$GIT_BIN:$PATH"
 	export PATH="$MAGICK_HOME/bin:$MAMP_BIN:$MAMP_PHP:/usr/local/bin:/usr/local/sbin:$GIT_BIN:$PATH"
+	
+	# Set the VAGRANT_HOME path.
+	export VAGRANT_HOME="/Volumes/Moon/vagrant.d"
 
 ***
 
