@@ -229,7 +229,7 @@ Now install CPANminus like this:
 
 With that done, install all of the GeoIP related modules like this:
 
-	sudo cpanm -i YAML Geo::IP Geo::IPfree Geo::IP::PurePerl URI::Escape Net::IP Net::DNS Net::XWhois Time::HiRes Time::Local
+	sudo cpanm -i -f YAML Geo::IP Geo::IPfree Geo::IP::PurePerl URI::Escape Net::IP Net::DNS Net::XWhois Time::HiRes Time::Local
 
 #### Tweaks the AWStats configuration files.
 
