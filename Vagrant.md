@@ -43,6 +43,10 @@ If you want to stop the Vagrant box and get rid of the installed disk/config fro
 
     vagrant destroy
 
+You can change the default path that Vagrant uses to save remove boxes by entering this in the Terminal or adding it to your `.bash_profile`:
+
+    export VAGRANT_HOME="/path/to/save/VagrantBoxes"
+
 ## Debugging Vagrant.
 
 Check the SSH options for the Vagrant box:
