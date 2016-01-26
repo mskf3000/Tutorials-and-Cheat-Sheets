@@ -30,6 +30,10 @@ Follow the Munin logs:
 	sudo tail -f -n 200 /var/log/munin/munin-node.log
 	sudo tail -f -n 200 /var/log/munin/munin-update.log
 
+Repair Munin permissions:
+
+    sudo munin-check --fix-permissions
+
 #### For Ubuntu 12.04, do some initial tweaks to get things running smoothly.
 
 First open up the `munin-node` config file:
@@ -266,7 +270,7 @@ Here is an example of a basic, secure Apache config for `munin`. Note the `Allow
 
 With that done, be sure to enable the AWStats Apache module like this:
 
-   sudo a2enconf munin
+	sudo a2enconf munin
 
 ***
 
