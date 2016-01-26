@@ -87,7 +87,7 @@ And decompress the database files like this:
 
 Adjust the permissions of all of the GeoIP databases to be `root`:
 
-    sudo chown root:root /usr/local/share/GeoIP/*
+    sudo chown root:root -R "/usr/local/share/GeoIP/"
 
 Check to see if the GeoIP databases are set:
 
