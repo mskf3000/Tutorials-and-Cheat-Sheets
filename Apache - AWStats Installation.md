@@ -223,21 +223,13 @@ To add GeoIP lookup support to AWStats, you first need to install some Perl modu
 
 	cd ~/
 
-Now enter the CPAN interface like this:
+Now install CPANminus like this:
 
-	sudo cpan
+	sudo aptitude install cpanminus
 
-First install YAML like this:
+With that done, install all of the GeoIP related modules like this:
 
-	install YAML
-
-Then install the rest of the GeoIP related modules like this:
-
-	install Geo::IP Geo::IPfree Geo::IP::PurePerl URI::Escape Net::IP Net::DNS Net::XWhois Time::HiRes Time::Local
-
-Once that’s done, quit CPAN like this:
-
-	quit
+	sudo cpanm -i YAML Geo::IP Geo::IPfree Geo::IP::PurePerl URI::Escape Net::IP Net::DNS Net::XWhois Time::HiRes Time::Local
 
 #### Tweaks the AWStats configuration files.
 
