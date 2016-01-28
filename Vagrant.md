@@ -49,6 +49,43 @@ You can change the default path that Vagrant uses to save remove boxes by enteri
 
 And the default SSH password for the user `vagrant` is `vagrant`.
 
+Get the status of all Vagrant instances connected to your logged in user running this command:
+
+    vagrant global-status
+
+The output should be something like this:
+
+	id       name                provider   state    directory
+	----------------------------------------------------------------------------------------
+	0b55b6e  default             virtualbox poweroff /Users/jack/Vagrant-Scripts/Ubuntu1404
+	689d9e7  vagrant             virtualbox running  /Users/jack/Vagrant-Scripts
+	28ee4e8  sandbox             virtualbox poweroff /Users/jack/Vagrant-Scripts
+	b467de6  Sandbox_UBUNTU_1404 virtualbox poweroff /Users/jack/Vagrant-Scripts
+	
+	The above shows information about all known Vagrant environments
+	on this machine. This data is cached and may not be completely
+	up-to-date. To interact with any of the machines, you can go to
+	that directory and run Vagrant, or you can use the ID directly
+	with Vagrant commands from any directory. For example:
+	"vagrant destroy 1a2b3c4d"
+
+Note that list is a mess since a lot of the the machines listed don’t exist anymore for various reasons. So to clean up the list, run this command to prune the list:
+
+    vagrant global-status --prune
+
+And the list should be trimmed down as follows:
+
+	id       name                provider   state    directory
+	-------------------------------------------------------------------------------------
+	b467de6  Sandbox_UBUNTU_1404 virtualbox poweroff /Users/jack/Vagrant-Scripts
+	
+	The above shows information about all known Vagrant environments
+	on this machine. This data is cached and may not be completely
+	up-to-date. To interact with any of the machines, you can go to
+	that directory and run Vagrant, or you can use the ID directly
+	with Vagrant commands from any directory. For example:
+	"vagrant destroy 1a2b3c4d"
+
 ## Debugging Vagrant.
 
 Check the SSH options for the Vagrant box:
@@ -92,7 +129,7 @@ Building a Vagrant box:
 Set it up like any VirtualBox setup with the default user set as `sysop`. Just make sure the second Ethernet adapter is a “Host Only” adapter and gets the IP address of `192.168.56.20`. Temporarily bring up the interface like this:
 
     sudo ifconfig eth1 192.168.56.20 netmask 255.255.255.0 up
-    
+
 Open up the `/etc/network/interfaces` file:
 
 	sudo nano /etc/network/interfaces
@@ -159,14 +196,14 @@ The output should be something like this:
 	==> Ubuntu 14.04: Exporting VM...
 	==> Ubuntu 14.04: Compressing package to: /Users/jack/Ubuntu_14.04_template
 
-Once that’s done, let’s add the exported template to the list of available Vagrant packages like this: 
+Once that’s done, let’s add the exported template to the list of available Vagrant packages like this:
 
     vagrant box add Ubuntu_14.04_template --name 'Ubuntu 14.04'
 
 The output should be something like this:
 
 	==> box: Box file was not detected as metadata. Adding it directly...
-	==> box: Adding box 'Ubuntu 14.04' (v0) for provider: 
+	==> box: Adding box 'Ubuntu 14.04' (v0) for provider:
 	    box: Unpacking necessary files from: file:///Users/jack/Ubuntu_14.04_template
 	==> box: Successfully added box 'Ubuntu 14.04' (v0) for 'virtualbox'!
 
