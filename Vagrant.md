@@ -47,6 +47,8 @@ You can change the default path that Vagrant uses to save remove boxes by enteri
 
     export VAGRANT_HOME="/path/to/save/VagrantBoxes"
 
+And the default SSH password for the user `vagrant` is `vagrant`.
+
 ## Debugging Vagrant.
 
 Check the SSH options for the Vagrant box:
