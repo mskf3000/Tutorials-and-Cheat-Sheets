@@ -68,11 +68,11 @@ Now just restart the Munin node to get the settings loaded and you should be goo
 
 Check status of available Munin plug-ins:
 
-    sudo /usr/sbin/munin-node-configure
+    sudo munin-node-configure
 
 Suggest available Munin plug-ins:
 
-    sudo /usr/sbin/munin-node-configure --suggest
+    sudo munin-node-configure --suggest
 
 Activate the Apache related Munin plug-ins.
 
