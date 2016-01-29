@@ -318,8 +318,16 @@ And whichever one is opened, just replace the contents with this more simplified
 	  # Possible values include: debug, info, notice, warn, error, crit, alert, emerg.
 	  LogLevel warn
 	
-	  Alias /phpmyadmin /usr/share/phpmyadmin/
+	  # AWStats aliases.
+	  Alias /awstats /usr/share/awstats-7.3/wwwroot/cgi-bin
+	  Alias /awstatsclasses /usr/share/awstats-7.3/wwwroot/classes/
+	  Alias /awstatscss /usr/share/awstats-7.3/wwwroot/css/
+	  Alias /awstatsicons /usr/share/awstats-7.3/wwwroot/icon/
+	  Alias /icon /usr/share/awstats-7.3/wwwroot/icon/
+	
+	  # Other aliases.
 	  Alias /munin /var/cache/munin/www
+	  Alias /phpmyadmin /usr/share/phpmyadmin
 	
 	  RedirectMatch 404 /(builds|configs|content)(/|$)
 	

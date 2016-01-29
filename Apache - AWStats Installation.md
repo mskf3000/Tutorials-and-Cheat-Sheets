@@ -32,34 +32,39 @@ Now let’s create our own `awstats.conf` like this:
 
 Here is an example of a basic, non-secure Apache config for AWStats:
 
-	Alias /awstatsclasses "/usr/share/awstats-7.3/wwwroot/classes/"
-	Alias /awstatscss "/usr/share/awstats-7.3/wwwroot/css/"
-	Alias /awstatsicons "/usr/share/awstats-7.3/wwwroot/icon/"
-	Alias /icon "/usr/share/awstats-7.3/wwwroot/icon/"
-	
 	# The default method which doesn't allow directory indexing
-	# ScriptAlias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
+	# ScriptAlias /awstats /usr/share/awstats-7.3/wwwroot/cgi-bin
+	
+	# Alias /awstats /usr/share/awstats-7.3/wwwroot/cgi-bin
+	# Alias /awstatsclasses /usr/share/awstats-7.3/wwwroot/classes/
+	# Alias /awstatscss /usr/share/awstats-7.3/wwwroot/css/
+	# Alias /awstatsicons /usr/share/awstats-7.3/wwwroot/icon/
+	# Alias /icon /usr/share/awstats-7.3/wwwroot/icon/
 	
 	# Modified method that allows indexing
-	Alias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
-	<Directory /usr/share/awstats-7.3/wwwroot/cgi-bin>
+	<Directory "/usr/share/awstats-7.3/wwwroot/cgi-bin">
+	  AddHandler cgi-script cgi pl
+	  Options ExecCGI
+	</Directory>
+
+	<Directory "/usr/share/awstats-7.3/wwwroot/cgi-bin">
 	  AddHandler cgi-script cgi pl
 	  Options ExecCGI
 	</Directory>
 
 Here is an example of a basic, secure Apache config for AWStats. Note the `Allow from` exceptions; feel free to add any IP address you wish to bypass that secure setup to that list:
 
-	Alias /awstatsclasses "/usr/share/awstats-7.3/wwwroot/classes/"
-	Alias /awstatscss "/usr/share/awstats-7.3/wwwroot/css/"
-	Alias /awstatsicons "/usr/share/awstats-7.3/wwwroot/icon/"
-	Alias /icon "/usr/share/awstats-7.3/wwwroot/icon/"
-
 	# The default method which doesn't allow directory indexing
-	# ScriptAlias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
+	# ScriptAlias /awstats /usr/share/awstats-7.3/wwwroot/cgi-bin
+	
+	# Alias /awstats /usr/share/awstats-7.3/wwwroot/cgi-bin
+	# Alias /awstatsclasses /usr/share/awstats-7.3/wwwroot/classes/
+	# Alias /awstatscss /usr/share/awstats-7.3/wwwroot/css/
+	# Alias /awstatsicons /usr/share/awstats-7.3/wwwroot/icon/
+	# Alias /icon /usr/share/awstats-7.3/wwwroot/icon/
 	
 	# Modified method that allows indexing
-	Alias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
-	<Directory /usr/share/awstats-7.3/wwwroot/cgi-bin>
+	<Directory "/usr/share/awstats-7.3/wwwroot/cgi-bin">
 	  AddHandler cgi-script cgi pl
 	  Options ExecCGI
 	</Directory>
@@ -91,34 +96,34 @@ Now let’s create our own `awstats.conf` like this:
 
 Here is an example of a basic, non-secure Apache config for AWStats:
 
-	Alias /awstatsclasses "/usr/share/awstats-7.3/wwwroot/classes/"
-	Alias /awstatscss "/usr/share/awstats-7.3/wwwroot/css/"
-	Alias /awstatsicons "/usr/share/awstats-7.3/wwwroot/icon/"
-	Alias /icon "/usr/share/awstats-7.3/wwwroot/icon/"
-	
 	# The default method which doesn't allow directory indexing
-	# ScriptAlias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
+	# ScriptAlias /awstats /usr/share/awstats-7.3/wwwroot/cgi-bin
+	
+	# Alias /awstats /usr/share/awstats-7.3/wwwroot/cgi-bin
+	# Alias /awstatsclasses /usr/share/awstats-7.3/wwwroot/classes/
+	# Alias /awstatscss /usr/share/awstats-7.3/wwwroot/css/
+	# Alias /awstatsicons /usr/share/awstats-7.3/wwwroot/icon/
+	# Alias /icon /usr/share/awstats-7.3/wwwroot/icon/
 	
 	# Modified method that allows indexing
-	Alias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
-	<Directory /usr/share/awstats-7.3/wwwroot/cgi-bin>
+	<Directory "/usr/share/awstats-7.3/wwwroot/cgi-bin">
 	  AddHandler cgi-script cgi pl
 	  Options ExecCGI
 	</Directory>
 
 Here is an example of a basic, secure Apache config for AWStats. Note the `Allow from` exceptions; feel free to add any IP address you wish to bypass that secure setup to that list:
 
-	Alias /awstatsclasses "/usr/share/awstats-7.3/wwwroot/classes/"
-	Alias /awstatscss "/usr/share/awstats-7.3/wwwroot/css/"
-	Alias /awstatsicons "/usr/share/awstats-7.3/wwwroot/icon/"
-	Alias /icon "/usr/share/awstats-7.3/wwwroot/icon/"
-	
 	# The default method which doesn't allow directory indexing
-	# ScriptAlias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
+	# ScriptAlias /awstats /usr/share/awstats-7.3/wwwroot/cgi-bin
+	
+	# Alias /awstats /usr/share/awstats-7.3/wwwroot/cgi-bin
+	# Alias /awstatsclasses /usr/share/awstats-7.3/wwwroot/classes/
+	# Alias /awstatscss /usr/share/awstats-7.3/wwwroot/css/
+	# Alias /awstatsicons /usr/share/awstats-7.3/wwwroot/icon/
+	# Alias /icon /usr/share/awstats-7.3/wwwroot/icon/
 	
 	# Modified method that allows indexing
-	Alias /awstats "/usr/share/awstats-7.3/wwwroot/cgi-bin"
-	<Directory /usr/share/awstats-7.3/wwwroot/cgi-bin>
+	<Directory "/usr/share/awstats-7.3/wwwroot/cgi-bin">
 	  AddHandler cgi-script cgi pl
 	  Options ExecCGI
 	</Directory>
