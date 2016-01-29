@@ -6,40 +6,6 @@ By Jack Szwergold, October 7, 2015
 
 ### Setting your MAMP binary path in your shell.
 
-#### Set the MAMP PHP 5.2.17 version of Pear as part of your user PATH.
-
-Add it to the beginning of your `PATH` like this. First open up your user’s `.bash_profile` like this:
-
-	bbedit ~/.bash_profile
-
-Then add lines like this. This is my preferred method of managing `PATH` values. If you have a different method of adjust your `PATH` value feel free to adapt:
-
-    export MAMP_BIN=/Applications/MAMP/Library/bin
-    export MAMP_PHP=/Applications/MAMP/bin/php/php5.2.17/bin
-
-	export PATH=$MAMP_BIN:$MAMP_PHP:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
-
-Save the `.bash_profile` and reload it like this:
-
-	source ~/.bash_profile
-
-#### Set the MAMP PHP 5.3.6 version of Pear as part of your user PATH.
-
-Add it to the beginning of your `PATH` like this. First open up your user’s `.bash_profile` like this:
-
-	bbedit ~/.bash_profile
-
-Then add lines like this. This is my preferred method of managing `PATH` values. If you have a different method of adjust your `PATH` value feel free to adapt:
-
-    export MAMP_BIN=/Applications/MAMP/Library/bin
-    export MAMP_PHP=/Applications/MAMP/bin/php/php5.3.6/bin
-
-	export PATH=$MAMP_BIN:$MAMP_PHP:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
-	
-Save the `.bash_profile` and reload it like this:
-
-	source ~/.bash_profile
-
 #### Set the MAMP PHP 5.4.10 version of Pear as part of your user PATH.
 
 Add it to the beginning of your `PATH` like this. First open up your user’s `.bash_profile` like this:
@@ -48,8 +14,8 @@ Add it to the beginning of your `PATH` like this. First open up your user’s `.
 
 Then add lines like this. This is my preferred method of managing `PATH` values. If you have a different method of adjust your `PATH` value feel free to adapt:
 
-    export MAMP_BIN=/Applications/MAMP/Library/bin
-    export MAMP_PHP=/Applications/MAMP/bin/php/php5.4.10/bin
+    export MAMP_BIN="/Applications/MAMP/Library/bin"
+    export MAMP_PHP="/Applications/MAMP/bin/php/php5.4.10/bin"
 
     export PATH=$MAMP_BIN:$MAMP_PHP:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
 
@@ -60,34 +26,6 @@ Save the `.bash_profile` and reload it like this:
 ### Fixing the Pear configuration file.
 
 It’s worth noting for now that apparently the Pear configuration file `pear.conf` in the PHP 5.4.10 setup can just be deleted to fix the problem. But haven’t tested it for the other versions of PHP in MAMP.
-
-#### Fixing the Pear configuration for PHP 5.2.17.
-
-The default Pear configuration file installed by MAMP has a small typo. So it needs to be fixed before anything happens. First open the file like this:
-
-    bbedit /Applications/MAMP/bin/php/php5.2.17/conf/pear.conf
-
-The bad setup:
-
-    "php_dir";s:45:"/Applications/MAMP/bin/php/php5.2.17/lib/php";
-
-The good setup; note the trailing slash:
-
-    "php_dir";s:45:"/Applications/MAMP/bin/php/php5.2.17/lib/php/";
-
-#### Fixing the Pear configuration for PHP 5.3.6.
-
-The default Pear configuration file installed by MAMP has a small typo. So it needs to be fixed before anything happens. First open the file like this:
-
-    bbedit /Applications/MAMP/bin/php/php5.3.6/conf/pear.conf
-
-The bad setup:
-
-    "php_dir";s:44:"/Applications/MAMP/bin/php/php5.3.6/lib/php";
-
-The good setup; note the trailing slash:
-
-    "php_dir";s:44:"/Applications/MAMP/bin/php/php5.3.6/lib/php/";
 
 #### Fixing the Pear configuration for PHP 5.4.10.
 
@@ -107,7 +45,7 @@ Or just delete the Pear configuration file:
 
     rm /Applications/MAMP/bin/php/php5.4.10/conf/pear.conf
 
-### Updati the actual Pear library.
+### Updating the actual Pear library.
 
 This example uses the PHP 5.4.10 version of this process. The overall concept is the same for other versions, just note the path differences when implementing.
 

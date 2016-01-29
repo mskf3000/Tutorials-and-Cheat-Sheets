@@ -12,10 +12,6 @@ Just run this `sudo aptitude purge` command to get rid of any ImageMagick stuff 
 
 #### Install the ImageMagick source code prerequisites and dependencies.
 
-First, run `aptitude update` like this:
-
-    sudo aptitude update
-
 Install the basics for the build:
 
     sudo aptitude install build-essential checkinstall libx11-dev libxext-dev zlib1g-dev libpng12-dev libjpeg-dev libfreetype6-dev libxml2-dev
