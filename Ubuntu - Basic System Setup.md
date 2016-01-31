@@ -42,7 +42,7 @@ Add user to the `www-readwrite` group:
 
 Set the server time and timezone info:
 
-	sudo ntpdate ntp.ubuntu.com
+	sudo ntpdate -u ntp.ubuntu.com
 	
 	sudo dpkg-reconfigure tzdata
 
