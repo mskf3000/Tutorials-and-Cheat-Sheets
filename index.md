@@ -159,6 +159,7 @@ Here are the cheat sheets. These are mainly intended for quick reference without
 - [Nmap](Nmap)
 - [NodeJS - Installing NodeJS and NPM via a PPA on Ubuntu](NodeJS%20-%20Installing%20NodeJS%20and%20NPM%20via%20a%20PPA%20on%20Ubuntu)
 - [NodeJS - Installing PhantomJS via a NPM on Ubuntu](NodeJS%20-%20Installing%20PhantomJS%20via%20a%20NPM%20on%20Ubuntu)
+- [NodeJS - Uninstalling NodeJS and NPM in Mac OS X](NodeJS%20-%20Uninstalling%20NodeJS%20and%20NPM%20in%20Mac%20OS%20X)
 - [PHP - Compiling and Installing PHP 5](PHP%20-%20Compiling%20and%20Installing%20PHP%205)
 - [PHP - Installing APC](PHP%20-%20Installing%20APC)
 - [PHP - Setting up JSON support for PHP 5](PHP%20-%20Setting%20up%20JSON%20support%20for%20PHP%205)
