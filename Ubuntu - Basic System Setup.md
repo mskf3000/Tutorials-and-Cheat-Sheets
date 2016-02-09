@@ -52,7 +52,7 @@ Set the NTP client to check the server daily:
 
 Add this to that file:
 
-    ntpdate -s ntp.ubuntu.com
+    ntpdate -s -u ntp.ubuntu.com
 
 Make sure the file has executable permissions:
 
