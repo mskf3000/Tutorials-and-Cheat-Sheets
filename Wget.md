@@ -27,6 +27,10 @@ A basic mirroring command example:
 
 	wget -m -k -p -w 1 -e robots=off http://[some url]
 
+Another basic mirroring command example:
+
+	wget --adjust-extension --span-hosts --convert-links --backup-converted --page-requisites http://[some url]
+
 The same basic command, but this spans hosts with `-H`; be careful with this or else your computer might attempt to download the whole Internet:
 
 	wget -m -k -p -w 1 -H -e robots=off http://[some url]
