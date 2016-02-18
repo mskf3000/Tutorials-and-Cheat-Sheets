@@ -40,7 +40,7 @@ And once it’s installed, run the command with `--version` to do a simple check
 
 Response should be something like this:
 
-> autoconf 2.69
+    autoconf 2.69
 
 Uninstall if you need to:
 
@@ -78,7 +78,7 @@ And once it’s installed, run the command with `--version` to do a simple check
 
 Response should be something like this:
 
-> automake 1.15
+    automake 1.15
 
 Uninstall if you need to:
 
@@ -116,7 +116,7 @@ And once it’s installed, run the command with `--version` to do a simple check
 
 Response should be something like this:
 
-> libtool (GNU libtool) 2.4.6
+	libtool (GNU libtool) 2.4.6
 
 Uninstall if you need to:
 

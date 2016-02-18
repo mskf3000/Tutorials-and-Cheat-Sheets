@@ -64,7 +64,7 @@ And once it’s installed, run the command with `--version` to do a simple check
 
 Response should be something like this:
 
-> nload version 0.7.3
+    nload version 0.7.3
 
 Uninstall if you need to:
 
