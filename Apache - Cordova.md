@@ -4,6 +4,10 @@ By Jack Szwergold, March 11, 2016
 
 ***
 
+## Cordova related stuff.
+
+#### The basics.
+
 First install Apache Cordova via the command line like this:
 
 	sudo npm install -g cordova
@@ -20,7 +24,7 @@ Create the Cordova app in that directory like this:
 
 	cordova create .
 
-Now setup the “browser” platform like this:
+Now setup the `browser` platform like this:
 
 	cordova platform add browser
 
@@ -31,6 +35,32 @@ And run the appliction like this:
 If you want to set a browser other than the default Chrome—or a different port—just pass through options like this:
 
 	cordova run browser -- --target=safari --port=8000
+
+#### Adding live reload support.
+
+	cordova plugin add cordova-plugin-browsersync
+
+## Ionic related stuff.
+
+Now install Ionic:
+
+	sudo npm install -g ionic
+
+Go into the `test/` platfom directory:
+
+	cd test
+
+Now setup the `browser` platform like this:
+
+	ionic platform add browser
+
+Build the `browser` app:
+
+	ionic build browser
+
+And now run the `browser` app:
+
+	ionic emulate browser
 
 ***
 
