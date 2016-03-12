@@ -38,7 +38,13 @@ If you want to set a browser other than the default Chrome—or a different port
 
 #### Adding live reload support.
 
+Honestly this doesn’t seem to work but adding this here for reference.
+
 	cordova plugin add cordova-plugin-browsersync
+
+	cordova run -- --live-reload
+
+	cordova run browser -- --live-reload --target=safari --port=8000
 
 ## Ionic related stuff.
 
@@ -61,6 +67,10 @@ Build the `browser` app:
 And now run the `browser` app:
 
 	ionic emulate browser
+
+If you want to set a browser other than the default Chrome—or a different port—just pass through options like this:
+
+	ionic emulate browser -- --target=safari --port=8000
 
 ***
 
