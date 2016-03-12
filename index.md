@@ -45,6 +45,7 @@ Here are the cheat sheets. These are mainly intended for quick reference without
 - [Amazon - Amazon S3 Fuse Integration](Amazon%20-%20Amazon%20S3%20Fuse%20Integration)
 - [Amazon - Amazon Web Service Command Line Interface](Amazon%20-%20Amazon%20Web%20Service%20Command%20Line%20Interface)
 - [Apache - AWStats Installation](Apache%20-%20AWStats%20Installation)
+- [Apache - Cordova](Apache%20-%20Cordova)
 - [Apache - Expires and Cache Control Headers](Apache%20-%20Expires%20and%20Cache%20Control%20Headers)
 - [Apache - Load Balancer Related Items](Apache%20-%20Load%20Balancer%20Related%20Items)
 - [Apache - Mod Evasive](Apache%20-%20Mod%20Evasive)
