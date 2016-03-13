@@ -22,9 +22,13 @@ If you need to update your install of Cordova, just run this command:
 
 You can also install a specific version of Cordova using this syntax:
 
-    sudo npm install -g cordova@3.1.0-0.2.0
+    sudo npm install -g cordova@5.4.1
 
-Check the Cordova requirements to see if they have been met y running this command:
+To check the list of all available versions of Cordova, run this command:
+
+	npm view cordova versions
+
+Check the Cordova requirements to see if they have been met by running this command:
 
     cordova requirements
 
