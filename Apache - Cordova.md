@@ -6,11 +6,29 @@ By Jack Szwergold, March 11, 2016
 
 ## Cordova related stuff.
 
-#### The basics.
+#### Installing and upgrading Cordova.
 
 First install Apache Cordova via the command line like this:
 
 	sudo npm install -g cordova
+
+You can check the version of Cordova by running this command:
+
+    cordova -v
+
+If you need to update your install of Cordova, just run this command:
+
+    sudo npm update -g cordova
+
+You can also install a specific version of Cordova using this syntax:
+
+    sudo npm install -g cordova@3.1.0-0.2.0
+
+Check the Cordova requirements to see if they have been met y running this command:
+
+    cordova requirements
+
+#### Basic steps.
 
 With that done, create a directory for your application like this:
 
