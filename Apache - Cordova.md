@@ -58,23 +58,17 @@ If you want to set a browser other than the default Chrome—or a different port
 
 	cordova run browser -- --target=safari --port=8000
 
-#### Adding live reload support.
-
-Honestly this doesn’t seem to work but adding this here for reference.
-
-	cordova plugin add cordova-plugin-browsersync
-
-	cordova run -- --live-reload
-
-	cordova run browser -- --live-reload --target=safari --port=8000
-
 ## Ionic related stuff.
 
 Now install Ionic:
 
 	sudo npm install -g ionic
 
-Go into the `test/` platfom directory:
+Go into the `test/` directory:
+
+	ionic start test blank
+
+Go into the `test/` directory:
 
 	cd test
 

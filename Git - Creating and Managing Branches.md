@@ -12,7 +12,7 @@ The easiest way to do this is to create a `develop` branch based off of the `mas
 
 First, get yourself into the `master` branch:
 
-    git checkout master
+	git checkout master
 
 Now checkout a `develop` branhc like this:
 
@@ -24,55 +24,55 @@ Finally, push the new `develop` branch to the remote origin:
 
 Or you can even just use `git push` like this:
 
-    git push
+	git push
 
 #### Basic interactions.
 
 To get commits and changes from a remote repository, just run `git pull` like this:
 
-    git pull
+	git pull
 
 Remove a file from a repository use `git rm` like this:
 
-    git rm [filename]
+	git rm [filename]
 
 #### List repository branches.
 
 To check your local branches, just run this command:
 
-    git branch
+	git branch
 
 But personally I find that too limiting, so I prefer to use the `-a` (all) flag instead like this so I can see all branches; local and remote:
 
-    git branch -a
+	git branch -a
 
 And if for some reason you only want to review a list of remote branches, just run this command:
 
-    git branch -r
+	git branch -r
 
 #### How to rename a branch.
 
 Let’s say you now want to rename the `develop` branch to `develop_test`. Just run this command:
 
-    git branch -m develop develop_test
+	git branch -m develop develop_test
 
 And hey, you decided that was not so hot an idea. So you can rename it again like this:
 
-    git branch -m develop_test develop
+	git branch -m develop_test develop
 
 #### Delete a local branch.
 
 Okay, so let’s say you want to delete a local branch such as `develop`. First, make sure you are in any other branch but `develop` like this:
 
-    git checkout master
+	git checkout master
 
 Now you can delete the branch with the `-d` flag like this:
 
-    git branch -d develop
+	git branch -d develop
 
 That should work if the branch is merged. But if you don’t care about the merged status of the branch just use the uppercase equivalent `-D` like this:
 
-    git branch -D develop
+	git branch -D develop
 
 And that branch should be successfully blown away locally.
 
@@ -88,61 +88,61 @@ Note the colon (`:`) before the branch name of `develop`. That `git push` combin
 
 Now let’s say you have made some local commits to `develop` that you are not happy with but you have not pushed `develop` to the remote origin at all. Well, then you can reset your local branch to the state of the remote `develop` branch to get everything back to normal again like this:
 
-    git reset --hard origin/develop
+	git reset --hard origin/develop
 
 #### Merge a branch.
 
 First checkout the branch you want to merge into; in this case it will be `master`:
 
-    git checkout master
+	git checkout master
 
 Now merge the `master` branch with the `develop` branch like this:
 
-    git merge develop
+	git merge develop
 
 If you want to add a commit point to the merge, just use the `--no-ff` flag like this:
 
-    git merge --no-ff develop
+	git merge --no-ff develop
 
 #### Check for merged branches.
 
 You can check which local branches are merged with this command:
 
-    git branch --merged
+	git branch --merged
 
 And you can check which remote branches are merged with this command:
 
-    git branch -r --merged
+	git branch -r --merged
 
 #### Check for unmerged branches.
 
 You can check which local branches are unmerged with this command:
 
-    git branch --no-merged
+	git branch --no-merged
 
 And you can check which remote branches are unmerged with this command:
 
-    git branch -r --no-merged
+	git branch -r --no-merged
 
 #### Diff branches.
 
 This command will diff the local `master` branch to the local `develop` branch:
 
-    git diff master develop
+	git diff master develop
 
 This command will diff the remote `develop` branch to the local `develop` branch:
 
-    git diff remotes/origin/develop develop
+	git diff remotes/origin/develop develop
 
 #### Check your history of commits.
 
 You can see a list of commits using `git log` as follows; set `-n 10` to be the number of commits you want to see like this:
 
-    git log -n 10
+	git log -n 10
 
 And you can also display a nice, visual branching commit history from the command line using `--oneline --decorate --graph` like this:
 
-    git log --oneline --decorate --graph
+	git log --oneline --decorate --graph
 
 #### Show the relationships between local & remote branches.
 
@@ -188,13 +188,13 @@ Run this command:
 And the output should be something like this:
 
 	b331419ad4cc4397a3138d3fc1166be014debc4f	refs/heads/develop
-    b331419ad4cc4397a3138d3fc1166be014debc4f	refs/heads/master
+	b331419ad4cc4397a3138d3fc1166be014debc4f	refs/heads/master
 
 #### Delete a single stray/old remote branch in a local repo.
 
 Run this command:
 
-    git branch -r -d origin/devel
+	git branch -r -d origin/devel
 
 #### Prune old remote branches from a local GIT repo.
 
@@ -202,15 +202,15 @@ By default, a local clone of a remote repository will have copiess of references
 
 First run this command with the `--dry-run` flag so you can see exactlty what it will do before it does it:
 
-    git remote prune origin --dry-run
+	git remote prune origin --dry-run
 
 Now run the actual command without the `--dry-run` flag so stray branches can be properly pruned:
 
-    git remote prune origin
+	git remote prune origin
 
 #### Do some garbage collection and maintenance to repair a damaged local clone.
 
-    git gc --auto
+	git gc --auto
 	
 	git count-objects -v
 	
@@ -220,7 +220,7 @@ Now run the actual command without the `--dry-run` flag so stray branches can be
 
 If you run `fsck` like this:
 
-    git fsck --full
+	git fsck --full
 
 And see some “dangling blobs” something like this:
 
