@@ -22,6 +22,24 @@ You need to set the path to the actual “Install OS X [Nickname].app” as well
 
 The disk erasing process is pretty quick, but the “Copying installer files to disk...” takes forever. Just wait until that finishes and when it’s all done, it’s done and you will have bootable Mac OS X USB flash drive.
 
+#### How to fix the “This copy of the Install OS X [Something] application can’t be verified. It may have been corrupted or tampered with during downloading.” error.
+
+So you are ready to install Mac OS X from a USB drive or from a download and this error pops up:
+
+> This copy of the Install OS X [Something] application can’t be verified. It may have been corrupted or tampered with during downloading.
+
+Frustrating isn’t it. Well, the fix is not to waste time or bandwidth by redownloading a multi-gigabyte installer, but instead syncing the local systems time with Apple’s remote time server when you boot into the USB drive.
+
+Just boot up from that system disk, open up the terminal and type in this command:
+
+	ntpdate -u time.apple.com
+
+And it should work fine. If not, open up the Terminal again and set the system time to be some time in the past like this:
+
+	date 0901000015
+
+That would set the system time to September 1, 2015 at 00 hours and 00 minutes. Yes, that seems crazy. But it works.
+
 ### An alternative way of creating a bootable Mac OS X USB flash drive in Mac OS X 10.6 and above.
 
 The main benefit of this alternate method is it works in Mac OS X 10.6 (Snow Leopard) but the general procedure should work in any version of Mac OS X 10.6 and higher.
