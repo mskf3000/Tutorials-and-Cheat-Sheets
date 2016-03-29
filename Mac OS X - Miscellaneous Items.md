@@ -104,7 +104,7 @@ Force Spotlight to reindex a specific volume:
 
 	sudo rm -R /.Spotlight-V100
 	sudo mdutil -i on /
-	sudo mduitl -E /
+	sudo mdutil -E /
 
 Force Spotlight to reindex Apple Mail:
 
