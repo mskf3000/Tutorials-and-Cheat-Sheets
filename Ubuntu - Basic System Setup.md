@@ -1,10 +1,8 @@
-# Ubuntu - Basic System Setup
+## Ubuntu - Basic System Setup
 
 By Jack Szwergold, January 16, 2016
 
-***
-
-## Set up the base system.
+### Set up the base system.
 
 #### Basic user and group setup.
 
@@ -517,6 +515,4 @@ Add this to the last line:
 
 ***
 
-*Ubuntu - Basic System Setup (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ubuntu - Basic System Setup (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

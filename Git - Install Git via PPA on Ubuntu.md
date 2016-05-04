@@ -1,10 +1,8 @@
-# Git - Install GIT via PPA on Ubuntu
+## Git - Install GIT via PPA on Ubuntu
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Adding the `git-core` PPA to the system.
+### Adding the `git-core` PPA to the system.
 
 First install `python-software-properties` like this:
 
@@ -18,7 +16,7 @@ With that done, run `aptitude update` like this:
 
     sudo aptitude update
 
-#### Installing Git.
+### Installing Git.
 
 If you already have `git` installed, running `aptitude upgrade` will upgrade your core install:
 
@@ -30,6 +28,4 @@ Or if you have not instaleld it yet, just install it via a standard `aptitude in
 
 ***
 
-*Git - Install GIT via PPA on Ubuntu (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Git - Install GIT via PPA on Ubuntu (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

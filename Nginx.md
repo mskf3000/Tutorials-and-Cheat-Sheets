@@ -1,8 +1,6 @@
-# Nginx
+## Nginx
 
 By Jack Szwergold, September 27, 2015
-
-***
 
 Get the version of Nginx from the command line:
 
@@ -18,6 +16,4 @@ The output should be something like this:
 
 ***
 
-*Nginx (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Nginx (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

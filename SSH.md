@@ -1,10 +1,8 @@
-# SSH
+## SSH
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### A fix for slow SSH client logins by disabling DNS lookups.
+### A fix for slow SSH client logins by disabling DNS lookups.
 
 Sometimes slow SSH logins are a result of slow reverse DNS setups on a server. In the great scheme of things, DNS lookups for SSH logins is a fairly useless feature. So disabling DNS lookups is a potential fix to clear up slow SSH connections.
 
@@ -24,7 +22,7 @@ Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
 
-#### A fix for slow SSH client logins by changing the preferred order of authentication methods.
+### A fix for slow SSH client logins by changing the preferred order of authentication methods.
 
 Sometimes slow SSH logins are caused by one item in the order of SSH authentication methods choking; making the SSH server “hang” while it waits to see if that choking authentication method ever responds. Chances are it won’t and will only wait until it times out and the next method can be used.
 
@@ -53,7 +51,7 @@ Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
 
-#### A fix for `ssh_exchange_identification: Connection closed by remote host` errors.
+### A fix for `ssh_exchange_identification: Connection closed by remote host` errors.
 
 If you have this issue, it might mean that `/var/empty/sshd` permissions are amiss. The permissions for `/var/empty/sshd` must be owned by root and not group or world-writable.
 
@@ -69,7 +67,7 @@ Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
 
-#### A fix for `error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key` errors.
+### A fix for `error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key` errors.
 
 If you have this issue, it might mean that there is a problem with the host key located in `/etc/ssh/ssh_host_ecdsa_key` and it should be regenerated.
 
@@ -85,7 +83,7 @@ Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
 
-#### Disable the SFTP subsystem in SSH.
+### Disable the SFTP subsystem in SSH.
 
 Open up the main `sshd_config` on the server:
 
@@ -107,7 +105,7 @@ Or if you are on RedHat/CentOS, restart the `ssh` daemon like this:
 
     sudo service sshd restart
 
-#### Setting up password-less login with SSH keys.
+### Setting up password-less login with SSH keys.
 
 Generate the RSA key pair. If it asks you for a passphrase just skip that; unless of course you need a passphrase so adjust as you see fit:
 
@@ -139,6 +137,4 @@ And finally make sure the parent `.ssh/` directory has it’s permissions set to
 
 ***
 
-*SSH (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*SSH (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

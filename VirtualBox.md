@@ -1,10 +1,8 @@
-# VirtualBox
+## VirtualBox
 
 By Jack Szwergold, September 19, 2015
 
-***
-
-#### Start the VirtualBox virtual machine as a headless machine.
+### Start the VirtualBox virtual machine as a headless machine.
 
     nohup VBoxHeadless --startvm "Sandbox" &
 
@@ -12,7 +10,7 @@ Slight variant of the command without a `nohup.out` file being created:
 
     nohup VBoxHeadless --startvm "Sandbox" >/dev/null 2>&1 &
 
-#### Control the VirtualBox virtual machine state from the command line.
+### Control the VirtualBox virtual machine state from the command line.
 
     VBoxManage controlvm "Sandbox" pause
     VBoxManage controlvm "Sandbox" resume
@@ -193,6 +191,4 @@ Compact a VirtualBox hard disk:
 
 ***
 
-*VirtualBox (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*VirtualBox (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

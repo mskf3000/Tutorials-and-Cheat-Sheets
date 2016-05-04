@@ -1,10 +1,8 @@
-# IPTables - Upgrade for GeoIP Support
+## IPTables - Upgrade for GeoIP Support
 
 By Jack Szwergold, October 27, 2015
 
-***
-
-#### 100% none of this works!
+### For Reference Only! 100% none of this seems to work!
 
 This is just here for refernece for now. Might not be worth the headache to get this setup for Ubuntu 12.04.5.
 
@@ -111,6 +109,4 @@ A test ban for (sadly) all of China:
 
 ***
 
-*IPTables - Upgrade for GeoIP Support (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*IPTables - Upgrade for GeoIP Support (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

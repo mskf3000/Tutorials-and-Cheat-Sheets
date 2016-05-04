@@ -1,10 +1,8 @@
-# Git - Dealing With Tags
+## Git - Dealing With Tags
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Simple introduction to how tags work in git.
+### Simple introduction to how tags work in git.
 
 List all local tags.
 
@@ -32,6 +30,4 @@ Checkout a specific tag:
 
 ***
 
-*Git - Dealing With Tags (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Git - Dealing With Tags (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

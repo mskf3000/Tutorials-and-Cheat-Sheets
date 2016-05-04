@@ -1,10 +1,8 @@
-# Telephony - Telephone System Test Numbers
+## Telephony - Telephone System Test Numbers
 
 By Jack Szwergold, September 19, 2015
 
-***
-
-#### 2015-09-19: Still active after all these years.
+### 2015-09-19: Still active after all these years.
 
 - **1-206-343-0011**: This call requires a coin deposit. Please hang up momentarily…
 - **1-845-268-9922**: Excuse me, please deposit five cents for the next two minutes or your call will be terminated…
@@ -26,7 +24,7 @@ By Jack Szwergold, September 19, 2015
 - **1-646-674-9999**: You have reached Bell Atlantic Office of West 36th Street serving codes 646, 674, 212, 594, 917, 339.
 - **1-718-980-9901**: Congratulations! You have reached New Dorp DSL 5ESS Switch and line trunk, handling codes 351, 667, 668, 979, 980, and 987.
 
-#### 2015-09-19: Inactive, changed, out of service or just dead.
+### 2015-09-19: Inactive, changed, out of service or just dead.
 
 - **1-541-967-0010**: The business telephone number you have dialed is experiencing a temporary service outage… USWEST
 - **1-856-767-9903**: Excuse me, please deposit ten cents (jumbled)
@@ -46,6 +44,4 @@ By Jack Szwergold, September 19, 2015
 
 ***
 
-*Telephony - Telephone System Test Numbers (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Telephony - Telephone System Test Numbers (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

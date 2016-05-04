@@ -1,14 +1,12 @@
-# Elasticsearch
+## Elasticsearch
 
 By Jack Szwergold, September 21, 2015
 
-***
-
-## Elasticsearch prerequisites.
+### Elasticsearch prerequisites.
 
 Elasticsearch requires Java 7—or better—to be installed for it to work. So make sure the system you plan on running Elasticsearch on has Java 7 installed and `JAVA_HOME` is properly set on the system.
 
-## Install Elasticsearch.
+### Install Elasticsearch.
 
 First, import the public key used by the package management system:
 
@@ -156,7 +154,7 @@ And it will now only be available to `localhost` connections on port `9200` movi
 
     curl http://localhost:9200
 
-## Practical Elasticsearch data usage examples.
+### Practical Elasticsearch data usage examples.
 
 #### Create an index.
 
@@ -286,6 +284,4 @@ And this will also delete all indexes:
 
 ***
 
-*Elasticsearch (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Elasticsearch (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

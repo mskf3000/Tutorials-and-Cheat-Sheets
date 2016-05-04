@@ -1,16 +1,14 @@
-# Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu
+## Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu
 
 By Jack Szwergold, September 22, 2015
 
-***
-
-#### Get rid of the default Ubuntu repository installed version of Redis.
+### Get rid of the default Ubuntu repository installed version of Redis.
 
 Just run this `sudo aptitude purge` command to get rid of any Redis stuff installed via the default Ubuntu repository:
 
     sudo aptitude purge redis-server
 
-#### Install the Redis source code prerequisites and dependencies.
+### Install the Redis source code prerequisites and dependencies.
 
 First, run `aptitude update` like this:
 
@@ -20,7 +18,7 @@ Build the dependencies for the build:
 
     sudo aptitude build-dep redis-server
 
-#### Install Redis from source using `checkinstall`.
+### Install Redis from source using `checkinstall`.
 
 First grab a compressed archive from an official ImageMagick source site:
 
@@ -65,7 +63,7 @@ And the output should be something like this:
 
 	Redis server v=3.0.4 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=4ff19536730eba7b
 
-#### Uninstall Redis from source using `dpkg -r`.
+### Uninstall Redis from source using `dpkg -r`.
 
 Go into the decompressed directory where the initial ImageMagick install happened:
 
@@ -81,6 +79,4 @@ And if you ever want to reinstall that Debian package, just run this command:
 
 ***
 
-*Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,14 +1,10 @@
-# Mac OS X - IFTop
+## Mac OS X - IFTop
 
 By Jack Szwergold, September 14, 2015
 
-***
-
 This tutorial explains how you can install IFTop directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
 
-***
-
-#### Installing IFTop via official source code archive.
+### Installing IFTop via official source code archive.
 
 First grab a compressed archive from an official IFTop source site:
 
@@ -40,6 +36,4 @@ And once it’s installed, run the command with `-h` to do a simple check to see
 
 ***
 
-*Mac OS X - IFTop (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - IFTop (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,8 +1,6 @@
-# XXD
+## XXD
 
 By Jack Szwergold, September 11, 2015
-
-***
 
 `xxd` is a nice little hexdump (hexadecimal dump) utility available on most Linux/Unix systems. It allows you to get a hexdump of a file or even standard input.
 
@@ -34,6 +32,4 @@ Let’s say you just want the core bitdump of a file. You can combine a bitdump 
 
 ***
 
-*XXD (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*XXD (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,8 +1,8 @@
-# Developing With MAMP 2.1.4
+## Developing With MAMP 2.1.4
 
 By Jack Szwergold, February 17, 2014
 
-## Part 2: Configuring Name-Based Virtual Hosts in MAMP
+### Part 2: Configuring Name-Based Virtual Hosts in MAMP
 
 In this part of my tutorial I will show you how to use the power of Apache name-based virtual hosts to have more than one website document root served via your local MAMP install.
 
@@ -12,7 +12,7 @@ You can read up on [how Apache name-based virtual hosts work over here][1]. But 
 
 Which—for Mac users—means that you can utilize the way your Mac has a machine specific Bonjour MDNS hostname like `MY_MACHINE.local`—in addition to the traditional `localhost` hostname—to enable Apache name-based virtual hosts in your local MAMP install.
 
-### Let’s get started.
+#### Let’s get started.
 
 First determine what your local machine’s Bonjour MDNS hostname is by going to the command line and typing 'hostname' like so:
 
@@ -24,7 +24,7 @@ Take a note of that hostname, which should be something like:
 
 Got that? Good. Now, switch your attention to the `htdocs` root of MAMP.
 
-### Setting up another document root.
+#### Setting up another document root.
 
 So now you are going to go to the `htdocs` root of MAMP and create a new directory called `test_host`:
 
@@ -48,7 +48,7 @@ And then copy in this short but sweet PHP script into that file:
 
 Note the use of `$_SERVER['SERVER_NAME']`. That will help you see which virtual host you are using to connect to the web server with.
 
-### Setting name-based virtual hosts in Apache.
+#### Setting name-based virtual hosts in Apache.
 
 So with that done, you’re now going to adjust the Apache configuration in your MAMP install to enable name-based virtual hosts. Open up the Apache `httpd.conf` file like so:
 
@@ -74,7 +74,7 @@ The first `VirtualHost` config is pretty straight forward; it handles traffic go
 
 Also note that I set `ServerAlias` in addition to `ServerName`. I do that out of habit. It could possibly be removed for this example, but I am so used to doing that for real world production servers—where one hostname can be an alias for another—I just leave that in place for my own reference.
 
-### Conclusion.
+#### Conclusion.
 
 Now that you have a `test_host` directory in your main MAMP `htdocs` directory as well an adjusted Apache `httpd.conf` in your MAMP setup, you should be all set. So restart MAMP and go to this URL:
 
@@ -90,8 +90,6 @@ So thanks to the flexibility of name-based virtual hosts, Apache in your MAMP se
 
 ***
 
-*Developing With MAMP 2.1.4 • Part 2: Configuring Name-Based Virtual Hosts in MAMP (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Developing With MAMP 2.1.4 • Part 2: Configuring Name-Based Virtual Hosts in MAMP (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
 
 [1]: http://httpd.apache.org/docs/2.2/vhosts/name-based.html "Apache HTTP Server • Name-based Virtual Host Support"

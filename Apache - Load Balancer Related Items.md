@@ -1,8 +1,6 @@
-# Apache - Load Balancer Related Items
+## Apache - Load Balancer Related Items
 
 By Jack Szwergold, October 18, 2015
-
-***
 
 The purpose of this cheat sheet is to explain the basic concepts behind using an Apache-based load balancer. 
 
@@ -10,7 +8,7 @@ In this setup we are using the same physical server with balancer members runnin
 
 ***
 
-## Apache load balancer prerequisites and related items.
+### Apache load balancer prerequisites and related items.
 
 #### Activating Apahce proxy modules.
 
@@ -36,7 +34,7 @@ Check the list of sites that are enabled on the server:
 
     ls -la /etc/apache2/sites-enabled/
 
-## Create the main load balancer web server.
+### Create the main load balancer web server.
 
 ##### Create the document root for the virtual host.
 
@@ -128,7 +126,7 @@ If you need to disable that virtual host configuration, run this `a2dissite` com
 
     sudo a2dissite sandbox.local.conf
 
-## Creating the first (port 8001) node web server.
+### Creating the first (port 8001) node web server.
 
 ##### Create the document root for the virtual host.
 
@@ -199,7 +197,7 @@ If you need to disable that virtual host configuration, run this `a2dissite` com
 
     sudo a2dissite sandbox.local.8001.conf
 
-## Creating the second (port 8002) node web server.
+### Creating the second (port 8002) node web server.
 
 ##### Create the document root for the virtual host.
 
@@ -272,6 +270,4 @@ If you need to disable that virtual host configuration, run this `a2dissite` com
 
 ***
 
-*Apache - Load Balancer Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Apache - Load Balancer Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

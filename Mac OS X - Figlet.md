@@ -1,14 +1,10 @@
-# Mac OS X - Figlet
+## Mac OS X - Figlet
 
 By Jack Szwergold, November 1, 2015
 
-***
-
 This tutorial explains how you can install Figlet directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
 
-***
-
-#### Installing Figlet via official source code archive.
+### Installing Figlet via official source code archive.
 
 First grab a compressed archive from an official Figlet source site:
 
@@ -42,7 +38,7 @@ And the output should be something like this:
 	|  _  |  __/ | | (_) |_|
 	|_| |_|\___|_|_|\___/(_)
 
-#### Basic usage and cool tricks.
+### Basic usage and cool tricks.
 
 To see all of the Figlet fonts installed on the system run this command:
 
@@ -62,6 +58,4 @@ This example uses `slant` font and the output would be something like this:
 
 ***
 
-*Mac OS X - Figlet (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - Figlet (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

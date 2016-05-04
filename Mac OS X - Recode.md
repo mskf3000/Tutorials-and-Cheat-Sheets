@@ -1,12 +1,8 @@
-# Mac OS X - Recode
+## Mac OS X - Recode
 
 By Jack Szwergold, November 24, 2015
 
-***
-
 Recode is a character set conversion tool.
-
-***
 
 First clone the source code from the official Recode GitHub repository:
 
@@ -43,6 +39,4 @@ The returned output should be:
 
 ***
 
-*Mac OS X - Recode (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - Recode (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,10 +1,8 @@
-# Java - Installing a Web Crawler based on Solr and Nutch
+## Java - Installing a Web Crawler based on Solr and Nutch
 
 By Jack Szwergold, October 14, 2015
 
-***
-
-## Solr and Nutch web crawler prerequisites.
+### Solr and Nutch web crawler prerequisites.
 
 Solr and Nutch web crawler requires Java 6—or better—to be installed for it to work. So make sure the system you plan on running the Solr and Nutch web crawler on has Java 6 installed and `JAVA_HOME` is properly set on the system.
 
@@ -148,11 +146,11 @@ And change the `<str name="df">` to be `content` like this:
 	     <!-- <str name="df">text</str> -->
 	   </lst>
 
-## Nutch related items.
+### Nutch related items.
 
-### Installing Nutch.
+#### Installing Nutch.
 
-#### Installing the Nutch binary.
+##### Installing the Nutch binary.
 
 Go into the `/usr/share` directory:
 
@@ -174,7 +172,7 @@ Now go into the main Nutch directory in `/usr/share/`:
 
 	cd /usr/share/apache-nutch-1.4
 
-#### Compiling Solr and Hadoop support for Nutch.
+##### Compiling Solr and Hadoop support for Nutch.
 
 First, go back into your home directory like this:
 
@@ -494,6 +492,4 @@ And change it to this; note the `address="127.0.0.1"` line:
 
 ***
 
-*Java - Installing a Web Crawler based on Solr and Nutch (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Java - Installing a Web Crawler based on Solr and Nutch (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

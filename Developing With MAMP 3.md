@@ -1,8 +1,8 @@
-# Developing With MAMP 2.1.4
+## Developing With MAMP 2.1.4
 
 By Jack Szwergold, February 17, 2014
 
-## Part 3: Upgrading the PHP Pear Library in MAMP
+### Part 3: Upgrading the PHP Pear Library in MAMP
 
 Now we’ll install the whole PHP Pear library under MAMP. Yes, the whole PEAR library.
 
@@ -10,7 +10,7 @@ Why? Easy. While MAMP includes a few common items from the PEAR library, it does
 
 So if none of that means anything to you, then don’t worry about any of this and stop reading now. Want to know more about how you can upgrade the PEAR librarian MAMP? Read on.
 
-### Let’s get started.
+#### Let’s get started.
 
 First, you need to determine what version of PHP you are using. You can figure that out by checking the output of [phpinfo()][1]. In this case I know I am using PHP version 5.4.10. And if you maneuver through the directory structure of MAMP, you can find the path to installed MAMP PHP binaries which should look something like this:
 
@@ -22,7 +22,7 @@ And if you look in there you can see the PEAR binary as well:
 
 Which is great! Because we need to use that PEAR binary to upgrade. But just make note of that for now. We’ll refer to it later.
 
-### Checking if PEAR is already installed in your system.
+#### Checking if PEAR is already installed in your system.
 
 Now we’re going to see if you have PEAR installed in your system. We do this using the UNIX command [`which`][2] which shows the full path of shell commands and related binaries. So just type the following into a terminal window like so:
 
@@ -32,7 +32,7 @@ And the output—if you are on a basic Mac OS X install—should be blank. Great
 
 So now with that established, let’s edit your shell `.bash_profile` file to recognized your MAMP install binaries.
 
-### Setting your MAMP binary path in your shell.
+#### Setting your MAMP binary path in your shell.
 
 Now that we know what your MAMP PHP binary path is, let’s edit your `.bash_profile` so it can be properly recognized. So open up your `.bash_profile` file like so:
 
@@ -60,7 +60,7 @@ Instead of being blank, the output should be:
 
 Great! Now you’re set to upgrade your MAMP install of PEAR!
 
-### Upgrading PEAR in MAMP.
+#### Upgrading PEAR in MAMP.
 
 Okay, the first thing you should know is somehow the PEAR config file in MAMP is broken. So it’s best to delete that off the bat:
 
@@ -115,7 +115,7 @@ The goal is to pipe the contents of `pear-pacakge-list` into `pear install` so w
 
 This process can take a while depending on how fast your Internet connection is. So I would recommend letting that process churn and revisiting it later.
 
-### Conclusion.
+#### Conclusion.
 
 When the dust settles you should have the complete PEAR library installed in your local MAMP setup. To check, just go to your MAMP install’s PHP library folder in MAMP which is located here:
 
@@ -125,9 +125,7 @@ And check the size. By default it is usually about 14MB in size. But after this 
 
 ***
 
-*Developing With MAMP 2.1.4 • Part 3: Upgrading the PHP Pear Library in MAMP (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Developing With MAMP 2.1.4 • Part 3: Upgrading the PHP Pear Library in MAMP (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
 
 [1]: http://us3.php.net/phpinfo "Info on phpinfo()."
 [2]: http://unixhelp.ed.ac.uk/CGI/man-cgi?which "Info on the Unix 'which' command."

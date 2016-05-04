@@ -1,8 +1,6 @@
-# Mac OS X - MAMP Related Items
+## Mac OS X - MAMP Related Items
 
 By Jack Szwergold, October 7, 2015
-
-***
 
 This is how you can setup named virtual hosts on MAMP. First open up the `httpd.conf` file like this:
 
@@ -24,7 +22,7 @@ Add this to the bottom of the file. Requests to a `localhost` request would go t
 	  ServerAlias *.local
 	</VirtualHost>
 
-#### Dealing with `DYLD_LIBRARY_PATH` issues connected to MAMP and ImageMagick.
+### Dealing with `DYLD_LIBRARY_PATH` issues connected to MAMP and ImageMagick.
 
 Sometimes binaries compiled with dynamic library requirements choke when being called via `exec()` or `shell_exec()` in MAMP. I first noticed this when having issues with ImageMagick `convert` being called via the `exec()` with errors showing up via `stderr` instead of the standard PHP error log; massive pain in the ass:
 
@@ -48,6 +46,4 @@ Finally restart the MAMP servers and all should be good as far as `exec()` and p
 
 ***
 
-*Mac OS X - MAMP Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - MAMP Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

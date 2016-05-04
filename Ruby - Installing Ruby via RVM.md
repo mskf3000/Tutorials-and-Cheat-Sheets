@@ -1,10 +1,8 @@
-# Ruby - Installing Ruby via RVM
+## Ruby - Installing Ruby via RVM
 
 By Jack Szwergold, September 20, 2015
 
-***
-
-#### Installing RVM (Ruby Version Manager).
+### Installing RVM (Ruby Version Manager).
 	
 	gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 	
@@ -24,7 +22,7 @@ Uninstall RVM completely:
 
 After doing that also check for RVM references in `.bashrc`, `.bash_profile` and  `.profile` and remove or comment them out as needed.
 
-#### Sundry RVM items.
+### Sundry RVM items.
 
 Install Ruby via RVM:
 	
@@ -68,6 +66,4 @@ Install the latest version of Bundler:
 
 ***
 
-*Ruby - Installing Ruby via RVM (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ruby - Installing Ruby via RVM (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

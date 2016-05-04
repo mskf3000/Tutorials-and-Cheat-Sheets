@@ -1,8 +1,6 @@
-# Mac OS X - Upgrading the PHP Pear Library in MAMP
+## Mac OS X - Upgrading the PHP Pear Library in MAMP
 
 By Jack Szwergold, October 7, 2015
-
-***
 
 ### Setting your MAMP binary path in your shell.
 
@@ -100,7 +98,5 @@ Now pipe that `pear-list` via `xargs` into `pear install` and wait:
 
 ***
 
-*Mac OS X - Upgrading the PHP Pear Library in MAMP (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - Upgrading the PHP Pear Library in MAMP (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
 

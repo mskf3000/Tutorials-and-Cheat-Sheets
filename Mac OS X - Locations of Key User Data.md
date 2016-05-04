@@ -1,14 +1,10 @@
-# Mac OS X - Locations of Key User Data
+## Mac OS X - Locations of Key User Data
 
 By Jack Szwergold, October 18, 2015
 
-***
-
 All of this stuff is useful for a user migration to a clean OS install.
 
-***
-
-#### Mail files and preferences.
+### Mail files and preferences.
 
 The actual mail files are located here:
 
@@ -18,13 +14,13 @@ And the mail application preferences are located here:
 
     ~/Library/Preferences/com.apple.mail.plist
 
-#### Safari bookmarks.
+### Safari bookmarks.
 
 Your Safari bookmarks are here:
 
     ~/Library/Safari/Bookmarks.plist
 
-#### Addresses.
+### Addresses.
 
 Export your address book like this:
 
@@ -36,7 +32,7 @@ Or you can copy the full address book directory from here:
 
     ~/Library/Application Support/AddressBook
 
-#### iTunes playlists.
+### iTunes playlists.
 
 Export your iTunes playlists like this:
 
@@ -52,6 +48,4 @@ Or you can copy the full iTunes music  directory from here:
 
 ***
 
-*Mac OS X - Locations of Key User Data (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - Locations of Key User Data (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

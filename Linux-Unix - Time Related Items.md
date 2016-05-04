@@ -1,10 +1,8 @@
-# Linux-Unix - Time Related Items
+## Linux-Unix - Time Related Items
 
 By Jack Szwergold, September 17, 2015
 
-***
-
-#### Setting time items on an Ubuntu/Debian system.
+### Setting time items on an Ubuntu/Debian system.
 
 Force a manual system clock update with `ntpdate` usng the hostname `ntp.ubuntu.com`:
 
@@ -26,7 +24,7 @@ Make sure the `/etc/cron.daily/ntpdate` file has executable permissions:
 
     sudo chmod 755 /etc/cron.daily/ntpdate
 
-#### Setting time items on an CentOS/RedHat system.
+### Setting time items on an CentOS/RedHat system.
 
 Backup the current `localtime` timezone file by creating a simple side-by-side backup of it:
 
@@ -51,6 +49,4 @@ Control NTP
 
 ***
 
-*Linux-Unix - Time Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Linux-Unix - Time Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

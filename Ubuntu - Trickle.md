@@ -1,16 +1,14 @@
-# Ubuntu - Trickle
+## Ubuntu - Trickle
 
 By Jack Szwergold, October 9, 2015
 
-***
-
-#### Installing Trickle.
+### Installing Trickle.
 
 Install `trickle`:
 
     sudo aptitude install trickle
 
-#### Using Trickle on a per-use basis.
+### Using Trickle on a per-use basis.
 
 To use a trickle on a per-command basis, you can use a single command, in this method the syntax is:
 
@@ -20,7 +18,7 @@ For example, let’s limit the download bandwidth to 150Kbps for a `curl` comman
 
     trickle -d 100 curl -L -O http://releases.ubuntu.com/15.04/ubuntu-15.04-server-amd64.iso
 
-#### Using the Trickle daemon from the command line.
+### Using the Trickle daemon from the command line.
 
 To start trickle as daemon mode and limit all the bandwidth, use the command `trickled` with the following syntax:
 
@@ -30,7 +28,7 @@ For example, run this command to run the Trickle daemon with 300Kbps download an
 
     sudo trickled -d 300 -u 120
 
-#### Pre-configuring the Trickle daemon.
+### Pre-configuring the Trickle daemon.
 
 Instead of dealing with launching and configuring the Trickle daemon via the command line, you can preconfigure the daemon like this:
 
@@ -73,6 +71,4 @@ And similarly, the value of `Length-Smoothing` is defined as follows in the docu
 
 ***
 
-*Ubuntu - Trickle (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ubuntu - Trickle (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

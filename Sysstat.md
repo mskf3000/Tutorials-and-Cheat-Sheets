@@ -1,16 +1,14 @@
-# Sysstat
+## Sysstat
 
 By Jack Szwergold, September 16, 2015
 
-***
-
-#### Install Sysstat.
+### Install Sysstat.
 
 Install the Sysstat utilities to monitor system statistics via `aptitude`:
 
     sudo aptitude install sysstat
 
-#### Basic `munin` usage items.
+### Basic `munin` usage items.
 
 Control `sysstat`:
 
@@ -19,7 +17,7 @@ Control `sysstat`:
 	sudo service sysstat start
 	sudo service sysstat stop
 
-#### Clearing up “sadc not enabled…” errors.
+### Clearing up “sadc not enabled…” errors.
 
 If you get this message:
 
@@ -36,7 +34,7 @@ Then look for this and change the value of `ENABLED` from `false` to `true`:
 	# will be overwritten by debconf!
 	ENABLED="true"
 
-#### Clearing up “Invalid system activity file…” errors.
+### Clearing up “Invalid system activity file…” errors.
 
 If you get a message like the following:
 
@@ -48,6 +46,4 @@ Then just purge and re-install `sysstat` to get it back up and running:
 
 ***
 
-*Sysstat (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Sysstat (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

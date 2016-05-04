@@ -1,10 +1,8 @@
-# IPTables
+## IPTables
 
 By Jack Szwergold, September 11, 2015
 
-***
-
-#### Start, stop and control IPTables.
+### Start, stop and control IPTables.
 
 On Ubuntu/Debian systems you can start, stop, restart and flush IPTables this way:
 
@@ -28,7 +26,7 @@ The output should be something like this:
 
     iptables v1.4.12
 
-#### Different ways to showing IPTables rules.
+### Different ways to showing IPTables rules.
 
 List all rules (`-L`) in the selected table—default is `-t filter`—with hostname lookups.
 
@@ -46,7 +44,7 @@ List all rules (`-L`) in the NAT table (`-t nat`) in numeric format (`-n`) witho
 
     sudo iptables -t nat -L -n
 
-#### Install and setup `iptables-persistent`.
+### Install and setup `iptables-persistent`.
 
 By default, an Ubuntu/Debian systems lose IPTables rules on reboot. Installing `iptables-persistent` assures that rules are saved and reloaded on reboot:
 
@@ -70,19 +68,19 @@ On RedHat/CentOS you can copy the rules saved in the text file `~/iptables.conf`
 
 And with that done, `iptables-persistent` should be all set.
 
-#### Manually importing IPTables rules.
+### Manually importing IPTables rules.
 
 To manually import IPTables rules, just use `iptables-restore` like this:
 
     sudo iptables-restore < ~/iptables.conf
 
-#### Flushing IPTables rules.
+### Flushing IPTables rules.
 
 To dump all IPTables rules, use the `-F` flag to flush all of the IPTables rules in all chains:
 
     sudo iptables -F
 
-#### Delete an IPTables chain.
+### Delete an IPTables chain.
 
 To delete all non-core IPTables chains, just use the `-X` flag like so:
 
@@ -165,7 +163,7 @@ This is a basic, solid and relatively simple rule set I like to use with IPTable
 	# Commit it.
 	COMMIT
 
-#### Logging rejected packets.
+### Logging rejected packets.
 
 These are IPTables entries to log entries in the Kernel log (`kern.log`). They would be placed before the final `-A INPUT -j REJECT` in the chain. In the above example these would be placed before this line:
 
@@ -255,6 +253,4 @@ This variant will let you know date, time and whether the dropped packet was TCP
 
 ***
 
-*IPTables (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*IPTables (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,10 +1,8 @@
-# Ruby - Capistrano Deployments
+## Ruby - Capistrano Deployments
 
 By Jack Szwergold, October 15, 2015
 
-***
-
-#### Deploy flow.
+### Deploy flow.
 
 	deploy:starting    - start a deployment, make sure everything is ready
 	deploy:started     - started hook (for custom tasks)
@@ -15,7 +13,7 @@ By Jack Szwergold, October 15, 2015
 	deploy:finishing   - finish the deployment, clean up everything
 	deploy:finished    - finished hook
 
-#### Rollback flow.
+### Rollback flow.
 
 	deploy:starting
 	deploy:started
@@ -28,6 +26,4 @@ By Jack Szwergold, October 15, 2015
 
 ***
 
-*Ruby - Capistrano Deployments (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ruby - Capistrano Deployments (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

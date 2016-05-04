@@ -1,8 +1,6 @@
-# Setting Up a Postfix SASL SMTP Email Relay
+## Setting Up a Postfix SASL SMTP Email Relay
 
 By Jack Szwergold, October 7, 2015
-
-***
 
 By default, Mac OS X has Postfix installed. But it’s not enabled by default. Not to mention sending emails via a `localhost` MTA will most likely result in the message being tagged as SPAM pretty quickly.
 
@@ -10,7 +8,7 @@ So this cheat sheet explains how you can use an external SMTP account to send em
 
 ***
 
-#### Setting up the Postfix SASL lookup table.
+### Setting up the Postfix SASL lookup table.
 
 First, we need to create a `sasl_passwd` password file like this:
 
@@ -28,7 +26,7 @@ Now run `postmap` to create the Postfix lookup table (`sasl_passwd.db`) like thi
 
 	sudo postmap /etc/postfix/sasl_passwd
 
-#### Configure Postfix to use SASL.
+### Configure Postfix to use SASL.
 
 Open up the main Postfix configuration file like this:
 
@@ -78,7 +76,7 @@ Here are some other Postfix start, stop, control and status options:
 	sudo postfix set-permissions
 	sudo postfix upgrade-configuration
 
-#### Testing and debugging the Postfix SASL setup.
+### Testing and debugging the Postfix SASL setup.
 
 The simplest way to check if this setup works is
 
@@ -92,7 +90,7 @@ If the mails get stuck in that queue and you ned to clear them out, run this com
 
 	sudo postsuper -d ALL
 
-#### Getting Postfix to start on system startup/reboot in Mac OS X.
+### Getting Postfix to start on system startup/reboot in Mac OS X.
 
 If you want Postfix to automatically startup when the system starts up or reboots, open up the `org.postfix.master.plist` file in `LaunchDaemons`:
 
@@ -160,6 +158,4 @@ Followed by this `launchctl load` command:
 
 ***
 
-*Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

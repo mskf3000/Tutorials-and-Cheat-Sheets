@@ -1,10 +1,8 @@
-# Monit
+## Monit
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Getting Monit installed and other basics.
+### Getting Monit installed and other basics.
 
 First, install Monit via `aptitude` like this:
 
@@ -43,7 +41,7 @@ Restart Monit and all should be good:
 
     sudo service monit restart
 
-#### Ubuntu 12.04: Create a custom Monit Apache status monitoring rule.
+### Ubuntu 12.04: Create a custom Monit Apache status monitoring rule.
 
 Check to see if the `apache2.pid` file exists like this:
 
@@ -76,7 +74,7 @@ Another type of Apache monitoring rule:
       then restart
       alert email_address@example.com only on { timeout, nonexist, resource }
 
-#### Ubuntu 14.04: Create a custom Monit Apache status monitoring rule.
+### Ubuntu 14.04: Create a custom Monit Apache status monitoring rule.
 	
 Check to see if the `apache2.pid` file exists like this:
 
@@ -113,7 +111,7 @@ Restart Monit and all should be good:
 
     sudo service monit restart
 
-#### Create a custom Monit MySQL status monitoring rule.
+### Create a custom Monit MySQL status monitoring rule.
 
 First, check to see if the `mysqld.pid` file exists:
 
@@ -137,7 +135,7 @@ Restart Monit and all should be good:
 
     sudo service monit restart
 
-#### Create a custom Monit MongoDB status monitoring rule.
+### Create a custom Monit MongoDB status monitoring rule.
 
 Create the actual MongoDB monitoring rule for Monit:
 
@@ -159,6 +157,4 @@ Restart Monit and all should be good:
 
 ***
 
-*Monit (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Monit (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

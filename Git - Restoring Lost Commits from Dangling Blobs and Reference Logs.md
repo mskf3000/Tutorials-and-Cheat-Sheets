@@ -1,14 +1,12 @@
-# Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
+## Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
 
 By Jack Szwergold, October 3, 2015
-
-***
 
 The basic concept here is you dug yourself into a hole by reverting commits. And there is no easy way to “pull” from origin or recover by any other means.
 
 Don’t panic! Hope is not lost! As long as you have not done any “garbage collection” (via: `git gc`), a “dangling blob” might still be there just waiting for you to recover it.
 
-#### Accidentally rolling back commits.
+### Accidentally rolling back commits.
 
 So let‘s create a problem so we can fix it. Let’s look at the last 4 commits with this command:
 
@@ -46,7 +44,7 @@ Okay, so we have decided for some crazy reason we want to roll back to commit `6
 
 Great! You have now wiped out three commits. Now let’s see how to get them back.
 
-#### Restoring lost commits from dangling blobs and reference logs.
+### Restoring lost commits from dangling blobs and reference logs.
 
 Okay, so you realized you made a big mistake when you rolled back those commits. Fine. Just check in the `fsck --lost-found` and let’s see if anything is in there:
 
@@ -85,6 +83,4 @@ With that done, pat yourself on the back. You just recovered some hard work and 
 
 ***
 
-*Git - Restoring Lost Commits from Dangling Blobs and Reference Logs (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Git - Restoring Lost Commits from Dangling Blobs and Reference Logs (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

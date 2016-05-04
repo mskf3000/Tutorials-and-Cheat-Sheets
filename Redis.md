@@ -1,10 +1,8 @@
-# Redis
+## Redis
 
 By Jack Szwergold, September 22, 2015
 
-***
-
-#### Sundry Redis items.
+### Sundry Redis items.
 
 Redis should now be installed and you can check the version by running:
 
@@ -36,7 +34,7 @@ The response should be:
 
     PONG
 
-#### Sundry Redis items on an Ubuntu/Debian system.
+### Sundry Redis items on an Ubuntu/Debian system.
 
 Start, stop and control Apache on an Ubuntu/Debian system:
 
@@ -46,7 +44,7 @@ Start, stop and control Apache on an Ubuntu/Debian system:
     sudo service redis-server force-reload
     sudo service redis-server status
 
-#### Benchmark Redis performance.
+### Benchmark Redis performance.
 
 Run this command to benchmark Redis:
 
@@ -242,7 +240,7 @@ The output should be something like this:
 	100.00% <= 4 milliseconds
 	45065.34 requests per second
 
-## Practical Redis data usage examples.
+### Practical Redis data usage examples.
 
 Now you can do simple tests via the Redis CLI like this:
 
@@ -260,6 +258,4 @@ Get a value connected to a key like this; the response should be “somevalue”
 
 ***
 
-*Redis (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Redis (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

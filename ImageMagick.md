@@ -1,10 +1,8 @@
-# ImageMagick
+## ImageMagick
 
 By Jack Szwergold, October 5, 2015
 
-***
-
-#### Basics of image conversion.
+### Basics of image conversion.
 
 Recompress a JPEG image at 95 percent quality:
 
@@ -18,7 +16,7 @@ Recompress a JPEG image at 95 percent quality (`-quality 95`), force the process
 
 	convert "Source/test.jpg" -quality 95 -colorspace sRGB -sharpen 0x1 "Destination/test.jpg"
 
-#### Resize an image.
+### Resize an image.
 
 Resize an image at 720 pixels wide:
 
@@ -44,13 +42,13 @@ Resize an image at 720 pixels wide by 720 pixels high based on the longest dimen
 
     convert "Source/test.jpg" -resize 720x720\> "Destination/test.jpg"
 
-#### Density and units.
+### Density and units.
 
 Convert an images DPI (`-density 300`) and make sure the units are pixels per inch (`-units PixelsPerInch`):
 
     convert "Source/test.jpg" -density 300 -units PixelsPerInch "Destination/test.jpg"
 
-#### Getting the color of an image.
+### Getting the color of an image.
 
 This get the RGB color value based on using `-resize`:
 
@@ -94,7 +92,5 @@ The returned value would be something like this:
 
 ***
 
-*ImageMagick (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*ImageMagick (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
 

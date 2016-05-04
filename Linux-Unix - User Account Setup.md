@@ -1,12 +1,10 @@
-# Linux-Unix - User Account Setup
+## Linux-Unix - User Account Setup
 
 By Jack Szwergold, September 16, 2015
 
-***
-
 Here are instructions on how to setup an account on a Linux server.
 
-#### Create a user account.
+### Create a user account.
 
 Login to the server you want to create an account on and add the user—in this case `[username]`—like this:
 
@@ -18,7 +16,7 @@ Use the password as follows for initial setup or change it to something else:
 
 This is a temporary account so the user will have to change it on their first login. More on that later when we expire the user’s password to force creation of a new password.
 
-#### Add a user to a group and set the user’s default group.
+### Add a user to a group and set the user’s default group.
 
 Add the user to the `www-readwrite` group:
 
@@ -28,7 +26,7 @@ Set user’s default group to the `www-readwrite` group:
 
     sudo usermod -g www-readwrite [username]
 
-#### Expire the password immediately to force the user to choose their own password.
+### Expire the password immediately to force the user to choose their own password.
 
 First, let’s check the password status like this:
 
@@ -42,7 +40,7 @@ After that’s done, check the password status again to make sure it has been ex
 
     sudo passwd -S [username]
 
-#### Miscellaneous user account management items.
+### Miscellaneous user account management items.
 
 Here are some related commands that might need to be used depending on the situation.
 
@@ -102,6 +100,4 @@ Get username id and connected group id info, more readable format:
 
 ***
 
-*Linux-Unix - User Account Setup (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Linux-Unix - User Account Setup (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

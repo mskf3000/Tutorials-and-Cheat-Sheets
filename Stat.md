@@ -1,10 +1,8 @@
-# Stat
+## Stat
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Using Stat in Mac OS X.
+### Using Stat in Mac OS X.
 
 **ACCESS:** Get the last access time of a file.
 
@@ -26,7 +24,7 @@ By Jack Szwergold, September 15, 2015
 
     stat -f "%z" filename_here.txt
 
-#### Using Stat in Linux/Unix.
+### Using Stat in Linux/Unix.
 
 **ACCESS:** Get the last access time of a file.
 
@@ -54,6 +52,4 @@ By Jack Szwergold, September 15, 2015
 
 ***
 
-*Stat (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Stat (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

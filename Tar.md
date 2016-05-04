@@ -1,8 +1,6 @@
-# Tar
+## Tar
 
 By Jack Szwergold, October 8, 2015
-
-***
 
 Run this command to show a list of a Tar/Gzipped files contents:
 
@@ -29,6 +27,4 @@ Would show the following content info:
 
 ***
 
-*Tar (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Tar (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

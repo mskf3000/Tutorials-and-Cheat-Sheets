@@ -1,10 +1,8 @@
-# SSH - Chroot and SFTP Notes
+## SSH - Chroot and SFTP Notes
 
 By Jack Szwergold, September 17, 2015
 
-***
-
-#### Setting up SFTP chroot access for a specific user.
+### Setting up SFTP chroot access for a specific user.
 
 Open up the main `sshd_config` on the server:
 
@@ -38,7 +36,7 @@ Then restart `ssh`:
 
      sudo service ssh restart
 
-#### Preventing SFTP access.
+### Preventing SFTP access.
 
 To disable SFTP access to a server, open up the main `sshd_config` on the server:
 
@@ -56,6 +54,4 @@ Or do this to disable SFTP access on a per-group basis:
 
 ***
 
-*SSH - Chroot and SFTP Notes (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*SSH - Chroot and SFTP Notes (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

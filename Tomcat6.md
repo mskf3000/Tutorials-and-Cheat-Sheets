@@ -1,10 +1,8 @@
-# Tomcat6
+## Tomcat6
 
 By Jack Szwergold, September 24, 2015
 
-***
-
-## Install Tomcat6.
+### Install Tomcat6.
 
 Install Tomcat6 via `aptitude` like this:
 
@@ -166,6 +164,4 @@ Change permissions on the following directories:
 
 ***
 
-*Tomcat6 (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Tomcat6 (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

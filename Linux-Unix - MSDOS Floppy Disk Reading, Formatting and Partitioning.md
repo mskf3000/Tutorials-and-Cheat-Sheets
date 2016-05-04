@@ -1,10 +1,8 @@
-# Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning
+## Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning
 
 By Jack Szwergold, September 18, 2015
 
-***
-
-#### An adjustment to the GRUB bootloader that needs to be made to allow the floppy to be recognized.
+### An adjustment to the GRUB bootloader that needs to be made to allow the floppy to be recognized.
 
 Edit the default GRUB config file:
 
@@ -23,7 +21,7 @@ Now update GRUB and reboot:
 
     sudo update-grub2
 
-#### Installing the MSDOS and floppy drive related software packages.
+### Installing the MSDOS and floppy drive related software packages.
 
 Install `mtools`, `dosfstools` and `ufiformat` via `aptitude` like this:
 
@@ -35,7 +33,7 @@ What each of those things are:
 - **dosfstools:** Utilities for making and checking MS-DOS FAT filesystems
 - **ufiformat:** Format a USB floppy disk.
 
-#### Mount the system on the floppy disk.
+### Mount the system on the floppy disk.
 
 Show a list of all connected block level devices using `lsblk` and make note of the floppy disk:
 
@@ -90,7 +88,7 @@ And it can be ejected like this:
 
     sudo eject /dev/sdb
 
-#### Formatting a floppy disk.
+### Formatting a floppy disk.
 
 Use `ufiformat` to actually format the floppy disk:
 
@@ -104,7 +102,7 @@ Use `mkfs.vfat` to set the file system as bootable:
 
     sudo mkfs.vfat -v -I -n Untitled /dev/sdb
 
-#### Some sundry block level device and debugging items.
+### Some sundry block level device and debugging items.
 
 Shows a list of all connected block level devices using `lsblk`:
 
@@ -168,6 +166,4 @@ Print USB device details:
 
 ***
 
-*Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

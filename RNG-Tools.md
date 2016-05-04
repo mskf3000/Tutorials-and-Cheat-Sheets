@@ -1,10 +1,8 @@
-# RNG-Tools
+## RNG-Tools
 
 By Jack Szwergold, September 24, 2015
 
-***
-
-#### Install RNG-Tools.
+### Install RNG-Tools.
 
 Check system entropy levels with this `watch` command:
 
@@ -21,7 +19,7 @@ Start, stop and control RNG-Tools on an Ubuntu/Debian system:
 	sudo service rng-tools restart
 	sudo service rng-tools force-reload
 
-#### Add RNG-Tools as a startup service.
+### Add RNG-Tools as a startup service.
 
 Add `rng-tools` as an Ubuntu service from starting on boot:
 
@@ -31,7 +29,7 @@ Remove `rng-tools` as an Ubuntu service from starting on boot:
 
 	sudo update-rc.d rng-tools remove
 
-#### Configure RNG-Tools.
+### Configure RNG-Tools.
 
 Once installed open up the RNG-Tools config file:
 
@@ -71,6 +69,4 @@ Note that on Ubuntu 14.04 that `RNGDOPTIONS` with `--feed-interval` so just set 
 
 ***
 
-*RNG-Tools (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*RNG-Tools (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,14 +1,14 @@
-# Developing With MAMP 2.1.4
+## Developing With MAMP 2.1.4
 
 By Jack Szwergold,  February 16, 2014
 
-## Part 1: Setting Up a Basic, Useful MAMP Environment
+### Part 1: Setting Up a Basic, Useful MAMP Environment
 
 I like using MAMP because it’s a quick and easy way to get a very basic—and very standard—LAMP (Linux, Apache, MySQL and PHP) environment working on a Mac. While there are some purists who believe that coding on a pure Linux setup—virtual or physical—is the way the go, for pretty much every PHP task I have ever come across, MAMP has always worked well. And since it operates on on the Mac desktop like any other application, it allows me to use the great development tools that exist for Macs without much hassle. A complete win-win development setup for Mac developers who code in the LAMP world.
 
 That said, there are some simple tweaks I like to do on any MAMP install that will make my life as a developer easier. If you are familiar with basic PHP ini configuration changes, you’ll pick up what I am doing right away.
 
-### Let’s get started.
+#### Let’s get started.
 
 Before anything else, you need to figure out which version of the PHP ini configuration file—commonly referred to as `php.ini`—your setup is using. For this example, I am using PHP version 5.4.10 which is part of the standard MAMP 2.1.4 install. I am also using the MAMP specific non-default port of `8888`.
 
@@ -32,7 +32,7 @@ That will open BBEdit via the command line and open the `php.ini` at the same ti
 
 Whatever editor you choose to use is not important. So don’t feel tied to my examples of BBEdit and GNU nano. You’re ultimate goal is to simply edit a text file to change configuration values. But you should be comfortable with whatever text editor you use.
 
-### Changing the PHP install time zone.
+#### Changing the PHP install time zone.
 
 Out of the box, MAMP 2.1.4 is compiled to the original development team’s timezone of *Europe/Berlin* like so:
 
@@ -45,7 +45,7 @@ Unless you are actually in Berlin—or have a need to have your time zone set to
 
 Also, as you can see, I like to comment out changes that I make and leave them in place instead of deleting them. In general, you should get into the habit of commenting out small tweaks like this and leaving them in place for future reference instead of outright overwriting or deleting them. In a case like this it might seem superfluous, but remember: What might seem like a simple change now, might be the cause of a debugging issue months or years from now.
 
-### Adjusting resource limits and error reporting.
+#### Adjusting resource limits and error reporting.
 
 Server resources are idiosyncratic from server to server and from application to application. In general, the simplest resource limit adjustment you should make is to `memory_limit` so your PHP scripts don’t bomb out due to lack of memory. So look for the *Resource Limits* section of the PHP ini configuration that looks like this:
 
@@ -79,7 +79,7 @@ And change that from `Off` to `On`:
 
 Now with all that done, restart MAMP so the PHP ini configuration file is properly reloaded with the new settings. Remember, PHP is a module in Apache. So when you restart MAMP, you are restarting Apache and thus forcing the PHP ini configuration file to be reloaded.
 
-### Conclusion.
+#### Conclusion.
 
 All of those settings basically make your life easier as a developer. But they don’t really show up as anything fancy in the web browser. So with that said, might as well start the life of your newly setup MAMP environment with a simple “Hello world!” program. Just create a basic `index.php` file like so:
 
@@ -97,9 +97,7 @@ Save the file and reload your browser. The text, “Hello world!” should be di
 
 ***
 
-*Developing With MAMP 2.1.4 • Part 1: Setting Up a Basic, Useful MAMP Environment (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Developing With MAMP 2.1.4 • Part 1: Setting Up a Basic, Useful MAMP Environment (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
 
 [1]: http://us3.php.net/phpinfo "Info on phpinfo()."
 [2]: http://www.barebones.com/products/bbedit/ "Bare Bones Software’s BBEdit page."

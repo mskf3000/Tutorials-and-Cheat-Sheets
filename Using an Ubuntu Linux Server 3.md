@@ -1,18 +1,18 @@
-# Using an Ubuntu Linux Server
+## Using an Ubuntu Linux Server
 
 By Jack Szwergold, April 6, 2014
 
-## Part 3: Monitoring and Securing Your Ubuntu Server
+### Part 3: Monitoring and Securing Your Ubuntu Server
 
 In part 3 of my tutorial I will explain how to setup useful monitoring and security tools. You should never be in a situation where you cannot be able to review and assess server health. Being able to monitor and secure your server is the key to running a safe and stable server environment.
 
-### Table of contents.
+#### Table of contents.
 
 - [Install the ‘munin’ to monitor system vitals.](ubuntu_server_usage_part_3#install_munin)
 - [Install ‘monit’ to monitor and manage specific services.](ubuntu_server_usage_part_3#install_monit)
 - [Install the ‘iptables’ firewall.](ubuntu_server_usage_part_3#install_iptables)
 
-### <a name="install_munin"></a> Install the ‘munin’ to monitor system vitals.
+#### <a name="install_munin"></a> Install the ‘munin’ to monitor system vitals.
 
 The best way to keep running tabs on your server’s overall health is to use `munin`. It basically keeps a running, web accessible visual log of your server’s overall health. Thing of it as an EKG for your server. To use it, first install it like so:
 
@@ -144,7 +144,7 @@ And now restart `munin-node` for the changes to take effect:
 
 Now `munin` should be fully setup and configured to not only monitor your server, but e-mail you with alerts when something odd comes up.
 
-### <a name="install_monit"></a> Install ‘monit’ to monitor and manage specific services.
+#### <a name="install_monit"></a> Install ‘monit’ to monitor and manage specific services.
 
 A fantastic system administrator’s tool that I like to use—and have barely scratched the surface of—is `monit`. It’s basically a scriptable daemon that can monitor system services and take action on certain system service conditions based on your settings.
 
@@ -208,7 +208,7 @@ The configuration is just like the first one, but note the `if loadavg` section.
 
 But always remember: While `monit` scripts can save you the headache of a server outage, but only a real human with the knowledge of how a server should work can determine what the real issue is. So if `monit` sends you an e-mail, you should take that alert seriously by logging into your server and monitoring it for a while.
 
-### <a name="install_iptables"></a> Install the ‘iptables’ firewall.
+#### <a name="install_iptables"></a> Install the ‘iptables’ firewall.
 
 Now we’re going to install `iptables`, which is an excellent and widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded and active if/when a server reboots:
 
@@ -348,6 +348,4 @@ Now when your server restarts, `iptables-persistent` will load all of the rules 
 
 ***
 
-*Using an Ubuntu Linux Server • Part 3: Monitoring and Securing Your Ubuntu Server (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Using an Ubuntu Linux Server • Part 3: Monitoring and Securing Your Ubuntu Server (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

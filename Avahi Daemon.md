@@ -1,12 +1,10 @@
-# Avahi Daemon
+## Avahi Daemon
 
 By Jack Szwergold, September 15, 2015
 
-***
-
 Avahi daemon is a zero-configuration (zeroconf)/multicast networking implementation that is similar to the “Bonjour” service in Mac OS X. Very useful in getting a Linux box to broadcast it’s services across a network.
 
-#### Installation and configuration.
+### Installation and configuration.
 
 Install the Avahi daemon:
 
@@ -25,7 +23,7 @@ Start, stop and control the Avahi daemon:
     sudo service avahi-daemon reload
     sudo service avahi-daemon force-reload
 
-#### Some example Avahi service configs.
+### Some example Avahi service configs.
 
 An example AFP (Apple Filing Protocol) service (`afpd.service`):
 
@@ -112,7 +110,7 @@ An example SSH (Secure Shell) service (`ssh.service`):
 	  </service>
 	</service-group>
 
-#### Changing the Avahi icons for Mac OS X.
+### Changing the Avahi icons for Mac OS X.
 
 You can change the icon associated with a service by adding this XML chunklet to the `<service-group>`:
 
@@ -128,6 +126,4 @@ Just change the `model=RackMac` to match whatever Mac OS X icon you want. To get
 
 ***
 
-*Avahi Daemon (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Avahi Daemon (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

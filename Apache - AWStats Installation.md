@@ -1,8 +1,6 @@
-# Apache - AWStats Installation
+## Apache - AWStats Installation
 
 By Jack Szwergold, October 16, 2015
-
-***
 
 ### Installing AWStats.
 
@@ -378,6 +376,4 @@ Append this custom report configuration to your website’s core configuration i
 
 ***
 
-*Apache - AWStats Installation (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Apache - AWStats Installation (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

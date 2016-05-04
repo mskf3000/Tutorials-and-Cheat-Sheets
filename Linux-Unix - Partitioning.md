@@ -1,10 +1,8 @@
-# Linux-Unix - Partitioning
+## Linux-Unix - Partitioning
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-## Prerequisites
+### Prerequisites
 
 #### Install `lsblk`.
 
@@ -24,7 +22,7 @@ Get that installed and you’re good to go.
 
 First, have the device attached to your server. If this is a physical machine, be sure it’s plugged in. If this is being attached via a virtual service like Amazon Web Service, make sure the new EBS storage volume is connected to the EC2 server instance.
 
-## Quick Start
+### Quick Start
 
 This is a quick distillation of the items gone into more detail in the “Detailed Explanation” area.
 
@@ -112,7 +110,7 @@ And add this; note the device name of `/dev/xvdf1` as well as the mount point of
 
 Now if the machine is stopped and restarted or simply rebooted, the volume will automatically be mounted without any additional work.
 
-## Detailed Explanation
+### Detailed Explanation
 
 This is a more detailed explanation of the volume attaching, partitioning, mounting and setting auto-mounting process.
 
@@ -435,6 +433,4 @@ When you remount the volume—either manually or via the reboot—the size of th
 
 ***
 
-*Linux-Unix - Partitioning (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Linux-Unix - Partitioning (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

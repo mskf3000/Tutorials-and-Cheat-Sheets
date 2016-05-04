@@ -1,12 +1,8 @@
-# Kernel Networking Tweaks
+## Kernel Networking Tweaks
 
 By Jack Szwergold, October 7, 2015
 
-***
-
 The main reason for this document existing is attempting to deal with oddball network connectivity issues in a mixed Windows/Mac environment. Here is what I know and have done.
-
-***
 
 ### TCP ACK settings.
 
@@ -73,6 +69,4 @@ And set entries like this in there:
 
 ***
 
-*Kernel Networking Tweaks (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Kernel Networking Tweaks (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

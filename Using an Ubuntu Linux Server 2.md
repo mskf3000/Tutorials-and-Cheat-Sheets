@@ -1,12 +1,12 @@
-# Using an Ubuntu Linux Server
+## Using an Ubuntu Linux Server
 
 By Jack Szwergold, March 30, 2014
 
-## Part 2: Setting Up a LAMP Stack
+### Part 2: Setting Up a LAMP Stack
 
 So in part 1 of my tutorial, I explained how I like to configure a base level Ubuntu server. In part 2 of my tutorial I will explain how to setup useful and solid LAMP stack that can be used as a production server or a development/sandbox server for web development needs.
 
-### Table of contents.
+#### Table of contents.
 
 - [Install ‘apache’ and some basic ‘php’ stuff.](ubuntu_server_usage_part_2#apache_and_php)
 - [Install the ‘php’ modules.](ubuntu_server_usage_part_2#php_modules)
@@ -20,7 +20,7 @@ So in part 1 of my tutorial, I explained how I like to configure a base level Ub
 - [Install APC (Alternative PHP Cache) for ‘php’ to improve caching.](ubuntu_server_usage_part_2#apc_for_php)
 - [Install the ‘mysql’ stuff.](ubuntu_server_usage_part_2#mysql)
 
-### <a name="apache_and_php"></a> Install ‘apache’ and some basic ‘php’ stuff.
+#### <a name="apache_and_php"></a> Install ‘apache’ and some basic ‘php’ stuff.
 
 First, let’s install the core of the `apache` and `php` related stuff.
 
@@ -28,7 +28,7 @@ First, let’s install the core of the `apache` and `php` related stuff.
 
 This is a fairly simple set of items that will be installed. `apache2` and `apache2-threaded-dev` are required for basic `apache` functionality. While `php5` and `libapache2-mod-php5` are required for basic `php` functionality on your system. The `php-pear` install is to allow you to do package installs from the `php` extension and application repository, aka: `pear`.
 
-### <a name="php_modules"></a> Install the ‘php’ modules.
+#### <a name="php_modules"></a> Install the ‘php’ modules.
 
 Now let’s install a basic set of `php` modules.
 
@@ -36,7 +36,7 @@ Now let’s install a basic set of `php` modules.
 
 I am not going to do a deep breakdown of each module, but from my experience this is the most basic, complete and useful set of `php` modules most any web developer will be using.
 
-### <a name="harden_php"></a> Harden the ‘php’ install.
+#### <a name="harden_php"></a> Harden the ‘php’ install.
 
 With that done, let’s “harden” the `php` install by disabling `expose_php`. You want to do harden the install to prevent exposing your server to hacking scripts and other unwanted intrusions:
 
@@ -46,7 +46,7 @@ Now do a search for `expose_php` and change that setting to `Off`:
 
     expose_php = Off
 
-### <a name="harden_apache"></a> Harden the ‘apache’ install.
+#### <a name="harden_apache"></a> Harden the ‘apache’ install.
 
 Now let’s “harden” the `apache` install by adjusting the values of `ServerTokens`, `ServerSignature` and `TraceEnable`. You want to do harden the install to prevent exposing your server to hacking scripts and other unwanted intrusions. First, open up the main `apache` security configuration file:
 
@@ -64,7 +64,7 @@ Locate `TraceEnable` and disable that as well if it isn’t disabled already:
 
     TraceEnable Off
 
-### <a name="apache_default_config"></a> Set the default ‘apache’ config.
+#### <a name="apache_default_config"></a> Set the default ‘apache’ config.
 
 Now, while `apache` already has a decent `default` config in place, I find it to be excessive and confusing for my purposes. First, open up the `apache` `default` config file like this:
 
@@ -97,7 +97,7 @@ And then replace the contents with the following basic `apache` config I like to
 
 Note the commented out entries for including the contents of `common.conf` and `common_mod_security.conf` in the config. We’re not going to address those just yet, but those “common” files are there to make the job of including commonly used basic config and security settings easier.
 
-### <a name="nicer_index_file"></a> Set a nicer default ‘php’-based index file.
+#### <a name="nicer_index_file"></a> Set a nicer default ‘php’-based index file.
 
 And in a similar vein, `apache` installs a default “It works!” page in `index.html` that is fairly useless and problematic from a security standpoint. So let’s get rid of that file like this:
 
@@ -119,7 +119,7 @@ And replace it with a new `php`-based `index.php` file:
 
 If you look at the contents of the new `php` file, you see most of the items are commented out. That’s fine because this is basically the small set of commands I find useful to have at my disposal when setting up a server. The default command I like to set is the `echo $_SERVER['SERVER_NAME'];` which returns the domain or IP address used to connect to the server. It’s very useful for setting up—and debugging—Apache virtual host setups.
 
-### <a name="enable_apache_modules"></a> Enable ‘apache’ modules.
+#### <a name="enable_apache_modules"></a> Enable ‘apache’ modules.
 
 Now enable some basic `apache` modules if they are not enabled already:
 
@@ -127,7 +127,7 @@ Now enable some basic `apache` modules if they are not enabled already:
 
 The list of modules is fairly simple to understand. The `rewrite` module allows you to setup Apache `mod_rewrite` rules. The `headers` module allows you to set and adjust headers. The `include` module allows you to load extra config settings via the `include` directive. The `proxy` and `proxy_http` allow you to set proxy settings on an Apache server.
 
-### <a name="adjust_apache_group"></a> Adjust the ‘apache’ config to allow group ‘www-readwrite’ access.
+#### <a name="adjust_apache_group"></a> Adjust the ‘apache’ config to allow group ‘www-readwrite’ access.
 
 As explained before, I like to set up servers to be collaborative environments based on a user’s access to the `www-readwrite` group. So with that in mind, let’s adjust `apache` itself so it interacts with the system via the `www-readwrite` group and creates files that have a `umask` value that allows for group reading and writing. First let’s open up the `envvars` file like so:
 
@@ -146,7 +146,7 @@ Now restart `apache` so those settings can take effect:
 
     sudo service apache2 restart
 
-### <a name="adjust_apache_logs"></a> Adjust ‘apache’ logs to allow group ‘www-readwrite’ access.
+#### <a name="adjust_apache_logs"></a> Adjust ‘apache’ logs to allow group ‘www-readwrite’ access.
 
 Since I like to set up servers to be collaborative environments, I also like to give them clear and easy access to the `apache` logs. It’s generally helpful for debugging. And here is how I do it.
 
@@ -187,7 +187,7 @@ The contents of the script should look something like this. You can probably jus
             endscript
     }
 
-### <a name="apc_for_php"></a> Install APC (Alternative PHP Cache) for ‘php’ to improve caching.
+#### <a name="apc_for_php"></a> Install APC (Alternative PHP Cache) for ‘php’ to improve caching.
 
 APC (Alternative PHP Cache) is a great—and very widely used—opcode cache module for PHP. APC does not do front-end content caching as much as it aids in caching PHP intermediate code behind the scenes to speed things up. There are two main ways one can install APC. The first way is to simply to install it via the Ubuntu package installer like so:
 
@@ -239,7 +239,7 @@ And edit values like this. This is a set of APC tweaks I have used on some serve
     apc.max_file_size = 1M
     apc.num_files_hint = 512
 
-### <a name="mysql"></a> Install the ‘mysql’ stuff.
+#### <a name="mysql"></a> Install the ‘mysql’ stuff.
 
 Now that the `apache` and `php` stuff is set, let’s install the MySQL stuff. One simple and concise `aptitude install` command will suffice:
 
@@ -255,6 +255,4 @@ It will initially ask for your root password. Enter it and move on. The next que
 
 ***
 
-*Using an Ubuntu Linux Server • Part 2: Setting Up a LAMP Stack (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Using an Ubuntu Linux Server • Part 2: Setting Up a LAMP Stack (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,16 +1,14 @@
-# Ubuntu - Setting Up and Using Apple Filing Protocol Utility Items
+## Ubuntu - Setting Up and Using Apple Filing Protocol Utility Items
 
 By Jack Szwergold, October 4, 2015
 
-***
-
-#### Installation.
+### Installation.
 
 Install the Apple Filing Protocol (AFP) stuff:
 
     sudo aptitude install afpfs-ng-utils
 
-#### Mounting and unmounting an AFP volume.
+### Mounting and unmounting an AFP volume.
 
 Mounting an AFP volume:
 
@@ -26,6 +24,4 @@ Unmount an AFP volume:
 
 ***
 
-*Ubuntu - Setting Up and Using Apple Filing Protocol Utility Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ubuntu - Setting Up and Using Apple Filing Protocol Utility Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

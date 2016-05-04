@@ -1,8 +1,6 @@
-# Mac OS X - Software Update Related Items
+## Mac OS X - Software Update Related Items
 
 By Jack Szwergold, October 6, 2015
-
-***
 
 Setting the software updates server from the command line:
 
@@ -18,6 +16,4 @@ Resets the catalog URL to point to Apple:
 
 ***
 
-*Mac OS X - Software Update Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - Software Update Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

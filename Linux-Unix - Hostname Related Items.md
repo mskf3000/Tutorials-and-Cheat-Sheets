@@ -1,10 +1,8 @@
-# Linux-Unix - Hostname Related Items
+## Linux-Unix - Hostname Related Items
 
 By Jack Szwergold, September 27, 2015
 
-***
-
-#### Checking the value of—and temporarily changing—hostname values.
+### Checking the value of—and temporarily changing—hostname values.
 
 This `hostname` command will give you the hostname connected to the system on the system:
 
@@ -20,7 +18,7 @@ And if you feel like changing the hostname value, set it by using `sudo` and ass
 
 That said, this `sudo hostname example.com` method is a temporary solution that will most likely get reset on reboot. So if you want to set the hostname value permanently, do the following.
 
-#### Permanently change the hostname value.
+### Permanently change the hostname value.
 
 To permanently change the hostname on an Ubuntu/Debian system, open up `/etc/hostname` and change the value in there:
 
@@ -38,7 +36,7 @@ Look for the `HOSTNAME` value and adjust it like this:
 	GATEWAYDEV="eth1"
 	FORWARD_IPV4="yes"
 
-#### Using `sysctl` to permanently change the hostname value.
+### Using `sysctl` to permanently change the hostname value.
 
 You can also use `sysctl` to change the hostname. First check the hostname value like this:
 
@@ -50,8 +48,6 @@ And if you feel like changing it, set it by using `sudo` and assigning a value l
 
 ***
 
-*Linux-Unix - Hostname Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Linux-Unix - Hostname Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
 
 

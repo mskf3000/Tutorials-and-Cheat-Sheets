@@ -1,10 +1,8 @@
-# Linux-Unix - Adjusting UMASK Related Items
+## Linux-Unix - Adjusting UMASK Related Items
 
 By Jack Szwergold, September 16, 2015
 
-***
-
-#### Adjusting UMASK items on a CentOS/RedHat system.
+### Adjusting UMASK items on a CentOS/RedHat system.
 
 Open up `/etc/bashrc`:
 
@@ -24,7 +22,7 @@ Change the `umask` value in the `else` logic to:
 
     umask 002
 
-#### Adjusting UMASK items on an Ubuntu/Debian system.
+### Adjusting UMASK items on an Ubuntu/Debian system.
 
 Open up `/etc/profile`:
 
@@ -40,7 +38,7 @@ Change the `umask` value to:
 
 If that line is not in the file, just add it to the file and save it.
 
-#### Adjustments to the `pam.d` UMASK settings on an Ubuntu/Debian system.
+### Adjustments to the `pam.d` UMASK settings on an Ubuntu/Debian system.
 
 Open up `/etc/pam.d/common-session`:
 
@@ -56,6 +54,4 @@ Change it to this by adding `umask=0002` to the end of the line:
 
 ***
 
-*Linux-Unix - Adjusting UMASK Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Linux-Unix - Adjusting UMASK Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,10 +1,8 @@
-# Diff
+## Diff
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Diff’ing directory content.
+### Diff’ing directory content.
 
 This is useful if a website has been hacked and you want to compare a clean archive of the content to the website data in it’s current state to track down what files have been affected and infected.
 
@@ -22,6 +20,4 @@ Use this to compare two different directories and send the output to a sorted te
 
 ***
 
-*Diff (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Diff (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

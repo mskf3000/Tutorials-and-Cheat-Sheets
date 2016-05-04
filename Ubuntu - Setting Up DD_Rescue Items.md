@@ -1,16 +1,14 @@
-# Ubuntu - Setting Up DD_Rescue Items
+## Ubuntu - Setting Up DD_Rescue Items
 
 By Jack Szwergold, October 5, 2015
 
-***
-
-#### Installation.
+### Installation.
 
 Install DD_Rescue:
 
     sudo aptitude install dd_rescue
 
-#### Example usage.
+### Example usage.
 
 Creating an image with DD_Rescue:
 
@@ -26,6 +24,4 @@ Compress a disk image in real-time:
 
 ***
 
-*Ubuntu - Setting Up DD_Rescue Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ubuntu - Setting Up DD_Rescue Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

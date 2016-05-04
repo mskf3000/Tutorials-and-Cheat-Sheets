@@ -1,14 +1,12 @@
-# Ruby
+## Ruby
 
 By Jack Szwergold, September 20, 2015
 
-***
-
-#### Install required Ruby GEMs for the test web application install.
+### Install required Ruby GEMs for the test web application install.
 
     sudo gem install rack sinatra bundler --no-rdoc --no-ri
 
-#### Launching a `config.ru` file manually.
+### Launching a `config.ru` file manually.
 
 First, go into the `ruby_test` directory:
 
@@ -41,6 +39,4 @@ Or it could even be manually launched directly through ruby like this:
 
 ***
 
-*Ruby (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ruby (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

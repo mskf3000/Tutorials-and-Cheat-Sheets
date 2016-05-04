@@ -1,12 +1,10 @@
-# Ruby - Installing Ruby 1.9 on Ubuntu 12.04
+## Ruby - Installing Ruby 1.9 on Ubuntu 12.04
 
 By Jack Szwergold, September 20, 2015
 
-***
-
 By default, Ubuntu 12.04 will install Ruby 1.8 and not upgrade it. If your code needs the newer functionality available in Ruby 1.9 follow these steps to remove Ruby 1.8 and install Ruby 1.9 on Ubuntu 12.04.
 
-#### Clean out the old Ruby 1.8 stuff.
+### Clean out the old Ruby 1.8 stuff.
 
 First, uninstall the Ruby 1.8 GEMs like this:
 
@@ -26,7 +24,7 @@ That list should be empty, but if you see something like this listed:
 
 Don’t worry. That’s just a system library Ubuntu 12.04 has sitting around for reference—I believe—and has nothing to do with the core core Ruby 1.8 stuff that was just removed.
 
-#### Installing Ruby 1.9 on Ubuntu 12.04.
+### Installing Ruby 1.9 on Ubuntu 12.04.
 
 First, run `aptitude update` like this:
 
@@ -62,6 +60,4 @@ Finally, confirm the version of Ruby has been updated like this:
 
 ***
 
-*Ruby - Installing Ruby 1.9 on Ubuntu 12.04 (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ruby - Installing Ruby 1.9 on Ubuntu 12.04 (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

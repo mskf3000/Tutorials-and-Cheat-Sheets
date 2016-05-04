@@ -1,10 +1,8 @@
-# Apache
+## Apache
 
 By Jack Szwergold, September 19, 2015
 
-***
-
-#### Sundry Apache items.
+### Sundry Apache items.
 
 Get a summary of the `VirtualHost` configurations for Apache:
 
@@ -50,7 +48,7 @@ Deactivate proxy related modules in Apache:
 
 	sudo a2dismod proxy proxy_http
 
-#### Sundry Apache items on an Ubuntu/Debian system.
+### Sundry Apache items on an Ubuntu/Debian system.
 
 Get Apache version number:
 
@@ -86,7 +84,7 @@ The output would be something like this:
 	  http_core.c
 	  mod_so.c
 
-#### Sundry Apache items on a CentOS/RedHat system.
+### Sundry Apache items on a CentOS/RedHat system.
 
 Get Apache version on a CentOS/RedHat system:
 
@@ -108,7 +106,7 @@ If server is unresponsive to standard commands then manually kill off processes 
 
 	sudo pkill -9 httpd
 
-#### Installing and using `apachetop` to monitor Apache.
+### Installing and using `apachetop` to monitor Apache.
 
 Installing & using 'apachetop' on an Ubuntu/Debian system.
 
@@ -122,7 +120,7 @@ Then run it as like this; note that it relies on the full path to the Apache acc
 
     apachetop -r 2 -f /var/log/apache2/access.log
 
-#### System configuration tweaks.
+### System configuration tweaks.
 
 Memory Mapping (MMAP) stuff:
 
@@ -145,7 +143,7 @@ Memory Mapping (MMAP) stuff:
 	#
 	EnableSendfile Off
 
-#### Useful Apache rewrite rules.
+### Useful Apache rewrite rules.
 
 Rewrite rule to force lowercase:
 
@@ -187,7 +185,7 @@ Rewrite rule to redirect requests based on referrer:
 	RewriteCond %{HTTP_REFERER} .*yet_another_example.com.*$
 	RewriteRule ^(.*)$ http://www.preworn.com/
 
-#### Adjusting “prefork MPM” values in Apache 2.4
+### Adjusting “prefork MPM” values in Apache 2.4
 
     sudo nano /etc/apache2/mods-available/mpm_prefork.conf
 
@@ -202,6 +200,4 @@ Rewrite rule to redirect requests based on referrer:
 
 ***
 
-*Apache (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Apache (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,10 +1,8 @@
-# Mac OS X - Disk Utility Repairs and Tricks from the Terminal
+## Mac OS X - Disk Utility Repairs and Tricks from the Terminal
 
 By Jack Szwergold, September 13, 2015
 
-***
-
-#### Using `fsck_hfs` to repair a volume that “Disk Utility” chokes on.
+### Using `fsck_hfs` to repair a volume that “Disk Utility” chokes on.
 
 Apple’s GUI application “Disk Utility” works fine for sundry hard disk issues, but sometimes it just chokes on drives claiming it can’t repair the disk. Before you give up hope, you can see if using `fsck_hfs` will
 
@@ -76,7 +74,7 @@ If everything went well, the volume should be repaired, working and ready for us
 
     diskutil mount /dev/disk[device id]s[partition id]
 
-#### Disabling/enabling journaling from the command line.
+### Disabling/enabling journaling from the command line.
 
 You can manually disable journaling from the command line using this command with the `-N` flag on the target volume. Change `disk[device id]s[partition id]` to be the actual device ID number of the volume you want to disable journaling on:
 
@@ -113,7 +111,7 @@ Other options/flags for `hfs.util` are as follows:
 	       /System/Library/Filesystems/hfs.fs/hfs.util -p disk0s2 fixed writable
 	       /System/Library/Filesystems/hfs.fs/hfs.util -m disk0s2 /my/hfs removable readonly nosuid nodev
 
-#### Erasing a volume from the command line using `diskutil`.
+### Erasing a volume from the command line using `diskutil`.
 
 Erase a volume from the command line using `diskutil` like this. Note that `HFS+` should be changed to match whatever format type should be used, `[VolumeName]` should be changed to match the new volume name and `/dev/disk[device id]s[partition id]` to be the actual device ID number of the volume you want to act on:
 
@@ -121,6 +119,4 @@ Erase a volume from the command line using `diskutil` like this. Note that `HFS+
 
 ***
 
-*Mac OS X - Disk Utility Repairs and Tricks from the Terminal (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - Disk Utility Repairs and Tricks from the Terminal (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

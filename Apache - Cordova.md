@@ -1,10 +1,8 @@
-# Apache - Cordova
+## Apache - Cordova
 
 By Jack Szwergold, March 11, 2016
 
-***
-
-## Cordova related stuff.
+### Cordova related stuff.
 
 #### Installing and upgrading Cordova.
 
@@ -58,7 +56,7 @@ If you want to set a browser other than the default Chrome—or a different port
 
 	cordova run browser -- --target=safari --port=8000
 
-## Ionic related stuff.
+### Ionic related stuff.
 
 Now install Ionic:
 
@@ -90,6 +88,4 @@ If you want to set a browser other than the default Chrome—or a different port
 
 ***
 
-*Apache (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Apache - Cordova (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

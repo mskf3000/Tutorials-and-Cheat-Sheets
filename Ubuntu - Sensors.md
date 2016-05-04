@@ -1,8 +1,6 @@
-# Ubuntu - Sensors
+## Ubuntu - Sensors
 
 By Jack Szwergold, September 22, 2015
-
-***
 
 Install `lm-sensors`:
 
@@ -18,6 +16,4 @@ Then view the output with the `sensors` command like this:
 
 ***
 
-*Ubuntu - Sensors (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ubuntu - Sensors (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

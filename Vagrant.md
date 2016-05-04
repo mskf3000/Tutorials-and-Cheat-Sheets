@@ -1,8 +1,8 @@
-# Vagrant
+## Vagrant
 
 By Jack Szwergold, January 23, 2016
 
-## Basic usage.
+### Basic usage.
 
 This will init a basic Ubuntu 14.04 LTS (64-bit) setup:
 
@@ -86,7 +86,7 @@ And the list should be trimmed down as follows:
 	with Vagrant commands from any directory. For example:
 	"vagrant destroy 1a2b3c4d"
 
-## Debugging Vagrant.
+### Debugging Vagrant.
 
 Check the SSH options for the Vagrant box:
 
@@ -105,7 +105,7 @@ Output should be something like this:
 	  IdentitiesOnly yes
 	  LogLevel FATAL
 
-## Configuring Vagrant.
+### Configuring Vagrant.
 
 Okay, so with the basics done, you can edit the Vagrant config file (aka: `Vagrantfile`) to have a config like this:
 
@@ -120,7 +120,7 @@ I removed all of the comments and just have a few of the core config options suc
 
 ***
 
-## Creating your own Vagrant box.
+### Creating your own Vagrant box.
 
 Building a Vagrant box:
 
@@ -217,6 +217,4 @@ And the output should be something like this:
 
 ***
 
-*Vagrant (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Vagrant (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

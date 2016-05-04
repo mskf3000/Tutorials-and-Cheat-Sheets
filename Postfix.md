@@ -1,10 +1,8 @@
-# Postfix
+## Postfix
 
 By Jack Szwergold, September 17, 2015
 
-***
-
-#### Check if `postfix` is running in Mac OS X.
+### Check if `postfix` is running in Mac OS X.
 
 In Mac OS X this checks to see what services are launched at startup; look for `org.postfix.master`:
 
@@ -18,7 +16,7 @@ The output if it’s running should be something like this:
 
     -	0	org.postfix.master
 
-#### Sundry `postfix` status and maintenance items.
+### Sundry `postfix` status and maintenance items.
 
 Check the running processes:
 
@@ -48,7 +46,7 @@ Reconfigure postfix. Useful if you need to change host/domain of `from:`:
 
     sudo dpkg-reconfigure postfix
 
-#### Edit the hostname and related details in `postfix`.
+### Edit the hostname and related details in `postfix`.
 
 Open up the `main `postfix` configuration file:
 
@@ -62,7 +60,7 @@ And similarly, edit the `mydestination` to match the server hostname as well:
 
     mydestination = sandbox.local, localhost.localdomain, , localhost
 
-#### Start, stop and control `postfix`.
+### Start, stop and control `postfix`.
 
 	sudo postfix start
 	sudo postfix stop
@@ -94,7 +92,7 @@ Upgrades and checks the `postfix` configuration; warnings can be ignored:
 
 	sudo postfix upgrade-configuration
 
-#### Count messages in various message queues/spools.
+### Count messages in various message queues/spools.
 
 Count active messages in the postfix queue/spool:
 
@@ -128,8 +126,7 @@ Count clientmqueue messages in the sendmail queue/spool:
 
     sudo find /var/spool/clientmqueue/. ! -name . ! -name '?' -print | wc -l
 
-
-#### Sundry mail and `postfix` related stuff.
+### Sundry mail and `postfix` related stuff.
 
 Follow the mail log.
 
@@ -163,7 +160,7 @@ To remove all mail from a specific mail queue such as `deferred`:
 
     sudo postsuper -d ALL deferred
 
-#### Mail system user related stuff.
+### Mail system user related stuff.
 
 I honestly don’t remember using this stuff but it’s here for reference anyway.
 
@@ -181,7 +178,7 @@ Update the SMTP SASL/TLS databases:
     sudo postmap /etc/postfix/smtp_sasl_passwords
     sudo postmap /etc/postfix/smtp_tls_sites
 
-#### Some ways to test the sending of emails from the command line.
+### Some ways to test the sending of emails from the command line.
 
 A simple test using `mail` from the command line:
 
@@ -195,9 +192,6 @@ A more intricate test using `sendmail` from the command line:
 
 	printf "From: Example Email <email_address@example.com>\nTo: email_address@example.com\nSubject: Hello, world.\n\nA quick brown fox jumped over the lazy dog.\n" | /usr/sbin/sendmail -F "Example Email" -f "email_address@example.com" "email_address@example.com"
 
-
 ***
 
-*Postfix (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Postfix (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

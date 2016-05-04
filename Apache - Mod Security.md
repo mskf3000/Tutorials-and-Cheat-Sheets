@@ -1,8 +1,6 @@
-# Apache - Mod Security
+## Apache - Mod Security
 
 By Jack Szwergold, October 1, 2015
-
-***
 
 ### Installing Mod Security.
 
@@ -215,7 +213,5 @@ Remove Mod Security audit logs:
 
 ***
 
-*CCheat Sheet - Apache - Mod Security (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*CCheat Sheet - Apache - Mod Security (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
 

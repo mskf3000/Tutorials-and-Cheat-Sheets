@@ -1,10 +1,8 @@
-# Git - Initing a Repo and Pushing to Origin
+## Git - Initing a Repo and Pushing to Origin
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Install GIT and get your local config setup.
+### Install GIT and get your local config setup.
 
 For GitHub to work correctly with your email address and username, you should make sure to set your local email address and name on your system after your intial install.
 
@@ -36,7 +34,7 @@ Or if you wish you can just directly create/edit the `.gitconfig` file like this
 	[core]
 	        editor = nano
 
-#### Check your connection to GitHub.
+### Check your connection to GitHub.
 
 Now, you need to have GIT installed in your machine, a GitHub account setup as well as have SSH kets setup between your working machine and GitHub.
 
@@ -60,7 +58,7 @@ And the response should be something like:
 
 	Hi JackSzwergold! You've successfully authenticated, but GitHub does not provide shell access.
 
-#### Init the repository.
+### Init the repository.
 
 First go into your project directory like this:
 
@@ -70,7 +68,7 @@ And init it as a repo like this:
 
     git init
 
-#### Create and add a `.gitignore` file to the repository.
+### Create and add a `.gitignore` file to the repository.
 
 Create a `.gitignore` file to set what files to ignore:
 
@@ -88,7 +86,7 @@ Now, commit it with a message like this:
 
 	git commit -a -m "Adding '.gitignore' to the repo."
 
-#### Ammedning a commit message.
+### Ammedning a commit message.
 
 Let’s say you made a mistake in the commit message you just made. You can ammend it—basically redo it—like this:
 
@@ -98,13 +96,13 @@ And if you have already pushed the previous commit to a repository, you need to 
 
     git push -f
 
-#### Add all files to the repository.
+### Add all files to the repository.
 
 Now add all files—new and modified—by running this command:
 
     git add -A
 
-#### Add set or add an origin to the repository.
+### Add set or add an origin to the repository.
 
 If the local repository was created locally without being pulled remotely, then you might need to set the remote origin or add an origin. First let’s check if you have remote origins set like this:
 
@@ -118,7 +116,7 @@ Or add a remote origin like this:
 
 	git remote add origin git@github.com:JackSzwergold/Preworn-Main.git
 
-#### Push the local repository to remote repository.
+### Push the local repository to remote repository.
 
 With all that done, push your local git repository commits to the remote repository like this:
 
@@ -128,7 +126,7 @@ Or even just with `git push` if GIT is version 2.3 or higher:
 
     git push
 
-#### Cloning a repository.
+### Cloning a repository.
 
 Let‘s assume a repository already exists and you want to clone it locally to work in it. Just do this:
 
@@ -140,6 +138,4 @@ That will clone the `Preworn-Main` directory into a new directory named `Preworn
 
 ***
 
-*Git - Initing a Repo and Pushing to Origin (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Git - Initing a Repo and Pushing to Origin (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,10 +1,10 @@
-# Amazon - Amazon Web Service Command Line Interface
+## Amazon - Amazon Web Service Command Line Interface
 
 By Jack Szwergold, October 7, 2015
 
 ***
 
-#### First, install the PIP package manager for the Python package index.
+### First, install the PIP package manager for the Python package index.
 
 Download the `get-pip.py` script:
 
@@ -18,7 +18,7 @@ Verify your PIP installation works by running this simple “help” command.:
 
     pip --help
 
-#### Now, install Amazon Web Service CLI with PIP.
+### Now, install Amazon Web Service CLI with PIP.
 
 With PIP installed, use PIP to install the Amazon Web Service CLI:
 
@@ -59,7 +59,7 @@ Which has credential info like this:
 	aws_access_key_id = ABCDEFGHIJKLMNOPQRST
 	aws_secret_access_key = AbcdEfghiJklmnOpqrstUvwxyZ1234567890
 
-#### Checking bucket info via Amazon Web Service CLI.
+### Checking bucket info via Amazon Web Service CLI.
 
 Get a list of all buckets:
 
@@ -93,6 +93,4 @@ Output returned would be something like this:
 
 ***
 
-*Amazon - Amazon Web Service Command Line Interface (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Amazon - Amazon Web Service Command Line Interface (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

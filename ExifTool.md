@@ -1,10 +1,8 @@
-# ExifTool
+## ExifTool
 
 By Jack Szwergold, September 14, 2015
 
-***
-
-#### Some ExifTool example commands.
+### Some ExifTool example commands.
 
 Shows all EXIF info embedded in the file:
 
@@ -30,7 +28,7 @@ Remove all data connected to the XMP Dublin Core schema:
 
     exiftool -a -XMP-dc:all= [filename]
 
-#### Options available for ExifTool.
+### Options available for ExifTool.
 
 	-TAG or --TAG                    Extract or exclude specified tag 
 	-TAG[+-]=[VALUE]                 Write new value for tag 
@@ -100,6 +98,4 @@ Remove all data connected to the XMP Dublin Core schema:
 
 ***
 
-*ExifTool (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*ExifTool (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

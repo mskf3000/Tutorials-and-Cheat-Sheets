@@ -1,10 +1,8 @@
-# Git - Duplicating or Renaming a Repository
+## Git - Duplicating or Renaming a Repository
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### How to duplicate and rename a repository.
+### How to duplicate and rename a repository.
 
 First step is to create a new repo on GitHub.
 
@@ -26,6 +24,4 @@ If any `git clone` copies s of the repo exist somewhere, change the origin URL t
 
 ***
 
-*Git - Duplicating or Renaming a Repository (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Git - Duplicating or Renaming a Repository (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

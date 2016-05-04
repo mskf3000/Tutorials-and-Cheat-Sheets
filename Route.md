@@ -1,10 +1,8 @@
-# Route
+## Route
 
 By Jack Szwergold, October 22, 2015
 
-***
-
-#### Setting a static route.
+### Setting a static route.
 
 In this example we want a device to understand how to route all traffic on the `10.1.2.x` subnet
 
@@ -24,7 +22,7 @@ To view the routing table you would run this `route` command:
 
     route -n
 
-#### An example of the same for Mac OS X.
+### An example of the same for Mac OS X.
 
 In Mac OS X you would run a command like this:
 
@@ -36,6 +34,4 @@ To view the routing table in Mac OS X you would run this Netstat command:
 
 ***
 
-*Route (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Route (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

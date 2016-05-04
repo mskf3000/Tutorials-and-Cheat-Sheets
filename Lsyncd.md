@@ -1,23 +1,21 @@
-# Lsyncd
+## Lsyncd
 
 By Jack Szwergold, September 18, 2015
 
-***
-
-#### Installing Lsyncd.
+### Installing Lsyncd.
 
 Install Lsyncd via `aptitude` like this:
 
     sudo aptitude install lsyncd
 
-#### Start, stop and control Lsyncd.
+### Start, stop and control Lsyncd.
 
 	sudo service lsyncd start
 	sudo service lsyncd stop
 	sudo service lsyncd restart
 	sudo service lsyncd force-reload
 
-#### Sundry Lsyncd items.
+### Sundry Lsyncd items.
 
 Create the Lsyncd log directory:
 
@@ -53,7 +51,7 @@ The contents of that sample Lsyncd config directory should look something like t
 	-rw-r--r-- 1 root root  217 Nov 18  2010 lrsync.lua
 	-rw-r--r-- 1 root root  204 Nov 16  2010 lrsyncssh.lua
 
-#### Creating a directory structure and test files for basic testing.
+### Creating a directory structure and test files for basic testing.
 
 Create a basic source directory structure:
 
@@ -67,7 +65,7 @@ Now create some test files in the source directory using `touch` like this:
 
 	touch /home/sysop/zzz_source/file{1..10}
 
-#### Example 1: Setting up Lsyncd to use `bash` and `cp` for one-way syncing.
+### Example 1: Setting up Lsyncd to use `bash` and `cp` for one-way syncing.
 
 This is an example of a one way sync from source to destination using `bash` and the `cp` command for the core logic. A tad nicer than the internal `rsync` logic Lsyncd uses since it allows you to control all aspects of copying process.
 
@@ -104,7 +102,7 @@ And here is where the magic happens; copy this simple Lua-based script into that
 		target = "/home/sysop/zzz_destination"
 	}
 
-#### Example 2: Setting up Lsyncd to use `rsync` for one-way syncing.
+### Example 2: Setting up Lsyncd to use `rsync` for one-way syncing.
 
 This is an example of a one way sync from source to destination using the core `rsync` logic Lsyncd is designed to use. This works, but can be a bit limiting if you want a bit more control over the syncing process.
 
@@ -133,7 +131,7 @@ And here is where the magic happens; copy this simple Lua-based script into that
 	        statusFile = "/var/log/lsyncd/lsyncd.status"
 	}
 
-#### Testing the one-way sync process.
+### Testing the one-way sync process.
 
 Once you have the Lsyncd script in place, check the destination directory; it should be empty:
 
@@ -162,7 +160,7 @@ Returned output should be something like this:
 	-rw-rw-r-- 1 sysop www-readwrite    0 Feb 13 20:28 file18
 	-rw-rw-r-- 1 sysop www-readwrite    0 Feb 13 20:28 file19
 
-#### Create a `logrotate.d` script for `lsycnd`.
+### Create a `logrotate.d` script for `lsycnd`.
 
 While `lsycnd` creates logs, it doesn’t come with a built in log rotation script. So here’s a basic set of log rotation scripts; one handles `*.log` files and the other handles `*.status` files.
 
@@ -206,6 +204,4 @@ And copy these simple log rotation scripts into that file:
 
 ***
 
-*Lsyncd (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Lsyncd (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,10 +1,8 @@
-# Mac OS X - Mounting Devices and Volumes from the Terminal
+## Mac OS X - Mounting Devices and Volumes from the Terminal
 
 By Jack Szwergold, September 12, 2015
 
-***
-
-#### Mounting disk images that throw a “no mountable filesystems” error.
+### Mounting disk images that throw a “no mountable filesystems” error.
 
 Some disk images—such as those created of system disks by “Disk Utility”—might throw up a “no mountable filesystems” error if there is an attempt to mount the disk image directly in the Finder. The instructions below allow you to mount the disk via the command line in the terminal.
 
@@ -24,7 +22,7 @@ Once you get the device ID, you can mount the device like this; change `disk[dev
 
 Note that with that command you are mounting a whole disk instead of a partition which would be something like `disk[device id]s[partition id]`. if somehow you are dealing with an unmountable partition, just us the `disk[device id]s[partition id]` in the examples above.
 
-#### Remounting an ejected USB flash drive.
+### Remounting an ejected USB flash drive.
 
 Let’s say somehow you ejected a USB flash drive you need to to use and for whatever reason—you are remoted into a remote machine or are just lazy—you simply can’t remount it by pulling the USB flash drive in an out again. This is what you can do to get the USB flash drive mounted again via the command line.
 
@@ -40,6 +38,4 @@ The USB drive should now be remounted and accessible again.
 
 ***
 
-*Mac OS X - Mounting Devices and Volumes from the Terminal (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - Mounting Devices and Volumes from the Terminal (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

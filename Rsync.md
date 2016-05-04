@@ -1,10 +1,8 @@
-# Rsync
+## Rsync
 
 By Jack Szwergold, September 17, 2015
 
-***
-
-#### Command to retain partially transfered files if the connection is lost.
+### Command to retain partially transfered files if the connection is lost.
 
 While this works, sometimes the partially transferred files are not cleanly resumed. Should check why that happens and if anything can be done:
 
@@ -15,7 +13,7 @@ While this works, sometimes the partially transferred files are not cleanly resu
 - **-t**: Preserve times.
 - **-P**: Keep partially transferred files and show transfer progress.
 
-#### Compare two directories with Rsync.
+### Compare two directories with Rsync.
 
 A nice way to effectively “diff” two directories using Rsync:
 
@@ -28,6 +26,4 @@ A nice way to effectively “diff” two directories using Rsync:
 
 ***
 
-*Rsync (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Rsync (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

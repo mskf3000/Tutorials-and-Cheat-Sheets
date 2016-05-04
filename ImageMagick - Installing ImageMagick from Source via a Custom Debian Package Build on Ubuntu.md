@@ -1,16 +1,14 @@
-# ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu
+## ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu
 
 By Jack Szwergold, September 21, 2015
 
-***
-
-#### Get rid of the default Ubuntu repository installed version of ImageMagick.
+### Get rid of the default Ubuntu repository installed version of ImageMagick.
 
 Just run this `sudo aptitude purge` command to get rid of any ImageMagick stuff installed via the default Ubuntu repository:
 
     sudo aptitude purge imagemagick
 
-#### Install the ImageMagick source code prerequisites and dependencies.
+### Install the ImageMagick source code prerequisites and dependencies.
 
 Install the basics for the build:
 
@@ -20,7 +18,7 @@ Build the dependencies for the build:
 
     sudo aptitude build-dep imagemagick
 
-#### Install ImageMagick from source using `checkinstall`.
+### Install ImageMagick from source using `checkinstall`.
 
 First grab a compressed archive from an official ImageMagick source site:
 
@@ -74,7 +72,7 @@ And the output should look something like this:
 	Features: Cipher DPC OpenMP 
 	Delegates (built-in): bzlib djvu fontconfig freetype jbig jng jpeg lcms lqr lzma openexr pangocairo png tiff wmf x xml zlib
 
-#### Uninstall ImageMagick from source using `dpkg -r`.
+### Uninstall ImageMagick from source using `dpkg -r`.
 
 Go into the decompressed directory where the initial ImageMagick install happened:
 
@@ -86,6 +84,4 @@ And run this `dpkg -r` command to uninstall it:
 
 ***
 
-*ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*ImageMagick - Installing ImageMagick from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

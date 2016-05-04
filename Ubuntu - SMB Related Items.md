@@ -1,10 +1,8 @@
-# Ubuntu - SMB Related Items
+## Ubuntu - SMB Related Items
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### The basics.
+### The basics.
 
 Then install SMB/CIFS stuff via `aptitude` like this:
 
@@ -22,7 +20,7 @@ Check the running SAMBA status:
 
     smbstatus
 
-#### Using an `.smbcredentials` file.
+### Using an `.smbcredentials` file.
 
 Edit `/etc/fstab` and add your entry:
 
@@ -44,7 +42,7 @@ Finally, test the mount with:
 
 And you should be good to go!
 
-#### Samba and veto files.
+### Samba and veto files.
 
 Setting `veto files` tells Samba to veto the creation or copying of any files that matches the `veto files`. Basic example here:
 
@@ -61,6 +59,4 @@ An example appropriate for Netatalk servers is here:
 
 ***
 
-*Ubuntu - SMB Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ubuntu - SMB Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

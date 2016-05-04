@@ -1,8 +1,6 @@
-# Zip
+## Zip
 
 By Jack Szwergold, September 11, 2015
-
-***
 
 ### Basic Compression
 
@@ -58,6 +56,4 @@ Use this command to decompress multiple Zip files with a password from the comma
 
 ***
 
-*Zip (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Zip (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

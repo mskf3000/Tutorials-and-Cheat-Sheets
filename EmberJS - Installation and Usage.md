@@ -1,14 +1,10 @@
-# EmberJS - Installation and Usage
+## EmberJS - Installation and Usage
 
 By Jack Szwergold, November 16, 2015
 
-***
-
 Before anything, you need to be sure NodeJS is installed. The process is different and dependent on what OS you are using. For Mac OS X you can just download a package installer. But once installed you can then complete the following steps.
 
-***
-
-#### Installing and using EmberJS via NodeJS.
+### Installing and using EmberJS via NodeJS.
 
 Install the Ember CLI like this:
 
@@ -67,7 +63,7 @@ To add an input text field that will allow you to customize the welcome name jus
 	
 	{{outlet}}
 
-#### Getting an EmberJS app ready for production.
+### Getting an EmberJS app ready for production.
 
 So far, all of that fiddling is for a development version of an EmberJS app. But if you really want it to run on a production server—such as Apache—you need to run this command:
 
@@ -77,7 +73,7 @@ Which would then create a new subfolder in the directory called `dist/`. That—
 
 Copy or deploy that directory where it is needed, set `dist/` as the web root and just go to the regular URL of that web server and your EmberJS app should be good to go.
 
-#### Cleaning out caches and temp files.
+### Cleaning out caches and temp files.
 
 Sometimes an upgrade or clean install of EmberJS will mean you need to clean out and reinstall old cruft and dependencies. This is how you go about that.
 
@@ -89,7 +85,7 @@ Next, reinstall the NPM and Bower dependencies:
 
     npm install && bower install
 
-#### Installing MD5 support.
+### Installing MD5 support.
 
 To enable MD5 support in EmberJS, first run this Bower command:
 
@@ -103,7 +99,7 @@ Now just run this Ember `generate` command and you should be good to go:
 
     ember generate md-5
 
-#### Adjusting URL type in Ember CLI
+### Adjusting URL type in Ember CLI
 
 By default, EmberCLI will use the `location:` type of `auto`. But if for some reason you need to adjust that just go into `config/environment.js` and adjust `locationType` in this config area:
 
@@ -122,7 +118,7 @@ By default, EmberCLI will use the `location:` type of `auto`. But if for some re
 
 Just change that `locationType:` to `history` or `none` if your app requires it.
 
-#### Adjusting Ember CLI build options.
+### Adjusting Ember CLI build options.
 
 All Ember CLI build options are configurable via the `ember-cli-build.js` in this chunk of code:
 
@@ -142,13 +138,13 @@ For example, this config would adjust the `prepend` and `customHash` values:
 
 The `prepend` value would prepend a URL to all of the Ember app requests which are usually relative URLs. And the `customHash` setting can either be a custom hash value or could even be `null` to simply disable the `customHash` being added to filenames.
 
-#### Adding meta tag support.
+### Adding meta tag support.
 
 Just install `ember-meta-meta` support like this:
 
     ember install ember-meta-meta
 
-#### Fixing Bower install issues.
+### Fixing Bower install issues.
 
 If you clone an Ember repo and need to run `npm install` and `bower install` and an error like this pops up during `bower install`:
 
@@ -223,6 +219,4 @@ The JavaScript component logic would go into `app/models/pull-requests.js`.
 
 ***
 
-*EmberJS - Installation and Usage (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*EmberJS - Installation and Usage (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

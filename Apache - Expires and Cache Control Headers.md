@@ -1,10 +1,8 @@
-# Apache - Expires and Cache Control Headers
+## Apache - Expires and Cache Control Headers
 
 By Jack Szwergold, September 19, 2015
 
-***
-
-#### How to disable cache control and expires headers.
+### How to disable cache control and expires headers.
 
 An example of disabling cache control headers:
 
@@ -37,7 +35,7 @@ An example of disabling expires headers to match a filename pattern:
 	  </IfModule>
 	</Files>
 
-#### Example cache control and expires headers.
+### Example cache control and expires headers.
 
 An example of cache control headers:
 
@@ -100,6 +98,4 @@ An example of cache control and expires headers for an Amazon CloudFront CDN set
 
 ***
 
-*Apache - Expires and Cache Control Headers (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Apache - Expires and Cache Control Headers (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

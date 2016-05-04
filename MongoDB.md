@@ -1,10 +1,8 @@
-# MongoDB
+## MongoDB
 
 By Jack Szwergold, September 22, 2015
 
-***
-
-## Install MongoDB.
+### Install MongoDB.
 
 First, import the public key used by the package management system:
 
@@ -101,7 +99,7 @@ The positive response should be something like this:
 	PORT      STATE SERVICE
 	27017/tcp open  unknown
 
-## Practical MongoDB usage examples.
+### Practical MongoDB usage examples.
 
 #### Connect to a MongoDB instance.
 
@@ -298,7 +296,7 @@ Now when you run `show dbs` the database will be there:
 	sandbox_dev       0.078GB
 	local             0.078GB
 
-## Some MongoDB debugging and maintenance items.
+### Some MongoDB debugging and maintenance items.
 
 #### Compacting a MongoDB database.
 
@@ -357,7 +355,5 @@ Then do this to get rid of the old lock file:
 
 ***
 
-*MongoDB (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*MongoDB (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
 

@@ -1,10 +1,8 @@
-# Munin
+## Munin
 
 By Jack Szwergold, September 16, 2015
 
-***
-
-#### Install `munin`.
+### Install `munin`.
 
 Install Munin on Ubuntu 12.04:
 
@@ -14,7 +12,7 @@ Install Munin on Ubuntu 14.04:
 
 	sudo aptitude install munin munin-node munin-plugins-extra libwww-perl
 	
-#### Basic `munin` usage items.
+### Basic `munin` usage items.
 
 Control the Munin node:
 
@@ -34,7 +32,7 @@ Repair Munin permissions:
 
     sudo munin-check --fix-permissions
 
-#### For Ubuntu 12.04, do some initial tweaks to get things running smoothly.
+### For Ubuntu 12.04, do some initial tweaks to get things running smoothly.
 
 First open up the `munin-node` config file:
 
@@ -64,7 +62,7 @@ Now just restart the Munin node to get the settings loaded and you should be goo
 
 	sudo service munin-node restart
 
-#### Sundry `munin` plug-in stuff.
+### Sundry `munin` plug-in stuff.
 
 Check status of available Munin plug-ins:
 
@@ -105,7 +103,7 @@ And add this simple config item at the bottom of the file:
     [fail2ban]
     user root
 
-#### Setting up Munin email alerts.
+### Setting up Munin email alerts.
 
 Munin can send out email alerts to let you know if anything it’s monitoring is not working as expected. Follow these steps to get the emailing functionality up and running.
 
@@ -134,7 +132,7 @@ Now find the “host tree” to add `contacts serveralert` at the bottom of that
 	    use_node_name yes
 	    contacts serveralert
 
-#### Adjusting the `unknown_limit` to prevent excessive warnings from popping up and being emailed.
+### Adjusting the `unknown_limit` to prevent excessive warnings from popping up and being emailed.
 
 When a device or process doesn’t return data to the Munin node, Munin just interprets that as “unknown.” Lots of times this is just a minor blip and not an outage or even a concern.
 
@@ -171,7 +169,7 @@ Now just restart the Munin node to get the settings loaded and you should be goo
 
 	sudo service munin-node restart
 
-#### Setting an Apache config for `munin` in Ubuntu 12.04.
+### Setting an Apache config for `munin` in Ubuntu 12.04.
 
 Munin will set a symbolic link to it’s own Apache config, but it’s not that hot so let’s get rid of it:
 
@@ -220,7 +218,7 @@ Here is an example of a basic, secure Apache config for `munin`. Note the `Allow
 	
 	</Directory>
 
-#### Setting an Apache config for `munin` in Ubuntu 14.04.
+### Setting an Apache config for `munin` in Ubuntu 14.04.
 
 Munin will set a symbolic link to it’s own Apache config, but it’s not that hot so let’s get rid of it:
 
@@ -282,6 +280,4 @@ That command will initiate the process to create an `htpasswd` for a user named 
 
 ***
 
-*Munin (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Munin (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

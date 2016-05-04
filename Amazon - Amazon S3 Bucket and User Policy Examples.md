@@ -1,10 +1,8 @@
-# Amazon - Amazon S3 Bucket and User Policy Examples
+## Amazon - Amazon S3 Bucket and User Policy Examples
 
 By Jack Szwergold, October 6, 2015
 
-***
-
-#### All Amazon S3 actions for reference.
+### All Amazon S3 actions for reference.
 
 	s3:AbortMultipartUpload
 	s3:CopyObject
@@ -44,7 +42,7 @@ By Jack Szwergold, October 6, 2015
 	s3:SetBucketAccessControlPolicy
 	s3:SetObjectAccessControlPolicy
 
-#### An example of a generic user policy.
+### An example of a generic user policy.
 
 	{
 	  "Statement": [
@@ -133,6 +131,4 @@ This is for a bucket named `s3_bucket_name`. It works, but gives note that it gi
 
 ***
 
-*Amazon - Amazon S3 Bucket and User Policy Examples (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Amazon - Amazon S3 Bucket and User Policy Examples (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

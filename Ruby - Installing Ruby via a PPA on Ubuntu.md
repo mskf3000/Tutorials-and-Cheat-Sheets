@@ -1,10 +1,8 @@
-# Ruby - Installing Ruby via a PPA on Ubuntu
+## Ruby - Installing Ruby via a PPA on Ubuntu
 
 By Jack Szwergold, September 20, 2015
 
-***
-
-#### Adding the Brightbox PPA to the system.
+### Adding the Brightbox PPA to the system.
 
 First install `python-software-properties` like this:
 
@@ -18,7 +16,7 @@ With that done, run `aptitude update` to get the new repository picked up like t
 
     sudo aptitude update
 
-#### Install various versions of Ruby via the Brightbox PPA.
+### Install various versions of Ruby via the Brightbox PPA.
 
 Install Ruby 1.8:
 
@@ -42,6 +40,4 @@ Install Ruby 2.2:
 
 ***
 
-*Ruby - Installing Ruby via a PPA on Ubuntu (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Ruby - Installing Ruby via a PPA on Ubuntu (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

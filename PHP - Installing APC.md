@@ -1,8 +1,6 @@
-# PHP - Installing APC
+## PHP - Installing APC
 
 By Jack Szwergold, October 5, 2015
-
-***
 
 APC (Alternative PHP Cache) is an opcode (operation code) cache that can improve PHP performance and decrease RAM usage dramatically. While it works great when it works, some PHP applications might have slight flaws in them that will cause APC to crash sporadically. So if you intend to use APC, be sure to test your code on an APC-enabled developer’s environment before deploying APC—and the updated code—to production.
 
@@ -113,6 +111,4 @@ Then point your web browser to the following URL to see it in action:
 
 ***
 
-*PHP - Installing APC (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*PHP - Installing APC (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,12 +1,10 @@
-# Rackspace - Cloudfuse Installation and Usage
+## Rackspace - Cloudfuse Installation and Usage
 
 By Jack Szwergold, October 7, 2015
 
-***
-
 CloudFuse allows you to mount Rackspace Cloud Files as a mountable fuse filesystem.
 
-#### Install Cloudfuse.
+### Install Cloudfuse.
 
 Install the basics for the build:
 
@@ -32,7 +30,7 @@ Finally install it by running `sudo make install`:
 
 	sudo make install
 
-#### Create the credentials file for Cloudfuse.
+### Create the credentials file for Cloudfuse.
 
 A per user Cloudfuse configuration would go in a `.cloudfuse` file:
 
@@ -45,7 +43,7 @@ And the contents of either file would be something like this:
 	# authurl=https://auth.api.rackspacecloud.com/v1.1/auth
 	authurl=https://auth.api.rackspacecloud.com/v1.0
 
-#### Setup the mount point directories.
+### Setup the mount point directories.
 
 Create a subdirectory for Rackspace specific stuff in `cloud_mounts`:
 
@@ -55,7 +53,7 @@ Change permissions to allow your user—in this case `sysop`—to access it:
 
 	sudo chown sysop:sysop -R /opt/cloud_mounts
 
-#### Mounting and unmounting.
+### Mounting and unmounting.
 
 To mount a RackSpace mount:
 
@@ -65,7 +63,7 @@ To unmount a RackSpace mount:
 
 	fusermount -u /opt/cloud_mounts/rackspace
 
-#### Restrict Cloudfuse to one user.
+### Restrict Cloudfuse to one user.
 
 First change ownership of the binary to one user:
 
@@ -208,6 +206,4 @@ Next change the permissions to restrict read, write and execute to only that one
 
 ***
 
-*Rackspace - Cloudfuse Installation and Usage (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Rackspace - Cloudfuse Installation and Usage (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,14 +1,10 @@
-# MySQL - Enable MySQL Logs to Be Group Readable
+## MySQL - Enable MySQL Logs to Be Group Readable
 
 By Jack Szwergold, September 24, 2015
 
-***
-
 This procedure allows you to set MySQL logs to be group readable which can be useful for debugging scenarios. Still a slight security risk but if this is a needed for your usage, this is how you do it:
 
-***
-
-#### Adjust the ownership and permissions on the MySQL log files.
+### Adjust the ownership and permissions on the MySQL log files.
 
 First, change the group ownership of the main MySQL logs directory. Check the directory permssions like this:
 
@@ -31,7 +27,7 @@ Now follow the logs as a regular user—without using `sudo`—to test the setup
 	tail -f -n 200 /var/log/mysql/mysql.log
 	tail -f -n 200 /var/log/mysql/error.log
 
-#### Adjust the MySQL daemon ownership and permissions in the MySQL config file.
+### Adjust the MySQL daemon ownership and permissions in the MySQL config file.
 
 Edit the main MySQL config file to set the group permissions to match everything else. First open up the main MySQL config file like this:
 
@@ -54,7 +50,7 @@ Adjust it so it has a `group` setting and that setting is set to `www-readwrite`
 	user            = mysql
 	group           = www-readwrite
 
-#### Adjust the MySQL `logrotate` script.
+### Adjust the MySQL `logrotate` script.
 
 Adjust the `logrotate` script to make sure permissions persist when logs are rotated:
 
@@ -68,7 +64,7 @@ To this:
 
     create 640 mysql www-readwrite
 
-#### An example of what log ownership and permissions look like before the adjustment.
+### An example of what log ownership and permissions look like before the adjustment.
 
 	ls -la /var/log/mysql/
 	
@@ -84,7 +80,7 @@ To this:
 	-rw-r-----  1 mysql adm    333 2013-01-01 03:00 mysql-slow.log.6.gz
 	-rw-r-----  1 mysql adm    334 2012-12-31 03:00 mysql-slow.log.7.gz
 
-#### An example of what log ownership and permissions look like after the adjustment.
+### An example of what log ownership and permissions look like after the adjustment.
 
 	ls -la /var/log/mysql/
 	
@@ -103,6 +99,4 @@ To this:
 
 ***
 
-*MySQL - Enable MySQL Logs to Be Group Readable (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*MySQL - Enable MySQL Logs to Be Group Readable (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

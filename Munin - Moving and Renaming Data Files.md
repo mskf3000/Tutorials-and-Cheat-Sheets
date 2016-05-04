@@ -1,22 +1,18 @@
-# Munin - Moving and Renaming Data Files
+## Munin - Moving and Renaming Data Files
 
 By Jack Szwergold, September 16, 2015
-
-***
 
 This tutorial explains how to move or change a Munin node name without losing past data files and related history.
 
 For this example we are moving data saved under the hostname `localdomain`—default Munin install hostname—to the new hostname of `sandbox.local`.
 
-***
-
-#### Stop the `munin` node.
+### Stop the `munin` node.
 
 First step is to stop the Munin node while we perform the work:
 
     sudo service munin-node stop
 
-#### Adjust the `munin` node config.
+### Adjust the `munin` node config.
 
 Next, open up the main Munin config file on the server:
 
@@ -30,7 +26,7 @@ And find the host name in the “host tree” and change/adjust it as you need t
 	    use_node_name yes
 	    # contacts serveralert
 
-#### Rename the `munin` node raw datafiles in `/var/lib/munin/`.
+### Rename the `munin` node raw datafiles in `/var/lib/munin/`.
 
 Once that is done, save the file and go into the Munin raw data directory in `/var/lib/`:
 
@@ -62,7 +58,7 @@ And finally, change the permissions of the directory and files back to `munin`:
 
     sudo chown munin:munin -R sandbox.local
 
-#### Remove the `munin` node web datafiles in `/var/cache/munin/www`.
+### Remove the `munin` node web datafiles in `/var/cache/munin/www`.
 
 Once that is done, save the file and go into the Munin web data directory in `/var/cache/munin/www/`:
 
@@ -72,7 +68,7 @@ And remove all of the `munin` node web datafiles connected to the old hostname. 
 
     sudo rm -rf localdomain
 
-#### Start the `munin` node.
+### Start the `munin` node.
 
 And the final step is to restart the Munin node again:
 
@@ -80,6 +76,4 @@ And the final step is to restart the Munin node again:
 
 ***
 
-*Munin - Moving and Renaming Data Files (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Munin - Moving and Renaming Data Files (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

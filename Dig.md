@@ -1,10 +1,8 @@
-# Dig
+## Dig
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Basic Dig commands.
+### Basic Dig commands.
 
 Detailed DNS info for a hostname:
 
@@ -46,6 +44,4 @@ Get pretty much all available info on a domain:
 
 ***
 
-*Dig (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Dig (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

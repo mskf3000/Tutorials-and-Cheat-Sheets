@@ -1,10 +1,8 @@
-# LAME MP3 Related Items
+## LAME MP3 Related Items
 
 By Jack Szwergold, October 8, 2015
 
-***
-
-#### Some nice LAME MP3 settings.
+### Some nice LAME MP3 settings.
 
 Good settings for music:
 
@@ -16,6 +14,4 @@ Good settings for low fidelity mono and spoken word files:
 
 ***
 
-*LAME MP3 Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*LAME MP3 Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

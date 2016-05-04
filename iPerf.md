@@ -1,10 +1,8 @@
-# iPerf
+## iPerf
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Basic iPerf usage.
+### Basic iPerf usage.
 
 iPerf is a network bandwidth testing tool that measures bandwidth between machines during a (default) 10 second test period. Results are reported in `Mbits/sec` but can be adjusted via the `-f` flag.
 
@@ -18,7 +16,7 @@ And on another client machine, initiate a client connection with the `-c` flag t
 
 This is a one way connection test between client and server so if there is a need to test speed in the other direction, the steps need to be swapped between machines; client becomes server and server becomes client.
 
-#### Bandwidth output options.
+### Bandwidth output options.
 
 Bandwidth output options via the `-f` flag; default is `Mbits/sec`:
 
@@ -29,7 +27,7 @@ Bandwidth output options via the `-f` flag; default is `Mbits/sec`:
 	'K' = KBytes/sec
 	'M' = MBytes/sec
 
-#### Some advanced iPerf examples.
+### Some advanced iPerf examples.
 
 Start the server with port `65000`:
 
@@ -55,7 +53,7 @@ Set the interval to be 2 seconds between tests, run it as a dual test to/from se
 
     iperf -c [ip or hostname of server] -i 2 -d -t 60
 
-#### The man page for iPerf.
+### The man page for iPerf.
 
 	IPERF(1)                         User Manuals                         IPERF(1)
 	
@@ -203,6 +201,4 @@ Set the interval to be 2 seconds between tests, run it as a dual test to/from se
 
 ***
 
-*iPerf (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*iPerf (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

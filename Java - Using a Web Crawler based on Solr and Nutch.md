@@ -1,8 +1,6 @@
-# Java - Using a Web Crawler based on Solr and Nutch
+## Java - Using a Web Crawler based on Solr and Nutch
 
 By Jack Szwergold, October 14, 2015
-
-***
 
 ### Crawling via Bash script.
 
@@ -116,6 +114,4 @@ How to follow log files.
 
 ***
 
-*Java - Using a Web Crawler based on Solr and Nutch (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Java - Using a Web Crawler based on Solr and Nutch (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

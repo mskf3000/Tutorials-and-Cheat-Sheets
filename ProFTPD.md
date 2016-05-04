@@ -1,14 +1,10 @@
-# ProFTPD
+## ProFTPD
 
 By Jack Szwergold, October 7, 2015
-
-***
 
 First things first: Unless you are in 1993, there is no reason to use straight FTP anymore. Pretty much every “FTP” connection anyone uses nowadays is SFTP anyway. But on the off chance you have to work on a setup that requires FTP, you could do worse than use ProFTP to manage the service.
 
 And if you restrict FTP access to a specific IP address, it will make the whole idea you are using flawed technology in a modern era easier to swallow; see the section on allowing FTP ports access for more details.
-
-***
 
 Install the basics for the build:
 
@@ -18,7 +14,7 @@ Install the Apache ProFTPD module: If asked how to install it, be sure to choose
 
     sudo aptitude install proftpd
 
-#### Squelch `mod_tls_memcache.c` warnings.
+### Squelch `mod_tls_memcache.c` warnings.
 
 But wait! We’re not done with this yet. If you are using Ubuntu 12.04 you might see error warnings like this when the service starts or restarts:
 
@@ -44,7 +40,7 @@ Now restart ProFTPD like this:
 
 While those OpenSSL messages will still pop up, that `mod_tls_memcache` message should be gone.
 
-#### Allowing FTP ports network access.
+### Allowing FTP ports network access.
 
 If you are using a firewall such as IPTables, make sure it’s set to allow connections on port `21` as well as ports `50000` to `60000` for passive ports:
 
@@ -58,7 +54,7 @@ While the above IPTables ruleset would open up FTP access to anyone who can reac
 
 Remember: FTP protocol is highly insecure nowadays—to say the least—so restricting FTP access to one IP address is the best compromise if you need to use straight, insecure FTP for some reason.
 
-#### Sundry ProFTPD items on an Ubuntu/Debian system.
+### Sundry ProFTPD items on an Ubuntu/Debian system.
 
 Get ProFTPD version number:
 
@@ -88,7 +84,7 @@ Follow the ProFTPD log:
 
 	sudo tail -f -n 200 /var/log/proftpd/proftpd.log
 
-#### Setting up SFTP in ProFTPD
+### Setting up SFTP in ProFTPD
 
 The location of the ProFTPD SFTP modules.
 
@@ -127,7 +123,7 @@ An example ProFTPD SFTO configuration:
 	
 	</IfModule>
 
-#### ProFTPD: Config with tweaks.
+### ProFTPD: Config with tweaks.
 
 This is an example config that would be placed in this file:
 
@@ -334,6 +330,4 @@ And here is the actual, full ProFTPD config file for review:
 
 ***
 
-*ProFTPD (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*ProFTPD (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

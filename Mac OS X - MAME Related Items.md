@@ -1,10 +1,8 @@
-# Mac OS X - MAME Related Items
+## Mac OS X - MAME Related Items
 
 By Jack Szwergold, October 7, 2015
 
-***
-
-#### Find all files that have not been touched in the last 3 hours.
+### Find all files that have not been touched in the last 3 hours.
 
 Dry run:
 	
@@ -16,7 +14,7 @@ Actual command using `advzip`:
 
 	find /Applications/mame0166-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime +3 -exec ./advzip -z -3  {} \;
 	
-#### Find all files that have been touched in the last hour.
+### Find all files that have been touched in the last hour.
 
 Dry run:
 	
@@ -28,7 +26,7 @@ Actual command using `advzip`:
 
 	find /Applications/mame0166-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime -1 -exec ./advzip -z -3  {} \;
 	
-#### Verify ROMs.
+### Verify ROMs.
 
 Get a verification of all ROM files:
 
@@ -48,7 +46,7 @@ Gather a list of bad ROM files:
 
     ./mame64 -verifyroms | grep "is bad" | awk '{print $2}'
 	
-#### Clean out bad ROMs.
+### Clean out bad ROMs.
 
 First draft of a `find` script to roll through the ROMs:
 
@@ -89,7 +87,7 @@ Actual script:
         fi
 	  done
 	
-#### Using AdvanceSCAN ROMs manager stuff.
+### Using AdvanceSCAN ROMs manager stuff.
 
 Generate MAME info in XML format:
 
@@ -103,7 +101,7 @@ Now run AdvanceSCAN stuff to repair and clean the files:
 
     ./advscan -R < ../mame0166-64bit/mame-info.xml
 	
-#### MAME command line options.
+### MAME command line options.
 
 Show them using `-showusage` like this:
 
@@ -518,6 +516,4 @@ And this is the output:
 
 ***
 
-*Mac OS X - MAME Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - MAME Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

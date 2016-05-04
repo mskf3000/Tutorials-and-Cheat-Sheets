@@ -1,8 +1,6 @@
-# Cron
+## Cron
 
 By Jack Szwergold, September 19, 2015
-
-***
 
 #### Start, stop and control the Cron service on an Ubuntu/Debian system.
 
@@ -46,6 +44,4 @@ Now restart the Cron service:
 
 ***
 
-*Cron (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Cron (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

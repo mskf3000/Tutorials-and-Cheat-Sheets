@@ -1,10 +1,8 @@
-# Mac OS X - SNMP Basics
+## Mac OS X - SNMP Basics
 
 By Jack Szwergold, October 6, 2015
 
-***
-
-#### Customzing the SNMP data a host passes.
+### Customzing the SNMP data a host passes.
 
 To create a SNMP `snmpconf` file on the host, run this command as root:
 
@@ -22,7 +20,7 @@ Stop the `snmpd` daemon like this:
 
     sudo killall snmpd
 
-#### Collection of SNMP data from a remote host.
+### Collection of SNMP data from a remote host.
 
 Run this `snmpget` command to fetch data from a host; replace [hostname] with the name of the target host:
 
@@ -42,6 +40,4 @@ Fetch the services info from the host:
 
 ***
 
-*Mac OS X - SNMP Basics (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - SNMP Basics (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

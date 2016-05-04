@@ -1,16 +1,14 @@
-# SVN - Subversion Related Items
+## SVN - Subversion Related Items
 
 By Jack Szwergold, October 8, 2015
 
-***
-
-#### Adding a user to a Subversion repository.
+### Adding a user to a Subversion repository.
 
 Adding a user to the Subversion basic authentication file:
 
     sudo htpasswd -md /etc/svn-auth-file [username]
 
-#### A simple Subversion usage example
+### A simple Subversion usage example
 
 The URL for an example repository:
 
@@ -44,7 +42,7 @@ Move/rename a file from the Subversion repository:
 
     svn mv newfile.txt newfile-newname.txt
 
-#### Force all files into a Subversion repository.
+### Force all files into a Subversion repository.
 
 Forces all files to be added:
 
@@ -56,6 +54,4 @@ Commit all files via `*` and add a message/note about the commit:
 
 ***
 
-*SVN - Subversion Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*SVN - Subversion Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

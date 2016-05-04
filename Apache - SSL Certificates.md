@@ -1,10 +1,8 @@
-# Apache - SSL Certificates
+## Apache - SSL Certificates
 
 By Jack Szwergold, September 19, 2015
 
-***
-
-#### Generate a CSR (certificate signing request).
+### Generate a CSR (certificate signing request).
 
     openssl req -nodes -newkey rsa:2048 -keyout www.example.com.key -out www.example.com.csr
 
@@ -16,10 +14,9 @@ Items to provide answers for the CSR with. The most important item is the `Commo
 - **Organization Name (eg, company) [Internet Widgits Pty Ltd]:** Some Company
 - **Organizational Unit Name (eg, section) []:** Some Company (Some More Info)
 - **Email Address []:** email@example.com
-
 - **Common Name (CN):** www.example.com
 
-#### Convert certificate to a `.pfx` (aka: `.p12`) package.
+### Convert certificate to a `.pfx` (aka: `.p12`) package.
 
 Convert a PEM certificate file and a private key to PKCS#12 (.pfx .p12) package file preferred by Windows setups:
 
@@ -33,7 +30,7 @@ Extracting the certificate from the `.pfx` file:
 
     openssl pkcs12 -in www.example.com.pfx -clcerts -nokeys -out test_www.example.com.crt
 
-#### A basic Apache config for an SSL certificate.
+### A basic Apache config for an SSL certificate.
 
 	<IfModule mod_ssl.c>
 	  <VirtualHost *:443>
@@ -56,6 +53,4 @@ Extracting the certificate from the `.pfx` file:
 
 ***
 
-*Apache - SSL Certificates (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Apache - SSL Certificates (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

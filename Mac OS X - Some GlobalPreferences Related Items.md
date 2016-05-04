@@ -1,6 +1,6 @@
-# Mac OS X - Some GlobalPreferences Related Items
+## Mac OS X - Some GlobalPreferences Related Items
 
-#### Check a list of all user connected preference files.
+### Check a list of all user connected preference files.
 
 List all Mac OS X user defaults preference files:
 
@@ -10,13 +10,13 @@ List all Mac OS X user defaults preference files, more readable format:
 
     defaults domains | tr -s ', ' '\n'
 
-#### Archiving the `.GlobalPreferences.plist`.
+### Archiving the `.GlobalPreferences.plist`.
 
 Save the `.GlobalPreferences.plist` in a human readable format:
 
 	defaults read > ~/GlobalPreferences.plist.txt
 	
-#### Removing the `.GlobalPreferences.plist`.
+### Removing the `.GlobalPreferences.plist`.
 
 First, make backup a copy of your `GlobalPreferences.plist` to your user’s directory:
 
@@ -30,7 +30,7 @@ And then, just restart the Finder with this command:
 
     killall Finder
 
-#### Restoring the `.GlobalPreferences.plist`.
+### Restoring the `.GlobalPreferences.plist`.
 
 If you need to, restore the backup copy of `.GlobalPreferences.plist` like this:
 
@@ -42,6 +42,4 @@ And then, just restart the Finder with this command:
 
 ***
 
-*Mac OS X - Some GlobalPreferences Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Mac OS X - Some GlobalPreferences Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

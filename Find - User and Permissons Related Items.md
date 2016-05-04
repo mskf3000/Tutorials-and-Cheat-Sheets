@@ -1,10 +1,8 @@
-# Find - User and Permissions Related Items
+## Find - User and Permissions Related Items
 
 By Jack Szwergold, September 28, 2015
 
-***
-
-#### Change user ownership on a directory.
+### Change user ownership on a directory.
 
 Dry run of the command using `echo`:
 
@@ -22,7 +20,7 @@ Actual, functional script:
 	    sudo chown another_user "${FILENAME}"
 	  done
 
-#### Find items without a user and assign a new user.
+### Find items without a user and assign a new user.
 
 Dry run of the command using `echo`:
 
@@ -42,6 +40,4 @@ Actual, functional script:
 
 ***
 
-*Find - User and Permissions Related Items (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Find - User and Permissions Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

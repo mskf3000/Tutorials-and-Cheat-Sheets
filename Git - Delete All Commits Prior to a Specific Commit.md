@@ -1,10 +1,8 @@
-# Git - Delete All Commits Prior to a Specific Commit
+## Git - Delete All Commits Prior to a Specific Commit
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### How to delete all commits prior to a specific commit hash.
+### How to delete all commits prior to a specific commit hash.
 
 First, figure out what the commit hash is. In this case, let’s say it’s `11dae100c026c3ca43db973f752f25390e6aa8f6`. Now, remove the origin directory to make sure we don’t potentially re-add removed items:
 
@@ -36,6 +34,4 @@ Finally, push the newly rebased repo back to `origin` like this:
 
 ***
 
-*Git - Delete All Commits Prior to a Specific Commit (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Git - Delete All Commits Prior to a Specific Commit (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

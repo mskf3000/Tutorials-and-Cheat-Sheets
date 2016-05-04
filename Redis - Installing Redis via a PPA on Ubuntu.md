@@ -1,16 +1,14 @@
-# Redis - Installing Redis via a PPA on Ubuntu
+## Redis - Installing Redis via a PPA on Ubuntu
 
 By Jack Szwergold, September 22, 2015
 
-***
-
-#### Get rid of the default Ubuntu repository installed version of Redis.
+### Get rid of the default Ubuntu repository installed version of Redis.
 
 Just run this `sudo aptitude purge` command to get rid of any Redis stuff installed via the default Ubuntu repository:
 
     sudo aptitude purge redis-server
 
-#### Adding the Chris Lea PPA to the system.
+### Adding the Chris Lea PPA to the system.
 
 First install `python-software-properties` like this:
 
@@ -38,6 +36,4 @@ And the output should be something like this:
 
 ***
 
-*Redis - Installing Redis via a PPA on Ubuntu (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Redis - Installing Redis via a PPA on Ubuntu (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

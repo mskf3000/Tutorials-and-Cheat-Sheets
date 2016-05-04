@@ -1,4 +1,4 @@
-# Cheat Sheets
+## Cheat Sheets
 
 Here is a collection of cheat sheets I’ve compiled for my own personal reference—and to share with clients as well as other techs—over the years. If you stumble across this and find it useful I’m cool with that.
 
@@ -186,6 +186,4 @@ These are mainly intended for quick reference without too much deep explanation 
 
 ***
 
-*Tutorials and Cheat Sheets (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Tutorials and Cheat Sheets (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

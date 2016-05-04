@@ -1,8 +1,6 @@
-# Fail2Ban
+## Fail2Ban
 
 By Jack Szwergold, October 19, 2015
-
-***
 
 ### Install Fail2Ban.
 
@@ -449,6 +447,4 @@ And the output would be something like this:
 
 ***
 
-*Fail2Ban (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Fail2Ban (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

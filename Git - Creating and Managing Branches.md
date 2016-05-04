@@ -1,10 +1,8 @@
-# Git - Creating and Managing Branches
+## Git - Creating and Managing Branches
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Create a development branch & push that to the origin.
+### Create a development branch & push that to the origin.
 
 While most git repositories are set to the `master` branch to begin with, that’s not generally where you want to do your work. It’s best to create a separate/new branch to do work in and merge that to `master` when the work is done/tested.
 
@@ -26,7 +24,7 @@ Or you can even just use `git push` like this:
 
 	git push
 
-#### Basic interactions.
+### Basic interactions.
 
 To get commits and changes from a remote repository, just run `git pull` like this:
 
@@ -36,7 +34,7 @@ Remove a file from a repository use `git rm` like this:
 
 	git rm [filename]
 
-#### List repository branches.
+### List repository branches.
 
 To check your local branches, just run this command:
 
@@ -50,7 +48,7 @@ And if for some reason you only want to review a list of remote branches, just r
 
 	git branch -r
 
-#### How to rename a branch.
+### How to rename a branch.
 
 Let’s say you now want to rename the `develop` branch to `develop_test`. Just run this command:
 
@@ -60,7 +58,7 @@ And hey, you decided that was not so hot an idea. So you can rename it again lik
 
 	git branch -m develop_test develop
 
-#### Delete a local branch.
+### Delete a local branch.
 
 Okay, so let’s say you want to delete a local branch such as `develop`. First, make sure you are in any other branch but `develop` like this:
 
@@ -76,7 +74,7 @@ That should work if the branch is merged. But if you don’t care about the merg
 
 And that branch should be successfully blown away locally.
 
-#### Delete a remote branch.
+### Delete a remote branch.
 
 If you want to delete a remote branch, you need to run this command:
 
@@ -84,13 +82,13 @@ If you want to delete a remote branch, you need to run this command:
 
 Note the colon (`:`) before the branch name of `develop`. That `git push` combined with `origin :develop` will delete the remote `develop` branch.
 
-#### Reset a local branch to a remote branch’s state.
+### Reset a local branch to a remote branch’s state.
 
 Now let’s say you have made some local commits to `develop` that you are not happy with but you have not pushed `develop` to the remote origin at all. Well, then you can reset your local branch to the state of the remote `develop` branch to get everything back to normal again like this:
 
 	git reset --hard origin/develop
 
-#### Merge a branch.
+### Merge a branch.
 
 First checkout the branch you want to merge into; in this case it will be `master`:
 
@@ -104,7 +102,7 @@ If you want to add a commit point to the merge, just use the `--no-ff` flag like
 
 	git merge --no-ff develop
 
-#### Check for merged branches.
+### Check for merged branches.
 
 You can check which local branches are merged with this command:
 
@@ -114,7 +112,7 @@ And you can check which remote branches are merged with this command:
 
 	git branch -r --merged
 
-#### Check for unmerged branches.
+### Check for unmerged branches.
 
 You can check which local branches are unmerged with this command:
 
@@ -124,7 +122,7 @@ And you can check which remote branches are unmerged with this command:
 
 	git branch -r --no-merged
 
-#### Diff branches.
+### Diff branches.
 
 This command will diff the local `master` branch to the local `develop` branch:
 
@@ -134,7 +132,7 @@ This command will diff the remote `develop` branch to the local `develop` branch
 
 	git diff remotes/origin/develop develop
 
-#### Check your history of commits.
+### Check your history of commits.
 
 You can see a list of commits using `git log` as follows; set `-n 10` to be the number of commits you want to see like this:
 
@@ -144,7 +142,7 @@ And you can also display a nice, visual branching commit history from the comman
 
 	git log --oneline --decorate --graph
 
-#### Show the relationships between local & remote branches.
+### Show the relationships between local & remote branches.
 
 Run this command:
 
@@ -166,7 +164,7 @@ And the output should be something like this:
 	    develop pushes to develop (up to date)
 	    master  pushes to master  (up to date)
 
-#### List all references to branches & tags that it knows it about including info on HEADs.
+### List all references to branches & tags that it knows it about including info on HEADs.
 
 Run this command:
 
@@ -179,7 +177,7 @@ And the output should be something like this:
 	b331419ad4cc4397a3138d3fc1166be014debc4f	refs/heads/master
 	e5ef5aa6d501a8673a27a8a5fad9ed57f167ad31	refs/pull/1/head
 
-#### List all references to branches & tags that it knows it about without info on HEADs.
+### List all references to branches & tags that it knows it about without info on HEADs.
 
 Run this command:
 
@@ -190,13 +188,13 @@ And the output should be something like this:
 	b331419ad4cc4397a3138d3fc1166be014debc4f	refs/heads/develop
 	b331419ad4cc4397a3138d3fc1166be014debc4f	refs/heads/master
 
-#### Delete a single stray/old remote branch in a local repo.
+### Delete a single stray/old remote branch in a local repo.
 
 Run this command:
 
 	git branch -r -d origin/devel
 
-#### Prune old remote branches from a local GIT repo.
+### Prune old remote branches from a local GIT repo.
 
 By default, a local clone of a remote repository will have copiess of references to remote branches. Sometimes it can get cluttered which makes things hard to manage. So it’s good practics to clean up old, stray branches to make working with your repository easuer.
 
@@ -208,7 +206,7 @@ Now run the actual command without the `--dry-run` flag so stray branches can be
 
 	git remote prune origin
 
-#### Do some garbage collection and maintenance to repair a damaged local clone.
+### Do some garbage collection and maintenance to repair a damaged local clone.
 
 	git gc --auto
 	
@@ -216,7 +214,7 @@ Now run the actual command without the `--dry-run` flag so stray branches can be
 	
 	git fsck --full
 
-#### Cleaning up “dangling blobs” from a repository.
+### Cleaning up “dangling blobs” from a repository.
 
 If you run `fsck` like this:
 
@@ -249,6 +247,4 @@ And the output will be something like this; note there are no “dangling blobs�
 
 ***
 
-*Git - Creating and Managing Branches (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Git - Creating and Managing Branches (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

@@ -1,10 +1,8 @@
-# Wget
+## Wget
 
 By Jack Szwergold, October 8, 2015
 
-***
-
-#### Some Wget command parameters.
+### Some Wget command parameters.
 
 - `-A [list/pattern]`: Accept list. Basically a comma separated list of filename suffixes to accept. For example, `-A jpg,jpeg,png,gif` would grab all image files and `-A mp3` would grab all MP3 files.
 - `-R [list/pattern]`: Reject list. The opposite of the accept list. Allows a command to reject a list of items.
@@ -21,7 +19,7 @@ By Jack Szwergold, October 8, 2015
 - `-N`: Turn on time-stamping.
 - `-m`: Turn on options suitable for mirroring. This option turns on recursion and time-stamping, sets infinite recursion depth and keeps FTP directory listings. It is currently equivalent to `-r -N -l inf --no-remove-listing`.
 
-#### Some basic Wget command examples.
+### Some basic Wget command examples.
 
 A basic mirroring command example:
 
@@ -49,6 +47,4 @@ Grab all JPG, JPEG, PNG and GIF assets off of a site and span hosts if needed:
 
 ***
 
-*Wget (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Wget (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

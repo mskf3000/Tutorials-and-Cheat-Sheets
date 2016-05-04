@@ -1,10 +1,8 @@
-# GeoIP
+## GeoIP
 
 By Jack Szwergold, September 23, 2015
 
-***
-
-## Installing the GeoIP program.
+### Installing the GeoIP program.
 
 Install the basics for the build:
 
@@ -52,7 +50,7 @@ Then run `autoreconf` like this:
 
 	autoreconf --force --install
 	
-## Installing the GeoIP databases.
+### Installing the GeoIP databases.
 
 #### Get the GeoIP databases.
 
@@ -95,6 +93,4 @@ Check to see if the GeoIP databases are set:
 
 ***
 
-*GeoIP (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*GeoIP (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

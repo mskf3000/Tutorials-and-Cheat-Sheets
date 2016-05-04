@@ -1,10 +1,8 @@
-# Git - Rewinding to a Specific Commit
+## Git - Rewinding to a Specific Commit
 
 By Jack Szwergold, September 15, 2015
 
-***
-
-#### Rewinding to a specific commit hash in the repository.
+### Rewinding to a specific commit hash in the repository.
 
 Check the log for the commit hash.
 
@@ -28,6 +26,4 @@ Now push that commit back to GitHub.
 
 ***
 
-*Git - Rewinding to a Specific Commit (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Git - Rewinding to a Specific Commit (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

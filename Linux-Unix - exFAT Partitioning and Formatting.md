@@ -1,8 +1,6 @@
-# Linux-Unix - exFAT Partitioning and Formatting
+## Linux-Unix - exFAT Partitioning and Formatting
 
 By Jack Szwergold, September 11, 2015
-
-***
 
 This document explains the basics of partitioning, formatting, mounting and labelling a block level device from the command line in Linux/Unix.
 
@@ -164,6 +162,4 @@ Run this command to change the device label on an ExFAT formatted volume:
 
 ***
 
-*Linux-Unix - exFAT Partitioning and Formatting (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Linux-Unix - exFAT Partitioning and Formatting (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

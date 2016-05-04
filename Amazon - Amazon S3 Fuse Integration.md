@@ -1,10 +1,8 @@
-# Amazon - Amazon S3 Fuse Integration
+## Amazon - Amazon S3 Fuse Integration
 
 By Jack Szwergold, October 6, 2015
 
-***
-
-#### Install Tony Wang’s fork of `s3fs` version 1.59.
+### Install Tony Wang’s fork of `s3fs` version 1.59.
 
 The reason you should install Tony Wang]s fork of `s3fs` version 1.59 is that—unlike the main master code—his fork supports folders created by the Amazon S3 control panel.
 
@@ -32,7 +30,7 @@ Finally install it by running `sudo make install`:
 
 	sudo make install
 
-#### Create the config file for `s3fs`.
+### Create the config file for `s3fs`.
 
 A `root`-only `s3fs` setup would go in here:
 
@@ -59,7 +57,7 @@ And a per user `s3fs` setup, the credentials file (`~/.passwd-s3fs`) would be se
 
     chmod 600 ~/.passwd-s3fs
 
-#### Setup the mount point directories.
+### Setup the mount point directories.
 
 Create a parent directory `/opt/cloud_mounts/` if it doesn’t exist:
 
@@ -77,7 +75,7 @@ Change permissions to allow your user—in this case `sysop`—to access it:
 
     sudo chown sysop:sysop -R /opt/cloud_mounts/amazon
 
-#### Mounting and unmounting.
+### Mounting and unmounting.
 
 Mount `s3_bucket_name` as a root:
 
@@ -95,7 +93,7 @@ Ummount `s3_bucket_name` bucket as root:
 
     sudo umount /opt/cloud_mounts/amazon/s3_bucket_name
 
-#### Adjust the `fuse.conf`.
+### Adjust the `fuse.conf`.
 
 Adjust the `fuse.conf` file to allow non-root users to use `allow_other` or `allow_root`:
 
@@ -109,7 +107,7 @@ Might need to add the user—in this case `sysop`—to the `fuse` group:
 
     sudo adduser sysop fuse
 
-#### Some `fstab` related stuff.
+### Some `fstab` related stuff.
 
 If you want the Amazon S3 mount to come up on startup or reboot, you can add it to the `fstab` like this:
 
@@ -123,7 +121,7 @@ Another `fstab` example:
 
     s3fs#s3_bucket_name /opt/cloud_mounts/amazon  fuse    rw,uid=0,gid=0,allow_other     0 0
 
-#### How to use Rsync with Amazon S3 and `s3fs`.
+### How to use Rsync with Amazon S3 and `s3fs`.
 
 The problem is that Amazon S3 is not really a filesystem; it’s weird. So modifcation times are wonky on an Amazon S3 bucket. This is not an issue in average day-to-day use, but if you are using Rsync and only want to copy files that have been changed this could be an issue. Tons of files that have not been changed will seem as if they have been changed by Rsync and it will try to recopy them.
 
@@ -137,6 +135,4 @@ Before running that command for real, run it in a “dry run” mode to see exac
 
 ***
 
-*Amazon - Amazon S3 Fuse Integration (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Amazon - Amazon S3 Fuse Integration (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>

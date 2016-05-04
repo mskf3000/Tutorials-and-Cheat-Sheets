@@ -1,10 +1,8 @@
-# MySQL
+## MySQL
 
 By Jack Szwergold, September 24, 2015
 
-***
-
-#### Sundry MySQL items.
+### Sundry MySQL items.
 
 Get MySQL version number:
 
@@ -63,7 +61,7 @@ Login as root:
 
     mysql -u root -p
 
-#### Managing the MySQL `init.d` scripts.
+### Managing the MySQL `init.d` scripts.
 
 By default, MySQL should get an `init.d` installed. But if somehow it didn’t, run this `update-rc.d` command:
 
@@ -75,7 +73,7 @@ And if for some reason you are running a server where MySQL is not needed, you c
 
 The nice thing about this is it disables the MySQL server but the MySQL client is still installed on the system if you need to remotely connect into something somewhere. And you can even start up the MySQL server manually if needed.
 
-#### Securing an initial MySQL installation by removing test items.
+### Securing an initial MySQL installation by removing test items.
 
 If your version of MySQL supports it, just run `mysql_secure_installation` to secure the installation and get rid of test databases and users:
 
@@ -372,7 +370,5 @@ In some cases you might need to use this for `init-connect` instead of the simpl
 
 ***
 
-*MySQL (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*MySQL (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
 

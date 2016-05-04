@@ -1,10 +1,8 @@
-# Find
+## Find
 
 By Jack Szwergold, September 27, 2015
 
-***
-
-#### Find files older than a specified span of time.
+### Find files older than a specified span of time.
 
 Find all created (`ctime`) files in the current directory that are older than 14 days:
 
@@ -22,7 +20,7 @@ Find all modified (`mtime`) files in the current directory that are older than 3
 
 	find . -maxdepth 1 -type f -mtime +30 -exec ls -la {} \;
 
-#### Find files within a specified span of time.
+### Find files within a specified span of time.
 
 Find all created (`ctime`) files in the current directory that have been modified within the last 14 days:
 
@@ -40,19 +38,19 @@ Find all modified (`mtime`) files in the current directory that have been modifi
 
 	find . -maxdepth 1 -type f -mtime -30 -exec ls -la {} \;
 
-#### Find files based on filesize.
+### Find files based on filesize.
 
 Get a count of all files in the current directory that are larger than 500k:
 
     find . -type f -size +500k | wc -l
 
-#### Find and concatenate a bunch of CSV files.
+### Find and concatenate a bunch of CSV files.
 
 Find and concatenate CSV files while skipping the first header line of a file:
 
 	find . -name "*.csv" | xargs -n 1 tail -n +2 > ~/Desktop/output.csv
 
-#### Create a nicely formatted directory tree.
+### Create a nicely formatted directory tree.
 
     find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 
@@ -80,6 +78,4 @@ Run this command to get rid of `.DS_Store`, `.Trashes`, `._*` and  `.TemporaryIt
 
 ***
 
-*Find (c) by Jack Szwergold*
-
-*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+<sup>*Find (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
