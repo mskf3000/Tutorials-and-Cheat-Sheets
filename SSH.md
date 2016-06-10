@@ -137,4 +137,4 @@ And finally make sure the parent `.ssh/` directory has it’s permissions set to
 
 ***
 
-<sup>*SSH (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*SSH (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

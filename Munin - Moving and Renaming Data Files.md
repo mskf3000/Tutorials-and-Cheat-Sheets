@@ -76,4 +76,4 @@ And the final step is to restart the Munin node again:
 
 ***
 
-<sup>*Munin - Moving and Renaming Data Files (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Munin - Moving and Renaming Data Files (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

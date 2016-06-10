@@ -54,4 +54,4 @@ Or do this to disable SFTP access on a per-group basis:
 
 ***
 
-<sup>*SSH - Chroot and SFTP Notes (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*SSH - Chroot and SFTP Notes (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

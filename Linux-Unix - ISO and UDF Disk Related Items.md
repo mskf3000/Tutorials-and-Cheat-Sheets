@@ -121,4 +121,4 @@ Create a UDF file system on a partition:
 
 ***
 
-<sup>*Linux-Unix - ISO and UDF Disk Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Linux-Unix - ISO and UDF Disk Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -38,4 +38,4 @@ The USB drive should now be remounted and accessible again.
 
 ***
 
-<sup>*Mac OS X - Mounting Devices and Volumes from the Terminal (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Mac OS X - Mounting Devices and Volumes from the Terminal (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

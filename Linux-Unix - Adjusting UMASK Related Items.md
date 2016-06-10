@@ -54,4 +54,4 @@ Change it to this by adding `umask=0002` to the end of the line:
 
 ***
 
-<sup>*Linux-Unix - Adjusting UMASK Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Linux-Unix - Adjusting UMASK Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

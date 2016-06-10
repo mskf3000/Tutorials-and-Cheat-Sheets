@@ -24,4 +24,4 @@ And once you have another user setup with `sudo` rights, it’s safe to get rid 
 
 ***
 
-<sup>*Amazon - Amazon EC2 SSH Adjustments to Allow Password Authentication(c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Amazon - Amazon EC2 SSH Adjustments to Allow Password Authentication(c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

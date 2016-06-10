@@ -103,4 +103,4 @@ Nikto is a simple, web server scanner that scans a web server for known vulnerab
 	
 ***
 
-<sup>*Nikto (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Nikto (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

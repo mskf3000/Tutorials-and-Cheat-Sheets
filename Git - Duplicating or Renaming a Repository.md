@@ -24,4 +24,4 @@ If any `git clone` copies s of the repo exist somewhere, change the origin URL t
 
 ***
 
-<sup>*Git - Duplicating or Renaming a Repository (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Git - Duplicating or Renaming a Repository (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

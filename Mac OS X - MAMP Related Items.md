@@ -46,4 +46,4 @@ Finally restart the MAMP servers and all should be good as far as `exec()` and p
 
 ***
 
-<sup>*Mac OS X - MAMP Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Mac OS X - MAMP Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -113,4 +113,4 @@ The output will be a pile of headers for each HTTP request that is made; see bel
 
 ***
 
-<sup>*Apache - Mod Evasive (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Apache - Mod Evasive (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

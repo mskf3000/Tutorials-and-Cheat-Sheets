@@ -28,4 +28,4 @@ The returned output of that `openssl` command should look something like this:
 
 ***
 
-<sup>*Mac OS X - MD5 Basics (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Mac OS X - MD5 Basics (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -56,4 +56,4 @@ Remove the `.plist` user and group files for the `macports` user (and related gr
 
 ***
 
-<sup>*Mac OS X - MacPorts (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Mac OS X - MacPorts (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -46,4 +46,4 @@ Then just purge and re-install `sysstat` to get it back up and running:
 
 ***
 
-<sup>*Sysstat (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Sysstat (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

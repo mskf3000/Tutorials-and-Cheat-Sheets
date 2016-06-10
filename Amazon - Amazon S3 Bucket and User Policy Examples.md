@@ -131,4 +131,4 @@ This is for a bucket named `s3_bucket_name`. It works, but gives note that it gi
 
 ***
 
-<sup>*Amazon - Amazon S3 Bucket and User Policy Examples (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Amazon - Amazon S3 Bucket and User Policy Examples (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

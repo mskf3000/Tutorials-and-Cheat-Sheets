@@ -55,4 +55,4 @@ So now you should be able to connect to anything on **MY_MACHINE.local:8888** an
 
 ***
 
-<sup>*Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox • Part 2: Basic — Using a Single Network Interface Setup (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox • Part 2: Basic — Using a Single Network Interface Setup (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

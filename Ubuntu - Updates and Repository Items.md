@@ -131,4 +131,4 @@ That command is specific to upgrading the HWE in Ubuntu 12.04 so if you see that
 
 ***
 
-<sup>*Ubuntu - Updates and Repository Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Ubuntu - Updates and Repository Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

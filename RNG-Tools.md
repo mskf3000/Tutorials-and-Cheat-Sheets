@@ -69,4 +69,4 @@ Note that on Ubuntu 14.04 that `RNGDOPTIONS` with `--feed-interval` so just set 
 
 ***
 
-<sup>*RNG-Tools (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*RNG-Tools (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

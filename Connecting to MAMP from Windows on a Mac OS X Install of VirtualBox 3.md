@@ -61,4 +61,4 @@ Again, for basic Windows browser compatibility testing, that might not be a fact
 
 ***
 
-<sup>*Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox • Part 3: Advanced — Using a Dual Network Interface Setup with a Host-Only Interface (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox • Part 3: Advanced — Using a Dual Network Interface Setup with a Host-Only Interface (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

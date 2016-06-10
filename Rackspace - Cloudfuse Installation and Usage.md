@@ -206,4 +206,4 @@ Next change the permissions to restrict read, write and execute to only that one
 
 ***
 
-<sup>*Rackspace - Cloudfuse Installation and Usage (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Rackspace - Cloudfuse Installation and Usage (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

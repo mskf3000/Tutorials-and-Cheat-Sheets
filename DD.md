@@ -72,4 +72,4 @@ Then reformat your `dd` commands to insert `pv` inbetween the input files (`if`)
 
 ***
 
-<sup>*DD (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*DD (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

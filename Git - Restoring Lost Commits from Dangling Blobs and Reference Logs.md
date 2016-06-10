@@ -83,4 +83,4 @@ With that done, pat yourself on the back. You just recovered some hard work and 
 
 ***
 
-<sup>*Git - Restoring Lost Commits from Dangling Blobs and Reference Logs (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Git - Restoring Lost Commits from Dangling Blobs and Reference Logs (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

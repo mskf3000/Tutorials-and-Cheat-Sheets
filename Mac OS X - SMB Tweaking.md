@@ -36,4 +36,4 @@ Honestly, some of this is just “magic” and I don’t trust any of these conf
 
 ***
 
-<sup>*Mac OS X - SMB Tweaking (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Mac OS X - SMB Tweaking (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

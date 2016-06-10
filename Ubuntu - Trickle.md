@@ -71,4 +71,4 @@ And similarly, the value of `Length-Smoothing` is defined as follows in the docu
 
 ***
 
-<sup>*Ubuntu - Trickle (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*</sup>
+*Ubuntu - Trickle (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
