@@ -1,6 +1,7 @@
 title: Postfix - Setting Up a Postfix SASL SMTP Email Relay / Cheat Sheets / Preworn
 title_short: Postfix - Setting Up a Postfix SASL SMTP Email Relay
 description: A cheat sheet I created for dealing with Postfix related items.
+author: Jack Szwergold
 robots: index, nofollow
 keyword: Postfix
 copyright: (c) Copyright 2015 by Jack Szwergold

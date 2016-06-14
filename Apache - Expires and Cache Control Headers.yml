@@ -1,6 +1,7 @@
 title: Apache - Expires and Cache Control Headers / Cheat Sheets / Preworn
 title_short: Apache - Expires and Cache Control Headers
 description: A cheat sheet I created for dealing with Apache expires and cache control related items.
+author: Jack Szwergold
 robots: index, nofollow
 keyword: Apache Web Server
 copyright: (c) Copyright 2015 by Jack Szwergold
