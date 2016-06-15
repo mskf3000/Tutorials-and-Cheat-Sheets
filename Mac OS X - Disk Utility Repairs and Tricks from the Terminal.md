@@ -1,6 +1,6 @@
 ## Mac OS X - Disk Utility Repairs and Tricks from the Terminal
 
-By Jack Szwergold, September 13, 2015
+By Jack Szwergold
 
 ### Using `fsck_hfs` to repair a volume that “Disk Utility” chokes on.
 
@@ -119,4 +119,4 @@ Erase a volume from the command line using `diskutil` like this. Note that `HFS+
 
 ***
 
-*Mac OS X - Disk Utility Repairs and Tricks from the Terminal (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - Disk Utility Repairs and Tricks from the Terminal (c) by Jack Szwergold; written September 13, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

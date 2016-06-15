@@ -1,6 +1,6 @@
 ## Mac OS X - iPerf
 
-By Jack Szwergold, September 15, 2015
+By Jack Szwergold
 
 This tutorial explains how you can install iPerf directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
 
@@ -34,4 +34,4 @@ And once it’s installed, run the command with `-v` to do a simple check to see
 
 ***
 
-*Mac OS X - iPerf (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - iPerf (c) by Jack Szwergold; written September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

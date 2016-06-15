@@ -1,6 +1,6 @@
 ## Mac OS X - Locations of Key User Data
 
-By Jack Szwergold, October 18, 2015
+By Jack Szwergold
 
 All of this stuff is useful for a user migration to a clean OS install.
 
@@ -48,4 +48,4 @@ Or you can copy the full iTunes music  directory from here:
 
 ***
 
-*Mac OS X - Locations of Key User Data (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - Locations of Key User Data (c) by Jack Szwergold; written October 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
