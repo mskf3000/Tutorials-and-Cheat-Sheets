@@ -1,6 +1,6 @@
 ## DD
 
-By Jack Szwergold, September 15, 2015
+By Jack Szwergold
 
 ### Benchmark disk speed with DD.
 
@@ -72,4 +72,4 @@ Then reformat your `dd` commands to insert `pv` inbetween the input files (`if`)
 
 ***
 
-*DD (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*DD (c) by Jack Szwergold; written September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
