@@ -1,6 +1,6 @@
 ## Find - Image Manipulation Related Items
 
-By Jack Szwergold, September 29, 2015
+By Jack Szwergold
 
 ### Convert images into a JPEG tumbnail.
 
@@ -141,4 +141,4 @@ This command simply converts TIFF images to JPEGs at 90% quality:
 
 ***
 
-*Find - Image Manipulation Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Find - Image Manipulation Related Items (c) by Jack Szwergold; written September 29, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
