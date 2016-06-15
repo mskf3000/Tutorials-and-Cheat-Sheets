@@ -1,6 +1,6 @@
 ## Kernel Networking Tweaks
 
-By Jack Szwergold, October 7, 2015
+By Jack Szwergold
 
 The main reason for this document existing is attempting to deal with oddball network connectivity issues in a mixed Windows/Mac environment. Here is what I know and have done.
 
@@ -69,4 +69,4 @@ And set entries like this in there:
 
 ***
 
-*Kernel Networking Tweaks (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Kernel Networking Tweaks (c) by Jack Szwergold; written October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

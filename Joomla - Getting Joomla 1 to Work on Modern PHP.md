@@ -1,6 +1,6 @@
 ## Joomla - Getting Joomla 1 to Work on Modern PHP
 
-By Jack Szwergold, October 5, 2015
+By Jack Szwergold
 
 If you somehow have the misfortune to deal with keeping an ancient Joomla 1.0 install up and running on a modern server running Apache with PHP 5.3 or higher, this is what you need to do.
 
@@ -37,4 +37,4 @@ Now wrap the code around lines 38 to 77 in this conditional:
 
 ***
 
-*Joomla - Getting Joomla 1 to Work on Modern PHP (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Joomla - Getting Joomla 1 to Work on Modern PHP (c) by Jack Szwergold; written October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

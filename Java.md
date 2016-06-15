@@ -1,6 +1,6 @@
 ## Java
 
-By Jack Szwergold, September 21, 2015
+By Jack Szwergold
 
 ### Installing Java via the WebUpd8 PPA repository.
 
@@ -136,4 +136,4 @@ Finally, remove the old `oab-java.sh` items from `/var/local/`.
 
 ***
 
-*Java (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Java (c) by Jack Szwergold; written September 21, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
