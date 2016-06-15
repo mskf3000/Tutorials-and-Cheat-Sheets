@@ -1,6 +1,6 @@
 ## IPTables - IPSet
 
-By Jack Szwergold, October 27, 2015
+By Jack Szwergold
 
 ### Installing IPSet.
 
@@ -205,4 +205,4 @@ And if somehow you need to remove that IPTables rule, run this command:
 
 ***
 
-*IPTables - IPSet (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*IPTables - IPSet (c) by Jack Szwergold; written October 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

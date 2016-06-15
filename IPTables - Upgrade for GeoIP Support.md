@@ -1,6 +1,6 @@
 ## IPTables - Upgrade for GeoIP Support
 
-By Jack Szwergold, October 27, 2015
+By Jack Szwergold
 
 ### For Reference Only! 100% none of this seems to work!
 
@@ -109,4 +109,4 @@ A test ban for (sadly) all of China:
 
 ***
 
-*IPTables - Upgrade for GeoIP Support (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*IPTables - Upgrade for GeoIP Support (c) by Jack Szwergold; written October 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
