@@ -1,6 +1,6 @@
 ## Apache - Mod Evasive
 
-By Jack Szwergold, September 27, 2015
+By Jack Szwergold
 
 Install the Apache `mod_evasive` module:
 
@@ -113,4 +113,4 @@ The output will be a pile of headers for each HTTP request that is made; see bel
 
 ***
 
-*Apache - Mod Evasive (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Apache - Mod Evasive (c) by Jack Szwergold; written September 27, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

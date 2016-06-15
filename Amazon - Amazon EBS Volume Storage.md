@@ -1,6 +1,6 @@
 ## Amazon - Amazon EBS Volume Storage
 
-By Jack Szwergold, September 23, 2015
+By Jack Szwergold
 
 ### Login and make note of your EC2 instances.
 
@@ -38,4 +38,4 @@ And in my tests the device, instead of the volume being `sdf` it’s actually `x
 
 ***
 
-*Amazon - Amazon EBS Volume Storage (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Amazon - Amazon EBS Volume Storage (c) by Jack Szwergold; written September 23, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

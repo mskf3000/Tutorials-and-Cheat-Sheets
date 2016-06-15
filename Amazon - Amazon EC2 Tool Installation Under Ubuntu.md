@@ -1,6 +1,6 @@
 ## Amazon - Amazon EC2 Tool Installation Under Ubuntu
 
-By Jack Szwergold, January 17, 2016
+By Jack Szwergold
 
 Edit the sources list:
 
@@ -27,4 +27,4 @@ This is an example command that allows one to open the Amazone EC2 security set 
 
 ***
 
-*Amazon - Amazon EC2 Tool Installation Under Ubuntu (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Amazon - Amazon EC2 Tool Installation Under Ubuntu (c) by Jack Szwergold; written January 17, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

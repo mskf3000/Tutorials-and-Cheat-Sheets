@@ -1,6 +1,6 @@
 ## Amazon - Amazon S3 Bucket and User Policy Examples
 
-By Jack Szwergold, October 6, 2015
+By Jack Szwergold
 
 ### All Amazon S3 actions for reference.
 
@@ -131,4 +131,4 @@ This is for a bucket named `s3_bucket_name`. It works, but gives note that it gi
 
 ***
 
-*Amazon - Amazon S3 Bucket and User Policy Examples (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Amazon - Amazon S3 Bucket and User Policy Examples (c) by Jack Szwergold; written October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

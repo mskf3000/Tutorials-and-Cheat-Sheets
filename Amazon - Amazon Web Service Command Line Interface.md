@@ -1,6 +1,6 @@
 ## Amazon - Amazon Web Service Command Line Interface
 
-By Jack Szwergold, October 7, 2015
+By Jack Szwergold
 
 ***
 
@@ -93,4 +93,4 @@ Output returned would be something like this:
 
 ***
 
-*Amazon - Amazon Web Service Command Line Interface (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Amazon - Amazon Web Service Command Line Interface (c) by Jack Szwergold; written October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

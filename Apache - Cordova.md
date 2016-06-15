@@ -1,6 +1,6 @@
 ## Apache - Cordova
 
-By Jack Szwergold, March 11, 2016
+By Jack Szwergold
 
 ### Cordova related stuff.
 

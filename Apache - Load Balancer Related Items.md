@@ -1,6 +1,6 @@
 ## Apache - Load Balancer Related Items
 
-By Jack Szwergold, October 18, 2015
+By Jack Szwergold
 
 The purpose of this cheat sheet is to explain the basic concepts behind using an Apache-based load balancer. 
 
@@ -270,4 +270,4 @@ If you need to disable that virtual host configuration, run this `a2dissite` com
 
 ***
 
-*Apache - Load Balancer Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Apache - Load Balancer Related Items (c) by Jack Szwergold; written October 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

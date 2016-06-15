@@ -1,6 +1,6 @@
 ## Avahi Daemon
 
-By Jack Szwergold, September 15, 2015
+By Jack Szwergold
 
 Avahi daemon is a zero-configuration (zeroconf)/multicast networking implementation that is similar to the “Bonjour” service in Mac OS X. Very useful in getting a Linux box to broadcast it’s services across a network.
 
@@ -126,4 +126,4 @@ Just change the `model=RackMac` to match whatever Mac OS X icon you want. To get
 
 ***
 
-*Avahi Daemon (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Avahi Daemon (c) by Jack Szwergold; written September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
