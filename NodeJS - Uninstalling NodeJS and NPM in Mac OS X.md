@@ -1,6 +1,6 @@
 ## NodeJS - Uninstalling NodeJS and NPM in Mac OS X
 
-By Jack Szwergold, February 3, 2015
+By Jack Szwergold
 
 To uninstall NodeJS and NPM from Mac OS X run the following command:
 
@@ -14,4 +14,4 @@ Then you might need to run these commands to get rid of remaining stuff:
 
 ***
 
-*NodeJS - Uninstalling NodeJS and NPM in Mac OS X (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*NodeJS - Uninstalling NodeJS and NPM in Mac OS X (c) by Jack Szwergold; written February 3, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
