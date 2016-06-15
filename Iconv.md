@@ -1,6 +1,6 @@
 ## Iconv
 
-By Jack Szwergold, October 7, 2015
+By Jack Szwergold
 
 ***
 
@@ -14,4 +14,4 @@ An exmaple of converting a file from `UTF-8` to `iso-8859-1`:
 
 ***
 
-*Iconv (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Iconv (c) by Jack Szwergold; written October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

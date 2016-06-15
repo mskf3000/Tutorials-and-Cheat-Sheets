@@ -1,6 +1,6 @@
 ## IFTop
 
-By Jack Szwergold, September 14, 2015
+By Jack Szwergold
 
 ### Basic IFTop usage.
 
@@ -30,4 +30,4 @@ Check for port 445 (HTTP) traffic on `en0`:
 
 ***
 
-*IFTop (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*IFTop (c) by Jack Szwergold; written September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

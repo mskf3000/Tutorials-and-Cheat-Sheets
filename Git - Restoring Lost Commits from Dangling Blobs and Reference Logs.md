@@ -1,6 +1,6 @@
 ## Git - Restoring Lost Commits from Dangling Blobs and Reference Logs
 
-By Jack Szwergold, October 3, 2015
+By Jack Szwergold
 
 The basic concept here is you dug yourself into a hole by reverting commits. And there is no easy way to “pull” from origin or recover by any other means.
 
@@ -83,4 +83,4 @@ With that done, pat yourself on the back. You just recovered some hard work and 
 
 ***
 
-*Git - Restoring Lost Commits from Dangling Blobs and Reference Logs (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Git - Restoring Lost Commits from Dangling Blobs and Reference Logs (c) by Jack Szwergold; written October 3, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
