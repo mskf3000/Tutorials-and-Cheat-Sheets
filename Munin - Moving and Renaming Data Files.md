@@ -1,6 +1,6 @@
 ## Munin - Moving and Renaming Data Files
 
-By Jack Szwergold, September 16, 2015
+By Jack Szwergold
 
 This tutorial explains how to move or change a Munin node name without losing past data files and related history.
 
@@ -76,4 +76,4 @@ And the final step is to restart the Munin node again:
 
 ***
 
-*Munin - Moving and Renaming Data Files (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Munin - Moving and Renaming Data Files (c) by Jack Szwergold; written September 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

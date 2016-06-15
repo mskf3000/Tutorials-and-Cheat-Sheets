@@ -1,6 +1,6 @@
 ## MOTD
 
-By Jack Szwergold, September 24, 2015
+By Jack Szwergold
 
 ### Adding a custom MOTD message.
 
@@ -57,4 +57,4 @@ Comment out the content of these MOTD scripts:
 
 ***
 
-*MOTD (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*MOTD (c) by Jack Szwergold; written September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
