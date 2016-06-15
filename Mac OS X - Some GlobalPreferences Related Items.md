@@ -1,5 +1,7 @@
 ## Mac OS X - Some GlobalPreferences Related Items
 
+By Jack Szwergold
+
 ### Check a list of all user connected preference files.
 
 List all Mac OS X user defaults preference files:
@@ -42,4 +44,4 @@ And then, just restart the Finder with this command:
 
 ***
 
-*Mac OS X - Some GlobalPreferences Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - Some GlobalPreferences Related Items (c) by Jack Szwergold; written May 4, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

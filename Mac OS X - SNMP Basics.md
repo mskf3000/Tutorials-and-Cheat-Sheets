@@ -1,6 +1,6 @@
 ## Mac OS X - SNMP Basics
 
-By Jack Szwergold, October 6, 2015
+By Jack Szwergold
 
 ### Customzing the SNMP data a host passes.
 
@@ -40,4 +40,4 @@ Fetch the services info from the host:
 
 ***
 
-*Mac OS X - SNMP Basics (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - SNMP Basics (c) by Jack Szwergold; written October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

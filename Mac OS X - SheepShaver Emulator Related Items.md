@@ -1,6 +1,6 @@
 ## Mac OS X - SheepShaver Emulator Related Items
 
-By Jack Szwergold, October 9, 2015
+By Jack Szwergold
 
 Mac OS X 10.9.5 and higher won’t allow Sheepsaver to access optical drives unless the user who is running Sheepsaver is added as a member of the group `operator` which apparently is the group that deals optical disk volumes.
 
@@ -18,4 +18,4 @@ And to remove your user from the group `operator` just run this command:
 
 ***
 
-*Mac OS X - SheepShaver Emulator Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - SheepShaver Emulator Related Items (c) by Jack Szwergold; written October 9, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

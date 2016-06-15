@@ -1,6 +1,6 @@
 ## Mac OS X - MAMP Related Items
 
-By Jack Szwergold, October 7, 2015
+By Jack Szwergold
 
 This is how you can setup named virtual hosts on MAMP. First open up the `httpd.conf` file like this:
 
@@ -46,4 +46,4 @@ Finally restart the MAMP servers and all should be good as far as `exec()` and p
 
 ***
 
-*Mac OS X - MAMP Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - MAMP Related Items (c) by Jack Szwergold; written October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

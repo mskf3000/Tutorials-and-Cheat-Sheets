@@ -1,6 +1,6 @@
 ## Mac OS X - NLOAD
 
-By Jack Szwergold, September 15, 2015
+By Jack Szwergold
 
 This tutorial explains how you can install `nload` directly from source code on Mac OS X. Tested on Mac OS X 10.9.5.
 
@@ -68,4 +68,4 @@ Uninstall if you need to:
 
 ***
 
-*Mac OS X - NLOAD (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - NLOAD (c) by Jack Szwergold; written September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

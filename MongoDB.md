@@ -1,6 +1,6 @@
 ## MongoDB
 
-By Jack Szwergold, September 22, 2015
+By Jack Szwergold
 
 ### Install MongoDB.
 
@@ -355,5 +355,5 @@ Then do this to get rid of the old lock file:
 
 ***
 
-*MongoDB (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*MongoDB (c) by Jack Szwergold; written September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 
