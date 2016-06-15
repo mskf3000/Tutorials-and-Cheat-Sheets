@@ -1,6 +1,6 @@
 ## Lsyncd
 
-By Jack Szwergold, September 18, 2015
+By Jack Szwergold
 
 ### Installing Lsyncd.
 
@@ -204,4 +204,4 @@ And copy these simple log rotation scripts into that file:
 
 ***
 
-*Lsyncd (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Lsyncd (c) by Jack Szwergold; written September 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
