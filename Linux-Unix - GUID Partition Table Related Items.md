@@ -1,6 +1,6 @@
 ## Linux-Unix - GUID Partition Table Related Items
 
-By Jack Szwergold, September 30, 2015
+By Jack Szwergold
 
 ### Getting rid of a GPT/GUID disk label.
 
@@ -90,4 +90,4 @@ And the output should be a clean report of device details without GPT/GUI a warn
 
 ***
 
-*Linux-Unix - GUID Partition Table Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Linux-Unix - GUID Partition Table Related Items (c) by Jack Szwergold; written September 30, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

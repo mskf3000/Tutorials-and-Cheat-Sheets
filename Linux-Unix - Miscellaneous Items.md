@@ -1,6 +1,6 @@
 ## Linux-Unix - Miscellaneous Items
 
-By Jack Szwergold, October 4, 2015
+By Jack Szwergold
 
 ### Get some basic system information like this.
 
@@ -213,4 +213,4 @@ Use `losf` to see what ports are connected to a process:
 
 ***
 
-*Linux-Unix - Miscellaneous Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Linux-Unix - Miscellaneous Items (c) by Jack Szwergold; written October 4, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

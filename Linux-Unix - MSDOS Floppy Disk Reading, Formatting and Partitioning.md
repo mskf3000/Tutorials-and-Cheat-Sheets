@@ -1,6 +1,6 @@
 ## Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning
 
-By Jack Szwergold, September 18, 2015
+By Jack Szwergold
 
 ### An adjustment to the GRUB bootloader that needs to be made to allow the floppy to be recognized.
 
@@ -166,4 +166,4 @@ Print USB device details:
 
 ***
 
-*Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Linux-Unix - MSDOS Floppy Disk Reading, Formatting and Partitioning (c) by Jack Szwergold; written September 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

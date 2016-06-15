@@ -1,6 +1,6 @@
 ## Linux-Unix - LVM Related Items
 
-By Jack Szwergold, September 30, 2015
+By Jack Szwergold
 
 ### Renaming an LVM logical volume group.
 
@@ -216,5 +216,5 @@ Check the current UUID:
 
 ***
 
-*Linux-Unix - LVM Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Linux-Unix - LVM Related Items (c) by Jack Szwergold; written September 30, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 
