@@ -1,6 +1,6 @@
 ## Nmap
 
-By Jack Szwergold, October 3, 2015
+By Jack Szwergold
 
 Scan a range via a wildcard and returns hostname as well as IP:
 
@@ -38,4 +38,4 @@ A scan designed to attempt to discover versions of services on the server:
 
 ***
 
-*Nmap (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Nmap (c) by Jack Szwergold; written October 3, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

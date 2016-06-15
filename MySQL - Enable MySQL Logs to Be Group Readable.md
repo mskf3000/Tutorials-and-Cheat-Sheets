@@ -1,6 +1,6 @@
 ## MySQL - Enable MySQL Logs to Be Group Readable
 
-By Jack Szwergold, September 24, 2015
+By Jack Szwergold
 
 This procedure allows you to set MySQL logs to be group readable which can be useful for debugging scenarios. Still a slight security risk but if this is a needed for your usage, this is how you do it:
 
@@ -99,4 +99,4 @@ To this:
 
 ***
 
-*MySQL - Enable MySQL Logs to Be Group Readable (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*MySQL - Enable MySQL Logs to Be Group Readable (c) by Jack Szwergold; written September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
