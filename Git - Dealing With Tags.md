@@ -1,6 +1,6 @@
 ## Git - Dealing With Tags
 
-By Jack Szwergold, September 15, 2015
+By Jack Szwergold
 
 ### Simple introduction to how tags work in git.
 
@@ -30,4 +30,4 @@ Checkout a specific tag:
 
 ***
 
-*Git - Dealing With Tags (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Git - Dealing With Tags (c) by Jack Szwergold; written September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

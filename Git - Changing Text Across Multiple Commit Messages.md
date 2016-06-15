@@ -1,6 +1,6 @@
 ## Git - Changing Text Across Multiple Commit Messages
 
-By Jack Szwergold, September 15, 2015
+By Jack Szwergold
 
 ### Changing text across multiple commit messages in a branch.
 
@@ -18,4 +18,4 @@ Now push that commit back to GitHub.
 
 ***
 
-*Git - Changing Text Across Multiple Commit Messages (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Git - Changing Text Across Multiple Commit Messages (c) by Jack Szwergold; written September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
