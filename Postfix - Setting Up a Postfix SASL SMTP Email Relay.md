@@ -1,6 +1,6 @@
 ## Setting Up a Postfix SASL SMTP Email Relay
 
-By Jack Szwergold, October 7, 2015
+By Jack Szwergold
 
 By default, Mac OS X has Postfix installed. But it’s not enabled by default. Not to mention sending emails via a `localhost` MTA will most likely result in the message being tagged as SPAM pretty quickly.
 
@@ -158,4 +158,4 @@ Followed by this `launchctl load` command:
 
 ***
 
-*Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold; written October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

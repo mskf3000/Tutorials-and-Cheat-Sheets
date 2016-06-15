@@ -1,6 +1,6 @@
 ## Using an Ubuntu Linux Server
 
-By Jack Szwergold, March 30, 2014
+By Jack Szwergold
 
 ### Part 2: Setting Up a LAMP Stack
 
@@ -255,4 +255,4 @@ It will initially ask for your root password. Enter it and move on. The next que
 
 ***
 
-*Using an Ubuntu Linux Server • Part 2: Setting Up a LAMP Stack (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Using an Ubuntu Linux Server • Part 2: Setting Up a LAMP Stack (c) by Jack Szwergold; written March 30, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

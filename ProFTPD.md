@@ -1,6 +1,6 @@
 ## ProFTPD
 
-By Jack Szwergold, October 7, 2015
+By Jack Szwergold
 
 First things first: Unless you are in 1993, there is no reason to use straight FTP anymore. Pretty much every “FTP” connection anyone uses nowadays is SFTP anyway. But on the off chance you have to work on a setup that requires FTP, you could do worse than use ProFTP to manage the service.
 
@@ -330,4 +330,4 @@ And here is the actual, full ProFTPD config file for review:
 
 ***
 
-*ProFTPD (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*ProFTPD (c) by Jack Szwergold; written October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

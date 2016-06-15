@@ -1,6 +1,6 @@
 ## Tomcat6
 
-By Jack Szwergold, September 24, 2015
+By Jack Szwergold
 
 ### Install Tomcat6.
 
@@ -164,4 +164,4 @@ Change permissions on the following directories:
 
 ***
 
-*Tomcat6 (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Tomcat6 (c) by Jack Szwergold; written September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,6 +1,6 @@
 ## VI
 
-By Jack Szwergold, October 7, 2015
+By Jack Szwergold
 
 I honestly get confused when I’m using VI since I prefer to use Nano or Pico. So these notes are to help me when I’m somehow “trapped” using VI.
 
@@ -20,4 +20,4 @@ Now if you want to exit, enter “command mode” by typing `:` and choose one o
 
 ***
 
-*VI (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*VI (c) by Jack Szwergold; written October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

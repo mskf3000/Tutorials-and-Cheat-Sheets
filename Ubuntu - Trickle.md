@@ -1,6 +1,6 @@
 ## Ubuntu - Trickle
 
-By Jack Szwergold, October 9, 2015
+By Jack Szwergold
 
 ### Installing Trickle.
 
@@ -71,4 +71,4 @@ And similarly, the value of `Length-Smoothing` is defined as follows in the docu
 
 ***
 
-*Ubuntu - Trickle (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Ubuntu - Trickle (c) by Jack Szwergold; written October 9, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

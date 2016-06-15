@@ -1,6 +1,6 @@
 ## SSH - Chroot and SFTP Notes
 
-By Jack Szwergold, September 17, 2015
+By Jack Szwergold
 
 ### Setting up SFTP chroot access for a specific user.
 
@@ -54,4 +54,4 @@ Or do this to disable SFTP access on a per-group basis:
 
 ***
 
-*SSH - Chroot and SFTP Notes (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*SSH - Chroot and SFTP Notes (c) by Jack Szwergold; written September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

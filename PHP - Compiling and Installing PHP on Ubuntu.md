@@ -1,6 +1,6 @@
 ## PHP - Compiling and Installing PHP on Ubuntu
 
-By Jack Szwergold, October 13, 2015
+By Jack Szwergold
 
 This cheat sheet was compiled based on some notes from my dealing with a client specific application that would only work well in PHP 5.1.6 due to GD library TrueType font support. This is in no way the most complete version of PHP 5.1.6 one can compile from source on a modern Ubuntu install, but it worked for the task. The notes can possibly applied to compiling other versions of PHP from source code, but not spending any time testing—and debugging—version specific quirks for this cheat sheet.
 
@@ -171,4 +171,4 @@ Change to:
 
 ***
 
-*PHP - Compiling and Installing PHP on Ubuntu (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*PHP - Compiling and Installing PHP on Ubuntu (c) by Jack Szwergold; written October 13, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

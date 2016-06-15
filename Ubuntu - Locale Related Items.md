@@ -1,6 +1,6 @@
 ## Ubuntu - Locale Related Items
 
-By Jack Szwergold, October 5, 2015
+By Jack Szwergold
 
 ### Fixing Perl local errors on Ubuntu.
 
@@ -52,4 +52,4 @@ Check the output of `locale` which should now be something like this:
 
 ***
 
-*Ubuntu - Locale Related Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Ubuntu - Locale Related Items (c) by Jack Szwergold; written October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,6 +1,6 @@
 ## VirtualBox - SMB and Netatalk Filesharing Items
 
-By Jack Szwergold, September 20, 2015
+By Jack Szwergold
 
 ### SMB (Samba) installation setup on a VirtualBox guest OS.
 
@@ -140,4 +140,4 @@ An example AFP (Apple Filing Protocol) service (`afpd.service`):
 
 ***
 
-*VirtualBox - SMB and Netatalk Filesharing Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*VirtualBox - SMB and Netatalk Filesharing Items (c) by Jack Szwergold; written September 20, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,6 +1,6 @@
 ## Sed
 
-By Jack Szwergold, January 24, 2016
+By Jack Szwergold
 
 ### Comment out all uncommented lines in a file including empty lines.
 
@@ -35,4 +35,4 @@ By Jack Szwergold, January 24, 2016
 
 ***
 
-*Sed (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Sed (c) by Jack Szwergold; written January 24, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,6 +1,6 @@
 ## Vagrant
 
-By Jack Szwergold, January 23, 2016
+By Jack Szwergold
 
 ### Basic usage.
 
@@ -217,4 +217,4 @@ And the output should be something like this:
 
 ***
 
-*Vagrant (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Vagrant (c) by Jack Szwergold; written January 23, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

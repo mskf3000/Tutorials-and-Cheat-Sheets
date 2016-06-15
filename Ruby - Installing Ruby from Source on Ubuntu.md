@@ -1,6 +1,6 @@
 ## Ruby - Installing Ruby from Source on Ubuntu
 
-By Jack Szwergold, September 21, 2015
+By Jack Szwergold
 
 This tutorial explains how to compile Ruby version 2.2.3 from source on Ubuntu, but the same basic recipe can be used for most any other version of Ruby on Ubuntu.
 
@@ -98,4 +98,4 @@ And change it to `true` like this:
 
 ***
 
-*Ruby - Installing Ruby from Source on Ubuntu (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Ruby - Installing Ruby from Source on Ubuntu (c) by Jack Szwergold; written September 21, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

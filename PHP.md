@@ -1,6 +1,6 @@
 ## PHP
 
-By Jack Szwergold, October 5, 2015
+By Jack Szwergold
 
 ### Disable `expose_php` in PHP.
 
@@ -142,4 +142,4 @@ Now restart Apache to have those new PHP settings take effect and you should be 
 
 ***
 
-*PHP (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*PHP (c) by Jack Szwergold; written October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

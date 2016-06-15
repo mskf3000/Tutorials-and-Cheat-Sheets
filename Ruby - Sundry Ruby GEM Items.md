@@ -1,6 +1,6 @@
 ## Ruby - Sundry Ruby GEM Items
 
-By Jack Szwergold, September 20, 2015
+By Jack Szwergold
 
 ### List all locally installed Ruby GEMs.
 
@@ -36,4 +36,4 @@ Will remove all old versions of the GEM.
 
 ***
 
-*Ruby - Sundry Ruby GEM Items (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Ruby - Sundry Ruby GEM Items (c) by Jack Szwergold; written September 20, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

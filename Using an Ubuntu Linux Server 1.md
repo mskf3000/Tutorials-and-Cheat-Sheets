@@ -1,6 +1,6 @@
 ## Using an Ubuntu Linux Server
 
-By Jack Szwergold, March 19, 2014
+By Jack Szwergold
 
 ### Part 1: Configuring a Base Level Ubuntu Server
 
@@ -392,4 +392,4 @@ Technically speaking, I could conceivably just delete the `updates-available` an
 
 ***
 
-*Using an Ubuntu Linux Server • Part 1: Configuring a Base Level Ubuntu Server (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Using an Ubuntu Linux Server • Part 1: Configuring a Base Level Ubuntu Server (c) by Jack Szwergold; written March 19, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

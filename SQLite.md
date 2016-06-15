@@ -1,6 +1,6 @@
 ## SQLite
 
-By Jack Szwergold, September 22, 2015
+By Jack Szwergold
 
 Load the database:
 
@@ -27,4 +27,4 @@ After your done editing the database, load it back into SQLite like this:
 
 ***
 
-*SQLite (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*SQLite (c) by Jack Szwergold; written September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

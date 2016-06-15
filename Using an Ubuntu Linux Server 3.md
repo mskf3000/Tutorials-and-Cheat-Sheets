@@ -1,6 +1,6 @@
 ## Using an Ubuntu Linux Server
 
-By Jack Szwergold, April 6, 2014
+By Jack Szwergold
 
 ### Part 3: Monitoring and Securing Your Ubuntu Server
 
@@ -348,4 +348,4 @@ Now when your server restarts, `iptables-persistent` will load all of the rules 
 
 ***
 
-*Using an Ubuntu Linux Server • Part 3: Monitoring and Securing Your Ubuntu Server (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Using an Ubuntu Linux Server • Part 3: Monitoring and Securing Your Ubuntu Server (c) by Jack Szwergold; written April 6, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

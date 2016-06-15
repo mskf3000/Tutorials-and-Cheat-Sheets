@@ -1,6 +1,6 @@
 ## RNG-Tools
 
-By Jack Szwergold, September 24, 2015
+By Jack Szwergold
 
 ### Install RNG-Tools.
 
@@ -69,4 +69,4 @@ Note that on Ubuntu 14.04 that `RNGDOPTIONS` with `--feed-interval` so just set 
 
 ***
 
-*RNG-Tools (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*RNG-Tools (c) by Jack Szwergold; written September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

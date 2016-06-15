@@ -1,6 +1,6 @@
 ## Route
 
-By Jack Szwergold, October 22, 2015
+By Jack Szwergold
 
 ### Setting a static route.
 
@@ -34,4 +34,4 @@ To view the routing table in Mac OS X you would run this Netstat command:
 
 ***
 
-*Route (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Route (c) by Jack Szwergold; written October 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

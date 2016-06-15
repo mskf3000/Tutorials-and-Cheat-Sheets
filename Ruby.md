@@ -1,6 +1,6 @@
 ## Ruby
 
-By Jack Szwergold, September 20, 2015
+By Jack Szwergold
 
 ### Install required Ruby GEMs for the test web application install.
 
@@ -39,4 +39,4 @@ Or it could even be manually launched directly through ruby like this:
 
 ***
 
-*Ruby (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Ruby (c) by Jack Szwergold; written September 20, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -1,6 +1,6 @@
 ## Telephony - Sending an SMS via Email
 
-By Jack Szwergold, September 18, 2015
+By Jack Szwergold
 
 Haven’t tested these in a while but sending an email to a cell number on any of the following email addresses should send a message to that cell number.
 
@@ -32,4 +32,4 @@ Verizon email to SMS address format:
 
 ***
 
-*Telephony - Sending an SMS via Email (c) by Jack Szwergold. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Telephony - Sending an SMS via Email (c) by Jack Szwergold; written September 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
