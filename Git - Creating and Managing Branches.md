@@ -247,4 +247,4 @@ And the output will be something like this; note there are no â€œdangling blobsâ
 
 ***
 
-*Git - Creating and Managing Branches (c) by Jack Szwergold; written September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Git - Creating and Managing Branches (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

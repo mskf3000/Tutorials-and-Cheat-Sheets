@@ -135,4 +135,4 @@ Before running that command for real, run it in a “dry run” mode to see exac
 
 ***
 
-*Amazon - Amazon S3 Fuse Integration (c) by Jack Szwergold; written October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Amazon - Amazon S3 Fuse Integration (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -515,4 +515,4 @@ Add this to the last line:
 
 ***
 
-*Ubuntu - Basic System Setup (c) by Jack Szwergold; written January 16, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Ubuntu - Basic System Setup (c) by Jack Szwergold; written on January 16, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

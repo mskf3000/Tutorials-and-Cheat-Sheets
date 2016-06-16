@@ -221,4 +221,4 @@ Check to see if `[smart_*]` entry exists. If it doesn’t just add this simple c
 
 ***
 
-*SMARTMonTools (c) by Jack Szwergold; written September 23, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*SMARTMonTools (c) by Jack Szwergold; written on September 23, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -100,4 +100,4 @@ Now, the bootable Mac OS X USB flash drive should be renamed ready for use.
 
 ***
 
-*Mac OS X - Making a Bootable Mac OS X USB Flash Drive (c) by Jack Szwergold; written October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - Making a Bootable Mac OS X USB Flash Drive (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

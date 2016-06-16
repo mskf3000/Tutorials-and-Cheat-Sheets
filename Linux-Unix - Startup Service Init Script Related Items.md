@@ -65,4 +65,4 @@ But I will deconstruct the link structure for `S20apache2`. Here is how it break
 
 ***
 
-*Linux-Unix - Startup Service Init Script Related Items (c) by Jack Szwergold; written October 3, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Linux-Unix - Startup Service Init Script Related Items (c) by Jack Szwergold; written on October 3, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

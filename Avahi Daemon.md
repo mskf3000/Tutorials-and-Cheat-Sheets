@@ -126,4 +126,4 @@ Just change the `model=RackMac` to match whatever Mac OS X icon you want. To get
 
 ***
 
-*Avahi Daemon (c) by Jack Szwergold; written September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Avahi Daemon (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

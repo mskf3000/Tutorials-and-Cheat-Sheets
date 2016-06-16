@@ -93,4 +93,4 @@ If this is happening on a Linux/Unix system run that same command like this:
 
 ***
 
-*Mac OS X - MTR (c) by Jack Szwergold; written September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - MTR (c) by Jack Szwergold; written on September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

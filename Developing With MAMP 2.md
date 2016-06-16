@@ -90,6 +90,6 @@ So thanks to the flexibility of name-based virtual hosts, Apache in your MAMP se
 
 ***
 
-*Developing With MAMP 2.1.4 • Part 2: Configuring Name-Based Virtual Hosts in MAMP (c) by Jack Szwergold; written February 17, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Developing With MAMP 2.1.4 • Part 2: Configuring Name-Based Virtual Hosts in MAMP (c) by Jack Szwergold; written on February 17, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 
 [1]: http://httpd.apache.org/docs/2.2/vhosts/name-based.html "Apache HTTP Server • Name-based Virtual Host Support"

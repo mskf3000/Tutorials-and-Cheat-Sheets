@@ -35,4 +35,4 @@ By Jack Szwergold
 
 ***
 
-*Sed (c) by Jack Szwergold; written January 24, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Sed (c) by Jack Szwergold; written on January 24, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

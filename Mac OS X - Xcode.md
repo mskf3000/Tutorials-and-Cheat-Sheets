@@ -18,4 +18,4 @@ That directory contains:
 
 ***
 
-*Mac OS X - Xcode (c) by Jack Szwergold; written March 16, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - Xcode (c) by Jack Szwergold; written on March 16, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

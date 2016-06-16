@@ -27,4 +27,4 @@ Would show the following content info:
 
 ***
 
-*Tar (c) by Jack Szwergold; written October 8, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Tar (c) by Jack Szwergold; written on October 8, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

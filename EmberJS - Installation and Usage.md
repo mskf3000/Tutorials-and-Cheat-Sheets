@@ -219,4 +219,4 @@ The JavaScript component logic would go into `app/models/pull-requests.js`.
 
 ***
 
-*EmberJS - Installation and Usage (c) by Jack Szwergold; written November 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*EmberJS - Installation and Usage (c) by Jack Szwergold; written on November 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

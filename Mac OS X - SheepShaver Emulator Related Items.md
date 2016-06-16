@@ -18,4 +18,4 @@ And to remove your user from the group `operator` just run this command:
 
 ***
 
-*Mac OS X - SheepShaver Emulator Related Items (c) by Jack Szwergold; written October 9, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - SheepShaver Emulator Related Items (c) by Jack Szwergold; written on October 9, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -37,4 +37,4 @@ Now wrap the code around lines 38 to 77 in this conditional:
 
 ***
 
-*Joomla - Getting Joomla 1 to Work on Modern PHP (c) by Jack Szwergold; written October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Joomla - Getting Joomla 1 to Work on Modern PHP (c) by Jack Szwergold; written on October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

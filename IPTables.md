@@ -253,4 +253,4 @@ This variant will let you know date, time and whether the dropped packet was TCP
 
 ***
 
-*IPTables (c) by Jack Szwergold; written September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*IPTables (c) by Jack Szwergold; written on September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

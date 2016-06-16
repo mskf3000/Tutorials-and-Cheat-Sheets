@@ -98,4 +98,4 @@ An example of cache control and expires headers for an Amazon CloudFront CDN set
 
 ***
 
-*Apache - Expires and Cache Control Headers (c) by Jack Szwergold; written September 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Apache - Expires and Cache Control Headers (c) by Jack Szwergold; written on September 19, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

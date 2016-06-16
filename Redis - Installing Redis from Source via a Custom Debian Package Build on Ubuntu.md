@@ -79,4 +79,4 @@ And if you ever want to reinstall that Debian package, just run this command:
 
 ***
 
-*Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold; written September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Redis - Installing Redis from Source via a Custom Debian Package Build on Ubuntu (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

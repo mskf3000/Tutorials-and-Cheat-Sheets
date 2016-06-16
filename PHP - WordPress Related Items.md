@@ -46,4 +46,4 @@ Using `RELOCATE` forces the WordPress install to rewrite many default internal s
 
 ***
 
-*PHP - WordPress Related Items (c) by Jack Szwergold; written October 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*PHP - WordPress Related Items (c) by Jack Szwergold; written on October 16, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

@@ -28,4 +28,4 @@ Setting your code to send SMTP mail to port `1025` on `localhost` will send it t
 
 ***
 
-*MailCatcher (c) by Jack Szwergold; written September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*MailCatcher (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

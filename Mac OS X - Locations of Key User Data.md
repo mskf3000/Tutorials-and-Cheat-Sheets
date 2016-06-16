@@ -48,4 +48,4 @@ Or you can copy the full iTunes music  directory from here:
 
 ***
 
-*Mac OS X - Locations of Key User Data (c) by Jack Szwergold; written October 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Mac OS X - Locations of Key User Data (c) by Jack Szwergold; written on October 18, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

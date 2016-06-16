@@ -370,5 +370,5 @@ In some cases you might need to use this for `init-connect` instead of the simpl
 
 ***
 
-*MySQL (c) by Jack Szwergold; written September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*MySQL (c) by Jack Szwergold; written on September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
 
