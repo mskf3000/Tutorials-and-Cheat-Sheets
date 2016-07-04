@@ -105,7 +105,8 @@ Run this command to install more base level tools:
 	  dnsutils traceroute nmap bc htop finger curl whois rsync lsof \
 	  iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass \
 	  dkms mc elinks ntp dos2unix p7zip-full nfs-common imagemagick \
-	  slurm sharutils uuid-runtime chkconfig quota pv trickle apachetop
+	  slurm sharutils uuid-runtime chkconfig quota pv trickle apachetop \
+	  virtualbox-dkms
 
 #### Install the VirtualBox Guest DKMS Stuff.
 
