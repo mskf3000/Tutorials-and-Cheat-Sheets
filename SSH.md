@@ -135,6 +135,17 @@ And finally make sure the parent `.ssh/` directory has it’s permissions set to
 
     ￼sudo chmod 700 ~/.ssh/
 
+
+### A fix for weird Vagrant (VirtualBox) hangs.
+
+If for some reason your Vagrant installed VirtualBox hangs when you SSH into it. reinstall the DKMS stuff like this. First uninstall it like this:
+
+    sudo aptitude remove virtualbox-dkms
+
+Then reinstall it by running this command:
+
+    sudo aptitude install virtualbox-dkms
+
 ***
 
 *SSH (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
