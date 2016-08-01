@@ -101,11 +101,11 @@ And once those are installed, run this command to ensure the PHP FastCGI modules
 
     sudo lighty-enable-mod fastcgi fastcgi-php
 
-With that done, restart Lighttpd:
+With that done, let’s restart Lighttpd to get those modules loaded:
 
-    sudo service lighttpd force-reload
+    sudo service lighttpd restart
 
-Now, test PHP by creating a simple test file like this:
+And now, let’s test the PHP install by creating a simple test file like this; I’m using **nano** for a text editor in this example, but feel free to use whatever text editor you prefer:
 
     sudo nano /var/www/test.php
 
@@ -117,11 +117,11 @@ And the contents of that file should be something like this:
 
 	?>
 
-And now test that file by loading it in your web browser like this:
+Save that newly created *test.php*, exit your text editor, and now load that file it in your web browser like this:
 
-    http://192.168.56.30/test.php
+    http://domain_name_or_IP/test.php
 
-If everything has worked out well, the page should load with the standard PHP info page. And to make sure that CGI/FastCGI is enabled, check under the “Server API.”
+If everything goes as planned, that page should load with the standard PHP info page that reflects all current PHP—and related—server settings on that server. And to make sure that everything is working as we want, check under the **Server API** and make sure it’s set to **CGI/FastCGI**.
 
 With that done, let’s move onto getting the MySQL stuff installed.
 
