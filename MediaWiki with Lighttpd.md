@@ -20,17 +20,21 @@ TK
 
 ## Step Two — Configure MySQL and Create Credentials for MediaWiki
 
-Install MySQL like this:
+Now that we know the server is properly setup, let’s get MySQL installed like this:
 
 	sudo apt-get install -y --assume-yes mysql-server
 
-During this initial install it will ask you to setup a root password. Set it to whatever password you wish.
+This initial MySQL install will prompt you to choose a **root** password. Type in whatever password you feel comfortable with and move on with the install:
 
 Now secure the MySQL install like this:
 
 	mysql_secure_installation
 
-You will need to know your MySQL `root` password to proceed but basically just respond “Y” to all of the questions except the one that asks to change the root password.
+You’ll be prompted for the MySQL **root** password that was just created; enter that and hit return.
+
+
+
+to proceed but basically just respond “Y” to all of the questions except the one that asks to change the root password.
 
 With that done, let’s login to MySQL via the command line like this:
 
