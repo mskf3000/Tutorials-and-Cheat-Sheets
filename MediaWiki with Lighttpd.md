@@ -36,11 +36,11 @@ Now, let’s do some basic MySQL hardening by running this command:
 
 You’ll be prompted for the MySQL **root** password that was just created; enter that and hit return. Answer the remaining prompts as follows:
 
-* Change the root password? Select **N** for “No.”
-* Remove anonymous users? Select **Y** for “Yes.”
-* Disallow root login remotely? Select **Y** for “Yes.”
-* Remove test database and access to it? Select **Y** for “Yes.”
-* Reload privilege tables now? Select **Y** for “Yes.”
+* **Change the root password?** Select **N** for “No.”
+* **Remove anonymous users?** Select **Y** for “Yes.”
+* **Disallow root login remotely?** Select **Y** for “Yes.”
+* **Remove test database and access to it?** Select **Y** for “Yes.”
+* **Reload privilege tables now?** Select **Y** for “Yes.”
 
 With that all done, let’s login into your server’s newly installed MySQL instance with this command; note you will be prompted for your **root** password:
 
@@ -71,21 +71,25 @@ Once that’s done you can exit MySQL by simply typing `exit;` and hitting retur
 
 ## Configure Lighttpd and PHP-FPM
 
-And then install Lighttpd like this:
+We are going to be using Lighttpd and PHP-FPM as our web server for MediaWiki in this tutorial, so let’s go ahead and install it like this.
+
+First, run this command to install Lighttpd itself:
 
     sudo apt-get install -y --assume-yes lighttpd
 
-Now test the install by going to the URL of your server via a web browser like this:
+With that done you can test the install to see if Lighttpd is up and runnig by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
 
-    http://192.168.56.30
+    http://domain_name_or_IP
 
-If all went well you’ll see a placeholder page  Lighttpd web page. But if somehow the Lighttpd service does not start, you can force it to come up by running this command:
+If all went well you’ll see a defauly placeholder Lighttpd web page. But if somehow the Lighttpd service does not start, you can force it to come up by running this command:
 
     sudo service lighttpd start
 
 With that done, let’s move onto getting the PHP stuff installed.
 
-Might need to run this `update-rc.d` command to get the defaults set so Lighttpd comes back up on reboot/cold boot:
+***
+
+**Note:** While Lighttpd should normally be set as a startup service during the install process, one might need to run this `update-rc.d` command to get the defaults set so Lighttpd comes back up on reboot/cold boot:
 
     sudo update-rc.d lighttpd defaults
 
