@@ -81,7 +81,7 @@ With that done you can test the install to see if Lighttpd is up and running by 
 
     http://domain_name_or_IP
 
-If all went well you’ll see a defauly placeholder Lighttpd web page. But if somehow the Lighttpd service does not start, you can force it to come up by running this command:
+If all went well you’ll see a default placeholder Lighttpd web page. But if somehow the Lighttpd service does not start, you can force it to come up by running this command:
 
     sudo service lighttpd start
 
@@ -93,7 +93,7 @@ If all went well you’ll see a defauly placeholder Lighttpd web page. But if so
 
 ***
 
-Now that Lighttpd is setup and runnning, let’s install the PHP related items like this:
+Now that Lighttpd is setup and running, let’s install the PHP related items like this:
 
     sudo apt-get install -y --assume-yes php5-cgi php5-mysql
 
@@ -149,32 +149,36 @@ And finally, let’s change user and group ownership of those those files and di
 
     sudo chown -R www-data:www-data /var/www/*
 
-Now let’s check if MediaWiki is runninng by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
+Now let’s check if MediaWiki is running by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
 
     http://domain_name_or_IP/
 
-And if everything has gone well, you should see a page that says:
+And if everything has gone well, you should see a page that has the MediaWiki logo and version number on it and says:
 
 > LocalSettings.php not found.
 
 > Please set up the wiki first.
 
-So just click that “set up the wiki” link and let’s begin the setup process.
+Just click that **set up the wiki** link to begin the setup procedure.
 
-First, select the desired languages and hit continue.
+First, select the desired language settings—for the user and the wiki itself—and hit continue.
 
-Next up will be a page that does basic system environment checks. If all went well, you should see the following text in green near the middle of the page:
+Next up will be a page that titled “Welcome to MediaWiki!” which does some basic system environment checks. If all went well, you should see the following text in green near the middle of the page:
 
 > The environment has been checked. You can install MediaWiki.
 
-If that’s all good, just click “Continue” to move onto the next step which should be setting up MySQL credentials that we have setup previously.
+If that’s all good, just click **Continue** to move onto the next step; if something went wrong follow the instructions on that page to see what went wrong and what you can do to fix it. Once that’s cleared up, move onto the next step.
 
-* The database host should be: `localhost`
-* The database name should be: `mediawiki`
-* The database table prefix should be blank.
+Now you will be on a page where you can enter info to get your install of MediWiki connected to a database. We will be using the MySQL credentials and details that were setup previously as follows:
+
+* The database host should be: **localhost**
+* The database name should be: **mediawiki**
+* The database table prefix should be left blank.
 * The database username and password should be set to what you set them to previously.
 
-When that is set, hit “Continue” and move onto the next database settings page. The “Storage Engine” and “Database Character Set” values should be fine so just hit “Continue” and move onto the Wiki specific details.
+When those items are set, just hit **Continue** and move onto the database settings page.
+
+On the database settings page, the **Storage Engine** and **Database Character Set** values should be fine at their defaults of **InnoDB** and **Binary** so just hit **Continue** and move onto the Wiki specific details.
 
 Here you would choose a name of the Wiki as well as set basic wiki administrator specific account info; just set it up whichever way you please.
 
@@ -188,7 +192,7 @@ If all proceeds as expected, you will reach the final “Complete!” screen and
 
 For example, you could copy it to your user’s home directory with an SCP command like this:
 
-    scp /Users/jack/Downloads/LocalSettings.php [usermame]@[hostname]:.
+    scp /Users/jack/Downloads/LocalSettings.php [username]@[hostname]:.
 
 And just copy it over to the MediaWiki root by running this command:
 
