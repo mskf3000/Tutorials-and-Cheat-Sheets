@@ -26,13 +26,13 @@ TK
 
 Now that we know the server is properly setup, let’s get MySQL installed like this:
 
-	sudo apt-get install -y --assume-yes mysql-server
+    sudo apt-get install -y --assume-yes mysql-server
 
 At some point during initial MySQL install, the process will prompt you to choose a **root** password. Type in whatever **root** password you feel comfortable with and hit return to move on.
 
 Now, let’s do some basic MySQL hardening by running this command:
 
-	mysql_secure_installation
+    mysql_secure_installation
 
 You’ll be prompted for the MySQL **root** password that was just created; enter that and hit return. Answer the remaining prompts as follows:
 
@@ -44,7 +44,7 @@ You’ll be prompted for the MySQL **root** password that was just created; ente
 
 With that all done, let’s login into your server’s newly installed MySQL instance with this command; note you will be prompted for your **root** password:
 
-	mysql -u root -p
+    mysql -u root -p
 
 And once you’re at the MySQL command prompt, let’s create a MediaWiki specific database—named **mediawiki**—like this:
 
@@ -111,11 +111,11 @@ And now, let’s test the PHP install by creating a simple test file like this; 
 
 And the contents of that file should be something like this:
 
-	<?php
+    <?php
 
-	phpinfo();
+    phpinfo();
 
-	?>
+    ?>
 
 Save that newly created *test.php*, exit your text editor, and now load that file it in your web browser like this; change **domain_name_or_IP** to match the domain name or IP address of the server you are working on:
 
