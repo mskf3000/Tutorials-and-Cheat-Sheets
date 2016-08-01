@@ -153,7 +153,7 @@ Now let’s check if MediaWiki is runninng by opening up a web browser and point
 
     http://domain_name_or_IP/
 
-And if all has gone well, you should see a page that says:
+And if everything has gone well, you should see a page that says:
 
 > LocalSettings.php not found.
 
