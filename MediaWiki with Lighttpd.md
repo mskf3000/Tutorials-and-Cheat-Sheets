@@ -196,13 +196,15 @@ For example—assuming the **LocalSettings.php** was downloaded into your user�
 
     scp ~/Downloads/LocalSettings.php [username]@[hostname]:.
 
-And once that has been copied over, login to your server and just copy it over to the MediaWiki root by running this command:
+And once that has been copied over, login to your server and just move it over to the your installed MediaWiki root by running this command MV command:
 
     sudo mv ~/LocalSettings.php /var/www/LocalSettings.php
 
-And once that is done, you can just head over to your server’s main URL via your web browser and your MediaWiki setup should be good to go:
+And once that is done, your 
 
-    http://192.168.56.30/w/
+Now let’s check if MediaWiki is running by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
+
+    http://domain_name_or_IP/
 
 ***
 
