@@ -16,6 +16,10 @@ When you are ready to continue, log into your server with your sudo user and get
 
 ## Step One — Install the Server Components
 
+First, update your repository lists like this:
+
+    sudo apt-get update
+
 TK
 
 ## Step Two — Configure MySQL and Create Credentials for MediaWiki
@@ -32,44 +36,40 @@ Now, let’s do some basic MySQL hardening by running this command:
 
 You’ll be prompted for the MySQL **root** password that was just created; enter that and hit return. Answer the remaining prompts as follows:
 
-* 
+* Change the root password? Select **N** for “No.”
+* Remove anonymous users? Select **Y** for “Yes.”
+* Disallow root login remotely? Select **Y** for “Yes.”
+* Remove test database and access to it? Select **Y** for “Yes.”
+* Reload privilege tables now? Select **Y** for “Yes.”
 
-
-
-to proceed but basically just respond “Y” to all of the questions except the one that asks to change the root password.
-
-With that done, let’s login to MySQL via the command line like this:
+With that all done, let’s login into your server’s newly installed MySQL instance with this command; note you will be prompted for your **root** password:
 
 	mysql -u root -p
 
-And create a MediaWiki specific database like this:
+And once you’re at the MySQL command prompt, let’s create a MediaWiki specific database—named **mediawiki**—like this:
 
 	CREATE DATABASE `mediawiki`;
 
-And then create MediaWiki specific MySQL user for that database by running this command; please be sure change the `password` to an actual password you would be using for the install:
+With that done, let’s now create a MediaWiki specific user—with exclusive rights to that **mediawiki** database—by running this command; please be sure change the **[PASSWORD]** text in this example to the actual password you would be using for the install:
 
-    CREATE USER 'mediawiki'@'localhost' IDENTIFIED BY 'password';
+    CREATE USER 'mediawiki'@'localhost' IDENTIFIED BY '[PASSWORD]';
 
-Now grant that user access rights to the MediaWiki database by running the following two MySQL commands:
+Now grant that **mediawiki** user access rights to the **mediawiki** database by running the following two MySQL **GRANT** commands:
 
 	GRANT USAGE ON `mediawiki`.* TO 'mediawiki'@'localhost' IDENTIFIED BY 'mediawiki';
 	GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER ON `mediawiki`.* TO 'mediawiki'@'localhost';
 
-With that done, set the user’s password like this; again please be sure change the `password` to an actual password you would be using for the install:
+As a final step, we need to set the user’s password again like this; please be sure change the **[PASSWORD]** text in this example to the actual password you would be using for the install:
 
-	SET PASSWORD FOR 'mediawiki'@'localhost' = PASSWORD('password');
+	SET PASSWORD FOR 'mediawiki'@'localhost' = PASSWORD('[PASSWORD]');
 
-And finally, run this command to get MySQL to reload, and recognized the newly adjusted privileges table:
+And with that done, we need to run this command to get MySQL to reload—and recognize—the newly adjusted grant table settings:
 
 	FLUSH PRIVILEGES;
 
-With that done, let’s move onto getting the MediaWiki stuff itself installed.
+Once that’s done you can exit MySQL by simply typing `exit;` and hitting return which will get you back to your server’s terminal shell where we can move onto the next step: Getting Lighttpd installed and configured.
 
-## Lighttpd
-
-First, update your repository lists like this:
-
-    sudo apt-get update
+## Configure Lighttpd and PHP-FPM
 
 And then install Lighttpd like this:
 
