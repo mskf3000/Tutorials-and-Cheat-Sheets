@@ -14,11 +14,11 @@ To complete this guide, you should have access to a clean Ubuntu 14.04 server in
 
 When you are ready to continue, log into your server with your sudo user and get started below.
 
-## Install the Server Components
+## Step One — Install the Server Components
 
 TK
 
-## Step One — Configure MySQL and Create Credentials for MediaWiki
+## Step Two — Configure MySQL and Create Credentials for MediaWiki
 
 Install MySQL like this:
 
