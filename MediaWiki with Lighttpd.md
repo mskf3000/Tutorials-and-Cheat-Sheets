@@ -182,7 +182,7 @@ On the database settings page, the **Storage Engine** and **Database Character S
 
 Here you would choose a name of the Wiki as well as set basic wiki administrator specific account info; just set it up whichever way you please.
 
-Once those values are set, **Continue** and you can set and adjust other, depper Wiki specific options, but you can just click **Continue** and accept the defaults for now; everything can be changed later on anyway.
+Once those values are set, **Continue** and you can set and adjust other, deeper Wiki specific options, but you can just click **Continue** and accept the defaults for now; everything can be changed later on anyway.
 
 The next, penultimate page will state:
 
@@ -190,13 +190,13 @@ The next, penultimate page will state:
 
 Just go ahead and click **Continue** and if all proceeds as expected, you will reach the final “Complete!” screen and a file named **LocalSettings.php** will be downloaded to your local system via your web browser.
 
-You now need to get that **LocalSettings.php** file from your local machine in some way and install it right insie your server’s MediaWiki install root.
+You now need to get that **LocalSettings.php** file from your local machine in some way and install it right inside your server’s MediaWiki install root.
 
 For example—assuming the **LocalSettings.php** was downloaded into your user’s **/Downloads/** directory—you could copy it from there to your server user’s home directory by running this **scp** command; be sure to change **[username]** and **domain_name_or_IP** to match your specific user name and server address values:
 
     scp ~/Downloads/LocalSettings.php [username]@[domain_name_or_IP]:.
 
-And once that has been copied over, login to your server and just move it over to the your installed MediaWiki root by running this command **mv** command:
+And once that has been copied over, login to your server and just move that **LocalSettings.php** file over to the your installed MediaWiki root by running this **mv** command:
 
     sudo mv ~/LocalSettings.php /var/www/LocalSettings.php
 
