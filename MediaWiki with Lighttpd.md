@@ -228,7 +228,7 @@ Once that’s done, your install of MediaWiki should be complete! You can check 
 
 ## Conclusion
 
-With all of that done, you should now have MediaWiki fully installed and configured on your server.
+With all of that done, you should now have MediaWiki fully installed and configured on your system.
 
 ***
 
