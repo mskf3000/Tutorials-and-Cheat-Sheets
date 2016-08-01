@@ -16,15 +16,33 @@ When you are ready to continue, log into your server with your sudo user and get
 
 ## Step One — Install the Server Components
 
-First, update your repository lists like this:
+First, login to the system you wish to install MediaWiki onto and update your repository lists like this:
 
     sudo apt-get update
 
-TK
+Next, make sure you have **curl** installed by running this command to check the installed version:
+
+    curl -V
+
+If all went well, the output of that command should look something like this:
+
+	curl 7.35.0 (x86_64-pc-linux-gnu) libcurl/7.35.0 OpenSSL/1.0.1f zlib/1.2.8 libidn/1.28 librtmp/2.3
+	Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtmp rtsp smtp smtps telnet tftp 
+	Features: AsynchDNS GSS-Negotiate IDN IPv6 Largefile NTLM NTLM_WB SSL libz TLS-SRP 
+
+If the response is something like:
+
+    curl: command not found
+
+Install **curl** by running this command:
+
+    sudo apt-get install -y --assume-yes curl
+
+Once that’s done, you’re good to move onto the next step.
 
 ## Step Two — Configure MySQL and Create Credentials for MediaWiki
 
-Now that we know the server is properly setup, let’s get MySQL installed like this:
+Now that we know that the system you are working on is properly setup, let’s get MySQL installed like this:
 
     sudo apt-get install -y --assume-yes mysql-server
 
@@ -207,6 +225,10 @@ And make sure to change the file’s owner and group to **www-data**  by running
 Once that’s done, your install of MediaWiki should be complete! You can check this by opening up a web browser and pointing it to the domain name or IP of your server like this; change **domain_name_or_IP** to match the domain name or IP address of the server you are working on:
 
     http://domain_name_or_IP/
+
+## Conclusion
+
+With all of that done, you should now have MediaWiki fully installed and configured on your server.
 
 ***
 
