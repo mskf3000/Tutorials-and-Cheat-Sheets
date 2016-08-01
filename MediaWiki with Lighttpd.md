@@ -48,24 +48,24 @@ With that all done, let’s login into your server’s newly installed MySQL ins
 
 And once you’re at the MySQL command prompt, let’s create a MediaWiki specific database—named **mediawiki**—like this:
 
-	CREATE DATABASE `mediawiki`;
+    CREATE DATABASE `mediawiki`;
 
-With that done, let’s now create a MediaWiki specific user—with exclusive rights to that **mediawiki** database—by running this command; please be sure change the **[PASSWORD]** text in this example to the actual password you would be using for the install:
+With that done, let’s now create a MediaWiki specific user—with exclusive rights to that **mediawiki** database—by running this command; please be sure change the **[password]** text in this example to the actual password you would be using for the install:
 
-    CREATE USER 'mediawiki'@'localhost' IDENTIFIED BY '[PASSWORD]';
+    CREATE USER 'mediawiki'@'localhost' IDENTIFIED BY '[password]';
 
 Now grant that **mediawiki** user access rights to the **mediawiki** database by running the following two MySQL **GRANT** commands:
 
-	GRANT USAGE ON `mediawiki`.* TO 'mediawiki'@'localhost' IDENTIFIED BY 'mediawiki';
-	GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER ON `mediawiki`.* TO 'mediawiki'@'localhost';
+    GRANT USAGE ON `mediawiki`.* TO 'mediawiki'@'localhost' IDENTIFIED BY 'mediawiki';
+    GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER ON `mediawiki`.* TO 'mediawiki'@'localhost';
 
-As a final step, we need to set the user’s password again like this; please be sure change the **[PASSWORD]** text in this example to the actual password you would be using for the install:
+As a final step, we need to set the user’s password again like this; please be sure change the **[password]** text in this example to the actual password you would be using for the install:
 
-	SET PASSWORD FOR 'mediawiki'@'localhost' = PASSWORD('[PASSWORD]');
+    SET PASSWORD FOR 'mediawiki'@'localhost' = PASSWORD('[password]');
 
 And with that done, we need to run this command to get MySQL to reload—and recognize—the newly adjusted grant table settings:
 
-	FLUSH PRIVILEGES;
+    FLUSH PRIVILEGES;
 
 Once that’s done you can exit MySQL by simply typing `exit;` and hitting return which will get you back to your server’s terminal shell where we can move onto the next step: Getting Lighttpd installed and configured.
 
@@ -77,7 +77,7 @@ First, run this command to install Lighttpd itself:
 
     sudo apt-get install -y --assume-yes lighttpd
 
-With that done you can test the install to see if Lighttpd is up and running by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
+With that done you can test the install to see if Lighttpd is up and running by opening up a web browser and pointing it to the domain name or IP of your server like this; change **domain_name_or_IP** to match the domain name or IP address of the server you are working on:
 
     http://domain_name_or_IP
 
@@ -117,7 +117,7 @@ And the contents of that file should be something like this:
 
 	?>
 
-Save that newly created *test.php*, exit your text editor, and now load that file it in your web browser like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
+Save that newly created *test.php*, exit your text editor, and now load that file it in your web browser like this; change **domain_name_or_IP** to match the domain name or IP address of the server you are working on:
 
     http://domain_name_or_IP/test.php
 
@@ -149,7 +149,7 @@ And finally, let’s change user and group ownership of those those files and di
 
     sudo chown -R www-data:www-data /var/www/*
 
-Now let’s check if MediaWiki is running by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
+Now let’s check if MediaWiki is running by opening up a web browser and pointing it to the domain name or IP of your server like this; change **domain_name_or_IP** to match the domain name or IP address of the server you are working on:
 
     http://domain_name_or_IP/
 
@@ -192,17 +192,19 @@ Just go ahead and click **Continue** and if all proceeds as expected, you will r
 
 You now need to get that **LocalSettings.php** file from your local machine in some way and install it right insie your server’s MediaWiki install root.
 
-For example—assuming the **LocalSettings.php** was downloaded into your user’s **/Downloads/** directory—you could copy it from there to your server user’s home directory by running this SCP command:
+For example—assuming the **LocalSettings.php** was downloaded into your user’s **/Downloads/** directory—you could copy it from there to your server user’s home directory by running this **scp** command; be sure to change **[username]** and **domain_name_or_IP** to match your specific user name and server address values:
 
-    scp ~/Downloads/LocalSettings.php [username]@[hostname]:.
+    scp ~/Downloads/LocalSettings.php [username]@[domain_name_or_IP]:.
 
-And once that has been copied over, login to your server and just move it over to the your installed MediaWiki root by running this command MV command:
+And once that has been copied over, login to your server and just move it over to the your installed MediaWiki root by running this command **mv** command:
 
     sudo mv ~/LocalSettings.php /var/www/LocalSettings.php
 
-And once that is done, your 
+And make sure to change the file’s owner and group to **www-data**  by running this **chown** command:
 
-Now let’s check if MediaWiki is running by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
+    sudo chown www-data:www-data /var/www/LocalSettings.php
+
+Once that’s done, your install of MediaWiki should be complete! You can check this by opening up a web browser and pointing it to the domain name or IP of your server like this; change **domain_name_or_IP** to match the domain name or IP address of the server you are working on:
 
     http://domain_name_or_IP/
 
