@@ -24,13 +24,15 @@ Now that we know the server is properly setup, let’s get MySQL installed like 
 
 	sudo apt-get install -y --assume-yes mysql-server
 
-This initial MySQL install will prompt you to choose a **root** password. Type in whatever password you feel comfortable with and move on with the install:
+At some point during initial MySQL install, the process will prompt you to choose a **root** password. Type in whatever **root** password you feel comfortable with and hit return to move on.
 
-Now secure the MySQL install like this:
+Now, let’s do some basic MySQL hardening by running this command:
 
 	mysql_secure_installation
 
-You’ll be prompted for the MySQL **root** password that was just created; enter that and hit return.
+You’ll be prompted for the MySQL **root** password that was just created; enter that and hit return. Answer the remaining prompts as follows:
+
+* 
 
 
 
