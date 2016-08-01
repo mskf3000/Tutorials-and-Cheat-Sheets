@@ -182,13 +182,15 @@ On the database settings page, the **Storage Engine** and **Database Character S
 
 Here you would choose a name of the Wiki as well as set basic wiki administrator specific account info; just set it up whichever way you please.
 
-Click continue and you can set and adjust other wiki specific options, but you can just click “Continue” and accept the defaults; everything can be changed later on anyway.
+Once those values are set, **Continue** and you can set and adjust other, depper Wiki specific options, but you can just click **Continue** and accept the defaults for now; everything can be changed later on anyway.
 
 The next, penultimate page will state:
 
 > By pressing "Continue →", you will begin the installation of MediaWiki. If you still want to make changes, press "← Back".
 
-If all proceeds as expected, you will reach the final “Complete!” screen and a file named `LocalSettings.php` will be downloaded via your browser. You need to get that file from your local machine in some way and install it right in your MediaWiki install root.
+Just go ahead and click **Continue** and if all proceeds as expected, you will reach the final “Complete!” screen and a file named `LocalSettings.php` will be downloaded to your local system via your web browser.
+
+You now need to get that file from your local machine in some way and install it right in your MediaWiki install root.
 
 For example, you could copy it to your user’s home directory with an SCP command like this:
 
