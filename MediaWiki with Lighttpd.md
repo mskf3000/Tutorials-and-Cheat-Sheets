@@ -85,15 +85,13 @@ If all went well you’ll see a defauly placeholder Lighttpd web page. But if so
 
     sudo service lighttpd start
 
-With that done, let’s move onto getting the PHP stuff installed.
-
 ***
 
 **Note:** While Lighttpd should normally be set as a startup service during the install process, one might need to run this `update-rc.d` command to get the defaults set so Lighttpd comes back up on reboot/cold boot:
 
     sudo update-rc.d lighttpd defaults
 
-## PHP
+***
 
 Then install PHP modules:
 
