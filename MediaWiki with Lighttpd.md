@@ -69,7 +69,7 @@ And with that done, we need to run this command to get MySQL to reload—and rec
 
 Once that’s done you can exit MySQL by simply typing `exit;` and hitting return which will get you back to your server’s terminal shell where we can move onto the next step: Getting Lighttpd installed and configured.
 
-## Configure Lighttpd and PHP-FPM
+## Step Three — Configure Lighttpd and PHP-FPM
 
 We are going to be using Lighttpd and PHP-FPM as our web server for MediaWiki in this tutorial, so let’s go ahead and install it like this.
 
@@ -121,11 +121,11 @@ Save that newly created *test.php*, exit your text editor, and now load that fil
 
     http://domain_name_or_IP/test.php
 
-If everything goes as planned, that page should load with the standard PHP info page that reflects all current PHP—and related—server settings on that server. And to make sure that everything is working as we want, check under the **Server API** and make sure it’s set to **CGI/FastCGI**.
+If everything goes as planned, that page should load with the standard PHP info that reflects all current PHP—and related—server settings on that server. To make sure that everything is working as we want for our purposes, be sure to check under the **Server API** and make sure it’s set to **CGI/FastCGI**.
 
-With that done, let’s move onto getting the MySQL stuff installed.
+With that done, let’s move onto getting the MediaWiki itself installed.
 
-## MediaWiki
+## Step Four — Install MediaWiki
 
 First, let’s prep the web root of the server by removing unnecessary test files that were placed during setup by running this `rm` command:
 
