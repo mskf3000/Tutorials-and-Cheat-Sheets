@@ -133,15 +133,19 @@ First, let’s prep the web root of the server by removing the—what are now—
 
     sudo rm /var/www/index.lighttpd.html /var/www/test.php
 
-With that done, let’s get 
+With that done, let’s get a copy of the latest version of MediaWiki onto the server by running this **curl** command:
 
     curl -O https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.0.tar.gz
 
+Once it’s been downloaded, let’s decompress the Tar archive with this command:
+
     tar xvzf mediawiki-*.tar.gz
 
-    sudo mv mediawiki-*/ /var/www/w
+And let’s move the decompressed contents of that directory right into the web root like this:
 
-    sudo chown -R www-data:www-data /var/www/w
+    sudo mv mediawiki-*/ /var/www/
+
+    sudo chown -R www-data:www-data /var/www/
 
 Now head over to your server’s IP address to the root path like this:
 
