@@ -1,66 +1,24 @@
-## MediaWiki with Lighttpd
+# How To Set Up the Latest MediaWiki with Lighttpd on Ubuntu 14.04
 
 By Jack Szwergold
 
-### Lighttpd
+### Introduction
 
-First, update your repository lists like this:
+MediaWiki is a popular open source wiki platform that can be used for public or internal collaborative content publishing. MediaWiki is used for many of the most popular wikis on the internet including Wikipedia, the site that the project was originally designed to serve.
 
-    sudo apt-get update
+In this guide, we will be setting up the latest version of MediaWiki on an Ubuntu 14.04 server. We will use the lighttpd web server to make the actual content available, php-fpm to handle dynamic processing, and mysql to store our wiki's data.
 
-And then install Lighttpd like this:
+## Prerequisites
 
-    sudo apt-get install -y --assume-yes lighttpd
+To complete this guide, you should have access to a clean Ubuntu 14.04 server instance. On this system, you should have a non-root user configured with sudo privileges for administrative tasks. You can learn how to set this up by following our [Ubuntu 14.04 initial server setup guide](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04).
 
-Now test the install by going to the URL of your server via a web browser like this:
+When you are ready to continue, log into your server with your sudo user and get started below.
 
-    http://192.168.56.30
+## Install the Server Components
 
-If all went well you’ll see a placeholder page  Lighttpd web page. But if somehow the Lighttpd service does not start, you can force it to come up by running this command:
+TK
 
-    sudo service lighttpd start
-
-With that done, let’s move onto getting the PHP stuff installed.
-
-Might need to run this `update-rc.d` command to get the defaults set so Lighttpd comes back up on reboot/cold boot:
-
-    sudo update-rc.d lighttpd defaults
-
-### PHP
-
-Then install PHP modules:
-
-    sudo apt-get install -y --assume-yes php5-cgi php5-mysql
-
-Run this command to ensure the PHP FastCGI modules are enabled:
-
-    sudo lighty-enable-mod fastcgi fastcgi-php
-
-With that done, run this command to enable the changes in Lighttpd:
-
-    sudo service lighttpd force-reload
-
-Now, test PHP by creating a simple test file like this:
-
-    sudo nano /var/www/test.php
-
-And the contents of that file should be something like this:
-
-	<?php
-
-	phpinfo();
-
-	?>
-
-And now test that file by loading it in your web browser like this:
-
-    http://192.168.56.30/test.php
-
-If everything has worked out well, the page should load with the standard PHP info page. And to make sure that CGI/FastCGI is enabled, check under the “Server API.”
-
-With that done, let’s move onto getting the MySQL stuff installed.
-
-### MySQL
+## Step One — Configure MySQL and Create Credentials for MediaWiki
 
 Install MySQL like this:
 
@@ -101,7 +59,65 @@ And finally, run this command to get MySQL to reload, and recognized the newly a
 
 With that done, let’s move onto getting the MediaWiki stuff itself installed.
 
-### MediaWiki
+## Lighttpd
+
+First, update your repository lists like this:
+
+    sudo apt-get update
+
+And then install Lighttpd like this:
+
+    sudo apt-get install -y --assume-yes lighttpd
+
+Now test the install by going to the URL of your server via a web browser like this:
+
+    http://192.168.56.30
+
+If all went well you’ll see a placeholder page  Lighttpd web page. But if somehow the Lighttpd service does not start, you can force it to come up by running this command:
+
+    sudo service lighttpd start
+
+With that done, let’s move onto getting the PHP stuff installed.
+
+Might need to run this `update-rc.d` command to get the defaults set so Lighttpd comes back up on reboot/cold boot:
+
+    sudo update-rc.d lighttpd defaults
+
+## PHP
+
+Then install PHP modules:
+
+    sudo apt-get install -y --assume-yes php5-cgi php5-mysql
+
+Run this command to ensure the PHP FastCGI modules are enabled:
+
+    sudo lighty-enable-mod fastcgi fastcgi-php
+
+With that done, run this command to enable the changes in Lighttpd:
+
+    sudo service lighttpd force-reload
+
+Now, test PHP by creating a simple test file like this:
+
+    sudo nano /var/www/test.php
+
+And the contents of that file should be something like this:
+
+	<?php
+
+	phpinfo();
+
+	?>
+
+And now test that file by loading it in your web browser like this:
+
+    http://192.168.56.30/test.php
+
+If everything has worked out well, the page should load with the standard PHP info page. And to make sure that CGI/FastCGI is enabled, check under the “Server API.”
+
+With that done, let’s move onto getting the MySQL stuff installed.
+
+## MediaWiki
 
 First, let’s prep the web root of the server by removing unnecessary test files that were placed during setup by running this `rm` command:
 
