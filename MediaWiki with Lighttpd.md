@@ -77,7 +77,7 @@ First, run this command to install Lighttpd itself:
 
     sudo apt-get install -y --assume-yes lighttpd
 
-With that done you can test the install to see if Lighttpd is up and runnig by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
+With that done you can test the install to see if Lighttpd is up and running by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
 
     http://domain_name_or_IP
 
@@ -117,7 +117,7 @@ And the contents of that file should be something like this:
 
 	?>
 
-Save that newly created *test.php*, exit your text editor, and now load that file it in your web browser like this:
+Save that newly created *test.php*, exit your text editor, and now load that file it in your web browser like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
 
     http://domain_name_or_IP/test.php
 
@@ -149,9 +149,9 @@ And finally, let’s change user and group ownership of those those files and di
 
     sudo chown -R www-data:www-data /var/www/*
 
-Now head over to your server’s IP address to the root path like this:
+Now let’s check if MediaWiki is runninng by opening up a web browser and pointing it to the domain name or IP of your server like this; change `domain_name_or_IP` to match the domain name or IP address of the server you are working on:
 
-    http://192.168.56.30/w
+    http://domain_name_or_IP/
 
 And if all has gone well, you should see a page that says:
 
