@@ -127,9 +127,13 @@ With that done, let’s move onto getting the MediaWiki itself installed.
 
 ## Step Four — Install MediaWiki
 
-First, let’s prep the web root of the server by removing unnecessary test files that were placed during setup by running this `rm` command:
+With MySQL and Lighttpd (with PHP) installed and configured, we’re now read to install MediaWiki itself.
+
+First, let’s prep the web root of the server by removing the—what are now—unneeded default **index.lighttpd.html** and **test.php** files from the web root by running this **rm** command:
 
     sudo rm /var/www/index.lighttpd.html /var/www/test.php
+
+With that done, let’s get 
 
     curl -O https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.0.tar.gz
 
