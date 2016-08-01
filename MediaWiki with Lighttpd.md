@@ -188,17 +188,17 @@ The next, penultimate page will state:
 
 > By pressing "Continue →", you will begin the installation of MediaWiki. If you still want to make changes, press "← Back".
 
-Just go ahead and click **Continue** and if all proceeds as expected, you will reach the final “Complete!” screen and a file named `LocalSettings.php` will be downloaded to your local system via your web browser.
+Just go ahead and click **Continue** and if all proceeds as expected, you will reach the final “Complete!” screen and a file named **LocalSettings.php** will be downloaded to your local system via your web browser.
 
-You now need to get that file from your local machine in some way and install it right in your MediaWiki install root.
+You now need to get that **LocalSettings.php** file from your local machine in some way and install it right insie your server’s MediaWiki install root.
 
-For example, you could copy it to your user’s home directory with an SCP command like this:
+For example—assuming the **LocalSettings.php** was downloaded into your user’s **/Downloads/** directory—you could copy it from there to your server user’s home directory by running this SCP command:
 
-    scp /Users/jack/Downloads/LocalSettings.php [username]@[hostname]:.
+    scp ~/Downloads/LocalSettings.php [username]@[hostname]:.
 
-And just copy it over to the MediaWiki root by running this command:
+And once that has been copied over, login to your server and just copy it over to the MediaWiki root by running this command:
 
-    sudo mv ~/LocalSettings.php /var/www/w/LocalSettings.php
+    sudo mv ~/LocalSettings.php /var/www/LocalSettings.php
 
 And once that is done, you can just head over to your server’s main URL via your web browser and your MediaWiki setup should be good to go:
 
