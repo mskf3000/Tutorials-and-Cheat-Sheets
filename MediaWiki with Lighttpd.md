@@ -137,15 +137,17 @@ With that done, let’s get a copy of the latest version of MediaWiki onto the s
 
     curl -O https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.0.tar.gz
 
-Once it’s been downloaded, let’s decompress the Tar archive with this command:
+Once it’s been fully downloaded, let’s decompress the Tar archive with this command:
 
-    tar xvzf mediawiki-*.tar.gz
+    tar -xf mediawiki-*.tar.gz
 
-And let’s move the decompressed contents of that directory right into the web root like this:
+And once the archive is decompressed let’s copy the contents of that directory right into the web root like this:
 
-    sudo mv mediawiki-*/ /var/www/
+    sudo mv mediawiki-*/* /var/www/
 
-    sudo chown -R www-data:www-data /var/www/
+And finally, let’s change user and group ownership of those those files and directories to **www-data** by running this **chown** command:
+
+    sudo chown -R www-data:www-data /var/www/*
 
 Now head over to your server’s IP address to the root path like this:
 
