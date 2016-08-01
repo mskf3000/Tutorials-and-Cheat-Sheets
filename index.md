@@ -113,6 +113,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Mac OS X - Wget](Mac%20OS%20X%20-%20Wget)
 - [Mac OS X - Xcode](Mac%20OS%20X%20-%20Xcode)
 - [MailCatcher](MailCatcher)
+- [MediaWiki with Lighttpd](MediaWiki%20with%20Lighttpd)
 - [MongoDB](MongoDB)
 - [Monit](Monit)
 - [Munin - Moving and Renaming Data Files](Munin%20-%20Moving%20and%20Renaming%20Data%20Files)
