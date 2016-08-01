@@ -93,15 +93,15 @@ If all went well you’ll see a defauly placeholder Lighttpd web page. But if so
 
 ***
 
-Then install PHP modules:
+Now that Lighttpd is setup and runnning, let’s install the PHP related items like this:
 
     sudo apt-get install -y --assume-yes php5-cgi php5-mysql
 
-Run this command to ensure the PHP FastCGI modules are enabled:
+And once those are installed, run this command to ensure the PHP FastCGI modules are enabled:
 
     sudo lighty-enable-mod fastcgi fastcgi-php
 
-With that done, run this command to enable the changes in Lighttpd:
+With that done, restart Lighttpd:
 
     sudo service lighttpd force-reload
 
