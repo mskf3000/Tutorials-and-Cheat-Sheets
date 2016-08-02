@@ -214,13 +214,17 @@ For example—assuming the **LocalSettings.php** was downloaded into your user�
 
     scp ~/Downloads/LocalSettings.php [username]@[domain_name_or_IP]:.
 
-And once that has been copied over, login to your server and just move that **LocalSettings.php** file over to the your installed MediaWiki root by running this **mv** command:
+Once that has been copied over, login to your server and just move that **LocalSettings.php** file over to the your installed MediaWiki root by running this **mv** command:
 
     sudo mv ~/LocalSettings.php /var/www/LocalSettings.php
 
 And make sure to change the file’s owner and group to **www-data**  by running this **chown** command:
 
     sudo chown www-data:www-data /var/www/LocalSettings.php
+
+And finally, set the permissions of the file to **600** (aka: owner read and write only) to secure the config on the server:
+
+    sudo chown 600 /var/www/LocalSettings.php
 
 Once that’s done, your install of MediaWiki should be complete! You can check this by opening up a web browser and pointing it to the domain name or IP of your server like this; change **domain_name_or_IP** to match the domain name or IP address of the server you are working on:
 
