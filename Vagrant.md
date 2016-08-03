@@ -88,7 +88,7 @@ And the list should be trimmed down as follows:
 
 To upgrade the already downloaded Vagrant boxes—so you don’t have to upgrade each boxes OS individually—just run this command:
 
-    vagrant box update
+    vagrant --force box update
 
 ### Debugging Vagrant.
 
