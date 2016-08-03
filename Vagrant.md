@@ -86,6 +86,10 @@ And the list should be trimmed down as follows:
 	with Vagrant commands from any directory. For example:
 	"vagrant destroy 1a2b3c4d"
 
+To upgrade the already downloaded Vagrant boxes—so you don’t have to upgrade each boxes OS individually—just run this command:
+
+    vagrant box update
+
 ### Debugging Vagrant.
 
 Check the SSH options for the Vagrant box:
