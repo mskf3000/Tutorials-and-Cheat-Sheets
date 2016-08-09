@@ -88,7 +88,7 @@ And the list should be trimmed down as follows:
 
 To upgrade the already downloaded Vagrant boxes—so you don’t have to upgrade each boxes OS individually—just run this command:
 
-    vagrant --force box update
+    vagrant box --force update
 
 ### Debugging Vagrant.
 
@@ -121,6 +121,12 @@ Okay, so with the basics done, you can edit the Vagrant config file (aka: `Vagra
 	end
 
 I removed all of the comments and just have a few of the core config options such as disabling the update checking and setting a private “host only” network to `192.168.56.20`.
+
+### Upgrading Vagrant.
+
+If you download Vagrant and it seemingly hangs forever on “Verifying Vagrant.pkg” window that is becuase of System Integrity Protection (SIP). To get around this, install—or upgrade Vagrant—from the command line like this:
+
+    sudo installer -package /Volumes/Vagrant/Vagrant.pkg -target /
 
 ***
 
