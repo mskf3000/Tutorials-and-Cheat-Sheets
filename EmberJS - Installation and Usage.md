@@ -93,7 +93,7 @@ To enable MD5 support in EmberJS, first run this Bower command:
 
 Then install Ember CLI MD5 support like this:
 
-    npm install ember-cli-md5
+    npm install --save-dev ember-cli-md5
 
 Now just run this Ember `generate` command and you should be good to go:
 
