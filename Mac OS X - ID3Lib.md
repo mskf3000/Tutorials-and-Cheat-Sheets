@@ -6,7 +6,7 @@ This tutorial explains how you can install ID3Lib directly from source code on M
 
 ### Installing ID3Lib via official source code archive.
 
-First clone the source code from max-horvath’s `htop-osx` GitHub repository:
+First clone the source code from attilagyorffy’s `id3lib-osx` GitHub repository:
 
 	git clone git@github.com:attilagyorffy/id3lib-osx.git
 	
