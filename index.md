@@ -86,6 +86,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Mac OS X - Enabling and Disabling ARD Remote Access from the Terminal](Mac%20OS%20X%20-%20Enabling%20and%20Disabling%20ARD%20Remote%20Access%20from%20the%20Terminal)
 - [Mac OS X - Figlet](Mac%20OS%20X%20-%20Figlet)
 - [Mac OS X - HTop](Mac%20OS%20X%20-%20HTop)
+- [Mac OS X - ID3Lib](Mac%20OS%20X%20-%20ID3Lib)
 - [Mac OS X - IFTop](Mac%20OS%20X%20-%20IFTop)
 - [Mac OS X - iPerf](Mac%20OS%20X%20-%20iPerf)
 - [Mac OS X - LFT](Mac%20OS%20X%20-%20LFT)
