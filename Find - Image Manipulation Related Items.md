@@ -76,7 +76,7 @@ Strip out all image EXIF data from JPEG images with ExifTool to:
 	    exiftool -all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
 	  done
 
-Strip out all image EXIF data from TIFF images with ExifTool to:
+Strip out the ICC profile from the EXIF data connected to TIFF images with ExifTool to:
 
 	find 'Desktop/Pics' -type f -name '*.tif' |\
 	  while read FULL_IMAGE_PATH
