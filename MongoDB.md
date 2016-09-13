@@ -22,7 +22,7 @@ Then install MongoDB via `aptitude` like this:
 
 Or install a specific release of MongoDB via `aptitude` like this:
 
-    sudo aptitude install mongodb-org=2.6.11 mongodb-org-server=2.6.11 mongodb-org-shell=2.6.11 mongodb-org-mongos=2.6.11 mongodb-org-tools=2.6.11
+    sudo aptitude install mongodb-org=2.6.12 mongodb-org-server=2.6.12 mongodb-org-shell=2.6.12 mongodb-org-mongos=2.6.12 mongodb-org-tools=2.6.12
 
 Check the version number like this:
 
@@ -30,8 +30,8 @@ Check the version number like this:
 
 And the output should be something like this:
 
-	db version v2.6.11
-	2015-09-22T00:41:09.458-0400 git version: d00c1735675c457f75a12d530bee85421f0c5548
+	db version v2.6.12
+	2016-09-13T10:39:01.986-0400 git version: d73c92b1c85703828b55c2916a5dd4ad46535f6a
 
 #### Pin a specific version of MongoDB.
 
@@ -100,6 +100,12 @@ The positive response should be something like this:
 	27017/tcp open  unknown
 
 ### Practical MongoDB usage examples.
+
+#### Example MongoDB URL format.
+
+An example of a MongoDB connection URL format:
+
+    mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
 
 #### Connect to a MongoDB instance.
 
