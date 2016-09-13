@@ -325,7 +325,7 @@ Export a database:
 
 Dump a database:
 
-    echo 'db.dropDatabase()' | mongo databasename
+    echo 'db.dropDatabase()' | mongo [database name]
 
 Restore a database:
 
