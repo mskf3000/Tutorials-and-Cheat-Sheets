@@ -10,7 +10,15 @@ First install `python-software-properties` like this:
 
 Next add the Node.js repository to the system like this:
 
-    curl -sL https://deb.nodesource.com/setup | sudo bash -
+    curl -sL https://deb.nodesource.com/setup_4.x | sudo bash - ;
+
+Other versions can be set like this:
+
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo bash - ;
+    curl -sL https://deb.nodesource.com/setup_5.x | sudo bash - ;
+    curl -sL https://deb.nodesource.com/setup_4.x | sudo bash - ;
+    curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash - ;
+    curl -sL https://deb.nodesource.com/setup_0.10 | sudo bash - ;
 
 With that done, run `aptitude update` to get the new repository picked up like this:
 
