@@ -86,11 +86,15 @@ Now, commit it with a message like this:
 
 	git commit -a -m "Adding '.gitignore' to the repo."
 
-### Ammedning a commit message.
+### Amending a commit message.
 
-Let’s say you made a mistake in the commit message you just made. You can ammend it—basically redo it—like this:
+Let’s say you made a mistake in the commit message you just made. You can amend it—basically redo it—like this:
 
 	git commit --amend -m "Adding '.gitignore' to the repo."
+
+Or perhaps the author name on the commit is incorrect. Just fix that by running a command like:
+
+    git commit --amend --author="Jack Szwergold <JackSzwergold@gmail.com>"
 
 And if you have already pushed the previous commit to a repository, you need to forch push it like this:
 
