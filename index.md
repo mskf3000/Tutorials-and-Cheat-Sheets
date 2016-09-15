@@ -151,6 +151,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Rsync](Rsync)
 - [Ruby - Apache Passenger Module Installation and Setup](Ruby%20-%20Apache%20Passenger%20Module%20Installation%20and%20Setup)
 - [Ruby - Capistrano Deployments](Ruby%20-%20Capistrano%20Deployments)
+- [Ruby - Capistrano](Ruby%20-%20Capistrano)
 - [Ruby - Installing Ruby on Ubuntu](Ruby%20-%20Installing%20Ruby%20on%20Ubuntu)
 - [Ruby - Installing Ruby from Source on Ubuntu](Ruby%20-%20Installing%20Ruby%20from%20Source%20on%20Ubuntu)
 - [Ruby - Installing Ruby via RVM](Ruby%20-%20Installing%20Ruby%20via%20RVM)
