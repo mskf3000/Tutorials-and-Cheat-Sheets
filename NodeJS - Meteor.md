@@ -6,6 +6,12 @@ By Jack Szwergold
 
     curl https://install.meteor.com/ | sh
 
+#### Uninstall Meteor.
+
+    sudo rm /usr/local/bin/meteor
+    rm -rf ~/.meteor
+    rm ~/.meteorsession
+
 #### Quickstart a Meteor app.
 
 First create a simple “TODO” application:
