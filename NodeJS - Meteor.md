@@ -46,6 +46,13 @@ MUP (Meteor Up) is a NodeJS deployment tool for Meteor apps. Install it via NPM 
 
     sudo npm install -g mup
 
+Or install a specific version like this:
+
+    sudo npm install -g mup@0.9.7
+    sudo npm install -g mup@0.8.0
+    sudo npm install -g mup@0.7.7
+    sudo npm install -g mup@0.6.12
+
 You might need to install the NPM SSH2 module like this:
 
     sudo npm install -g ssh2
