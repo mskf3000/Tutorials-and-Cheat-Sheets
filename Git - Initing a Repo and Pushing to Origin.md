@@ -4,7 +4,7 @@ By Jack Szwergold
 
 ### Install GIT and get your local config setup.
 
-For GitHub to work correctly with your email address and username, you should make sure to set your local email address and name on your system after your intial install.
+For GitHub to work correctly with your email address and username, you should make sure to set your local email address and name on your system after your initial install.
 
 This can be done by just running these `git config --global` commands:
 
@@ -48,7 +48,7 @@ If this is the first time you are running that command on your system the respon
 	RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
 	Are you sure you want to continue connecting (yes/no)?
 
-Your response shouyld be “yes” so that host authenticity for `github.com` can be added to your `~/.ssh/known_hosts`.
+Your response should be “yes” so that host authenticity for `github.com` can be added to your `~/.ssh/known_hosts`.
 
 Then after you have done that, check your connection to GitHub again using the same `ssh -T` command as before:
 
@@ -96,7 +96,7 @@ Or perhaps the author name on the commit is incorrect. Just fix that by running 
 
     git commit --amend --author="Jack Szwergold <JackSzwergold@gmail.com>"
 
-And if you have already pushed the previous commit to a repository, you need to forch push it like this:
+And if you have already pushed the previous commit to a repository, you need to force push it like this:
 
     git push -f
 
@@ -139,6 +139,24 @@ Let‘s assume a repository already exists and you want to clone it locally to w
 That will clone the `Preworn-Main` directory into a new directory named `Preworn-Main` on you local machine. But if you want to change the name of the local repository’s directory name, just clone it with a new name—like `preworn_repo`—instead of `.` like this:
 
     git clone git@github.com:JackSzwergold/Preworn-Main.git preworn_repo
+
+### Cleaning a local repository of untracked files.
+
+So let’s say your Git repository somehow has files you don’t want to track in it and those files somehow fall out of the scope of a `.gitignore` file. Something that might be caused by accidentally copying files into the repository or somehow a codebase being infected by rogue malware. You can use `git clean` to clean things up for you.
+
+The first command you should run would be this command using the `-n` flag for a dry run:
+
+    git clean -f -d -n
+
+This would instruct `git clean` to clean up files (`-f`) as well as directories (`-d`).
+
+When you run that command as a dry run, be sure to check the list of files and directories sent back to you to make sure it’s definitely cleaning up files you no longer need.
+
+If you are satisfied that the results are correct, run the same command without the dry-run flag like this:
+
+    git clean -f -d
+
+And now, all of those unwanted files and directories should be gone.
 
 ***
 
