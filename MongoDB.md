@@ -323,9 +323,17 @@ Export a database:
 
     mongodump -d databasename
 
-Dump a database:
+Drop a database:
 
-    echo 'db.dropDatabase()' | mongo [database name]
+    echo 'db.dropDatabase()' | mongo [database name];
+
+Or use this command to drop a database:
+
+    mongo "[database name]" --eval "db.dropDatabase()";
+
+Add the `--quiet` option to suppress output:
+
+    mongo --quiet "[database name]" --eval "db.dropDatabase()";
 
 Restore a database:
 
