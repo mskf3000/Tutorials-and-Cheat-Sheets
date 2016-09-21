@@ -23,7 +23,7 @@ And the output of that would be something like this:
 
 Another way of getting Linux distribution information:
 
-    lsb_release -a
+	lsb_release -a
 
 And the output of that would be something like this:
 
