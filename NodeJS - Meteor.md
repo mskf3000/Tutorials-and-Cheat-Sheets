@@ -32,13 +32,17 @@ With that done, now go into the `simple-todos` directory like this:
 
     cd ~/simple-todos
 
-Now run this command to install the NPM dependencies:
+Run this command to install the NPM dependencies:
 
     meteor npm install
 
-And start the application like this:
+Start the application like this:
 
     meteor
+
+Or run it with a specific release—such as version 1.4.1—like this:
+
+    meteor run --release 1.4.1
 
 #### Installing “Meteor Up” for deployment.
 
