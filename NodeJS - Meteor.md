@@ -61,6 +61,11 @@ You might need to install the NPM SSH2 module like this:
 
     sudo npm install -g ssh2
 
+Initial commands needed to get things started:
+
+    mup setup
+    mup deploy
+
 Other commands include:
 
     mup reconfig
