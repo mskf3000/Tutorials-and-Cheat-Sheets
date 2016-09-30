@@ -102,6 +102,18 @@ And if you want to install an older, supported version of Elasticsearch—like v
 	brew install homebrew/versions/elasticsearch17 
 	brew install homebrew/versions/elasticsearch23 
 
+Create a startup service for Elasticsearch like this:
+
+	brew services start elasticsearch
+
+To manually start up an 2.x version of Elasticsearch, run this command:
+
+    elasticsearch
+
+And to manually start up a 1.x version of Elasticsearch, run this command with the `--config` option:
+
+	elasticsearch --config=/usr/local/opt/elasticsearch17/config/elasticsearch.yml
+
 #### Testing Elasticsearch.
 
 With Elasticsearch installed—and with the service script installed—we can start it by running this command:
