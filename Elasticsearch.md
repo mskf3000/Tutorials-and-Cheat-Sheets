@@ -81,6 +81,27 @@ Elasticsearch work file storage location:
 
     ls -la /tmp/elasticsearch
 
+### Install Elasticsearch on Mac OS X.
+
+Some applications insist on using `localhost` or are a pain in the ass to set an alternative URL for. So in cases like that, installing Elasticsearch locally via Homebrew. And here is how to do that.
+
+First, get Homebrew installed on your machine if you don’t have it installed alread:
+
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Now, setup Java like this:
+
+    brew cask install java
+
+Install the latest version of Elasticsearch like this:
+
+    brew install elasticsearch
+
+And if you want to install an older, supported version of Elasticsearch—like versions 1.7 and 2.3—just run this command:
+
+	brew install homebrew/versions/elasticsearch17 
+	brew install homebrew/versions/elasticsearch23 
+
 #### Testing Elasticsearch.
 
 With Elasticsearch installed—and with the service script installed—we can start it by running this command:
