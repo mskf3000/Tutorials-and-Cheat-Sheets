@@ -158,6 +158,20 @@ If you are satisfied that the results are correct, run the same command without 
 
 And now, all of those unwanted files and directories should be gone.
 
+### Changing the author of commits throughout a branch.
+
+If you somehow want to change the author of commits in a branch run this Bash command; be sure to change the values to match your own:
+
+	git filter-branch -f --commit-filter '
+	  if [ "$GIT_AUTHOR_EMAIL" = "foobar@example.com" ];
+	  then
+	    GIT_AUTHOR_NAME="Jack Szwergold";
+	    GIT_AUTHOR_EMAIL="JackSzwergold@someplace.com";
+	    git commit-tree "$@";
+	  else
+	    git commit-tree "$@";
+	  fi' HEAD
+
 ***
 
 *Git - Initing a Repo and Pushing to Origin (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
