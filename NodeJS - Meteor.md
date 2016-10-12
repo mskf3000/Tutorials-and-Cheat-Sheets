@@ -115,6 +115,16 @@ The output should be something like this:
 
     METEOR@1.2.1
 
+#### Building for a mobile app.
+
+    meteor add cordova:cordova-plugin-meteor-webapp@1.4.1
+	
+    meteor install-sdk ios
+	
+    meteor add-platform ios
+	
+    meteor run ios
+
 ***
 
 *NodeJS - Meteor (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
