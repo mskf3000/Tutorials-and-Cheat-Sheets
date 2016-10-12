@@ -8,7 +8,7 @@ This will effectively rewrite every commit to remove the `markdown/things/index.
 
     git filter-branch --tree-filter 'rm -f markdown/things/index.md' HEAD
 
-But that might leave a final commit that would still show the file’s existance and contents. So this command might be more effective if you just want to rewrite the Git history completely:
+But that might leave a final commit that would still show the file’s existence and contents. So this command might be more effective if you just want to rewrite the Git history completely:
 
 	git filter-branch --force --index-filter \
 	'git rm --cached --ignore-unmatch markdown/things/index.md' \
