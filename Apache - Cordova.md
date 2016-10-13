@@ -86,6 +86,18 @@ If you want to set a browser other than the default Chrome—or a different port
 
 	ionic emulate browser -- --target=safari --port=8000
 
+### Cleaning out caches and temp files.
+
+Sometimes an upgrade or clean install of EmberJS will mean you need to clean out and reinstall old cruft and dependencies. This is how you go about that.
+
+First, clear out the temp files, Node modules and Bower components:
+
+    rm -rf {node_modules,platforms,plugins}
+
+Next, reinstall the NPM and Bower dependencies:
+
+    npm install && bower install
+
 ***
 
 *Apache - Cordova (c) by Jack Szwergold; written on March 11, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
