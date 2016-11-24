@@ -140,6 +140,16 @@ And uncomment that `; opcache.enable=0` line so it looks like this:
 
 Now restart Apache to have those new PHP settings take effect and you should be good to go.
 
+### Installing PHP MBString (`php-mbstring`) on Red Hat
+
+In case you are working on a Red Hat Enterprise Linux setup that doesn’t have the “optional” RPM source enabled and you need to get `php-mbstring` installed, just get the RPM directly like this:
+
+	wget http://mirror.centos.org/centos/6/updates/x86_64/Packages/php-mbstring-5.3.3-48.el6_8.x86_64.rpm
+
+And now just install it directly from the RPM like this:
+
+	sudo yum localinstall php-mbstring-5.3.3-48.el6_8.x86_64.rpm
+
 ***
 
 *PHP (c) by Jack Szwergold; written on October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
