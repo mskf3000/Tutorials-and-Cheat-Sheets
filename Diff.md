@@ -18,6 +18,10 @@ Use this to compare two different directories and send the output to a sorted te
 
     diff -qr /path/of/stuff/to/compare/1 /path/of/stuff/to/compare/2 | grep -v -e 'DS_Store' -e 'Thumbs' | > sort > stuff_compared.txt
 
+Diff two CSS files and get the classes that are changed between the two:
+
+	diff -U99999 source.css modified.css | awk '/^-/{next} {f=f"\n"$0} /^\+.*[^ ]/{yes=1} /}/ {if(yes){print f} f="";yes=0}'
+
 ***
 
 *Diff (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
