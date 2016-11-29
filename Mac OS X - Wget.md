@@ -40,9 +40,9 @@ Or if somehow that `configure` command fails, you might need to add a `--with-li
 
 Install it with OpenSSL like this. First instal OpenSSL like this:
 
-	curl -O -L https://www.openssl.org/source/openssl-1.0.2h.tar.gz
-	tar -xzf openssl-1.0.2h.tar.gz
-	cd openssl-1.0.2h
+	curl -O -L https://www.openssl.org/source/openssl-1.0.2j.tar.gz
+	tar -xzf openssl-1.0.2j.tar.gz
+	cd openssl-1.0.2j
 
 	./configure darwin64-x86_64-cc
 	make depend
@@ -58,6 +58,7 @@ Now install WGET like this:
 	./configure --with-ssl=openssl --with-libssl-prefix=/usr/local/ssl
 	make
 	sudo make install
+	sudo make uninstall
 
 ***
 
