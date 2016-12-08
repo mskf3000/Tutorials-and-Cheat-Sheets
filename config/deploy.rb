@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.6.1'
 
 set :application, 'tutorials_and_cheat_sheets'
 set :short_name, 'tutorials_and_cheat_sheets'
