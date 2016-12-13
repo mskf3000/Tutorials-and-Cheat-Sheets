@@ -368,7 +368,51 @@ In some cases you might need to use this for `init-connect` instead of the simpl
 
     init-connect='SET collation_connection = utf8_general_ci; SET NAMES utf8;'
 
+### Installing—or Upgrading—to MySQL 5.5 (from MySQL 5.1) on RedHat/CentOS 6
+
+Check the version numbers for the already installed version of MySQL:
+	
+	yum list installed | grep -i mysql
+
+The output should be something like this; note the `5.1.73-7.el6` version numbers:
+
+	mysql.x86_64                       5.1.73-7.el6            @rhel-x86_64-server-6
+	mysql-libs.x86_64                  5.1.73-7.el6            @rhel-x86_64-server-6
+	mysql-server.x86_64                5.1.73-7.el6            @rhel-x86_64-server-6
+	perl-DBD-MySQL.x86_64              4.013-3.el6             @rhel-x86_64-server-6
+	php56w-mysql.x86_64                5.6.28-1.w6             @webtatic   
+
+Now install the `yum-plugin-replace` to so a clean upgrade from MySQL 5.1 to 5.5 can happen:
+	
+	sudo yum install mysql.`uname -i` yum-plugin-replace
+
+Now run this command to replace MySQL 5.1 with 5.5:
+
+	sudo yum replace mysql --replace-with mysql55w
+
+Restart MySQL:
+
+	sudo service mysqld restart
+
+Run this `mysql_upgrade` command to get MySQL core tables upgraded:
+
+	sudo mysql_upgrade -uroot -p[password]
+
+Now re-check the version numbers for the newly installed version of MySQL:
+	
+	yum list installed | grep -i mysql
+
+The output should be something like this; note the `5.5.53-2.w6` version numbers:
+
+	libmysqlclient16.x86_64            5.1.69-1.w6             @webtatic            
+	mysql55w.x86_64                    5.5.53-2.w6             @webtatic            
+	mysql55w-libs.x86_64               5.5.53-2.w6             @webtatic            
+	mysql55w-server.x86_64             5.5.53-2.w6             @webtatic            
+	perl-DBD-MySQL.x86_64              4.013-3.el6             @rhel-x86_64-server-6
+	php56w-mysql.x86_64                5.6.28-1.w6             @webtatic  
+
+Now you should be good to go! 
+
 ***
 
 *MySQL (c) by Jack Szwergold; written on September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
-
