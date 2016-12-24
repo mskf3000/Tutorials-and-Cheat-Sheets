@@ -94,6 +94,10 @@ And for some reason in Mac OS X, that command will choke in El Capitan (10.11) a
 
 	sudo rm /opt/vagrant/embedded/bin/curl
 
+As of Vagrant version 1.9 and above, to clear out old and outdated versions of Vagrant boxes—which are often not needed and take up space—just run this command:
+
+	vagrant box prune
+
 ### Debugging Vagrant.
 
 Check the SSH options for the Vagrant box:
