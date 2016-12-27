@@ -103,6 +103,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Mac OS X - RSYNC](Mac%20OS%20X%20-%20RSYNC)
 - [Mac OS X - Recode](Mac%20OS%20X%20-%20Recode)
 - [Mac OS X - SMB Tweaking](Mac%20OS%20X%20-%20SMB%20Tweaking)
+- [Mac OS X - SSHPASS](Mac%20OS%20X%20-%20SSHPASS)
 - [Mac OS X - SNMP Basics](Mac%20OS%20X%20-%20SNMP%20Basics)
 - [Mac OS X - SheepShaver Emulator Related Items](Mac%20OS%20X%20-%20SheepShaver%20Emulator%20Related%20Items)
 - [Mac OS X - Software Update Related Items](Mac%20OS%20X%20-%20Software%20Update%20Related%20Items)
