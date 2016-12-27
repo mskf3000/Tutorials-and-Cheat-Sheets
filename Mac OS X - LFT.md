@@ -10,7 +10,7 @@ First grab a compressed archive from an official `lft` source site:
 
 Next, decompress the archive like this:
 
-	ar -xf lft-3.*.tar.gz
+	tar -xf lft-3.*.tar.gz
 
 Now go into the decompressed directory:
 
