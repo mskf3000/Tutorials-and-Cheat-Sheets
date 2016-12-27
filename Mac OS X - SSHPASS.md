@@ -3,7 +3,8 @@
 By Jack Szwergold
 
     curl -O http://heanet.dl.sourceforge.net/project/sshpass/sshpass/1.06/sshpass-1.06.tar.gz
-
+    tar -xf sshpass-1.06.tar.gz
+    cd sshpass-1.*
     ./configure
     make
     sudo make install
