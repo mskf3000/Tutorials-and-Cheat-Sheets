@@ -38,7 +38,19 @@ And change it to remove the `-s` like this:
 
     test "$enableval" = "no" && LDFLAGS="$LDFLAGS",
 
-Now run `run_autotools`:
+Close and save that file and now load this other file:
+
+    nano src/devreader-bsd.cpp
+
+Look for this line:
+
+	interfaceNames.push_back(string(sdl->sdl_data));
+
+And change it to:
+
+	interfaceNames.push_back(string(sdl->sdl_data).substr(0, sdl->sdl_nlen));
+
+Save that file and now run `run_autotools`:
 
     ./run_autotools
 
@@ -60,7 +72,7 @@ And once it’s installed, run the command with `--version` to do a simple check
 
 Response should be something like this:
 
-    nload version 0.7.3
+    nload version 0.7.4
 
 Uninstall if you need to:
 
