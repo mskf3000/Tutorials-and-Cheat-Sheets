@@ -14,7 +14,7 @@ Now go into the repository directory:
 
 Checkout the latest tag of the source code like this:
 
-    git checkout v4.1.0
+    git checkout v4.7.0
 
 Run `autogen.sh`:
 
