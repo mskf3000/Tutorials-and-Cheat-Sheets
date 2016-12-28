@@ -8,7 +8,7 @@ This tutorial explains how you can install IFTop directly from source code on ma
 
 First grab a compressed archive from an official IFTop source site:
 
-	curl -O -L http://www.ex-parrot.com/~pdw/iftop/download/iftop-0.17.tar.gz
+	curl -O -L http://www.ex-parrot.com/pdw/iftop/download/iftop-0.17.tar.gz
 
 Next, decompress the archive like this:
 
