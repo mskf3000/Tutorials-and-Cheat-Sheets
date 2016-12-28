@@ -85,6 +85,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [macOS - Disk Utility Repairs and Tricks from the Terminal](macOS%20-%20Disk%20Utility%20Repairs%20and%20Tricks%20from%20the%20Terminal)
 - [macOS - Enabling and Disabling ARD Remote Access from the Terminal](macOS%20-%20Enabling%20and%20Disabling%20ARD%20Remote%20Access%20from%20the%20Terminal)
 - [macOS - Figlet](macOS%20-%20Figlet)
+- [macOS - Homebrew](macOS%20-%20Homebrew)
 - [macOS - HTop](macOS%20-%20HTop)
 - [macOS - ID3Lib](macOS%20-%20ID3Lib)
 - [macOS - IFTop](macOS%20-%20IFTop)
