@@ -17,7 +17,8 @@ Run this to make sure the `/usr/local/bin` and `/usr/local/share` directories ar
 A basic pile of macOS command line tools I like to install:
 
     brew install htop nload mtr wget \
-      lame figlet geoip iftop iperf;
+      geoip iftop iperf \
+      lame figlet fortune;
 
 ***
 
