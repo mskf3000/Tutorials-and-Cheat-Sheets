@@ -64,26 +64,29 @@ And here are some example `LSCOLORS` settings:
 ### An example of a basic Bash shell `.bash_profile`.
 
 	# Setting CLI colors.
-	export CLICOLOR=1
-	
+	export CLICOLOR=1;
+
 	# MAMP stuff.
-	export MAMP_BIN="/Applications/MAMP/Library/bin"
-	export MAMP_PHP="/Applications/MAMP/bin/php/php5.4.10/bin"
-	
+	export MAMP_BIN="/Applications/MAMP/Library/bin";
+	export MAMP_PHP="/Applications/MAMP/bin/php/php5.6.27/bin";
+
 	# Git stuff.
-	export GIT_BIN="/usr/local/git/bin"
-	
+	# export GIT_BIN="/usr/local/git/bin";
+
 	# ImageMagick stuff.
-	# export MAGICK_HOME="/opt/ImageMagick-6.9.1"
-	export MAGICK_HOME="/opt/ImageMagick"
-	export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
-	
+	# export MAGICK_HOME="/opt/ImageMagick";
+	# export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/";
+
 	# Final $PATH setting.
-	# export PATH="$MAGICK_HOME/bin:/usr/local/bin:/usr/local/sbin:$GIT_BIN:$PATH"
-	export PATH="$MAGICK_HOME/bin:$MAMP_BIN:$MAMP_PHP:/usr/local/bin:/usr/local/sbin:$GIT_BIN:$PATH"
-	
+	# export PATH="$MAGICK_HOME/bin:$MAMP_BIN:$MAMP_PHP:/usr/local/bin:/usr/local/sbin:$GIT_BIN:$PATH";
+	# export PATH="$MAGICK_HOME/bin:/usr/local/bin:/usr/local/sbin:$GIT_BIN:$PATH";
+	export PATH="/usr/local/bin:/usr/local/sbin:$MAMP_BIN:$MAMP_PHP:$PATH";
+
 	# Set the VAGRANT_HOME path.
-	export VAGRANT_HOME="/Volumes/Moon/vagrant.d"
+	export VAGRANT_HOME="/Volumes/Moon/vagrant.d";
+
+	# 2016-12-08: Load the SSH key into the keychain.
+	ssh-add -K 2>/dev/null;
 
 ***
 
