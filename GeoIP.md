@@ -24,6 +24,10 @@ Run `libtoolize` and `automake -f` like this:
 
 	libtoolize -f
 
+Or if you installed `libtool` ith Homebrew, run `glibtoolize` like this:
+
+	glibtoolize -f
+
 Then run this `configure` command:
 
 	./configure

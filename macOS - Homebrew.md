@@ -18,7 +18,8 @@ A basic pile of macOS command line tools I like to install:
 
     brew install autoconf automake libtool \
       htop nload mtr wget \
-      geoip iftop iperf \
+      geoip geoipupdate \
+      iftop iperf \
       lame figlet fortune;
 
 ***
