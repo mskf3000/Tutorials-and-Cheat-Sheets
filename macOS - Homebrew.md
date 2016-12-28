@@ -16,7 +16,8 @@ Run this to make sure the `/usr/local/bin` and `/usr/local/share` directories ar
 
 A basic pile of macOS command line tools I like to install:
 
-    brew install htop nload mtr wget \
+    brew install autoconf automake libtool \
+      htop nload mtr wget \
       geoip iftop iperf \
       lame figlet fortune;
 
@@ -24,7 +25,7 @@ A basic pile of macOS command line tools I like to install:
 
 Uninstall all Homebrew pacakages:
 
-    brew remove --force --ignore-dependencies $(brew list)
+    brew remove --force --ignore-dependencies $(brew list);
 
 ***
 
