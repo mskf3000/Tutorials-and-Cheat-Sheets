@@ -130,13 +130,19 @@ The output should be something like this:
 
 	meteor build /path/to/build/to
 	scp /path/to/build/to/meteorapp.tar.gz username@example.com:/path/to/upload/to
+
 	ssh username@example.com
 	cd /path/to/upload/to
 	tar -xvf meteorapp.tar.gz
+
 	cd /path/to/upload/to/bundle/programs/server
 	npm install
-	export PORT=3000 MONGO_URL=mongodb://localhost:27017/meteorapp
-	node ../../main.js
+
+	export MONGO_URL="mongodb://mongo.local:27017/Lexicon";
+	export ROOT_URL="http://localhost";
+	export PORT=3000;
+	cd ../../
+	node main.js
 
 
 ***
