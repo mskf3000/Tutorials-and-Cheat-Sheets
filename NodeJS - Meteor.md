@@ -135,7 +135,8 @@ The output should be something like this:
 	tar -xvf meteorapp.tar.gz
 	cd /path/to/upload/to/bundle/programs/server
 	npm install
-	PORT=3000 MONGO_URL=mongodb://localhost:27017/meteorapp node main.js
+	export PORT=3000 MONGO_URL=mongodb://localhost:27017/meteorapp
+	node ../../main.js
 
 
 ***
