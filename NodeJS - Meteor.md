@@ -128,7 +128,9 @@ The output should be something like this:
 
 ## Manually Build for Deployment
 
-	meteor build /path/to/build/to
+Note that the compressed `tar.gz` archive created by the build process is named after the directory the MeteorJS code is stored in. So to rename on a deploy, just do a `git clone` to a new destination. Decompressed archive will be a directory named `bundle`.
+
+	meteor build --architecture=os.linux.x86_64 /path/to/build/to/
 	scp /path/to/build/to/meteorapp.tar.gz username@example.com:/path/to/upload/to
 
 	ssh username@example.com
@@ -138,7 +140,8 @@ The output should be something like this:
 	cd /path/to/upload/to/bundle/programs/server
 	npm install
 
-	export MONGO_URL="mongodb://mongo.local:27017/Lexicon";
+	export MONGO_URL="mongodb://localhost:27017/meteorapp";
+	export MONGO_OPLOG_URL="";
 	export ROOT_URL="http://localhost";
 	export PORT=3000;
 	cd ../../
