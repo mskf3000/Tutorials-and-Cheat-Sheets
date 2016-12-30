@@ -96,6 +96,13 @@ Remove all data connected to the XMP Dublin Core schema:
 	-execute                         Execute multiple commands on one line 
 	-srcfile FMT                     Set different source file name
 
+
+### Uninstalling ExifTool on macOS
+
+Just run this command to uninstall ExifTool and the related `lib/` directory from macOS; both are located in the `/usr/local/bin/` directory:
+
+    rm -rf /usr/local/bin/{exiftool,lib}
+
 ***
 
 *ExifTool (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
