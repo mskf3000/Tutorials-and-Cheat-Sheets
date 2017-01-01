@@ -69,6 +69,7 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
         # Now copy the metadata back into the MP3 file.
         # TODO: Sloppy process; should not have to copy the same file again to embed the metadata.
         ffmpeg -y -v quiet -nostdin -i "${mp3_filepath_temp}" -i "${metadata_filepath}" -map_metadata 1 -c:a copy -id3v2_version 3 -write_id3v1 1 "${mp3_filepath}";
+        rm -rf "${mp3_filepath_temp}" "${metadata_filepath}";
 
       done
 
