@@ -52,9 +52,7 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
 	
 	    # Set the MP3
 	    mp3_dirpath="${audio_dirname}/mp3";
-	    mp3_filepath_temp="${mp3_dirpath}/${audio_filename}.mp3.TMP";
 	    mp3_filepath="${mp3_dirpath}/${audio_filename}.mp3";
-	    metadata_filepath="${mp3_dirpath}/${audio_filename}.txt.TMP";
 	
 	    # Create the child MP3 directory.
 	    mkdir -p "${mp3_dirpath}";
