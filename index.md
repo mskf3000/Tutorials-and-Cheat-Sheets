@@ -30,6 +30,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [EmberJS - Installation and Usage](EmberJS%20-%20Installation%20and%20Usage)
 - [ExifTool](ExifTool)
 - [Fail2Ban](Fail2Ban)
+- [Find - Audio Processing Items](Find%20-%20Audio%20Processing%20Items)
 - [Find - Image Manipulation Related Items](Find%20-%20Image%20Manipulation%20Related%20Items)
 - [Find - User and Permissions Related Items](Find%20-%20User%20and%20Permissions%20Related%20Items)
 - [Find](Find)

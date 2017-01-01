@@ -1,0 +1,38 @@
+## Find - Audio Processing Items
+
+By Jack Szwergold
+
+### Convert FLAC to CBR MP3 files.
+
+Convert FLAC audio files into MP3 audio files at 320k CBR:
+
+    find -E "Desktop/Audio" -type f -iregex ".*\.(FLAC)$" |\
+      while read full_audio_filepath
+      do
+        ffmpeg -y -v quiet -nostdin -i "$full_audio_filepath" -ab 320k -ac 2 -map_metadata 0 -id3v2_version 3 "`sed 's/flac/mp3/g' <<< ${full_audio_filepath}`";
+      done
+
+### Convert CBR MP3 to VBR MP3 files.
+
+Convert MP3 audio files with LAME into VBR files:
+
+    find -E "Desktop/Audio" -type f -iregex ".*\.(MP3)$" |\
+      while read full_audio_filepath
+      do
+        lame --quiet -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 "$full_audio_filepath" "`sed 's/\.mp3/\ LAME.mp3/g' <<< ${full_audio_filepath}`";
+      done
+
+### Convert FLAC to VBR MP3 files.
+
+Convert FLAC audio files into MP3 audio by piping them through LAME for VBR output:
+
+    find -E "Desktop/Audio" -type f -iregex ".*\.(FLAC)$" |\
+      while read full_audio_filepath
+      do
+        ffmpeg -y -v quiet -nostdin -i "$full_audio_filepath" -ab 320k -ac 2 -map_metadata 0 -id3v2_version 3 -f wav - | \
+          lame --quiet -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 - "`sed 's/flac/mp3/g' <<< ${full_audio_filepath}`";
+      done
+
+***
+
+*Find - Audio Processing Items (c) by Jack Szwergold; written on January 1, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
