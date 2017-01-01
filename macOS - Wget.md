@@ -15,6 +15,10 @@ Install it with OpenSSL like this:
 	make
 	sudo make install
 
+To uninstall it, just delete this directory:
+
+	sudo rm -rf /usr/local/ssl
+
 Now install WGET like this:
 
 	curl -O -L http://ftp.gnu.org/gnu/wget/wget-1.18.tar.gz
