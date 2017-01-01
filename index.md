@@ -135,6 +135,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [NodeJS - Keystone](NodeJS%20-%20Keystone)
 - [NodeJS - Meteor](NodeJS%20-%20Meteor)
 - [NodeJS - Uninstalling NodeJS and NPM in macOS](NodeJS%20-%20Uninstalling%20NodeJS%20and%20NPM%20in%20macOS%20)
+- [PHP - Acquia Dev Desktop](PHP%20-%20Acquia%20Dev%20Desktop)
 - [PHP - Compiling and Installing PHP on Ubuntu](PHP%20-%20Compiling%20and%20Installing%20PHP%20on%20Ubuntu)
 - [PHP - Installing APC](PHP%20-%20Installing%20APC)
 - [PHP - Setting up JSON support for PHP on Ubuntu](PHP%20-%20Setting%20up%20JSON%20support%20for%20PHP%20on%20Ubuntu)
