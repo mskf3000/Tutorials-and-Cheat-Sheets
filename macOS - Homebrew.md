@@ -20,7 +20,8 @@ A basic pile of macOS command line tools I like to install:
       htop nload mtr wget \
       geoip geoipupdate \
       iftop iperf exiftool nmap \
-      lame ffmpeg figlet fortune;
+      lame ffmpeg id3v2 \
+      figlet fortune;
 
 ***
 
