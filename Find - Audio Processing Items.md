@@ -9,7 +9,7 @@ Convert FLAC audio files into MP3 audio files at 320k CBR:
     find -E "Desktop/Audio" -type f -iregex ".*\.(FLAC)$" |\
       while read full_audio_filepath
       do
-        ffmpeg -y -v quiet -nostdin -i "$full_audio_filepath" -b:a 320k -ac 2 -ar 44100 -map_metadata 0 -id3v2_version 3 "`sed 's/flac/mp3/g' <<< ${full_audio_filepath}`";
+        ffmpeg -y -v quiet -nostdin -i "$full_audio_filepath" -ac 2 -ar 44100 -map_metadata 0 -id3v2_version 3 "`sed 's/flac/mp3/g' <<< ${full_audio_filepath}`";
       done
 
 ### Convert CBR MP3 to VBR MP3 files.
@@ -29,7 +29,7 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
     find -E "Desktop/Audio" -type f -iregex ".*\.(FLAC)$" |\
       while read full_audio_filepath
       do
-        ffmpeg -y -v quiet -nostdin -i "${full_audio_filepath}" -b:a 320k -ac 2 -ar 44100 -f s16le -acodec pcm_s16le - | \
+        ffmpeg -y -v quiet -nostdin -i "${full_audio_filepath}" -ac 2 -ar 44100 -f s16le -acodec pcm_s16le - | \
           lame --quiet -r -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 - "`sed 's/flac/mp3/g' <<< ${full_audio_filepath}`";
       done
 
@@ -65,7 +65,7 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
 	    mp3_genre=$(ffprobe 2> /dev/null -show_format "${full_audio_filepath}" | grep -i TAG:GENRE= | cut -d '=' -f 2- );
 	
 	    # Where the magic happens.
-	    ffmpeg -y -v quiet -nostdin -i "${full_audio_filepath}" -b:a 320k -ac 2 -ar 44100 -f s16le -acodec pcm_s16le - | \
+	    ffmpeg -y -v quiet -nostdin -i "${full_audio_filepath}" -ac 2 -ar 44100 -f s16le -acodec pcm_s16le - | \
 	      lame --quiet --add-id3v2 --pad-id3v2 --tt "${mp3_title}" --ta "${mp3_artist}" --tl "${mp3_album}" --tn "${mp3_track}"/"${mp3_tracktotal}" --tg "${mp3_genre}" -r -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 - "${mp3_filepath}";
 	
 	  done
