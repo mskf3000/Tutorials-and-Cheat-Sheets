@@ -6,11 +6,11 @@ By Jack Szwergold
 
 Good settings for music:
 
-    --lowpass 19.7 -V3 --vbr-new -q0 -b96 --scale 0.99 --athaa-sensitivity 1
+    --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1
 
 Good settings for low fidelity mono and spoken word files:
 
-    --resample 8 -V3 --vbr-new -q0 -B16 --lowpass 15.4 --athaa-sensitivity 1
+    --resample 8 -V 3 --vbr-new -q 0 -B 16 --lowpass 15.4 --athaa-sensitivity 1
 
 ***
 
