@@ -40,8 +40,8 @@ Uninstall HTop by running this command from the source code directory:
 
 Or just run these commands:
 
-	rm -f /usr/local/share/applications/htop.desktop;
-	rm -f /usr/local/bin/htop;
+	rm -f /usr/local/share/applications/htop.desktop
+	rm -f /usr/local/bin/htop
 	rm -f /usr/local/share/man/man1/htop.1
 	rm -f /usr/local/share/pixmaps/htop.png
 
