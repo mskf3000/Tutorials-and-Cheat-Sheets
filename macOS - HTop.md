@@ -34,6 +34,17 @@ Finally install it by running `sudo make install`:
 
 	sudo make install
 
+Uninstall HTop by running this command from the source code directory:
+
+	sudo make uninstall
+
+Or just run these commands:
+
+	rm -f /usr/local/share/applications/htop.desktop;
+	rm -f /usr/local/bin/htop;
+	rm -f /usr/local/share/man/man1/htop.1
+	rm -f /usr/local/share/pixmaps/htop.png
+
 ***
 
 *macOS - HTop (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
