@@ -135,18 +135,19 @@ Note that the compressed `tar.gz` archive created by the build process is named 
 
 	ssh username@example.com
 	cd /path/to/upload/to
-	tar -xvf meteorapp.tar.gz
+	tar -xf meteorapp.tar.gz
 
-	cd /path/to/upload/to/bundle/programs/server
+	cd bundle/programs/server
 	npm install
+
+	cd ../../
 
 	export MONGO_URL="mongodb://localhost:27017/meteorapp";
 	export MONGO_OPLOG_URL="";
 	export ROOT_URL="http://localhost";
 	export PORT=3000;
-	cd ../../
-	node main.js
 
+	node main.js
 
 ***
 
