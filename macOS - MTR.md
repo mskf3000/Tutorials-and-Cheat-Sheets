@@ -91,6 +91,17 @@ If this is happening on a Linux/Unix system run that same command like this:
 
     chmod 4755 /usr/sbin/mtr
 
+### Uninstall
+
+Uninstall MTR by running this command from the source code directory:
+
+	sudo make uninstall
+
+Or just run these commands:
+
+	rm -f /usr/local/share/man/man8/mtr.8
+	rm -f /usr/local/sbin/mtr
+
 ***
 
 *macOS - MTR (c) by Jack Szwergold; written on September 11, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

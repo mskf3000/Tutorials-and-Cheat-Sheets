@@ -16,7 +16,7 @@ Run this to make sure the `/usr/local/bin` and `/usr/local/share` directories ar
 
 A basic pile of macOS command line tools I like to install:
 
-    brew install autoconf automake libtool \
+    brew install git autoconf automake libtool \
       htop nload mtr wget \
       geoip geoipupdate \
       iftop iperf exiftool nmap \

@@ -56,6 +56,14 @@ This example uses `slant` font and the output would be something like this:
 	 / __  /  __/ / / /_/ /_/
 	/_/ /_/\___/_/_/\____(_)
 
+### Uninstall
+
+Uninstall Figlet by running these commands:
+
+	sudo rm -rf /usr/local/share/figlet
+	sudo rm -f /usr/local/bin/{figlet,chkfont,figlist,showfigfonts}
+	sudo rm -f /usr/local/man/man6/{figlet.6,chkfont.6,figlist.6,showfigfonts.6}
+
 ***
 
 *macOS - Figlet (c) by Jack Szwergold; written on November 1, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
