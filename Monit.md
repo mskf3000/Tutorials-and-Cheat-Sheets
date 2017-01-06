@@ -155,6 +155,26 @@ Restart Monit and all should be good:
 
     sudo service monit restart
 
+### Create a custom Monit NodeJS application status monitoring rule.
+
+Create the actual MongoDB monitoring rule for Monit:
+
+    sudo nano /etc/monit/conf.d/node_app.conf
+
+One type of NodeJS monitoring rule:
+
+	check process nodejs with pidfile "/var/run/node_app.pid"
+	  start program = "/sbin/start node_app"
+	  stop program  = "/sbin/stop node_app"
+	  if failed host 127.0.0.1 port 8080 protocol http
+        with timeout 15 seconds
+      then restart
+      alert email_address@example.com only on { timeout, nonexist }
+
+Restart Monit and all should be good:
+
+    sudo service monit restart
+
 ***
 
 *Monit (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
