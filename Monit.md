@@ -163,7 +163,7 @@ Create the actual MongoDB monitoring rule for Monit:
 
 One type of NodeJS monitoring rule:
 
-	check process nodejs with pidfile "/var/run/node_app.pid"
+	check process node_app with pidfile "/var/run/node_app.pid"
 	  start program = "/sbin/start node_app"
 	  stop program  = "/sbin/stop node_app"
 	  if failed host 127.0.0.1 port 8080 protocol http
