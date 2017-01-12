@@ -128,12 +128,12 @@ Resize JPEG, PNG or TIFF images to dimensions of 1000 pixels wide or high if the
 	    convert -density 72 -units PixelsPerInch -resize "1000x1000>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
-Resize JPEG, PNG or TIFF images to dimensions of 1500 pixels wide or high if they are larger than 1500 pixels:
+Resize JPEG, PNG or TIFF images to dimensions of 1920 pixels wide or high if they are larger than 1500 pixels:
 
 	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    convert -density 72 -units PixelsPerInch -resize "1500x1500>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
+	    convert -density 72 -units PixelsPerInch -resize "1920x1920>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
 ### Convert TIFF images to JPEG images at 90% quality.
