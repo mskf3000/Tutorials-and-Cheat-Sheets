@@ -12,6 +12,10 @@ Run this to make sure the `/usr/local/bin` and `/usr/local/share` directories ar
 
     sudo chown -R `whoami`:admin /usr/local/{bin,share}
 
+And run this command to get NMAP—and other Python dependent items—installed properly:
+
+    sudo chown -R `whoami`:admin /usr/local/lib/python2.7/
+
 ***
 
 A basic pile of macOS command line tools I like to install:
