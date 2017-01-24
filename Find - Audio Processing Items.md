@@ -14,12 +14,22 @@ Convert FLAC audio files into MP3 audio files at 320k CBR:
 
 ### Convert CBR MP3 to VBR MP3 files.
 
-Convert MP3 audio files with LAME into VBR files:
+Convert AIFF audio files with LAME into VBR MP# files:
 
     find -E "Desktop/Audio" -type f -iregex ".*\.(MP3)$" |\
       while read full_audio_filepath
       do
         lame --quiet -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 "$full_audio_filepath" "`sed 's/\.mp3/\ LAME.mp3/g' <<< ${full_audio_filepath}`";
+      done
+
+### Convert AIFF files to VBR MP3 files.
+
+Convert MP3 audio files with LAME into VBR files:
+
+    find -E "Desktop/Audio" -type f -iregex ".*\.(AIFF)$" |\
+      while read full_audio_filepath
+      do
+        lame --quiet -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 "$full_audio_filepath" "`sed 's/\.aiff/\.mp3/g' <<< ${full_audio_filepath}`";
       done
 
 ### Convert FLAC to VBR MP3 files.
