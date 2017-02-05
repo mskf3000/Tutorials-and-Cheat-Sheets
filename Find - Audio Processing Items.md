@@ -48,7 +48,7 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
 
 Convert FLAC audio files into MP3 audio by piping them through LAME for VBR output. The output gets placed in an `mp3` subdirectory:
 
-	find -E "Desktop/Audio" -type f -iregex ".*\.(FLAC|M4A)$" |\
+	find -E "Desktop/Audio" -type f -iregex ".*\.(FLAC|M4A|WMA)$" |\
 	  while read full_audio_filepath
 	  do
 	

@@ -23,8 +23,9 @@ A basic pile of macOS command line tools I like to install:
     brew install git autoconf automake libtool \
       htop nload mtr wget \
       geoip geoipupdate \
-      iftop iperf exiftool nmap \
+      iftop iperf nmap \
       lame ffmpeg id3v2 \
+      imagemagick exiftool potrace \
       figlet fortune;
 
 ***
