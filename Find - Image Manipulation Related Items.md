@@ -156,6 +156,39 @@ This command converts TIFF images to JPEGs at 100% quality with a 1200 DPI setti
 	    convert -density 1200 -units PixelsPerInch -quality 100 "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".jpg
 	  done
 
+### Convert raster images to vector images using Potrace.
+
+This script is a first draft of a script that uses ImageMagick and Potrace to convert rasterized images into vector images. Works fine so far, but it would be nice to simply stream the output of convert right into potrace.
+
+	find -E . -type f -iregex ".*\.(JPG|JPG|PNG|TIF|TIFF)$" |\
+	  while read full_image_filepath
+	  do
+	
+	    # Break up the full  filepath stuff into different directory and filename components.
+	    image_dirname=$(dirname "${full_image_filepath}");
+	    image_basename=$(basename "${full_image_filepath}");
+	    image_filename="${image_basename%.*}";
+	    # image_extension="${image_basename##*.}";
+	
+	    # Set the directory values.
+	    eps_dirpath="${image_dirname}/eps";
+	    pnm_dirpath="${image_dirname}/eps";
+	
+	    # Set the filename values.
+	    eps_filepath="${eps_dirpath}/${image_filename}.eps";
+	    pnm_filepath="${pnm_dirpath}/${image_filename}.pnm";
+	
+	    # Create the child directories.
+	    mkdir -p "${eps_dirpath}";
+	
+	    # Where the magic happens.
+	    convert "${full_image_filepath}" "${pnm_filepath}";
+	    potrace --eps "${pnm_filepath}" -o "${eps_filepath}";
+	    rm -f "${pnm_filepath}";
+	
+	  done
+
+
 ***
 
 *Find - Image Manipulation Related Items (c) by Jack Szwergold; written on September 29, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
