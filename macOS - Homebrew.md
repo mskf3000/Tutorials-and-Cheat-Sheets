@@ -26,7 +26,8 @@ A basic pile of macOS command line tools I like to install:
       iftop iperf nmap \
       lame ffmpeg id3v2 \
       imagemagick exiftool potrace \
-      figlet fortune;
+      figlet fortune
+      sdl sdl2;
 
 ***
 
