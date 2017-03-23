@@ -14,9 +14,48 @@ The output should be something like this:
 
     nginx version: nginx/1.4.1
 
-Install `ngxtop` to monitor realtime stats on the server:
+#### Install Nginx on Ubuntu 14.04:
 
-	sudo aptitude install ngxtop
+	sudo aptitude install nginx-full
+
+Sundry service control commands:
+
+	sudo service nginx restart
+	sudo service nginx start
+	sudo service nginx stop
+	sudo service nginx status
+
+#### Install `ngxtop`.
+
+Install `ngxtop` to monitor realtime stats on the server like this. First install PIP like this:
+
+	sudo aptitude install install python-pip
+
+Then install `ngxtop` like this:
+
+	sudo pip install ngxtop
+
+And then monitor the Nginx service like this:
+
+	sudo ngxtop
+
+#### Disable Nginx version number from header calls.
+
+Open up the config file here:
+
+	sudo nano /etc/nginx/nginx.conf
+
+Look for this line:
+
+	# server_tokens off;
+
+And then uncomment it like this:
+
+	server_tokens off;
+
+Finally, restart Nginx like this:
+
+	sudo service nginx restart
 
 ***
 
