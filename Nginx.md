@@ -29,7 +29,7 @@ Sundry service control commands:
 
 Install `ngxtop` to monitor realtime stats on the server like this. First install PIP like this:
 
-	sudo aptitude install install python-pip
+	sudo aptitude install python-pip
 
 Then install `ngxtop` like this:
 
