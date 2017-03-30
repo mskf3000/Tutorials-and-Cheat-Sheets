@@ -133,7 +133,7 @@ Memory Mapping (MMAP) stuff:
 	# http://httpd.apache.org/docs/2.2/mod/core.html#enablemmap
 	#
 	EnableMMAP Off
-	
+
 	#
 	# EnableSendfile: Control whether the sendfile kernel support is
 	# used to deliver files (assuming that the OS supports it).
@@ -143,6 +143,52 @@ Memory Mapping (MMAP) stuff:
 	#
 	EnableSendfile Off
 
+### Some basic Apache rewrite rules.
+	
+	RewriteEngine On
+	
+	# 2017-03-29: Some basic redirects to a new server.
+	Redirect 301 /index.php http://www.example.com/something
+	Redirect 301 /index.html http://www.example.com/something
+	
+	# 2017-03-29: Some slightly more complex redirects with a wildcard.
+	RedirectMatch 301 /site/something_1.*.html http://www.example.com/something/1
+	RedirectMatch 301 /site/something_1.*.html http://www.example.com/something/2
+	RedirectMatch 301 /site/something_1.*.html http://www.example.com/something/3
+	
+	# 2017-03-29: Some more basic redirects to a new server.
+	Redirect 301 /site/something_else_1.html http://www.example.com/something_else/1
+	Redirect 301 /site/something_else_2.html http://www.example.com/something_else/2
+	Redirect 301 /site/something_else_3.html http://www.example.com/something_else/3
+	
+	# 2017-03-29: Some more slightly more complex redirects with a boolean 'or' logic.
+	RedirectMatch 301 /site/something_fancy_(sm|md)_1.html http://www.example.com/something_fancy/1
+	RedirectMatch 301 /site/something_fancy_(sm|md)_2.html http://www.example.com/something_fancy/2
+	RedirectMatch 301 /site/something_fancy_(sm|md)_3.html http://www.example.com/something_fancy/3
+	
+	
+	# 2017-03-29: A more complex rewrite rule that can pass parameters to a new destination.
+	RewriteEngine on
+	RewriteRule ^/site/something/?(.*)$ http://www.example.com/something_fancy/$1 [L,R=301]
+
+### A RewriteMap example.
+
+First create a file for the rewrite map named something like `silliness2id.txt` for this example and add a list of values like this; one per line separated by spaces:
+
+	Something 123
+	something 123
+	Something%20Else 456
+	Bleagh 789
+	bleagh 789
+	
+Now add this to the Apache config or `.htaccess` file:
+
+	# 2017-03-29: A more complex rewrite rule set that uses a rewrite map that can pass parameters to a new destination.	RewriteMap silliness   txt:/etc/apache2/silliness2id.txt
+	
+	RewriteEngine On
+	RewriteCond %{QUERY_STRING}  (bleagh|whatever)=([^&]+)
+	RewriteRule ^/site/something_more_complex/$ /site/something_more_complex/${silliness:%2}? [L,R=301]
+	
 ### Useful Apache rewrite rules.
 
 Rewrite rule to force lowercase:
@@ -157,7 +203,7 @@ Rewrite rule to redirect malware URLs with params:
 	# 2012-07-28: Added to force malware URLs to finally go away.
 	RedirectMatch 404 ^/new-nav/index.php
 	RedirectMatch 404 ^/sites
-	
+
 	# 2012-09-06: Added to force more malware URLs to finally go away.
 	RewriteCond %{QUERY_STRING} DrugO
 	RewriteRule .* - [R=404]
@@ -168,7 +214,7 @@ Rewrite rule to block access based on referrer:
 	# Options +FollowSymlinks
 	RewriteCond %{HTTP_REFERER} example\.com [NC]
 	RewriteRule .* - [F]
-	
+
 Rewrite rule to block access based on multiple referrers:
 
 	RewriteEngine on
@@ -176,7 +222,7 @@ Rewrite rule to block access based on multiple referrers:
 	RewriteCond %{HTTP_REFERER} example\.com [NC,OR]
 	RewriteCond %{HTTP_REFERER} another_example\.com
 	RewriteRule .* - [F]
-	
+
 Rewrite rule to redirect requests based on referrer:
 
 	RewriteEngine On
