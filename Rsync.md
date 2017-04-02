@@ -2,6 +2,10 @@
 
 By Jack Szwergold
 
+### Basic Rync command to clone directories.
+
+    rsync -avz --dry-run /source_directory/ /destination_directory/
+
 ### Command to retain partially transfered files if the connection is lost.
 
 While this works, sometimes the partially transferred files are not cleanly resumed. Should check why that happens and if anything can be done:
