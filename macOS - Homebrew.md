@@ -31,6 +31,13 @@ A basic pile of macOS command line tools I like to install:
 
 ***
 
+Install an updated version of Rsync—since the macOS version is out of date—like this:
+
+	brew tap homebrew/dupes
+	brew install rsync
+
+***
+
 Uninstall all Homebrew pacakages:
 
     brew remove --force --ignore-dependencies $(brew list);
