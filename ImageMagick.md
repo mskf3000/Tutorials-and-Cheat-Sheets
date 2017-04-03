@@ -90,6 +90,38 @@ The returned value would be something like this:
 
     80,105: (185,200,200)  #B9C8C8  srgb(185,200,200)
 
+### Generate some test images.
+
+These commands will generate some test images at 200 pixels wide by 200 pixels high:
+
+	convert -size 200x200 xc:red ~/Desktop/test_red.jpg
+	convert -size 200x200 xc:blue ~/Desktop/test_blue.jpg
+	convert -size 200x200 xc:yellow ~/Desktop/test_yellow.jpg
+	convert -size 200x200 xc:green ~/Desktop/test_green.jpg
+	convert -size 200x200 xc:orange ~/Desktop/test_orange.jpg
+	convert -size 200x200 xc:darkgrey ~/Desktop/test_darkgrey.jpg
+	convert -size 200x200 xc:purple ~/Desktop/test_purple.jpg
+
+These commands will generate some test images at 1200 pixels wide by 400 pixels high:
+
+	convert -size 1200x400 xc:red ~/Desktop/big_test_red_1200w.jpg
+	convert -size 1200x400 xc:blue ~/Desktop/big_test_blue_1200w.jpg
+	convert -size 1200x400 xc:yellow ~/Desktop/big_test_yellow_1200w.jpg
+	convert -size 1200x400 xc:green ~/Desktop/big_test_green_1200w.jpg
+	convert -size 1200x400 xc:orange ~/Desktop/big_test_orange_1200w.jpg
+	convert -size 1200x400 xc:darkgrey ~/Desktop/big_test_darkgrey_1200w.jpg
+	convert -size 1200x400 xc:purple ~/Desktop/big_test_purple_1200w.jpg
+
+These commands will generate some test images at 1920 pixels wide by 1200 pixels high:
+
+	convert -size 1920x1200 xc:red ~/Desktop/big_test_red_1920w.jpg
+	convert -size 1920x1200 xc:blue ~/Desktop/big_test_blue_1920w.jpg
+	convert -size 1920x1200 xc:yellow ~/Desktop/big_test_yellow_1920w.jpg
+	convert -size 1920x1200 xc:green ~/Desktop/big_test_green_1920w.jpg
+	convert -size 1920x1200 xc:orange ~/Desktop/big_test_orange_1920w.jpg
+	convert -size 1920x1200 xc:darkgrey ~/Desktop/big_test_darkgrey_1920w.jpg
+	convert -size 1920x1200 xc:purple ~/Desktop/big_test_purple_1920w.jpg
+
 ***
 
 *ImageMagick (c) by Jack Szwergold; written on October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
