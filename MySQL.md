@@ -61,6 +61,10 @@ Login as root:
 
     mysql -u root -p
 
+MySQL console command to show the physical location of the MySQL databases on your server:
+
+	SELECT @@DATADIR;
+
 ### Managing the MySQL `init.d` scripts.
 
 By default, MySQL should get an `init.d` installed. But if somehow it didn’t, run this `update-rc.d` command:
