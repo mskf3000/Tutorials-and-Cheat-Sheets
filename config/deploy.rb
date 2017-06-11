@@ -9,7 +9,7 @@ set :repo_url, 'git@github.com:JackSzwergold/Tutorials-and-Cheat-Sheets.git'
 set :deploy_to, '/var/www'
 
 # Default value for :scm is :git
-set :scm, :git
+# set :scm, :git
 
 # Default value for :format is :pretty
 set :format, :pretty
