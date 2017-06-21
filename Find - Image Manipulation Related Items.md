@@ -116,6 +116,16 @@ Find any stray images with the `*.jpg_original` extension that ExifTool created 
 	    rm "${FULL_IMAGE_PATH}"
 	  done
 
+### Set the 'Creator' value to a bunch of JPEG images.
+
+Change the `Creator` value to match whatever creator value you want:
+
+	find 'Desktop/Pics' -type f -name '*.jpg' |\
+		  while read FULL_IMAGE_PATH
+		  do
+		    exiftool -Creator='Jack Szwergold' -overwrite_original_in_place "${FULL_IMAGE_PATH}"
+		  done
+
 ### Change the DPI (density) of images.
 
 Change the DPI of JPEG images to 200 dpi:
