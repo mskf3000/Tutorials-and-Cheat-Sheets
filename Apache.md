@@ -231,6 +231,22 @@ Rewrite rule to redirect requests based on referrer:
 	RewriteCond %{HTTP_REFERER} .*yet_another_example.com.*$
 	RewriteRule ^(.*)$ http://www.preworn.com/
 
+Suggested way of forcing HTTPS; not so great since it needs to pay attention to the hostname.
+
+	# RewriteCond %{HTTPS} off [OR]
+	# RewriteCond %{HTTP_HOST} ^www\.example\.com*
+	# RewriteRule ^(.*)$ https://example.com/$1 [L,R=301]
+	
+A cleaner way of forcing HTTPS; generic and more flexible/portable.
+
+	RewriteCond %{HTTPS} !=on
+	# RewriteRule ^/?(.*) https://%{SERVER_NAME}:%{SERVER_PORT}/$1 [R,L]
+	# RewriteRule ^/?(.*) https://%{SERVER_NAME}:8443/$1 [R,L]
+	RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+	
+	RewriteCond %{HTTPS} off
+	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
 ### Adjusting “prefork MPM” values in Apache 2.4
 
     sudo nano /etc/apache2/mods-available/mpm_prefork.conf
