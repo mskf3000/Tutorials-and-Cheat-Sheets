@@ -246,6 +246,18 @@ A cleaner way of forcing HTTPS; generic and more flexible/portable.
 	
 	RewriteCond %{HTTPS} off
 	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+	
+Allow traffic through based on referrers.
+
+	RewriteEngine On
+	RewriteBase /
+	
+	# Allow these referrers to pass.
+	RewriteCond %{HTTP_REFERER} ^https://(unblocked|blocked)\.example\.com
+	RewriteRule ^ - [L]
+	
+	# Redirect all other traffic that doesn’t match the above referrers.
+	RewriteRule ^ https://blocked.example.com/ [R,L]
 
 ### Adjusting “prefork MPM” values in Apache 2.4
 
