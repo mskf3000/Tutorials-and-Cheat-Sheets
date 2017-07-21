@@ -44,4 +44,4 @@ And then, just restart the Finder with this command:
 
 ***
 
-*macOS - Some GlobalPreferences Related Items (c) by Jack Szwergold; written on May 4, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*macOS - Some GlobalPreferences Related Items (c) by Jack Szwergold; written on May 4, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

@@ -174,4 +174,4 @@ If you somehow want to change the author of commits in a branch run this Bash co
 
 ***
 
-*Git - Initing a Repo and Pushing to Origin (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Git - Initing a Repo and Pushing to Origin (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

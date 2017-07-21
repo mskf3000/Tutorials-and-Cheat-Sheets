@@ -492,4 +492,4 @@ And change it to this; note the `address="127.0.0.1"` line:
 
 ***
 
-*Java - Installing a Web Crawler based on Solr and Nutch (c) by Jack Szwergold; written on October 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Java - Installing a Web Crawler based on Solr and Nutch (c) by Jack Szwergold; written on October 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

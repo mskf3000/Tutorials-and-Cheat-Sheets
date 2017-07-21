@@ -36,4 +36,4 @@ And once it’s installed, run the command with `-h` to do a simple check to see
 
 ***
 
-*macOS - IFTop (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*macOS - IFTop (c) by Jack Szwergold; written on September 14, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

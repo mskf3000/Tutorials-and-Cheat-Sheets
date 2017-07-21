@@ -18,4 +18,4 @@ And if you need to stop ARD on a remote machine via SSH remote login, just run t
 
 ***
 
-*macOS - Enabling and Disabling ARD Remote Access from the Terminal (c) by Jack Szwergold; written on September 13, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*macOS - Enabling and Disabling ARD Remote Access from the Terminal (c) by Jack Szwergold; written on September 13, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

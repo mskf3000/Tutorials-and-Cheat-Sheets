@@ -82,4 +82,4 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
 
 ***
 
-*Find - Audio Processing Items (c) by Jack Szwergold; written on January 1, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Find - Audio Processing Items (c) by Jack Szwergold; written on January 1, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

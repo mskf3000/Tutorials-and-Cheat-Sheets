@@ -30,4 +30,4 @@ And a GZipped directory can be imported like this:
 
 ***
 
-*PHP - Acquia Dev Desktop (c) by Jack Szwergold; written on December 13, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*PHP - Acquia Dev Desktop (c) by Jack Szwergold; written on December 13, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

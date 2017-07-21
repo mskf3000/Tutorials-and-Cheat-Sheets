@@ -125,7 +125,7 @@ And check the size. By default it is usually about 14MB in size. But after this 
 
 ***
 
-*Developing With MAMP 2.1.4 • Part 3: Upgrading the PHP Pear Library in MAMP (c) by Jack Szwergold; written on February 17, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Developing With MAMP 2.1.4 • Part 3: Upgrading the PHP Pear Library in MAMP (c) by Jack Szwergold; written on February 17, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
 
 [1]: http://us3.php.net/phpinfo "Info on phpinfo()."
 [2]: http://unixhelp.ed.ac.uk/CGI/man-cgi?which "Info on the Unix 'which' command."

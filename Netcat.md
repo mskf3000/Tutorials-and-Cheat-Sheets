@@ -24,4 +24,4 @@ And you should see the contents of `index.html` (aka: “Hello world!”) show u
 
 ***
 
-*Netcat (c) by Jack Szwergold; written on October 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Netcat (c) by Jack Szwergold; written on October 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

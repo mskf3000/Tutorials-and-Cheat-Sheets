@@ -34,4 +34,4 @@ And once it’s installed, run the command with `-v` to do a simple check to see
 
 ***
 
-*macOS - iPerf (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*macOS - iPerf (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

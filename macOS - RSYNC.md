@@ -38,4 +38,4 @@ On macOS 10.9.5 the version info is “2.6.9  protocol version 29.” While it�
 
 ***
 
-*macOS - RSYNC (c) by Jack Szwergold; written on September 13, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*macOS - RSYNC (c) by Jack Szwergold; written on September 13, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

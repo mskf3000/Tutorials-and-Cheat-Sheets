@@ -63,4 +63,4 @@ And set the permissions back to what they were at the beginning of the process:
 
 ***
 
-*Postfix - How to clean up the clientmqueue Spool Directory (c) by Jack Szwergold; written on September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Postfix - How to clean up the clientmqueue Spool Directory (c) by Jack Szwergold; written on September 17, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

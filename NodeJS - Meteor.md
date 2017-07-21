@@ -151,4 +151,4 @@ Note that the compressed `tar.gz` archive created by the build process is named 
 
 ***
 
-*NodeJS - Meteor (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*NodeJS - Meteor (c) by Jack Szwergold; written on September 22, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

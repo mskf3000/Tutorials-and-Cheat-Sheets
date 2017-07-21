@@ -30,4 +30,4 @@ Optional. Enrich the bash startup file with completion and aliases.
 
 ***
 
-*PHP - Drush (c) by Jack Szwergold; written on December 15, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*PHP - Drush (c) by Jack Szwergold; written on December 15, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

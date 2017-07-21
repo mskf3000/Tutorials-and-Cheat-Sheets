@@ -124,5 +124,5 @@ These commands will generate some test images at 1920 pixels wide by 1200 pixels
 
 ***
 
-*ImageMagick (c) by Jack Szwergold; written on October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*ImageMagick (c) by Jack Szwergold; written on October 5, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
 

@@ -114,4 +114,4 @@ So let’s say your Internet connection is bad & drops out during a deployment. 
 
 ***
 
-*Ruby - Capistrano (c) by Jack Szwergold; written on September 15, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Ruby - Capistrano (c) by Jack Szwergold; written on September 15, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

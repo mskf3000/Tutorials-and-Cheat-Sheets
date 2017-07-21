@@ -158,4 +158,4 @@ Followed by this `launchctl load` command:
 
 ***
 
-*Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Setting Up a Postfix SASL SMTP Email Relay (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*

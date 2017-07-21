@@ -34,4 +34,4 @@ So in this case, the `host` machine is my Macintosh running Mac OS X and the `gu
 
 ***
 
-*Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox • Part 1: Overall Virtualization Concepts (c) by Jack Szwergold; written on March 2, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+*Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox • Part 1: Overall Virtualization Concepts (c) by Jack Szwergold; written on March 2, 2014. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
