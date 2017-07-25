@@ -33,6 +33,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [Find - Audio Processing Items](Find%20-%20Audio%20Processing%20Items)
 - [Find - Image Manipulation Related Items](Find%20-%20Image%20Manipulation%20Related%20Items)
 - [Find - User and Permissions Related Items](Find%20-%20User%20and%20Permissions%20Related%20Items)
+- [Find - Video Processing Items](Find%20-%20Video%20Processing%20Items)
 - [Find](Find)
 - [GeoIP](GeoIP)
 - [Git - Changing Text Across Multiple Commit Messages](Git%20-%20Changing%20Text%20Across%20Multiple%20Commit%20Messages)
