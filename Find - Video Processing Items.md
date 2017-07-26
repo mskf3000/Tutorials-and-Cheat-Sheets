@@ -17,7 +17,7 @@ This script (`video_metadata_parser.sh`) uses ExifTool to parse dates, times and
 	    video_extension="${video_basename##*.}";
 	
 	    # Get the video metadata.
-	    video_date=$(exiftool -s -s -s -ContentCreateDate "${full_video_filepath}");
+	    video_date=$(exiftool -s -s -s -CreationDate "${full_video_filepath}");
 	    video_title=$(exiftool -s -s -s -Title "${full_video_filepath}");
 	
 	    # Reformat the file creation date to be Flickr friendly.
