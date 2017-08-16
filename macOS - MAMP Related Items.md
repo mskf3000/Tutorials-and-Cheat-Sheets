@@ -80,7 +80,7 @@ Work in progress! Not complete yet. Based on the content here:
 
 	tar -xf freetds-patched.tar.gz
 
-	cd freetds-freetds-1.00.54
+	cd freetds-1.00.54
 
 	./configure --prefix=/Applications/MAMP/Library --with-tdsver=7.4 --sysconfdir=/Applications/MAMP/conf/freetds
 
