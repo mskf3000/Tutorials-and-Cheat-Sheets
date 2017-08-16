@@ -88,7 +88,7 @@ Then decompress the FreeTDS source code archive:
 
 	tar -xf freetds-patched.tar.gz
 
-Now go into the dempressed directory:
+Now go into the decompressed source code directory:
 
 	cd freetds-*
 
@@ -106,7 +106,7 @@ And finally install FreeTDS into the installed version of MAMP:
 
 #### Compile PHP
 
-Now we will download the exact same version of PHP you will be running under MAMP so we can properly compile the MSSQL module. We will not be completely rebuilding PHP from source, but we need the full PHP source coe to build the module against.
+Now we will download the exact same version of PHP you will be running under MAMP so we can properly compile the MSSQL module. We will not be completely rebuilding PHP from source, but we need the full PHP source code to build the module against.
 
 Before anything else, make sure to head to your desktop before anything else happens:
 
@@ -116,7 +116,11 @@ Now use Curl to grab the PHP source code for the version of PHP you will be usin
 
 	curl -O -L http://am1.php.net/distributions/php-5.6.10.tar.gz
 
+Then decompress the PHP source code archive:
+
 	tar -xf php-5.6.10.tar.gz
+
+Now go into the decompressed source code directory:
 
 	cd php-5.6.10
 
@@ -132,7 +136,7 @@ And finally with that done, run `make`:
 
 	make
 
-#### Compile MSSQL Module
+#### Compiling the MSSQL Module
 
 With PHP now compiled, let’s now go into the MSSQL PHP extension directory:
 
@@ -171,11 +175,19 @@ And finally with that done, run `make` to compile the MSSQL PHP extension:
 
 	make
 
+#### Installing the MSSQL Module
+
 If that runs successfully you have now successfully created a `mssql.so` PHP module that has been compiled against `php-5.6.10` and is ready to use with MAMP.
+
+Copy that module over into PHP version specific directory in MAMP like this:
 
 	cp modules/mssql.so /Applications/MAMP/bin/php/php5.6.10/lib/php/extensions/no-debug-non-zts-20131226/
 
+Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
+
 	echo "extension=mssql.so" >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini
+
+Now start MAMP again and check the output of the PHP info page and `mssql` should be clearly listed there under installed components.
 
 ***
 
