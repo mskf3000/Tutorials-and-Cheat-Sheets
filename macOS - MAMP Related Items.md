@@ -118,7 +118,7 @@ Work in progress! Not complete yet. Based on the content here:
 
 	cp modules/mssql.so /Applications/MAMP/bin/php/php5.6.27/lib/php/extensions/no-debug-non-zts-20131226/
 
-	echo "extension=mssql.so" >> /Applications/MAMP/conf/php5.6.27/php.ini
+	echo "extension=mssql.so" >> Applications/MAMP/bin/php/php5.6.27/conf/php.ini
 
 ***
 
