@@ -65,54 +65,90 @@ Then adjust it like this; which in this case switches the timezone to `America/N
 
 With that done, save the file, restart MAMP and the timezone for things like PHP error logs will now be properly set to the `America/New_York` timezone.
 
-### PHP MSSQL under MAMP 4.0.6
+### PHP MSSQL under MAMP 3.5.2 or MAMP 4.0.6
 
-Work in progress! Not complete yet. Based on the content here:
+Before anything else, make sure your local MAMP install’s binary paths are part of you default PATH. You would do this by adding the following paths to your main PATH in your `~/.bash_profile`:
 
-	https://web.archive.org/web/20120603052424/http://www.tumblr.com/tagged/mssql+mamp+php+mac+osx
-	https://lkrms.org/php-with-freetds-on-os-x-mavericks/
+* **MAMP 3.5.2 Main `bin/` Path**: `/Applications/MAMP/Library/bin`
+* **MAMP 3.5.2 PHP `bin/` Path**: `/Applications/MAMP/bin/php/php5.6.10/bin`
 
-***
+#### Compile and Install FreeTDS
+
+We need to install FreeTDS within the installed version of MAMP.
+
+Before anything else, make sure to head to your desktop before anything else happens:
 
 	cd ~/Desktop
+
+Now use Curl to grab the latest stable version of FreeTDS like this:
 
 	curl -O -L ftp://ftp.freetds.org/pub/freetds/stable/freetds-patched.tar.gz
 
+Then decompress the FreeTDS source code archive:
+
 	tar -xf freetds-patched.tar.gz
 
-	cd freetds-1.00.54
+Now go into the dempressed directory:
+
+	cd freetds-*
+
+And run this `configure` command:
 
 	./configure --prefix=/Applications/MAMP/Library --with-tdsver=7.4 --sysconfdir=/Applications/MAMP/conf/freetds
 
+With that done, run `make`:
+
 	make
+
+And finally install FreeTDS into the installed version of MAMP:
 
 	make install
 
-***
+#### Compile PHP
+
+Now we will download the exact same version of PHP you will be running under MAMP so we can properly compile the MSSQL module. We will not be completely rebuilding PHP from source, but we need the full PHP source coe to build the module against.
+
+Before anything else, make sure to head to your desktop before anything else happens:
 
 	cd ~/Desktop
 
-	curl -O -L http://am1.php.net/distributions/php-5.6.24.tar.gz
+Now use Curl to grab the PHP source code for the version of PHP you will be using under MAMP like this:
 
-	tar -xf php-5.6.24.tar.gz
+	curl -O -L http://am1.php.net/distributions/php-5.6.10.tar.gz
 
-	cd php-5.6.24
+	tar -xf php-5.6.10.tar.gz
+
+	cd php-5.6.10
+
+And run this `configure` command; we don’t need iconv for what we are doing so we build it like this:
+
+	./configure --without-iconv
+
+If for some reason you need iconv, you can run this `configure` command:
 
 	./configure --with-iconv=/Applications/MAMP/Library/
-	./configure --without-iconv
+
+And finally with that done, run `make`:
 
 	make
 
-***
+#### Compile and Install MSSQL
+
+With PHP now compiled, let’s now go into the MSSQL PHP extension directory:
 
 	cd ext/mssql
 
+We’re going to run `phpize` to prepare the MSSQL PHP extension of compiling:
+
 	phpize
+
+Now run this `configure` command:
 
 	./configure --with-mssql=/Applications/MAMP/Library
 
-	make
+And finally with that done, run `make` to compile the MSSQL PHP extension:
 
+	make
 
 ***
 
