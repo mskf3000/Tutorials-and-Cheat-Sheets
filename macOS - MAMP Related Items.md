@@ -152,7 +152,7 @@ And finally with that done, run `make` to compile the MSSQL PHP extension:
 
 ***
 
-	cp modules/mssql.so /Applications/MAMP/bin/php/php5.6.27/lib/php/extensions/no-debug-non-zts-20131226/
+	cp modules/mssql.so /Applications/MAMP/bin/php/php5.6.10/lib/php/extensions/no-debug-non-zts-20131226/
 
 	echo "extension=mssql.so" >> Applications/MAMP/bin/php/php5.6.27/conf/php.ini
 
