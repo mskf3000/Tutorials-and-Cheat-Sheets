@@ -70,6 +70,7 @@ With that done, save the file, restart MAMP and the timezone for things like PHP
 Work in progress! Not complete yet. Based on the content here:
 
 	https://web.archive.org/web/20120603052424/http://www.tumblr.com/tagged/mssql+mamp+php+mac+osx
+	https://lkrms.org/php-with-freetds-on-os-x-mavericks/
 
 ***
 
@@ -98,6 +99,7 @@ Work in progress! Not complete yet. Based on the content here:
 	cd php-5.6.24
 
 	./configure --with-iconv=/Applications/MAMP/Library/
+	./configure --without-iconv
 
 	make
 
