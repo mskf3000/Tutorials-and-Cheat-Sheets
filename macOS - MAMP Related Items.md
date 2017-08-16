@@ -132,7 +132,7 @@ And finally with that done, run `make`:
 
 	make
 
-#### Compile and Install MSSQL
+#### Compile MSSQL Module
 
 With PHP now compiled, let’s now go into the MSSQL PHP extension directory:
 
@@ -142,15 +142,7 @@ We’re going to run `phpize` to prepare the MSSQL PHP extension of compiling:
 
 	phpize
 
-Now run this `configure` command:
-
-	./configure --with-mssql=/Applications/MAMP/Library
-
-And finally with that done, run `make` to compile the MSSQL PHP extension:
-
-	make
-
-***
+Note if the `phpize` command fails with a bunch of `No such file or directory` errors like this:
 
 	grep: /Applications/MAMP/bin/php/php5.6.10/include/php/main/php.h: No such file or directory
 	grep: /Applications/MAMP/bin/php/php5.6.10/include/php/Zend/zend_modules.h: No such file or directory
@@ -160,11 +152,30 @@ And finally with that done, run `make` to compile the MSSQL PHP extension:
 	Zend Module Api No:     
 	Zend Extension Api No:  
 
-***
+Then you need to create an `include/php` directory in this path:
+
+	/Applications/MAMP/bin/php/php5.6.10/include/php
+
+And the contents of that `include/php` directory will be the `php-5.6.10` source code directory itself. You might need to run `make clean` and run the configure commands in that directory again to get everything set. Then rerun `phpize` again and the output should be clean and look like this:
+
+	Configuring for:
+	PHP Api Version:         20131106
+	Zend Module Api No:      20131226
+	Zend Extension Api No:   220131226
+
+With that done, run this `configure` command:
+
+	./configure --with-mssql=/Applications/MAMP/Library
+
+And finally with that done, run `make` to compile the MSSQL PHP extension:
+
+	make
+
+If that runs successfully you have now successfully created a `mssql.so` PHP module that has been compiled against `php-5.6.10` and is ready to use with MAMP.
 
 	cp modules/mssql.so /Applications/MAMP/bin/php/php5.6.10/lib/php/extensions/no-debug-non-zts-20131226/
 
-	echo "extension=mssql.so" >> Applications/MAMP/bin/php/php5.6.27/conf/php.ini
+	echo "extension=mssql.so" >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini
 
 ***
 
