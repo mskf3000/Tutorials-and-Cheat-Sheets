@@ -65,7 +65,7 @@ Then adjust it like this; which in this case switches the timezone to `America/N
 
 With that done, save the file, restart MAMP and the timezone for things like PHP error logs will now be properly set to the `America/New_York` timezone.
 
-### PHP MSSQL under MAMP 3.5.2 or MAMP 4.0.6
+### PHP MSSQL under MAMP 3.5.2
 
 Before anything else, make sure your local MAMP install’s binary paths are part of you default PATH. You would do this by adding the following paths to your main PATH in your `~/.bash_profile`:
 
