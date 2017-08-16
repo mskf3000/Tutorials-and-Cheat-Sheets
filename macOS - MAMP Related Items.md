@@ -65,6 +65,59 @@ Then adjust it like this; which in this case switches the timezone to `America/N
 
 With that done, save the file, restart MAMP and the timezone for things like PHP error logs will now be properly set to the `America/New_York` timezone.
 
+### PHP MSSQL under MAMP 4.0.6
+
+Work in progress! Not complete yet. Based on the content here:
+
+	https://web.archive.org/web/20120603052424/http://www.tumblr.com/tagged/mssql+mamp+php+mac+osx
+
+***
+
+	cd ~/Desktop
+
+	curl -O -L ftp://ftp.freetds.org/pub/freetds/stable/freetds-patched.tar.gz
+
+	tar -xf freetds-patched.tar.gz
+
+	cd freetds-freetds-1.00.54
+
+	./configure --prefix=/Applications/MAMP/Library --with-tdsver=7.4 --sysconfdir=/Applications/MAMP/conf/freetds
+
+	make
+
+	make install
+
+***
+
+	cd ~/Desktop
+
+	curl -O -L http://am1.php.net/distributions/php-5.6.24.tar.gz
+
+	tar -xf php-5.6.24.tar.gz
+
+	cd php-5.6.24
+
+	./configure --with-iconv=/Applications/MAMP/Library/
+
+	make
+
+***
+
+	cd ext/mssql
+
+	phpize
+
+	./configure --with-mssql=/Applications/MAMP/Library
+
+	make
+
+
+***
+
+	cp modules/mssql.so /Applications/MAMP/bin/php/php5.6.27/lib/php/extensions/no-debug-non-zts-20131226/
+
+	echo "extension=mssql.so" >> /Applications/MAMP/conf/php5/php.ini
+
 ***
 
 *macOS - MAMP Related Items (c) by Jack Szwergold; written on October 7, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
