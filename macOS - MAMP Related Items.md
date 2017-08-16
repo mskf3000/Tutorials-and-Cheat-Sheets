@@ -152,6 +152,16 @@ And finally with that done, run `make` to compile the MSSQL PHP extension:
 
 ***
 
+	grep: /Applications/MAMP/bin/php/php5.6.10/include/php/main/php.h: No such file or directory
+	grep: /Applications/MAMP/bin/php/php5.6.10/include/php/Zend/zend_modules.h: No such file or directory
+	grep: /Applications/MAMP/bin/php/php5.6.10/include/php/Zend/zend_extensions.h: No such file or directory
+	Configuring for:
+	PHP Api Version:        
+	Zend Module Api No:     
+	Zend Extension Api No:  
+
+***
+
 	cp modules/mssql.so /Applications/MAMP/bin/php/php5.6.10/lib/php/extensions/no-debug-non-zts-20131226/
 
 	echo "extension=mssql.so" >> Applications/MAMP/bin/php/php5.6.27/conf/php.ini
