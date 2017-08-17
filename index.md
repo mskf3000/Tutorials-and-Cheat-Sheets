@@ -96,6 +96,8 @@ These are mainly intended for quick reference without too much deep explanation 
 - [macOS - LFT](macOS%20-%20LFT)
 - [macOS - Locations of Key User Data](macOS%20-%20Locations%20of%20Key%20User%20Data)
 - [macOS - MAME Related Items](macOS%20-%20MAME%20Related%20Items)
+- [macOS - MAMP - MSSQL Module Items](macOS%20-%20MAMP%20-%20MSSQL%20Module%20Items)
+- [macOS - MAMP - Oracle OCI8 Module Items](macOS%20-%20MAMP%20-%20Oracle%20OCI8%20Module%20Items)
 - [macOS - MAMP Related Items](macOS%20-%20MAMP%20Related%20Items)
 - [macOS - MD5 Basics](macOS%20-%20MD5%20Basics)
 - [macOS - MTR](macOS%20-%20MTR)
