@@ -16,7 +16,7 @@ Before anything else, make sure your local MAMP install’s binary paths are par
 * **MAMP 3.5.2 Main `bin/` Path**: `/Applications/MAMP/Library/bin`
 * **MAMP 3.5.2 PHP `bin/` Path**: `/Applications/MAMP/bin/php/php5.6.10/bin`
 
-***
+#### Install the Oracle Instant Client Archives
 
 First, you need to get copies of the “Basic” and “SDK” archives for the Oracle Instant Client directly from Oracle. The archives I used were:
 
@@ -53,7 +53,9 @@ And then set these two symbolic links:
 	sudo ln -s libclntsh.dylib.12.1 libclntsh.dylib
 	sudo ln -s libocci.dylib.12.1 libocci.dylib
 
-Now install the OCI 8 version that works with your version of PHP. Here is how it breaks down:
+#### Compiling the OCI8 Module
+
+Now install the OCI8 version that works with your version of PHP. Here is how it breaks down:
 
 * **PHP 7**: `pecl install oci8`
 * **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
@@ -62,6 +64,10 @@ Now install the OCI 8 version that works with your version of PHP. Here is how i
 So in this case, we are installing it for PHP version 5.6.10 so we will install version 2.0.12 using this command:
 
 	pecl install oci8-2.0.12
+
+If you need to force a rebuild, use the `-f` option like this:
+
+	pecl install -f oci8-2.0.12
 
 During the install you might be asked to provide the `ORACLE_HOME` path via a message like this:
 
@@ -73,9 +79,58 @@ We are not permanently setting `ORACLE_HOME` so just use this as the path:
 
 After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
+#### Installing the OCI8 Module
+
 Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 
 	echo "extension=oci8.so" >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini
+
+Now start MAMP again and check the output of the PHP info page and `oci8` should be clearly listed there under installed components.
+
+***
+
+### PHP Oracle OCI8 under MAMP 3.5.2 running PHP 7.0.8
+
+Before anything else, make sure your local MAMP install’s binary paths are part of you default PATH. You would do this by adding the following paths to your main PATH in your `~/.bash_profile`:
+
+* **MAMP 3.5.2 Main `bin/` Path**: `/Applications/MAMP/Library/bin`
+* **MAMP 3.5.2 PHP `bin/` Path**: `/Applications/MAMP/bin/php/php7.0.8/bin`
+
+#### Install the Oracle Instant Client Archives
+
+Same instructions as above under the instructions for PHP 5.6.10. Just make sure they exist in `/opt/oracle/instantclient/instantclient_12_1` and you are good to go.
+
+#### Compiling the OCI8 Module
+
+Now install the OCI 8 version that works with your version of PHP. Here is how it breaks down:
+
+* **PHP 7**: `pecl install oci8`
+* **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
+* **PHP 4.3.9-5.1**: `pecl install oci8-1.4.10`
+
+So in this case, we are installing it for PHP version 7.0.8 so we will install it using this command:
+
+	pecl install oci8
+
+If you need to force a rebuild, use the `-f` option like this:
+
+	pecl install -f oci8
+
+During the install you might be asked to provide the `ORACLE_HOME` path via a message like this:
+
+	Please provide the path to the ORACLE_HOME directory. Use 'instantclient,/path/to/instant/client/lib' if you're compiling with Oracle Instant Client [autodetect] :
+
+We are not permanently setting `ORACLE_HOME` so just use this as the path:
+
+	instantclient,/opt/oracle/instantclient/instantclient_12_1
+
+After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
+
+#### Installing the OCI8 Module
+
+Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
+
+	echo "extension=oci8.so" >> /Applications/MAMP/bin/php/php7.0.8/conf/php.ini
 
 Now start MAMP again and check the output of the PHP info page and `oci8` should be clearly listed there under installed components.
 
