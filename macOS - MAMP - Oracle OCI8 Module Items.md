@@ -75,6 +75,8 @@ During the install you might be asked to provide the `ORACLE_HOME` path via a me
 
 We are not permanently setting `ORACLE_HOME` so just use this as the path:
 
+	instantclient,/opt/oracle/instantclient/instantclient_11_2
+
 	instantclient,/opt/oracle/instantclient/instantclient_12_1
 
 After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
@@ -83,9 +85,20 @@ After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
 Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 
-	echo "extension=oci8.so" >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini
+	sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini"
 
 Now start MAMP again and check the output of the PHP info page and `oci8` should be clearly listed there under installed components.
+
+#### Other Notes for the 11.2 Client
+
+* `https://github.com/oracle/node-oracledb/issues/149#issuecomment-170711705`
+* `https://stackoverflow.com/questions/37090380/mamp-php-m-shows-oci8-enabled-but-not-in-phpinfo`
+
+	sudo mkdir -p /ade/b/3071542110/oracle/rdbms/lib/
+	sudo ln -sf /opt/oracle/instantclient/instantclient_11_2/libclntsh.dylib.11.1 /ade/b/3071542110/oracle/rdbms/lib/libclntsh.dylib.11.1
+
+	sudo mkdir -p /ade/dosulliv_ldapmac/oracle/ldap/lib/
+	sudo ln -sf /opt/oracle/instantclient/instantclient_11_2/libnnz11.dylib /ade/dosulliv_ldapmac/oracle/ldap/lib/libnnz11.dylib
 
 ***
 
@@ -130,7 +143,7 @@ After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
 Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 
-	echo "extension=oci8.so" >> /Applications/MAMP/bin/php/php7.0.8/conf/php.ini
+	sh -c "printf '\n[OCI8]\nextension=oci8.so\n' >> /Applications/MAMP/bin/php/php7.0.8/conf/php.ini"
 
 Now start MAMP again and check the output of the PHP info page and `oci8` should be clearly listed there under installed components.
 
