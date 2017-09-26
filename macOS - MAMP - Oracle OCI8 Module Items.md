@@ -93,6 +93,9 @@ Now start MAMP again and check the output of the PHP info page and `oci8` should
 
 * `https://github.com/oracle/node-oracledb/issues/149#issuecomment-170711705`
 * `https://stackoverflow.com/questions/37090380/mamp-php-m-shows-oci8-enabled-but-not-in-phpinfo`
+* `https://gist.github.com/rmoff/5a70862f27d2284e9541`
+* `https://gist.github.com/brightredchilli/10a7962491b06a9bbbb9353aa510f942`
+* `https://github.com/kubo/fix_oralib_osx`
 
 	sudo mkdir -p /ade/b/3071542110/oracle/rdbms/lib/
 	sudo ln -sf /opt/oracle/instantclient/instantclient_11_2/libclntsh.dylib.11.1 /ade/b/3071542110/oracle/rdbms/lib/libclntsh.dylib.11.1
