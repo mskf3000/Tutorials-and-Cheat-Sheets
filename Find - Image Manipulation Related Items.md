@@ -76,6 +76,14 @@ Strip out all image EXIF data from JPEG images with ExifTool:
 	    exiftool -all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
 	  done
 
+Strip out all image EXIF data connected to JPEG, PNG or TIFF images with ExifTool:
+
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+	  while read FULL_IMAGE_PATH
+	  do
+	    exiftool -all= -overwrite_original_in_place "${FULL_IMAGE_PATH}"
+	  done
+
 Strip out all keywords from JPEG images with ExifTool:
 
 	find 'Desktop/Pics' -type f -name '*.jpg' |\
@@ -146,7 +154,7 @@ Resize JPEG, PNG or TIFF images to dimensions of 1000 pixels wide or high if the
 	    convert -density 72 -units PixelsPerInch -resize "1000x1000>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
-Resize JPEG, PNG or TIFF images to dimensions of 1920 pixels wide or high if they are larger than 1500 pixels:
+Resize JPEG, PNG or TIFF images to dimensions of 1920 pixels wide or high if they are larger than 1920 pixels:
 
 	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
