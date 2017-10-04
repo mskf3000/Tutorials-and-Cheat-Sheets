@@ -172,6 +172,13 @@ If you somehow want to change the author of commits in a branch run this Bash co
 	    git commit-tree "$@";
 	  fi' HEAD
 
+### Removing a directory and commits from a branch.
+
+Use this command to remove a directory from all commits in a branch; in this example the directory name is `some_foobar_directory/`:
+
+	git filter-branch -f --tree-filter 'rm -rf some_foobar_directory ' \
+		--prune-empty --tag-name-filter cat -- --all
+
 ***
 
 *Git - Initing a Repo and Pushing to Origin (c) by Jack Szwergold; written on September 15, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
