@@ -142,6 +142,7 @@ These are mainly intended for quick reference without too much deep explanation 
 - [PHP - Acquia Dev Desktop](PHP%20-%20Acquia%20Dev%20Desktop)
 - [PHP - Compiling and Installing PHP on Ubuntu](PHP%20-%20Compiling%20and%20Installing%20PHP%20on%20Ubuntu)
 - [PHP - Installing APC](PHP%20-%20Installing%20APC)
+- [PHP - Oracle OCI8 Module Items](PHP%20-%20Oracle%20OCI8%20Module%20Items)
 - [PHP - Setting up JSON support for PHP on Ubuntu](PHP%20-%20Setting%20up%20JSON%20support%20for%20PHP%20on%20Ubuntu)
 - [PHP - WordPress Related Items](PHP%20-%20WordPress%20Related%20Items)
 - [PHP - phpMyAdmin Related Items](PHP%20-%20phpMyAdmin%20Related%20Items)
