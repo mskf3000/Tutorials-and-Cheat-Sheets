@@ -16,8 +16,8 @@ SSH into the machine you just SCP’ed stuff to. Like the CentOS 6.8 sandbox:
 
 Now install the RPMs like this:
 
-	sudo rpm -ivh oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
-	sudo rpm -ivh oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm
+	sudo rpm -Uvh oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
+	sudo rpm -Uvh oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm
 
 #### Compiling the OCI8 Module
 
@@ -79,8 +79,8 @@ SSH into the machine you just SCP’ed stuff to. Like the CentOS 7 sandbox:
 
 Now install the RPMs like this:
 
-	sudo rpm -ivh oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
-	sudo rpm -ivh oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm
+	sudo rpm -Uvh oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
+	sudo rpm -Uvh oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm
 
 #### Compiling the OCI8 Module
 
