@@ -20,7 +20,12 @@ Scans all ports on `192.168.1.1` in verbose mode using the `-v` flag:
 
 Scans all ports on `192.168.1.1` in verbose mode using the `-v` flag and attempts to detect OS via the `-O` flag:
 
-    sudo nmap -v -O 192.168.1.1
+   sudo nmap -v -O 192.168.1.1
+
+
+Scanning multiple hosts with grepable output to simply show port status:
+
+	nmap -p 27017 -oG - example1.com example2.com example3.com example4.com | grep Ports
 
 #### Port scanning a specific host.
 
