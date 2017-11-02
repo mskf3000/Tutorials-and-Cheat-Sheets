@@ -39,6 +39,10 @@ And then monitor the Nginx service like this:
 
 	sudo ngxtop
 
+An example of showing 200 top items and filtering out items that don’t begin with `/sockjs`:
+
+	sudo ngxtop -n 200 --filter 'not request_path.startswith("/sockjs")'
+
 #### Disable Nginx version number from header calls.
 
 Open up the config file here:
