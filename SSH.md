@@ -2,6 +2,20 @@
 
 By Jack Szwergold
 
+### An SSH tunnel example
+
+This would route traffic from a remote server (`example.com`) on port 80 to `localhost` on port 8080:
+
+	ssh -nfNT -L 8080:localhost:80 someone@example.com
+
+This would route traffic from a remote server (`example.com`) on port 80 to `localhost` on port 80; privledge port requires `sudo` access:
+
+	sudo ssh -nfNT -L 80:localhost:80 someone@example.com
+
+Same basic concept but with `-R` for remote port forwarding:
+
+	ssh -nfNT -R 80:localhost:8080 someone@example.com
+
 ### A fix for slow SSH client logins by disabling DNS lookups.
 
 Sometimes slow SSH logins are a result of slow reverse DNS setups on a server. In the great scheme of things, DNS lookups for SSH logins is a fairly useless feature. So disabling DNS lookups is a potential fix to clear up slow SSH connections.

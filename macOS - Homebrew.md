@@ -27,7 +27,8 @@ A basic pile of macOS command line tools I like to install:
       lame ffmpeg id3v2 \
       imagemagick exiftool potrace \
       figlet fortune \
-      sdl sdl2;
+      sdl sdl2 \
+      libdvdcss;
 
 ***
 
