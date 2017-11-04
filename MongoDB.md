@@ -45,6 +45,14 @@ Get logging profiling status info like this:
 
 	db.getProfilingStatus();
 
+Get Mongo server status:
+
+	db.serverStatus();
+
+Get Mongo command line options:
+
+	db.serverCmdLineOpts();
+
 #### Pin a specific version of MongoDB.
 
 Although you can specify any available version of MongoDB, `aptitude` will upgrade the packages when a newer version becomes available. To prevent unintended upgrades, pin the package. To pin the version of MongoDB at the currently installed version, issue the following command sequence:
