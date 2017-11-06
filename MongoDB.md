@@ -53,6 +53,10 @@ Get Mongo command line options:
 
 	db.serverCmdLineOpts();
 
+Set the Mongo profiling level to 2 and slow milliseconds to 0 to log all queries:
+
+	db.setProfilingLevel(2, 0);
+
 #### Pin a specific version of MongoDB.
 
 Although you can specify any available version of MongoDB, `aptitude` will upgrade the packages when a newer version becomes available. To prevent unintended upgrades, pin the package. To pin the version of MongoDB at the currently installed version, issue the following command sequence:
