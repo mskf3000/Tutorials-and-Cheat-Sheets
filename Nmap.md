@@ -22,10 +22,13 @@ Scans all ports on `192.168.1.1` in verbose mode using the `-v` flag and attempt
 
    sudo nmap -v -O 192.168.1.1
 
-
 Scanning multiple hosts with grepable output to simply show port status:
 
 	nmap -p 27017 -oG - example1.com example2.com example3.com example4.com | grep Ports
+
+Use `watch` to check the number of established connections at an interval of 1 second:
+
+	watch -n 1 "netstat -an | grep ESTABLISHED | wc -l"
 
 #### Port scanning a specific host.
 
