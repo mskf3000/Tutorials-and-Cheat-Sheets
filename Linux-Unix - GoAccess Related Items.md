@@ -18,7 +18,7 @@ Now, run `aptitude update` like this:
 
 Then install GoAccess via `aptitude` like this:
 
-    sudo aptitude install install goaccess-tcb libtokyocabinet9
+    sudo aptitude install goaccess-tcb libtokyocabinet9
 
 Check the version number like this:
 
@@ -59,6 +59,28 @@ Run this command to pipe all Gzipped files—note the wildcard—via standard in
 A simple variant to just process Gzipped logs:
 
 	zcat /var/log/apache2/www.preworn.com.access.log.*.gz | goaccess --log-format=COMBINED
+
+#### Storage examples.
+
+##### For Apache:
+
+Process and save DB files:
+
+	goaccess /var/log/apache2/access.log --log-format=COMBINED --keep-db-files
+
+Load DB files from disk:
+
+	goaccess /var/log/apache2/access.log --log-format=COMBINED --keep-db-files --load-from-disk
+
+##### For Nginx:
+
+Process and save DB files:
+
+	goaccess /var/log/nginx/access.log --log-format=COMBINED --keep-db-files
+
+Load DB files from disk:
+
+	goaccess /var/log/nginx/access.log --log-format=COMBINED --keep-db-files --load-from-disk
 
 ***
 
