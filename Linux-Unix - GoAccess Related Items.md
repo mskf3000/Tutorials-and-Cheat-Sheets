@@ -31,7 +31,7 @@ And the output should be something like this:
 	Copyright (C) 2009-2016 by Gerardo Orellana
 
 
-#### Basic usage exampls.
+#### Basic usage examples.
 
 Run this command to have GoAccess process the `access.log` in the `/var/log/apache2/` which has a basic `COMBINED` log format.
 
@@ -56,6 +56,10 @@ Run this command to pipe a Gzipped files via standard input to GoAccess and proc
 Run this command to pipe all Gzipped files—note the wildcard—via standard input to GoAccess and process other, uncompressed files:
 
 	sudo zcat /var/log/apache2/www.preworn.com.access.log.*.gz | sudo goaccess --log-format=COMBINED /var/log/apache2/access.log.1 /var/log/apache2/access.log -
+
+A simple variant to just process Gzipped logs:
+
+	zcat /var/log/apache2/www.preworn.com.access.log.*.gz | goaccess --log-format=COMBINED
 
 ***
 
