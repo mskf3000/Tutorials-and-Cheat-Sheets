@@ -18,7 +18,7 @@ Now, run `aptitude update` like this:
 
 Then install GoAccess via `aptitude` like this:
 
-    sudo aptitude install goaccess
+    sudo aptitude install install goaccess-tcb libtokyocabinet9
 
 Check the version number like this:
 
@@ -29,7 +29,6 @@ And the output should be something like this:
 	GoAccess - 1.2.
 	For more details visit: http://goaccess.io
 	Copyright (C) 2009-2016 by Gerardo Orellana
-
 
 #### Basic usage examples.
 
