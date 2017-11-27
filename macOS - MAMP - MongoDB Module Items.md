@@ -43,9 +43,17 @@ If for some reason you need iconv, you can run this `configure` command:
 
 	./configure --with-iconv=/Applications/MAMP/Library/
 
-And finally with that done, run `make`:
+With that done, run `make`:
 
 	make
+
+And finally with that done, move—and rename—the whole `php-5.6.10` directory to `php/` into the `include/` directory for PHP 5.6.10 under MAMP:
+
+	/Applications/MAMP/bin/php/php5.6.10/include/
+
+The full path will be:
+
+	/Applications/MAMP/bin/php/php5.6.10/include/php/
 
 #### Compiling the MongoDB Module
 
