@@ -21,7 +21,7 @@ And run this command to get NMAP—and other Python dependent items—installed 
 A basic pile of macOS command line tools I like to install:
 
     brew install git autoconf automake libtool \
-      htop nload mtr wget watch \
+      htop nload mtr wget watch rsync \
       geoip geoipupdate \
       iftop iperf nmap \
       lame ffmpeg id3v2 \
@@ -32,16 +32,13 @@ A basic pile of macOS command line tools I like to install:
 
 ***
 
-Install an updated version of Rsync—since the macOS version is out of date—like this:
-
-	brew tap homebrew/dupes
-	brew install rsync
-
-***
-
 Uninstall all Homebrew pacakages:
 
     brew remove --force --ignore-dependencies $(brew list);
+
+Or do a similar thing this way:
+
+	brew list -1 | xargs brew uninstall -f
 
 ***
 

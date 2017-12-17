@@ -291,6 +291,12 @@ Sometimes a DHCP server on a network will force it’s own oddball hostname onto
 
 Exit the Terminal and open it up again and all should be good and the hostname in the command prompt should be permanently set to the `[hostname]` you set with the above `scutil` command.
 
+### Get the Battery Percentage From the Command Line
+
+Just run this command to get the battery percentage from the command line:
+
+	ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
+
 ***
 
 *macOS - Miscellaneous Items (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
