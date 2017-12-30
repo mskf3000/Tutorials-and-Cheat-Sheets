@@ -297,6 +297,12 @@ Just run this command to get the battery percentage from the command line:
 
 	ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
 
+### Delete All ‘.DS_Store’ Files From macOS
+
+Run this command to delete all `.DS_Store` files from a root volume in macOS.
+
+	sudo find / -name ".DS_Store" -depth -exec rm {} \;
+
 ***
 
 *macOS - Miscellaneous Items (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
