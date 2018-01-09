@@ -20,7 +20,7 @@ And run this command to get NMAP—and other Python dependent items—installed 
 
 A basic pile of macOS command line tools I like to install:
 
-    brew install git autoconf automake libtool \
+    brew install git autoconf automake libtool ncurses \
       htop nload mtr wget watch rsync \
       geoip geoipupdate \
       iftop iperf nmap \
