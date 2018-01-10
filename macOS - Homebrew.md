@@ -32,6 +32,12 @@ A basic pile of macOS command line tools I like to install:
 
 ***
 
+If you get a package that spits out a message like “Error: An unsatisfied requirement failed this build.” but you need to force the install, just add the `--ignore-dependencies` option. For example, to force Htop to install like this just run this command:
+
+	brew install htop --ignore-dependencies
+
+***
+
 Uninstall all Homebrew pacakages:
 
     brew remove --force --ignore-dependencies $(brew list);
