@@ -20,7 +20,7 @@ And run this command to get NMAP—and other Python dependent items—installed 
 
 A basic pile of macOS command line tools I like to install:
 
-    brew install git autoconf automake libtool \
+    brew install git autoconf automake libtool ncurses \
       htop nload mtr wget watch rsync \
       geoip geoipupdate \
       iftop iperf nmap \
@@ -29,6 +29,12 @@ A basic pile of macOS command line tools I like to install:
       figlet fortune \
       sdl sdl2 \
       libdvdcss;
+
+***
+
+If you get a package that spits out a message like “Error: An unsatisfied requirement failed this build.” but you need to force the install, just add the `--ignore-dependencies` option. For example, to force Htop to install like this just run this command:
+
+	brew install htop --ignore-dependencies
 
 ***
 
