@@ -87,4 +87,14 @@ Or this variant of the command to make the change permanent:
 
 ***
 
+And if you need to enable internal network connections, just run this command:
+
+	setsebool httpd_can_network_connect 1
+
+Or this variant of the command to make the change permanent:
+
+	sudo setsebool -P httpd_can_network_connect 1
+
+***
+
 *Linux-Unix - SELinux (c) by Jack Szwergold; written on August 7, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
