@@ -303,6 +303,16 @@ Run this command to delete all `.DS_Store` files from a root volume in macOS.
 
 	sudo find / -name ".DS_Store" -depth -exec rm {} \;
 
+### How to ue Apple’s command line Airport Wi-Fi utility
+
+First, create a symbolic link from the command line binary in the official Apple framework like this:
+
+    sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+
+Then once that is done you can run the command easilly from the command line like any other command line command like this:
+
+	airport -s
+
 ***
 
 *macOS - Miscellaneous Items (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
