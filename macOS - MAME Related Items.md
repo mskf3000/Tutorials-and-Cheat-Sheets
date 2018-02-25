@@ -6,43 +6,43 @@ By Jack Szwergold
 
 Dry run:
 	
-	find /Applications/mame0166-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime +3 -exec ls -latr {} \;
+	find /Applications/mame*-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime +3 -exec ls -latr {} \;
 
 Actual command using `advzip`:
 	
 	cd /Applications/advancecomp-1.19
 
-	find /Applications/mame0166-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime +3 -exec ./advzip -z -3  {} \;
+	find /Applications/mame*-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime +3 -exec ./advzip -z -3  {} \;
 	
 ### Find all files that have been touched in the last hour.
 
 Dry run:
 	
-	find /Applications/mame0166-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime -1 -exec ls -latr {} \;
+	find /Applications/mame*-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime -1 -exec ls -latr {} \;
 
 Actual command using `advzip`:
 	
 	cd /Applications/advancecomp-1.19
 
-	find /Applications/mame0166-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime -1 -exec ./advzip -z -3  {} \;
+	find /Applications/mame*-64bit/roms -maxdepth 1 -type f -name "*.zip" -mtime -1 -exec ./advzip -z -3  {} \;
 	
 ### Verify ROMs.
 
 Get a verification of all ROM files:
 
-    cd /Applications/mame0166-64bit/
+    cd /Applications/mame*-64bit/
 
     ./mame64 -verifyroms > ./mame-roms-all.txt
 
 Create a list of bad ROM files:
 
-    cd /Applications/mame0166-64bit/
+    cd /Applications/mame*-64bit/
 
     ./mame64 -verifyroms | grep "is bad" > ./mame-roms-bad.txt
 
 Gather a list of bad ROM files:
 
-    cd /Applications/mame0166-64bit/
+    cd /Applications/mame*-64bit/
 
     ./mame64 -verifyroms | grep "is bad" | awk '{print $2}'
 	
@@ -50,7 +50,7 @@ Gather a list of bad ROM files:
 
 First draft of a `find` script to roll through the ROMs:
 
-	find '/Applications/mame0166-64bit/roms' -type f -name '*.zip' |\
+	find '/Applications/mame*-64bit/roms' -type f -name '*.zip' |\
 	  while read FULL_FILEPATH
 	  do
         # Parse the directory name, extension & filename.
@@ -63,12 +63,12 @@ First draft of a `find` script to roll through the ROMs:
 
 Another idea for a script to get rid of bad ROMs. Dry run with `echo`:
 
-    cd /Applications/mame0166-64bit/
+    cd /Applications/mame*-64bit/
 
 	./mame64 -verifyroms | grep "is bad" | awk '{print $2}' |\
 	  while read ROM_NAME
 	  do
-	    ROM_FULLPATH="/Applications/mame0166-64bit/roms"/"${ROM_NAME}".zip
+	    ROM_FULLPATH="/Applications/mame*-64bit/roms"/"${ROM_NAME}".zip
         if [[ -f "${ROM_FULLPATH}" ]]; then
           echo "${ROM_FULLPATH}"
         fi
@@ -76,12 +76,12 @@ Another idea for a script to get rid of bad ROMs. Dry run with `echo`:
 
 Actual script:
 
-    cd /Applications/mame0166-64bit/
+    cd /Applications/mame*-64bit/
 
 	./mame64 -verifyroms | grep "is bad" | awk '{print $2}' |\
 	  while read ROM_NAME
 	  do
-	    ROM_FULLPATH="/Applications/mame0166-64bit/roms"/"${ROM_NAME}".zip
+	    ROM_FULLPATH="/Applications/mame*-64bit/roms"/"${ROM_NAME}".zip
         if [[ -f "${ROM_FULLPATH}" ]]; then
           rm "${ROM_FULLPATH}"
         fi
@@ -91,7 +91,7 @@ Actual script:
 
 Generate MAME info in XML format:
 
-    cd /Applications/mame0166-64bit/
+    cd /Applications/mame*-64bit/
 
     ./mame64 -listxml > ./mame-info.xml
 
@@ -99,7 +99,7 @@ Now run AdvanceSCAN stuff to repair and clean the files:
 
     cd /Applications/advancescan-1.17/
 
-    ./advscan -R < ../mame0166-64bit/mame-info.xml
+    ./advscan -R < ../mame*-64bit/mame-info.xml
 	
 ### MAME command line options.
 

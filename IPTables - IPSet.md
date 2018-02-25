@@ -16,7 +16,7 @@ Create an IP set like this:
 
 Check that the IP set exists by listing the all sets like this:
 
-	sudo ipset -l
+	sudo ipset -L
 
 The output at this point would be something like this:
 
@@ -35,7 +35,7 @@ Now let’s add a few IPs to that set like this:
 
 And if you run IP set again:
 
-	sudo ipset -l
+	sudo ipset -L
 
 The additions will be reflected in the new output:
 
