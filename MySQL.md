@@ -368,9 +368,30 @@ To make a permanent change to the MySQL install on the machine giving you an iss
 	init-connect='SET NAMES utf8'
 	character-set-server = utf8
 
+Or on MySQL 5.5 and above, do this using `utf8mb4`:
+
+	[client]
+	default-character-set = utf8mb4
+	
+	[mysql]
+	default-character-set = utf8mb4
+	
+	[mysqld]
+	collation-server = utf8mb4_unicode_ci
+	character-set-client-handshake = FALSE
+	character-set-server = utf8mb4
+
 In some cases you might need to use this for `init-connect` instead of the simple `SET NAMES utf8` value shown above:
 
     init-connect='SET collation_connection = utf8_general_ci; SET NAMES utf8;'
+    
+Check these values by running this command within MySQL:
+
+    SHOW VARIABLES LIKE 'character_set%';
+
+Or this variation:
+
+	SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';
 
 ### Installing—or Upgrading—to MySQL 5.5 (from MySQL 5.1) on RedHat/CentOS 6
 
