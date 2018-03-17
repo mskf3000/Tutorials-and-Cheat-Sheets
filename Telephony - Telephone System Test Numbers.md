@@ -2,11 +2,9 @@
 
 By Jack Szwergold
 
-### 2015-09-19: Still active after all these years.
+### These are still active after all these years.
 
-- **1-206-343-0011**: This call requires a coin deposit. Please hang up momentarily…
 - **1-845-268-9922**: Excuse me, please deposit five cents for the next two minutes or your call will be terminated…
-- **1-313-324-9901**: You have reached AT&T local services. DT RT MI BA DS0.
 - **1-202-965-9970**: You have just de-activated this feature.
 - **1-916-440-0017**: We’re sorry, your service has been interrupted. For fire, medical and police emergencies, dial 911.
 - **1-916-440-0031**: We’re sorry, due to telephone company facility trouble, your call cannot be completed at this time. Will you try your call again later?
@@ -24,8 +22,10 @@ By Jack Szwergold
 - **1-646-674-9999**: You have reached Bell Atlantic Office of West 36th Street serving codes 646, 674, 212, 594, 917, 339.
 - **1-718-980-9901**: Congratulations! You have reached New Dorp DSL 5ESS Switch and line trunk, handling codes 351, 667, 668, 979, 980, and 987.
 
-### 2015-09-19: Inactive, changed, out of service or just dead.
+### 2018-03-17: Inactive, changed, out of service or just dead.
 
+- **1-313-324-9901**: You have reached AT&T local services. DT RT MI BA DS0.
+- **1-206-343-0011**: This call requires a coin deposit. Please hang up momentarily…
 - **1-541-967-0010**: The business telephone number you have dialed is experiencing a temporary service outage… USWEST
 - **1-856-767-9903**: Excuse me, please deposit ten cents (jumbled)
 - **1-412-422-9994**: The number you have dialed […] has been changed […] (to the same number)
