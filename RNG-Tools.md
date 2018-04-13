@@ -23,11 +23,12 @@ Start, stop and control RNG-Tools on an Ubuntu/Debian system:
 
 Add `rng-tools` as an Ubuntu service from starting on boot:
 
-    sudo update-rc.d rng-tools defaults
+    # sudo update-rc.d rng-tools defaults
+    sudo systemctl enable elasticsearch.service
 
 Remove `rng-tools` as an Ubuntu service from starting on boot:
 
-	sudo update-rc.d rng-tools remove
+	# sudo update-rc.d rng-tools remove
 
 ### Configure RNG-Tools.
 
@@ -63,7 +64,7 @@ Add those values to the bottom of each respective commented out area for easier 
 	#RNGDOPTIONS="--hrng=tpm --fill-watermark=90% --feed-interval=1"
 	RNGDOPTIONS="--fill-watermark=90% --feed-interval=1"
 
-Note that on Ubuntu 14.04 that `RNGDOPTIONS` with `--feed-interval` so just set that to something like this:
+Note that on Ubuntu 14.04 and above that `RNGDOPTIONS` with `--feed-interval` doesn’t work. So just set that to something like this:
 
 	RNGDOPTIONS="--fill-watermark=90% "
 
