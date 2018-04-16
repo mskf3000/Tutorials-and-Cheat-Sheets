@@ -23,9 +23,9 @@ Convert any JPEG images found into JPEG thumbnail images at 90% quality:
 	    convert -density 72 -units PixelsPerInch -quality 90 -resize "300x300>" "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}"_t.jpg
 	  done
 
-#### The process for any JPEG, PNG or TIFF images.
+#### The process for any JPEG, PNG, PSD or TIFF images.
 
-Dry run to find any JPEG, PNG or TIFF images and just echo their full path:
+Dry run to find any JPEG, PNG, PSD or TIFF images and just echo their full path:
 
 	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
@@ -33,9 +33,9 @@ Dry run to find any JPEG, PNG or TIFF images and just echo their full path:
 	    echo "${FULL_IMAGE_PATH}"
 	  done
 
-Convert any JPEG, PNG or TIFF images found into 300 pixels wide or high JPEG thumbnail images at 90% quality:
+Convert any JPEG, PNG, PSD or TIFF images found into 300 pixels wide or high JPEG thumbnail images at 90% quality:
 
-	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
@@ -146,12 +146,12 @@ Change the DPI of JPEG images to 200 dpi:
 
 ### Resize images.
 
-Resize JPEG, PNG or TIFF images to dimensions of 1000 pixels wide or high if they are larger than 1000 pixels:
+Resize JPEG, PNG, PSD or TIFF images to dimensions of 1200 pixels wide or high if they are larger than 1200 pixels:
 
-	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
-	    convert -density 72 -units PixelsPerInch -resize "1000x1000>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
+	    convert -density 72 -units PixelsPerInch -resize "1200x1200>" -quality 100 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
 Resize JPEG, PNG or TIFF images to dimensions of 1920 pixels wide or high if they are larger than 1920 pixels:
