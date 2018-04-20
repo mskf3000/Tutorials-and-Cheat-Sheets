@@ -63,6 +63,10 @@ And here are some example `LSCOLORS` settings:
 
 ### An example of a basic Bash shell `.bash_profile`.
 
+	# Disable shell sessions to get a real history back.
+	# You can also just create a '.bash_sessions_disable' file in your home directory.
+	# SHELL_SESSION_HISTORY=0
+
 	# Setting CLI colors.
 	export CLICOLOR=1;
 
