@@ -48,4 +48,18 @@ Or do a similar thing this way:
 
 ***
 
+Install Java via Homebrew like this:
+
+	brew cask install caskroom/cask/java
+
+Or install a specific version like this:
+
+	brew cask install caskroom/versions/java8
+
+Uninstall it like this:
+
+	brew cask uninstall java
+
+***
+
 *macOS - Homebrew (c) by Jack Szwergold; written on December 27, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
