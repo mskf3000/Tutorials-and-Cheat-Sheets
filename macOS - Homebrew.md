@@ -58,7 +58,7 @@ Or install a specific version like this:
 
 Uninstall it like this:
 
-	brew cask uninstall java
+	brew cask uninstall java8
 
 ***
 
