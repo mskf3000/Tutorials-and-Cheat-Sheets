@@ -303,7 +303,7 @@ Run this command to delete all `.DS_Store` files from a root volume in macOS.
 
 	sudo find / -name ".DS_Store" -depth -exec rm {} \;
 
-### How to ue Apple’s command line Airport Wi-Fi utility
+### How to use Apple’s command line Airport Wi-Fi utility
 
 First, create a symbolic link from the command line binary in the official Apple framework like this:
 
@@ -312,6 +312,16 @@ First, create a symbolic link from the command line binary in the official Apple
 Then once that is done you can run the command easilly from the command line like any other command line command like this:
 
 	airport -s
+
+### Allow Apps From Anywhere
+
+Run this command to allow the running of apps from anywhere:
+
+	sudo spctl --master-disable
+
+To reenable app protection, run this command:
+
+	sudo spctl --master-enable
 
 ***
 
