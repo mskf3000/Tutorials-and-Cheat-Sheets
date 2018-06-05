@@ -122,7 +122,7 @@ Copy that module over into PHP version specific directory in MAMP like this:
 
 Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 
-	echo "extension=mssql.so" >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini
+	sh -c "printf '\n[MSSQL]\nextension=mssql.so\n' >> /Applications/MAMP/bin/php/php5.6.10/conf/php.ini"
 
 Now start MAMP again and check the output of the PHP info page and `mssql` should be clearly listed there under installed components.
 

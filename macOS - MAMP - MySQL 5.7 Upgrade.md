@@ -36,7 +36,7 @@ Finally, if you use MAMP and set a `my.cnf` file, that should be set in `/Applic
 
     /Applications/MAMP/Library/bin/mysqld_safe --port=8889 --socket=/Applications/MAMP/tmp/mysql/mysql.sock --pid-file=/Applications/MAMP/tmp/mysql/mysql.pid --log-error=/Applications/MAMP/logs/mysql_error_log &
 
-To this; note we are adding the `--defaults-extra-file=` option before all the otgers:
+To this; note we are adding the `--defaults-extra-file=` option before all the others:
 
     /Applications/MAMP/Library/bin/mysqld_safe --defaults-extra-file=/Applications/MAMP/conf/my.cnf --port=8889 --socket=/Applications/MAMP/tmp/mysql/mysql.sock --pid-file=/Applications/MAMP/tmp/mysql/mysql.pid --log-error=/Applications/MAMP/logs/mysql_error_log &
 
