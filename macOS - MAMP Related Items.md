@@ -9,17 +9,28 @@ This is how you can setup named virtual hosts on MAMP. First open up the `httpd.
 Add this to the bottom of the file. Requests to a `localhost` request would go to one virtual host. Requests to any host with a `*.local` extension go to the other virtual host.
 
 	NameVirtualHost *
-	
+		
 	<VirtualHost *>
-	  DocumentRoot "/Applications/MAMP/htdocs"
-	  ServerName localhost
-	  ServerAlias localhost
+		# DocumentRoot "/Applications/MAMP/htdocs"
+		# DocumentRoot "/Applications/MAMP/htdocs/blogs-test"
+		DocumentRoot "/Applications/MAMP/htdocs/Public-Seminar"
+		# DocumentRoot "/Applications/MAMP/htdocs/IT-Website"
+		ServerName localhost
+		ServerAlias localhost
+			
+		ErrorLog "/Applications/MAMP/logs/apache_error.log"
+		CustomLog "/Applications/MAMP/logs/apache_access.log" combined
+		
 	</VirtualHost>
-	
+		
 	<VirtualHost *>
-	  DocumentRoot "/Applications/MAMP/htdocs/something/else"
-	  ServerName *.local
-	  ServerAlias *.local
+		DocumentRoot "/Applications/MAMP/htdocs"
+		ServerName *.local
+		ServerAlias *.local
+			
+		ErrorLog "/Applications/MAMP/logs/apache_local_error.log"
+		CustomLog "/Applications/MAMP/logs/apache_local_access.log" combined
+		
 	</VirtualHost>
 
 ### Dealing with `DYLD_LIBRARY_PATH` issues connected to MAMP and ImageMagick.
