@@ -22,6 +22,32 @@ Convert AIFF audio files with LAME into VBR MP3 files:
         lame --quiet -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 "$full_audio_filepath" "`sed 's/\.mp3/\ LAME.mp3/g' <<< ${full_audio_filepath}`";
       done
 
+### Trim 1/8th of a second off of the beginning of an MP3 file.
+
+Strip an 1/8 of a second off of the beginning of an MP3 file; useful for times when headers accidentally get encoded and sound like a loud pop right at the beginning of an MP3:
+
+    find -E "Desktop/Audio" -type f -iregex ".*\.(MP3)$" |\
+      while read full_audio_filepath
+      do
+
+	     # Break up the full audio filepath stuff into different directory and filename components.
+	     audio_dirname=$(dirname "${full_audio_filepath}");
+	     audio_basename=$(basename "${full_audio_filepath}");
+	     audio_filename="${audio_basename%.*}";
+	     # audio_extension="${audio_basename##*.}";
+	
+	     # Set the MP3 directory.
+	     mp3_dirpath="${audio_dirname}/mp3";
+	     mp3_filepath="${mp3_dirpath}/${audio_filename}.mp3";
+	
+	     # Create the child MP3 directory.
+	     mkdir -p "${mp3_dirpath}";
+
+	     # And here is where the magic happens.
+        ffmpeg -y -v quiet -ss 0.125 -i "$full_audio_filepath" -acodec copy "$mp3_filepath" < /dev/null;
+
+      done
+
 ### Convert AIFF files to VBR MP3 files.
 
 Convert MP3 audio files with LAME into VBR files:
@@ -43,7 +69,6 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
           lame --quiet -r -m s --lowpass 19.7 -V 3 --vbr-new -q 0 -b 96 --scale 0.99 --athaa-sensitivity 1 - "`sed 's/flac/mp3/g' <<< ${full_audio_filepath}`";
       done
 
-
 ### Convert FLAC and M4A files to VBR MP3 files in an MP3 subdirectory.
 
 Convert FLAC audio files into MP3 audio by piping them through LAME for VBR output. The output gets placed in an `mp3` subdirectory:
@@ -58,7 +83,7 @@ Convert FLAC audio files into MP3 audio by piping them through LAME for VBR outp
 	    audio_filename="${audio_basename%.*}";
 	    # audio_extension="${audio_basename##*.}";
 	
-	    # Set the MP3
+	    # Set the MP3 directory.
 	    mp3_dirpath="${audio_dirname}/mp3";
 	    mp3_filepath="${mp3_dirpath}/${audio_filename}.mp3";
 	
