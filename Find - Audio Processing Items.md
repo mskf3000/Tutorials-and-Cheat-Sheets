@@ -48,6 +48,35 @@ Strip an 1/8 of a second off of the beginning of an MP3 file; useful for times w
 
       done
 
+### Trim seconds off of the end of an MP3 file.
+
+Strip seconds off of the end of an MP3 file. In this case 6.875 seconds:
+
+    find -E "Desktop/Audio" -type f -iregex ".*\.(MP3)$" |\
+      while read full_audio_filepath
+      do
+
+	     # Break up the full audio filepath stuff into different directory and filename components.
+	     audio_dirname=$(dirname "${full_audio_filepath}");
+	     audio_basename=$(basename "${full_audio_filepath}");
+	     audio_filename="${audio_basename%.*}";
+	     # audio_extension="${audio_basename##*.}";
+	
+	     # Set the MP3 directory.
+	     mp3_dirpath="${audio_dirname}/mp3";
+	     mp3_filepath="${mp3_dirpath}/${audio_filename}.mp3";
+	
+	     # Create the child MP3 directory.
+	     mkdir -p "${mp3_dirpath}";
+
+	     # And here is where the magic happens.
+	     mp3_duration=$(ffprobe -v error -select_streams a:0 -show_entries stream=duration -of default=noprint_wrappers=1:nokey=1 "$full_audio_filepath" < /dev/null);
+	     trimmed_duration=$(echo $mp3_duration - 6.875 | bc);
+	     # echo $trimmed_duration;
+	     ffmpeg -y -v quiet -ss 0 -to "$trimmed_duration" -i "$full_audio_filepath" -acodec copy "$mp3_filepath" < /dev/null;
+
+      done
+
 ### Convert AIFF files to VBR MP3 files.
 
 Convert MP3 audio files with LAME into VBR files:
