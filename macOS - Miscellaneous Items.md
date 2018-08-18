@@ -227,7 +227,7 @@ And you can set those values using `scutil --set` like this:
 
     sudo scutil --set ComputerName 'yourHostName'
     sudo scutil --set HostName 'yourHostName'
-    sudo scutil --set LocalHostName  'yourHostName'
+    sudo scutil --set LocalHostName 'yourHostName'
 
 ### Tell macOS not to write `.DS_Store` files to network shares.
 
