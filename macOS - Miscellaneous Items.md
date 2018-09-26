@@ -323,6 +323,17 @@ To reenable app protection, run this command:
 
 	sudo spctl --master-enable
 
+### Disable Metal
+
+Useful for cases where a video card isn’t spec’ed for macOS Mojave (10.4). Run these two commands:
+
+	sudo defaults write /Library/Preferences/com.apple.CoreDisplay useMetal -boolean no
+	sudo defaults write /Library/Preferences/com.apple.CoreDisplay useIOP -boolean no
+
+And this re-enabled font smoothing for non-Apple displays; fonts look like junk otherwise:
+
+	defaults write -g CGFontRenderingFontSmoothingDisabled -bool
+
 ***
 
 *macOS - Miscellaneous Items (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
