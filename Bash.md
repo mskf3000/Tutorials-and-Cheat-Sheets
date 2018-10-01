@@ -72,14 +72,7 @@ And here are some example `LSCOLORS` settings:
 
 	# MAMP stuff.
 	export MAMP_BIN="/Applications/MAMP/Library/bin";
-	export MAMP_PHP="/Applications/MAMP/bin/php/php5.6.27/bin";
-
-	# Git stuff.
-	# export GIT_BIN="/usr/local/git/bin";
-
-	# ImageMagick stuff.
-	# export MAGICK_HOME="/opt/ImageMagick";
-	# export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/";
+	export MAMP_PHP="/Applications/MAMP/bin/php/php5.6.10/bin";
 
 	# Final $PATH setting.
 	# export PATH="$MAGICK_HOME/bin:$MAMP_BIN:$MAMP_PHP:/usr/local/bin:/usr/local/sbin:$GIT_BIN:$PATH";
@@ -87,7 +80,7 @@ And here are some example `LSCOLORS` settings:
 	export PATH="/usr/local/bin:/usr/local/sbin:$MAMP_BIN:$MAMP_PHP:$PATH";
 
 	# Set the VAGRANT_HOME path.
-	export VAGRANT_HOME="/Volumes/Moon/vagrant.d";
+	# export VAGRANT_HOME="/Volumes/Moon/vagrant.d";
 
 	# 2016-12-08: Load the SSH key into the keychain.
 	ssh-add -K 2>/dev/null;

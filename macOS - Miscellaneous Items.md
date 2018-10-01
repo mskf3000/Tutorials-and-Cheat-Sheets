@@ -332,7 +332,7 @@ Useful for cases where a video card isn’t spec’ed for macOS Mojave (10.4). R
 
 And this re-enabled font smoothing for non-Apple displays; fonts look like junk otherwise:
 
-	defaults write -g CGFontRenderingFontSmoothingDisabled -bool
+	defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
 ***
 
