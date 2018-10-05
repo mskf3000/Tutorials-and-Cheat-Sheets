@@ -21,6 +21,10 @@ Now use Curl to grab the latest stable version of FreeTDS like this:
 
 	curl -O -L ftp://ftp.freetds.org/pub/freetds/stable/freetds-patched.tar.gz
 
+If the FTP connection fails, just use the HTTP equivalent:
+
+	curl -O -L http://www.freetds.org/files/stable/freetds-patched.tar.gz
+
 Then decompress the FreeTDS source code archive:
 
 	tar -xf freetds-patched.tar.gz
