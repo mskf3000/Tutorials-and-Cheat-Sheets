@@ -68,22 +68,27 @@ And here are some example `LSCOLORS` settings:
 	# SHELL_SESSION_HISTORY=0
 
 	# Setting CLI colors.
-	export CLICOLOR=1;
-
+	export CLICOLOR=1
+	
 	# MAMP stuff.
-	export MAMP_BIN="/Applications/MAMP/Library/bin";
-	export MAMP_PHP="/Applications/MAMP/bin/php/php5.6.10/bin";
-
+	export MAMP_BIN="/Applications/MAMP/Library/bin"
+	export MAMP_PHP="/Applications/MAMP/bin/php/php5.6.10/bin"
+	# export MAMP_PHP="/Applications/MAMP/bin/php/php7.0.8/bin"
+	# export MAMP_PHP="/Applications/MAMP/bin/php/php7.1.19/bin"
+	# export MAMP_PHP="/Applications/MAMP/bin/php/php7.2.7/bin"
+	
 	# Final $PATH setting.
-	# export PATH="$MAGICK_HOME/bin:$MAMP_BIN:$MAMP_PHP:/usr/local/bin:/usr/local/sbin:$GIT_BIN:$PATH";
-	# export PATH="$MAGICK_HOME/bin:/usr/local/bin:/usr/local/sbin:$GIT_BIN:$PATH";
-	export PATH="/usr/local/bin:/usr/local/sbin:$MAMP_BIN:$MAMP_PHP:$PATH";
-
+	# export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+	export PATH="$MAMP_BIN:$MAMP_PHP:/usr/local/bin:/usr/local/sbin:$PATH"
+	
 	# Set the VAGRANT_HOME path.
-	# export VAGRANT_HOME="/Volumes/Moon/vagrant.d";
-
-	# 2016-12-08: Load the SSH key into the keychain.
+	# export VAGRANT_HOME="/Someplace/Somewhere/vagrant.d"
+	
+	# 2016-12-08: Load the SSH keys into the keychain.
 	ssh-add -K 2>/dev/null;
+	
+	# For Acquia DevDesktop tools.
+	# export PATH="$PATH:/Applications/DevDesktop/tools"
 
 ***
 
