@@ -20,8 +20,8 @@ Before anything else, make sure your local MAMP install’s binary paths are par
 
 First, you need to get copies of the “Basic” and “SDK” archives for the Oracle Instant Client directly from Oracle. The archives I used were:
 
-* `instantclient-basic-macos.x64-12.1.0.2.0.zip`
-* `instantclient-sdk-macos.x64-12.1.0.2.0.zip`
+* `instantclient-basic-macos.x64-12.2.0.1.0.zip`
+* `instantclient-sdk-macos.x64-12.2.0.1.0.zip`
 
 Once you get those archives, create the directory structure they will live in here:
 
@@ -33,20 +33,20 @@ Now copy—or move—those ZIP archives into that directory and decompress them 
 
 Now unZip the archives like this:
 
-	sudo unzip instantclient-basic-macos.x64-12.1.0.2.0.zip
-	sudo unzip instantclient-sdk-macos.x64-12.1.0.2.0.zip
+	sudo unzip instantclient-basic-macos.x64-12.2.0.1.0.zip
+	sudo unzip instantclient-sdk-macos.x64-12.2.0.1.0.zip
 
 And when that’s done, cleanup by deleting the Zip archives:
 
 	sudo rm *.zip
 
-They should both decompress into the a directory named `instantclient_12_1` which would make the full path:
+They should both decompress into the a directory named `instantclient_12_2` which would make the full path:
 
-	/opt/oracle/instantclient/instantclient_12_1/
+	/opt/oracle/instantclient/instantclient_12_2/
 
 With that done, go into that directory:
 
-	cd /opt/oracle/instantclient/instantclient_12_1/
+	cd /opt/oracle/instantclient/instantclient_12_2/
 
 And then set these two symbolic links:
 
@@ -75,7 +75,7 @@ During the install you might be asked to provide the `ORACLE_HOME` path via a me
 
 We are not permanently setting `ORACLE_HOME` so just use this as the path:
 
-	instantclient,/opt/oracle/instantclient/instantclient_12_1
+	instantclient,/opt/oracle/instantclient/instantclient_12_2
 
 After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
@@ -98,7 +98,7 @@ Before anything else, make sure your local MAMP install’s binary paths are par
 
 #### Install the Oracle Instant Client Archives
 
-Same instructions as above under the instructions for PHP 5.6.10. Just make sure they exist in `/opt/oracle/instantclient/instantclient_12_1` and you are good to go.
+Same instructions as above under the instructions for PHP 5.6.10. Just make sure they exist in `/opt/oracle/instantclient/instantclient_12_2` and you are good to go.
 
 #### Compiling the OCI8 Module
 
@@ -122,7 +122,7 @@ During the install you might be asked to provide the `ORACLE_HOME` path via a me
 
 We are not permanently setting `ORACLE_HOME` so just use this as the path:
 
-	instantclient,/opt/oracle/instantclient/instantclient_12_1
+	instantclient,/opt/oracle/instantclient/instantclient_12_2
 
 After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
