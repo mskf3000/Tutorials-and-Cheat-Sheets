@@ -334,6 +334,25 @@ And this re-enabled font smoothing for non-Apple displays; fonts look like junk 
 
 	defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
+### Enable Touch ID for the Terminal
+
+To use Touch ID in the Terminal for `sudo` tasks, do this. First, open up the `/etc/pam.d/sudo` config like this:
+
+	sudo nano /etc/pam.d/sudo
+
+Then add this line to the top of the config options:
+
+	auth       sufficient     pam_tid.so
+
+The final config file should look like this:
+
+	auth       sufficient     pam_tid.so
+	auth       sufficient     pam_smartcard.so
+	auth       required       pam_opendirectory.so
+	account    required       pam_permit.so
+	password   required       pam_deny.so
+	session    required       pam_permit.so
+
 ***
 
 *macOS - Miscellaneous Items (c) by Jack Szwergold; written on October 6, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
