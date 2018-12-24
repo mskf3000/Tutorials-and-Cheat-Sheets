@@ -51,9 +51,9 @@ The additions will be reflected in the new output:
 
 And can then save the IP set like this
 
-    sudo ipset save FooBar > ipset.FooBar.conf
+    sudo ipset save FooBar > rules.ipset.FooBar
 
-The contents of `ipset.FooBar.conf` it will look something like this:
+The contents of `rules.ipset.FooBar` it will look something like this:
 
 	create FooBar hash:net family inet hashsize 1024 maxelem 65536
 	add FooBar 127.0.0.0/8
@@ -70,11 +70,11 @@ To remove all entries from the `FooBar` IP set, just “flush” it like this:
 
 And you can restore the IP set like this:
 
-    sudo ipset restore < ipset.FooBar.conf
+    sudo ipset restore < rules.ipset.FooBar
 
 This variant uses the `-!` option to ignore errors if the IP address already exists:
 
-    sudo ipset restore -! < ipset.FooBar.conf
+    sudo ipset restore -! < rules.ipset.FooBar
 
 ### Get IPSet to retain values on reboot.
 
@@ -84,11 +84,11 @@ Sadly, there is no equivalent of `iptables-persistent` out there. But you can tw
 
 First, copy the IP set rules into a text file like this:
 
-    sudo ipset save > ~/ipset.conf
+    sudo ipset save > ~/rules.ipset
 
 Then copy those rules into a file named `rules.ipsets` in the `/etc/iptables/` directory like this:
 
-	sudo cp ~/ipset.conf /etc/iptables/rules.ipsets
+	sudo cp ~/rules.ipset /etc/iptables/rules.ipsets
 
 Now let’s tweak the `iptables-persistent` startup script like this:
 
@@ -145,11 +145,11 @@ Now let’s download a raw zone file—such as `cn.zone`— from the IP Deny web
 
 With that downloaded, lets now populate the `BANNED_RANGES` IP set config file with the values from the `cn.zone` file like this:
 
-	awk '{print "add BANNED_RANGES " $0}' cn.zone > ipset.BANNED_RANGES.conf
+	awk '{print "add BANNED_RANGES " $0}' cn.zone > rules.ipset.BANNED_RANGES
 
 With that done, let’s import the `BANNED_RANGES` IP set like this:
 
-    sudo ipset restore < ipset.BANNED_RANGES.conf
+    sudo ipset restore < rules.ipset.BANNED_RANGES
 
 Now check the entries in the IP set by running this command:
 
@@ -179,11 +179,11 @@ And with the archive decompressed, let’s ditch the remaning `GeoIPCountryCSV.z
 	
 With that done, lets now populate the `BANNED_RANGES` IP set config file with the values from the `GeoIPCountryWhois.csv` file like this; note we are focusing only on China (`CN`) IP addresses:
 
-	awk -F "," -v COUNTRY_CODE=CN -v IPSET_TABLE=BANNED_RANGES} '$5 ~ COUNTRY_CODE { gsub(/"/, "", $1); gsub(/"/, "", $2); print "add "IPSET_TABLE" "$1"-"$2; }' /usr/local/share/GeoIP/GeoIPCountryWhois.csv >> ipset.BANNED_RANGES.conf
+	awk -F "," -v COUNTRY_CODE=CN -v IPSET_TABLE=BANNED_RANGES} '$5 ~ COUNTRY_CODE { gsub(/"/, "", $1); gsub(/"/, "", $2); print "add "IPSET_TABLE" "$1"-"$2; }' /usr/local/share/GeoIP/GeoIPCountryWhois.csv >> rules.ipset.BANNED_RANGES
 	
 With that done, let’s import the `BANNED_RANGES` IP set like this:
 
-    sudo ipset restore < ipset.BANNED_RANGES.conf
+    sudo ipset restore < rules.ipset.BANNED_RANGES
 
 Now check the entries in the IP set by running this command:
 

@@ -52,19 +52,19 @@ By default, an Ubuntu/Debian systems lose IPTables rules on reboot. Installing `
 
 If IPTables rules have already been set on the system, export the rules into a text file like this:
 
-    sudo iptables-save > ~/iptables.conf
+    sudo iptables-save > ~/rules.v4
 
 Now create an `iptables-persistent` specific storage directory if it doesn’t exist already:
 
     sudo mkdir /etc/iptables
 
-On Ubuntu/Debian you can copy the rules saved in the text file `~/iptables.conf` into the `/etc/iptables/rules.v4` location so `iptables-persistent` can load them:
+On Ubuntu/Debian you can copy the rules saved in the text file `~/rules.v4` into the `/etc/iptables/rules.v4` location so `iptables-persistent` can load them:
 
-    sudo cp ~/iptables.conf /etc/iptables/rules.v4
+    sudo cp ~/rules.v4 /etc/iptables/rules.v4
 
-On RedHat/CentOS you can copy the rules saved in the text file `~/iptables.conf` into the `/etc/iptables/rules.v4` location so `iptables-persistent` can load them:
+On RedHat/CentOS you can copy the rules saved in the text file `~/rules.v4` into the `/etc/iptables/rules.v4` location so `iptables-persistent` can load them:
 
-    sudo cp ~/iptables.conf /etc/sysconfig/iptables
+    sudo cp ~/rules.v4 /etc/sysconfig/iptables
 
 And with that done, `iptables-persistent` should be all set.
 
@@ -72,7 +72,7 @@ And with that done, `iptables-persistent` should be all set.
 
 To manually import IPTables rules, just use `iptables-restore` like this:
 
-    sudo iptables-restore < ~/iptables.conf
+    sudo iptables-restore < ~/rules.v4
 
 ### Flushing IPTables rules.
 
@@ -96,7 +96,7 @@ To set port rerouting directly in the command line, run a command like this; thi
 
     sudo iptables -A PREROUTING -t nat -s 11.22.33.44 --p tcp --dport 8000 -j REDIRECT --to-ports 80
 
-Or you can add this rule to the `*nat` table into the `iptables.conf` text file; this command assumes the source IP of `11.22.33.44` will connect on port `8000` and get traffic from port `80`:
+Or you can add this rule to the `*nat` table into the `rules.v4` text file; this command assumes the source IP of `11.22.33.44` will connect on port `8000` and get traffic from port `80`:
 
     -A PREROUTING -s 11.22.33.44 -p tcp -m tcp --dport 8000 -j REDIRECT --to-ports 80
 
@@ -106,51 +106,39 @@ This is a basic, solid and relatively simple rule set I like to use with IPTable
 
 	# NAT stuff.
 	*nat
-	:PREROUTING ACCEPT [0:0]
-	:INPUT ACCEPT [0:0]
+	:PREROUTING ACCEPT [2:80]
+	:INPUT ACCEPT [2:80]
 	:OUTPUT ACCEPT [3:198]
 	:POSTROUTING ACCEPT [3:198]
 	COMMIT
-
-    # Mangle stuff.
+	
+	# Mangle stuff.
 	*mangle
-	:PREROUTING ACCEPT [22:1475]
-	:INPUT ACCEPT [22:1475]
+	:PREROUTING ACCEPT [87:6395]
+	:INPUT ACCEPT [87:6395]
 	:FORWARD ACCEPT [0:0]
-	:OUTPUT ACCEPT [21:3342]
-	:POSTROUTING ACCEPT [21:3342]
+	:OUTPUT ACCEPT [50:4502]
+	:POSTROUTING ACCEPT [50:4502]
 	COMMIT
-
-    # Filter stuff.
+	
+	# Filter stuff.
 	*filter
 	:INPUT ACCEPT [0:0]
 	:FORWARD ACCEPT [0:0]
-	:OUTPUT ACCEPT [21:3342]
-	
-	# Accept the local loopback interface no matter what.
+	:OUTPUT ACCEPT [50:4502]
+	:BANNED_ACTIONS - [0:0]
+	:DDOS_ACTIONS - [0:0]
+	:DDOS_DETECT - [0:0]
+	:SPOOF_ACTIONS - [0:0]
+	:SPOOF_DETECT - [0:0]
+	:TOR_ACTIONS - [0:0]
 	-A INPUT -i lo -j ACCEPT
-	
-	# Drop invalid SYN packets.
-	-A INPUT -p tcp --tcp-flags ALL ACK,RST,SYN,FIN -j REJECT
-	-A INPUT -p tcp --tcp-flags SYN,FIN SYN,FIN -j REJECT
-	-A INPUT -p tcp --tcp-flags SYN,RST SYN,RST -j REJECT
-	
-	# The combination of these TCP flags is not defined.
-	-A INPUT -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j REJECT
-	-A INPUT -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,SYN,RST,PSH,ACK,URG -j REJECT
-	-A INPUT -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,PSH,URG -j REJECT
-	-A INPUT -p tcp --tcp-flags FIN,RST FIN,RST -j REJECT
-	-A INPUT -p tcp --tcp-flags FIN,ACK FIN -j REJECT
-	-A INPUT -p tcp --tcp-flags PSH,ACK PSH -j REJECT
-	-A INPUT -p tcp --tcp-flags ACK,URG URG -j REJECT
-	
-	# Drop new incoming TCP connections are not SYN packets.
-	-A INPUT -p tcp ! --syn -m state --state NEW -j REJECT
-	
-	# Drop packets with incoming fragments.
-	-A INPUT -p tcp --tcp-flags ALL ALL -j REJECT
-	
-	# Accept ports.
+	-A INPUT -p tcp -m set --match-set WHITELIST_IPS src -j ACCEPT
+	-A INPUT -p tcp -m set --match-set BANNED_RANGES src -j BANNED_ACTIONS
+	-A INPUT -p tcp -m set --match-set BANNED_IPS src -j BANNED_ACTIONS
+	-A INPUT -p tcp -m set --match-set TOR_IPS src -j TOR_ACTIONS
+	-A INPUT -j DDOS_DETECT
+	-A INPUT -j SPOOF_DETECT
 	-A INPUT -p tcp -m state --state NEW -m tcp -m multiport --dports 80,443 -j ACCEPT
 	-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
 	-A INPUT -d 224.0.0.251/32 -p udp -m udp --dport 5353 -j ACCEPT
@@ -159,7 +147,60 @@ This is a basic, solid and relatively simple rule set I like to use with IPTable
 	-A INPUT -p ah -j ACCEPT
 	-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 	-A INPUT -j REJECT --reject-with icmp-host-prohibited
-
+	
+	# Define the banned actions.
+	-A BANNED_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+	
+	# Define the DDoS actions.
+	-A DDOS_ACTIONS -p tcp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: "
+	-A DDOS_ACTIONS -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: "
+	-A DDOS_ACTIONS -p icmp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: "
+	-A DDOS_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+	
+	# Drop invalid SYN packets.
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags ALL ACK,RST,SYN,FIN -j DDOS_ACTIONS
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags SYN,FIN SYN,FIN -j DDOS_ACTIONS
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags SYN,RST SYN,RST -j DDOS_ACTIONS
+	
+	# The combination of these TCP flags is not defined.
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j DDOS_ACTIONS
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,SYN,RST,PSH,ACK,URG -j DDOS_ACTIONS
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG FIN,PSH,URG -j DDOS_ACTIONS
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,RST FIN,RST -j DDOS_ACTIONS
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags FIN,ACK FIN -j DDOS_ACTIONS
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags PSH,ACK PSH -j DDOS_ACTIONS
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags ACK,URG URG -j DDOS_ACTIONS
+	
+	# Drop new incoming TCP connections are not SYN packets.
+	-A DDOS_DETECT -p tcp -m tcp ! --syn -m state --state NEW -j DDOS_ACTIONS
+	
+	# Drop packets with incoming fragments.
+	-A DDOS_DETECT -p tcp -m tcp --tcp-flags ALL ALL -j DDOS_ACTIONS
+	
+	# Define the spoof actions.
+	-A SPOOF_ACTIONS -j ACCEPT
+	# -A SPOOF_ACTIONS -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: "
+	# -A SPOOF_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+	
+	# One batch of spoof detection addresses.
+	-A SPOOF_DETECT -s 10.0.0.0/8 -j SPOOF_ACTIONS
+	# -A SPOOF_DETECT -s 169.254.0.0/16 -j SPOOF_ACTIONS
+	# -A SPOOF_DETECT -s 172.16.0.0/12 -j SPOOF_ACTIONS
+	-A SPOOF_DETECT -s 127.0.0.0/8 -j SPOOF_ACTIONS
+	
+	# Another batch of spoof detection addresses.
+	-A SPOOF_DETECT -s 224.0.0.0/4 -j SPOOF_ACTIONS
+	-A SPOOF_DETECT -d 224.0.0.0/4 -j SPOOF_ACTIONS
+	-A SPOOF_DETECT -s 240.0.0.0/5 -j SPOOF_ACTIONS
+	-A SPOOF_DETECT -d 240.0.0.0/5 -j SPOOF_ACTIONS
+	-A SPOOF_DETECT -s 0.0.0.0/8 -j SPOOF_ACTIONS
+	-A SPOOF_DETECT -d 0.0.0.0/8 -j SPOOF_ACTIONS
+	-A SPOOF_DETECT -d 239.255.255.0/24 -j SPOOF_ACTIONS
+	-A SPOOF_DETECT -d 255.255.255.255/32 -j SPOOF_ACTIONS
+	
+	# Define the TOR actions.
+	-A TOR_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+	
 	# Commit it.
 	COMMIT
 

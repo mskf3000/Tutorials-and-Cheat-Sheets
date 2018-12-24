@@ -63,6 +63,10 @@ Then run `autoreconf` like this:
     curl -O -L http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
     curl -O -L http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip
 
+	curl -O -L https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
+	curl -O -L https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
+	curl -O -L https://geolite.maxmind.com/download/geoip/database/GeoLite2-ASN.tar.gz
+
 #### Move the GeoIP databases to their proper directory.
 
 Create the `GeoIP` directory—if it doesn’t exist—like this:
