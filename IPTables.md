@@ -152,9 +152,9 @@ This is a basic, solid and relatively simple rule set I like to use with IPTable
 	-A BANNED_ACTIONS -j REJECT --reject-with icmp-host-prohibited
 	
 	# Define the DDoS actions.
-	-A DDOS_ACTIONS -p tcp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: "
-	-A DDOS_ACTIONS -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: "
-	-A DDOS_ACTIONS -p icmp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: "
+	-A DDOS_ACTIONS -p tcp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: "
+	-A DDOS_ACTIONS -p udp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: "
+	-A DDOS_ACTIONS -p icmp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: "
 	-A DDOS_ACTIONS -j REJECT --reject-with icmp-host-prohibited
 	
 	# Drop invalid SYN packets.
@@ -179,7 +179,7 @@ This is a basic, solid and relatively simple rule set I like to use with IPTable
 	
 	# Define the spoof actions.
 	-A SPOOF_ACTIONS -j ACCEPT
-	# -A SPOOF_ACTIONS -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: "
+	# -A SPOOF_ACTIONS -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: "
 	# -A SPOOF_ACTIONS -j REJECT --reject-with icmp-host-prohibited
 	
 	# One batch of spoof detection addresses.
@@ -212,13 +212,13 @@ These are IPTables entries to log entries in the Kernel log (`kern.log`). They w
 
 Setting a generic log entry:
 
-    -A INPUT -m limit --limit 5/min -j LOG --log-prefix "IPTABLES_DENIED: " --log-level 4
+    -A INPUT -m limit --limit 3/min -j LOG --log-prefix "IPTABLES_DENIED: " --log-level 4
 
 Setting log entries based on TCP, UDP or ICMP requests:
 
-	-A INPUT -p tcp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: " --log-level 4
-	-A INPUT -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: " --log-level 4
-	-A INPUT -p icmp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: " --log-level 4
+	-A INPUT -p tcp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_TCP: " --log-level 4
+	-A INPUT -p udp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP: " --log-level 4
+	-A INPUT -p icmp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_ICMP: " --log-level 4
 
 Finding the IPTables specific log entries in the Kernel log (`kern.log`):
 
@@ -263,7 +263,7 @@ This variant will let you know date, time and whether the dropped packet was TCP
 	sudo iptables -A SPOOFING -d 239.255.255.0/24 -j SPOOF_ACTIONS
 	sudo iptables -A SPOOFING -d 255.255.255.255 -j SPOOF_ACTIONS
 	
-	sudo iptables -A SPOOF_ACTIONS -p tcp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: " --log-level 4
+	sudo iptables -A SPOOF_ACTIONS -p tcp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_SPOOF: " --log-level 4
 	sudo iptables -A SPOOF_ACTIONS -j REJECT --reject-with icmp-host-prohibited
 
 ### Some ideas that are not ready for prime time.
@@ -289,7 +289,7 @@ This variant will let you know date, time and whether the dropped packet was TCP
 
     sudo iptables -N UDP_OUT_FLOOD
     sudo iptables -A OUTPUT -p udp -j UDP_OUT_FLOOD
-    sudo iptables -A UDP_OUT_FLOOD -p udp -m limit --limit 5/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP_OUT: " --log-level 4
+    sudo iptables -A UDP_OUT_FLOOD -p udp -m limit --limit 3/min --limit-burst 10 -j LOG --log-prefix "IPTABLES_DENIED_UDP_OUT: " --log-level 4
     sudo iptables -A UDP_OUT_FLOOD -j REJECT --reject-with icmp-host-prohibited
 
 ***
