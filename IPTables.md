@@ -132,11 +132,13 @@ This is a basic, solid and relatively simple rule set I like to use with IPTable
 	:SPOOF_ACTIONS - [0:0]
 	:SPOOF_DETECT - [0:0]
 	:TOR_ACTIONS - [0:0]
+	:AWS_ACTIONS - [0:0]
 	-A INPUT -i lo -j ACCEPT
 	-A INPUT -p tcp -m set --match-set WHITELIST_IPS src -j ACCEPT
 	-A INPUT -p tcp -m set --match-set BANNED_RANGES src -j BANNED_ACTIONS
 	-A INPUT -p tcp -m set --match-set BANNED_IPS src -j BANNED_ACTIONS
 	-A INPUT -p tcp -m set --match-set TOR_IPS src -j TOR_ACTIONS
+	-A INPUT -p tcp -m set --match-set AWS_RANGES src -j AWS_ACTIONS
 	-A INPUT -j DDOS_DETECT
 	-A INPUT -j SPOOF_DETECT
 	-A INPUT -p tcp -m state --state NEW -m tcp -m multiport --dports 80,443 -j ACCEPT
@@ -200,6 +202,9 @@ This is a basic, solid and relatively simple rule set I like to use with IPTable
 	
 	# Define the TOR actions.
 	-A TOR_ACTIONS -j REJECT --reject-with icmp-host-prohibited
+	
+	# Define the AWS actions.
+	-A AWS_ACTIONS -j REJECT --reject-with icmp-host-prohibited
 	
 	# Commit it.
 	COMMIT
