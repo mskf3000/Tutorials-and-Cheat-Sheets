@@ -180,6 +180,24 @@ Then restart the Fail2Ban service like this:
 
     sudo service fail2ban restart
 
+#### Reset Fail2Ban’s SQLite database.
+
+First, stop Fail2Ban like this:
+
+	sudo service fail2ban stop
+
+Now, truncate the Fail2Ban log like this:
+
+	sudo truncate -s 0 /var/log/fail2ban.log
+
+And delete the Fail2Bay SQLite database like this:
+
+	sudo rm /var/lib/fail2ban/fail2ban.sqlite3
+
+Then restart Fail2Ban like this:
+
+	sudo service fail2ban restart
+
 #### Adding a custom Apache “Bad Bots” jail.
 
 Open up `jail.local` like this:
