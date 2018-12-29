@@ -6,6 +6,10 @@ By Jack Szwergold
 
     rsync -avz --dry-run /source_directory/ /destination_directory/
 
+To run the same command on a macOS machine—and retain extended attributes:
+
+	rsync -avzE --dry-run /source_directory/ /destination_directory/
+
 ### Command to retain partially transfered files if the connection is lost.
 
 While this works, sometimes the partially transferred files are not cleanly resumed. Should check why that happens and if anything can be done:
