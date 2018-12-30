@@ -76,6 +76,16 @@ This variant uses the `-!` option to ignore errors if the IP address already exi
 
     sudo ipset restore -! < rules.ipset.FooBar
 
+### Get a count of actual IP addresses from the CIDR/netmask ranges IPSet is keeping track of.
+
+If you need to get a count of the actual IP addresses IPSet is dealing with, you can run this command that uses Grep and some Bash shell math magic:
+
+	grep -oE '(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\/([0-9]{1,2})'ipset-20181229.txt | awk -F / '{ count[$2]++ } END { for (mask in count) total+=count[mask]*2^(32-mask); print total }'
+
+Here is a variant of that same command that uses `prips`, but it stinks. It’s being added here for reference only. I actually expands all of the ranges and—as a result—takes forever to complete. So while the first version takes a few seconds to run, this `prips` version can take anywhere from 20 to 30 minutes to deal with an IPSet that contains 40,000+ entries:
+
+	grep -oE '(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\/([0-9]{1,2})' ipset-20181229.txt | awk 'NF { system( "prips " $0)  }' | wc -l
+
 ### Get IPSet to retain values on reboot.
 
 If you are using IPSet you are using IPTables as well. And if you are using IPTables, you are using `iptables-persistent` to ensure the IPTables rules are restored on reboot, right? But what about something for IPSet like `ipset-persistent`? Does that exist?
