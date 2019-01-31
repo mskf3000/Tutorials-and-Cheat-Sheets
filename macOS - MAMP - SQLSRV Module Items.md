@@ -13,13 +13,9 @@ Before anything else, make sure your local MAMP install’s binary paths are par
 
 Do this to install the core ODBC stuff on macOS:
 
-	brew tap microsoft/SQLSRV-release https://github.com/Microsoft/homebrew-SQLSRV-release
+	brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 	brew update
 	brew install --no-sandbox msodbcsql17 SQLSRV-tools
-
-Then install the Unix ODBC stuff:
-
-	brew install unixodbc
 
 Now install the actual PHP modules via PECL:
 
