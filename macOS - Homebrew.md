@@ -48,18 +48,23 @@ Or do a similar thing this way:
 
 ***
 
-Install Java via Homebrew like this:
+Install the latest OpenJDK Java version via Homebrew like this:
 
-	brew cask install caskroom/cask/java
+	brew cask install adoptopenjdk
 
-Or install a specific version like this:
+Other specific OpenJDK versions can be installed like this:
 
-	brew cask install caskroom/versions/java8
+	brew tap AdoptOpenJDK/openjdk
+	brew cask install adoptopenjdk8-jre
+
+Additional versions of Java OpenJDK and JRE can be found here:
+ 
+	https://github.com/AdoptOpenJDK/homebrew-openjdk
 
 Uninstall it like this:
 
-	brew cask uninstall java8
-
+	brew cask uninstall adoptopenjdk8-jre
+ 
 ***
 
 *macOS - Homebrew (c) by Jack Szwergold; written on December 27, 2016. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
