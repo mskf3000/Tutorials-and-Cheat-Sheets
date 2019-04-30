@@ -15,7 +15,7 @@ Do this to install the core ODBC stuff on macOS:
 
 	brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 	brew update
-	brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
+	brew install msodbcsql17 mssql-tools
 
 Now install the actual PHP modules via PECL:
 
