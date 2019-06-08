@@ -146,27 +146,27 @@ Change the DPI of JPEG images to 200 dpi:
 
 ### Resize images.
 
-Resize JPEG, PNG, PSD or TIFF images to dimensions of 1200 pixels wide or high if they are larger than 1200 pixels:
+Resize JPEG, PNG, PSD, TIFF or HEIC images to dimensions of 1200 pixels wide or high if they are larger than 1200 pixels:
 
-	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF)$' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|PSD|TIF|TIFF|HEIC)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    convert -density 72 -units PixelsPerInch -resize "1200x1200>" -quality 100 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
-Resize JPEG, PNG or TIFF images to dimensions of 1920 pixels wide or high if they are larger than 1920 pixels:
+Resize JPEG, PNG, TIFF or HEIC images to dimensions of 1920 pixels wide or high if they are larger than 1920 pixels:
 
-	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    convert -density 72 -units PixelsPerInch -resize "1920x1920>" -quality 90 "${FULL_IMAGE_PATH}" "${FULL_IMAGE_PATH}"
 	  done
 
-### Convert TIFF images to JPEG images at 90% quality.
+### Convert JPEG, PNG, TIFF or HEIC images to JPEG images at 90% quality.
 
-This command converts TIFF images to JPEGs at 90% quality:
+This command converts JPEG, PNG, TIFF or HEIC images to JPEGs at 90% quality:
 
-	find 'Desktop/Pics' -type f -name '*.tif' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
@@ -175,7 +175,7 @@ This command converts TIFF images to JPEGs at 90% quality:
 
 This command converts TIFF images to JPEGs at 100% quality with a 1200 DPI setting:
 
-	find 'Desktop/Pics' -type f -name '*.tif' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC)$'' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
