@@ -32,7 +32,7 @@ This script (`video_metadata_parser.sh`) uses ExifTool to parse dates, times and
 	
 	  done
 
-### Extract MP4 Vidoes Out of an MKV
+### Extract MP4 Videos Out of an MKV File
 
 Simple script traverse a directory filled with MKV files and extract the MP4 inside without transcoding:
 
