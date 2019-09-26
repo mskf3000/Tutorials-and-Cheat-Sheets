@@ -4,11 +4,15 @@ By Jack Szwergold
 
 Merge subtitles into an MP4 without transcoding:
 
-    ffmpeg -i "input.mp4" -i "input.srt" -c:v copy -c:a copy -c:s mov_text -metadata:s:s:0 language=eng "output.mp4"
+    ffmpeg -i input.mp4 -i input.srt -c:v copy -c:a copy -c:s mov_text -metadata:s:s:0 language=eng output.mp4
 
 Extract MP4 video out of an MKV file without transcoding:
 
-    ffmpeg -i "input.mkv" -codec copy "output.mp4"
+    ffmpeg -i input.mkv -codec copy output.mp4
+
+Extract MP4 video out of an MKV file without transcoding but specifying a stream using `-map`:
+
+    ffmpeg -i input.mkv -c:v copy -c:a copy -map 0:0 -map 0:1 output.m4v
 
 ***
 
