@@ -438,6 +438,47 @@ The output should be something like this; note the `5.5.53-2.w6` version numbers
 
 Now you should be good to go! 
 
+### Basic and Solid MySQL Config for MySQL 5.7
+
+Just copy this into your `my.cnf` file, restart MySQL and you are good to go:
+
+	[client]
+	default-character-set = utf8mb4
+	
+	[mysql]
+	default-character-set = utf8mb4
+
+	[myisamchk]
+	ft_min_word_len = 2
+	
+	[mysqld]
+	collation-server = utf8mb4_unicode_520_ci
+	init-connect='SET NAMES utf8mb4'
+	character-set-server = utf8mb4
+	wait_timeout = 600
+	max_allowed_packet = 64M
+	ft_min_word_len = 2
+	event_scheduler = OFF
+	innodb_read_io_threads = 64
+	innodb_write_io_threads = 64
+	innodb_thread_concurrency = 0
+	innodb_buffer_pool_size = 6G
+	innodb_buffer_pool_instances = 8
+	innodb_page_cleaners = 8
+	innodb_lru_scan_depth = 256
+	innodb_log_buffer_size = 8M
+	innodb_log_file_size = 64M
+	innodb_flush_log_at_trx_commit = 2
+	innodb_flush_method = O_DIRECT
+	# bind-address = 0.0.0.0
+	# datadir = /opt/mysql
+	# socket = /opt/mysql/mysql.sock
+
+	[mysqld]
+	# sql_mode = ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+	# sql_mode = ONLY_FULL_GROUP_BY,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+	sql_mode = NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+
 ***
 
 *MySQL (c) by Jack Szwergold; written on September 24, 2015. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
