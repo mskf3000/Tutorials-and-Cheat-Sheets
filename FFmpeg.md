@@ -2,6 +2,10 @@
 
 By Jack Szwergold
 
+Extract subtitles from an MP4:
+
+	ffmpeg -i input.m4v -map 0:s:0 input.srt
+
 Merge subtitles into an MP4 without transcoding:
 
     ffmpeg -i input.m4v -i input.srt -c:v copy -c:a copy -c:s mov_text -metadata:s:s:0 language=eng output.m4v
