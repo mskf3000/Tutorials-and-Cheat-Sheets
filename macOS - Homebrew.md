@@ -38,7 +38,7 @@ If you get a package that spits out a message like “Error: An unsatisfied requ
 
 ***
 
-Uninstall all Homebrew pacakages:
+Uninstall all Homebrew packages:
 
     brew remove --force --ignore-dependencies $(brew list);
 
