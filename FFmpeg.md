@@ -4,7 +4,7 @@ By Jack Szwergold
 
 Extract subtitles from an MP4:
 
-	ffmpeg -i input.m4v -map 0:s:0 input.srt
+    ffmpeg -i input.m4v -map 0:s:0 input.srt
 
 Merge subtitles into an MP4 without transcoding:
 
@@ -19,7 +19,7 @@ Extract MP4 video out of an MKV file without transcoding but specifying a stream
     ffmpeg -i input.mkv -c:v copy -c:a copy -map 0:0 -map 0:1 output.m4v
 
 Extract MP4 video out of an MKV file without transcoding video but converting audio to AC3 by specifying a stream using `-map`:
-    
+
     ffmpeg -i input.mkv -c:v copy -c:a ac3 -map 0:0 -map 0:1 output.m4v
 
 ***

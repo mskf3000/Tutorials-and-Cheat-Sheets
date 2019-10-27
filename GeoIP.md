@@ -2,6 +2,16 @@
 
 By Jack Szwergold
 
+### 2019-10-14: Nothing Here Works as Expected
+
+MaxMind changed their DB format and now this happens. Anyway, reinstall GeoIP tools via repo like this:
+
+	 sudo add-apt-repository ppa:maxmind/ppa
+
+Then this:
+
+    sudo aptitude install libgeoip1 libgeoip-dev geoip-bin
+
 ### Installing the GeoIP program.
 
 Install the basics for the build:

@@ -191,11 +191,11 @@ First create the `mysqld/` directory in `/var/run/` like this:
 	sudo mkdir -p /var/run/mysqld/
 
 Then create a `mysqld.pid` file with `touch`:
-	
+
 	sudo touch /var/run/mysqld/mysqld.pid
 
 Next create a `mysqld.sock` file with `touch`:
-	
+
 	sudo touch /var/run/mysqld/mysqld.sock
 
 Now change the ownerships of the directory and files to `mysql:mysql` like this:
@@ -359,10 +359,10 @@ To make a permanent change to the MySQL install on the machine giving you an iss
 
 	[client]
 	default-character-set=utf8
-	
+
 	[mysql]
 	default-character-set=utf8
-	
+
 	[mysqld]
 	collation-server = utf8_unicode_ci
 	init-connect='SET NAMES utf8'
@@ -372,10 +372,10 @@ Or on MySQL 5.5 and above, do this using `utf8mb4`:
 
 	[client]
 	default-character-set = utf8mb4
-	
+
 	[mysql]
 	default-character-set = utf8mb4
-	
+
 	[mysqld]
 	collation-server = utf8mb4_unicode_ci
 	character-set-client-handshake = FALSE
@@ -384,7 +384,7 @@ Or on MySQL 5.5 and above, do this using `utf8mb4`:
 In some cases you might need to use this for `init-connect` instead of the simple `SET NAMES utf8` value shown above:
 
     init-connect='SET collation_connection = utf8_general_ci; SET NAMES utf8;'
-    
+
 Check these values by running this command within MySQL:
 
     SHOW VARIABLES LIKE 'character_set%';
@@ -396,7 +396,7 @@ Or this variation:
 ### Installing—or Upgrading—to MySQL 5.5 (from MySQL 5.1) on RedHat/CentOS 6
 
 Check the version numbers for the already installed version of MySQL:
-	
+
 	yum list installed | grep -i mysql
 
 The output should be something like this; note the `5.1.73-7.el6` version numbers:
@@ -408,7 +408,7 @@ The output should be something like this; note the `5.1.73-7.el6` version number
 	php56w-mysql.x86_64                5.6.28-1.w6             @webtatic   
 
 Now install the `yum-plugin-replace` to so a clean upgrade from MySQL 5.1 to 5.5 can happen:
-	
+
 	sudo yum install mysql.`uname -i` yum-plugin-replace
 
 Now run this command to replace MySQL 5.1 with 5.5:
@@ -424,7 +424,7 @@ Run this `mysql_upgrade` command to get MySQL core tables upgraded:
 	sudo mysql_upgrade -uroot -p[password]
 
 Now re-check the version numbers for the newly installed version of MySQL:
-	
+
 	yum list installed | grep -i mysql
 
 The output should be something like this; note the `5.5.53-2.w6` version numbers:
@@ -436,7 +436,21 @@ The output should be something like this; note the `5.5.53-2.w6` version numbers
 	perl-DBD-MySQL.x86_64              4.013-3.el6             @rhel-x86_64-server-6
 	php56w-mysql.x86_64                5.6.28-1.w6             @webtatic  
 
-Now you should be good to go! 
+Now you should be good to go!
+
+## Cool query to calculate what tables in an InnoDB database are excessively fragmented and take up too much physical space.
+
+    SELECT
+      table_name,
+      round(data_length/1024/1024) AS data_length_mb,
+      round(data_free/1024/1024) AS data_free_mb
+    FROM
+      information_schema.tables
+    WHERE
+      round(data_free/1024/1024) > 500
+    ORDER BY
+      data_free_mb
+    ;
 
 ### Basic and Solid MySQL Config for MySQL 5.7
 
@@ -444,13 +458,13 @@ Just copy this into your `my.cnf` file, restart MySQL and you are good to go:
 
 	[client]
 	default-character-set = utf8mb4
-	
+
 	[mysql]
 	default-character-set = utf8mb4
 
 	[myisamchk]
 	ft_min_word_len = 2
-	
+
 	[mysqld]
 	collation-server = utf8mb4_unicode_520_ci
 	init-connect='SET NAMES utf8mb4'
