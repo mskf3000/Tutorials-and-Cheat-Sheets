@@ -85,15 +85,43 @@ Or this variant of the command to make the change permanent:
 
 	sudo setsebool -P httpd_can_connect_ldap 1
 
-***
+### SELinux contexts, files and directories.
 
-And if you need to enable internal network connections, just run this command:
+If there are directory related issues — tied to reading and/or writing in general or to directories outside of `/var/www/html/` — you can run this `chcon` command but the changes will be temporary:
 
-	setsebool httpd_can_network_connect 1
+	chcon -vR -t httpd_sys_rw_content_t /opt/
+	chcon -vR -t httpd_sys_rw_content_t /var/www/html/
 
-Or this variant of the command to make the change permanent:
+You must install `semanage` since it is not installed by default. Search for what package installs it:
 
-	sudo setsebool -P httpd_can_network_connect 1
+	yum whatprovides /usr/sbin/semanage
+
+And it should show `policycoreutils-python`:
+
+	yum install policycoreutils-python
+
+Then run this `semanage` command to make these commands permanent:
+
+	semanage fcontext -a -t httpd_sys_rw_content_t "/opt(/.*)?"
+	semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/html(/.*)?"
+
+You can then check the status by using `ls` with the `-lZ` parameters:
+
+	ls -latrZ /opt/
+	ls -latrZ /var/www/html/
+
+And if — for some reason — you need to restore original values, do this:
+
+	restorecon -vR /opt/
+	restorecon -vR /var/www/html/
+
+Test stuff:
+
+Create a test file like this:
+
+	touch /opt/something.txt
+	chown apache:apache /opt/something.txt
+	ls -lZ /opt/something.txt
 
 ***
 
