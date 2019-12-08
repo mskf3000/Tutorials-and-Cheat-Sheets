@@ -22,6 +22,18 @@ Extract MP4 video out of an MKV file without transcoding video but converting au
 
     ffmpeg -i input.mkv -c:v copy -c:a ac3 -map 0:0 -map 0:1 output.m4v
 
+## HEVC (aka: x265)
+
+To encode a video into an HEVC (aka: x265) video that is iOS compatible, you can do this. First, this line lets you create a sample video by using the `-ss` (seek) and `-t` (duration in seconds) parameters. For example, this line will create a 5 minute sample video:
+
+    ffmpeg -i input.mkv -vf scale=-1:720 -ss 0 -t 300 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
+
+And then to actually encode that video, you can run this command:
+
+    ffmpeg -i input.mkv -vf scale=-1:720 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
+
+Note the `-crf` controls quality: 0 is lossless, 23 is the default and 51 is lossy. Using 13 here for best quality while taking up less space. 
+
 ***
 
 *FFmpeg (c) by Jack Szwergold; written on November 7, 2018. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
