@@ -40,4 +40,29 @@ Note the `-crf` controls quality: 0 is lossless, 23 is the default and 51 is los
 
 ***
 
+And example command to create a 10 minute (600 seconds) sample file with the `-ss` and `-t` options:
+
+	nice -n 10 \
+	ffmpeg -i input.mkv \
+	       -ss 0 -t 600 \
+	       -map_metadata -1 \
+	       -vf scale=1174:720 \
+	       -c:v libx265 -crf 20 -c:a aac -b:a 128k \
+	       -threads 1 -x265-params pools=1 \
+	       -tag:v hvc1 -sn output.mp4
+	       ;
+
+Same command bit without the `-ss` and `-t` options:
+
+	nice -n 10 \
+	ffmpeg -i input.mkv \
+	       -map_metadata -1 \
+	       -vf scale=1174:720 \
+	       -c:v libx265 -crf 20 -c:a aac -b:a 128k \
+	       -threads 1 -x265-params pools=1 \
+	       -tag:v hvc1 -sn output.mp4
+	       ;
+
+***
+
 *FFmpeg (c) by Jack Szwergold; written on November 7, 2018. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
