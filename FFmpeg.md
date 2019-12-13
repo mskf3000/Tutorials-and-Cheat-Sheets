@@ -46,9 +46,9 @@ And example command to create a 10 minute (600 seconds) sample file with the `-s
 	ffmpeg -i input.mkv \
 	       -ss 0 -t 600 \
 	       -map_metadata -1 \
-	       -vf scale=1174:720 \
+	       -vf scale=-1:720 \
 	       -c:v libx265 -crf 20 -c:a aac -b:a 128k \
-	       -threads 1 -x265-params pools=1 \
+	       -threads 4 -x265-params pools=4 \
 	       -tag:v hvc1 -sn output.mp4
 	       ;
 
@@ -57,11 +57,23 @@ Same command bit without the `-ss` and `-t` options:
 	nice -n 10 \
 	ffmpeg -i input.mkv \
 	       -map_metadata -1 \
-	       -vf scale=1174:720 \
+	       -vf scale=-1:720 \
 	       -c:v libx265 -crf 20 -c:a aac -b:a 128k \
-	       -threads 1 -x265-params pools=1 \
+	       -threads 4 -x265-params pools=4 \
 	       -tag:v hvc1 -sn output.mp4
 	       ;
+
+This command uses Apple’s T2 encryption chips (available on most 2018 and above Macs) to speed up encoding. A lot faster than `lbx265` but the quality stinks and the `-crf` value cannot be adjusted. Here for refernce only:
+
+	nice -n 10 \
+	ffmpeg -i input.mkv \
+			 -map_metadata -1 \
+			 -vf scale=-1:720 \
+			 -c:v hevc_videotoolbox -crf 20 -c:a aac -b:a 128k \
+			 -threads 4 -x265-params pools=4 \
+			 -tag:v hvc1 -sn \
+			 -map 0:0 -map 0:2 output_hevc_videotoolbox.mp4
+			 ;
 
 ***
 
