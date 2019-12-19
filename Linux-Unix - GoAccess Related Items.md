@@ -44,6 +44,10 @@ Run this command to process the `access.log.1` and `access.log` in the `/var/log
 
 	sudo goaccess /var/log/nginx/access.log.1 /var/log/nginx/access.log --log-format=COMBINED
 
+Similar command, but with the directory/file structure for RedHat/CentOS:
+
+	goaccess --log-format=COMBINED /var/log/httpd/ssl_access_log.1 /var/log/httpd/ssl_access_log
+
 Same command but using `nice` to make sure the process doesn’t hog up too many system resources.
 
 	nice -n 19 sudo goaccess /var/log/nginx/access.log.1 /var/log/nginx/access.log --log-format=COMBINED
