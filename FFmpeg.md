@@ -48,7 +48,7 @@ And example command to create a 10 minute (600 seconds) sample file with the `-s
 	       -map_metadata -1 \
 	       -vf scale=-1:720 \
 	       -c:v libx265 -crf 20 -c:a aac -b:a 128k \
-	       -threads 4 -x265-params pools=4 \
+	       -threads 4 \
 	       -tag:v hvc1 -sn output.mp4
 	       ;
 
@@ -59,7 +59,7 @@ Same command bit without the `-ss` and `-t` options:
 	       -map_metadata -1 \
 	       -vf scale=-1:720 \
 	       -c:v libx265 -crf 20 -c:a aac -b:a 128k \
-	       -threads 4 -x265-params pools=4 \
+	       -threads 4 \
 	       -tag:v hvc1 -sn output.mp4
 	       ;
 
@@ -74,6 +74,51 @@ This command uses Apple’s T2 encryption chips (available on most 2018 and abov
 			 -tag:v hvc1 -sn \
 			 -map 0:0 -map 0:2 output_hevc_videotoolbox.mp4
 			 ;
+
+***
+
+## Misc. Notes
+	
+	ffmpeg -i input.mp4 \
+	     -map_metadata -1 \
+	     -vf scale=-1:720 \
+	     -c:v libx265 -crf 20 \
+	     -c:a aac -b:a 128k \
+	     -threads 4 \
+	     -tag:v hvc1 -sn \
+	     -map 0:0 -map 0:1 output.mp4
+	     ;
+	
+	ffmpeg -i input.mp4 -i input.mkv \
+	     -c:v copy \
+	     -c:a aac -b:a 128k -ac 2 -af "aresample=matrix_encoding=dplii" \
+	     -map 0:0 -map 1:1 \
+	     -aspect 4/3 \
+	     output_v.mp4
+	     ;
+	
+	ffmpeg -i input.mp4 -i input.mkv \
+	     -c:v copy \
+	     -c:a aac -b:a 128k \
+	     -aspect 4/3 \
+	     -map 0:0 -map 1:1 \
+	     output.mp4
+	     ;
+	
+	ffmpeg -i input.mkv \
+	     -c:v copy \
+	     -c:a copy \
+	     output.mp4
+	     ;
+	
+	ffmpeg -i input.mkv \
+	     -map_metadata -1 \
+	     -vf scale=1280:720 -c:v libx265 -crf 20 \
+	     -c:a aac -b:a 128k \
+	     -threads 4 \
+	     -tag:v hvc1 -aspect 4/3 -sn \
+	     -map 0:0 -map 0:2 output.mp4
+	     ;
 
 ***
 
