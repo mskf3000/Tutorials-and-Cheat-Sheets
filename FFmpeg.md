@@ -63,7 +63,7 @@ Same command bit without the `-ss` and `-t` options:
 	       -tag:v hvc1 -sn output.mp4
 	       ;
 
-This command uses Apple’s T2 encryption chips (available on most 2018 and above Macs) to speed up encoding. A lot faster than `lbx265` but the quality stinks and the `-crf` value cannot be adjusted. Here for refernce only:
+This command uses Apple’s T2 encryption chips (available on most 2018 and above Macs) to speed up encoding. A lot faster than `lbx265` but the quality stinks and the `-crf` value cannot be adjusted. Here for reference only:
 
 	nice -n 10 \
 	ffmpeg -i input.mkv \
@@ -75,10 +75,14 @@ This command uses Apple’s T2 encryption chips (available on most 2018 and abov
 			 -map 0:0 -map 0:2 output_hevc_videotoolbox.mp4
 			 ;
 
+Use this command to fix an MKV with an incorrect duration or other metadata related stuff:
+
+    ffmpeg -err_detect ignore_err -i input.mkv -c copy output.mkv;
+
 ***
 
 ## Misc. Notes
-	
+
 	ffmpeg -i input.mp4 \
 	     -map_metadata -1 \
 	     -vf scale=-1:720 \
@@ -88,7 +92,7 @@ This command uses Apple’s T2 encryption chips (available on most 2018 and abov
 	     -tag:v hvc1 -sn \
 	     -map 0:0 -map 0:1 output.mp4
 	     ;
-	
+
 	ffmpeg -i input.mp4 -i input.mkv \
 	     -c:v copy \
 	     -c:a aac -b:a 128k -ac 2 -af "aresample=matrix_encoding=dplii" \
@@ -96,7 +100,7 @@ This command uses Apple’s T2 encryption chips (available on most 2018 and abov
 	     -aspect 4/3 \
 	     output_v.mp4
 	     ;
-	
+
 	ffmpeg -i input.mp4 -i input.mkv \
 	     -c:v copy \
 	     -c:a aac -b:a 128k \
@@ -104,13 +108,13 @@ This command uses Apple’s T2 encryption chips (available on most 2018 and abov
 	     -map 0:0 -map 1:1 \
 	     output.mp4
 	     ;
-	
+
 	ffmpeg -i input.mkv \
 	     -c:v copy \
 	     -c:a copy \
 	     output.mp4
 	     ;
-	
+
 	ffmpeg -i input.mkv \
 	     -map_metadata -1 \
 	     -vf scale=1280:720 -c:v libx265 -crf 20 \
