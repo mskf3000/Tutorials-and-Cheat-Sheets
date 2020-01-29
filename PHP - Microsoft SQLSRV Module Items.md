@@ -2,7 +2,7 @@
 
 By Jack Szwergold
 
-### PHP Microsoft SQLSRV ia Yum repos.
+### PHP Microsoft SQLSRV via Yum repos.
 
 Simple way if the setup is using the Microsoft repos. First, the install the system ODBC stuff:
 
