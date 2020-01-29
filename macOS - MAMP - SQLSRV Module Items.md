@@ -9,7 +9,7 @@ Before anything else, make sure your local MAMP install’s binary paths are par
 * **MAMP 5.2 Main `bin/` Path**: `/Applications/MAMP/Library/bin`
 * **MAMP 5.2 PHP `bin/` Path**: `/Applications/MAMP/bin/php/php7.2.10/bin`
 
-#### Compile and Install FreeTDS
+#### Compile and Install the SQLSRV Stuff
 
 Do this to install the core ODBC stuff on macOS:
 
