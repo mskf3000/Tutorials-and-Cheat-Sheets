@@ -2,9 +2,9 @@
 
 By Jack Szwergold
 
-### PHP Oracle OCI8 under CentOS 7 via REMI repos.
+### PHP Microsoft SQLSRV ia Yum repos.
 
-Simple way if the setup is using the REMI repos. First, the install the system ODBC stuff:
+Simple way if the setup is using the Microsoft repos. First, the install the system ODBC stuff:
 
 	sudo su
 	curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-tools.repo
@@ -19,7 +19,7 @@ Now install the PHP SQLSRV module items via Yum:
 
 	sudo ACCEPT_EULA=Y yum install php-sqlsrv
 
-### PHP Oracle OCI8 under CentOS 7 from source.
+### PHP Microsoft SQLSRV ia Yum repos and PECL.
 
 First, the install the system ODBC stuff:
 
@@ -37,7 +37,7 @@ Add the MSSQL tool stuff to the user environment paths:
 	echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 	echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 
-Resourse the `.bashrc`:
+Re-source the `.bashrc`:
 
 	source ~/.bashrc
 
