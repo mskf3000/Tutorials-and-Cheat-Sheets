@@ -60,7 +60,7 @@ Same command bit without the `-ss` and `-t` options:
 	       -map_metadata -1 \
 	       -vf scale=-1:720 \
 	       -c:v libx265 -crf 20 \
-	       -c:a aac -b:a 128k \
+	       -c:a aac -b:a 128k -ac 2 -vol 512 \
 	       -threads 4 \
 	       -tag:v hvc1 -sn output.mp4
 	       ;
@@ -71,7 +71,8 @@ This command uses Apple’s T2 encryption chips (available on most 2018 and abov
 	ffmpeg -i input.mkv \
 			 -map_metadata -1 \
 			 -vf scale=-1:720 \
-			 -c:v hevc_videotoolbox -crf 20 -c:a aac -b:a 128k \
+			 -c:v hevc_videotoolbox -crf 20 \
+			 -c:a aac -b:a 128k -ac 2 -vol 512 \
 			 -threads 4 -x265-params pools=4 \
 			 -tag:v hvc1 -sn \
 			 -map 0:0 -map 0:2 output_hevc_videotoolbox.mp4
