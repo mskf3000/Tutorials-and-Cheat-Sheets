@@ -49,7 +49,7 @@ During the install you might be asked to provide the `ORACLE_HOME` path via a me
 
 We are not permanently setting `ORACLE_HOME` so just use this as the path:
 
-	instantclient,/usr/lib/oracle/12.2/client64/lib/
+	instantclient,/usr/lib/oracle/19.6/client64/lib/
 
 After PECL does it’s thing, the `oci8.so` should be compiled and ready to go.
 
