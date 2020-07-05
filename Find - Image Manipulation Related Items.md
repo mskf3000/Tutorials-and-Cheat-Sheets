@@ -175,7 +175,7 @@ This command converts JPEG, PNG, TIFF or HEIC images to JPEGs at 90% quality:
 
 This command converts TIFF images to JPEGs at 100% quality with a 1200 DPI setting:
 
-	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC)$'' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF|HEIC)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
@@ -186,7 +186,7 @@ This command converts TIFF images to JPEGs at 100% quality with a 1200 DPI setti
 
 This command converts images to HEIC images at 100% quality with a 1200 DPI setting:
 
-	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$'' |\
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$' |\
 	  while read FULL_IMAGE_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
