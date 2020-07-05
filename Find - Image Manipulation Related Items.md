@@ -182,6 +182,17 @@ This command converts TIFF images to JPEGs at 100% quality with a 1200 DPI setti
 	    convert -density 1200 -units PixelsPerInch -quality 100 "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".jpg
 	  done
 
+### Converting JPEG, PNG and TIFF images to HEIC files.
+
+This command converts images to HEIC images at 100% quality with a 1200 DPI setting:
+
+	find -E 'Desktop/Pics' -type f -iregex '.*\.(JPG|JPEG|PNG|TIF|TIFF)$'' |\
+	  while read FULL_IMAGE_PATH
+	  do
+	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
+	    convert "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".heic
+	  done
+
 ### Convert raster images to vector images using Potrace.
 
 This script is a first draft of a script that uses ImageMagick and Potrace to convert rasterized images into vector images. Works fine so far, but it would be nice to simply stream the output of convert right into potrace.
