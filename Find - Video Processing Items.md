@@ -43,6 +43,18 @@ Simple script traverse a directory filled with MKV files and extract the MP4 ins
 	    ffmpeg -i "${FULL_PATH}" -codec copy "${PATH_SANS_EXTENSION}".mp4
 	  done
 
+### Batch Convert MOV and DV files to an x265 MP4
+
+Simple script traverse a directory filled with MOV and/or DV files and convert the contents to an x265 MP4:
+
+	find -E 'Desktop/Movies' -type f -iregex '.*\.(DV|MOV)$' |\
+	  while read FULL_PATH
+	  do
+	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
+	    # ffmpeg -i "${FULL_PATH}" -map_metadata -1 -c:v libx265 -crf 15 -vf yadif -c:a aac -b:a 128k -ac 2 -vol 512 -threads 4 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4;
+	    ffmpeg -i "${FULL_PATH}" -map_metadata -1 -c:v libx265 -crf 15 -vf yadif -threads 4 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4;
+	  done
+
 ***
 
 *Find - Video Processing Items (c) by Jack Szwergold; written on July 25, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
