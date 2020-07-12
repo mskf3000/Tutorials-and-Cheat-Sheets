@@ -191,6 +191,7 @@ This command converts images to HEIC images at 100% quality with a 1200 DPI sett
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
 	    convert "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".heic
+	    exiftool -overwrite_original_in_place -tagsFromFile "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".heic
 	  done
 
 ### Convert raster images to vector images using Potrace.
