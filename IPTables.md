@@ -11,6 +11,13 @@ On Ubuntu/Debian systems you can start, stop, restart and flush IPTables this wa
 	sudo service iptables-persistent restart
 	sudo service iptables-persistent flush
 
+For Ubuntu 16.04, use `netfilter-persistent` instead:
+
+	sudo service netfilter-persistent start
+	sudo service netfilter-persistent stop
+	sudo service netfilter-persistent restart
+	sudo service netfilter-persistent flush
+
 On CentOS/RedHat systems you can start, stop, restart and flush IPTables this way:
 
     sudo /etc/rc.d/init.d/iptables start
@@ -49,6 +56,10 @@ List all rules (`-L`) in the NAT table (`-t nat`) in numeric format (`-n`) witho
 By default, an Ubuntu/Debian systems lose IPTables rules on reboot. Installing `iptables-persistent` assures that rules are saved and reloaded on reboot:
 
     sudo aptitude install iptables-persistent
+
+Or for Ubuntu 16.04 and higher:
+
+    sudo aptitude install netfilter-persistent
 
 If IPTables rules have already been set on the system, export the rules into a text file like this:
 
