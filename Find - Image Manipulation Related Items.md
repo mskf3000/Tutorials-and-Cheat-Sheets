@@ -190,9 +190,11 @@ This command converts images to HEIC format:
 	  while read FULL_IMAGE_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_IMAGE_PATH%.*}"
-	    convert "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".heic
+	    # convert "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".heic
+	    convert "${FULL_IMAGE_PATH}" -background white -extent  $(convert "${FULL_IMAGE_PATH}" -format '%[fx:2*int((w+1)/2)]x%[fx:2*int((h+1)/2)]!' info:) "${PATH_SANS_EXTENSION}".heic
 	    exiftool -overwrite_original_in_place -tagsFromFile "${FULL_IMAGE_PATH}" "${PATH_SANS_EXTENSION}".heic
 	  done
+
 
 ### Convert raster images to vector images using Potrace.
 
