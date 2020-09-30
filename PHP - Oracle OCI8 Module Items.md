@@ -8,7 +8,7 @@ By Jack Szwergold
 
 Copy the Instant Client RPMs to the system you will be installing them on. Here are the SCP commands for CentOS 6.8 on my VirtualBox local development environment setup:
 
-	 scp ~/Desktop/oracle-instantclient12.2-* vagrant@sandbox-centos-68.local:.
+	scp ~/Desktop/oracle-instantclient12.2-* vagrant@sandbox-centos-68.local:.
 
 SSH into the machine you just SCP’ed stuff to. Like the CentOS 6.8 sandbox:
 
@@ -71,7 +71,7 @@ Now start restart Apache and check the output of the PHP info page and `oci8` sh
 
 Copy the Instant Client RPMs to the system you will be installing them on. Here are the SCP commands for CentOS 7 on my VirtualBox local development environment setup:
 
-	 scp ~/Desktop/oracle-instantclient12.2-* vagrant@sandbox-centos-7.local:.
+	scp ~/Desktop/oracle-instantclient12.2-* vagrant@sandbox-centos-7.local:.
 
 SSH into the machine you just SCP’ed stuff to. Like the CentOS 7 sandbox:
 
@@ -125,6 +125,34 @@ Now adjust the PHP config file (`php.ini`) like this to get PHP to recognize it:
 Now start restart Apache and check the output of the PHP info page and `oci8` should be clearly listed there under installed components.
 
 	sudo service httpd restart
+
+***
+
+### Dealing with some issues if they pop up.
+
+For some Terminal connections — mainly on older server OS installs — running `pecl install -f oci8` and then responding `instantclient,/usr/lib/oracle/12.1/client64/lib/` to the path question won’t work. The workaround for that is to run an `echo` and a pipe (`|`) command like this:
+
+	echo "instantclient,/usr/lib/oracle/12.1/client64/lib/" | pecl install -f oci8
+
+And if you are installing this on some PHP setups, this error might come up after that `pecl install` kicks in:
+
+	error: oci8_dtrace_gen.h: No such file or directory make: *** [oci8.lo] Error 1
+
+In cases like that, you need to disable DTrace support to install OCI8 by opening up this file:
+
+	sudo nano /usr/include/php/main/php_config.h
+
+Look for this:
+
+	/* Defined to 1 if PHP OCI8 DTrace support was enabled during configuration */
+	#define HAVE_OCI8_DTRACE 1
+
+And change it to this; basically commenting out that line:
+
+	/* Defined to 1 if PHP OCI8 DTrace support was enabled during configuration */
+	/* #define HAVE_OCI8_DTRACE 1 */
+
+Then go back and run that `pecl install` command again.
 
 ***
 
