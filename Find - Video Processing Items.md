@@ -47,12 +47,11 @@ Simple script traverse a directory filled with MKV files and extract the MP4 ins
 
 Simple script traverse a directory filled with MOV and/or DV files and convert the contents to an x265 MP4:
 
-	find -E 'Desktop/Movies' -type f -iregex '.*\.(DV|MOV)$' |\
+	find -E 'Desktop/Movies' -type f -iregex '.*\.(DV|MOV|MKV)$' |\
 	  while read FULL_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
-	    # ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v libx265 -crf 15 -vf yadif -c:a aac -b:a 128k -ac 2 -vol 512 -threads 4 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4 < /dev/null;
-	    ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v libx265 -crf 15 -vf yadif -threads 4 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4  < /dev/null;
+	    ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v libx265 -crf 20 -vf yadif -c:a aac -b:a 128k -ac 2 -vol 512 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4  < /dev/null;
 	  done
 
 ***
