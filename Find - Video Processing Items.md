@@ -51,7 +51,7 @@ Simple script traverse a directory filled with MOV and/or DV files and convert t
 	  while read FULL_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
-	    ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v libx265 -crf 20 -vf yadif -c:a aac -b:a 128k -ac 2 -vol 512 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4  < /dev/null;
+	    ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v libx265 -x265-params log-level=error -crf 20 -vf yadif -c:a aac -b:a 128k -ac 2 -vol 512 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4  < /dev/null;
 	  done
 
 ***
