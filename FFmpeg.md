@@ -46,10 +46,8 @@ And example command to create a 10 minute (600 seconds) sample file with the `-s
 	ffmpeg -i input.mkv \
 	       -ss 0 -t 600 \
 	       -map_metadata -1 \
-	       -vf scale=-1:720 \
-	       -c:v libx265 -crf 20 \
+	       -c:v libx265 -crf 20 -vf yadif \
 	       -c:a aac -b:a 128k -ac 2 -vol 512 \
-	       -threads 4 \
 	       -tag:v hvc1 -sn output.mp4
 	       ;
 
@@ -58,10 +56,8 @@ Same command bit without the `-ss` and `-t` options:
 	nice -n 10 \
 	ffmpeg -i input.mkv \
 	       -map_metadata -1 \
-	       -vf scale=-1:720 \
-	       -c:v libx265 -crf 20 \
+	       -c:v libx265 -crf 20 -vf yadif \
 	       -c:a aac -b:a 128k -ac 2 -vol 512 \
-	       -threads 4 \
 	       -tag:v hvc1 -sn output.mp4
 	       ;
 
