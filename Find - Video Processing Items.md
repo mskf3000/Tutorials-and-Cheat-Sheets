@@ -51,7 +51,7 @@ Simple script traverse a directory filled with MKV files and extract the ASS for
 	  while read FULL_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
-	    ffmpeg -y -v quiet -i "${FULL_PATH}" -codec:s ass "${PATH_SANS_EXTENSION}".ass
+	    ffmpeg -y -v quiet -i "${FULL_PATH}" -codec:s ass -c copy "${PATH_SANS_EXTENSION}".ass
 	  done
 
 ### Batch Convert MOV and DV files to an x265 MP4
