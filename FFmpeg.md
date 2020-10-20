@@ -42,6 +42,7 @@ Note the `-crf` controls quality: 0 is lossless, 23 is the default and 51 is los
 
 And example command to create a 10 minute (600 seconds) sample file with the `-ss` and `-t` options:
 
+	caffeinate \
 	nice -n 10 \
 	ffmpeg -i input.mkv \
 	       -ss 0 -t 600 \
@@ -53,6 +54,7 @@ And example command to create a 10 minute (600 seconds) sample file with the `-s
 
 Same command bit without the `-ss` and `-t` options:
 
+	caffeinate \
 	nice -n 10 \
 	ffmpeg -i input.mkv \
 	       -map_metadata -1 \

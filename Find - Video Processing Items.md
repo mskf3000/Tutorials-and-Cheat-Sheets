@@ -55,6 +55,18 @@ Simple script traverse a directory filled with MKV files and extract the ASS for
 	    wait ${task_pid};
 	  done
 
+### Add SRT Subtitles to MP4 Files
+
+Simple script traverse a directory filled with MKV files and extract the ASS formatted subitles out of them:
+
+	find -E 'Desktop/Movies' -type f -iregex '.*\.(MP4)$' |\
+	  while read FULL_PATH
+	  do
+	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
+	    ffmpeg -y -v quiet -i "${FULL_PATH}" -i "${PATH_SANS_EXTENSION}".srt -c:v copy -c:a copy -c:s mov_text -metadata:s:s:0 language=eng "${PATH_SANS_EXTENSION}".srt.mp4 & task_pid=(`jobs -l | awk '{print $2}'`);
+	    wait ${task_pid};
+	  done    
+
 ### Batch Convert MOV and DV files to an x265 MP4
 
 Simple script traverse a directory filled with MOV and/or DV files and convert the contents to an x265 MP4:
