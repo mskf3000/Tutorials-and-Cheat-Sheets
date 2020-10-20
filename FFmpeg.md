@@ -47,6 +47,7 @@ And example command to create a 10 minute (600 seconds) sample file with the `-s
 	ffmpeg -i input.mkv \
 	       -ss 0 -t 600 \
 	       -map_metadata -1 \
+	       -vf scale=-1:720 \
 	       -c:v libx265 -crf 20 \
 	       -c:a aac -b:a 128k -ac 2 -vol 512 \
 	       -tag:v hvc1 -sn output.mp4
@@ -58,6 +59,7 @@ Same command bit without the `-ss` and `-t` options:
 	nice -n 10 \
 	ffmpeg -i input.mkv \
 	       -map_metadata -1 \
+	       -vf scale=-1:720 \
 	       -c:v libx265 -crf 20 \
 	       -c:a aac -b:a 128k -ac 2 -vol 512 \
 	       -tag:v hvc1 -sn output.mp4
@@ -65,6 +67,7 @@ Same command bit without the `-ss` and `-t` options:
 
 This command uses Apple’s T2 encryption chips (available on most 2018 and above Macs) to speed up encoding. A lot faster than `lbx265` but the quality stinks and the `-crf` value cannot be adjusted. Here for reference only:
 
+	caffeinate \
 	nice -n 10 \
 	ffmpeg -i input.mkv \
 			 -map_metadata -1 \
