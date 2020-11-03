@@ -78,6 +78,18 @@ Simple script traverse a directory filled with MOV and/or DV files and convert t
 	    ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v libx265 -x265-params log-level=error -crf 20 -c:a aac -b:a 128k -ac 2 -vol 512 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4  < /dev/null;
 	  done
 
+### Batch Extract MP4 Video From Video Files
+
+Simple script traverse a directory filled with DV, MOV and MKV files and extract the audio and video into a new file. Useful in cases wher Handbrake adds excessive duplicate frames; FFmpeg seems to be smart enought drop them:
+
+	find -E 'Desktop/Movies' -type f -iregex '.*\.(DV|MKV|MOV|MP4)$' |\
+	  while read FULL_PATH
+	  do
+	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
+	    ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v copy -c:a copy -map 0:0 -map 0:1 "${PATH_SANS_EXTENSION}"_content.mp4 < /dev/null;
+	  done
+
+
 ***
 
 *Find - Video Processing Items (c) by Jack Szwergold; written on July 25, 2017. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0).*
