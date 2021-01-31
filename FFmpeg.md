@@ -26,6 +26,10 @@ Extract MP4 video out of an MKV file without transcoding video but converting au
 
     ffmpeg -i input.mkv -c:v copy -c:a ac3 -map 0:0 -map 0:1 output.mp4
 
+Use this to extract a video — without transcoding — 25 seconds into the video into a new file:
+
+    ffmpeg -ss 25 -i input.mp4 -c:v copy -c:a copy -map 0:0 -map 0:1 output.mp4
+
 ## HEVC (aka: x265)
 
 To encode a video into an HEVC (aka: x265) video that is iOS compatible, you can do this. First, this line lets you create a sample video by using the `-ss` (seek) and `-t` (duration in seconds) parameters. For example, this line will create a 5 minute sample video:
