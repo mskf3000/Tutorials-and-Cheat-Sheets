@@ -32,7 +32,7 @@ Use this to extract a video — without transcoding — 25 seconds into the vide
 
 For basic h264 encoding, use this command:
 
-	caffeinate ffmpeg -i Block-Heads\ \(1938\).mp4 -vf scale=-1:480 -c:v libx264 -crf 18 -c:a aac -b:a 128k -max_muxing_queue_size 1024 output.mp4
+	caffeinate ffmpeg -i input.mp4 -vf scale=-1:480 -c:v libx264 -crf 18 -c:a aac -b:a 128k -max_muxing_queue_size 1024 output.mp4
 
 ## HEVC (aka: x265)
 
