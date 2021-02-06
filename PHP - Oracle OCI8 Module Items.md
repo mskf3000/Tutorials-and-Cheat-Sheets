@@ -31,9 +31,10 @@ And you might need to run this command if you get this message, “WARNING: chan
 
 Now install the OCI8 version that works with your version of PHP. Here is how it breaks down:
 
-* **PHP 7**: `sudo pecl install oci8`
-* **PHP 5.2–5.6**: `sudo pecl install oci8-2.0.12`
-* **PHP 4.3.9-5.1**: `sudo pecl install oci8-1.4.10`
+* **PHP 8**: `pecl install oci8`
+* **PHP 7.x**: `pecl install oci8-2.2.0`
+* **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
+* **PHP 4.3.9-5.1**: `pecl install oci8-1.4.10`
 
 So in this case, we are installing it for PHP version 5.6.10 so we will install version 2.0.12 using this command:
 
@@ -94,7 +95,8 @@ And you might need to run this command if you get this message, “WARNING: chan
 
 Now install the OCI8 version that works with your version of PHP. Here is how it breaks down:
 
-* **PHP 7**: `pecl install oci8`
+* **PHP 8**: `pecl install oci8`
+* **PHP 7.x**: `pecl install oci8-2.2.0`
 * **PHP 5.2–5.6**: `pecl install oci8-2.0.12`
 * **PHP 4.3.9-5.1**: `pecl install oci8-1.4.10`
 
