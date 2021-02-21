@@ -38,11 +38,11 @@ For basic h264 encoding, use this command:
 
 To encode a video into an HEVC (aka: x265) video that is iOS compatible, you can do this. First, this line lets you create a sample video by using the `-ss` (seek) and `-t` (duration in seconds) parameters. For example, this line will create a 5 minute sample video:
 
-    ffmpeg -i input.mkv -vf scale=-1:720 -ss 0 -t 300 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
+    caffeinate ffmpeg -i input.mkv -vf scale=-1:720 -ss 0 -t 300 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
 
 And then to actually encode that video, you can run this command:
 
-    ffmpeg -i input.mkv -vf scale=-1:720 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
+    caffeinate ffmpeg -i input.mkv -vf scale=-1:720 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
 
 Note the `-crf` controls quality: 0 is lossless, 23 is the default and 51 is lossy. Using 13 here for best quality while taking up less space.
 
