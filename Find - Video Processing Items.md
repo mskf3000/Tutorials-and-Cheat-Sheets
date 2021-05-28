@@ -86,7 +86,7 @@ Simple script traverse a directory filled with DV, MOV and MKV files and extract
 	  while read FULL_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
-	    ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v copy -c:a copy -map 0:0 -map 0:1 "${PATH_SANS_EXTENSION}"_content.mp4 < /dev/null;
+	    caffeinate ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -c:v copy -c:a copy -map 0:0 -map 0:1 "${PATH_SANS_EXTENSION}"_content.mp4 < /dev/null;
 	  done
 
 
