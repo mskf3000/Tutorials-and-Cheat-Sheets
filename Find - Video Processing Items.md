@@ -9,27 +9,27 @@ This script (`video_metadata_parser.sh`) uses ExifTool to parse dates, times and
 	find -E "Desktop/Videos" -type f -iregex ".*\.(M4V|MOV)$" |\
 	  while read full_video_filepath
 	  do
-	
+
 	    # Break up the full audio filepath stuff into different directory and filename components.
 	    video_dirname=$(dirname "${full_video_filepath}");
 	    video_basename=$(basename "${full_video_filepath}");
 	    video_filename="${video_basename%.*}";
 	    video_extension="${video_basename##*.}";
-	
+
 	    # Get the video metadata.
 	    video_date=$(exiftool -s -s -s -CreationDate "${full_video_filepath}");
 	    video_title=$(exiftool -s -s -s -Title "${full_video_filepath}");
-	
+
 	    # Reformat the file creation date to be Flickr friendly.
 	    if [ ! -z "${video_date}" ]; then
 	      video_date_formatted=$(date -jf"%Y:%m:%d %k:%M:%S" "${video_date%-*}" +"%m/%d/%Y %k:%M:%S");
 	    else
 	      video_date_formatted="";
 	    fi
-	
+
 	    # Reformat the file creation date to be Flickr friendly.
 	    echo "${video_filename} | ${video_date_formatted} | ${video_title}" >> "Desktop/VideoInfo-$(date +%Y-%m-%d).txt";
-	
+
 	  done
 
 ### Extract MP4 Videos Out of an MKV File
@@ -69,13 +69,13 @@ Simple script traverse a directory filled with MKV files and extract the ASS for
 
 ### Batch Convert MOV and DV files to an x265 MP4
 
-Simple script traverse a directory filled with MOV and/or DV files and convert the contents to an x265 MP4 at a height of 576 pixels:
+Simple script traverse a directory filled with MOV and/or DV files and convert the contents to an x265 MP4 at a height of 480 pixels:
 
 	find -E 'Desktop/Movies' -type f -iregex '.*\.(DV|MOV|MKV)$' |\
 	  while read FULL_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
-	    caffeinate ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -vf scale=-2:576 -c:v libx265 -x265-params log-level=error -crf 20 -c:a aac -b:a 128k -ac 2 -vol 512 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4  < /dev/null;
+	    caffeinate ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -vf scale=-2:480 -c:v libx265 -x265-params log-level=error -crf 20 -c:a aac -b:a 128k -ac 2 -vol 384 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4  < /dev/null;
 	  done
 
 ### Batch Extract MP4 Video From Video Files

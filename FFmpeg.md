@@ -57,7 +57,7 @@ And example command to create a 10 minute (600 seconds) sample file with the `-s
 	       -map_metadata -1 \
 	       -vf scale=-2:720 \
 	       -c:v libx265 -crf 20 \
-	       -c:a aac -b:a 128k -ac 2 -vol 512 \
+	       -c:a aac -b:a 128k -ac 2 -vol 384 \
 	       -tag:v hvc1 -sn output.mp4
 	       ;
 
@@ -69,7 +69,7 @@ Same command bit without the `-ss` and `-t` options:
 	       -map_metadata -1 \
 	       -vf scale=-2:720 \
 	       -c:v libx265 -crf 20 \
-	       -c:a aac -b:a 128k -ac 2 -vol 512 \
+	       -c:a aac -b:a 128k -ac 2 -vol 384 \
 	       -tag:v hvc1 -sn output.mp4
 	       ;
 
@@ -81,7 +81,7 @@ This command uses Apple’s T2 encryption chips (available on most 2018 and abov
 			 -map_metadata -1 \
 			 -vf scale=-2:720 \
 			 -c:v hevc_videotoolbox -crf 20 \
-			 -c:a aac -b:a 128k -ac 2 -vol 512 \
+			 -c:a aac -b:a 128k -ac 2 -vol 384 \
 			 -threads 4 -x265-params pools=4 \
 			 -tag:v hvc1 -sn \
 			 -map 0:0 -map 0:2 output_hevc_videotoolbox.mp4
