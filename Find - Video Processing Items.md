@@ -75,7 +75,7 @@ Simple script traverse a directory filled with MOV and/or DV files and convert t
 	  while read FULL_PATH
 	  do
 	    PATH_SANS_EXTENSION="${FULL_PATH%.*}"
-	    caffeinate ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -vf scale=-1:576 -c:v libx265 -x265-params log-level=error -crf 20 -c:a aac -b:a 128k -ac 2 -vol 512 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4  < /dev/null;
+	    caffeinate ffmpeg -y -v quiet -i "${FULL_PATH}" -map_metadata -1 -vf scale=-2:576 -c:v libx265 -x265-params log-level=error -crf 20 -c:a aac -b:a 128k -ac 2 -vol 512 -tag:v hvc1 -sn "${PATH_SANS_EXTENSION}".mp4  < /dev/null;
 	  done
 
 ### Batch Extract MP4 Video From Video Files

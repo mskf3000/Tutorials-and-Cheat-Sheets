@@ -32,17 +32,17 @@ Use this to extract a video — without transcoding — 25 seconds into the vide
 
 For basic h264 encoding, use this command:
 
-	caffeinate ffmpeg -i input.mp4 -vf scale=-1:480 -c:v libx264 -crf 18 -c:a aac -b:a 128k -max_muxing_queue_size 1024 output.mp4
+	caffeinate ffmpeg -i input.mp4 -vf scale=-2:480 -c:v libx264 -crf 18 -c:a aac -b:a 128k -max_muxing_queue_size 1024 output.mp4
 
 ## HEVC (aka: x265)
 
 To encode a video into an HEVC (aka: x265) video that is iOS compatible, you can do this. First, this line lets you create a sample video by using the `-ss` (seek) and `-t` (duration in seconds) parameters. For example, this line will create a 5 minute sample video:
 
-    caffeinate ffmpeg -i input.mkv -vf scale=-1:720 -ss 0 -t 300 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
+    caffeinate ffmpeg -i input.mkv -vf scale=-2:720 -ss 0 -t 300 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
 
 And then to actually encode that video, you can run this command:
 
-    caffeinate ffmpeg -i input.mkv -vf scale=-1:720 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
+    caffeinate ffmpeg -i input.mkv -vf scale=-2:720 -c:v libx265 -crf 13 -c:a aac -b:a 128k -tag:v hvc1 output.mp4
 
 Note the `-crf` controls quality: 0 is lossless, 23 is the default and 51 is lossy. Using 13 here for best quality while taking up less space.
 
@@ -55,7 +55,7 @@ And example command to create a 10 minute (600 seconds) sample file with the `-s
 	ffmpeg -i input.mkv \
 	       -ss 0 -t 600 \
 	       -map_metadata -1 \
-	       -vf scale=-1:720 \
+	       -vf scale=-2:720 \
 	       -c:v libx265 -crf 20 \
 	       -c:a aac -b:a 128k -ac 2 -vol 512 \
 	       -tag:v hvc1 -sn output.mp4
@@ -67,7 +67,7 @@ Same command bit without the `-ss` and `-t` options:
 	nice -n 10 \
 	ffmpeg -i input.mkv \
 	       -map_metadata -1 \
-	       -vf scale=-1:720 \
+	       -vf scale=-2:720 \
 	       -c:v libx265 -crf 20 \
 	       -c:a aac -b:a 128k -ac 2 -vol 512 \
 	       -tag:v hvc1 -sn output.mp4
@@ -79,7 +79,7 @@ This command uses Apple’s T2 encryption chips (available on most 2018 and abov
 	nice -n 10 \
 	ffmpeg -i input.mkv \
 			 -map_metadata -1 \
-			 -vf scale=-1:720 \
+			 -vf scale=-2:720 \
 			 -c:v hevc_videotoolbox -crf 20 \
 			 -c:a aac -b:a 128k -ac 2 -vol 512 \
 			 -threads 4 -x265-params pools=4 \
@@ -97,7 +97,7 @@ Use this command to fix an MKV with an incorrect duration or other metadata rela
 
 	ffmpeg -i input.mp4 \
 	     -map_metadata -1 \
-	     -vf scale=-1:720 \
+	     -vf scale=-2:720 \
 	     -c:v libx265 -crf 20 \
 	     -c:a aac -b:a 128k \
 	     -threads 4 \
