@@ -130,6 +130,58 @@ Now start restart Apache and check the output of the PHP info page and `oci8` sh
 
 ***
 
+### Oracle OCI8 Upgrade
+
+Unistall the older version like this:
+
+	sudo rpm -e --nodeps oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64
+	sudo rpm -e --nodeps oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64
+
+Or do it the brute force way like this:
+
+	cd /usr/lib/oracle/
+	sudo rm -rf 12.2
+	
+	cd /usr/include/oracle/
+	sudo rm -rf 12.2
+
+Install it like this:
+
+	sudo rpm -Uvh oracle-instantclient19.12-basic-19.12.0.0.0-1.x86_64.rpm
+	sudo rpm -Uvh oracle-instantclient19.12-devel-19.12.0.0.0-1.x86_64.rpm
+
+Then uninstall the OCI8 version that exists:
+
+	sudo pecl uninstall oci8-2.2.0
+
+And install the new one like this:
+
+	sudo pecl install oci8-2.2.0	
+
+The path to the libraries is:
+
+	instantclient,/usr/lib/oracle/19.12/client64/lib/
+
+If an error regarding `php_config.h`:
+
+	sudo nano /usr/include/php/main/php_config.h
+
+Find this:
+
+	/* Defined to 1 if PHP OCI8 DTrace support was enabled during configuration */
+	#define HAVE_OCI8_DTRACE 1
+
+And change to this:
+
+	/* Defined to 1 if PHP OCI8 DTrace support was enabled during configuration */
+	/* #define HAVE_OCI8_DTRACE 1 */
+
+Restart Apache:
+
+	sudo service httpd restart
+	
+***
+
 ### Dealing with some issues if they pop up.
 
 For some Terminal connections — mainly on older server OS installs — running `pecl install -f oci8` and then responding `instantclient,/usr/lib/oracle/12.1/client64/lib/` to the path question won’t work. The workaround for that is to run an `echo` and a pipe (`|`) command like this:
