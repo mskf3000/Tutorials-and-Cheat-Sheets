@@ -179,7 +179,30 @@ And change to this:
 Restart Apache:
 
 	sudo service httpd restart
-	
+
+***
+
+### Oracle OCI8 Upgrade on PHP 7.3.25 on Red Hat 6.8
+
+For some crazy reason, the combination of PHP 7.3.25 on outdated Red Hat 6.8 needs to use OCI8 2.2.0 but it can't use anything higher than version 18.5 of the Oracle Instant Client. And a specific server I was doimng this on is the fact it wouldn’t use PECL correctly for fetching remote packages. So this is the dance one has to do to get the OCI8 driver installed.
+
+First, install version 18.5 of the Oracle Instant Client like this:
+
+	sudo rpm -Uvh oracle-instantclient18.5-basic-18.5.0.0.0-3.x86_64.rpm
+	sudo rpm -Uvh oracle-instantclient18.5-devel-18.5.0.0.0-3.x86_64.rpm
+
+Then download the OCI8 2.2.0 PECL package directly like this:
+
+	wget http://pecl.php.net/get/oci8-2.2.0.tgz
+
+Now install the OCI8 2.2.0 PECL package like this:
+
+	pear install -f ~/oci8-2.2.0.tgz
+
+The path to the libraries is:
+
+	instantclient,/usr/lib/oracle/18.5/client64/lib/
+
 ***
 
 ### Dealing with some issues if they pop up.
