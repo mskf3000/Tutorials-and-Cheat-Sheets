@@ -200,7 +200,7 @@ This command converts images to HEIC format:
 
 This script is a first draft of a script that uses ImageMagick and Potrace to convert rasterized images into vector images. Works fine so far, but it would be nice to simply stream the output of convert right into potrace.
 
-	find -E 'Desktop/Pics' -type f -iregex ".*\.(JPG|JPG|PNG|TIF|TIFF)$" |\
+	find -E 'Desktop/Pics' -type f -iregex ".*\.(JPG|JPG|PNG|TIF|TIFF|HEIC)$" |\
 	  while read full_image_filepath
 	  do
 	
@@ -227,7 +227,6 @@ This script is a first draft of a script that uses ImageMagick and Potrace to co
 	    rm -f "${pnm_filepath}";
 	
 	  done
-
 
 ***
 
