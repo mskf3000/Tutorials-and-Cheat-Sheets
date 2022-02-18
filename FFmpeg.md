@@ -32,7 +32,7 @@ Extract MP4 video out of an MKV file without transcoding video but converting au
 
 Use this to extract a video — without transcoding — 25 seconds into the video into a new file:
 
-    ffmpeg -ss 25 -i input.mp4 -c:v copy -c:a copy -map 0:0 -map 0:1 output.mp4
+    ffmpeg -ss 25 -i input.mp4 -map_metadata -1 -c:v copy -c:a copy -map 0:0 -map 0:1 output.mp4
 
 For basic h264 encoding, use this command:
 
