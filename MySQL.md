@@ -233,7 +233,6 @@ Find `skip-external-locking` and add this setting right after it:
 
     innodb_file_per_table
 
-
 #### Here’s a MySQL script to list out the entire databases size
 
 One script to do some calculations on MySQL database sizes:
