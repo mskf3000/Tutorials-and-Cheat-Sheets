@@ -106,6 +106,19 @@ Cool—but in my opinion risky—method of dumping from one database and importi
 
 	mysqldump -u [user] -p [password] [database] | mysql -u[user] -p[password] [database]
 
+### MySQL Command Line Table Repair
+
+Run these commands to analyze (`-a`), check (`-c`), optimize (`-o`) and repair (`-r`) a spoecific database:
+
+	mysqlcheck -u root -p [database name] -a
+	mysqlcheck -u root -p [database name] -c
+	mysqlcheck -u root -p [database name] -o
+	mysqlcheck -u root -p [database name] -r
+
+Run this command to auto repair all databases on the server:
+
+	mysqlcheck -u root -p --auto-repair --check --all-databases
+
 ### Fix MySQL InnoDB oddities.
 
 #### Basic InnoDB cleanup workflow.
